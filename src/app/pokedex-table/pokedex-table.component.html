@@ -1,0 +1,101 @@
+<mat-expansion-panel expanded hideToggle>
+  <mat-expansion-panel-header>
+    <mat-panel-title> Pokedex settings </mat-panel-title>
+    <mat-icon>settings</mat-icon>
+  </mat-expansion-panel-header>
+  <app-pokedex-options [(options)]="options"></app-pokedex-options>
+</mat-expansion-panel>
+
+<div class="mat-elevation-z8">
+  <table
+    mat-table
+    class="full-width-table"
+    matSort
+    aria-label="Elements"
+    multiTemplateDataRows
+  >
+    <!-- Select Column-->
+    <ng-container matColumnDef="select">
+      <th mat-header-cell *matHeaderCellDef></th>
+      <td mat-cell *matCellDef="let row">
+        <mat-checkbox
+          color="primary"
+          (click)="$event.stopPropagation()"
+          (change)="$event ? selection.toggle(row) : null"
+          [checked]="selection.isSelected(row)"
+        >
+        </mat-checkbox>
+      </td>
+    </ng-container>
+
+    <!-- Id Column -->
+    <ng-container matColumnDef="number">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Number</th>
+      <td mat-cell *matCellDef="let row">{{ row.number }}</td>
+    </ng-container>
+
+    <!-- Image Column -->
+    <ng-container matColumnDef="image">
+      <th mat-header-cell *matHeaderCellDef>Image</th>
+      <td mat-cell *matCellDef="let row">
+        <poke-img [imgPath]="row.number"></poke-img>
+      </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Name</th>
+      <td mat-cell *matCellDef="let row">{{ row.name }}</td>
+    </ng-container>
+
+    <!-- Expanded Content Column -->
+    <ng-container matColumnDef="expandedDetail">
+      <td
+        mat-cell
+        *matCellDef="let row"
+        [attr.colspan]="displayedColumns.length"
+      >
+        <div
+          class="pokemon-element-detail"
+          [@detail-expand]="row == expanded ? 'expanded' : 'collapsed'"
+        >
+          <mat-accordion multi>
+            <app-regional-forms-table
+              *ngIf="row.regionalForms"
+              [regionalForms]="row.regionalForms"
+            ></app-regional-forms-table>
+
+            <app-forms-table
+              *ngIf="row.forms"
+              [forms]="row.forms"
+            ></app-forms-table>
+          </mat-accordion>
+        </div>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr
+      mat-row
+      *matRowDef="let row; columns: displayedColumns"
+      class="pokemon-element-row"
+      [class.expanded]="expanded === row"
+      (click)="expanded = expanded === row ? null : row"
+    ></tr>
+    <tr
+      mat-row
+      *matRowDef="let row; columns: ['expandedDetail']"
+      class="pokemon-detail-row"
+    ></tr>
+  </table>
+
+  <mat-paginator
+    #paginator
+    [length]="dataSource?.data?.length"
+    [pageIndex]="0"
+    [pageSize]="10"
+    [pageSizeOptions]="[5, 10, 20]"
+    aria-label="Select page"
+  >
+  </mat-paginator>
+</div>

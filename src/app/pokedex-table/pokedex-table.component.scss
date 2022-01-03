@@ -1,0 +1,52 @@
+.full-width-table {
+  width: 100%;
+}
+
+.mat-column-select {
+  overflow: initial;
+}
+
+tr {
+  .mat-header-cell,
+  .mat-cell {
+    padding-left: 1rem;
+  }
+
+  .mat-column-select {
+    width: 2rem;
+  }
+
+  .mat-column-image {
+    width: calc(96px + 1rem);
+  }
+
+  .mat-column-number {
+    width: 2rem;
+    border-right: 1px solid gray;
+  }
+
+  &.pokemon-detail-row {
+    height: 0;
+  }
+
+  &.pokemon-element-row {
+    td {
+      border-bottom-width: 0;
+    }
+
+    &:not(.expanded) {
+      &:hover {
+        background: whitesmoke;
+      }
+      &:active {
+        background: whitesmoke;
+      }
+    }
+  }
+
+  .pokemon-element-detail {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+}

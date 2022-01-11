@@ -17,11 +17,11 @@ import { PokedexOptionsComponent } from './pokedex-table/pokedex-options/pokedex
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
-import { MatRadioModule } from '@angular/material/radio';
 import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { PokeImgComponent } from './pokedex-table/poke-img/poke-img.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -46,10 +46,10 @@ import { PokeImgComponent } from './pokedex-table/poke-img/poke-img.component';
     MatInputModule,
     MatButtonModule,
     MatSelectModule,
-    MatRadioModule,
     MatCardModule,
     MatDividerModule,
     MatIconModule,
+    FlexLayoutModule,
   ],
   providers: [PokedexService],
   bootstrap: [AppComponent],

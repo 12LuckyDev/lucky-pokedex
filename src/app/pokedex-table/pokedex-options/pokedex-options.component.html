@@ -1,48 +1,56 @@
-<form [formGroup]="optionsForm" novalidate>
-  <mat-card class="shipping-card">
-    <mat-card-header>
-      <mat-card-title>Policies</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <label>Forms counting policy</label>
-      <div class="radio-buttons-row">
-        <mat-radio-group color="primary" formControlName="countFormsPolicy">
-          <mat-radio-button value="COUNT_ALL">COUNT_ALL</mat-radio-button>
-          <mat-radio-button value="NO_COUNT_VISUAL_ONLY"
-            >NO_COUNT_VISUAL_ONLY</mat-radio-button
-          >
-          <mat-radio-button value="NO_COUNT">NO_COUNT</mat-radio-button>
-        </mat-radio-group>
-      </div>
+<mat-expansion-panel expanded hideToggle>
+  <mat-expansion-panel-header>
+    <mat-panel-title> Pokedex settings </mat-panel-title>
+    <mat-icon>settings</mat-icon>
+  </mat-expansion-panel-header>
 
-      <mat-divider></mat-divider>
+  <form [formGroup]="optionsForm" novalidate>
+    <mat-card class="shipping-card">
+      <mat-card-header>
+        <mat-card-title>Counting Policies</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div fxLayout="row" fxLayout.sm="column" xLayoutWrap fxLayoutGap="2.5%">
+          <mat-form-field fxFlex="1 1" appearance="fill">
+            <mat-label>Forms counting policy</mat-label>
+            <mat-select color="primary" formControlName="countFormsPolicy">
+              <mat-option
+                *ngFor="let option of countFormsPolicyOptions"
+                [value]="option.id"
+              >
+                {{ option.name }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
 
-      <label>Regional forms counting policy</label>
-      <div class="radio-buttons-row">
-        <mat-radio-group
-          color="primary"
-          formControlName="countRegionalFormsPolicy"
-        >
-          <mat-radio-button value="COUNT_ALL">COUNT_ALL</mat-radio-button>
-          <mat-radio-button value="NO_COUNT">NO_COUNT</mat-radio-button>
-        </mat-radio-group>
-      </div>
+          <mat-form-field fxFlex="1 1" appearance="fill">
+            <mat-label>Regional forms counting policy</mat-label>
+            <mat-select
+              color="primary"
+              formControlName="countRegionalFormsPolicy"
+            >
+              <mat-option
+                *ngFor="let option of countRegionalFormsPolicyOptions"
+                [value]="option.id"
+              >
+                {{ option.name }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
 
-      <mat-divider></mat-divider>
-
-      <label>Genders counting policy</label>
-      <div class="radio-buttons-row">
-        <mat-radio-group color="primary" formControlName="countGendersPolicy">
-          <mat-radio-button value="COUNT_ALL">COUNT_ALL</mat-radio-button>
-          <mat-radio-button value="COUNT_ALL_WITH_DIFFS"
-            >COUNT_ALL_WITH_DIFFS</mat-radio-button
-          >
-          <mat-radio-button value="NO_COUNT_VISUAL_ONLY"
-            >NO_COUNT_VISUAL_ONLY</mat-radio-button
-          >
-          <mat-radio-button value="NO_COUNT">NO_COUNT</mat-radio-button>
-        </mat-radio-group>
-      </div>
-    </mat-card-content>
-  </mat-card>
-</form>
+          <mat-form-field fxFlex="1 1" appearance="fill">
+            <mat-label>Genders counting policy</mat-label>
+            <mat-select color="primary" formControlName="countGendersPolicy">
+              <mat-option
+                *ngFor="let option of countGendersPolicyOptions"
+                [value]="option.id"
+              >
+                {{ option.name }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </form>
+</mat-expansion-panel>

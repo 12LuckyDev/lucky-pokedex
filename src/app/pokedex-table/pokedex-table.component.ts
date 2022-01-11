@@ -71,7 +71,7 @@ export class PokedexTableComponent implements AfterViewInit {
 
   set options(options: PokedexOptions) {
     this._options = options;
-    console.log('OPTIONS CHANGED');
+    console.log('OPTIONS CHANGED', options);
   }
 
   ngAfterViewInit(): void {

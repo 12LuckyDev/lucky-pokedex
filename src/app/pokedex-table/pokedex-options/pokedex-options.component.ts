@@ -7,6 +7,51 @@ import {
 } from 'src/app/enums';
 import { PokedexOptions } from 'src/app/models';
 
+const COUNT_FORMS_POLICY_OPTIONS = [
+  {
+    id: CountFormsPolicy.COUNT_ALL,
+    name: CountFormsPolicy[CountFormsPolicy.COUNT_ALL],
+  },
+  {
+    id: CountFormsPolicy.NO_COUNT_VISUAL_ONLY,
+    name: CountFormsPolicy[CountFormsPolicy.NO_COUNT_VISUAL_ONLY],
+  },
+  {
+    id: CountFormsPolicy.NO_COUNT,
+    name: CountFormsPolicy[CountFormsPolicy.NO_COUNT],
+  },
+];
+
+const COUNT_REGIONAL_FORMS_POLICY = [
+  {
+    id: CountRegionalFormsPolicy.COUNT_ALL,
+    name: CountRegionalFormsPolicy[CountRegionalFormsPolicy.COUNT_ALL],
+  },
+  {
+    id: CountRegionalFormsPolicy.NO_COUNT,
+    name: CountRegionalFormsPolicy[CountRegionalFormsPolicy.NO_COUNT],
+  },
+];
+
+const COUNT_GENDERS_POLICY = [
+  {
+    id: CountGendersPolicy.COUNT_ALL,
+    name: CountGendersPolicy[CountGendersPolicy.COUNT_ALL],
+  },
+  {
+    id: CountGendersPolicy.COUNT_ALL_WITH_DIFFS,
+    name: CountGendersPolicy[CountGendersPolicy.COUNT_ALL_WITH_DIFFS],
+  },
+  {
+    id: CountGendersPolicy.NO_COUNT_VISUAL_ONLY,
+    name: CountGendersPolicy[CountGendersPolicy.NO_COUNT_VISUAL_ONLY],
+  },
+  {
+    id: CountGendersPolicy.NO_COUNT,
+    name: CountGendersPolicy[CountGendersPolicy.NO_COUNT],
+  },
+];
+
 @Component({
   selector: 'app-pokedex-options',
   templateUrl: './pokedex-options.component.html',
@@ -40,6 +85,18 @@ export class PokedexOptionsComponent implements OnInit {
     this.optionsForm.valueChanges.subscribe(() => {
       this.optionsChange.emit(this.buidlOptionsModel());
     });
+  }
+
+  get countFormsPolicyOptions() {
+    return COUNT_FORMS_POLICY_OPTIONS;
+  }
+
+  get countRegionalFormsPolicyOptions() {
+    return COUNT_REGIONAL_FORMS_POLICY;
+  }
+
+  get countGendersPolicyOptions() {
+    return COUNT_GENDERS_POLICY;
   }
 
   private buidlOptionsModel(): PokedexOptions {

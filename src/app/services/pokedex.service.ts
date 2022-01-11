@@ -3,13 +3,75 @@ import { Observable, of } from 'rxjs';
 import { PokedexEntry } from '../models';
 import POKEDEX_LIST from './pokedex.json';
 
+export type GetPokedexListParamsType = {
+  pageIndex?: number;
+  pageSize?: number;
+  sortBy?: string;
+  sortDirection?: string;
+};
+
 @Injectable({
   providedIn: 'root',
 })
 export class PokedexService {
   constructor() {}
-
-  getPokedexList(): Observable<PokedexEntry[]> {
-    return of([...POKEDEX_LIST] as PokedexEntry[]);
+  getPokedexList({
+    pageIndex = 0,
+    pageSize = 10,
+    sortBy,
+    sortDirection,
+  }: GetPokedexListParamsType = {}): Observable<{
+    data: PokedexEntry[];
+    count: number;
+  }> {
+    const start = pageIndex * pageSize;
+    const data = POKEDEX_LIST.slice(start, start + pageSize);
+    return of({
+      data: getPagedPokedexList(
+        getSortedPokedexList(POKEDEX_LIST, sortBy, sortDirection),
+        pageIndex,
+        pageSize
+      ),
+      count: POKEDEX_LIST.length,
+    });
   }
+}
+
+function compare(
+  a: string | number,
+  b: string | number,
+  isAsc: boolean
+): number {
+  return (a < b ? -1 : 1) * (isAsc ? 1 : -1);
+}
+
+function getPagedPokedexList(
+  data: PokedexEntry[],
+  pageIndex: number,
+  pageSize: number
+) {
+  const start = pageIndex * pageSize;
+  return data.slice(start, start + pageSize);
+}
+
+function getSortedPokedexList(
+  data: PokedexEntry[],
+  sortBy?: string,
+  sortDirection?: string
+) {
+  if (!sortBy || sortDirection === '') {
+    return data;
+  }
+
+  return [...data].sort((a, b) => {
+    const isAsc = sortDirection === 'asc';
+    switch (sortBy) {
+      case 'name':
+        return compare(a.name, b.name, isAsc);
+      case 'number':
+        return compare(+a.number, +b.number, isAsc);
+      default:
+        return 0;
+    }
+  });
 }

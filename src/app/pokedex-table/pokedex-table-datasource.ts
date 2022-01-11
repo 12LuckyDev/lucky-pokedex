@@ -1,9 +1,12 @@
 import { DataSource } from '@angular/cdk/collections';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
-import { map } from 'rxjs/operators';
-import { Observable, of as observableOf, merge } from 'rxjs';
+import { Observable, BehaviorSubject } from 'rxjs';
 import { PokedexEntry } from '../models';
+import {
+  GetPokedexListParamsType,
+  PokedexService,
+} from '../services/pokedex.service';
 
 /**
  * Data source for the PokedexTable view. This class should
@@ -15,7 +18,10 @@ export class PokedexTableDataSource extends DataSource<PokedexEntry> {
   paginator: MatPaginator | undefined;
   sort: MatSort | undefined;
 
-  constructor() {
+  private dataSubject = new BehaviorSubject<PokedexEntry[]>([]);
+  private countSubject = new BehaviorSubject<number>(0);
+
+  constructor(private pokedexService: PokedexService) {
     super();
   }
 
@@ -25,72 +31,47 @@ export class PokedexTableDataSource extends DataSource<PokedexEntry> {
    * @returns A stream of the items to be rendered.
    */
   connect(): Observable<PokedexEntry[]> {
-    if (this.paginator && this.sort) {
-      // Combine everything that affects the rendered data into one update
-      // stream for the data-table to consume.
-      return merge(
-        observableOf(this.data),
-        this.paginator.page,
-        this.sort.sortChange
-      ).pipe(
-        map(() => {
-          return this.getPagedData(this.getSortedData([...this.data]));
-        })
-      );
-    } else {
-      throw Error(
-        'Please set the paginator and sort on the data source before connecting.'
-      );
+    if (this.paginator) {
+      this.paginator.page.subscribe(() => this.query());
     }
+    if (this.sort) {
+      this.sort.sortChange.subscribe(() => this.query());
+    }
+    return this.dataSubject.asObservable();
   }
 
   /**
-   *  Called when the table is being destroyed. Use this function, to clean up
+   * Called when the table is being destroyed. Use this function, to clean up
    * any open connections or free any held resources that were set up during connect.
    */
-  disconnect(): void {}
+  disconnect(): void {
+    this.dataSubject.complete();
+    this.countSubject.complete();
+  }
 
-  /**
-   * Paginate the data (client-side). If you're using server-side pagination,
-   * this would be replaced by requesting the appropriate data from the server.
-   */
-  private getPagedData(data: PokedexEntry[]): PokedexEntry[] {
+  query(): void {
+    this.pokedexService
+      .getPokedexList(this.queryParam)
+      .subscribe(({ data, count }) => {
+        this.dataSubject.next(data);
+        this.countSubject.next(count);
+      });
+  }
+
+  get count(): number {
+    return this.countSubject.value;
+  }
+
+  private get queryParam() {
+    const params: GetPokedexListParamsType = {};
     if (this.paginator) {
-      const startIndex = this.paginator.pageIndex * this.paginator.pageSize;
-      return data.splice(startIndex, this.paginator.pageSize);
-    } else {
-      return data;
+      params.pageIndex = this.paginator.pageIndex;
+      params.pageSize = this.paginator.pageSize;
     }
-  }
-
-  /**
-   * Sort the data (client-side). If you're using server-side sorting,
-   * this would be replaced by requesting the appropriate data from the server.
-   */
-  private getSortedData(data: PokedexEntry[]): PokedexEntry[] {
-    if (!this.sort || !this.sort.active || this.sort.direction === '') {
-      return data;
+    if (this.sort) {
+      params.sortBy = this.sort.active;
+      params.sortDirection = this.sort.direction;
     }
-
-    return data.sort((a, b) => {
-      const isAsc = this.sort?.direction === 'asc';
-      switch (this.sort?.active) {
-        case 'name':
-          return compare(a.name, b.name, isAsc);
-        case 'number':
-          return compare(+a.number, +b.number, isAsc);
-        default:
-          return 0;
-      }
-    });
+    return params;
   }
-}
-
-/** Simple sort comparator for example ID/Name columns (for client-side sorting). */
-function compare(
-  a: string | number,
-  b: string | number,
-  isAsc: boolean
-): number {
-  return (a < b ? -1 : 1) * (isAsc ? 1 : -1);
 }

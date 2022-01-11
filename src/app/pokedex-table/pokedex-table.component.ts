@@ -55,7 +55,7 @@ export class PokedexTableComponent implements AfterViewInit {
     private cdref: ChangeDetectorRef,
     private pokedexService: PokedexService
   ) {
-    this.dataSource = new PokedexTableDataSource();
+    this.dataSource = new PokedexTableDataSource(this.pokedexService);
     this.selection = new SelectionModel<PokedexEntry>(true, []);
     this.expanded = null;
     this._options = {
@@ -78,9 +78,7 @@ export class PokedexTableComponent implements AfterViewInit {
     this.dataSource.sort = this.sort;
     this.dataSource.paginator = this.paginator;
     this.table.dataSource = this.dataSource;
-    this.pokedexService.getPokedexList().subscribe((pokedexList) => {
-      this.dataSource.data = pokedexList;
-      this.cdref.detectChanges();
-    });
+    this.dataSource.query();
+    this.cdref.detectChanges();
   }
 }

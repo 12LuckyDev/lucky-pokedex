@@ -63,6 +63,8 @@
               *ngIf="row.forms"
               [forms]="row.forms"
             ></app-forms-table>
+
+            <app-gender-diffs [entry]="row"></app-gender-diffs>
           </mat-accordion>
         </div>
       </td>

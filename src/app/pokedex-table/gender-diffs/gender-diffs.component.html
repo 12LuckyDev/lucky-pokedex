@@ -1,0 +1,27 @@
+<mat-expansion-panel expanded>
+  <mat-expansion-panel-header>
+    <mat-panel-title> Genders </mat-panel-title>
+  </mat-expansion-panel-header>
+  <mat-card>
+    <mat-card-content
+      fxLayout="row wrap"
+      fxLayoutGap="32px"
+      fxLayoutAlign="flex-start"
+    >
+      <app-gender-info
+        *ngFor="let gender of genders"
+        [pokeNumber]="number"
+        [gender]="gender"
+        [genderDiffs]="genderDiffs"
+      ></app-gender-info>
+    </mat-card-content>
+    <mat-card-content *ngIf="genderDiffs">
+      <p>{{ genderDiffs.desc }}</p>
+      <div fxLayout="row" fxLayoutAlign="flex-start center">
+        DIFFRENCES ONLY VISUAL:
+        <mat-icon *ngIf="genderDiffs.onlyVisual">check</mat-icon>
+        <mat-icon *ngIf="!genderDiffs.onlyVisual">close</mat-icon>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</mat-expansion-panel>

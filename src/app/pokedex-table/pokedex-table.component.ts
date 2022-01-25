@@ -11,29 +11,14 @@ import { MatTable } from '@angular/material/table';
 import { PokedexEntry, PokedexOptions } from '../models';
 import { PokedexService } from '../services/pokedex.service';
 import { PokedexTableDataSource } from './pokedex-table-datasource';
-import {
-  animate,
-  state,
-  style,
-  transition,
-  trigger,
-} from '@angular/animations';
 import { BehaviorSubject } from 'rxjs';
+import { POKEDEX_TABLE_ANIMATIONS } from './pokedex-table-animations';
 
 @Component({
   selector: 'app-pokedex-table',
   templateUrl: './pokedex-table.component.html',
   styleUrls: ['./pokedex-table.component.scss'],
-  animations: [
-    trigger('detail-expand', [
-      state('collapsed', style({ height: '0px', minHeight: '0' })),
-      state('expanded', style({ height: '*' })),
-      transition(
-        'expanded <=> collapsed',
-        animate('225ms cubic-bezier(0.4, 0.0, 0.2, 1)')
-      ),
-    ]),
-  ],
+  animations: POKEDEX_TABLE_ANIMATIONS,
 })
 export class PokedexTableComponent implements AfterViewInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;

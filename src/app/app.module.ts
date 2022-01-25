@@ -22,6 +22,8 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { PokeImgComponent } from './pokedex-table/poke-img/poke-img.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { GenderDiffsComponent } from './pokedex-table/gender-diffs/gender-diffs.component';
+import { GenderInfoComponent } from './pokedex-table/gender-diffs/gender-info/gender-info.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     FormsTableComponent,
     PokedexOptionsComponent,
     PokeImgComponent,
+    GenderDiffsComponent,
+    GenderInfoComponent,
   ],
   imports: [
     BrowserModule,

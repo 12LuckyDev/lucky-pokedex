@@ -1,0 +1,14 @@
+<mat-card class="gender-info-card">
+  <mat-card-header>
+    <mat-card-title>
+      <mat-checkbox color="primary"></mat-checkbox>
+      {{ genderName }}
+      <mat-icon *ngIf="showIcon" aria-hidden="false" aria-label="Gender Icon"
+        >{{ genderName }}
+      </mat-icon>
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <poke-img [imgPath]="imgPath"></poke-img>
+  </mat-card-content>
+</mat-card>

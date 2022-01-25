@@ -13,6 +13,7 @@ import { PokedexDataService } from '../services/pokedex-data/pokedex-data.servic
 import { PokedexTableDataSource } from './pokedex-table-datasource';
 import { BehaviorSubject } from 'rxjs';
 import { POKEDEX_TABLE_ANIMATIONS } from './pokedex-table-animations';
+import { PokedexOptionsService } from '../services/pokedex-options/pokedex-options.service';
 
 @Component({
   selector: 'app-pokedex-table',
@@ -32,15 +33,19 @@ export class PokedexTableComponent implements AfterViewInit {
 
   constructor(
     private cdref: ChangeDetectorRef,
-    private pokedexDataService: PokedexDataService
+    private pokedexDataService: PokedexDataService,
+    private pokedexOptionsService: PokedexOptionsService
   ) {
-    this.dataSource = new PokedexTableDataSource(this.pokedexDataService);
+    this.dataSource = new PokedexTableDataSource(
+      this.pokedexDataService,
+      this.pokedexOptionsService
+    );
     this.selection = new SelectionModel<PokedexEntry>(true, []);
     this.expanded = null;
   }
 
   get optionsSubject(): BehaviorSubject<PokedexOptions> {
-    return this.dataSource.optionsSubject;
+    return this.pokedexOptionsService.optionsSubject;
   }
 
   ngAfterViewInit(): void {

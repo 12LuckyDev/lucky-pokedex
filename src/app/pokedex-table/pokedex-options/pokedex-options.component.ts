@@ -1,12 +1,12 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { BehaviorSubject } from 'rxjs';
 import {
   CountFormsPolicy,
   CountGendersPolicy,
   CountRegionalFormsPolicy,
 } from 'src/app/enums';
 import { PokedexOptions } from 'src/app/models';
+import { PokedexOptionsService } from 'src/app/services/pokedex-options/pokedex-options.service';
 
 const COUNT_FORMS_POLICY_OPTIONS = [
   {
@@ -60,9 +60,11 @@ const COUNT_GENDERS_POLICY = [
 })
 export class PokedexOptionsComponent implements OnInit {
   optionsForm: FormGroup;
-  @Input() optionsSubject!: BehaviorSubject<PokedexOptions>;
 
-  constructor(private fb: FormBuilder) {
+  constructor(
+    private fb: FormBuilder,
+    private pokedexOptionsService: PokedexOptionsService
+  ) {
     this.optionsForm = this.fb.group({
       countFormsPolicy: [],
       countRegionalFormsPolicy: [],
@@ -71,21 +73,19 @@ export class PokedexOptionsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    if (this.optionsSubject) {
-      const options = this.optionsSubject.value;
-      this.optionsForm.controls['countFormsPolicy'].setValue(
-        options.countFormsPolicy
-      );
-      this.optionsForm.controls['countRegionalFormsPolicy'].setValue(
-        options.countRegionalFormsPolicy
-      );
-      this.optionsForm.controls['countGendersPolicy'].setValue(
-        options.countGendersPolicy
-      );
-      this.optionsForm.valueChanges.subscribe(() => {
-        this.optionsSubject.next(this.buidlOptionsModel());
-      });
-    }
+    const options = this.pokedexOptionsService.options;
+    this.optionsForm.controls['countFormsPolicy'].setValue(
+      options.countFormsPolicy
+    );
+    this.optionsForm.controls['countRegionalFormsPolicy'].setValue(
+      options.countRegionalFormsPolicy
+    );
+    this.optionsForm.controls['countGendersPolicy'].setValue(
+      options.countGendersPolicy
+    );
+    this.optionsForm.valueChanges.subscribe(() => {
+      this.pokedexOptionsService.nextOptions(this.buidlOptionsModel());
+    });
   }
 
   get countFormsPolicyOptions() {

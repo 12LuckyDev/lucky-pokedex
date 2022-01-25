@@ -1,23 +1,13 @@
 import { DataSource } from '@angular/cdk/collections';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
-import { Observable, BehaviorSubject } from 'rxjs';
-import {
-  CountFormsPolicy,
-  CountGendersPolicy,
-  CountRegionalFormsPolicy,
-} from '../enums';
-import { PokedexEntry, PokedexOptions } from '../models';
+import { Observable, BehaviorSubject, Subscription } from 'rxjs';
+import { PokedexEntry } from '../models';
 import {
   GetPokedexListParamsType,
   PokedexDataService,
 } from '../services/pokedex-data/pokedex-data.service';
-
-const DEFAULT_OPTIONS: PokedexOptions = {
-  countFormsPolicy: CountFormsPolicy.COUNT_ALL,
-  countRegionalFormsPolicy: CountRegionalFormsPolicy.COUNT_ALL,
-  countGendersPolicy: CountGendersPolicy.NO_COUNT,
-};
+import { PokedexOptionsService } from '../services/pokedex-options/pokedex-options.service';
 
 export class PokedexTableDataSource extends DataSource<PokedexEntry> {
   data: PokedexEntry[] = [];
@@ -26,11 +16,12 @@ export class PokedexTableDataSource extends DataSource<PokedexEntry> {
 
   private _dataSubject = new BehaviorSubject<PokedexEntry[]>([]);
   private _countSubject = new BehaviorSubject<number>(0);
-  private _optionsSubject = new BehaviorSubject<PokedexOptions>(
-    DEFAULT_OPTIONS
-  );
+  private optionsSubscription!: Subscription;
 
-  constructor(private pokedexDataService: PokedexDataService) {
+  constructor(
+    private pokedexDataService: PokedexDataService,
+    private pokedexOptionsService: PokedexOptionsService
+  ) {
     super();
   }
 
@@ -40,7 +31,10 @@ export class PokedexTableDataSource extends DataSource<PokedexEntry> {
    * @returns A stream of the items to be rendered.
    */
   connect(): Observable<PokedexEntry[]> {
-    this._optionsSubject.subscribe((options) => console.log(options));
+    this.optionsSubscription =
+      this.pokedexOptionsService.optionsSubject.subscribe((options) =>
+        console.log(options)
+      );
 
     if (this.paginator) {
       this.paginator.page.subscribe(() => this.query());
@@ -58,7 +52,9 @@ export class PokedexTableDataSource extends DataSource<PokedexEntry> {
   disconnect(): void {
     this._dataSubject.complete();
     this._countSubject.complete();
-    this._optionsSubject.complete();
+    if (this.optionsSubscription) {
+      this.optionsSubscription.unsubscribe();
+    }
   }
 
   query(): void {
@@ -72,10 +68,6 @@ export class PokedexTableDataSource extends DataSource<PokedexEntry> {
 
   get count(): number {
     return this._countSubject.value;
-  }
-
-  get optionsSubject(): BehaviorSubject<PokedexOptions> {
-    return this._optionsSubject;
   }
 
   private get queryParam() {

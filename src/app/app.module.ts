@@ -24,6 +24,7 @@ import { PokeImgComponent } from './pokedex-table/poke-img/poke-img.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { GenderDiffsComponent } from './pokedex-table/gender-diffs/gender-diffs.component';
 import { GenderInfoComponent } from './pokedex-table/gender-diffs/gender-info/gender-info.component';
+import { PokedexOptionsService } from './services/pokedex-options/pokedex-options.service';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,7 @@ import { GenderInfoComponent } from './pokedex-table/gender-diffs/gender-info/ge
     MatIconModule,
     FlexLayoutModule,
   ],
-  providers: [PokedexDataService],
+  providers: [PokedexDataService, PokedexOptionsService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

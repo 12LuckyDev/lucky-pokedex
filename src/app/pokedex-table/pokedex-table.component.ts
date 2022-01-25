@@ -18,11 +18,7 @@ import {
   transition,
   trigger,
 } from '@angular/animations';
-import {
-  CountFormsPolicy,
-  CountGendersPolicy,
-  CountRegionalFormsPolicy,
-} from '../enums';
+import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-pokedex-table',
@@ -49,8 +45,6 @@ export class PokedexTableComponent implements AfterViewInit {
 
   displayedColumns = ['select', 'number', 'image', 'name'];
 
-  private _options: PokedexOptions;
-
   constructor(
     private cdref: ChangeDetectorRef,
     private pokedexService: PokedexService
@@ -58,20 +52,10 @@ export class PokedexTableComponent implements AfterViewInit {
     this.dataSource = new PokedexTableDataSource(this.pokedexService);
     this.selection = new SelectionModel<PokedexEntry>(true, []);
     this.expanded = null;
-    this._options = {
-      countFormsPolicy: CountFormsPolicy.COUNT_ALL,
-      countRegionalFormsPolicy: CountRegionalFormsPolicy.COUNT_ALL,
-      countGendersPolicy: CountGendersPolicy.NO_COUNT,
-    };
   }
 
-  get options(): PokedexOptions {
-    return this._options;
-  }
-
-  set options(options: PokedexOptions) {
-    this._options = options;
-    console.log('OPTIONS CHANGED', options);
+  get optionsSubject(): BehaviorSubject<PokedexOptions> {
+    return this.dataSource.optionsSubject;
   }
 
   ngAfterViewInit(): void {

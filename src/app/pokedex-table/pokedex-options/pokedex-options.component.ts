@@ -1,5 +1,6 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { BehaviorSubject } from 'rxjs';
 import {
   CountFormsPolicy,
   CountGendersPolicy,
@@ -59,8 +60,7 @@ const COUNT_GENDERS_POLICY = [
 })
 export class PokedexOptionsComponent implements OnInit {
   optionsForm: FormGroup;
-  @Input() options!: PokedexOptions;
-  @Output() optionsChange = new EventEmitter<PokedexOptions>();
+  @Input() optionsSubject!: BehaviorSubject<PokedexOptions>;
 
   constructor(private fb: FormBuilder) {
     this.optionsForm = this.fb.group({
@@ -71,20 +71,21 @@ export class PokedexOptionsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    if (this.options) {
+    if (this.optionsSubject) {
+      const options = this.optionsSubject.value;
       this.optionsForm.controls['countFormsPolicy'].setValue(
-        this.options.countFormsPolicy
+        options.countFormsPolicy
       );
       this.optionsForm.controls['countRegionalFormsPolicy'].setValue(
-        this.options.countRegionalFormsPolicy
+        options.countRegionalFormsPolicy
       );
       this.optionsForm.controls['countGendersPolicy'].setValue(
-        this.options.countGendersPolicy
+        options.countGendersPolicy
       );
+      this.optionsForm.valueChanges.subscribe(() => {
+        this.optionsSubject.next(this.buidlOptionsModel());
+      });
     }
-    this.optionsForm.valueChanges.subscribe(() => {
-      this.optionsChange.emit(this.buidlOptionsModel());
-    });
   }
 
   get countFormsPolicyOptions() {

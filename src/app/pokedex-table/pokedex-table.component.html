@@ -1,4 +1,4 @@
-<app-pokedex-options [(options)]="options"></app-pokedex-options>
+<app-pokedex-options [optionsSubject]="optionsSubject"></app-pokedex-options>
 
 <div class="mat-elevation-z8">
   <table
@@ -7,7 +7,6 @@
     matSort
     aria-label="Elements"
     multiTemplateDataRows
-    [dataSource]="dataSource"
   >
     <!-- Select Column-->
     <ng-container matColumnDef="select">

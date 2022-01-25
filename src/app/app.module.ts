@@ -9,7 +9,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatExpansionModule } from '@angular/material/expansion';
-import { PokedexService } from './services/pokedex.service';
+import { PokedexDataService } from './services/pokedex-data/pokedex-data.service';
 import { RegionalFormsTableComponent } from './pokedex-table/regional-forms-table/regional-forms-table.component';
 import { FormsTableComponent } from './pokedex-table/forms-table/forms-table.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -55,7 +55,7 @@ import { GenderInfoComponent } from './pokedex-table/gender-diffs/gender-info/ge
     MatIconModule,
     FlexLayoutModule,
   ],
-  providers: [PokedexService],
+  providers: [PokedexDataService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

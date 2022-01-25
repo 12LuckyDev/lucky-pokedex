@@ -10,8 +10,8 @@ import {
 import { PokedexEntry, PokedexOptions } from '../models';
 import {
   GetPokedexListParamsType,
-  PokedexService,
-} from '../services/pokedex.service';
+  PokedexDataService,
+} from '../services/pokedex-data/pokedex-data.service';
 
 const DEFAULT_OPTIONS: PokedexOptions = {
   countFormsPolicy: CountFormsPolicy.COUNT_ALL,
@@ -30,7 +30,7 @@ export class PokedexTableDataSource extends DataSource<PokedexEntry> {
     DEFAULT_OPTIONS
   );
 
-  constructor(private pokedexService: PokedexService) {
+  constructor(private pokedexDataService: PokedexDataService) {
     super();
   }
 
@@ -62,7 +62,7 @@ export class PokedexTableDataSource extends DataSource<PokedexEntry> {
   }
 
   query(): void {
-    this.pokedexService
+    this.pokedexDataService
       .getPokedexList(this.queryParam)
       .subscribe(({ data, count }) => {
         this._dataSubject.next(data);

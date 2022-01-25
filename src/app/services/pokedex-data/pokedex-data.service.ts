@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { PokedexEntry } from '../models';
-import POKEDEX_LIST from './pokedex.json';
+import { PokedexEntry } from '../../models';
+import POKEDEX_LIST from './pokedex-data.json';
 
 export type GetPokedexListParamsType = {
   pageIndex?: number;
@@ -13,7 +13,7 @@ export type GetPokedexListParamsType = {
 @Injectable({
   providedIn: 'root',
 })
-export class PokedexService {
+export class PokedexDataService {
   constructor() {}
   getPokedexList({
     pageIndex = 0,
@@ -24,8 +24,6 @@ export class PokedexService {
     data: PokedexEntry[];
     count: number;
   }> {
-    const start = pageIndex * pageSize;
-    const data = POKEDEX_LIST.slice(start, start + pageSize);
     return of({
       data: getPagedPokedexList(
         getSortedPokedexList(POKEDEX_LIST, sortBy, sortDirection),

@@ -9,7 +9,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTable } from '@angular/material/table';
 import { PokedexEntry, PokedexOptions } from '../models';
-import { PokedexService } from '../services/pokedex.service';
+import { PokedexDataService } from '../services/pokedex-data/pokedex-data.service';
 import { PokedexTableDataSource } from './pokedex-table-datasource';
 import { BehaviorSubject } from 'rxjs';
 import { POKEDEX_TABLE_ANIMATIONS } from './pokedex-table-animations';
@@ -32,9 +32,9 @@ export class PokedexTableComponent implements AfterViewInit {
 
   constructor(
     private cdref: ChangeDetectorRef,
-    private pokedexService: PokedexService
+    private pokedexDataService: PokedexDataService
   ) {
-    this.dataSource = new PokedexTableDataSource(this.pokedexService);
+    this.dataSource = new PokedexTableDataSource(this.pokedexDataService);
     this.selection = new SelectionModel<PokedexEntry>(true, []);
     this.expanded = null;
   }

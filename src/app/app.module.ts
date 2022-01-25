@@ -10,8 +10,8 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { PokedexDataService } from './services/pokedex-data/pokedex-data.service';
-import { RegionalFormsTableComponent } from './pokedex-table/regional-forms-table/regional-forms-table.component';
-import { FormsTableComponent } from './pokedex-table/forms-table/forms-table.component';
+import { RegionalFormsTableComponent } from './pokedex-table/poke-entry-details/regional-forms-table/regional-forms-table.component';
+import { FormsTableComponent } from './pokedex-table/poke-entry-details/forms-table/forms-table.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PokedexOptionsComponent } from './pokedex-table/pokedex-options/pokedex-options.component';
 import { MatInputModule } from '@angular/material/input';
@@ -22,9 +22,10 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { PokeImgComponent } from './pokedex-table/poke-img/poke-img.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { GenderDiffsComponent } from './pokedex-table/gender-diffs/gender-diffs.component';
-import { GenderInfoComponent } from './pokedex-table/gender-diffs/gender-info/gender-info.component';
+import { GenderDiffsComponent } from './pokedex-table/poke-entry-details/gender-diffs/gender-diffs.component';
+import { GenderInfoComponent } from './pokedex-table/poke-entry-details/gender-diffs/gender-info/gender-info.component';
 import { PokedexOptionsService } from './services/pokedex-options/pokedex-options.service';
+import { PokeEntryDetailsComponent } from './pokedex-table/poke-entry-details/poke-entry-details.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { PokedexOptionsService } from './services/pokedex-options/pokedex-option
     PokeImgComponent,
     GenderDiffsComponent,
     GenderInfoComponent,
+    PokeEntryDetailsComponent,
   ],
   imports: [
     BrowserModule,

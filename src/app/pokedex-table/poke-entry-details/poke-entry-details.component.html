@@ -1,0 +1,10 @@
+<mat-accordion multi>
+  <app-regional-forms-table
+    *ngIf="regionalForms"
+    [regionalForms]="regionalForms"
+  ></app-regional-forms-table>
+
+  <app-forms-table *ngIf="forms" [forms]="forms"></app-forms-table>
+
+  <app-gender-diffs [entry]="entry"></app-gender-diffs>
+</mat-accordion>

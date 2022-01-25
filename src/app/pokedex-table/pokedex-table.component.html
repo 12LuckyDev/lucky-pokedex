@@ -53,19 +53,7 @@
           class="pokemon-element-detail"
           [@detail-expand]="row == expanded ? 'expanded' : 'collapsed'"
         >
-          <mat-accordion multi>
-            <app-regional-forms-table
-              *ngIf="row.regionalForms"
-              [regionalForms]="row.regionalForms"
-            ></app-regional-forms-table>
-
-            <app-forms-table
-              *ngIf="row.forms"
-              [forms]="row.forms"
-            ></app-forms-table>
-
-            <app-gender-diffs [entry]="row"></app-gender-diffs>
-          </mat-accordion>
+          <app-poke-entry-details [entry]="row"></app-poke-entry-details>
         </div>
       </td>
     </ng-container>

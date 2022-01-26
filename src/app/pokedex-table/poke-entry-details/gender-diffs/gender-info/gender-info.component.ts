@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { PokeGender } from 'src/app/enums';
 import { PokedexGenderDiffs } from 'src/app/models';
 
@@ -15,6 +15,11 @@ export class GenderInfoComponent implements OnInit {
   @Input() pokeNumber!: number | null;
   @Input() gender!: PokeGender;
   @Input() genderDiffs!: PokedexGenderDiffs | null;
+  @Input() selected: boolean = false;
+  @Output() selectionChange = new EventEmitter<{
+    selected: boolean;
+    gender: PokeGender;
+  }>();
 
   constructor() {}
 
@@ -34,5 +39,12 @@ export class GenderInfoComponent implements OnInit {
     return this.gender !== null || this.gender !== undefined
       ? getGenderName(this.gender)
       : '';
+  }
+
+  public onSelectionChange() {
+    this.selectionChange.emit({
+      selected: !this.selected,
+      gender: this.gender,
+    });
   }
 }

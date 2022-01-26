@@ -1,7 +1,10 @@
 <mat-card class="gender-info-card">
   <mat-card-header>
     <mat-card-title>
-      <mat-checkbox color="primary"></mat-checkbox>
+      <mat-checkbox
+        color="primary"
+        (change)="onSelectionChange()"
+      ></mat-checkbox>
       {{ genderName }}
       <mat-icon *ngIf="showIcon" aria-hidden="false" aria-label="Gender Icon"
         >{{ genderName }}

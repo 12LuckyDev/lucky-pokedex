@@ -13,8 +13,11 @@
         [pokeNumber]="number"
         [gender]="gender"
         [genderDiffs]="genderDiffs"
+        [selected]="isSelected(gender)"
+        (selectionChange)="selectionChange($event)"
       ></app-gender-info>
     </mat-card-content>
+
     <mat-card-content *ngIf="genderDiffs">
       <p>{{ genderDiffs.desc }}</p>
       <div fxLayout="row" fxLayoutAlign="flex-start center">

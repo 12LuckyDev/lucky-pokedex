@@ -6,5 +6,9 @@
 
   <app-forms-table *ngIf="forms" [forms]="forms"></app-forms-table>
 
-  <app-gender-diffs [entry]="entry"></app-gender-diffs>
+  <app-gender-diffs
+    [entry]="entry"
+    [selectedGenders]="selectedGenders"
+    (genderSelectionChange)="genderSelectionChange($event)"
+  ></app-gender-diffs>
 </mat-accordion>

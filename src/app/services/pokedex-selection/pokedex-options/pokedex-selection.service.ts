@@ -1,16 +1,20 @@
 import { Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
-import { PokeGender } from 'src/app/enums';
+import { PokeGender, PokeRegion } from 'src/app/enums';
 
 export interface PokedexSelectionModel {
   selected: boolean;
   genders: PokeGender[] | null;
+  regionalForms: PokeRegion[] | null;
+  forms: number[] | null;
 }
 
 const getNewModel = () => {
   const newModel: PokedexSelectionModel = {
     selected: false,
     genders: [],
+    regionalForms: null,
+    forms: null,
   };
   return newModel;
 };

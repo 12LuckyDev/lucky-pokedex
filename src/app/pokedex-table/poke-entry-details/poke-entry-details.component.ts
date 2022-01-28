@@ -1,6 +1,6 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { filter, Subject, takeUntil } from 'rxjs';
-import { PokeGender } from 'src/app/enums';
+import { PokeGender, PokeRegion } from 'src/app/enums';
 import { PokedexEntry } from 'src/app/models';
 import {
   PokedexSelectionModel,
@@ -54,16 +54,30 @@ export class PokeEntryDetailsComponent implements OnInit, OnDestroy {
     }
   }
 
-  genderSelectionChange(selectedGenders: PokeGender[]) {
+  genderSelectionChange(genders: PokeGender[]) {
+    console.log(genders);
     if (this.number !== null && this._selection) {
       this.pokedexSelectionService.updateSelection(this.number, {
         ...this._selection,
-        genders: selectedGenders,
+        genders,
       });
     }
   }
 
   get selectedGenders(): PokeGender[] {
     return this._selection ? this._selection.genders ?? [] : [];
+  }
+
+  regionalFormSelectionChange(regionalForms: PokeRegion[]) {
+    if (this.number !== null && this._selection) {
+      this.pokedexSelectionService.updateSelection(this.number, {
+        ...this._selection,
+        regionalForms,
+      });
+    }
+  }
+
+  get selectedRegionalForms(): PokeRegion[] {
+    return this._selection ? this._selection.regionalForms ?? [] : [];
   }
 }

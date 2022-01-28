@@ -2,6 +2,8 @@
   <app-regional-forms-table
     *ngIf="regionalForms"
     [regionalForms]="regionalForms"
+    [selectedRegionalForms]="selectedRegionalForms"
+    (regionalFormSelectionChange)="regionalFormSelectionChange($event)"
   ></app-regional-forms-table>
 
   <app-forms-table *ngIf="forms" [forms]="forms"></app-forms-table>

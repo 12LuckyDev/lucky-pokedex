@@ -44,6 +44,7 @@ export class PokedexSelectionService {
   }
 
   updateSelection(number: number, model: PokedexSelectionModel): void {
+    console.log(number, model);
     this._selectionMap.set(number, model);
     this._selectionSubject.next(number);
   }

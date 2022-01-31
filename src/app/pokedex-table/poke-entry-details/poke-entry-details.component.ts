@@ -80,4 +80,17 @@ export class PokeEntryDetailsComponent implements OnInit, OnDestroy {
   get selectedRegionalForms(): PokeRegion[] {
     return this._selection ? this._selection.regionalForms ?? [] : [];
   }
+
+  formSelectionChange(forms: number[]) {
+    if (this.number !== null && this._selection) {
+      this.pokedexSelectionService.updateSelection(this.number, {
+        ...this._selection,
+        forms,
+      });
+    }
+  }
+
+  get selectedForms(): number[] {
+    return this._selection ? this._selection.forms ?? [] : [];
+  }
 }

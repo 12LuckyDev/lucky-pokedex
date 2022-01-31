@@ -6,7 +6,12 @@
     (regionalFormSelectionChange)="regionalFormSelectionChange($event)"
   ></app-regional-forms-table>
 
-  <app-forms-table *ngIf="forms" [forms]="forms"></app-forms-table>
+  <app-forms-table
+    *ngIf="forms"
+    [forms]="forms"
+    [selectedForms]="selectedForms"
+    (formSelectionChange)="formSelectionChange($event)"
+  ></app-forms-table>
 
   <app-gender-diffs
     [entry]="entry"

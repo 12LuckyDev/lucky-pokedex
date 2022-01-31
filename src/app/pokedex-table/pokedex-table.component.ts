@@ -13,10 +13,7 @@ import { PokedexTableDataSource } from './pokedex-table-datasource';
 import { BehaviorSubject } from 'rxjs';
 import { POKEDEX_TABLE_ANIMATIONS } from './pokedex-table-animations';
 import { PokedexOptionsService } from '../services/pokedex-options/pokedex-options.service';
-import {
-  PokedexSelectionModel,
-  PokedexSelectionService,
-} from '../services/pokedex-selection/pokedex-options/pokedex-selection.service';
+import { PokedexSelectionService } from '../services/pokedex-selection/pokedex-options/pokedex-selection.service';
 
 @Component({
   selector: 'app-pokedex-table',

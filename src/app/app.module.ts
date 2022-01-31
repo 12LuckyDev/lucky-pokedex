@@ -27,6 +27,7 @@ import { GenderInfoComponent } from './pokedex-table/poke-entry-details/gender-d
 import { PokedexOptionsService } from './services/pokedex-options/pokedex-options.service';
 import { PokeEntryDetailsComponent } from './pokedex-table/poke-entry-details/poke-entry-details.component';
 import { PokedexSelectionService } from './services/pokedex-selection/pokedex-options/pokedex-selection.service';
+import { SelectionChangeAwareComponent } from './pokedex-table/poke-entry-details/selection-change-aware/selection-change-aware.component';
 
 @NgModule({
   declarations: [
@@ -63,6 +64,7 @@ import { PokedexSelectionService } from './services/pokedex-selection/pokedex-op
     PokedexDataService,
     PokedexOptionsService,
     PokedexSelectionService,
+    SelectionChangeAwareComponent,
   ],
   bootstrap: [AppComponent],
 })

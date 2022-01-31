@@ -24,12 +24,20 @@ export class PokeEntryDetailsComponent implements OnInit, OnDestroy {
     return this.entry ? this.entry.number : null;
   }
 
-  get forms() {
-    return this.entry ? this.entry.forms : null;
+  get showForm(): boolean {
+    return this.entry
+      ? this.entry.forms
+        ? this.entry.forms.length > 0
+        : false
+      : false;
   }
 
-  get regionalForms() {
-    return this.entry ? this.entry.regionalForms : null;
+  get showRegionalForms() {
+    return this.entry
+      ? this.entry.regionalForms
+        ? this.entry.regionalForms.length > 0
+        : false
+      : false;
   }
 
   ngOnInit(): void {
@@ -66,31 +74,5 @@ export class PokeEntryDetailsComponent implements OnInit, OnDestroy {
 
   get selectedGenders(): PokeGender[] {
     return this._selection ? this._selection.genders ?? [] : [];
-  }
-
-  regionalFormSelectionChange(regionalForms: PokeRegion[]) {
-    if (this.number !== null && this._selection) {
-      this.pokedexSelectionService.updateSelection(this.number, {
-        ...this._selection,
-        regionalForms,
-      });
-    }
-  }
-
-  get selectedRegionalForms(): PokeRegion[] {
-    return this._selection ? this._selection.regionalForms ?? [] : [];
-  }
-
-  formSelectionChange(forms: number[]) {
-    if (this.number !== null && this._selection) {
-      this.pokedexSelectionService.updateSelection(this.number, {
-        ...this._selection,
-        forms,
-      });
-    }
-  }
-
-  get selectedForms(): number[] {
-    return this._selection ? this._selection.forms ?? [] : [];
   }
 }

@@ -1,4 +1,3 @@
-import { SelectionModel } from '@angular/cdk/collections';
 import {
   AfterViewInit,
   ChangeDetectorRef,
@@ -14,6 +13,10 @@ import { PokedexTableDataSource } from './pokedex-table-datasource';
 import { BehaviorSubject } from 'rxjs';
 import { POKEDEX_TABLE_ANIMATIONS } from './pokedex-table-animations';
 import { PokedexOptionsService } from '../services/pokedex-options/pokedex-options.service';
+import {
+  PokedexSelectionModel,
+  PokedexSelectionService,
+} from '../services/pokedex-selection/pokedex-options/pokedex-selection.service';
 
 @Component({
   selector: 'app-pokedex-table',
@@ -26,7 +29,6 @@ export class PokedexTableComponent implements AfterViewInit {
   @ViewChild(MatSort) sort!: MatSort;
   @ViewChild(MatTable) table!: MatTable<PokedexEntry>;
   dataSource: PokedexTableDataSource;
-  selection: SelectionModel<PokedexEntry>;
   expanded: PokedexEntry | null;
 
   displayedColumns = ['select', 'number', 'image', 'name'];
@@ -34,18 +36,33 @@ export class PokedexTableComponent implements AfterViewInit {
   constructor(
     private cdref: ChangeDetectorRef,
     private pokedexDataService: PokedexDataService,
-    private pokedexOptionsService: PokedexOptionsService
+    private pokedexOptionsService: PokedexOptionsService,
+    private pokedexSelectionService: PokedexSelectionService
   ) {
     this.dataSource = new PokedexTableDataSource(
       this.pokedexDataService,
       this.pokedexOptionsService
     );
-    this.selection = new SelectionModel<PokedexEntry>(true, []);
     this.expanded = null;
   }
 
   get optionsSubject(): BehaviorSubject<PokedexOptions> {
     return this.pokedexOptionsService.optionsSubject;
+  }
+
+  public changeSelection(entry: PokedexEntry): void {
+    const { number } = entry;
+    this.pokedexSelectionService.updateSelection(number, {
+      ...this.pokedexSelectionService.getSelection(entry.number),
+      selected: !this.isSelected(entry),
+    });
+  }
+
+  public isSelected(entry: PokedexEntry): boolean {
+    const selectionModel = this.pokedexSelectionService.getSelection(
+      entry.number
+    );
+    return selectionModel.selected;
   }
 
   ngAfterViewInit(): void {

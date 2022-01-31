@@ -32,6 +32,10 @@ export class PokedexSelectionService {
     return this._selectionSubject.asObservable();
   }
 
+  get selectionMap() {
+    return this._selectionMap;
+  }
+
   getSelection(number: number): PokedexSelectionModel {
     const model = this._selectionMap.get(number);
     if (model) {

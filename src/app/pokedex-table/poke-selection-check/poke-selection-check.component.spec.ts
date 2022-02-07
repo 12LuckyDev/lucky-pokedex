@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GenderInfoComponent } from './gender-info.component';
+import { PokeSelectionCheckComponent } from './poke-selection-check.component';
 
-describe('GenderInfoComponent', () => {
-  let component: GenderInfoComponent;
-  let fixture: ComponentFixture<GenderInfoComponent>;
+describe('PokeSelectionCheckComponent', () => {
+  let component: PokeSelectionCheckComponent;
+  let fixture: ComponentFixture<PokeSelectionCheckComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ GenderInfoComponent ]
+      declarations: [ PokeSelectionCheckComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(GenderInfoComponent);
+    fixture = TestBed.createComponent(PokeSelectionCheckComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

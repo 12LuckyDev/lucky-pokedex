@@ -33,6 +33,10 @@ export class SelectionChangeAwareComponent implements OnInit, OnDestroy {
     this._destroyed.complete();
   }
 
+  public get destroyed(): Subject<void> {
+    return this._destroyed;
+  }
+
   public get number(): number | null {
     return this.entry ? this.entry.number : null;
   }

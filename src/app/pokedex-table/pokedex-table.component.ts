@@ -7,13 +7,13 @@ import {
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTable } from '@angular/material/table';
-import { PokedexEntry, PokedexOptions } from '../models';
+import { PokedexEntry } from '../models';
 import { PokedexDataService } from '../services/pokedex-data/pokedex-data.service';
 import { PokedexTableDataSource } from './pokedex-table-datasource';
-import { BehaviorSubject } from 'rxjs';
 import { POKEDEX_TABLE_ANIMATIONS } from './pokedex-table-animations';
 import { PokedexOptionsService } from '../services/pokedex-options/pokedex-options.service';
 import { PokedexSelectionService } from '../services/pokedex-selection/pokedex-options/pokedex-selection.service';
+import { CountGendersPolicy } from '../enums';
 
 @Component({
   selector: 'app-pokedex-table',
@@ -28,8 +28,6 @@ export class PokedexTableComponent implements AfterViewInit {
   dataSource: PokedexTableDataSource;
   expanded: PokedexEntry | null;
 
-  displayedColumns = ['select', 'number', 'image', 'name'];
-
   constructor(
     private cdref: ChangeDetectorRef,
     private pokedexDataService: PokedexDataService,
@@ -41,10 +39,6 @@ export class PokedexTableComponent implements AfterViewInit {
       this.pokedexOptionsService
     );
     this.expanded = null;
-  }
-
-  get optionsSubject(): BehaviorSubject<PokedexOptions> {
-    return this.pokedexOptionsService.optionsSubject;
   }
 
   public changeSelection(entry: PokedexEntry): void {
@@ -60,6 +54,19 @@ export class PokedexTableComponent implements AfterViewInit {
       entry.number
     );
     return selectionModel.selected;
+  }
+
+  public get showGenders(): boolean {
+    return (
+      this.pokedexOptionsService.options.countGendersPolicy !==
+      CountGendersPolicy.NO_COUNT
+    );
+  }
+
+  public get displayedColumns(): string[] {
+    return this.showGenders
+      ? ['select', 'number', 'name']
+      : ['select', 'number', 'image', 'name'];
   }
 
   ngAfterViewInit(): void {

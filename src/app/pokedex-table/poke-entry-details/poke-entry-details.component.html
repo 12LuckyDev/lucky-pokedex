@@ -5,10 +5,4 @@
   ></app-regional-forms-table>
 
   <app-forms-table *ngIf="showForm" [entry]="entry"></app-forms-table>
-
-  <app-gender-diffs
-    [entry]="entry"
-    [selectedGenders]="selectedGenders"
-    (genderSelectionChange)="genderSelectionChange($event)"
-  ></app-gender-diffs>
 </mat-accordion>

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import {
   CountFormsPolicy,
   CountGendersPolicy,
@@ -23,8 +23,8 @@ export class PokedexOptionsService {
 
   constructor() {}
 
-  public get optionsSubject(): BehaviorSubject<PokedexOptions> {
-    return this._optionsSubject;
+  public get optionsObservable(): Observable<PokedexOptions> {
+    return this._optionsSubject.asObservable();
   }
 
   public get options(): PokedexOptions {

@@ -1,0 +1,47 @@
+<ng-container [ngSwitch]="presentationMode">
+  <div *ngSwitchCase="'GENDERS'" fxLayout="row wrap" fxLayoutGap="6px">
+    <mat-card
+      *ngFor="let gender of genders"
+      fxLayout="column"
+      fxLayoutAlign="center center"
+    >
+      <p>
+        {{ getGenderName(gender) }}
+        <mat-icon
+          *ngIf="showIcon(gender)"
+          aria-hidden="false"
+          aria-label="Gender Icon"
+          >{{ getGenderName(gender) }}
+        </mat-icon>
+      </p>
+      <poke-img [imgPath]="getImgPath(gender)"></poke-img>
+      <mat-checkbox
+        color="primary"
+        (click)="$event.stopPropagation()"
+      ></mat-checkbox>
+    </mat-card>
+  </div>
+
+  <div
+    *ngSwitchCase="'CHECKBOX_WITH_IMG'"
+    fxLayout="row wrap"
+    fxLayoutAlign="center"
+  >
+    <mat-card fxLayout="column" fxLayoutAlign="center center">
+      <poke-img [imgPath]="getImgPath()"></poke-img>
+      <mat-checkbox
+        color="primary"
+        (click)="$event.stopPropagation()"
+      ></mat-checkbox>
+    </mat-card>
+  </div>
+
+  <mat-checkbox
+    *ngSwitchCase="'CHECKBOX'"
+    color="primary"
+    (click)="$event.stopPropagation()"
+  ></mat-checkbox>
+</ng-container>
+
+<!-- (change)="$event ? changeSelection(row) : null"
+          [checked]="isSelected(row)" -->

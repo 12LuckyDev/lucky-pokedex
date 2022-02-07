@@ -22,12 +22,11 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { PokeImgComponent } from './pokedex-table/poke-img/poke-img.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { GenderDiffsComponent } from './pokedex-table/poke-entry-details/gender-diffs/gender-diffs.component';
-import { GenderInfoComponent } from './pokedex-table/poke-entry-details/gender-diffs/gender-info/gender-info.component';
 import { PokedexOptionsService } from './services/pokedex-options/pokedex-options.service';
 import { PokeEntryDetailsComponent } from './pokedex-table/poke-entry-details/poke-entry-details.component';
 import { PokedexSelectionService } from './services/pokedex-selection/pokedex-options/pokedex-selection.service';
 import { SelectionChangeAwareComponent } from './pokedex-table/poke-entry-details/selection-change-aware/selection-change-aware.component';
+import { PokeSelectionCheckComponent } from './pokedex-table/poke-selection-check/poke-selection-check.component';
 
 @NgModule({
   declarations: [
@@ -37,9 +36,8 @@ import { SelectionChangeAwareComponent } from './pokedex-table/poke-entry-detail
     FormsTableComponent,
     PokedexOptionsComponent,
     PokeImgComponent,
-    GenderDiffsComponent,
-    GenderInfoComponent,
     PokeEntryDetailsComponent,
+    PokeSelectionCheckComponent,
   ],
   imports: [
     BrowserModule,

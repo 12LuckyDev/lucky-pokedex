@@ -32,7 +32,7 @@ export class PokedexTableDataSource extends DataSource<PokedexEntry> {
    */
   connect(): Observable<PokedexEntry[]> {
     this.optionsSubscription =
-      this.pokedexOptionsService.optionsSubject.subscribe((options) =>
+      this.pokedexOptionsService.optionsObservable.subscribe((options) =>
         console.log(options)
       );
 

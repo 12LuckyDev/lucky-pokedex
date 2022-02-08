@@ -18,6 +18,8 @@
       <mat-checkbox
         color="primary"
         (click)="$event.stopPropagation()"
+        (change)="$event ? changeSelection(gender) : null"
+        [checked]="isSelected(gender)"
       ></mat-checkbox>
     </mat-card>
   </div>
@@ -32,6 +34,8 @@
       <mat-checkbox
         color="primary"
         (click)="$event.stopPropagation()"
+        (change)="$event ? changeSelection() : null"
+        [checked]="isSelected()"
       ></mat-checkbox>
     </mat-card>
   </div>
@@ -40,8 +44,7 @@
     *ngSwitchCase="'CHECKBOX'"
     color="primary"
     (click)="$event.stopPropagation()"
+    (change)="$event ? changeSelection() : null"
+    [checked]="isSelected()"
   ></mat-checkbox>
 </ng-container>
-
-<!-- (change)="$event ? changeSelection(row) : null"
-          [checked]="isSelected(row)" -->

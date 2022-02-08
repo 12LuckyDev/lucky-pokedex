@@ -12,7 +12,6 @@ import { PokedexDataService } from '../services/pokedex-data/pokedex-data.servic
 import { PokedexTableDataSource } from './pokedex-table-datasource';
 import { POKEDEX_TABLE_ANIMATIONS } from './pokedex-table-animations';
 import { PokedexOptionsService } from '../services/pokedex-options/pokedex-options.service';
-import { PokedexSelectionService } from '../services/pokedex-selection/pokedex-options/pokedex-selection.service';
 import { CountGendersPolicy } from '../enums';
 
 @Component({
@@ -31,29 +30,13 @@ export class PokedexTableComponent implements AfterViewInit {
   constructor(
     private cdref: ChangeDetectorRef,
     private pokedexDataService: PokedexDataService,
-    private pokedexOptionsService: PokedexOptionsService,
-    private pokedexSelectionService: PokedexSelectionService
+    private pokedexOptionsService: PokedexOptionsService
   ) {
     this.dataSource = new PokedexTableDataSource(
       this.pokedexDataService,
       this.pokedexOptionsService
     );
     this.expanded = null;
-  }
-
-  public changeSelection(entry: PokedexEntry): void {
-    const { number } = entry;
-    this.pokedexSelectionService.updateSelection(number, {
-      ...this.pokedexSelectionService.getSelection(entry.number),
-      selected: !this.isSelected(entry),
-    });
-  }
-
-  public isSelected(entry: PokedexEntry): boolean {
-    const selectionModel = this.pokedexSelectionService.getSelection(
-      entry.number
-    );
-    return selectionModel.selected;
   }
 
   public get showGenders(): boolean {

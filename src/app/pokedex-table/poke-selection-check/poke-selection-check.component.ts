@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { toggle } from '@12luckydev/utils';
+import { Component } from '@angular/core';
 import { CountGendersPolicy, PokeGender } from 'src/app/enums';
 import { PokedexOptionsService } from 'src/app/services/pokedex-options/pokedex-options.service';
 import { PokedexSelectionService } from 'src/app/services/pokedex-selection/pokedex-options/pokedex-selection.service';
@@ -13,19 +14,12 @@ const getGenderName = (gender: PokeGender) => {
   templateUrl: './poke-selection-check.component.html',
   styleUrls: ['./poke-selection-check.component.scss'],
 })
-export class PokeSelectionCheckComponent
-  extends SelectionChangeAwareComponent
-  implements OnInit
-{
+export class PokeSelectionCheckComponent extends SelectionChangeAwareComponent {
   constructor(
     override pokedexSelectionService: PokedexSelectionService,
     private pokedexOptionsService: PokedexOptionsService
   ) {
     super(pokedexSelectionService);
-  }
-
-  override ngOnInit(): void {
-    super.ngOnInit();
   }
 
   get presentationMode(): string {
@@ -79,5 +73,30 @@ export class PokeSelectionCheckComponent
 
   showIcon(gender: PokeGender) {
     return gender !== PokeGender.genderless;
+  }
+
+  isSelected(gender?: PokeGender): boolean {
+    if (this.number) {
+      const selection = this.pokedexSelectionService.getSelection(this.number);
+      return gender
+        ? !!selection.genders?.includes(gender)
+        : selection.selected;
+    }
+    return false;
+  }
+
+  changeSelection(gender?: PokeGender): void {
+    if (this.number) {
+      this.pokedexSelectionService.updateSelection(this.number, (model) => {
+        const { genders } = model;
+
+        return gender !== undefined
+          ? { ...model, genders: genders ? toggle(genders, gender) : [gender] }
+          : {
+              ...model,
+              selected: !model.selected,
+            };
+      });
+    }
   }
 }

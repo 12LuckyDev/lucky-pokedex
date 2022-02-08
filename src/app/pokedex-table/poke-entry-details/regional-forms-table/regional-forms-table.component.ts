@@ -1,3 +1,4 @@
+import { toggle } from '@12luckydev/utils';
 import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { MatTable } from '@angular/material/table';
 import { PokeRegion } from 'src/app/enums/poke-region.enum';
@@ -41,28 +42,25 @@ export class RegionalFormsTableComponent
 
   public changeSelection(entry: PokedexRegionalFormEntry): void {
     const { region } = entry;
-    const selectedRegionalForms = this.selection
-      ? this.selection.regionalForms ?? []
-      : [];
+    if (this.number) {
+      this.pokedexSelectionService.updateSelection(this.number, (model) => {
+        const { regionalForms } = model;
 
-    if (this.isSelected(entry)) {
-      selectedRegionalForms.splice(selectedRegionalForms.indexOf(region), 1);
-    } else {
-      selectedRegionalForms.push(region);
-    }
-    if (this.number && this.selection) {
-      this.pokedexSelectionService.updateSelection(this.number, {
-        ...this.selection,
-        regionalForms: selectedRegionalForms,
+        return {
+          ...model,
+          regionalForms: regionalForms
+            ? toggle(regionalForms, region)
+            : [region],
+        };
       });
     }
   }
 
   public isSelected(entry: PokedexRegionalFormEntry): boolean {
-    if (this.selection === null || this.selection.regionalForms === null) {
-      return false;
-    } else {
-      return this.selection.regionalForms.includes(entry.region);
+    if (this.number) {
+      const selection = this.pokedexSelectionService.getSelection(this.number);
+      return !!selection?.regionalForms?.includes(entry.region);
     }
+    return false;
   }
 }

@@ -26,7 +26,14 @@ export class PokedexSelectionService {
   private _selectionSubject = new Subject<number>();
   private _selectionMap = new Map<number, PokedexSelectionModel>();
 
-  constructor() {}
+  constructor() {
+    // const temp1 = this.getSelection(1);
+    // temp1.selected = true;
+    // this._selectionMap.set(1, temp1);
+    // const temp19 = this.getSelection(19);
+    // temp19.regionalForms = [6];
+    // this._selectionMap.set(19, temp19);
+  }
 
   get selectionChangeObservable(): Observable<number> {
     return this._selectionSubject.asObservable();
@@ -47,9 +54,16 @@ export class PokedexSelectionService {
     }
   }
 
-  updateSelection(number: number, model: PokedexSelectionModel): void {
-    console.log(number, model);
-    this._selectionMap.set(number, model);
+  updateSelection(
+    number: number,
+    model:
+      | PokedexSelectionModel
+      | ((model: PokedexSelectionModel) => PokedexSelectionModel)
+  ): void {
+    const newModel =
+      typeof model === 'function' ? model(this.getSelection(number)) : model;
+    console.log(number, newModel);
+    this._selectionMap.set(number, newModel);
     this._selectionSubject.next(number);
   }
 }

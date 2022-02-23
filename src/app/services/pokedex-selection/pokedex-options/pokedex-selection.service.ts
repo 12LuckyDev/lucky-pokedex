@@ -1,54 +1,28 @@
+import { add, editPropAt, removeAt, toggle } from '@12luckydev/utils';
 import { Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 import { PokeGender, PokeRegion } from 'src/app/enums';
-
-export interface PokedexSelectionModel {
-  selected: boolean;
-  genders: PokeGender[] | null;
-  regionalForms: PokeRegion[] | null;
-  forms: number[] | null;
-}
-
-const getNewModel = () => {
-  const newModel: PokedexSelectionModel = {
-    selected: false,
-    genders: [],
-    regionalForms: null,
-    forms: null,
-  };
-  return newModel;
-};
+import { PokedexSelection, PokedexSelectionModel } from 'src/app/models';
 
 @Injectable({
   providedIn: 'root',
 })
 export class PokedexSelectionService {
   private _selectionSubject = new Subject<number>();
-  private _selectionMap = new Map<number, PokedexSelectionModel>();
+  private _selectionMap = new Map<number, PokedexSelection>();
 
-  constructor() {
-    // const temp1 = this.getSelection(1);
-    // temp1.selected = true;
-    // this._selectionMap.set(1, temp1);
-    // const temp19 = this.getSelection(19);
-    // temp19.regionalForms = [6];
-    // this._selectionMap.set(19, temp19);
-  }
+  constructor() {}
 
   get selectionChangeObservable(): Observable<number> {
     return this._selectionSubject.asObservable();
   }
 
-  get selectionMap() {
-    return this._selectionMap;
-  }
-
-  getSelection(number: number): PokedexSelectionModel {
+  getSelection(number: number): PokedexSelection {
     const model = this._selectionMap.get(number);
     if (model) {
       return model;
     } else {
-      const newModel: PokedexSelectionModel = getNewModel();
+      const newModel: PokedexSelection = new PokedexSelectionModel();
       this._selectionMap.set(number, newModel);
       return newModel;
     }
@@ -56,14 +30,91 @@ export class PokedexSelectionService {
 
   updateSelection(
     number: number,
-    model:
-      | PokedexSelectionModel
-      | ((model: PokedexSelectionModel) => PokedexSelectionModel)
+    model: PokedexSelection | ((model: PokedexSelection) => PokedexSelection)
   ): void {
     const newModel =
       typeof model === 'function' ? model(this.getSelection(number)) : model;
     console.log(number, newModel);
     this._selectionMap.set(number, newModel);
     this._selectionSubject.next(number);
+  }
+
+  changeSelection(number: number, gender?: PokeGender) {
+    this.updateSelection(number, (model) => {
+      const { genders } = model;
+
+      return typeof gender === 'number'
+        ? { ...model, genders: genders ? toggle(genders, gender) : [gender] }
+        : {
+            ...model,
+            selected: !model.selected,
+          };
+    });
+  }
+
+  changeRegionalFormSelection(
+    number: number,
+    region: PokeRegion,
+    gender?: PokeGender
+  ) {
+    this.updateSelection(number, (model) => {
+      if (typeof gender === 'number') {
+        const regionalFormsGenders = model.regionalFormsGenders ?? [];
+        const index = regionalFormsGenders.findIndex(
+          (rfg) => rfg.region === region
+        );
+        const genders: PokeGender[] =
+          index > -1
+            ? toggle(regionalFormsGenders[index].genders, gender)
+            : [gender];
+
+        return {
+          ...model,
+          regionalFormsGenders:
+            genders.length > 0
+              ? index > -1
+                ? editPropAt(regionalFormsGenders, 'genders', genders, index)
+                : add(regionalFormsGenders, { region, genders })
+              : removeAt(regionalFormsGenders, index),
+        };
+      } else {
+        const { regionalForms } = model;
+
+        return {
+          ...model,
+          regionalForms: regionalForms
+            ? toggle(regionalForms, region)
+            : [region],
+        };
+      }
+    });
+  }
+
+  changeFormSelection(number: number, form: number, gender?: PokeGender) {
+    this.updateSelection(number, (model) => {
+      if (typeof gender === 'number') {
+        const formsGenders = model.formsGenders ?? [];
+        const index = formsGenders.findIndex((fg) => fg.form === form);
+        const genders: PokeGender[] =
+          index > -1 ? toggle(formsGenders[index].genders, gender) : [gender];
+
+        return {
+          ...model,
+          formsGenders:
+            genders.length > 0
+              ? index > -1
+                ? editPropAt(formsGenders, 'genders', genders, index)
+                : add(formsGenders, { form, genders })
+              : removeAt(formsGenders, index),
+        };
+      } else {
+        const { forms } = model;
+
+        return {
+          ...model,
+          forms: forms ? toggle(forms, form) : [form],
+        };
+      }
+    });
   }
 }

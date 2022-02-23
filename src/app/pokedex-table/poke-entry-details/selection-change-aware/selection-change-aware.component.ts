@@ -1,16 +1,13 @@
 import { Directive, Input, OnDestroy, OnInit } from '@angular/core';
 import { filter, Subject, takeUntil } from 'rxjs';
-import { PokedexEntry } from 'src/app/models';
-import {
-  PokedexSelectionModel,
-  PokedexSelectionService,
-} from 'src/app/services/pokedex-selection/pokedex-options/pokedex-selection.service';
+import { PokedexEntry, PokedexSelection } from 'src/app/models';
+import { PokedexSelectionService } from 'src/app/services/pokedex-selection/pokedex-options/pokedex-selection.service';
 
 @Directive()
 export class SelectionChangeAwareComponent implements OnInit, OnDestroy {
   private readonly _destroyed = new Subject<void>();
 
-  private _selection!: PokedexSelectionModel;
+  private _selection!: PokedexSelection;
 
   @Input() entry!: PokedexEntry;
 
@@ -19,7 +16,6 @@ export class SelectionChangeAwareComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.updateSelectionModel();
 
-    // TODO add rerender source
     this.pokedexSelectionService.selectionChangeObservable
       .pipe(
         takeUntil(this._destroyed),
@@ -41,7 +37,7 @@ export class SelectionChangeAwareComponent implements OnInit, OnDestroy {
     return this.entry ? this.entry.number : null;
   }
 
-  public get selection(): PokedexSelectionModel | null {
+  public get selection(): PokedexSelection | null {
     return this._selection ? this._selection : null;
   }
 

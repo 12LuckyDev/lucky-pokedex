@@ -41,21 +41,15 @@ export class RegionalFormsTableComponent
   }
 
   public changeSelection(entry: PokedexRegionalFormEntry): void {
-    const { region } = entry;
     if (this.number) {
-      this.pokedexSelectionService.updateSelection(this.number, (model) => {
-        const { regionalForms } = model;
-
-        return {
-          ...model,
-          regionalForms: regionalForms
-            ? toggle(regionalForms, region)
-            : [region],
-        };
-      });
+      this.pokedexSelectionService.changeRegionalFormSelection(
+        this.number,
+        entry.region
+      );
     }
   }
 
+  // TODO
   public isSelected(entry: PokedexRegionalFormEntry): boolean {
     if (this.number) {
       const selection = this.pokedexSelectionService.getSelection(this.number);

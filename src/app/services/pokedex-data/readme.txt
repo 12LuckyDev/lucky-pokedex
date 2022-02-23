@@ -4,6 +4,7 @@ Missing forms:
 - Alcremie all forms
 - Sinistea/Polteageist Antique Form
 - Dada Zarude
+- Urshifu Rapid Strike Style
 
 Missing gender diffs:
 - Eevee

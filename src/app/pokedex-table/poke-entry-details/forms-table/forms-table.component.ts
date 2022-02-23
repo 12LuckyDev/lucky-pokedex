@@ -50,27 +50,17 @@ export class FormsTableComponent
   }
 
   public changeSelection(entry: PokedexFormEntry): void {
-    const { id } = entry;
-    const selectedForms = this.selection ? this.selection.forms ?? [] : [];
-
-    if (this.isSelected(entry)) {
-      selectedForms.splice(selectedForms.indexOf(id), 1);
-    } else {
-      selectedForms.push(id);
-    }
-    if (this.number && this.selection) {
-      this.pokedexSelectionService.updateSelection(this.number, {
-        ...this.selection,
-        forms: selectedForms,
-      });
+    if (this.number) {
+      this.pokedexSelectionService.changeFormSelection(this.number, entry.id);
     }
   }
 
+  // TODO
   public isSelected(entry: PokedexFormEntry): boolean {
-    if (this.selection === null || this.selection.forms === null) {
-      return false;
-    } else {
-      return this.selection.forms.includes(entry.id);
+    if (this.number) {
+      const selection = this.pokedexSelectionService.getSelection(this.number);
+      return !!selection?.forms?.includes(entry.id);
     }
+    return false;
   }
 }

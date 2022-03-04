@@ -10,7 +10,7 @@ import {
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTable } from '@angular/material/table';
 import { PokedexFormEntry } from 'src/app/models';
-import { PokedexSelectionService } from 'src/app/services/pokedex-selection/pokedex-options/pokedex-selection.service';
+import { PokedexSelectionService } from 'src/app/services/pokedex-selection/pokedex-selection.service';
 import { SelectionChangeAwareComponent } from '../selection-change-aware/selection-change-aware.component';
 import { FormsTableDataSource } from './forms-table-datasource';
 

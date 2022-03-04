@@ -1,7 +1,7 @@
 import { Directive, Input, OnDestroy, OnInit } from '@angular/core';
 import { filter, Subject, takeUntil } from 'rxjs';
 import { PokedexEntry, PokedexSelection } from 'src/app/models';
-import { PokedexSelectionService } from 'src/app/services/pokedex-selection/pokedex-options/pokedex-selection.service';
+import { PokedexSelectionService } from 'src/app/services/pokedex-selection/pokedex-selection.service';
 
 @Directive()
 export class SelectionChangeAwareComponent implements OnInit, OnDestroy {

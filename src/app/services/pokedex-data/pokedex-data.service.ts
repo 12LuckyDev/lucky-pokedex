@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { PokedexEntry } from '../../models';
+import { PokedexEntry, PokedexSearch } from '../../models';
 import POKEDEX_LIST from './pokedex-data.json';
 
 export type GetPokedexListParamsType = {
@@ -8,6 +8,7 @@ export type GetPokedexListParamsType = {
   pageSize?: number;
   sortBy?: string;
   sortDirection?: string;
+  search: PokedexSearch | null;
 };
 
 @Injectable({
@@ -15,18 +16,21 @@ export type GetPokedexListParamsType = {
 })
 export class PokedexDataService {
   constructor() {}
-  getPokedexList({
-    pageIndex = 0,
-    pageSize = 10,
-    sortBy,
-    sortDirection,
-  }: GetPokedexListParamsType = {}): Observable<{
+  getPokedexList(
+    {
+      pageIndex = 0,
+      pageSize = 10,
+      sortBy,
+      sortDirection,
+      search,
+    }: GetPokedexListParamsType = { search: null }
+  ): Observable<{
     data: PokedexEntry[];
     count: number;
   }> {
     return of({
       data: getPagedPokedexList(
-        getSortedPokedexList(POKEDEX_LIST, sortBy, sortDirection),
+        getSortedPokedexList(getSearchData(search), sortBy, sortDirection),
         pageIndex,
         pageSize
       ),
@@ -35,28 +39,30 @@ export class PokedexDataService {
   }
 }
 
-function compare(
-  a: string | number,
-  b: string | number,
-  isAsc: boolean
-): number {
-  return (a < b ? -1 : 1) * (isAsc ? 1 : -1);
-}
+const getSearchData = (search: PokedexSearch | null) => {
+  return search
+    ? POKEDEX_LIST.filter(({ name }) => {
+        return name
+          .toLocaleLowerCase()
+          .includes((search.textSearch ?? '').toLocaleLowerCase());
+      })
+    : POKEDEX_LIST;
+};
 
-function getPagedPokedexList(
+const getPagedPokedexList = (
   data: PokedexEntry[],
   pageIndex: number,
   pageSize: number
-) {
+) => {
   const start = pageIndex * pageSize;
   return data.slice(start, start + pageSize);
-}
+};
 
-function getSortedPokedexList(
+const getSortedPokedexList = (
   data: PokedexEntry[],
   sortBy?: string,
   sortDirection?: string
-) {
+) => {
   if (!sortBy || sortDirection === '') {
     return data;
   }
@@ -72,4 +78,12 @@ function getSortedPokedexList(
         return 0;
     }
   });
-}
+};
+
+const compare = (
+  a: string | number,
+  b: string | number,
+  isAsc: boolean
+): number => {
+  return (a < b ? -1 : 1) * (isAsc ? 1 : -1);
+};

@@ -8,6 +8,7 @@ import {
   PokedexDataService,
 } from '../services/pokedex-data/pokedex-data.service';
 import { PokedexOptionsService } from '../services/pokedex-options/pokedex-options.service';
+import { PokedexSearchService } from '../services/pokedex-search/pokedex-search.service';
 
 export class PokedexTableDataSource extends DataSource<PokedexEntry> {
   data: PokedexEntry[] = [];
@@ -17,10 +18,12 @@ export class PokedexTableDataSource extends DataSource<PokedexEntry> {
   private _dataSubject = new BehaviorSubject<PokedexEntry[]>([]);
   private _countSubject = new BehaviorSubject<number>(0);
   private optionsSubscription!: Subscription;
+  private searchSubscription!: Subscription;
 
   constructor(
     private pokedexDataService: PokedexDataService,
-    private pokedexOptionsService: PokedexOptionsService
+    private pokedexOptionsService: PokedexOptionsService,
+    private pokedexSearchService: PokedexSearchService
   ) {
     super();
   }
@@ -35,6 +38,9 @@ export class PokedexTableDataSource extends DataSource<PokedexEntry> {
       this.pokedexOptionsService.optionsObservable.subscribe((options) =>
         console.log(options)
       );
+
+    this.searchSubscription =
+      this.pokedexSearchService.searchObservable.subscribe(() => this.query());
 
     if (this.paginator) {
       this.paginator.page.subscribe(() => this.query());
@@ -52,6 +58,9 @@ export class PokedexTableDataSource extends DataSource<PokedexEntry> {
   disconnect(): void {
     this._dataSubject.complete();
     this._countSubject.complete();
+    if (this.searchSubscription) {
+      this.searchSubscription.unsubscribe();
+    }
     if (this.optionsSubscription) {
       this.optionsSubscription.unsubscribe();
     }
@@ -71,7 +80,9 @@ export class PokedexTableDataSource extends DataSource<PokedexEntry> {
   }
 
   private get queryParam() {
-    const params: GetPokedexListParamsType = {};
+    const params: GetPokedexListParamsType = {
+      search: this.pokedexSearchService.search ?? null,
+    };
     if (this.paginator) {
       params.pageIndex = this.paginator.pageIndex;
       params.pageSize = this.paginator.pageSize;

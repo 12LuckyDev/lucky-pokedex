@@ -1,5 +1,5 @@
 <app-pokedex-options></app-pokedex-options>
-
+<app-pokedex-search></app-pokedex-search>
 <div class="mat-elevation-z8">
   <table
     mat-table
@@ -16,13 +16,6 @@
         [class.select-gender]="showGenders"
       ></th>
       <td mat-cell *matCellDef="let row" [class.select-gender]="showGenders">
-        <!-- <mat-checkbox
-          color="primary"
-          (click)="$event.stopPropagation()"
-          (change)="$event ? changeSelection(row) : null"
-          [checked]="isSelected(row)"
-        >
-        </mat-checkbox> -->
         <app-poke-selection-check [entry]="row"></app-poke-selection-check>
       </td>
     </ng-container>

@@ -1,0 +1,22 @@
+<form [formGroup]="form" novalidate autocomplete="off">
+  <mat-card>
+    <mat-card-content>
+      <div fxLayout="row-reverse">
+        <mat-form-field>
+          <input matInput type="text" formControlName="textSearch" />
+          <mat-icon matPrefix>search</mat-icon>
+
+          <button
+            *ngIf="showCleanSearch"
+            matSuffix
+            mat-icon-button
+            aria-label="Clear"
+            (click)="clearSearch()"
+          >
+            <mat-icon>close</mat-icon>
+          </button>
+        </mat-form-field>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</form>

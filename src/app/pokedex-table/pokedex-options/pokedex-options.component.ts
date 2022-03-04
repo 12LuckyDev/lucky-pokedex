@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormComponent } from 'src/app/common/form.component';
 import {
   CountFormsPolicy,
   CountGendersPolicy,
@@ -58,14 +59,12 @@ const COUNT_GENDERS_POLICY = [
   templateUrl: './pokedex-options.component.html',
   styleUrls: ['./pokedex-options.component.scss'],
 })
-export class PokedexOptionsComponent implements OnInit {
-  optionsForm: FormGroup;
-
+export class PokedexOptionsComponent extends FormComponent implements OnInit {
   constructor(
-    private fb: FormBuilder,
+    override fb: FormBuilder,
     private pokedexOptionsService: PokedexOptionsService
   ) {
-    this.optionsForm = this.fb.group({
+    super(fb, {
       countFormsPolicy: [],
       countRegionalFormsPolicy: [],
       countGendersPolicy: [],
@@ -74,17 +73,11 @@ export class PokedexOptionsComponent implements OnInit {
 
   ngOnInit(): void {
     const options = this.pokedexOptionsService.options;
-    this.optionsForm.controls['countFormsPolicy'].setValue(
-      options.countFormsPolicy
-    );
-    this.optionsForm.controls['countRegionalFormsPolicy'].setValue(
-      options.countRegionalFormsPolicy
-    );
-    this.optionsForm.controls['countGendersPolicy'].setValue(
-      options.countGendersPolicy
-    );
-    this.optionsForm.valueChanges.subscribe(() => {
-      this.pokedexOptionsService.nextOptions(this.buidlOptionsModel());
+    this.setValue('countFormsPolicy', options.countFormsPolicy);
+    this.setValue('countRegionalFormsPolicy', options.countRegionalFormsPolicy);
+    this.setValue('countGendersPolicy', options.countGendersPolicy);
+    this.formChanges.subscribe(() => {
+      this.pokedexOptionsService.nextOptions(this.buildOptionsModel());
     });
   }
 
@@ -100,19 +93,11 @@ export class PokedexOptionsComponent implements OnInit {
     return COUNT_GENDERS_POLICY;
   }
 
-  private buidlOptionsModel(): PokedexOptions {
-    const countFormsPolicy = this.optionsForm.controls['countFormsPolicy']
-      .value as CountFormsPolicy;
-    const countRegionalFormsPolicy = this.optionsForm.controls[
-      'countRegionalFormsPolicy'
-    ].value as CountRegionalFormsPolicy;
-    const countGendersPolicy = this.optionsForm.controls['countGendersPolicy']
-      .value as CountGendersPolicy;
-
+  private buildOptionsModel(): PokedexOptions {
     return {
-      countFormsPolicy,
-      countRegionalFormsPolicy,
-      countGendersPolicy,
+      countFormsPolicy: this.getValue('countFormsPolicy'),
+      countRegionalFormsPolicy: this.getValue('countRegionalFormsPolicy'),
+      countGendersPolicy: this.getValue('countGendersPolicy'),
     };
   }
 }

@@ -24,9 +24,11 @@ import { PokeImgComponent } from './pokedex-table/poke-img/poke-img.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { PokedexOptionsService } from './services/pokedex-options/pokedex-options.service';
 import { PokeEntryDetailsComponent } from './pokedex-table/poke-entry-details/poke-entry-details.component';
-import { PokedexSelectionService } from './services/pokedex-selection/pokedex-options/pokedex-selection.service';
+import { PokedexSelectionService } from './services/pokedex-selection/pokedex-selection.service';
 import { SelectionChangeAwareComponent } from './pokedex-table/poke-entry-details/selection-change-aware/selection-change-aware.component';
 import { PokeSelectionCheckComponent } from './pokedex-table/poke-selection-check/poke-selection-check.component';
+import { PokedexSearchComponent } from './pokedex-table/pokedex-search/pokedex-search.component';
+import { PokedexSearchService } from './services/pokedex-search/pokedex-search.service';
 
 @NgModule({
   declarations: [
@@ -38,6 +40,7 @@ import { PokeSelectionCheckComponent } from './pokedex-table/poke-selection-chec
     PokeImgComponent,
     PokeEntryDetailsComponent,
     PokeSelectionCheckComponent,
+    PokedexSearchComponent,
   ],
   imports: [
     BrowserModule,
@@ -62,6 +65,7 @@ import { PokeSelectionCheckComponent } from './pokedex-table/poke-selection-chec
     PokedexDataService,
     PokedexOptionsService,
     PokedexSelectionService,
+    PokedexSearchService,
     SelectionChangeAwareComponent,
   ],
   bootstrap: [AppComponent],

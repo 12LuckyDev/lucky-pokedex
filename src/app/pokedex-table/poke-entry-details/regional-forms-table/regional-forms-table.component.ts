@@ -3,7 +3,7 @@ import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { MatTable } from '@angular/material/table';
 import { PokeRegion } from 'src/app/enums/poke-region.enum';
 import { PokedexRegionalFormEntry } from 'src/app/models';
-import { PokedexSelectionService } from 'src/app/services/pokedex-selection/pokedex-options/pokedex-selection.service';
+import { PokedexSelectionService } from 'src/app/services/pokedex-selection/pokedex-selection.service';
 import { SelectionChangeAwareComponent } from '../selection-change-aware/selection-change-aware.component';
 import { RegionalFormsTableDataSource } from './regional-forms-table-datasource';
 

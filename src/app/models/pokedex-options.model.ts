@@ -5,7 +5,7 @@ import {
 } from '../enums';
 
 export interface PokedexOptions {
-  countFormsPolicy: CountFormsPolicy;
-  countRegionalFormsPolicy: CountRegionalFormsPolicy;
-  countGendersPolicy: CountGendersPolicy;
+  countFormsPolicy: CountFormsPolicy | null;
+  countRegionalFormsPolicy: CountRegionalFormsPolicy | null;
+  countGendersPolicy: CountGendersPolicy | null;
 }

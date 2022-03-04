@@ -13,6 +13,7 @@ import { PokedexTableDataSource } from './pokedex-table-datasource';
 import { POKEDEX_TABLE_ANIMATIONS } from './pokedex-table-animations';
 import { PokedexOptionsService } from '../services/pokedex-options/pokedex-options.service';
 import { CountGendersPolicy } from '../enums';
+import { PokedexSearchService } from '../services/pokedex-search/pokedex-search.service';
 
 @Component({
   selector: 'app-pokedex-table',
@@ -30,11 +31,13 @@ export class PokedexTableComponent implements AfterViewInit {
   constructor(
     private cdref: ChangeDetectorRef,
     private pokedexDataService: PokedexDataService,
-    private pokedexOptionsService: PokedexOptionsService
+    private pokedexOptionsService: PokedexOptionsService,
+    private pokedexSearchService: PokedexSearchService
   ) {
     this.dataSource = new PokedexTableDataSource(
       this.pokedexDataService,
-      this.pokedexOptionsService
+      this.pokedexOptionsService,
+      this.pokedexSearchService
     );
     this.expanded = null;
   }

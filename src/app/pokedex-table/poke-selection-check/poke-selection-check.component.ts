@@ -2,7 +2,7 @@ import { toggle } from '@12luckydev/utils';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CountGendersPolicy, PokeGender } from 'src/app/enums';
 import { PokedexOptionsService } from 'src/app/services/pokedex-options/pokedex-options.service';
-import { PokedexSelectionService } from 'src/app/services/pokedex-selection/pokedex-options/pokedex-selection.service';
+import { PokedexSelectionService } from 'src/app/services/pokedex-selection/pokedex-selection.service';
 import { SelectionChangeAwareComponent } from '../poke-entry-details/selection-change-aware/selection-change-aware.component';
 
 const getGenderName = (gender: PokeGender) => {

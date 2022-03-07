@@ -6,7 +6,7 @@ import { PokedexRegionalFormEntry } from 'src/app/models';
 import { PokedexOptionsService } from 'src/app/services/pokedex-options/pokedex-options.service';
 import { PokedexSelectionService } from 'src/app/services/pokedex-selection/pokedex-selection.service';
 import { SelectionType } from '../../poke-selection-check/poke-selection-check.component';
-import { SelectionChangeAwareComponent } from '../selection-change-aware/selection-change-aware.component';
+import { PokedexBaseComponent } from '../../pokedex-base-component/pokedex-base.component';
 import { RegionalFormsTableDataSource } from './regional-forms-table-datasource';
 
 @Component({
@@ -15,7 +15,7 @@ import { RegionalFormsTableDataSource } from './regional-forms-table-datasource'
   styleUrls: ['./regional-forms-table.component.scss'],
 })
 export class RegionalFormsTableComponent
-  extends SelectionChangeAwareComponent
+  extends PokedexBaseComponent
   implements AfterViewInit
 {
   @ViewChild(MatTable) table!: MatTable<PokedexRegionalFormEntry>;
@@ -25,10 +25,10 @@ export class RegionalFormsTableComponent
   displayedColumns = ['select', 'region'];
 
   constructor(
-    override pokedexSelectionService: PokedexSelectionService,
+    private pokedexSelectionService: PokedexSelectionService,
     private pokedexOptionsService: PokedexOptionsService
   ) {
-    super(pokedexSelectionService);
+    super();
     this.dataSource = new RegionalFormsTableDataSource();
   }
 

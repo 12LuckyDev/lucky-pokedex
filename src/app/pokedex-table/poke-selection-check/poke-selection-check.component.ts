@@ -3,7 +3,7 @@ import { PokeGender } from 'src/app/enums';
 import { PokedexFormEntry, PokedexRegionalFormEntry } from 'src/app/models';
 import { PokedexOptionsService } from 'src/app/services/pokedex-options/pokedex-options.service';
 import { PokedexSelectionService } from 'src/app/services/pokedex-selection/pokedex-selection.service';
-import { SelectionChangeAwareComponent } from '../poke-entry-details/selection-change-aware/selection-change-aware.component';
+import { PokedexBaseComponent } from '../pokedex-base-component/pokedex-base.component';
 
 export enum SelectionType {
   POKEMON = 'POKEMON',
@@ -20,15 +20,15 @@ const getGenderName = (gender: PokeGender) => {
   templateUrl: './poke-selection-check.component.html',
   styleUrls: ['./poke-selection-check.component.scss'],
 })
-export class PokeSelectionCheckComponent extends SelectionChangeAwareComponent {
+export class PokeSelectionCheckComponent extends PokedexBaseComponent {
   @Input() selectionType: SelectionType = SelectionType.POKEMON;
   @Input() form!: PokedexRegionalFormEntry | PokedexFormEntry;
 
   constructor(
-    override pokedexSelectionService: PokedexSelectionService,
+    private pokedexSelectionService: PokedexSelectionService,
     private pokedexOptionsService: PokedexOptionsService
   ) {
-    super(pokedexSelectionService);
+    super();
   }
 
   get presentationMode(): string {

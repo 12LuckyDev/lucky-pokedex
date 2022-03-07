@@ -25,7 +25,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { PokedexOptionsService } from './services/pokedex-options/pokedex-options.service';
 import { PokeEntryDetailsComponent } from './pokedex-table/poke-entry-details/poke-entry-details.component';
 import { PokedexSelectionService } from './services/pokedex-selection/pokedex-selection.service';
-import { SelectionChangeAwareComponent } from './pokedex-table/poke-entry-details/selection-change-aware/selection-change-aware.component';
+import { PokedexBaseComponent } from './pokedex-table/pokedex-base-component/pokedex-base.component';
 import { PokeSelectionCheckComponent } from './pokedex-table/poke-selection-check/poke-selection-check.component';
 import { PokedexSearchComponent } from './pokedex-table/pokedex-search/pokedex-search.component';
 import { PokedexSearchService } from './services/pokedex-search/pokedex-search.service';
@@ -66,7 +66,7 @@ import { PokedexSearchService } from './services/pokedex-search/pokedex-search.s
     PokedexOptionsService,
     PokedexSelectionService,
     PokedexSearchService,
-    SelectionChangeAwareComponent,
+    PokedexBaseComponent,
   ],
   bootstrap: [AppComponent],
 })

@@ -2,10 +2,11 @@
   width: 100%;
 
   .mat-column-select {
-    width: 2rem;
-  }
+    overflow: initial;
+    width: 128px;
 
-  .mat-column-image {
-    width: calc(96px + 1rem);
+    &.select-gender {
+      width: 262px;
+    }
   }
 }

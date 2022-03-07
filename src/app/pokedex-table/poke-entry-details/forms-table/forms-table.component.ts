@@ -2,16 +2,14 @@ import {
   AfterViewInit,
   ChangeDetectorRef,
   Component,
-  EventEmitter,
-  Input,
-  Output,
   ViewChild,
 } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTable } from '@angular/material/table';
 import { PokedexFormEntry } from 'src/app/models';
 import { PokedexSelectionService } from 'src/app/services/pokedex-selection/pokedex-selection.service';
-import { SelectionChangeAwareComponent } from '../selection-change-aware/selection-change-aware.component';
+import { SelectionType } from '../../poke-selection-check/poke-selection-check.component';
+import { PokedexBaseComponent } from '../../pokedex-base-component/pokedex-base.component';
 import { FormsTableDataSource } from './forms-table-datasource';
 
 @Component({
@@ -20,7 +18,7 @@ import { FormsTableDataSource } from './forms-table-datasource';
   styleUrls: ['./forms-table.component.scss'],
 })
 export class FormsTableComponent
-  extends SelectionChangeAwareComponent
+  extends PokedexBaseComponent
   implements AfterViewInit
 {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -28,13 +26,13 @@ export class FormsTableComponent
 
   dataSource: FormsTableDataSource;
 
-  displayedColumns = ['select', 'image', 'formName'];
+  displayedColumns = ['select', 'formName'];
 
   constructor(
     private cdref: ChangeDetectorRef,
-    override pokedexSelectionService: PokedexSelectionService
+    private pokedexSelectionService: PokedexSelectionService
   ) {
-    super(pokedexSelectionService);
+    super();
     this.dataSource = new FormsTableDataSource();
   }
 
@@ -42,25 +40,14 @@ export class FormsTableComponent
     return this.entry.forms ?? [];
   }
 
+  get selectionTypes() {
+    return SelectionType;
+  }
+
   ngAfterViewInit(): void {
     this.dataSource.data = this.forms;
     this.dataSource.paginator = this.paginator;
     this.table.dataSource = this.dataSource;
     this.cdref.detectChanges();
-  }
-
-  public changeSelection(entry: PokedexFormEntry): void {
-    if (this.number) {
-      this.pokedexSelectionService.changeFormSelection(this.number, entry.id);
-    }
-  }
-
-  // TODO
-  public isSelected(entry: PokedexFormEntry): boolean {
-    if (this.number) {
-      const selection = this.pokedexSelectionService.getSelection(this.number);
-      return !!selection?.forms?.includes(entry.id);
-    }
-    return false;
   }
 }

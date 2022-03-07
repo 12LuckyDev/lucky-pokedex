@@ -4,7 +4,6 @@ import { CountGendersPolicy } from 'src/app/enums';
 import { PokeRegion } from 'src/app/enums/poke-region.enum';
 import { PokedexRegionalFormEntry } from 'src/app/models';
 import { PokedexOptionsService } from 'src/app/services/pokedex-options/pokedex-options.service';
-import { PokedexSelectionService } from 'src/app/services/pokedex-selection/pokedex-selection.service';
 import { SelectionType } from '../../poke-selection-check/poke-selection-check.component';
 import { PokedexBaseComponent } from '../../pokedex-base-component/pokedex-base.component';
 import { RegionalFormsTableDataSource } from './regional-forms-table-datasource';
@@ -24,10 +23,7 @@ export class RegionalFormsTableComponent
 
   displayedColumns = ['select', 'region'];
 
-  constructor(
-    private pokedexSelectionService: PokedexSelectionService,
-    private pokedexOptionsService: PokedexOptionsService
-  ) {
+  constructor(private pokedexOptionsService: PokedexOptionsService) {
     super();
     this.dataSource = new RegionalFormsTableDataSource();
   }

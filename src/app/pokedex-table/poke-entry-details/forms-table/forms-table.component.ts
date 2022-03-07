@@ -6,8 +6,9 @@ import {
 } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTable } from '@angular/material/table';
+import { CountGendersPolicy } from 'src/app/enums';
 import { PokedexFormEntry } from 'src/app/models';
-import { PokedexSelectionService } from 'src/app/services/pokedex-selection/pokedex-selection.service';
+import { PokedexOptionsService } from 'src/app/services/pokedex-options/pokedex-options.service';
 import { SelectionType } from '../../poke-selection-check/poke-selection-check.component';
 import { PokedexBaseComponent } from '../../pokedex-base-component/pokedex-base.component';
 import { FormsTableDataSource } from './forms-table-datasource';
@@ -30,7 +31,7 @@ export class FormsTableComponent
 
   constructor(
     private cdref: ChangeDetectorRef,
-    private pokedexSelectionService: PokedexSelectionService
+    private pokedexOptionsService: PokedexOptionsService
   ) {
     super();
     this.dataSource = new FormsTableDataSource();
@@ -42,6 +43,13 @@ export class FormsTableComponent
 
   get selectionTypes() {
     return SelectionType;
+  }
+
+  public get showGenders(): boolean {
+    return (
+      this.pokedexOptionsService.options.countGendersPolicy !==
+      CountGendersPolicy.NO_COUNT
+    );
   }
 
   ngAfterViewInit(): void {

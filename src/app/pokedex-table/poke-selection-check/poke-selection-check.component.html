@@ -1,5 +1,10 @@
 <ng-container [ngSwitch]="presentationMode">
-  <div *ngSwitchCase="'GENDERS'" fxLayout="row wrap" fxLayoutGap="6px">
+  <div
+    *ngSwitchCase="'GENDERS'"
+    fxLayout="row wrap"
+    fxLayoutGap="6px"
+    fxLayoutAlign="center"
+  >
     <mat-card
       *ngFor="let gender of genders"
       fxLayout="column"

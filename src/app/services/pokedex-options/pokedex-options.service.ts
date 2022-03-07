@@ -5,7 +5,8 @@ import {
   CountGendersPolicy,
   CountRegionalFormsPolicy,
 } from 'src/app/enums';
-import { PokedexOptions } from 'src/app/models';
+import { PokedexEntry, PokedexOptions } from 'src/app/models';
+import { SelectionType } from 'src/app/pokedex-table/poke-selection-check/poke-selection-check.component';
 
 const DEFAULT_OPTIONS: PokedexOptions = {
   countFormsPolicy: CountFormsPolicy.COUNT_ALL,
@@ -33,5 +34,30 @@ export class PokedexOptionsService {
 
   public nextOptions(options: PokedexOptions) {
     this._optionsSubject.next(options);
+  }
+
+  public getPresentationMode(
+    entry?: PokedexEntry,
+    selectMode: SelectionType = SelectionType.POKEMON
+  ): 'GENDERS' | 'CHECKBOX_WITH_IMG' {
+    if (entry) {
+      switch (this.options.countGendersPolicy) {
+        case CountGendersPolicy.COUNT_ALL:
+          return 'GENDERS';
+        case CountGendersPolicy.COUNT_ALL_WITH_DIFFS:
+          return !!entry.genderDiffs
+            ? selectMode === SelectionType.POKEMON
+              ? 'GENDERS'
+              : 'CHECKBOX_WITH_IMG'
+            : 'CHECKBOX_WITH_IMG';
+        case CountGendersPolicy.NO_COUNT_VISUAL_ONLY:
+          return !!entry.genderDiffs && !entry.genderDiffs.onlyVisual
+            ? 'GENDERS'
+            : 'CHECKBOX_WITH_IMG';
+        case CountGendersPolicy.NO_COUNT:
+          return 'CHECKBOX_WITH_IMG';
+      }
+    }
+    return 'CHECKBOX_WITH_IMG';
   }
 }

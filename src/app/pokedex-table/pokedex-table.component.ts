@@ -50,9 +50,7 @@ export class PokedexTableComponent implements AfterViewInit {
   }
 
   public get displayedColumns(): string[] {
-    return this.showGenders
-      ? ['select', 'number', 'name']
-      : ['select', 'number', 'image', 'name'];
+    return ['select', 'number', 'name'];
   }
 
   ngAfterViewInit(): void {

@@ -1,9 +1,11 @@
-import { toggle } from '@12luckydev/utils';
 import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { MatTable } from '@angular/material/table';
+import { CountGendersPolicy } from 'src/app/enums';
 import { PokeRegion } from 'src/app/enums/poke-region.enum';
 import { PokedexRegionalFormEntry } from 'src/app/models';
+import { PokedexOptionsService } from 'src/app/services/pokedex-options/pokedex-options.service';
 import { PokedexSelectionService } from 'src/app/services/pokedex-selection/pokedex-selection.service';
+import { SelectionType } from '../../poke-selection-check/poke-selection-check.component';
 import { SelectionChangeAwareComponent } from '../selection-change-aware/selection-change-aware.component';
 import { RegionalFormsTableDataSource } from './regional-forms-table-datasource';
 
@@ -20,13 +22,12 @@ export class RegionalFormsTableComponent
 
   dataSource: RegionalFormsTableDataSource;
 
-  displayedColumns = ['select', 'image', 'region'];
+  displayedColumns = ['select', 'region'];
 
-  formatRegion(region: PokeRegion): string {
-    return PokeRegion[region];
-  }
-
-  constructor(override pokedexSelectionService: PokedexSelectionService) {
+  constructor(
+    override pokedexSelectionService: PokedexSelectionService,
+    private pokedexOptionsService: PokedexOptionsService
+  ) {
     super(pokedexSelectionService);
     this.dataSource = new RegionalFormsTableDataSource();
   }
@@ -35,26 +36,23 @@ export class RegionalFormsTableComponent
     return this.entry.regionalForms ?? [];
   }
 
+  get selectionTypes() {
+    return SelectionType;
+  }
+
+  public get showGenders(): boolean {
+    return (
+      this.pokedexOptionsService.options.countGendersPolicy !==
+      CountGendersPolicy.NO_COUNT
+    );
+  }
+
+  public formatRegion(region: PokeRegion): string {
+    return PokeRegion[region];
+  }
+
   ngAfterViewInit(): void {
     this.dataSource.data = this.regionalForms;
     this.table.dataSource = this.dataSource;
-  }
-
-  public changeSelection(entry: PokedexRegionalFormEntry): void {
-    if (this.number) {
-      this.pokedexSelectionService.changeRegionalFormSelection(
-        this.number,
-        entry.region
-      );
-    }
-  }
-
-  // TODO
-  public isSelected(entry: PokedexRegionalFormEntry): boolean {
-    if (this.number) {
-      const selection = this.pokedexSelectionService.getSelection(this.number);
-      return !!selection?.regionalForms?.includes(entry.region);
-    }
-    return false;
   }
 }

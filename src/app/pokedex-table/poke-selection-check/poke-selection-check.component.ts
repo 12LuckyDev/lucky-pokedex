@@ -1,9 +1,15 @@
-import { toggle } from '@12luckydev/utils';
-import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { CountGendersPolicy, PokeGender } from 'src/app/enums';
+import { Component, Input } from '@angular/core';
+import { PokeGender } from 'src/app/enums';
+import { PokedexFormEntry, PokedexRegionalFormEntry } from 'src/app/models';
 import { PokedexOptionsService } from 'src/app/services/pokedex-options/pokedex-options.service';
 import { PokedexSelectionService } from 'src/app/services/pokedex-selection/pokedex-selection.service';
 import { SelectionChangeAwareComponent } from '../poke-entry-details/selection-change-aware/selection-change-aware.component';
+
+export enum SelectionType {
+  POKEMON = 'POKEMON',
+  POKEMON_FORM = 'POKEMON_FORM',
+  POKEMON_REGIONAL_FORM = 'POKEMON_REGIONAL_FORM',
+}
 
 const getGenderName = (gender: PokeGender) => {
   return PokeGender[gender];
@@ -13,9 +19,11 @@ const getGenderName = (gender: PokeGender) => {
   selector: 'app-poke-selection-check',
   templateUrl: './poke-selection-check.component.html',
   styleUrls: ['./poke-selection-check.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PokeSelectionCheckComponent extends SelectionChangeAwareComponent {
+  @Input() selectionType: SelectionType = SelectionType.POKEMON;
+  @Input() form!: PokedexRegionalFormEntry | PokedexFormEntry;
+
   constructor(
     override pokedexSelectionService: PokedexSelectionService,
     private pokedexOptionsService: PokedexOptionsService
@@ -24,37 +32,10 @@ export class PokeSelectionCheckComponent extends SelectionChangeAwareComponent {
   }
 
   get presentationMode(): string {
-    if (this.entry) {
-      switch (this.pokedexOptionsService.options.countGendersPolicy) {
-        case CountGendersPolicy.COUNT_ALL:
-          return 'GENDERS';
-        case CountGendersPolicy.COUNT_ALL_WITH_DIFFS:
-          return !!this.entry.genderDiffs ? 'GENDERS' : 'CHECKBOX_WITH_IMG';
-        case CountGendersPolicy.NO_COUNT_VISUAL_ONLY:
-          return !!this.entry.genderDiffs && !this.entry.genderDiffs.onlyVisual
-            ? 'GENDERS'
-            : 'CHECKBOX_WITH_IMG';
-        case CountGendersPolicy.NO_COUNT:
-          return 'CHECKBOX';
-      }
-    }
-    return 'CHECKBOX';
-  }
-
-  get showGenders(): boolean {
-    if (this.entry) {
-      switch (this.pokedexOptionsService.options.countGendersPolicy) {
-        case CountGendersPolicy.COUNT_ALL:
-          return true;
-        case CountGendersPolicy.COUNT_ALL_WITH_DIFFS:
-          return !!this.entry.genderDiffs;
-        case CountGendersPolicy.NO_COUNT_VISUAL_ONLY:
-          return !!this.entry.genderDiffs && !this.entry.genderDiffs.onlyVisual;
-        case CountGendersPolicy.NO_COUNT:
-          return false;
-      }
-    }
-    return false;
+    return this.pokedexOptionsService.getPresentationMode(
+      this.entry,
+      this.selectionType
+    );
   }
 
   get genders(): PokeGender[] {
@@ -62,10 +43,16 @@ export class PokeSelectionCheckComponent extends SelectionChangeAwareComponent {
   }
 
   getImgPath(gender?: PokeGender): string | number {
-    const genderDiffs = this.entry?.genderDiffs;
-    return gender === PokeGender.female && genderDiffs
-      ? genderDiffs.femaleImgPath
-      : this.number ?? '';
+    switch (this.selectionType) {
+      case SelectionType.POKEMON:
+        const genderDiffs = this.entry?.genderDiffs;
+        return gender === PokeGender.female && genderDiffs
+          ? genderDiffs.femaleImgPath
+          : this.number ?? '';
+      case SelectionType.POKEMON_FORM:
+      case SelectionType.POKEMON_REGIONAL_FORM:
+        return this.form?.imgPath ?? '';
+    }
   }
 
   getGenderName(gender: PokeGender): string {
@@ -78,17 +65,53 @@ export class PokeSelectionCheckComponent extends SelectionChangeAwareComponent {
 
   isSelected(gender?: PokeGender): boolean {
     if (this.number) {
-      const selection = this.pokedexSelectionService.getSelection(this.number);
-      return typeof gender === 'number'
-        ? !!selection.genders?.includes(gender)
-        : selection.selected;
+      switch (this.selectionType) {
+        case SelectionType.POKEMON:
+          return this.pokedexSelectionService.isSelected(this.number, gender);
+        case SelectionType.POKEMON_FORM:
+          return this.form
+            ? this.pokedexSelectionService.isFormSelected(
+                this.number,
+                (this.form as PokedexFormEntry).id,
+                gender
+              )
+            : false;
+        case SelectionType.POKEMON_REGIONAL_FORM:
+          return this.form
+            ? this.pokedexSelectionService.isRegionalFormSelected(
+                this.number,
+                (this.form as PokedexRegionalFormEntry).region,
+                gender
+              )
+            : false;
+      }
     }
     return false;
   }
 
   changeSelection(gender?: PokeGender): void {
-    if (this.number) {
-      this.pokedexSelectionService.changeSelection(this.number, gender);
+    switch (this.selectionType) {
+      case SelectionType.POKEMON:
+        this.pokedexSelectionService.changeSelection(this.number, gender);
+        break;
+      case SelectionType.POKEMON_FORM:
+        if (this.form) {
+          this.pokedexSelectionService.changeFormSelection(
+            this.number,
+            (this.form as PokedexFormEntry).id,
+            gender
+          );
+        }
+        break;
+      case SelectionType.POKEMON_REGIONAL_FORM:
+        if (this.form) {
+          this.pokedexSelectionService.changeRegionalFormSelection(
+            this.number,
+            (this.form as PokedexRegionalFormEntry).region,
+            gender
+          );
+        }
+        break;
     }
   }
 }

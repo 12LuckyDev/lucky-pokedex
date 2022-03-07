@@ -28,18 +28,19 @@ export class PokedexSelectionService {
     }
   }
 
-  updateSelection(
-    number: number,
-    model: PokedexSelection | ((model: PokedexSelection) => PokedexSelection)
+  private updateSelection(
+    number: number | null,
+    model: (model: PokedexSelection) => PokedexSelection
   ): void {
-    const newModel =
-      typeof model === 'function' ? model(this.getSelection(number)) : model;
-    console.log(number, newModel);
-    this._selectionMap.set(number, newModel);
-    this._selectionSubject.next(number);
+    if (number !== null) {
+      const newModel = model(this.getSelection(number));
+      console.log(number, newModel);
+      this._selectionMap.set(number, newModel);
+      this._selectionSubject.next(number);
+    }
   }
 
-  changeSelection(number: number, gender?: PokeGender) {
+  public changeSelection(number: number | null, gender?: PokeGender) {
     this.updateSelection(number, (model) => {
       const { genders } = model;
 
@@ -52,8 +53,15 @@ export class PokedexSelectionService {
     });
   }
 
-  changeRegionalFormSelection(
-    number: number,
+  public isSelected(number: number, gender?: PokeGender): boolean {
+    const selection = this.getSelection(number);
+    return typeof gender === 'number'
+      ? !!selection.genders?.includes(gender)
+      : selection.selected;
+  }
+
+  public changeRegionalFormSelection(
+    number: number | null,
     region: PokeRegion,
     gender?: PokeGender
   ) {
@@ -90,7 +98,27 @@ export class PokedexSelectionService {
     });
   }
 
-  changeFormSelection(number: number, form: number, gender?: PokeGender) {
+  public isRegionalFormSelected(
+    number: number,
+    region: PokeRegion,
+    gender?: PokeGender
+  ): boolean {
+    const selection = this.getSelection(number);
+    if (typeof gender === 'number') {
+      const regionalFormsGenders =
+        selection?.regionalFormsGenders?.find((rfg) => rfg.region === region) ??
+        null;
+      return !!regionalFormsGenders?.genders?.includes(gender);
+    } else {
+      return !!selection.regionalForms?.includes(region);
+    }
+  }
+
+  public changeFormSelection(
+    number: number | null,
+    form: number,
+    gender?: PokeGender
+  ) {
     this.updateSelection(number, (model) => {
       if (typeof gender === 'number') {
         const formsGenders = model.formsGenders ?? [];
@@ -116,5 +144,20 @@ export class PokedexSelectionService {
         };
       }
     });
+  }
+
+  public isFormSelected(
+    number: number,
+    form: number,
+    gender?: PokeGender
+  ): boolean {
+    const selection = this.getSelection(number);
+    if (typeof gender === 'number') {
+      const formsGenders =
+        selection?.formsGenders?.find((rfg) => rfg.form === form) ?? null;
+      return !!formsGenders?.genders?.includes(gender);
+    } else {
+      return !!selection.forms?.includes(form);
+    }
   }
 }

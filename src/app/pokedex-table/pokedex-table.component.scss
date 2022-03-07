@@ -2,10 +2,6 @@
   width: 100%;
 }
 
-.mat-column-select {
-  overflow: initial;
-}
-
 tr {
   .mat-header-cell,
   .mat-cell {
@@ -13,7 +9,8 @@ tr {
   }
 
   .mat-column-select {
-    width: 2rem;
+    overflow: initial;
+    width: 128px;
 
     &.select-gender {
       width: 262px;

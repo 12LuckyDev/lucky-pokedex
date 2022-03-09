@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { FormComponent } from 'src/app/common/form.component';
 import { PokedexSearch } from 'src/app/models';
-import { PokedexSearchService } from 'src/app/services/pokedex-search/pokedex-search.service';
+import { PokedexSearchService } from 'src/app/services';
 
 @Component({
   selector: 'app-pokedex-search',

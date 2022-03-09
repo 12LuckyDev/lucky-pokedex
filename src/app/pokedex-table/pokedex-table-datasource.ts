@@ -4,11 +4,10 @@ import { MatSort } from '@angular/material/sort';
 import { Observable, BehaviorSubject, Subscription } from 'rxjs';
 import { PokedexEntry } from '../models';
 import {
-  GetPokedexListParamsType,
   PokedexDataService,
-} from '../services/pokedex-data/pokedex-data.service';
-import { PokedexOptionsService } from '../services/pokedex-options/pokedex-options.service';
-import { PokedexSearchService } from '../services/pokedex-search/pokedex-search.service';
+  PokedexOptionsService,
+  PokedexSearchService,
+} from '../services';
 
 export class PokedexTableDataSource extends DataSource<PokedexEntry> {
   data: PokedexEntry[] = [];

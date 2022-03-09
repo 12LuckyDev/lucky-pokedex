@@ -7,7 +7,7 @@ import {
   CountRegionalFormsPolicy,
 } from 'src/app/enums';
 import { PokedexOptions } from 'src/app/models';
-import { PokedexOptionsService } from 'src/app/services/pokedex-options/pokedex-options.service';
+import { PokedexOptionsService } from 'src/app/services';
 
 const COUNT_FORMS_POLICY_OPTIONS = [
   {

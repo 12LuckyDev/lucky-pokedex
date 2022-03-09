@@ -1,8 +1,10 @@
 import { Component, Input } from '@angular/core';
 import { PokeGender } from 'src/app/enums';
 import { PokedexFormEntry, PokedexRegionalFormEntry } from 'src/app/models';
-import { PokedexOptionsService } from 'src/app/services/pokedex-options/pokedex-options.service';
-import { PokedexSelectionService } from 'src/app/services/pokedex-selection/pokedex-selection.service';
+import {
+  PokedexOptionsService,
+  PokedexSelectionService,
+} from 'src/app/services';
 import { PokedexBaseComponent } from '../pokedex-base-component/pokedex-base.component';
 
 export enum SelectionType {

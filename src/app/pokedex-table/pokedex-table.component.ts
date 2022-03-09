@@ -8,12 +8,14 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTable } from '@angular/material/table';
 import { PokedexEntry } from '../models';
-import { PokedexDataService } from '../services/pokedex-data/pokedex-data.service';
 import { PokedexTableDataSource } from './pokedex-table-datasource';
 import { POKEDEX_TABLE_ANIMATIONS } from './pokedex-table-animations';
-import { PokedexOptionsService } from '../services/pokedex-options/pokedex-options.service';
 import { CountGendersPolicy } from '../enums';
-import { PokedexSearchService } from '../services/pokedex-search/pokedex-search.service';
+import {
+  PokedexDataService,
+  PokedexOptionsService,
+  PokedexSearchService,
+} from '../services';
 
 @Component({
   selector: 'app-pokedex-table',

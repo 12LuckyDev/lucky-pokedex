@@ -1,55 +1,41 @@
-<ng-container [ngSwitch]="presentationMode">
-  <div
-    *ngSwitchCase="'GENDERS'"
-    fxLayout="row wrap"
-    fxLayoutGap="6px"
-    fxLayoutAlign="center"
-  >
-    <mat-card
-      *ngFor="let gender of genders"
-      fxLayout="column"
-      fxLayoutAlign="center center"
-    >
-      <p>
-        {{ getGenderName(gender) }}
-        <mat-icon
-          *ngIf="showIcon(gender)"
-          aria-hidden="false"
-          aria-label="Gender Icon"
-          >{{ getGenderName(gender) }}
-        </mat-icon>
-      </p>
-      <poke-img [imgPath]="getImgPath(gender)"></poke-img>
-      <mat-checkbox
-        color="primary"
-        (click)="$event.stopPropagation()"
-        (change)="$event ? changeSelection(gender) : null"
-        [checked]="isSelected(gender)"
-      ></mat-checkbox>
-    </mat-card>
-  </div>
+<div fxLayout="row wrap" fxLayoutGap="6px" fxLayoutAlign="center">
+  <ng-container
+    *ngIf="showGender; then genderBlock; else noGenderBlock"
+  ></ng-container>
+</div>
 
-  <div
-    *ngSwitchCase="'CHECKBOX_WITH_IMG'"
-    fxLayout="row wrap"
-    fxLayoutAlign="center"
+<ng-template #genderBlock
+  ><mat-card
+    *ngFor="let gender of genders"
+    fxLayout="column"
+    fxLayoutAlign="center center"
   >
-    <mat-card fxLayout="column" fxLayoutAlign="center center">
-      <poke-img [imgPath]="getImgPath()"></poke-img>
-      <mat-checkbox
-        color="primary"
-        (click)="$event.stopPropagation()"
-        (change)="$event ? changeSelection() : null"
-        [checked]="isSelected()"
-      ></mat-checkbox>
-    </mat-card>
-  </div>
+    <p>
+      {{ getGenderName(gender) }}
+      <mat-icon
+        *ngIf="showIcon(gender)"
+        aria-hidden="false"
+        aria-label="Gender Icon"
+        >{{ getGenderName(gender) }}
+      </mat-icon>
+    </p>
+    <poke-img [imgPath]="getImgPath(gender)"></poke-img>
+    <mat-checkbox
+      color="primary"
+      (click)="$event.stopPropagation()"
+      (change)="$event ? changeSelection(gender) : null"
+      [checked]="isSelected(gender)"
+    ></mat-checkbox> </mat-card
+></ng-template>
 
-  <mat-checkbox
-    *ngSwitchCase="'CHECKBOX'"
-    color="primary"
-    (click)="$event.stopPropagation()"
-    (change)="$event ? changeSelection() : null"
-    [checked]="isSelected()"
-  ></mat-checkbox>
-</ng-container>
+<ng-template #noGenderBlock>
+  <mat-card fxLayout="column" fxLayoutAlign="center center">
+    <poke-img [imgPath]="getImgPath()"></poke-img>
+    <mat-checkbox
+      color="primary"
+      (click)="$event.stopPropagation()"
+      (change)="$event ? changeSelection() : null"
+      [checked]="isSelected()"
+    ></mat-checkbox>
+  </mat-card>
+</ng-template>

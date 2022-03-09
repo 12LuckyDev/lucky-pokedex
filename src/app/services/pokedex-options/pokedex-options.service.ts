@@ -50,28 +50,26 @@ export class PokedexOptionsService {
     this._optionsSubject.next(options);
   }
 
-  public getPresentationMode(
+  public getShowGender(
     entry?: PokedexEntry,
     selectMode: SelectionType = SelectionType.POKEMON
-  ): 'GENDERS' | 'CHECKBOX_WITH_IMG' {
+  ): boolean {
     if (entry && this.options) {
       switch (this.options.countGendersPolicy) {
         case CountGendersPolicy.COUNT_ALL:
-          return 'GENDERS';
+          return true;
         case CountGendersPolicy.COUNT_ALL_WITH_DIFFS:
-          return !!entry.genderDiffs
-            ? selectMode === SelectionType.POKEMON
-              ? 'GENDERS'
-              : 'CHECKBOX_WITH_IMG'
-            : 'CHECKBOX_WITH_IMG';
+          return !!entry.genderDiffs && selectMode === SelectionType.POKEMON
+            ? true
+            : false;
         case CountGendersPolicy.NO_COUNT_VISUAL_ONLY:
           return !!entry.genderDiffs && !entry.genderDiffs.onlyVisual
-            ? 'GENDERS'
-            : 'CHECKBOX_WITH_IMG';
+            ? true
+            : false;
         case CountGendersPolicy.NO_COUNT:
-          return 'CHECKBOX_WITH_IMG';
+          return false;
       }
     }
-    return 'CHECKBOX_WITH_IMG';
+    return false;
   }
 }

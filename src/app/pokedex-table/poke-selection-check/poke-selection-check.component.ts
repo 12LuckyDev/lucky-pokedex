@@ -33,8 +33,8 @@ export class PokeSelectionCheckComponent extends PokedexBaseComponent {
     super();
   }
 
-  get presentationMode(): string {
-    return this.pokedexOptionsService.getPresentationMode(
+  get showGender(): boolean {
+    return this.pokedexOptionsService.getShowGender(
       this.entry,
       this.selectionType
     );

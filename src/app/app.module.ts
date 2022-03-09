@@ -25,7 +25,6 @@ import { PokeEntryDetailsComponent } from './pokedex-table/poke-entry-details/po
 import { PokedexBaseComponent } from './pokedex-table/pokedex-base-component/pokedex-base.component';
 import { PokeSelectionCheckComponent } from './pokedex-table/poke-selection-check/poke-selection-check.component';
 import { PokedexSearchComponent } from './pokedex-table/pokedex-search/pokedex-search.component';
-import { DEFAULT_CONFIG, NgForageOptions } from 'ngforage';
 
 @NgModule({
   declarations: [
@@ -58,15 +57,7 @@ import { DEFAULT_CONFIG, NgForageOptions } from 'ngforage';
     MatIconModule,
     FlexLayoutModule,
   ],
-  providers: [
-    PokedexBaseComponent,
-    {
-      provide: DEFAULT_CONFIG,
-      useValue: {
-        name: 'Pokedex',
-      } as NgForageOptions,
-    },
-  ],
+  providers: [PokedexBaseComponent],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

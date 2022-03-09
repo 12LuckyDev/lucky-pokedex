@@ -4,6 +4,7 @@ import { MatSort } from '@angular/material/sort';
 import { Observable, BehaviorSubject, Subscription } from 'rxjs';
 import { PokedexEntry } from '../models';
 import {
+  GetPokedexListParamsType,
   PokedexDataService,
   PokedexOptionsService,
   PokedexSearchService,

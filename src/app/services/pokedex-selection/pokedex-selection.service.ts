@@ -1,20 +1,21 @@
 import { add, editPropAt, removeAt, toggle } from '@12luckydev/utils';
 import { Injectable } from '@angular/core';
-import { Observable, Subject } from 'rxjs';
 import { PokeGender, PokeRegion } from 'src/app/enums';
 import { PokedexSelection, PokedexSelectionModel } from 'src/app/models';
+import { PokedexStorageService } from '../pokedex-storage/pokedex-storage.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class PokedexSelectionService {
-  private _selectionSubject = new Subject<number>();
   private _selectionMap = new Map<number, PokedexSelection>();
 
-  constructor() {}
-
-  get selectionChangeObservable(): Observable<number> {
-    return this._selectionSubject.asObservable();
+  constructor(private pokedexStorageService: PokedexStorageService) {
+    this.pokedexStorageService.getAllSelections().subscribe({
+      next: ({ number, selection }) =>
+        this._selectionMap.set(number, selection),
+      complete: () => console.log('COMPLETE'),
+    });
   }
 
   getSelection(number: number): PokedexSelection {
@@ -36,7 +37,7 @@ export class PokedexSelectionService {
       const newModel = model(this.getSelection(number));
       console.log(number, newModel);
       this._selectionMap.set(number, newModel);
-      this._selectionSubject.next(number);
+      this.pokedexStorageService.setSelection(number, newModel);
     }
   }
 

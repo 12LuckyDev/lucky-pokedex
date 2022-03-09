@@ -47,7 +47,7 @@ export class FormsTableComponent
 
   public get showGenders(): boolean {
     return (
-      this.pokedexOptionsService.options.countGendersPolicy !==
+      this.pokedexOptionsService.options?.countGendersPolicy !==
       CountGendersPolicy.NO_COUNT
     );
   }

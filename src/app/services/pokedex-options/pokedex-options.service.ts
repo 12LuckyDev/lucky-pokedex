@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, filter, Observable } from 'rxjs';
 import {
   CountFormsPolicy,
   CountGendersPolicy,
@@ -7,6 +7,7 @@ import {
 } from 'src/app/enums';
 import { PokedexEntry, PokedexOptions } from 'src/app/models';
 import { SelectionType } from 'src/app/pokedex-table/poke-selection-check/poke-selection-check.component';
+import { PokedexStorageService } from '../pokedex-storage/pokedex-storage.service';
 
 const DEFAULT_OPTIONS: PokedexOptions = {
   countFormsPolicy: CountFormsPolicy.COUNT_ALL,
@@ -18,21 +19,34 @@ const DEFAULT_OPTIONS: PokedexOptions = {
   providedIn: 'root',
 })
 export class PokedexOptionsService {
-  private _optionsSubject = new BehaviorSubject<PokedexOptions>(
+  private _optionsSubject = new BehaviorSubject<PokedexOptions | null>(
     DEFAULT_OPTIONS
   );
 
-  constructor() {}
+  constructor(private pokedexStorageService: PokedexStorageService) {
+    this.pokedexStorageService.getOptions().subscribe((options) => {
+      console.log(options);
 
-  public get optionsObservable(): Observable<PokedexOptions> {
+      if (options) {
+        this.nextOptions(options);
+      }
+    });
+  }
+
+  public get optionsObservable(): Observable<PokedexOptions | null> {
     return this._optionsSubject.asObservable();
   }
 
-  public get options(): PokedexOptions {
+  public get options(): PokedexOptions | null {
     return this._optionsSubject.value;
   }
 
-  public nextOptions(options: PokedexOptions) {
+  public setOptions(options: PokedexOptions) {
+    this.pokedexStorageService.setOptions(options).subscribe();
+    this._optionsSubject.next(options);
+  }
+
+  private nextOptions(options: PokedexOptions) {
     this._optionsSubject.next(options);
   }
 
@@ -40,7 +54,7 @@ export class PokedexOptionsService {
     entry?: PokedexEntry,
     selectMode: SelectionType = SelectionType.POKEMON
   ): 'GENDERS' | 'CHECKBOX_WITH_IMG' {
-    if (entry) {
+    if (entry && this.options) {
       switch (this.options.countGendersPolicy) {
         case CountGendersPolicy.COUNT_ALL:
           return 'GENDERS';

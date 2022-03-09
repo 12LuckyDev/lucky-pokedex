@@ -1,6 +1,6 @@
 import { Directive, OnDestroy } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup } from '@angular/forms';
-import { Observable, Subject, Subscription, takeUntil } from 'rxjs';
+import { Observable, Subject, takeUntil } from 'rxjs';
 
 @Directive()
 export class FormComponent implements OnDestroy {
@@ -48,9 +48,9 @@ export class FormComponent implements OnDestroy {
     return typeof value === 'boolean' ? true : !!value;
   }
 
-  public setValue<T>(alias: string, value: T): void {
+  public setValue<T>(alias: string, value: T, silent: boolean = false): void {
     const control = this.getControl(alias);
-    control?.setValue(value);
+    control?.setValue(value, { emitEvent: !silent });
   }
 
   public clearValue(alias: string): void {

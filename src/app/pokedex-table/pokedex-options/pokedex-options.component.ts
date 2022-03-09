@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder } from '@angular/forms';
+import { takeUntil } from 'rxjs';
 import { FormComponent } from 'src/app/common/form.component';
 import {
   CountFormsPolicy,
@@ -72,12 +73,11 @@ export class PokedexOptionsComponent extends FormComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    const options = this.pokedexOptionsService.options;
-    this.setValue('countFormsPolicy', options.countFormsPolicy);
-    this.setValue('countRegionalFormsPolicy', options.countRegionalFormsPolicy);
-    this.setValue('countGendersPolicy', options.countGendersPolicy);
+    this.pokedexOptionsService.optionsObservable
+      .pipe(takeUntil(this.destroyed))
+      .subscribe((options) => this.setOptions(options));
     this.formChanges.subscribe(() => {
-      this.pokedexOptionsService.nextOptions(this.buildOptionsModel());
+      this.pokedexOptionsService.setOptions(this.buildOptionsModel());
     });
   }
 
@@ -91,6 +91,19 @@ export class PokedexOptionsComponent extends FormComponent implements OnInit {
 
   get countGendersPolicyOptions() {
     return COUNT_GENDERS_POLICY;
+  }
+
+  private setOptions(options: PokedexOptions | null): void {
+    console.log('SET');
+    if (options) {
+      this.setValue('countFormsPolicy', options.countFormsPolicy, true);
+      this.setValue(
+        'countRegionalFormsPolicy',
+        options.countRegionalFormsPolicy,
+        true
+      );
+      this.setValue('countGendersPolicy', options.countGendersPolicy, true);
+    }
   }
 
   private buildOptionsModel(): PokedexOptions {

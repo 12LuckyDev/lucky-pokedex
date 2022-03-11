@@ -7,12 +7,12 @@ import { PokedexOptions, PokedexSelection } from 'src/app/models';
   providedIn: 'root',
 })
 export class PokedexStorageService {
-  private optionsStorage: LocalForage;
+  private generalStorage: LocalForage;
   private selectionStorage: LocalForage;
 
   constructor() {
-    this.optionsStorage = localforage.createInstance({
-      name: 'OPTIONS',
+    this.generalStorage = localforage.createInstance({
+      name: 'GENERAL',
     });
 
     this.selectionStorage = localforage.createInstance({
@@ -33,11 +33,11 @@ export class PokedexStorageService {
   }
 
   public setOptions(options: PokedexOptions): Observable<PokedexOptions> {
-    return this.setItem(this.optionsStorage, 'OPTIONS_DATA', options);
+    return this.setItem(this.generalStorage, 'OPTIONS_DATA', options);
   }
 
   public getOptions(): Observable<PokedexOptions | null> {
-    return this.getItem<PokedexOptions>(this.optionsStorage, 'OPTIONS_DATA');
+    return this.getItem<PokedexOptions>(this.generalStorage, 'OPTIONS_DATA');
   }
 
   public setSelection(

@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { PokedexEntry } from 'src/app/models';
+import { PokedexOptionsService } from 'src/app/services';
 
 @Component({
   selector: 'app-poke-entry-details',
@@ -9,14 +10,10 @@ import { PokedexEntry } from 'src/app/models';
 export class PokeEntryDetailsComponent {
   @Input() entry!: PokedexEntry;
 
-  constructor() {}
+  constructor(private pokedexOptionsService: PokedexOptionsService) {}
 
   get showForm(): boolean {
-    return this.entry
-      ? this.entry.forms
-        ? this.entry.forms.length > 0
-        : false
-      : false;
+    return this.pokedexOptionsService.getShowForms(this.entry);
   }
 
   get showRegionalForms() {

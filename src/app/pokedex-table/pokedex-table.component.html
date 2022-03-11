@@ -53,8 +53,9 @@
       mat-row
       *matRowDef="let row; columns: displayedColumns"
       class="pokemon-element-row"
+      [class.expandable]="isExpandable(row)"
       [class.expanded]="expanded === row"
-      (click)="expanded = expanded === row ? null : row"
+      (click)="isExpandable(row) ? expand(row) : null"
     ></tr>
     <tr
       mat-row

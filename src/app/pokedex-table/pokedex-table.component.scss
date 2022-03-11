@@ -34,13 +34,14 @@ tr {
     td {
       border-bottom-width: 0;
     }
-
-    &:not(.expanded) {
-      &:hover {
-        background: whitesmoke;
-      }
-      &:active {
-        background: whitesmoke;
+    &.expandable {
+      &:not(.expanded) {
+        &:hover {
+          background: whitesmoke;
+        }
+        &:active {
+          background: whitesmoke;
+        }
       }
     }
   }

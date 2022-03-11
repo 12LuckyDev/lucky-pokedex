@@ -40,7 +40,12 @@ export class PokedexTableDataSource extends DataSource<PokedexEntry> {
       );
 
     this.searchSubscription =
-      this.pokedexSearchService.searchObservable.subscribe(() => this.query());
+      this.pokedexSearchService.searchObservable.subscribe(() => {
+        if (this.paginator?.pageIndex !== 0) {
+          this.paginator?.firstPage();
+        }
+        this.query();
+      });
 
     if (this.paginator) {
       this.paginator.page.subscribe(() => this.query());
@@ -71,6 +76,7 @@ export class PokedexTableDataSource extends DataSource<PokedexEntry> {
       .getPokedexList(this.queryParam)
       .subscribe(({ data, count }) => {
         this._dataSubject.next(data);
+        // TODO change dynamically
         this._countSubject.next(count);
       });
   }

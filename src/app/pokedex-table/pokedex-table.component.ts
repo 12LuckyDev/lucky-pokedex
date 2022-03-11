@@ -62,4 +62,12 @@ export class PokedexTableComponent implements AfterViewInit {
     this.dataSource.query();
     this.cdref.detectChanges();
   }
+
+  public expand(entry: PokedexEntry) {
+    this.expanded = this.expanded === entry ? null : entry;
+  }
+
+  public isExpandable(entry: PokedexEntry) {
+    return this.pokedexOptionsService.getHasDetails(entry);
+  }
 }

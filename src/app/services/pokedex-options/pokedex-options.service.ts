@@ -1,3 +1,4 @@
+import { isArray } from '@12luckydev/utils';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, filter, Observable } from 'rxjs';
 import {
@@ -71,5 +72,37 @@ export class PokedexOptionsService {
       }
     }
     return false;
+  }
+
+  public getShowForms(entry?: PokedexEntry): boolean {
+    if (this.options) {
+      switch (this.options.countFormsPolicy) {
+        case CountFormsPolicy.COUNT_ALL:
+          return entry ? isArray(entry.forms, false) : false;
+        case CountFormsPolicy.NO_COUNT_VISUAL_ONLY:
+          return entry
+            ? !entry.formDiffsOnlyVisual && isArray(entry.forms, false)
+            : false;
+        case CountFormsPolicy.NO_COUNT:
+          return false;
+      }
+    }
+    return false;
+  }
+
+  public getShowRegionalForms(entry?: PokedexEntry): boolean {
+    if (this.options) {
+      switch (this.options.countRegionalFormsPolicy) {
+        case CountRegionalFormsPolicy.COUNT_ALL:
+          return entry ? isArray(entry.regionalForms, false) : false;
+        case CountRegionalFormsPolicy.NO_COUNT:
+          return false;
+      }
+    }
+    return false;
+  }
+
+  public getHasDetails(entry?: PokedexEntry): boolean {
+    return this.getShowForms(entry) || this.getShowRegionalForms(entry);
   }
 }

@@ -6,6 +6,7 @@
 
 <ng-template #genderBlock
   ><mat-card
+    class="poke-card"
     *ngFor="let gender of genders"
     fxLayout="column"
     fxLayoutAlign="center center"
@@ -29,7 +30,7 @@
 ></ng-template>
 
 <ng-template #noGenderBlock>
-  <mat-card fxLayout="column" fxLayoutAlign="center center">
+  <mat-card class="poke-card" fxLayout="column" fxLayoutAlign="center center">
     <poke-img [imgPath]="getImgPath()"></poke-img>
     <mat-checkbox
       color="primary"

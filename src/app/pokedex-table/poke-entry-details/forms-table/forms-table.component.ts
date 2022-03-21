@@ -16,7 +16,10 @@ import { FormsTableDataSource } from './forms-table-datasource';
 @Component({
   selector: 'app-forms-table',
   templateUrl: './forms-table.component.html',
-  styleUrls: ['./forms-table.component.scss'],
+  styleUrls: [
+    './forms-table.component.scss',
+    '../../../styles/poke-table.scss',
+  ],
 })
 export class FormsTableComponent
   extends PokedexBaseComponent

@@ -11,15 +11,18 @@
     fxLayout="column"
     fxLayoutAlign="center center"
   >
-    <p>
-      {{ getGenderName(gender) }}
+    <div fxLayout="row" fxLayoutAlign="center center">
+      <span class="gender-name">
+        {{ getGenderName(gender) }}
+      </span>
       <mat-icon
         *ngIf="showIcon(gender)"
         aria-hidden="false"
         aria-label="Gender Icon"
         >{{ getGenderName(gender) }}
       </mat-icon>
-    </p>
+    </div>
+
     <poke-img [imgPath]="getImgPath(gender)"></poke-img>
     <mat-checkbox
       color="primary"

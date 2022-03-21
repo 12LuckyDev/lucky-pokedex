@@ -1,0 +1,30 @@
+.full-width-table {
+  width: 100%;
+
+  .mat-header-cell,
+  .mat-cell {
+    padding-left: 1rem;
+    &.details-cells {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  .mat-column-select {
+    overflow: initial;
+    width: calc(128px + 1rem);
+    border-right: 1px solid gray;
+    padding-right: 1rem;
+
+    &.select-gender {
+      width: calc(262px + 1rem);
+    }
+  }
+}
+
+.table-panel {
+  ::ng-deep .mat-expansion-panel-body {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

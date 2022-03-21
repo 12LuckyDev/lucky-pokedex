@@ -11,7 +11,10 @@ import { RegionalFormsTableDataSource } from './regional-forms-table-datasource'
 @Component({
   selector: 'app-regional-forms-table',
   templateUrl: './regional-forms-table.component.html',
-  styleUrls: ['./regional-forms-table.component.scss'],
+  styleUrls: [
+    './regional-forms-table.component.scss',
+    '../../../styles/poke-table.scss',
+  ],
 })
 export class RegionalFormsTableComponent
   extends PokedexBaseComponent

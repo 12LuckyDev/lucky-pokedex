@@ -20,7 +20,7 @@ import {
 @Component({
   selector: 'app-pokedex-table',
   templateUrl: './pokedex-table.component.html',
-  styleUrls: ['./pokedex-table.component.scss'],
+  styleUrls: ['./pokedex-table.component.scss', '../styles/poke-table.scss'],
   animations: POKEDEX_TABLE_ANIMATIONS,
 })
 export class PokedexTableComponent implements AfterViewInit {

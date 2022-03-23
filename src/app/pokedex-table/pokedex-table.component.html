@@ -62,6 +62,7 @@
       mat-row
       *matRowDef="let row; columns: ['expandedDetail']"
       class="pokemon-detail-row"
+      [class.expanded]="expanded === row"
     ></tr>
   </table>
 

@@ -12,12 +12,23 @@
 
   .mat-column-select {
     overflow: initial;
-    width: calc(128px + 1rem);
+    width: 128px;
     border-right: 1px solid gray;
-    padding-right: 1rem;
+    padding: 0 0.5rem;
 
     &.select-gender {
-      width: calc(262px + 1rem);
+      width: 262px;
+    }
+  }
+
+  .expanded {
+    ::ng-deep .mat-column-select {
+      width: 128px;
+      padding: 0 0.5rem 0 calc(0.5rem - 2px);
+
+      &.select-gender {
+        width: 262px;
+      }
     }
   }
 }

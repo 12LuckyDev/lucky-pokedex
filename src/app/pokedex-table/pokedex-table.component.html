@@ -44,7 +44,6 @@
           class="pokemon-element-detail"
           [@detail-expand]="row == expanded ? 'expanded' : 'collapsed'"
         >
-          <!-- <app-poke-entry-details [entry]="row"></app-poke-entry-details> -->
           <app-forms-table
             *ngIf="isExpandable(row)"
             [entry]="row"

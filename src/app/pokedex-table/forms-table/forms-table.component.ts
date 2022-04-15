@@ -9,16 +9,13 @@ import { MatTable } from '@angular/material/table';
 import { CountGendersPolicy, PokeFormType } from 'src/app/enums';
 import { PokedexTableForm } from 'src/app/models/pokedex-table-form.model';
 import { PokedexOptionsService } from 'src/app/services';
-import { PokedexBaseComponent } from '../../pokedex-base-component/pokedex-base.component';
+import { PokedexBaseComponent } from '../pokedex-base-component/pokedex-base.component';
 import { FormsTableDataSource } from './forms-table-datasource';
 
 @Component({
   selector: 'app-forms-table',
   templateUrl: './forms-table.component.html',
-  styleUrls: [
-    './forms-table.component.scss',
-    '../../../styles/poke-table.scss',
-  ],
+  styleUrls: ['./forms-table.component.scss', '../../styles/poke-table.scss'],
 })
 export class FormsTableComponent
   extends PokedexBaseComponent

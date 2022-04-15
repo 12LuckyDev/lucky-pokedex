@@ -6,7 +6,7 @@ import {
 } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTable } from '@angular/material/table';
-import { CountGendersPolicy, PokeFormType } from 'src/app/enums';
+import { CountGendersPolicy } from 'src/app/enums';
 import { PokedexTableForm } from 'src/app/models/pokedex-table-form.model';
 import { PokedexOptionsService } from 'src/app/services';
 import { PokedexBaseComponent } from '../pokedex-base-component/pokedex-base.component';
@@ -36,10 +36,6 @@ export class FormsTableComponent
 
   get forms() {
     return this.entry.forms ?? [];
-  }
-
-  get selectionTypes() {
-    return PokeFormType;
   }
 
   public get showGenders(): boolean {

@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { PokeFormType, PokeGender } from 'src/app/enums';
-import { PokedexFormEntry, PokedexRegionalFormEntry } from 'src/app/models';
+import { PokedexTableForm } from 'src/app/models';
 import {
   PokedexOptionsService,
   PokedexSelectionService,
@@ -17,8 +17,7 @@ const getGenderName = (gender: PokeGender) => {
   styleUrls: ['./poke-selection-check.component.scss'],
 })
 export class PokeSelectionCheckComponent extends PokedexBaseComponent {
-  @Input() selectionType: PokeFormType | null = null;
-  @Input() form!: PokedexRegionalFormEntry | PokedexFormEntry;
+  @Input() form!: PokedexTableForm;
 
   constructor(
     private pokedexSelectionService: PokedexSelectionService,
@@ -36,6 +35,10 @@ export class PokeSelectionCheckComponent extends PokedexBaseComponent {
 
   get genders(): PokeGender[] {
     return this.entry ? this.entry.genders : [];
+  }
+
+  get selectionType(): PokeFormType | null {
+    return this.form ? this.form.formType : null;
   }
 
   getImgPath(gender?: PokeGender): string | number {
@@ -60,53 +63,18 @@ export class PokeSelectionCheckComponent extends PokedexBaseComponent {
   }
 
   isSelected(gender?: PokeGender): boolean {
-    if (this.number) {
-      switch (this.selectionType) {
-        case PokeFormType.form:
-          return this.form
-            ? this.pokedexSelectionService.isFormSelected(
-                this.number,
-                (this.form as PokedexFormEntry).id,
-                gender
-              )
-            : false;
-        case PokeFormType.regional_form:
-          return this.form
-            ? this.pokedexSelectionService.isRegionalFormSelected(
-                this.number,
-                (this.form as PokedexRegionalFormEntry).region,
-                gender
-              )
-            : false;
-        default:
-          return this.pokedexSelectionService.isSelected(this.number, gender);
-      }
-    }
-    return false;
+    return this.pokedexSelectionService.isSelected(
+      this.number,
+      this.form,
+      gender
+    );
   }
 
   changeSelection(gender?: PokeGender): void {
-    switch (this.selectionType) {
-      case PokeFormType.form:
-        if (this.form) {
-          this.pokedexSelectionService.changeFormSelection(
-            this.number,
-            (this.form as PokedexFormEntry).id,
-            gender
-          );
-        }
-        break;
-      case PokeFormType.regional_form:
-        if (this.form) {
-          this.pokedexSelectionService.changeRegionalFormSelection(
-            this.number,
-            (this.form as PokedexRegionalFormEntry).region,
-            gender
-          );
-        }
-        break;
-      default:
-        this.pokedexSelectionService.changeSelection(this.number, gender);
-    }
+    this.pokedexSelectionService.changeSelection(
+      this.number,
+      this.form,
+      gender
+    );
   }
 }

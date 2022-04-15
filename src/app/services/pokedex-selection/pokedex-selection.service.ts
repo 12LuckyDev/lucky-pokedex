@@ -1,7 +1,11 @@
 import { add, editPropAt, removeAt, toggle } from '@12luckydev/utils';
 import { Injectable } from '@angular/core';
-import { PokeGender, PokeRegion } from 'src/app/enums';
-import { PokedexSelection, PokedexSelectionModel } from 'src/app/models';
+import { PokeFormType, PokeGender, PokeRegion } from 'src/app/enums';
+import {
+  PokedexSelection,
+  PokedexSelectionModel,
+  PokedexTableForm,
+} from 'src/app/models';
 import { PokedexStorageService } from '../pokedex-storage/pokedex-storage.service';
 
 @Injectable({
@@ -41,7 +45,7 @@ export class PokedexSelectionService {
     }
   }
 
-  public changeSelection(number: number | null, gender?: PokeGender) {
+  public changePokemonSelection(number: number | null, gender?: PokeGender) {
     this.updateSelection(number, (model) => {
       const { genders } = model;
 
@@ -54,7 +58,7 @@ export class PokedexSelectionService {
     });
   }
 
-  public isSelected(number: number, gender?: PokeGender): boolean {
+  public isPokemonSelected(number: number, gender?: PokeGender): boolean {
     const selection = this.getSelection(number);
     return typeof gender === 'number'
       ? !!selection.genders?.includes(gender)
@@ -160,5 +164,46 @@ export class PokedexSelectionService {
     } else {
       return !!selection.forms?.includes(form);
     }
+  }
+
+  public changeSelection(
+    number: number | null,
+    form?: PokedexTableForm,
+    gender?: PokeGender
+  ): void {
+    if (form) {
+      const { formType, id } = form;
+      switch (formType) {
+        case PokeFormType.form:
+          this.changeFormSelection(number, id, gender);
+          break;
+        case PokeFormType.regional_form:
+          this.changeRegionalFormSelection(number, id, gender);
+          break;
+      }
+    } else {
+      this.changePokemonSelection(number, gender);
+    }
+  }
+
+  public isSelected(
+    number: number | null,
+    form?: PokedexTableForm,
+    gender?: PokeGender
+  ): boolean {
+    if (number) {
+      if (form) {
+        const { formType, id } = form;
+        switch (formType) {
+          case PokeFormType.form:
+            return this.isFormSelected(number, id, gender);
+          case PokeFormType.regional_form:
+            return this.isRegionalFormSelected(number, id, gender);
+        }
+      } else {
+        return this.isPokemonSelected(number, gender);
+      }
+    }
+    return false;
   }
 }

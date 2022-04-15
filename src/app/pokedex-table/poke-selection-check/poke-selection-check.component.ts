@@ -1,17 +1,11 @@
 import { Component, Input } from '@angular/core';
-import { PokeGender } from 'src/app/enums';
+import { PokeFormType, PokeGender } from 'src/app/enums';
 import { PokedexFormEntry, PokedexRegionalFormEntry } from 'src/app/models';
 import {
   PokedexOptionsService,
   PokedexSelectionService,
 } from 'src/app/services';
 import { PokedexBaseComponent } from '../pokedex-base-component/pokedex-base.component';
-
-export enum SelectionType {
-  POKEMON = 'POKEMON',
-  POKEMON_FORM = 'POKEMON_FORM',
-  POKEMON_REGIONAL_FORM = 'POKEMON_REGIONAL_FORM',
-}
 
 const getGenderName = (gender: PokeGender) => {
   return PokeGender[gender];
@@ -23,7 +17,7 @@ const getGenderName = (gender: PokeGender) => {
   styleUrls: ['./poke-selection-check.component.scss'],
 })
 export class PokeSelectionCheckComponent extends PokedexBaseComponent {
-  @Input() selectionType: SelectionType = SelectionType.POKEMON;
+  @Input() selectionType: PokeFormType | null = null;
   @Input() form!: PokedexRegionalFormEntry | PokedexFormEntry;
 
   constructor(
@@ -46,14 +40,14 @@ export class PokeSelectionCheckComponent extends PokedexBaseComponent {
 
   getImgPath(gender?: PokeGender): string | number {
     switch (this.selectionType) {
-      case SelectionType.POKEMON:
+      case PokeFormType.form:
+      case PokeFormType.regional_form:
+        return this.form?.imgPath ?? '';
+      default:
         const genderDiffs = this.entry?.genderDiffs;
         return gender === PokeGender.female && genderDiffs
           ? genderDiffs.femaleImgPath
           : this.number ?? '';
-      case SelectionType.POKEMON_FORM:
-      case SelectionType.POKEMON_REGIONAL_FORM:
-        return this.form?.imgPath ?? '';
     }
   }
 
@@ -68,9 +62,7 @@ export class PokeSelectionCheckComponent extends PokedexBaseComponent {
   isSelected(gender?: PokeGender): boolean {
     if (this.number) {
       switch (this.selectionType) {
-        case SelectionType.POKEMON:
-          return this.pokedexSelectionService.isSelected(this.number, gender);
-        case SelectionType.POKEMON_FORM:
+        case PokeFormType.form:
           return this.form
             ? this.pokedexSelectionService.isFormSelected(
                 this.number,
@@ -78,7 +70,7 @@ export class PokeSelectionCheckComponent extends PokedexBaseComponent {
                 gender
               )
             : false;
-        case SelectionType.POKEMON_REGIONAL_FORM:
+        case PokeFormType.regional_form:
           return this.form
             ? this.pokedexSelectionService.isRegionalFormSelected(
                 this.number,
@@ -86,6 +78,8 @@ export class PokeSelectionCheckComponent extends PokedexBaseComponent {
                 gender
               )
             : false;
+        default:
+          return this.pokedexSelectionService.isSelected(this.number, gender);
       }
     }
     return false;
@@ -93,10 +87,7 @@ export class PokeSelectionCheckComponent extends PokedexBaseComponent {
 
   changeSelection(gender?: PokeGender): void {
     switch (this.selectionType) {
-      case SelectionType.POKEMON:
-        this.pokedexSelectionService.changeSelection(this.number, gender);
-        break;
-      case SelectionType.POKEMON_FORM:
+      case PokeFormType.form:
         if (this.form) {
           this.pokedexSelectionService.changeFormSelection(
             this.number,
@@ -105,7 +96,7 @@ export class PokeSelectionCheckComponent extends PokedexBaseComponent {
           );
         }
         break;
-      case SelectionType.POKEMON_REGIONAL_FORM:
+      case PokeFormType.regional_form:
         if (this.form) {
           this.pokedexSelectionService.changeRegionalFormSelection(
             this.number,
@@ -114,6 +105,8 @@ export class PokeSelectionCheckComponent extends PokedexBaseComponent {
           );
         }
         break;
+      default:
+        this.pokedexSelectionService.changeSelection(this.number, gender);
     }
   }
 }

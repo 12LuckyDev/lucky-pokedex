@@ -5,3 +5,4 @@ export * from './poke-gender.enum';
 export * from './poke-region.enum';
 export * from './poke-type.enum';
 export * from './poke-rarity';
+export * from './poke-form-type.enum';

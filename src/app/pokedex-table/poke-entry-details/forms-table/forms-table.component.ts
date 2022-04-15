@@ -6,10 +6,9 @@ import {
 } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTable } from '@angular/material/table';
-import { CountGendersPolicy } from 'src/app/enums';
-import { PokedexFormEntry } from 'src/app/models';
+import { CountGendersPolicy, PokeFormType } from 'src/app/enums';
+import { PokedexTableForm } from 'src/app/models/pokedex-table-form.model';
 import { PokedexOptionsService } from 'src/app/services';
-import { SelectionType } from '../../poke-selection-check/poke-selection-check.component';
 import { PokedexBaseComponent } from '../../pokedex-base-component/pokedex-base.component';
 import { FormsTableDataSource } from './forms-table-datasource';
 
@@ -26,10 +25,9 @@ export class FormsTableComponent
   implements AfterViewInit
 {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
-  @ViewChild(MatTable) table!: MatTable<PokedexFormEntry>;
+  @ViewChild(MatTable) table!: MatTable<PokedexTableForm>;
 
-  dataSource: FormsTableDataSource;
-
+  dataSource!: FormsTableDataSource;
   displayedColumns = ['select', 'formName'];
 
   constructor(
@@ -37,7 +35,6 @@ export class FormsTableComponent
     private pokedexOptionsService: PokedexOptionsService
   ) {
     super();
-    this.dataSource = new FormsTableDataSource();
   }
 
   get forms() {
@@ -45,7 +42,7 @@ export class FormsTableComponent
   }
 
   get selectionTypes() {
-    return SelectionType;
+    return PokeFormType;
   }
 
   public get showGenders(): boolean {
@@ -56,7 +53,10 @@ export class FormsTableComponent
   }
 
   ngAfterViewInit(): void {
-    this.dataSource.data = this.forms;
+    this.dataSource = new FormsTableDataSource(
+      this.pokedexOptionsService,
+      this.entry
+    );
     this.dataSource.paginator = this.paginator;
     this.table.dataSource = this.dataSource;
     this.cdref.detectChanges();

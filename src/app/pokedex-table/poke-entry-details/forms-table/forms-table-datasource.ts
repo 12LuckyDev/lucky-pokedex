@@ -1,57 +1,91 @@
 import { DataSource } from '@angular/cdk/collections';
 import { MatPaginator } from '@angular/material/paginator';
-import { map } from 'rxjs/operators';
-import { Observable, of as observableOf, merge } from 'rxjs';
-import { PokedexFormEntry } from 'src/app/models';
+import { Observable, BehaviorSubject, Subscription } from 'rxjs';
+import { PokedexEntry } from 'src/app/models';
+import { PokedexOptionsService } from 'src/app/services';
+import { PokedexTableForm } from 'src/app/models/pokedex-table-form.model';
+import {
+  CountFormsPolicy,
+  CountRegionalFormsPolicy,
+  PokeFormType,
+  PokeRegion,
+} from 'src/app/enums';
 
-// CONTINUE HERE
-// paginator only when there are more forms than 10
-
-/**
- * Data source for the FormsTable view. This class should
- * encapsulate all logic for fetching and manipulating the displayed data
- * (including sorting, pagination, and filtering).
- */
-export class FormsTableDataSource extends DataSource<PokedexFormEntry> {
-  data: PokedexFormEntry[] = [];
+export class FormsTableDataSource extends DataSource<PokedexTableForm> {
+  data: PokedexTableForm[] = [];
   paginator: MatPaginator | undefined;
 
-  constructor() {
+  private _subscriptions = new Subscription();
+
+  private _dataSubject = new BehaviorSubject<PokedexTableForm[]>([]);
+  private _countSubject = new BehaviorSubject<number>(0);
+
+  constructor(
+    private pokedexOptionsService: PokedexOptionsService,
+    private entry?: PokedexEntry
+  ) {
     super();
   }
 
-  /**
-   * Connect this data source to the table. The table will only update when
-   * the returned stream emits new items.
-   * @returns A stream of the items to be rendered.
-   */
-  connect(): Observable<PokedexFormEntry[]> {
+  connect(): Observable<PokedexTableForm[]> {
+    this._subscriptions.add(
+      this.pokedexOptionsService.optionsObservable.subscribe(() => this.query())
+    );
+
     if (this.paginator) {
-      // Combine everything that affects the rendered data into one update
-      // stream for the data-table to consume.
-      return merge(observableOf(this.data), this.paginator.page).pipe(
-        map(() => {
-          return this.getPagedData([...this.data]);
-        })
-      );
-    } else {
-      throw Error(
-        'Please set the paginator on the data source before connecting.'
+      this._subscriptions.add(
+        this.paginator.page.subscribe(() => this.query())
       );
     }
+
+    return this._dataSubject.asObservable();
   }
 
-  /**
-   *  Called when the table is being destroyed. Use this function, to clean up
-   * any open connections or free any held resources that were set up during connect.
-   */
-  disconnect(): void {}
+  disconnect(): void {
+    this._subscriptions.unsubscribe();
+  }
 
-  /**
-   * Paginate the data (client-side). If you're using server-side pagination,
-   * this would be replaced by requesting the appropriate data from the server.
-   */
-  private getPagedData(data: PokedexFormEntry[]): PokedexFormEntry[] {
+  query(): void {
+    const data: PokedexTableForm[] = [];
+    if (this.entry && this.pokedexOptionsService.options) {
+      const { countFormsPolicy, countRegionalFormsPolicy } =
+        this.pokedexOptionsService.options;
+
+      const { forms, formDiffsOnlyVisual, regionalForms } = this.entry;
+
+      if (
+        forms &&
+        forms.length > 0 &&
+        countFormsPolicy !== CountFormsPolicy.NO_COUNT &&
+        (countFormsPolicy !== CountFormsPolicy.NO_COUNT_VISUAL_ONLY ||
+          !formDiffsOnlyVisual)
+      ) {
+        forms.forEach((form) =>
+          data.push({ ...form, formType: PokeFormType.form })
+        );
+      }
+
+      if (
+        regionalForms &&
+        regionalForms.length > 0 &&
+        countRegionalFormsPolicy !== CountRegionalFormsPolicy.NO_COUNT
+      ) {
+        regionalForms.forEach(({ region, types, imgPath }) =>
+          data.push({
+            id: region,
+            types,
+            imgPath,
+            formType: PokeFormType.regional_form,
+            formName: PokeRegion[region], //TODO change this
+          })
+        );
+      }
+    }
+    this._dataSubject.next(this.getPagedData(data));
+    this._countSubject.next(data.length);
+  }
+
+  private getPagedData(data: PokedexTableForm[]): PokedexTableForm[] {
     if (this.paginator) {
       const startIndex = this.paginator.pageIndex * this.paginator.pageSize;
       return data.splice(startIndex, this.paginator.pageSize);

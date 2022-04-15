@@ -1,13 +1,13 @@
 import { isArray } from '@12luckydev/utils';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, filter, Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import {
   CountFormsPolicy,
   CountGendersPolicy,
   CountRegionalFormsPolicy,
+  PokeFormType,
 } from 'src/app/enums';
 import { PokedexEntry, PokedexOptions } from 'src/app/models';
-import { SelectionType } from 'src/app/pokedex-table/poke-selection-check/poke-selection-check.component';
 import { PokedexStorageService } from '../pokedex-storage/pokedex-storage.service';
 
 const DEFAULT_OPTIONS: PokedexOptions = {
@@ -53,16 +53,14 @@ export class PokedexOptionsService {
 
   public getShowGender(
     entry?: PokedexEntry,
-    selectMode: SelectionType = SelectionType.POKEMON
+    selectMode: PokeFormType | null = null
   ): boolean {
     if (entry && this.options) {
       switch (this.options.countGendersPolicy) {
         case CountGendersPolicy.COUNT_ALL:
           return true;
         case CountGendersPolicy.COUNT_ALL_WITH_DIFFS:
-          return !!entry.genderDiffs && selectMode === SelectionType.POKEMON
-            ? true
-            : false;
+          return !!entry.genderDiffs && selectMode === null ? true : false;
         case CountGendersPolicy.NO_COUNT_VISUAL_ONLY:
           return !!entry.genderDiffs && !entry.genderDiffs.onlyVisual
             ? true
@@ -102,7 +100,7 @@ export class PokedexOptionsService {
     return false;
   }
 
-  public getHasDetails(entry?: PokedexEntry): boolean {
+  public getIsExpandable(entry?: PokedexEntry): boolean {
     return this.getShowForms(entry) || this.getShowRegionalForms(entry);
   }
 }

@@ -68,6 +68,6 @@ export class PokedexTableComponent implements AfterViewInit {
   }
 
   public isExpandable(entry: PokedexEntry) {
-    return this.pokedexOptionsService.getHasDetails(entry);
+    return this.pokedexOptionsService.getIsExpandable(entry);
   }
 }

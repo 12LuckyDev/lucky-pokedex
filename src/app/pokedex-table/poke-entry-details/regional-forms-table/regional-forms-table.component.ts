@@ -1,10 +1,9 @@
 import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { MatTable } from '@angular/material/table';
-import { CountGendersPolicy } from 'src/app/enums';
+import { CountGendersPolicy, PokeFormType } from 'src/app/enums';
 import { PokeRegion } from 'src/app/enums/poke-region.enum';
 import { PokedexRegionalFormEntry } from 'src/app/models';
 import { PokedexOptionsService } from 'src/app/services';
-import { SelectionType } from '../../poke-selection-check/poke-selection-check.component';
 import { PokedexBaseComponent } from '../../pokedex-base-component/pokedex-base.component';
 import { RegionalFormsTableDataSource } from './regional-forms-table-datasource';
 
@@ -36,7 +35,7 @@ export class RegionalFormsTableComponent
   }
 
   get selectionTypes() {
-    return SelectionType;
+    return PokeFormType;
   }
 
   public get showGenders(): boolean {

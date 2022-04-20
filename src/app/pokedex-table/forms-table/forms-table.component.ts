@@ -25,7 +25,7 @@ export class FormsTableComponent
   @ViewChild(MatTable) table!: MatTable<PokedexTableForm>;
 
   dataSource!: FormsTableDataSource;
-  displayedColumns = ['select', 'formName'];
+  displayedColumns = ['selectAll', 'select', 'formName'];
 
   constructor(
     private cdref: ChangeDetectorRef,

@@ -1,28 +1,45 @@
-import { add, editPropAt, removeAt, toggle } from '@12luckydev/utils';
+import { add, editPropAt, isArray, removeAt, toggle } from '@12luckydev/utils';
 import { Injectable } from '@angular/core';
+import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import { PokeFormType, PokeGender, PokeRegion } from 'src/app/enums';
 import {
+  PokedexEntry,
   PokedexSelection,
   PokedexSelectionModel,
   PokedexTableForm,
 } from 'src/app/models';
+import { PokedexOptionsService } from '../pokedex-options/pokedex-options.service';
 import { PokedexStorageService } from '../pokedex-storage/pokedex-storage.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class PokedexSelectionService {
-  private _selectionMap = new Map<number, PokedexSelection>();
+  private _readySubject = new BehaviorSubject<boolean>(false);
 
-  constructor(private pokedexStorageService: PokedexStorageService) {
+  private _selectionMap = new Map<number, PokedexSelection>();
+  private _selectionChangeSubject = new Subject<number>();
+
+  constructor(
+    private pokedexStorageService: PokedexStorageService,
+    private pokedexOptionsService: PokedexOptionsService
+  ) {
     this.pokedexStorageService.getAllSelections().subscribe({
       next: ({ number, selection }) =>
         this._selectionMap.set(number, selection),
-      complete: () => console.log('COMPLETE'),
+      complete: () => this._readySubject.next(true),
     });
   }
 
-  getSelection(number: number): PokedexSelection {
+  get readyObservable(): Observable<boolean> {
+    return this._readySubject.asObservable();
+  }
+
+  get selectionChangeObservable(): Observable<number> {
+    return this._selectionChangeSubject.asObservable();
+  }
+
+  private getSelection(number: number): PokedexSelection {
     const model = this._selectionMap.get(number);
     if (model) {
       return model;
@@ -42,10 +59,11 @@ export class PokedexSelectionService {
       console.log(number, newModel);
       this._selectionMap.set(number, newModel);
       this.pokedexStorageService.setSelection(number, newModel);
+      this._selectionChangeSubject.next(number);
     }
   }
 
-  public changePokemonSelection(number: number | null, gender?: PokeGender) {
+  private changePokemonSelection(number: number | null, gender?: PokeGender) {
     this.updateSelection(number, (model) => {
       const { genders } = model;
 
@@ -65,7 +83,7 @@ export class PokedexSelectionService {
       : selection.selected;
   }
 
-  public changeRegionalFormSelection(
+  private changeRegionalFormSelection(
     number: number | null,
     region: PokeRegion,
     gender?: PokeGender
@@ -103,7 +121,7 @@ export class PokedexSelectionService {
     });
   }
 
-  public isRegionalFormSelected(
+  private isRegionalFormSelected(
     number: number,
     region: PokeRegion,
     gender?: PokeGender
@@ -119,7 +137,7 @@ export class PokedexSelectionService {
     }
   }
 
-  public changeFormSelection(
+  private changeFormSelection(
     number: number | null,
     form: number,
     gender?: PokeGender
@@ -151,7 +169,7 @@ export class PokedexSelectionService {
     });
   }
 
-  public isFormSelected(
+  private isFormSelected(
     number: number,
     form: number,
     gender?: PokeGender
@@ -206,4 +224,193 @@ export class PokedexSelectionService {
     }
     return false;
   }
+
+  public isAllSelected(entry?: PokedexEntry): boolean {
+    if (entry) {
+      const { number, genders, forms, regionalForms } = entry;
+
+      const selection = this.getSelection(number);
+      const {
+        selected,
+        genders: selectedGenders,
+        forms: selectedForms,
+        formsGenders,
+        regionalForms: selectedRegionalForms,
+        regionalFormsGenders,
+      } = selection;
+
+      const { showGenders, showForms, showRegionalForms } =
+        this.pokedexOptionsService.getShowTypes(entry);
+
+      // is pokemon / all it's genders selected
+      if (!showForms) {
+        if (showGenders) {
+          if (!compareGenders(genders, selectedGenders)) {
+            return false;
+          }
+        } else if (!selected) {
+          return false;
+        }
+      }
+
+      // if all pokemon forms / all of their genders selected
+      if (showForms) {
+        if (showGenders) {
+          if (forms?.length === formsGenders?.length) {
+            if (
+              formsGenders?.some(
+                ({ genders: formGenders }) =>
+                  !compareGenders(genders, formGenders)
+              )
+            ) {
+              return false;
+            }
+          } else {
+            return false;
+          }
+        } else if (forms?.length !== selectedForms?.length) {
+          return false;
+        }
+      }
+
+      // if all pokemon regional forms / all of their genders selected
+      if (showRegionalForms) {
+        if (showGenders) {
+          if (regionalForms?.length === regionalFormsGenders?.length) {
+            if (
+              regionalFormsGenders?.some(
+                ({ genders: formGenders }) =>
+                  !compareGenders(genders, formGenders)
+              )
+            ) {
+              return false;
+            }
+          } else {
+            return false;
+          }
+        } else if (regionalForms?.length !== selectedRegionalForms?.length) {
+          return false;
+        }
+      }
+
+      return true;
+    }
+    return false;
+  }
+
+  public isSomeSelected(entry?: PokedexEntry): boolean {
+    if (entry) {
+      const { number } = entry;
+
+      const selection = this.getSelection(number);
+      const {
+        selected,
+        genders: selectedGenders,
+        forms: selectedForms,
+        formsGenders,
+        regionalForms: selectedRegionalForms,
+        regionalFormsGenders,
+      } = selection;
+
+      const { showGenders, showForms, showRegionalForms } =
+        this.pokedexOptionsService.getShowTypes(entry);
+
+      // is pokemon / any of it's genders selected
+      if (!showForms) {
+        if (showGenders) {
+          if (isArray(selectedGenders, false)) {
+            return true;
+          }
+        } else if (selected) {
+          return true;
+        }
+      }
+
+      // if some pokemon forms / some of their genders selected
+      if (showForms) {
+        if (showGenders) {
+          if (
+            formsGenders?.some(({ genders: formGenders }) =>
+              isArray(formGenders, false)
+            )
+          ) {
+            return true;
+          }
+        } else if (isArray(selectedForms, false)) {
+          return true;
+        }
+      }
+
+      // if some pokemon regional forms / some of their genders selected
+      if (showRegionalForms) {
+        if (showGenders) {
+          if (
+            regionalFormsGenders?.some(({ genders: formGenders }) =>
+              isArray(formGenders, false)
+            )
+          ) {
+            return true;
+          }
+        } else if (isArray(selectedRegionalForms, false)) {
+          return true;
+        }
+      }
+    }
+    return false;
+  }
+
+  public selectAll(entry?: PokedexEntry): void {
+    if (entry) {
+      const selection: PokedexSelection = this.getSelection(entry.number);
+      const { genders, forms, regionalForms } = entry;
+      const { showGenders, showForms, showRegionalForms } =
+        this.pokedexOptionsService.getShowTypes(entry);
+
+      if (showGenders) {
+        selection.genders = genders;
+      } else {
+        selection.selected = true;
+      }
+
+      if (showForms) {
+        if (showGenders) {
+          selection.formsGenders = forms
+            ? forms.map((form) => ({ form: form.id, genders }))
+            : [];
+        } else {
+          selection.forms = forms ? forms.map(({ id }) => id) : [];
+        }
+      }
+
+      if (showRegionalForms) {
+        if (showGenders) {
+          selection.regionalFormsGenders = regionalForms
+            ? regionalForms.map((regionalForm) => ({
+                region: regionalForm.region,
+                genders,
+              }))
+            : [];
+        } else {
+          selection.regionalForms = regionalForms
+            ? regionalForms.map(({ region }) => region)
+            : [];
+        }
+      }
+
+      this.updateSelection(entry.number, () => selection);
+    }
+  }
+
+  public deselectAll(entry?: PokedexEntry): void {
+    if (entry) {
+      this.updateSelection(entry.number, () => new PokedexSelectionModel());
+    }
+  }
 }
+
+const compareGenders = (
+  genders: PokeGender[],
+  selectedGenders?: PokeGender[] | null
+) => {
+  return selectedGenders ? selectedGenders.length === genders.length : false;
+};

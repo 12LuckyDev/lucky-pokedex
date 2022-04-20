@@ -8,6 +8,14 @@
     aria-label="Elements"
     multiTemplateDataRows
   >
+    <!-- Select All Column-->
+    <ng-container matColumnDef="selectAll">
+      <th mat-header-cell *matHeaderCellDef></th>
+      <td mat-cell *matCellDef="let row">
+        <app-poke-selection-all [entry]="row"></app-poke-selection-all>
+      </td>
+    </ng-container>
+
     <!-- Select Column-->
     <ng-container matColumnDef="select">
       <th
@@ -58,7 +66,6 @@
       *matRowDef="let row; columns: displayedColumns"
       class="pokemon-element-row"
       [class.expandable]="isExpandable(row)"
-      [class.expanded]="expanded === row"
       (click)="isExpandable(row) ? expand(row) : null"
     ></tr>
     <tr

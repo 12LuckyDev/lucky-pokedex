@@ -52,7 +52,7 @@ export class PokedexTableComponent implements AfterViewInit {
   }
 
   public get displayedColumns(): string[] {
-    return ['select', 'number', 'name'];
+    return ['selectAll', 'select', 'number', 'name'];
   }
 
   ngAfterViewInit(): void {

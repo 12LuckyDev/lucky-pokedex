@@ -10,6 +10,11 @@
     }
   }
 
+  .mat-column-selectAll {
+    width: 2rem;
+    border-right: 1px solid gray;
+  }
+
   .mat-column-select {
     overflow: initial;
     width: 128px;
@@ -19,23 +24,5 @@
     &.select-gender {
       width: 262px;
     }
-  }
-
-  .expanded {
-    ::ng-deep .mat-column-select {
-      width: 128px;
-      padding: 0 0.5rem 0 calc(0.5rem - 2px);
-
-      &.select-gender {
-        width: 262px;
-      }
-    }
-  }
-}
-
-.table-panel {
-  ::ng-deep .mat-expansion-panel-body {
-    padding-left: 0;
-    padding-right: 0;
   }
 }

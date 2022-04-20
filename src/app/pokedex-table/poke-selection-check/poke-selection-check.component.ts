@@ -26,22 +26,22 @@ export class PokeSelectionCheckComponent extends PokedexBaseComponent {
     super();
   }
 
-  get showGender(): boolean {
+  public get showGender(): boolean {
     return this.pokedexOptionsService.getShowGender(
       this.entry,
       this.selectionType
     );
   }
 
-  get genders(): PokeGender[] {
+  public get genders(): PokeGender[] {
     return this.entry ? this.entry.genders : [];
   }
 
-  get selectionType(): PokeFormType | null {
+  public get selectionType(): PokeFormType | null {
     return this.form ? this.form.formType : null;
   }
 
-  getImgPath(gender?: PokeGender): string | number {
+  public getImgPath(gender?: PokeGender): string | number {
     switch (this.selectionType) {
       case PokeFormType.form:
       case PokeFormType.regional_form:
@@ -54,15 +54,21 @@ export class PokeSelectionCheckComponent extends PokedexBaseComponent {
     }
   }
 
-  getGenderName(gender: PokeGender): string {
+  public showCheckbox(): boolean {
+    return this.selectionType === null
+      ? !this.pokedexOptionsService.getShowForms(this.entry)
+      : true;
+  }
+
+  public getGenderName(gender: PokeGender): string {
     return gender !== null || gender !== undefined ? getGenderName(gender) : '';
   }
 
-  showIcon(gender: PokeGender) {
+  public showIcon(gender: PokeGender) {
     return gender !== PokeGender.genderless;
   }
 
-  isSelected(gender?: PokeGender): boolean {
+  public isSelected(gender?: PokeGender): boolean {
     return this.pokedexSelectionService.isSelected(
       this.number,
       this.form,
@@ -70,7 +76,7 @@ export class PokeSelectionCheckComponent extends PokedexBaseComponent {
     );
   }
 
-  changeSelection(gender?: PokeGender): void {
+  public changeSelection(gender?: PokeGender): void {
     this.pokedexSelectionService.changeSelection(
       this.number,
       this.form,

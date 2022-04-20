@@ -5,32 +5,11 @@
 
 .pokemon-detail-row {
   height: 0;
-  &.expanded {
-    td {
-      border-bottom: 2px solid black;
-      border-left: 2px solid black;
-      border-right: 2px solid black;
-    }
-  }
 }
 
 .pokemon-element-row {
   td {
     border-bottom-width: 0;
-  }
-
-  &.expanded {
-    td {
-      border-bottom-width: 1px;
-
-      border-top: 2px solid black;
-      &:first-child {
-        border-left: 2px solid black;
-      }
-      &:last-child {
-        border-right: 2px solid black;
-      }
-    }
   }
 
   &.expandable {

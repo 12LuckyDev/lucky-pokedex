@@ -1,0 +1,7 @@
+<mat-checkbox
+  color="primary"
+  (click)="$event.stopPropagation()"
+  (change)="$event ? changeAllSelection() : null"
+  [indeterminate]="isSomeSelected"
+  [checked]="isAllSelected"
+></mat-checkbox>

@@ -23,6 +23,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { PokedexBaseComponent } from './pokedex-table/pokedex-base-component/pokedex-base.component';
 import { PokeSelectionCheckComponent } from './pokedex-table/poke-selection-check/poke-selection-check.component';
 import { PokedexSearchComponent } from './pokedex-table/pokedex-search/pokedex-search.component';
+import { PokeSelectionAllComponent } from './pokedex-table/poke-selection-all/poke-selection-all.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { PokedexSearchComponent } from './pokedex-table/pokedex-search/pokedex-s
     PokeImgComponent,
     PokeSelectionCheckComponent,
     PokedexSearchComponent,
+    PokeSelectionAllComponent,
   ],
   imports: [
     BrowserModule,

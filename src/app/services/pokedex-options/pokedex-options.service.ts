@@ -100,6 +100,18 @@ export class PokedexOptionsService {
     return false;
   }
 
+  public getShowTypes(entry?: PokedexEntry): {
+    showGenders: boolean;
+    showForms: boolean;
+    showRegionalForms: boolean;
+  } {
+    return {
+      showGenders: this.getShowGender(entry),
+      showForms: this.getShowForms(entry),
+      showRegionalForms: this.getShowRegionalForms(entry),
+    };
+  }
+
   public getIsExpandable(entry?: PokedexEntry): boolean {
     return this.getShowForms(entry) || this.getShowRegionalForms(entry);
   }

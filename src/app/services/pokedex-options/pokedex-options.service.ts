@@ -73,7 +73,7 @@ export class PokedexOptionsService {
         case CountGendersPolicy.COUNT_ALL:
           return true;
         case CountGendersPolicy.COUNT_ALL_WITH_DIFFS:
-          return !!entry.genderDiffs && selectMode === null ? true : false;
+          return !!entry.genderDiffs && selectMode === null;
         case CountGendersPolicy.NO_COUNT_VISUAL_ONLY:
           return !!entry.genderDiffs && !entry.genderDiffs.onlyVisual
             ? true
@@ -86,14 +86,12 @@ export class PokedexOptionsService {
   }
 
   public getShowForms(entry?: PokedexEntry): boolean {
-    if (this.options) {
+    if (entry && this.options) {
       switch (this.options.countFormsPolicy) {
         case CountFormsPolicy.COUNT_ALL:
-          return entry ? isArray(entry.forms, false) : false;
+          return isArray(entry.forms, false);
         case CountFormsPolicy.NO_COUNT_VISUAL_ONLY:
-          return entry
-            ? !entry.formDiffsOnlyVisual && isArray(entry.forms, false)
-            : false;
+          return !entry.formDiffsOnlyVisual && isArray(entry.forms, false);
         case CountFormsPolicy.NO_COUNT:
           return false;
       }
@@ -102,10 +100,10 @@ export class PokedexOptionsService {
   }
 
   public getShowRegionalForms(entry?: PokedexEntry): boolean {
-    if (this.options) {
+    if (entry && this.options) {
       switch (this.options.countRegionalFormsPolicy) {
         case CountRegionalFormsPolicy.COUNT_ALL:
-          return entry ? isArray(entry.regionalForms, false) : false;
+          return isArray(entry.regionalForms, false);
         case CountRegionalFormsPolicy.NO_COUNT:
           return false;
       }

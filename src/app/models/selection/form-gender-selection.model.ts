@@ -1,6 +1,6 @@
 import { PokeGender } from 'src/app/enums';
 
 export interface FormGenderSelection {
-  form: number;
+  id: number;
   genders: PokeGender[];
 }

@@ -85,6 +85,10 @@ export class FormsTableDataSource extends DataSource<PokedexTableForm> {
     this._countSubject.next(data.length);
   }
 
+  get count(): number {
+    return this._countSubject.value;
+  }
+
   private getPagedData(data: PokedexTableForm[]): PokedexTableForm[] {
     if (this.paginator) {
       const startIndex = this.paginator.pageIndex * this.paginator.pageSize;

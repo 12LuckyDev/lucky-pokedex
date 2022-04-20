@@ -33,9 +33,9 @@
 <mat-paginator
   #paginator
   class="bg-accent"
-  [length]="dataSource?.data?.length"
+  [length]="dataSource?.count"
   [pageIndex]="0"
-  [pageSize]="10"
+  [pageSize]="5"
   [pageSizeOptions]="[5, 10, 20]"
   aria-label="Select page"
 >

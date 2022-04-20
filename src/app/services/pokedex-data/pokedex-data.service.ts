@@ -1,6 +1,11 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { PokedexEntry, PokedexSearch } from '../../models';
+import {
+  getPagedPokedexList,
+  getSearchData,
+  getSortedPokedexList,
+} from './pokedex-data-utils';
 import POKEDEX_LIST from './pokedex-data.json';
 
 export type GetPokedexListParamsType = {
@@ -16,6 +21,7 @@ export type GetPokedexListParamsType = {
 })
 export class PokedexDataService {
   constructor() {}
+
   getPokedexList(
     {
       pageIndex = 0,
@@ -28,62 +34,14 @@ export class PokedexDataService {
     data: PokedexEntry[];
     count: number;
   }> {
+    const sortedData = getSearchData(POKEDEX_LIST, search);
     return of({
       data: getPagedPokedexList(
-        getSortedPokedexList(getSearchData(search), sortBy, sortDirection),
+        getSortedPokedexList(sortedData, sortBy, sortDirection),
         pageIndex,
         pageSize
       ),
-      count: POKEDEX_LIST.length,
+      count: sortedData.length,
     });
   }
 }
-
-const getSearchData = (search: PokedexSearch | null) => {
-  return search
-    ? POKEDEX_LIST.filter(({ name }) => {
-        return name
-          .toLocaleLowerCase()
-          .includes((search.textSearch ?? '').toLocaleLowerCase());
-      })
-    : POKEDEX_LIST;
-};
-
-const getPagedPokedexList = (
-  data: PokedexEntry[],
-  pageIndex: number,
-  pageSize: number
-) => {
-  const start = pageIndex * pageSize;
-  return data.slice(start, start + pageSize);
-};
-
-const getSortedPokedexList = (
-  data: PokedexEntry[],
-  sortBy?: string,
-  sortDirection?: string
-) => {
-  if (!sortBy || sortDirection === '') {
-    return data;
-  }
-
-  return [...data].sort((a, b) => {
-    const isAsc = sortDirection === 'asc';
-    switch (sortBy) {
-      case 'name':
-        return compare(a.name, b.name, isAsc);
-      case 'number':
-        return compare(+a.number, +b.number, isAsc);
-      default:
-        return 0;
-    }
-  });
-};
-
-const compare = (
-  a: string | number,
-  b: string | number,
-  isAsc: boolean
-): number => {
-  return (a < b ? -1 : 1) * (isAsc ? 1 : -1);
-};

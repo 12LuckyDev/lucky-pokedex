@@ -8,6 +8,8 @@
 // Be sure that you only ever include this mixin once!
 @include mat.core();
 
+@import "./app/styles/poke-table.scss";
+
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
@@ -33,6 +35,7 @@ $lucky-pokedex-theme: mat.define-light-theme(
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include mat.all-component-themes($lucky-pokedex-theme);
+@include theme-color-grabber($lucky-pokedex-theme);
 
 /* You can add global styles to this file, and also import other style files */
 

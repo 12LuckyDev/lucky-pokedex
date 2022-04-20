@@ -1,3 +1,5 @@
+@import "~@angular/material/theming";
+
 .full-width-table {
   width: 100%;
 
@@ -24,5 +26,16 @@
     &.select-gender {
       width: 262px;
     }
+  }
+}
+
+@mixin theme-color-grabber($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  .bg-primary {
+    background-color: mat-color($primary);
+  }
+  .bg-accent {
+    background-color: mat-color($accent);
   }
 }

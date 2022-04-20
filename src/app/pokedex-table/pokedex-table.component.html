@@ -11,7 +11,7 @@
     <!-- Select All Column-->
     <ng-container matColumnDef="selectAll">
       <th mat-header-cell *matHeaderCellDef></th>
-      <td mat-cell *matCellDef="let row">
+      <td mat-cell *matCellDef="let row" [class.bg-accent]="expanded === row">
         <app-poke-selection-all [entry]="row"></app-poke-selection-all>
       </td>
     </ng-container>

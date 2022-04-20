@@ -44,11 +44,8 @@ export class PokedexTableComponent implements AfterViewInit {
     this.expanded = null;
   }
 
-  public get showGenders(): boolean {
-    return (
-      this.pokedexOptionsService.options?.countGendersPolicy !==
-      CountGendersPolicy.NO_COUNT
-    );
+  public get isGenderSelectable(): boolean {
+    return this.pokedexOptionsService.isGenderSelectable;
   }
 
   public get displayedColumns(): string[] {

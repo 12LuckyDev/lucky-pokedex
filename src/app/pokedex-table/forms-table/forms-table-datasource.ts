@@ -47,7 +47,7 @@ export class FormsTableDataSource extends DataSource<PokedexTableForm> {
 
   query(): void {
     const data: PokedexTableForm[] = [];
-    if (this.entry && this.pokedexOptionsService.options) {
+    if (this.entry) {
       const { countFormsPolicy, countRegionalFormsPolicy } =
         this.pokedexOptionsService.options;
 

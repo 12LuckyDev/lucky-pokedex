@@ -21,9 +21,13 @@
       <th
         mat-header-cell
         *matHeaderCellDef
-        [class.select-gender]="showGenders"
+        [class.select-gender]="isGenderSelectable"
       ></th>
-      <td mat-cell *matCellDef="let row" [class.select-gender]="showGenders">
+      <td
+        mat-cell
+        *matCellDef="let row"
+        [class.select-gender]="isGenderSelectable"
+      >
         <app-poke-selection-check [entry]="row"></app-poke-selection-check>
       </td>
     </ng-container>

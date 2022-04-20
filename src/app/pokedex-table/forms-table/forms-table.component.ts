@@ -38,11 +38,8 @@ export class FormsTableComponent
     return this.entry.forms ?? [];
   }
 
-  public get showGenders(): boolean {
-    return (
-      this.pokedexOptionsService.options?.countGendersPolicy !==
-      CountGendersPolicy.NO_COUNT
-    );
+  public get isGenderSelectable(): boolean {
+    return this.pokedexOptionsService.isGenderSelectable;
   }
 
   ngAfterViewInit(): void {

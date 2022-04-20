@@ -20,7 +20,7 @@ const DEFAULT_OPTIONS: PokedexOptions = {
   providedIn: 'root',
 })
 export class PokedexOptionsService {
-  private _optionsSubject = new BehaviorSubject<PokedexOptions | null>(
+  private _optionsSubject = new BehaviorSubject<PokedexOptions>(
     DEFAULT_OPTIONS
   );
 
@@ -34,11 +34,11 @@ export class PokedexOptionsService {
     });
   }
 
-  public get optionsObservable(): Observable<PokedexOptions | null> {
+  public get optionsObservable(): Observable<PokedexOptions> {
     return this._optionsSubject.asObservable();
   }
 
-  public get options(): PokedexOptions | null {
+  public get options(): PokedexOptions {
     return this._optionsSubject.value;
   }
 
@@ -64,20 +64,22 @@ export class PokedexOptionsService {
     this._optionsSubject.next(options);
   }
 
+  public get isGenderSelectable(): boolean {
+    return this.options.countGendersPolicy !== CountGendersPolicy.NO_COUNT;
+  }
+
   public getShowGender(
     entry?: PokedexEntry,
     selectMode: PokeFormType | null = null
   ): boolean {
-    if (entry && this.options) {
+    if (entry) {
       switch (this.options.countGendersPolicy) {
         case CountGendersPolicy.COUNT_ALL:
           return true;
         case CountGendersPolicy.COUNT_ALL_WITH_DIFFS:
           return !!entry.genderDiffs && selectMode === null;
         case CountGendersPolicy.NO_COUNT_VISUAL_ONLY:
-          return !!entry.genderDiffs && !entry.genderDiffs.onlyVisual
-            ? true
-            : false;
+          return !!entry.genderDiffs && !entry.genderDiffs.onlyVisual;
         case CountGendersPolicy.NO_COUNT:
           return false;
       }
@@ -86,7 +88,7 @@ export class PokedexOptionsService {
   }
 
   public getShowForms(entry?: PokedexEntry): boolean {
-    if (entry && this.options) {
+    if (entry) {
       switch (this.options.countFormsPolicy) {
         case CountFormsPolicy.COUNT_ALL:
           return isArray(entry.forms, false);
@@ -100,7 +102,7 @@ export class PokedexOptionsService {
   }
 
   public getShowRegionalForms(entry?: PokedexEntry): boolean {
-    if (entry && this.options) {
+    if (entry) {
       switch (this.options.countRegionalFormsPolicy) {
         case CountRegionalFormsPolicy.COUNT_ALL:
           return isArray(entry.regionalForms, false);

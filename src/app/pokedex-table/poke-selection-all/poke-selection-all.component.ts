@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { takeUntil, filter } from 'rxjs';
-import { PokedexSelectionService } from 'src/app/services';
+import {
+  PokedexOptionsService,
+  PokedexSelectionService,
+} from 'src/app/services';
 import { PokedexBaseComponent } from '../pokedex-base-component/pokedex-base.component';
 
 @Component({
@@ -15,7 +18,10 @@ export class PokeSelectionAllComponent
   private _isAllSelected: boolean = false;
   private _isSomeSelected: boolean = false;
 
-  constructor(private pokedexSelectionService: PokedexSelectionService) {
+  constructor(
+    private pokedexSelectionService: PokedexSelectionService,
+    private pokedexOptionsService: PokedexOptionsService
+  ) {
     super();
   }
 
@@ -44,6 +50,10 @@ export class PokeSelectionAllComponent
 
   public get isSomeSelected(): boolean {
     return this._isSomeSelected;
+  }
+
+  public get showCheckbox(): boolean {
+    return this.pokedexOptionsService.getShowSelectAllCheckbox(this.entry);
   }
 
   public changeAllSelection() {

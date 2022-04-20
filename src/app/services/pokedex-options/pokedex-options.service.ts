@@ -42,6 +42,19 @@ export class PokedexOptionsService {
     return this._optionsSubject.value;
   }
 
+  public get showSelectAll(): boolean {
+    if (this.options) {
+      const { countGendersPolicy, countFormsPolicy, countRegionalFormsPolicy } =
+        this.options;
+      return (
+        countGendersPolicy !== CountGendersPolicy.NO_COUNT ||
+        countFormsPolicy !== CountFormsPolicy.NO_COUNT ||
+        countRegionalFormsPolicy !== CountRegionalFormsPolicy.NO_COUNT
+      );
+    }
+    return false;
+  }
+
   public setOptions(options: PokedexOptions) {
     this.pokedexStorageService.setOptions(options).subscribe();
     this._optionsSubject.next(options);
@@ -114,5 +127,9 @@ export class PokedexOptionsService {
 
   public getIsExpandable(entry?: PokedexEntry): boolean {
     return this.getShowForms(entry) || this.getShowRegionalForms(entry);
+  }
+
+  public getShowSelectAllCheckbox(entry?: PokedexEntry): boolean {
+    return this.getShowGender(entry) || this.getIsExpandable(entry);
   }
 }

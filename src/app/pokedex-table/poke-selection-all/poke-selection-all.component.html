@@ -1,4 +1,5 @@
 <mat-checkbox
+  *ngIf="showCheckbox"
   color="primary"
   (click)="$event.stopPropagation()"
   (change)="$event ? changeAllSelection() : null"

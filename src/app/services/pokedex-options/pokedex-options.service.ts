@@ -1,6 +1,6 @@
 import { isArray } from '@12luckydev/utils';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, Observable, skip } from 'rxjs';
 import {
   CountFormsPolicy,
   CountGendersPolicy,
@@ -8,6 +8,7 @@ import {
   PokeFormType,
 } from 'src/app/enums';
 import { PokedexEntry, PokedexOptions } from 'src/app/models';
+import { PokedexBaseService } from '../pokedex-base-service';
 import { PokedexStorageService } from '../pokedex-storage/pokedex-storage.service';
 
 const DEFAULT_OPTIONS: PokedexOptions = {
@@ -19,23 +20,23 @@ const DEFAULT_OPTIONS: PokedexOptions = {
 @Injectable({
   providedIn: 'root',
 })
-export class PokedexOptionsService {
+export class PokedexOptionsService extends PokedexBaseService {
   private _optionsSubject = new BehaviorSubject<PokedexOptions>(
     DEFAULT_OPTIONS
   );
 
   constructor(private pokedexStorageService: PokedexStorageService) {
-    this.pokedexStorageService.getOptions().subscribe((options) => {
-      console.log(options);
+    super();
+    this.pokedexStorageService.getOptions().subscribe({
+      next: (options) => {
+        console.log(options);
 
-      if (options) {
-        this.nextOptions(options);
-      }
+        if (options) {
+          this.nextOptions(options);
+        }
+      },
+      complete: this.setAsReady,
     });
-  }
-
-  public get optionsObservable(): Observable<PokedexOptions> {
-    return this._optionsSubject.asObservable();
   }
 
   public get options(): PokedexOptions {
@@ -53,6 +54,14 @@ export class PokedexOptionsService {
       );
     }
     return false;
+  }
+
+  public getOptionsObservable(
+    shipInitialValue: boolean = true
+  ): Observable<PokedexOptions> {
+    return this._optionsSubject
+      .asObservable()
+      .pipe(skip(shipInitialValue ? 1 : 0));
   }
 
   public setOptions(options: PokedexOptions) {

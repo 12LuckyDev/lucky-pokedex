@@ -6,7 +6,6 @@ import { PokedexEntry } from '../models';
 import {
   GetPokedexListParamsType,
   PokedexDataService,
-  PokedexOptionsService,
   PokedexSearchService,
 } from '../services';
 
@@ -22,7 +21,6 @@ export class PokedexTableDataSource extends DataSource<PokedexEntry> {
 
   constructor(
     private pokedexDataService: PokedexDataService,
-    private pokedexOptionsService: PokedexOptionsService,
     private pokedexSearchService: PokedexSearchService
   ) {
     super();
@@ -34,11 +32,6 @@ export class PokedexTableDataSource extends DataSource<PokedexEntry> {
    * @returns A stream of the items to be rendered.
    */
   connect(): Observable<PokedexEntry[]> {
-    this.optionsSubscription =
-      this.pokedexOptionsService.optionsObservable.subscribe((options) =>
-        console.log(options)
-      );
-
     this.searchSubscription =
       this.pokedexSearchService.searchObservable.subscribe(() => {
         if (this.paginator?.pageIndex !== 0) {

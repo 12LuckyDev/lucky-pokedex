@@ -1,6 +1,6 @@
 import { isArray, toggle } from '@12luckydev/utils';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable, Subject } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { PokeFormType, PokeGender, PokeRegion } from 'src/app/enums';
 import {
   PokedexEntry,
@@ -8,6 +8,7 @@ import {
   PokedexSelectionModel,
   PokedexTableForm,
 } from 'src/app/models';
+import { PokedexBaseService } from '../pokedex-base-service';
 import { PokedexOptionsService } from '../pokedex-options/pokedex-options.service';
 import { PokedexStorageService } from '../pokedex-storage/pokedex-storage.service';
 import {
@@ -21,9 +22,7 @@ import {
 @Injectable({
   providedIn: 'root',
 })
-export class PokedexSelectionService {
-  private _readySubject = new BehaviorSubject<boolean>(false);
-
+export class PokedexSelectionService extends PokedexBaseService {
   private _selectionMap = new Map<number, PokedexSelection>();
   private _selectionChangeSubject = new Subject<number>();
 
@@ -31,15 +30,12 @@ export class PokedexSelectionService {
     private pokedexStorageService: PokedexStorageService,
     private pokedexOptionsService: PokedexOptionsService
   ) {
+    super();
     this.pokedexStorageService.getAllSelections().subscribe({
       next: ({ number, selection }) =>
         this._selectionMap.set(number, selection),
-      complete: () => this._readySubject.next(true),
+      complete: this.setAsReady,
     });
-  }
-
-  get readyObservable(): Observable<boolean> {
-    return this._readySubject.asObservable();
   }
 
   get selectionChangeObservable(): Observable<number> {

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
-import { takeUntil } from 'rxjs';
 import { FormComponent } from 'src/app/common/form.component';
 import {
   CountFormsPolicy,
@@ -55,6 +54,8 @@ const COUNT_GENDERS_POLICY = [
   },
 ];
 
+// TODO close expansion panel when sth is set
+
 @Component({
   selector: 'app-pokedex-options',
   templateUrl: './pokedex-options.component.html',
@@ -73,9 +74,7 @@ export class PokedexOptionsComponent extends FormComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.pokedexOptionsService.optionsObservable
-      .pipe(takeUntil(this.destroyed))
-      .subscribe((options) => this.setOptions(options));
+    this.setOptions(this.pokedexOptionsService.options);
     this.formChanges.subscribe(() => {
       this.pokedexOptionsService.setOptions(this.buildOptionsModel());
     });

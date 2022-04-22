@@ -1,6 +1,6 @@
 import { DataSource } from '@angular/cdk/collections';
 import { MatPaginator } from '@angular/material/paginator';
-import { Observable, BehaviorSubject, Subscription } from 'rxjs';
+import { Observable, BehaviorSubject, Subscription, skip } from 'rxjs';
 import { PokedexEntry } from 'src/app/models';
 import { PokedexOptionsService } from 'src/app/services';
 import { PokedexTableForm } from 'src/app/models/pokedex-table-form.model';
@@ -19,22 +19,28 @@ export class FormsTableDataSource extends DataSource<PokedexTableForm> {
 
   private _dataSubject = new BehaviorSubject<PokedexTableForm[]>([]);
   private _countSubject = new BehaviorSubject<number>(0);
+  private _entry: PokedexEntry | null = null;
 
-  constructor(
-    private pokedexOptionsService: PokedexOptionsService,
-    private entry?: PokedexEntry
-  ) {
+  constructor(private pokedexOptionsService: PokedexOptionsService) {
     super();
+  }
+
+  public set entry(entry: PokedexEntry) {
+    this._entry = entry;
   }
 
   connect(): Observable<PokedexTableForm[]> {
     this._subscriptions.add(
-      this.pokedexOptionsService.optionsObservable.subscribe(() => this.query())
+      this.pokedexOptionsService.getOptionsObservable().subscribe(() => {
+        this.query();
+      })
     );
 
     if (this.paginator) {
       this._subscriptions.add(
-        this.paginator.page.subscribe(() => this.query())
+        this.paginator.page.subscribe(() => {
+          this.query();
+        })
       );
     }
 
@@ -47,11 +53,12 @@ export class FormsTableDataSource extends DataSource<PokedexTableForm> {
 
   query(): void {
     const data: PokedexTableForm[] = [];
-    if (this.entry) {
+    if (this._entry) {
+      console.log('query', this._entry.name);
       const { countFormsPolicy, countRegionalFormsPolicy } =
         this.pokedexOptionsService.options;
 
-      const { forms, formDiffsOnlyVisual, regionalForms } = this.entry;
+      const { forms, formDiffsOnlyVisual, regionalForms } = this._entry;
 
       if (
         forms &&

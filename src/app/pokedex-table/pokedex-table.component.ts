@@ -10,7 +10,6 @@ import { MatTable } from '@angular/material/table';
 import { PokedexEntry } from '../models';
 import { PokedexTableDataSource } from './pokedex-table-datasource';
 import { POKEDEX_TABLE_ANIMATIONS } from './pokedex-table-animations';
-import { CountGendersPolicy } from '../enums';
 import {
   PokedexDataService,
   PokedexOptionsService,
@@ -38,7 +37,6 @@ export class PokedexTableComponent implements AfterViewInit {
   ) {
     this.dataSource = new PokedexTableDataSource(
       this.pokedexDataService,
-      this.pokedexOptionsService,
       this.pokedexSearchService
     );
     this.expanded = null;

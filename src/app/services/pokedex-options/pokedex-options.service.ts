@@ -43,28 +43,24 @@ export class PokedexOptionsService extends PokedexBaseService {
     return this._optionsSubject.value;
   }
 
-  public get showExpand(): boolean {
-    if (this.options) {
-      const { countFormsPolicy, countRegionalFormsPolicy } = this.options;
-      return (
-        countFormsPolicy !== CountFormsPolicy.NO_COUNT ||
-        countRegionalFormsPolicy !== CountRegionalFormsPolicy.NO_COUNT
-      );
-    }
-    return false;
-  }
+  public get tablesColumns(): string[] {
+    const { countGendersPolicy, countFormsPolicy, countRegionalFormsPolicy } =
+      this.options;
 
-  public get showSelectAll(): boolean {
-    if (this.options) {
-      const { countGendersPolicy, countFormsPolicy, countRegionalFormsPolicy } =
-        this.options;
-      return (
-        countGendersPolicy !== CountGendersPolicy.NO_COUNT ||
-        countFormsPolicy !== CountFormsPolicy.NO_COUNT ||
-        countRegionalFormsPolicy !== CountRegionalFormsPolicy.NO_COUNT
-      );
+    const showExpand =
+      countFormsPolicy !== CountFormsPolicy.NO_COUNT ||
+      countRegionalFormsPolicy !== CountRegionalFormsPolicy.NO_COUNT;
+
+    const colums =
+      countGendersPolicy !== CountGendersPolicy.NO_COUNT || showExpand
+        ? ['selectAll', 'select', 'number', 'name', 'types']
+        : ['select', 'number', 'name', 'types'];
+
+    if (showExpand) {
+      colums.push('expand');
     }
-    return false;
+
+    return colums;
   }
 
   public getOptionsObservable(

@@ -1,11 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
+import { getPagedData } from 'src/app/utils';
 import { PokedexEntry, PokedexSearch } from '../../models';
-import {
-  getPagedPokedexList,
-  getSearchData,
-  getSortedPokedexList,
-} from './pokedex-data-utils';
+import { getSearchData, getSortedPokedexList } from './pokedex-data-utils';
 import POKEDEX_LIST from './pokedex-data.json';
 
 export type GetPokedexListParamsType = {
@@ -36,7 +33,7 @@ export class PokedexDataService {
   }> {
     const sortedData = getSearchData(POKEDEX_LIST, search);
     return of({
-      data: getPagedPokedexList(
+      data: getPagedData(
         getSortedPokedexList(sortedData, sortBy, sortDirection),
         pageIndex,
         pageSize

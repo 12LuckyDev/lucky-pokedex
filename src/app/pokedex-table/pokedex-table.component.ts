@@ -26,7 +26,7 @@ export class PokedexTableComponent implements AfterViewInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
   @ViewChild(MatTable) table!: MatTable<PokedexEntry>;
-  dataSource: PokedexTableDataSource;
+  dataSource!: PokedexTableDataSource;
   expanded: PokedexEntry | null;
 
   constructor(
@@ -35,10 +35,6 @@ export class PokedexTableComponent implements AfterViewInit {
     private pokedexOptionsService: PokedexOptionsService,
     private pokedexSearchService: PokedexSearchService
   ) {
-    this.dataSource = new PokedexTableDataSource(
-      this.pokedexDataService,
-      this.pokedexSearchService
-    );
     this.expanded = null;
   }
 
@@ -47,20 +43,16 @@ export class PokedexTableComponent implements AfterViewInit {
   }
 
   public get displayedColumns(): string[] {
-    const colums = this.pokedexOptionsService.showSelectAll
-      ? ['selectAll', 'select', 'number', 'name', 'types']
-      : ['select', 'number', 'name', 'types'];
-
-    if (this.pokedexOptionsService.showExpand) {
-      colums.push('expand');
-    }
-
-    return colums;
+    return this.pokedexOptionsService.tablesColumns;
   }
 
   ngAfterViewInit(): void {
-    this.dataSource.sort = this.sort;
-    this.dataSource.paginator = this.paginator;
+    this.dataSource = new PokedexTableDataSource(
+      this.pokedexDataService,
+      this.pokedexSearchService,
+      this.paginator,
+      this.sort
+    );
     this.table.dataSource = this.dataSource;
     this.dataSource.query();
     this.cdref.detectChanges();

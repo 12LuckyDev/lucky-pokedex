@@ -12,14 +12,6 @@ export const getSearchData = (
       })
     : data;
 };
-export const getPagedPokedexList = (
-  data: PokedexEntry[],
-  pageIndex: number,
-  pageSize: number
-) => {
-  const start = pageIndex * pageSize;
-  return data.slice(start, start + pageSize);
-};
 
 export const getSortedPokedexList = (
   data: PokedexEntry[],

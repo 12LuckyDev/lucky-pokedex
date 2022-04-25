@@ -10,69 +10,50 @@ import {
 } from '../services';
 
 export class PokedexTableDataSource extends DataSource<PokedexEntry> {
-  data: PokedexEntry[] = [];
-  paginator: MatPaginator | undefined;
-  sort: MatSort | undefined;
+  private _subscriptions = new Subscription();
 
   private _dataSubject = new BehaviorSubject<PokedexEntry[]>([]);
   private _countSubject = new BehaviorSubject<number>(0);
-  private optionsSubscription!: Subscription;
-  private searchSubscription!: Subscription;
 
   constructor(
-    private pokedexDataService: PokedexDataService,
-    private pokedexSearchService: PokedexSearchService
+    private _pokedexDataService: PokedexDataService,
+    private _pokedexSearchService: PokedexSearchService,
+    private _paginator: MatPaginator,
+    private _sort: MatSort
   ) {
     super();
   }
 
-  /**
-   * Connect this data source to the table. The table will only update when
-   * the returned stream emits new items.
-   * @returns A stream of the items to be rendered.
-   */
   connect(): Observable<PokedexEntry[]> {
-    this.searchSubscription =
-      this.pokedexSearchService.searchObservable.subscribe(() => {
-        if (this.paginator?.pageIndex !== 0) {
-          this.paginator?.firstPage();
+    this._subscriptions.add(
+      this._pokedexSearchService.searchObservable.subscribe(() => {
+        if (this._paginator?.pageIndex !== 0) {
+          this._paginator.firstPage();
         }
         this.query();
-      });
+      })
+    );
 
-    if (this.paginator) {
-      this.paginator.page.subscribe(() => this.query());
-    }
-    if (this.sort) {
-      this.sort.sortChange.subscribe(() => this.query());
-    }
+    this._subscriptions.add(this._paginator.page.subscribe(this.query));
+    this._subscriptions.add(this._sort.sortChange.subscribe(this.query));
+
     return this._dataSubject.asObservable();
   }
 
-  /**
-   * Called when the table is being destroyed. Use this function, to clean up
-   * any open connections or free any held resources that were set up during connect.
-   */
   disconnect(): void {
+    this._subscriptions.unsubscribe();
     this._dataSubject.complete();
     this._countSubject.complete();
-    if (this.searchSubscription) {
-      this.searchSubscription.unsubscribe();
-    }
-    if (this.optionsSubscription) {
-      this.optionsSubscription.unsubscribe();
-    }
   }
 
-  query(): void {
-    this.pokedexDataService
+  query = (): void => {
+    this._pokedexDataService
       .getPokedexList(this.queryParam)
       .subscribe(({ data, count }) => {
         this._dataSubject.next(data);
-        // TODO change dynamically
         this._countSubject.next(count);
       });
-  }
+  };
 
   get count(): number {
     return this._countSubject.value;
@@ -80,16 +61,12 @@ export class PokedexTableDataSource extends DataSource<PokedexEntry> {
 
   private get queryParam() {
     const params: GetPokedexListParamsType = {
-      search: this.pokedexSearchService.search ?? null,
+      search: this._pokedexSearchService.search ?? null,
     };
-    if (this.paginator) {
-      params.pageIndex = this.paginator.pageIndex;
-      params.pageSize = this.paginator.pageSize;
-    }
-    if (this.sort) {
-      params.sortBy = this.sort.active;
-      params.sortDirection = this.sort.direction;
-    }
+    params.pageIndex = this._paginator.pageIndex;
+    params.pageSize = this._paginator.pageSize;
+    params.sortBy = this._sort.active;
+    params.sortDirection = this._sort.direction;
     return params;
   }
 }

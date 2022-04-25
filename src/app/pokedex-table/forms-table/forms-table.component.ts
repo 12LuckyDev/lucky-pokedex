@@ -30,17 +30,10 @@ export class FormsTableComponent
     private pokedexOptionsService: PokedexOptionsService
   ) {
     super();
-    this.dataSource = new FormsTableDataSource(this.pokedexOptionsService);
   }
 
   public get displayedColumns(): string[] {
-    const colums = ['selectAll', 'select', 'number', 'name', 'types'];
-
-    if (this.pokedexOptionsService.showExpand) {
-      colums.push('expand');
-    }
-
-    return colums;
+    return this.pokedexOptionsService.tablesColumns;
   }
 
   get forms() {
@@ -52,8 +45,11 @@ export class FormsTableComponent
   }
 
   ngAfterViewInit(): void {
-    this.dataSource.entry = this.entry;
-    this.dataSource.paginator = this.paginator;
+    this.dataSource = new FormsTableDataSource(
+      this.pokedexOptionsService,
+      this.paginator,
+      this.entry
+    );
     this.table.dataSource = this.dataSource;
     this.dataSource.query();
     this.cdref.detectChanges();

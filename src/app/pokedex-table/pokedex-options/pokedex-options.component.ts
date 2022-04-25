@@ -7,7 +7,10 @@ import {
   CountRegionalFormsPolicy,
 } from 'src/app/enums';
 import { PokedexOptions } from 'src/app/models';
-import { PokedexOptionsService } from 'src/app/services';
+import {
+  PokedexOptionsService,
+  PokedexUiServiceService,
+} from 'src/app/services';
 
 const COUNT_FORMS_POLICY_OPTIONS = [
   {
@@ -62,15 +65,19 @@ const COUNT_GENDERS_POLICY = [
   styleUrls: ['./pokedex-options.component.scss'],
 })
 export class PokedexOptionsComponent extends FormComponent implements OnInit {
+  private _expanded: boolean;
+
   constructor(
     override fb: FormBuilder,
-    private pokedexOptionsService: PokedexOptionsService
+    private pokedexOptionsService: PokedexOptionsService,
+    private pokedexUiServiceService: PokedexUiServiceService
   ) {
     super(fb, {
       countFormsPolicy: [],
       countRegionalFormsPolicy: [],
       countGendersPolicy: [],
     });
+    this._expanded = this.pokedexUiServiceService.settings.optionsAreOpen;
   }
 
   ngOnInit(): void {
@@ -78,6 +85,10 @@ export class PokedexOptionsComponent extends FormComponent implements OnInit {
     this.formChanges.subscribe(() => {
       this.pokedexOptionsService.setOptions(this.buildOptionsModel());
     });
+  }
+
+  get expanded() {
+    return this._expanded;
   }
 
   get countFormsPolicyOptions() {
@@ -90,6 +101,12 @@ export class PokedexOptionsComponent extends FormComponent implements OnInit {
 
   get countGendersPolicyOptions() {
     return COUNT_GENDERS_POLICY;
+  }
+
+  public onPanelClick(state: boolean) {
+    if (this._expanded !== state) {
+      this.pokedexUiServiceService.optionsAreOpen = state;
+    }
   }
 
   private setOptions(options: PokedexOptions | null): void {

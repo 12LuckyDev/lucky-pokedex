@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { filter } from 'rxjs';
-import { PokedexOptionsService, PokedexSelectionService } from './services';
+import {
+  PokedexOptionsService,
+  PokedexSelectionService,
+  PokedexUiServiceService,
+} from './services';
 
 @Component({
   selector: 'app-root',
@@ -12,11 +16,13 @@ export class AppComponent implements OnInit {
   private _ready = {
     options: false,
     selection: false,
+    uiSettings: false,
   };
 
   constructor(
     private pokedexOptionsService: PokedexOptionsService,
-    private pokedexSelectionService: PokedexSelectionService
+    private pokedexSelectionService: PokedexSelectionService,
+    private pokedexUiServiceService: PokedexUiServiceService
   ) {}
 
   ngOnInit(): void {
@@ -27,9 +33,14 @@ export class AppComponent implements OnInit {
     this.pokedexSelectionService.readyObservable
       .pipe(filter((ready) => ready))
       .subscribe((ready) => (this._ready.selection = ready));
+
+    this.pokedexUiServiceService.readyObservable
+      .pipe(filter((ready) => ready))
+      .subscribe((ready) => (this._ready.uiSettings = ready));
   }
 
   get ready(): boolean {
-    return this._ready.options && this._ready.selection;
+    const { options, selection, uiSettings } = this._ready;
+    return options && selection && uiSettings;
   }
 }

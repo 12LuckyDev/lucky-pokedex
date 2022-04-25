@@ -1,4 +1,9 @@
-<mat-expansion-panel expanded hideToggle>
+<mat-expansion-panel
+  [expanded]="expanded"
+  hideToggle
+  (opened)="onPanelClick(true)"
+  (closed)="onPanelClick(false)"
+>
   <mat-expansion-panel-header>
     <mat-panel-title> Pokedex settings </mat-panel-title>
     <mat-icon>settings</mat-icon>

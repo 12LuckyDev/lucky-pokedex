@@ -1,7 +1,11 @@
 import { Injectable } from '@angular/core';
 import localforage from 'localforage';
 import { from, Observable } from 'rxjs';
-import { PokedexOptions, PokedexSelection } from 'src/app/models';
+import {
+  PokedexOptions,
+  PokedexSelection,
+  PokedexUiSettings,
+} from 'src/app/models';
 
 @Injectable({
   providedIn: 'root',
@@ -38,6 +42,19 @@ export class PokedexStorageService {
 
   public getOptions(): Observable<PokedexOptions | null> {
     return this.getItem<PokedexOptions>(this.generalStorage, 'OPTIONS_DATA');
+  }
+
+  public setUiSettings(
+    options: PokedexUiSettings
+  ): Observable<PokedexUiSettings> {
+    return this.setItem(this.generalStorage, 'UI_SETTINGS_DATA', options);
+  }
+
+  public getUiSettings(): Observable<PokedexUiSettings | null> {
+    return this.getItem<PokedexUiSettings>(
+      this.generalStorage,
+      'UI_SETTINGS_DATA'
+    );
   }
 
   public setSelection(

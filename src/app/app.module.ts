@@ -24,6 +24,8 @@ import { PokedexBaseComponent } from './pokedex-table/pokedex-base-component/pok
 import { PokeSelectionCheckComponent } from './pokedex-table/poke-selection-check/poke-selection-check.component';
 import { PokedexSearchComponent } from './pokedex-table/pokedex-search/pokedex-search.component';
 import { PokeSelectionAllComponent } from './pokedex-table/poke-selection-all/poke-selection-all.component';
+import { PokedexTypesComponent } from './pokedex-table/pokedex-types/pokedex-types.component';
+import { PokedexTypeComponent } from './pokedex-table/pokedex-types/pokedex-type/pokedex-type.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +37,8 @@ import { PokeSelectionAllComponent } from './pokedex-table/poke-selection-all/po
     PokeSelectionCheckComponent,
     PokedexSearchComponent,
     PokeSelectionAllComponent,
+    PokedexTypesComponent,
+    PokedexTypeComponent,
   ],
   imports: [
     BrowserModule,

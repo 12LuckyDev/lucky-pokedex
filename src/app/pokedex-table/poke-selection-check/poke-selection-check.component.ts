@@ -5,11 +5,8 @@ import {
   PokedexOptionsService,
   PokedexSelectionService,
 } from 'src/app/services';
+import { formatGender } from 'src/app/utils';
 import { PokedexBaseComponent } from '../pokedex-base-component/pokedex-base.component';
-
-const getGenderName = (gender: PokeGender) => {
-  return PokeGender[gender];
-};
 
 @Component({
   selector: 'app-poke-selection-check',
@@ -61,7 +58,7 @@ export class PokeSelectionCheckComponent extends PokedexBaseComponent {
   }
 
   public getGenderName(gender: PokeGender): string {
-    return gender !== null || gender !== undefined ? getGenderName(gender) : '';
+    return gender !== null || gender !== undefined ? formatGender(gender) : '';
   }
 
   public showIcon(gender: PokeGender) {

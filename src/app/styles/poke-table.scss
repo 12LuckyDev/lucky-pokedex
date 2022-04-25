@@ -6,6 +6,7 @@
   .mat-header-cell,
   .mat-cell {
     padding-left: 1rem;
+    border-right: 1px solid gray;
     &.details-cells {
       padding-left: 0;
       padding-right: 0;
@@ -14,18 +15,28 @@
 
   .mat-column-selectAll {
     width: 2rem;
-    border-right: 1px solid gray;
   }
 
   .mat-column-select {
     overflow: initial;
     width: 128px;
-    border-right: 1px solid gray;
     padding: 0 0.5rem;
 
     &.select-gender {
       width: 262px;
     }
+  }
+
+  .mat-column-number {
+    width: 4rem;
+  }
+
+  .mat-column-name {
+    width: 7rem;
+  }
+
+  .mat-column-expand {
+    width: 2rem;
   }
 }
 

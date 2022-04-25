@@ -24,7 +24,6 @@ export class FormsTableComponent
   @ViewChild(MatTable) table!: MatTable<PokedexTableForm>;
 
   dataSource!: FormsTableDataSource;
-  displayedColumns = ['selectAll', 'select', 'formName'];
 
   constructor(
     private cdref: ChangeDetectorRef,
@@ -32,6 +31,16 @@ export class FormsTableComponent
   ) {
     super();
     this.dataSource = new FormsTableDataSource(this.pokedexOptionsService);
+  }
+
+  public get displayedColumns(): string[] {
+    const colums = ['selectAll', 'select', 'number', 'name', 'types'];
+
+    if (this.pokedexOptionsService.showExpand) {
+      colums.push('expand');
+    }
+
+    return colums;
   }
 
   get forms() {

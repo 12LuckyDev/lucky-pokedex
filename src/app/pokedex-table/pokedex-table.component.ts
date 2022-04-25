@@ -47,9 +47,15 @@ export class PokedexTableComponent implements AfterViewInit {
   }
 
   public get displayedColumns(): string[] {
-    return this.pokedexOptionsService.showSelectAll
-      ? ['selectAll', 'select', 'number', 'name']
-      : ['select', 'number', 'name'];
+    const colums = this.pokedexOptionsService.showSelectAll
+      ? ['selectAll', 'select', 'number', 'name', 'types']
+      : ['select', 'number', 'name', 'types'];
+
+    if (this.pokedexOptionsService.showExpand) {
+      colums.push('expand');
+    }
+
+    return colums;
   }
 
   ngAfterViewInit(): void {

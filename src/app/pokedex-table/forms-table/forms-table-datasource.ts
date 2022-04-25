@@ -9,6 +9,7 @@ import {
   CountRegionalFormsPolicy,
   PokeFormType,
   PokeRegion,
+  PokeRegionalForm,
 } from 'src/app/enums';
 
 export class FormsTableDataSource extends DataSource<PokedexTableForm> {
@@ -58,7 +59,7 @@ export class FormsTableDataSource extends DataSource<PokedexTableForm> {
       const { countFormsPolicy, countRegionalFormsPolicy } =
         this.pokedexOptionsService.options;
 
-      const { forms, formDiffsOnlyVisual, regionalForms } = this._entry;
+      const { forms, formDiffsOnlyVisual, regionalForms, name } = this._entry;
 
       if (
         forms &&
@@ -83,7 +84,7 @@ export class FormsTableDataSource extends DataSource<PokedexTableForm> {
             types,
             imgPath,
             formType: PokeFormType.regional_form,
-            formName: PokeRegion[region], //TODO change this
+            formName: `${PokeRegionalForm[region]} ${name}`,
           })
         );
       }

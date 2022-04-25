@@ -1,6 +1,7 @@
 import { isArray, toggle } from '@12luckydev/utils';
 import { Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
+import { PokedexBaseService } from 'src/app/base';
 import { PokeFormType, PokeGender, PokeRegion } from 'src/app/enums';
 import {
   PokedexEntry,
@@ -8,7 +9,6 @@ import {
   PokedexSelectionModel,
   PokedexTableForm,
 } from 'src/app/models';
-import { PokedexBaseService } from '../pokedex-base-service';
 import { PokedexOptionsService } from '../pokedex-options/pokedex-options.service';
 import { PokedexStorageService } from '../pokedex-storage/pokedex-storage.service';
 import {

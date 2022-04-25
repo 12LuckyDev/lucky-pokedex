@@ -1,4 +1,3 @@
-import { DataSource } from '@angular/cdk/collections';
 import { MatPaginator } from '@angular/material/paginator';
 import { Observable, BehaviorSubject, Subscription } from 'rxjs';
 import { PokedexEntry } from 'src/app/models';
@@ -11,13 +10,9 @@ import {
   PokeRegionalForm,
 } from 'src/app/enums';
 import { getPagedData } from 'src/app/utils';
+import { PokedexBaseDatasource } from 'src/app/base';
 
-export class FormsTableDataSource extends DataSource<PokedexTableForm> {
-  private _subscriptions = new Subscription();
-
-  private _dataSubject = new BehaviorSubject<PokedexTableForm[]>([]);
-  private _countSubject = new BehaviorSubject<number>(0);
-
+export class FormsTableDataSource extends PokedexBaseDatasource<PokedexTableForm> {
   constructor(
     private _pokedexOptionsService: PokedexOptionsService,
     private _paginator: MatPaginator,
@@ -34,12 +29,6 @@ export class FormsTableDataSource extends DataSource<PokedexTableForm> {
     this._subscriptions.add(this._paginator.page.subscribe(this.query));
 
     return this._dataSubject.asObservable();
-  }
-
-  disconnect(): void {
-    this._subscriptions.unsubscribe();
-    this._dataSubject.complete();
-    this._countSubject.complete();
   }
 
   query = (): void => {
@@ -82,8 +71,4 @@ export class FormsTableDataSource extends DataSource<PokedexTableForm> {
     );
     this._countSubject.next(data.length);
   };
-
-  get count(): number {
-    return this._countSubject.value;
-  }
 }

@@ -1,6 +1,7 @@
 import { isArray } from '@12luckydev/utils';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, skip } from 'rxjs';
+import { PokedexBaseService } from 'src/app/base';
 import {
   CountFormsPolicy,
   CountGendersPolicy,
@@ -8,7 +9,6 @@ import {
   PokeFormType,
 } from 'src/app/enums';
 import { PokedexEntry, PokedexOptions } from 'src/app/models';
-import { PokedexBaseService } from '../pokedex-base-service';
 import { PokedexStorageService } from '../pokedex-storage/pokedex-storage.service';
 
 const DEFAULT_OPTIONS: PokedexOptions = {

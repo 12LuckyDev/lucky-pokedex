@@ -55,11 +55,12 @@ export class FormsTableDataSource extends PokedexBaseDatasource<PokedexTableForm
       regionalForms.length > 0 &&
       countRegionalFormsPolicy !== CountRegionalFormsPolicy.NO_COUNT
     ) {
-      regionalForms.forEach(({ region, types, imgPath }) =>
+      regionalForms.forEach(({ region, types, imgPath, genderDiffs }) =>
         data.push({
           id: region,
           types,
           imgPath,
+          genderDiffs,
           formType: PokeFormType.regional_form,
           formName: `${PokeRegionalForm[region]} ${name}`,
         })

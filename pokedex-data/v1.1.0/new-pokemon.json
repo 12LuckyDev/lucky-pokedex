@@ -1,0 +1,78 @@
+[
+  {
+    "number": 899,
+    "name": "Wyrdeer",
+    "types": ["normal", "psychic"],
+    "origin": 9,
+    "genders": [0, 1],
+    "rarity": 0
+  },
+  {
+    "number": 900,
+    "name": "Kleavor",
+    "types": ["bug", "rock"],
+    "origin": 9,
+    "genders": [0, 1],
+    "rarity": 0
+  },
+  {
+    "number": 901,
+    "name": "Ursaluna",
+    "types": ["ground", "normal"],
+    "origin": 9,
+    "genders": [0, 1],
+    "rarity": 0
+  },
+  {
+    "number": 902,
+    "name": "Basculegion",
+    "types": ["water", "ghost"],
+    "origin": 9,
+    "genders": [0, 1],
+    "genderDiffs": {
+      "desc": "Males have red accents, while females has pale blue accents. Male Basculegion have higher Attack, while female Basculegion have higher Special Attack.",
+      "onlyVisual": false,
+      "femaleImgPath": "female/902"
+    },
+    "rarity": 0
+  },
+  {
+    "number": 903,
+    "name": "Sneasler",
+    "types": ["fighting", "poison"],
+    "origin": 9,
+    "genders": [0, 1],
+    "rarity": 0
+  },
+  {
+    "number": 904,
+    "name": "Overqwil",
+    "types": ["dark", "poison"],
+    "origin": 9,
+    "genders": [0, 1],
+    "rarity": 0
+  },
+  {
+    "number": 905,
+    "name": "Enamorus",
+    "types": ["fairy", "flying"],
+    "origin": 9,
+    "genders": [1],
+    "formDiffsOnlyVisual": false,
+    "forms": [
+      {
+        "formName": "Incarnate Forme",
+        "types": ["fairy", "flying"],
+        "imgPath": "642",
+        "id": 1
+      },
+      {
+        "formName": "Therian Forme",
+        "types": ["fairy", "flying"],
+        "imgPath": "10020",
+        "id": 2
+      }
+    ],
+    "rarity": 1
+  }
+]

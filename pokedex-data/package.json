@@ -1,0 +1,12 @@
+{
+  "name": "pokedex-data",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --experimental-json-modules v1.1.0/update.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

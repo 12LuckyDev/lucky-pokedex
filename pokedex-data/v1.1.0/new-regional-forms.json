@@ -1,0 +1,107 @@
+[
+  {
+    "number": 58,
+    "regionalForms": [
+      { "types": ["fire", "rock"], "region": 9, "imgPath": "58" }
+    ]
+  },
+  {
+    "number": 59,
+    "regionalForms": [
+      { "types": ["fire", "rock"], "region": 9, "imgPath": "59" }
+    ]
+  },
+  {
+    "number": 100,
+    "regionalForms": [
+      { "types": ["electric", "grass"], "region": 9, "imgPath": "100" }
+    ]
+  },
+  {
+    "number": 101,
+    "regionalForms": [
+      { "types": ["electric", "grass"], "region": 9, "imgPath": "101" }
+    ]
+  },
+  {
+    "number": 157,
+    "regionalForms": [
+      { "types": ["fire", "ghost"], "region": 9, "imgPath": "157" }
+    ]
+  },
+  {
+    "number": 211,
+    "regionalForms": [
+      { "types": ["fighting", "poison"], "region": 9, "imgPath": "211" }
+    ]
+  },
+  {
+    "number": 215,
+    "regionalForms": [
+      {
+        "types": ["fighting", "poison"],
+        "region": 9,
+        "imgPath": "215",
+        "genderDiffs": {
+          "desc": "Female Sneasel have smaller head feathers",
+          "onlyVisual": true,
+          "femaleImgPath": "female/215"
+        }
+      }
+    ]
+  },
+  {
+    "number": 503,
+    "regionalForms": [
+      { "types": ["water", "dark"], "region": 9, "imgPath": "503" }
+    ]
+  },
+  {
+    "number": 549,
+    "regionalForms": [
+      { "types": ["grass", "fighting"], "region": 9, "imgPath": "549" }
+    ]
+  },
+  {
+    "number": 570,
+    "regionalForms": [
+      { "types": ["normal", "ghost"], "region": 9, "imgPath": "570" }
+    ]
+  },
+  {
+    "number": 571,
+    "regionalForms": [
+      { "types": ["normal", "ghost"], "region": 9, "imgPath": "571" }
+    ]
+  },
+  {
+    "number": 628,
+    "regionalForms": [
+      { "types": ["psychic", "flying"], "region": 9, "imgPath": "571" }
+    ]
+  },
+  {
+    "number": 705,
+    "regionalForms": [
+      { "types": ["steel", "dragon"], "region": 9, "imgPath": "705" }
+    ]
+  },
+  {
+    "number": 706,
+    "regionalForms": [
+      { "types": ["steel", "dragon"], "region": 9, "imgPath": "706" }
+    ]
+  },
+  {
+    "number": 713,
+    "regionalForms": [
+      { "types": ["ice", "rock"], "region": 9, "imgPath": "713" }
+    ]
+  },
+  {
+    "number": 724,
+    "regionalForms": [
+      { "types": ["grass", "fighting"], "region": 9, "imgPath": "724" }
+    ]
+  }
+]

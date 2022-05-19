@@ -8,7 +8,7 @@ import {
   CountRegionalFormsPolicy,
   PokeFormType,
 } from 'src/app/enums';
-import { PokedexEntry, PokedexOptions } from 'src/app/models';
+import { PokedexEntry, PokedexOptions, PokedexTableForm } from 'src/app/models';
 import { PokedexStorageService } from '../pokedex-storage/pokedex-storage.service';
 
 const DEFAULT_OPTIONS: PokedexOptions = {
@@ -86,16 +86,21 @@ export class PokedexOptionsService extends PokedexBaseService {
 
   public getShowGender(
     entry?: PokedexEntry,
-    selectMode: PokeFormType | null = null
+    selectMode: PokeFormType | null = null,
+    form?: PokedexTableForm
   ): boolean {
     if (entry) {
       switch (this.options.countGendersPolicy) {
         case CountGendersPolicy.COUNT_ALL:
           return true;
         case CountGendersPolicy.COUNT_ALL_WITH_DIFFS:
-          return !!entry.genderDiffs && selectMode === null;
+          return selectMode === null
+            ? !!entry.genderDiffs
+            : !!form?.genderDiffs;
         case CountGendersPolicy.NO_COUNT_VISUAL_ONLY:
-          return !!entry.genderDiffs && !entry.genderDiffs.onlyVisual;
+          return selectMode === null
+            ? !!entry.genderDiffs && !entry.genderDiffs.onlyVisual
+            : !!form?.genderDiffs && !entry?.genderDiffs?.onlyVisual;
         case CountGendersPolicy.NO_COUNT:
           return false;
       }

@@ -26,7 +26,8 @@ export class PokeSelectionCheckComponent extends PokedexBaseComponent {
   public get showGender(): boolean {
     return this.pokedexOptionsService.getShowGender(
       this.entry,
-      this.selectionType
+      this.selectionType,
+      this.form
     );
   }
 
@@ -39,12 +40,17 @@ export class PokeSelectionCheckComponent extends PokedexBaseComponent {
   }
 
   public getImgPath(gender?: PokeGender): string | number {
+    const genderDiffs = this.form
+      ? this.form?.genderDiffs
+      : this.entry?.genderDiffs;
+
     switch (this.selectionType) {
       case PokeFormType.form:
       case PokeFormType.regional_form:
-        return this.form?.imgPath ?? '';
+        return gender === PokeGender.female && genderDiffs
+          ? genderDiffs.femaleImgPath
+          : this.form?.imgPath ?? '';
       default:
-        const genderDiffs = this.entry?.genderDiffs;
         return gender === PokeGender.female && genderDiffs
           ? genderDiffs.femaleImgPath
           : this.number ?? '';

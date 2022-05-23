@@ -199,7 +199,8 @@ export class PokedexSelectionService extends PokedexBaseService {
 
   public isAllSelected(entry?: PokedexEntry): boolean {
     if (entry) {
-      const { number, genders, forms, regionalForms } = entry;
+      const { number, genders, formsData, regionalForms } = entry;
+      const forms = formsData?.forms ?? [];
 
       const selection = this.getSelection(number);
       const {
@@ -308,7 +309,9 @@ export class PokedexSelectionService extends PokedexBaseService {
   public selectAll(entry?: PokedexEntry): void {
     if (entry) {
       const selection: PokedexSelection = this.getSelection(entry.number);
-      const { genders, forms, regionalForms } = entry;
+      const { genders, formsData, regionalForms } = entry;
+      const forms = formsData?.forms ?? [];
+
       const showTypes = this.pokedexOptionsService.getShowTypes(entry);
       const { showGenders, showForms, showRegionalForms } = showTypes;
 

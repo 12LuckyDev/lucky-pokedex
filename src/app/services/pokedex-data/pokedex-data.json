@@ -1807,43 +1807,46 @@
     "types": [13],
     "origin": 1,
     "genders": [2],
-    "formDiffsOnlyVisual": true,
-    "forms": [
-      { "formName": "A", "types": [13], "imgPath": "201", "id": 1 },
-      { "formName": "B", "types": [13], "imgPath": "201-b", "id": 2 },
-      { "formName": "C", "types": [13], "imgPath": "201-c", "id": 3 },
-      { "formName": "D", "types": [13], "imgPath": "201-d", "id": 4 },
-      { "formName": "E", "types": [13], "imgPath": "201-e", "id": 5 },
-      { "formName": "F", "types": [13], "imgPath": "201-f", "id": 6 },
-      { "formName": "G", "types": [13], "imgPath": "201-g", "id": 7 },
-      { "formName": "H", "types": [13], "imgPath": "201-h", "id": 8 },
-      { "formName": "I", "types": [13], "imgPath": "201-i", "id": 9 },
-      { "formName": "J", "types": [13], "imgPath": "201-j", "id": 10 },
-      { "formName": "K", "types": [13], "imgPath": "201-k", "id": 11 },
-      { "formName": "L", "types": [13], "imgPath": "201-l", "id": 12 },
-      { "formName": "M", "types": [13], "imgPath": "201-m", "id": 13 },
-      { "formName": "N", "types": [13], "imgPath": "201-n", "id": 14 },
-      { "formName": "O", "types": [13], "imgPath": "201-o", "id": 15 },
-      { "formName": "P", "types": [13], "imgPath": "201-p", "id": 16 },
-      { "formName": "Q", "types": [13], "imgPath": "201-q", "id": 17 },
-      { "formName": "R", "types": [13], "imgPath": "201-r", "id": 18 },
-      { "formName": "S", "types": [13], "imgPath": "201-s", "id": 19 },
-      { "formName": "T", "types": [13], "imgPath": "201-t", "id": 20 },
-      { "formName": "U", "types": [13], "imgPath": "201-u", "id": 21 },
-      { "formName": "V", "types": [13], "imgPath": "201-v", "id": 22 },
-      { "formName": "W", "types": [13], "imgPath": "201-w", "id": 23 },
-      { "formName": "X", "types": [13], "imgPath": "201-x", "id": 24 },
-      { "formName": "Y", "types": [13], "imgPath": "201-y", "id": 25 },
-      { "formName": "Z", "types": [13], "imgPath": "201-z", "id": 26 },
-      {
-        "formName": "!",
-        "types": [13],
-        "imgPath": "201-exclamation",
-        "id": 27
-      },
-      { "formName": "?", "types": [13], "imgPath": "201-question", "id": 28 }
-    ],
-    "rarity": 0
+    "rarity": 0,
+    "formsData": {
+      "forms": [
+        { "formName": "A", "types": [13], "imgPath": "201", "id": 1 },
+        { "formName": "B", "types": [13], "imgPath": "201-b", "id": 2 },
+        { "formName": "C", "types": [13], "imgPath": "201-c", "id": 3 },
+        { "formName": "D", "types": [13], "imgPath": "201-d", "id": 4 },
+        { "formName": "E", "types": [13], "imgPath": "201-e", "id": 5 },
+        { "formName": "F", "types": [13], "imgPath": "201-f", "id": 6 },
+        { "formName": "G", "types": [13], "imgPath": "201-g", "id": 7 },
+        { "formName": "H", "types": [13], "imgPath": "201-h", "id": 8 },
+        { "formName": "I", "types": [13], "imgPath": "201-i", "id": 9 },
+        { "formName": "J", "types": [13], "imgPath": "201-j", "id": 10 },
+        { "formName": "K", "types": [13], "imgPath": "201-k", "id": 11 },
+        { "formName": "L", "types": [13], "imgPath": "201-l", "id": 12 },
+        { "formName": "M", "types": [13], "imgPath": "201-m", "id": 13 },
+        { "formName": "N", "types": [13], "imgPath": "201-n", "id": 14 },
+        { "formName": "O", "types": [13], "imgPath": "201-o", "id": 15 },
+        { "formName": "P", "types": [13], "imgPath": "201-p", "id": 16 },
+        { "formName": "Q", "types": [13], "imgPath": "201-q", "id": 17 },
+        { "formName": "R", "types": [13], "imgPath": "201-r", "id": 18 },
+        { "formName": "S", "types": [13], "imgPath": "201-s", "id": 19 },
+        { "formName": "T", "types": [13], "imgPath": "201-t", "id": 20 },
+        { "formName": "U", "types": [13], "imgPath": "201-u", "id": 21 },
+        { "formName": "V", "types": [13], "imgPath": "201-v", "id": 22 },
+        { "formName": "W", "types": [13], "imgPath": "201-w", "id": 23 },
+        { "formName": "X", "types": [13], "imgPath": "201-x", "id": 24 },
+        { "formName": "Y", "types": [13], "imgPath": "201-y", "id": 25 },
+        { "formName": "Z", "types": [13], "imgPath": "201-z", "id": 26 },
+        {
+          "formName": "!",
+          "types": [13],
+          "imgPath": "201-exclamation",
+          "id": 27
+        },
+        { "formName": "?", "types": [13], "imgPath": "201-question", "id": 28 }
+      ],
+      "onlyVisual": true,
+      "interchandable": false
+    }
   },
   {
     "number": 202,
@@ -3489,24 +3492,38 @@
     "types": [13],
     "origin": 2,
     "genders": [2],
-    "formDiffsOnlyVisual": false,
-    "forms": [
-      { "formName": "Normal Forme", "types": [13], "imgPath": "386", "id": 1 },
-      {
-        "formName": "Attack Forme",
-        "types": [13],
-        "imgPath": "10001",
-        "id": 2
-      },
-      {
-        "formName": "Defense Forme",
-        "types": [13],
-        "imgPath": "10002",
-        "id": 3
-      },
-      { "formName": "Speed Forme", "types": [13], "imgPath": "10003", "id": 4 }
-    ],
-    "rarity": 2
+    "rarity": 2,
+    "formsData": {
+      "forms": [
+        {
+          "formName": "Normal Forme",
+          "types": [13],
+          "imgPath": "386",
+          "id": 1
+        },
+        {
+          "formName": "Attack Forme",
+          "types": [13],
+          "imgPath": "10001",
+          "id": 2
+        },
+        {
+          "formName": "Defense Forme",
+          "types": [13],
+          "imgPath": "10002",
+          "id": 3
+        },
+        {
+          "formName": "Speed Forme",
+          "types": [13],
+          "imgPath": "10003",
+          "id": 4
+        }
+      ],
+      "onlyVisual": false,
+      "interchandable": true,
+      "baseFormId": 1
+    }
   },
   {
     "number": 387,
@@ -3769,23 +3786,26 @@
     "types": [6],
     "origin": 3,
     "genders": [0, 1],
-    "formDiffsOnlyVisual": true,
-    "forms": [
-      { "formName": "Plant Cloak", "types": [6], "imgPath": "412", "id": 1 },
-      {
-        "formName": "Sandy Cloak",
-        "types": [6],
-        "imgPath": "412-sandy",
-        "id": 2
-      },
-      {
-        "formName": "Trash Cloak",
-        "types": [6],
-        "imgPath": "412-trash",
-        "id": 3
-      }
-    ],
-    "rarity": 0
+    "rarity": 0,
+    "formsData": {
+      "forms": [
+        { "formName": "Plant Cloak", "types": [6], "imgPath": "412", "id": 1 },
+        {
+          "formName": "Sandy Cloak",
+          "types": [6],
+          "imgPath": "412-sandy",
+          "id": 2
+        },
+        {
+          "formName": "Trash Cloak",
+          "types": [6],
+          "imgPath": "412-trash",
+          "id": 3
+        }
+      ],
+      "onlyVisual": true,
+      "interchandable": true
+    }
   },
   {
     "number": 413,
@@ -3793,28 +3813,31 @@
     "types": [6, 11],
     "origin": 3,
     "genders": [1],
-    "formDiffsOnlyVisual": false,
-    "forms": [
-      {
-        "formName": "Plant Cloak",
-        "types": [6, 11],
-        "imgPath": "412",
-        "id": 1
-      },
-      {
-        "formName": "Sandy Cloak",
-        "types": [6, 4],
-        "imgPath": "10004",
-        "id": 2
-      },
-      {
-        "formName": "Trash Cloak",
-        "types": [6, 8],
-        "imgPath": "10005",
-        "id": 3
-      }
-    ],
-    "rarity": 0
+    "rarity": 0,
+    "formsData": {
+      "forms": [
+        {
+          "formName": "Plant Cloak",
+          "types": [6, 11],
+          "imgPath": "412",
+          "id": 1
+        },
+        {
+          "formName": "Sandy Cloak",
+          "types": [6, 4],
+          "imgPath": "10004",
+          "id": 2
+        },
+        {
+          "formName": "Trash Cloak",
+          "types": [6, 8],
+          "imgPath": "10005",
+          "id": 3
+        }
+      ],
+      "onlyVisual": false,
+      "interchandable": false
+    }
   },
   {
     "number": 414,
@@ -3906,12 +3929,20 @@
     "types": [10],
     "origin": 3,
     "genders": [0, 1],
-    "formDiffsOnlyVisual": true,
-    "forms": [
-      { "formName": "West Sea", "types": [10], "imgPath": "422", "id": 1 },
-      { "formName": "East Sea", "types": [10], "imgPath": "422-east", "id": 2 }
-    ],
-    "rarity": 0
+    "rarity": 0,
+    "formsData": {
+      "forms": [
+        { "formName": "West Sea", "types": [10], "imgPath": "422", "id": 1 },
+        {
+          "formName": "East Sea",
+          "types": [10],
+          "imgPath": "422-east",
+          "id": 2
+        }
+      ],
+      "onlyVisual": true,
+      "interchandable": false
+    }
   },
   {
     "number": 423,
@@ -3919,17 +3950,20 @@
     "types": [10, 4],
     "origin": 3,
     "genders": [0, 1],
-    "formDiffsOnlyVisual": true,
-    "forms": [
-      { "formName": "West Sea", "types": [10, 4], "imgPath": "423", "id": 1 },
-      {
-        "formName": "East Sea",
-        "types": [10, 4],
-        "imgPath": "423-east",
-        "id": 2
-      }
-    ],
-    "rarity": 0
+    "rarity": 0,
+    "formsData": {
+      "forms": [
+        { "formName": "West Sea", "types": [10, 4], "imgPath": "423", "id": 1 },
+        {
+          "formName": "East Sea",
+          "types": [10, 4],
+          "imgPath": "423-east",
+          "id": 2
+        }
+      ],
+      "onlyVisual": true,
+      "interchandable": false
+    }
   },
   {
     "number": 424,
@@ -4457,41 +4491,45 @@
     "types": [12, 7],
     "origin": 3,
     "genders": [2],
-    "formDiffsOnlyVisual": false,
-    "forms": [
-      { "formName": "Rotom", "types": [12, 7], "imgPath": "479", "id": 1 },
-      {
-        "formName": "Heat Rotom",
-        "types": [12, 9],
-        "imgPath": "10008",
-        "id": 2
-      },
-      {
-        "formName": "Wash Rotom",
-        "types": [12, 10],
-        "imgPath": "10009",
-        "id": 3
-      },
-      {
-        "formName": "Frost Rotom",
-        "types": [12, 14],
-        "imgPath": "10010",
-        "id": 4
-      },
-      {
-        "formName": "Fan Rotom",
-        "types": [12, 2],
-        "imgPath": "10011",
-        "id": 5
-      },
-      {
-        "formName": "Mow Rotom",
-        "types": [12, 11],
-        "imgPath": "10012",
-        "id": 6
-      }
-    ],
-    "rarity": 0
+    "rarity": 0,
+    "formsData": {
+      "forms": [
+        { "formName": "Rotom", "types": [12, 7], "imgPath": "479", "id": 1 },
+        {
+          "formName": "Heat Rotom",
+          "types": [12, 9],
+          "imgPath": "10008",
+          "id": 2
+        },
+        {
+          "formName": "Wash Rotom",
+          "types": [12, 10],
+          "imgPath": "10009",
+          "id": 3
+        },
+        {
+          "formName": "Frost Rotom",
+          "types": [12, 14],
+          "imgPath": "10010",
+          "id": 4
+        },
+        {
+          "formName": "Fan Rotom",
+          "types": [12, 2],
+          "imgPath": "10011",
+          "id": 5
+        },
+        {
+          "formName": "Mow Rotom",
+          "types": [12, 11],
+          "imgPath": "10012",
+          "id": 6
+        }
+      ],
+      "onlyVisual": false,
+      "interchandable": true,
+      "baseFormId": 1
+    }
   },
   {
     "number": 480,
@@ -5066,28 +5104,31 @@
     "types": [10],
     "origin": 4,
     "genders": [0, 1],
-    "formDiffsOnlyVisual": false,
-    "forms": [
-      {
-        "formName": "Red-Striped Form",
-        "types": [10],
-        "imgPath": "550",
-        "id": 1
-      },
-      {
-        "formName": "Blue-Striped Form",
-        "types": [10],
-        "imgPath": "10016",
-        "id": 2
-      },
-      {
-        "formName": "White-Striped Form",
-        "imgPath": "550",
-        "id": 1,
-        "types": [10]
-      }
-    ],
-    "rarity": 0
+    "rarity": 0,
+    "formsData": {
+      "forms": [
+        {
+          "formName": "Red-Striped Form",
+          "types": [10],
+          "imgPath": "550",
+          "id": 1
+        },
+        {
+          "formName": "Blue-Striped Form",
+          "types": [10],
+          "imgPath": "10016",
+          "id": 2
+        },
+        {
+          "formName": "White-Striped Form",
+          "imgPath": "550",
+          "id": 1,
+          "types": [10]
+        }
+      ],
+      "onlyVisual": false,
+      "interchandable": false
+    }
   },
   {
     "number": 551,
@@ -5372,34 +5413,37 @@
     "types": [0, 11],
     "origin": 4,
     "genders": [0, 1],
-    "formDiffsOnlyVisual": true,
-    "forms": [
-      {
-        "formName": "Spring Form",
-        "types": [0, 11],
-        "imgPath": "585",
-        "id": 1
-      },
-      {
-        "formName": "Summer Form",
-        "types": [0, 11],
-        "imgPath": "585-summer",
-        "id": 2
-      },
-      {
-        "formName": "Autumn Form",
-        "types": [0, 11],
-        "imgPath": "585-autumn",
-        "id": 3
-      },
-      {
-        "formName": "Winter Form",
-        "types": [0, 11],
-        "imgPath": "585-winter",
-        "id": 4
-      }
-    ],
-    "rarity": 0
+    "rarity": 0,
+    "formsData": {
+      "forms": [
+        {
+          "formName": "Spring Form",
+          "types": [0, 11],
+          "imgPath": "585",
+          "id": 1
+        },
+        {
+          "formName": "Summer Form",
+          "types": [0, 11],
+          "imgPath": "585-summer",
+          "id": 2
+        },
+        {
+          "formName": "Autumn Form",
+          "types": [0, 11],
+          "imgPath": "585-autumn",
+          "id": 3
+        },
+        {
+          "formName": "Winter Form",
+          "types": [0, 11],
+          "imgPath": "585-winter",
+          "id": 4
+        }
+      ],
+      "onlyVisual": true,
+      "interchandable": false
+    }
   },
   {
     "number": 586,
@@ -5407,34 +5451,37 @@
     "types": [0, 11],
     "origin": 4,
     "genders": [0, 1],
-    "formDiffsOnlyVisual": true,
-    "forms": [
-      {
-        "formName": "Spring Form",
-        "types": [0, 11],
-        "imgPath": "586",
-        "id": 1
-      },
-      {
-        "formName": "Summer Form",
-        "types": [0, 11],
-        "imgPath": "586-summer",
-        "id": 2
-      },
-      {
-        "formName": "Autumn Form",
-        "types": [0, 11],
-        "imgPath": "586-autumn",
-        "id": 3
-      },
-      {
-        "formName": "Winter Form",
-        "types": [0, 11],
-        "imgPath": "586-winter",
-        "id": 4
-      }
-    ],
-    "rarity": 0
+    "rarity": 0,
+    "formsData": {
+      "forms": [
+        {
+          "formName": "Spring Form",
+          "types": [0, 11],
+          "imgPath": "586",
+          "id": 1
+        },
+        {
+          "formName": "Summer Form",
+          "types": [0, 11],
+          "imgPath": "586-summer",
+          "id": 2
+        },
+        {
+          "formName": "Autumn Form",
+          "types": [0, 11],
+          "imgPath": "586-autumn",
+          "id": 3
+        },
+        {
+          "formName": "Winter Form",
+          "types": [0, 11],
+          "imgPath": "586-winter",
+          "id": 4
+        }
+      ],
+      "onlyVisual": true,
+      "interchandable": false
+    }
   },
   {
     "number": 587,
@@ -5886,17 +5933,26 @@
     "types": [2],
     "origin": 4,
     "genders": [0],
-    "formDiffsOnlyVisual": false,
-    "forms": [
-      {
-        "formName": "Incarnate Forme",
-        "types": [2],
-        "imgPath": "641",
-        "id": 1
-      },
-      { "formName": "Therian Forme", "types": [2], "imgPath": "10019", "id": 2 }
-    ],
-    "rarity": 1
+    "rarity": 1,
+    "formsData": {
+      "forms": [
+        {
+          "formName": "Incarnate Forme",
+          "types": [2],
+          "imgPath": "641",
+          "id": 1
+        },
+        {
+          "formName": "Therian Forme",
+          "types": [2],
+          "imgPath": "10019",
+          "id": 2
+        }
+      ],
+      "onlyVisual": false,
+      "interchandable": true,
+      "baseFormId": 1
+    }
   },
   {
     "number": 642,
@@ -5904,22 +5960,26 @@
     "types": [12, 2],
     "origin": 4,
     "genders": [0],
-    "formDiffsOnlyVisual": false,
-    "forms": [
-      {
-        "formName": "Incarnate Forme",
-        "types": [12, 2],
-        "imgPath": "642",
-        "id": 1
-      },
-      {
-        "formName": "Therian Forme",
-        "types": [12, 2],
-        "imgPath": "10020",
-        "id": 2
-      }
-    ],
-    "rarity": 1
+    "rarity": 1,
+    "formsData": {
+      "forms": [
+        {
+          "formName": "Incarnate Forme",
+          "types": [12, 2],
+          "imgPath": "642",
+          "id": 1
+        },
+        {
+          "formName": "Therian Forme",
+          "types": [12, 2],
+          "imgPath": "10020",
+          "id": 2
+        }
+      ],
+      "onlyVisual": false,
+      "interchandable": true,
+      "baseFormId": 1
+    }
   },
   {
     "number": 643,
@@ -5943,22 +6003,26 @@
     "types": [4, 2],
     "origin": 4,
     "genders": [0],
-    "formDiffsOnlyVisual": false,
-    "forms": [
-      {
-        "formName": "Incarnate Forme",
-        "types": [4, 2],
-        "imgPath": "645",
-        "id": 1
-      },
-      {
-        "formName": "Therian Forme",
-        "types": [4, 2],
-        "imgPath": "10021",
-        "id": 2
-      }
-    ],
-    "rarity": 1
+    "rarity": 1,
+    "formsData": {
+      "forms": [
+        {
+          "formName": "Incarnate Forme",
+          "types": [4, 2],
+          "imgPath": "645",
+          "id": 1
+        },
+        {
+          "formName": "Therian Forme",
+          "types": [4, 2],
+          "imgPath": "10021",
+          "id": 2
+        }
+      ],
+      "onlyVisual": false,
+      "interchandable": true,
+      "baseFormId": 1
+    }
   },
   {
     "number": 646,
@@ -5974,22 +6038,26 @@
     "types": [10, 1],
     "origin": 4,
     "genders": [2],
-    "formDiffsOnlyVisual": true,
-    "forms": [
-      {
-        "formName": "Ordinary Form",
-        "types": [10, 1],
-        "imgPath": "647",
-        "id": 1
-      },
-      {
-        "formName": "Resoute Form",
-        "types": [10, 1],
-        "imgPath": "10024",
-        "id": 2
-      }
-    ],
-    "rarity": 2
+    "rarity": 2,
+    "formsData": {
+      "forms": [
+        {
+          "formName": "Ordinary Form",
+          "types": [10, 1],
+          "imgPath": "647",
+          "id": 1
+        },
+        {
+          "formName": "Resoute Form",
+          "types": [10, 1],
+          "imgPath": "10024",
+          "id": 2
+        }
+      ],
+      "onlyVisual": true,
+      "interchandable": true,
+      "baseFormId": 1
+    }
   },
   {
     "number": 648,
@@ -6141,120 +6209,128 @@
     "types": [6, 2],
     "origin": 5,
     "genders": [0, 1],
-    "formDiffsOnlyVisual": true,
-    "forms": [
-      {
-        "formName": "Archipelago",
-        "types": [6, 2],
-        "imgPath": "666-archipelago",
-        "id": 1
-      },
-      {
-        "formName": "Continental",
-        "types": [6, 2],
-        "imgPath": "666-continental",
-        "id": 2
-      },
-      {
-        "formName": "Elegant",
-        "types": [6, 2],
-        "imgPath": "666-elegant",
-        "id": 3
-      },
-      {
-        "formName": "Garden",
-        "types": [6, 2],
-        "imgPath": "666-garden",
-        "id": 4
-      },
-      {
-        "formName": "High Plains",
-        "types": [6, 2],
-        "imgPath": "666-high-plains",
-        "id": 5
-      },
-      {
-        "formName": "Icy Snow",
-        "types": [6, 2],
-        "imgPath": "666-icy-snow",
-        "id": 6
-      },
-      {
-        "formName": "Jungle",
-        "types": [6, 2],
-        "imgPath": "666-jungle",
-        "id": 7
-      },
-      {
-        "formName": "Marine",
-        "types": [6, 2],
-        "imgPath": "666-marine",
-        "id": 8
-      },
-      {
-        "formName": "Meadow",
-        "types": [6, 2],
-        "imgPath": "666-meadow",
-        "id": 9
-      },
-      {
-        "formName": "Modern",
-        "types": [6, 2],
-        "imgPath": "666-modern",
-        "id": 10
-      },
-      {
-        "formName": "Monsoon",
-        "types": [6, 2],
-        "imgPath": "666-monsoon",
-        "id": 11
-      },
-      {
-        "formName": "Ocean",
-        "types": [6, 2],
-        "imgPath": "666-ocean",
-        "id": 12
-      },
-      {
-        "formName": "Polar",
-        "types": [6, 2],
-        "imgPath": "666-polar",
-        "id": 13
-      },
-      {
-        "formName": "River",
-        "types": [6, 2],
-        "imgPath": "666-river",
-        "id": 14
-      },
-      {
-        "formName": "Sandstorm",
-        "types": [6, 2],
-        "imgPath": "666-sandstorm",
-        "id": 15
-      },
-      {
-        "formName": "Savanna",
-        "types": [6, 2],
-        "imgPath": "666-savanna",
-        "id": 16
-      },
-      { "formName": "Sun", "types": [6, 2], "imgPath": "666-sun", "id": 17 },
-      {
-        "formName": "Tundra",
-        "types": [6, 2],
-        "imgPath": "666-tundra",
-        "id": 18
-      },
-      {
-        "formName": "Poké Ball",
-        "types": [6, 2],
-        "imgPath": "666-poke-ball",
-        "id": 19
-      },
-      { "formName": "Fancy", "types": [6, 2], "imgPath": "666-fancy", "id": 20 }
-    ],
-    "rarity": 0
+    "rarity": 0,
+    "formsData": {
+      "forms": [
+        {
+          "formName": "Archipelago",
+          "types": [6, 2],
+          "imgPath": "666-archipelago",
+          "id": 1
+        },
+        {
+          "formName": "Continental",
+          "types": [6, 2],
+          "imgPath": "666-continental",
+          "id": 2
+        },
+        {
+          "formName": "Elegant",
+          "types": [6, 2],
+          "imgPath": "666-elegant",
+          "id": 3
+        },
+        {
+          "formName": "Garden",
+          "types": [6, 2],
+          "imgPath": "666-garden",
+          "id": 4
+        },
+        {
+          "formName": "High Plains",
+          "types": [6, 2],
+          "imgPath": "666-high-plains",
+          "id": 5
+        },
+        {
+          "formName": "Icy Snow",
+          "types": [6, 2],
+          "imgPath": "666-icy-snow",
+          "id": 6
+        },
+        {
+          "formName": "Jungle",
+          "types": [6, 2],
+          "imgPath": "666-jungle",
+          "id": 7
+        },
+        {
+          "formName": "Marine",
+          "types": [6, 2],
+          "imgPath": "666-marine",
+          "id": 8
+        },
+        {
+          "formName": "Meadow",
+          "types": [6, 2],
+          "imgPath": "666-meadow",
+          "id": 9
+        },
+        {
+          "formName": "Modern",
+          "types": [6, 2],
+          "imgPath": "666-modern",
+          "id": 10
+        },
+        {
+          "formName": "Monsoon",
+          "types": [6, 2],
+          "imgPath": "666-monsoon",
+          "id": 11
+        },
+        {
+          "formName": "Ocean",
+          "types": [6, 2],
+          "imgPath": "666-ocean",
+          "id": 12
+        },
+        {
+          "formName": "Polar",
+          "types": [6, 2],
+          "imgPath": "666-polar",
+          "id": 13
+        },
+        {
+          "formName": "River",
+          "types": [6, 2],
+          "imgPath": "666-river",
+          "id": 14
+        },
+        {
+          "formName": "Sandstorm",
+          "types": [6, 2],
+          "imgPath": "666-sandstorm",
+          "id": 15
+        },
+        {
+          "formName": "Savanna",
+          "types": [6, 2],
+          "imgPath": "666-savanna",
+          "id": 16
+        },
+        { "formName": "Sun", "types": [6, 2], "imgPath": "666-sun", "id": 17 },
+        {
+          "formName": "Tundra",
+          "types": [6, 2],
+          "imgPath": "666-tundra",
+          "id": 18
+        },
+        {
+          "formName": "Poké Ball",
+          "types": [6, 2],
+          "imgPath": "666-poke-ball",
+          "id": 19
+        },
+        {
+          "formName": "Fancy",
+          "types": [6, 2],
+          "imgPath": "666-fancy",
+          "id": 20
+        }
+      ],
+      "onlyVisual": true,
+      "interchandable": false
+    }
   },
   {
     "number": 667,
@@ -6283,35 +6359,38 @@
     "types": [17],
     "origin": 5,
     "genders": [1],
-    "formDiffsOnlyVisual": true,
-    "forms": [
-      { "formName": "Red Flower", "types": [17], "imgPath": "669", "id": 1 },
-      {
-        "formName": "Yellow Flower",
-        "types": [17],
-        "imgPath": "669-yellow",
-        "id": 2
-      },
-      {
-        "formName": "Orange Flower",
-        "types": [17],
-        "imgPath": "669-orange",
-        "id": 3
-      },
-      {
-        "formName": "Blue Flower",
-        "types": [17],
-        "imgPath": "669-blue",
-        "id": 4
-      },
-      {
-        "formName": "White Flower",
-        "types": [17],
-        "imgPath": "669-white",
-        "id": 5
-      }
-    ],
-    "rarity": 0
+    "rarity": 0,
+    "formsData": {
+      "forms": [
+        { "formName": "Red Flower", "types": [17], "imgPath": "669", "id": 1 },
+        {
+          "formName": "Yellow Flower",
+          "types": [17],
+          "imgPath": "669-yellow",
+          "id": 2
+        },
+        {
+          "formName": "Orange Flower",
+          "types": [17],
+          "imgPath": "669-orange",
+          "id": 3
+        },
+        {
+          "formName": "Blue Flower",
+          "types": [17],
+          "imgPath": "669-blue",
+          "id": 4
+        },
+        {
+          "formName": "White Flower",
+          "types": [17],
+          "imgPath": "669-white",
+          "id": 5
+        }
+      ],
+      "onlyVisual": true,
+      "interchandable": false
+    }
   },
   {
     "number": 670,
@@ -6319,35 +6398,38 @@
     "types": [17],
     "origin": 5,
     "genders": [1],
-    "formDiffsOnlyVisual": true,
-    "forms": [
-      { "formName": "Red Flower", "types": [17], "imgPath": "670", "id": 1 },
-      {
-        "formName": "Yellow Flower",
-        "types": [17],
-        "imgPath": "670-yellow",
-        "id": 2
-      },
-      {
-        "formName": "Orange Flower",
-        "types": [17],
-        "imgPath": "670-orange",
-        "id": 3
-      },
-      {
-        "formName": "Blue Flower",
-        "types": [17],
-        "imgPath": "670-blue",
-        "id": 4
-      },
-      {
-        "formName": "White Flower",
-        "types": [17],
-        "imgPath": "670-white",
-        "id": 5
-      }
-    ],
-    "rarity": 0
+    "rarity": 0,
+    "formsData": {
+      "forms": [
+        { "formName": "Red Flower", "types": [17], "imgPath": "670", "id": 1 },
+        {
+          "formName": "Yellow Flower",
+          "types": [17],
+          "imgPath": "670-yellow",
+          "id": 2
+        },
+        {
+          "formName": "Orange Flower",
+          "types": [17],
+          "imgPath": "670-orange",
+          "id": 3
+        },
+        {
+          "formName": "Blue Flower",
+          "types": [17],
+          "imgPath": "670-blue",
+          "id": 4
+        },
+        {
+          "formName": "White Flower",
+          "types": [17],
+          "imgPath": "670-white",
+          "id": 5
+        }
+      ],
+      "onlyVisual": true,
+      "interchandable": false
+    }
   },
   {
     "number": 671,
@@ -6355,35 +6437,38 @@
     "types": [17],
     "origin": 5,
     "genders": [1],
-    "formDiffsOnlyVisual": true,
-    "forms": [
-      { "formName": "Red Flower", "types": [17], "imgPath": "671", "id": 1 },
-      {
-        "formName": "Yellow Flower",
-        "types": [17],
-        "imgPath": "671-yellow",
-        "id": 2
-      },
-      {
-        "formName": "Orange Flower",
-        "types": [17],
-        "imgPath": "671-orange",
-        "id": 3
-      },
-      {
-        "formName": "Blue Flower",
-        "types": [17],
-        "imgPath": "671-blue",
-        "id": 4
-      },
-      {
-        "formName": "White Flower",
-        "types": [17],
-        "imgPath": "671-white",
-        "id": 5
-      }
-    ],
-    "rarity": 0
+    "rarity": 0,
+    "formsData": {
+      "forms": [
+        { "formName": "Red Flower", "types": [17], "imgPath": "671", "id": 1 },
+        {
+          "formName": "Yellow Flower",
+          "types": [17],
+          "imgPath": "671-yellow",
+          "id": 2
+        },
+        {
+          "formName": "Orange Flower",
+          "types": [17],
+          "imgPath": "671-orange",
+          "id": 3
+        },
+        {
+          "formName": "Blue Flower",
+          "types": [17],
+          "imgPath": "671-blue",
+          "id": 4
+        },
+        {
+          "formName": "White Flower",
+          "types": [17],
+          "imgPath": "671-white",
+          "id": 5
+        }
+      ],
+      "onlyVisual": true,
+      "interchandable": false
+    }
   },
   {
     "number": 672,
@@ -6702,29 +6787,37 @@
     "types": [7, 11],
     "origin": 5,
     "genders": [0, 1],
-    "formDiffsOnlyVisual": false,
-    "forms": [
-      { "formName": "Small Size", "types": [7, 11], "imgPath": "710", "id": 1 },
-      {
-        "formName": "Average Size",
-        "types": [7, 11],
-        "imgPath": "10027",
-        "id": 2
-      },
-      {
-        "formName": "Large Size",
-        "types": [7, 11],
-        "imgPath": "10028",
-        "id": 3
-      },
-      {
-        "formName": "Super Size",
-        "types": [7, 11],
-        "imgPath": "10029",
-        "id": 4
-      }
-    ],
-    "rarity": 0
+    "rarity": 0,
+    "formsData": {
+      "forms": [
+        {
+          "formName": "Small Size",
+          "types": [7, 11],
+          "imgPath": "710",
+          "id": 1
+        },
+        {
+          "formName": "Average Size",
+          "types": [7, 11],
+          "imgPath": "10027",
+          "id": 2
+        },
+        {
+          "formName": "Large Size",
+          "types": [7, 11],
+          "imgPath": "10028",
+          "id": 3
+        },
+        {
+          "formName": "Super Size",
+          "types": [7, 11],
+          "imgPath": "10029",
+          "id": 4
+        }
+      ],
+      "onlyVisual": false,
+      "interchandable": false
+    }
   },
   {
     "number": 711,
@@ -6732,29 +6825,37 @@
     "types": [7, 11],
     "origin": 5,
     "genders": [0, 1],
-    "formDiffsOnlyVisual": false,
-    "forms": [
-      { "formName": "Small Size", "types": [7, 11], "imgPath": "711", "id": 1 },
-      {
-        "formName": "Average Size",
-        "types": [7, 11],
-        "imgPath": "10030",
-        "id": 2
-      },
-      {
-        "formName": "Large Size",
-        "types": [7, 11],
-        "imgPath": "10031",
-        "id": 3
-      },
-      {
-        "formName": "Super Size",
-        "types": [7, 11],
-        "imgPath": "10032",
-        "id": 4
-      }
-    ],
-    "rarity": 0
+    "rarity": 0,
+    "formsData": {
+      "forms": [
+        {
+          "formName": "Small Size",
+          "types": [7, 11],
+          "imgPath": "711",
+          "id": 1
+        },
+        {
+          "formName": "Average Size",
+          "types": [7, 11],
+          "imgPath": "10030",
+          "id": 2
+        },
+        {
+          "formName": "Large Size",
+          "types": [7, 11],
+          "imgPath": "10031",
+          "id": 3
+        },
+        {
+          "formName": "Super Size",
+          "types": [7, 11],
+          "imgPath": "10032",
+          "id": 4
+        }
+      ],
+      "onlyVisual": false,
+      "interchandable": false
+    }
   },
   {
     "number": 712,
@@ -6811,17 +6912,26 @@
     "types": [15, 4],
     "origin": 5,
     "genders": [2],
-    "formDiffsOnlyVisual": false,
-    "forms": [
-      {
-        "formName": "10% Forme",
-        "types": [15, 4],
-        "imgPath": "10118",
-        "id": 1
-      },
-      { "formName": "50% Forme", "types": [15, 4], "imgPath": "10119", "id": 2 }
-    ],
-    "rarity": 1
+    "rarity": 1,
+    "formsData": {
+      "forms": [
+        {
+          "formName": "10% Forme",
+          "types": [15, 4],
+          "imgPath": "10118",
+          "id": 1
+        },
+        {
+          "formName": "50% Forme",
+          "types": [15, 4],
+          "imgPath": "10119",
+          "id": 2
+        }
+      ],
+      "onlyVisual": false,
+      "interchandable": true,
+      "baseFormId": 2
+    }
   },
   {
     "number": 719,
@@ -7006,29 +7116,37 @@
     "types": [9, 2],
     "origin": 6,
     "genders": [0, 1],
-    "formDiffsOnlyVisual": false,
-    "forms": [
-      { "formName": "Baile Style", "types": [9, 2], "imgPath": "741", "id": 1 },
-      {
-        "formName": "Pom-Pom Style",
-        "types": [12, 2],
-        "imgPath": "10123",
-        "id": 2
-      },
-      {
-        "formName": "Pa'u Style",
-        "types": [13, 2],
-        "imgPath": "10124",
-        "id": 3
-      },
-      {
-        "formName": "Sensu Style",
-        "types": [7, 2],
-        "imgPath": "10125",
-        "id": 4
-      }
-    ],
-    "rarity": 0
+    "rarity": 0,
+    "formsData": {
+      "forms": [
+        {
+          "formName": "Baile Style",
+          "types": [9, 2],
+          "imgPath": "741",
+          "id": 1
+        },
+        {
+          "formName": "Pom-Pom Style",
+          "types": [12, 2],
+          "imgPath": "10123",
+          "id": 2
+        },
+        {
+          "formName": "Pa'u Style",
+          "types": [13, 2],
+          "imgPath": "10124",
+          "id": 3
+        },
+        {
+          "formName": "Sensu Style",
+          "types": [7, 2],
+          "imgPath": "10125",
+          "id": 4
+        }
+      ],
+      "onlyVisual": false,
+      "interchandable": false
+    }
   },
   {
     "number": 742,
@@ -7060,18 +7178,21 @@
     "types": [5],
     "origin": 6,
     "genders": [0, 1],
-    "formDiffsOnlyVisual": false,
-    "forms": [
-      { "formName": "Midday Form", "types": [5], "imgPath": "745", "id": 1 },
-      {
-        "formName": "Midnight Form",
-        "types": [5],
-        "imgPath": "10126",
-        "id": 2
-      },
-      { "formName": "Dusk Form", "types": [5], "imgPath": "10152", "id": 3 }
-    ],
-    "rarity": 0
+    "rarity": 0,
+    "formsData": {
+      "forms": [
+        { "formName": "Midday Form", "types": [5], "imgPath": "745", "id": 1 },
+        {
+          "formName": "Midnight Form",
+          "types": [5],
+          "imgPath": "10126",
+          "id": 2
+        },
+        { "formName": "Dusk Form", "types": [5], "imgPath": "10152", "id": 3 }
+      ],
+      "onlyVisual": false,
+      "interchandable": false
+    }
   },
   {
     "number": 746,
@@ -7303,42 +7424,55 @@
     "types": [5, 2],
     "origin": 6,
     "genders": [2],
-    "formDiffsOnlyVisual": true,
-    "forms": [
-      { "formName": "Red Core", "types": [5, 2], "imgPath": "10136", "id": 1 },
-      {
-        "formName": "Orange Core",
-        "types": [5, 2],
-        "imgPath": "10137",
-        "id": 2
-      },
-      {
-        "formName": "Yellow Core",
-        "types": [5, 2],
-        "imgPath": "10138",
-        "id": 3
-      },
-      {
-        "formName": "Green Core",
-        "types": [5, 2],
-        "imgPath": "10139",
-        "id": 4
-      },
-      { "formName": "Blue Core", "types": [5, 2], "imgPath": "10140", "id": 5 },
-      {
-        "formName": "Indigo Core",
-        "types": [5, 2],
-        "imgPath": "10141",
-        "id": 6
-      },
-      {
-        "formName": "Violet Core",
-        "types": [5, 2],
-        "imgPath": "10142",
-        "id": 7
-      }
-    ],
-    "rarity": 0
+    "rarity": 0,
+    "formsData": {
+      "forms": [
+        {
+          "formName": "Red Core",
+          "types": [5, 2],
+          "imgPath": "10136",
+          "id": 1
+        },
+        {
+          "formName": "Orange Core",
+          "types": [5, 2],
+          "imgPath": "10137",
+          "id": 2
+        },
+        {
+          "formName": "Yellow Core",
+          "types": [5, 2],
+          "imgPath": "10138",
+          "id": 3
+        },
+        {
+          "formName": "Green Core",
+          "types": [5, 2],
+          "imgPath": "10139",
+          "id": 4
+        },
+        {
+          "formName": "Blue Core",
+          "types": [5, 2],
+          "imgPath": "10140",
+          "id": 5
+        },
+        {
+          "formName": "Indigo Core",
+          "types": [5, 2],
+          "imgPath": "10141",
+          "id": 6
+        },
+        {
+          "formName": "Violet Core",
+          "types": [5, 2],
+          "imgPath": "10142",
+          "id": 7
+        }
+      ],
+      "onlyVisual": true,
+      "interchandable": false
+    }
   },
   {
     "number": 775,
@@ -7554,17 +7688,20 @@
     "types": [8, 17],
     "origin": 6,
     "genders": [2],
-    "formDiffsOnlyVisual": true,
-    "forms": [
-      { "formName": "Magearna", "types": [8, 17], "imgPath": "801", "id": 1 },
-      {
-        "formName": "Original Color Magearna",
-        "types": [8, 17],
-        "imgPath": "10147",
-        "id": 2
-      }
-    ],
-    "rarity": 2
+    "rarity": 2,
+    "formsData": {
+      "forms": [
+        { "formName": "Magearna", "types": [8, 17], "imgPath": "801", "id": 1 },
+        {
+          "formName": "Original Color Magearna",
+          "types": [8, 17],
+          "imgPath": "10147",
+          "id": 2
+        }
+      ],
+      "onlyVisual": true,
+      "interchandable": false
+    }
   },
   {
     "number": 802,
@@ -7948,17 +8085,25 @@
     "types": [12, 3],
     "origin": 7,
     "genders": [0, 1],
-    "formDiffsOnlyVisual": false,
-    "forms": [
-      { "formName": "Amped Form", "types": [12, 3], "imgPath": "849", "id": 1 },
-      {
-        "formName": "Low Key Form",
-        "types": [12, 3],
-        "imgPath": "10178",
-        "id": 2
-      }
-    ],
-    "rarity": 0
+    "rarity": 0,
+    "formsData": {
+      "forms": [
+        {
+          "formName": "Amped Form",
+          "types": [12, 3],
+          "imgPath": "849",
+          "id": 1
+        },
+        {
+          "formName": "Low Key Form",
+          "types": [12, 3],
+          "imgPath": "10178",
+          "id": 2
+        }
+      ],
+      "onlyVisual": false,
+      "interchandable": false
+    }
   },
   {
     "number": 850,
@@ -7998,12 +8143,15 @@
     "types": [7],
     "origin": 7,
     "genders": [2],
-    "formDiffsOnlyVisual": true,
-    "forms": [
-      { "formName": "Phony Form", "types": [7], "imgPath": "854", "id": 1 },
-      { "formName": "Antique Form", "types": [7], "imgPath": "854", "id": 2 }
-    ],
-    "rarity": 0
+    "rarity": 0,
+    "formsData": {
+      "forms": [
+        { "formName": "Phony Form", "types": [7], "imgPath": "854", "id": 1 },
+        { "formName": "Antique Form", "types": [7], "imgPath": "854", "id": 2 }
+      ],
+      "onlyVisual": true,
+      "interchandable": false
+    }
   },
   {
     "number": 855,
@@ -8011,12 +8159,15 @@
     "types": [7],
     "origin": 7,
     "genders": [2],
-    "formDiffsOnlyVisual": true,
-    "forms": [
-      { "formName": "Phony Form", "types": [7], "imgPath": "855", "id": 1 },
-      { "formName": "Antique Form", "types": [7], "imgPath": "855", "id": 2 }
-    ],
-    "rarity": 0
+    "rarity": 0,
+    "formsData": {
+      "forms": [
+        { "formName": "Phony Form", "types": [7], "imgPath": "855", "id": 1 },
+        { "formName": "Antique Form", "types": [7], "imgPath": "855", "id": 2 }
+      ],
+      "onlyVisual": true,
+      "interchandable": false
+    }
   },
   {
     "number": 856,
@@ -8128,388 +8279,391 @@
     "types": [17],
     "origin": 7,
     "genders": [1],
-    "formDiffsOnlyVisual": true,
-    "forms": [
-      {
-        "formName": "Vanilla Cream Strawberry Sweet",
-        "types": [17],
-        "imgPath": "869",
-        "id": 1
-      },
-      {
-        "formName": "Vanilla Cream Berry Sweet",
-        "types": [17],
-        "imgPath": "869",
-        "id": 2
-      },
-      {
-        "formName": "Vanilla Cream Love Sweet",
-        "types": [17],
-        "imgPath": "869",
-        "id": 3
-      },
-      {
-        "formName": "Vanilla Cream Star Sweet",
-        "types": [17],
-        "imgPath": "869",
-        "id": 4
-      },
-      {
-        "formName": "Vanilla Cream Clover Sweet",
-        "types": [17],
-        "imgPath": "869",
-        "id": 5
-      },
-      {
-        "formName": "Vanilla Cream Flower Sweet",
-        "types": [17],
-        "imgPath": "869",
-        "id": 6
-      },
-      {
-        "formName": "Vanilla Cream Ribbon Sweet",
-        "types": [17],
-        "imgPath": "869",
-        "id": 7
-      },
-      {
-        "formName": "Ruby Cream Strawberry Sweet",
-        "types": [17],
-        "imgPath": "869",
-        "id": 8
-      },
-      {
-        "formName": "Ruby Cream Berry Sweet",
-        "types": [17],
-        "imgPath": "869",
-        "id": 9
-      },
-      {
-        "formName": "Ruby Cream Love Sweet",
-        "types": [17],
-        "imgPath": "869",
-        "id": 10
-      },
-      {
-        "formName": "Ruby Cream Star Sweet",
-        "types": [17],
-        "imgPath": "869",
-        "id": 11
-      },
-      {
-        "formName": "Ruby Cream Clover Sweet",
-        "types": [17],
-        "imgPath": "869",
-        "id": 12
-      },
-      {
-        "formName": "Ruby Cream Flower Sweet",
-        "types": [17],
-        "imgPath": "869",
-        "id": 13
-      },
-      {
-        "formName": "Ruby Cream Ribbon Sweet",
-        "types": [17],
-        "imgPath": "869",
-        "id": 14
-      },
-      {
-        "formName": "Matcha Cream Strawberry Sweet",
-        "types": [17],
-        "imgPath": "869",
-        "id": 15
-      },
-      {
-        "formName": "Matcha Cream Berry Sweet",
-        "types": [17],
-        "imgPath": "869",
-        "id": 16
-      },
-      {
-        "formName": "Matcha Cream Love Sweet",
-        "types": [17],
-        "imgPath": "869",
-        "id": 17
-      },
-      {
-        "formName": "Matcha Cream Star Sweet",
-        "types": [17],
-        "imgPath": "869",
-        "id": 18
-      },
-      {
-        "formName": "Matcha Cream Clover Sweet",
-        "types": [17],
-        "imgPath": "869",
-        "id": 19
-      },
-      {
-        "formName": "Matcha Cream Flower Sweet",
-        "types": [17],
-        "imgPath": "869",
-        "id": 20
-      },
-      {
-        "formName": "Matcha Cream Ribbon Sweet",
-        "types": [17],
-        "imgPath": "869",
-        "id": 21
-      },
-      {
-        "formName": "Mint Cream Strawberry Sweet",
-        "types": [17],
-        "imgPath": "869",
-        "id": 22
-      },
-      {
-        "formName": "Mint Cream Berry Sweet",
-        "types": [17],
-        "imgPath": "869",
-        "id": 23
-      },
-      {
-        "formName": "Mint Cream Love Sweet",
-        "types": [17],
-        "imgPath": "869",
-        "id": 24
-      },
-      {
-        "formName": "Mint Cream Star Sweet",
-        "types": [17],
-        "imgPath": "869",
-        "id": 25
-      },
-      {
-        "formName": "Mint Cream Clover Sweet",
-        "types": [17],
-        "imgPath": "869",
-        "id": 26
-      },
-      {
-        "formName": "Mint Cream Flower Sweet",
-        "types": [17],
-        "imgPath": "869",
-        "id": 27
-      },
-      {
-        "formName": "Mint Cream Ribbon Sweet",
-        "types": [17],
-        "imgPath": "869",
-        "id": 28
-      },
-      {
-        "formName": "Lemon Cream Strawberry Sweet",
-        "types": [17],
-        "imgPath": "869",
-        "id": 29
-      },
-      {
-        "formName": "Lemon Cream Berry Sweet",
-        "types": [17],
-        "imgPath": "869",
-        "id": 30
-      },
-      {
-        "formName": "Lemon Cream Love Sweet",
-        "types": [17],
-        "imgPath": "869",
-        "id": 31
-      },
-      {
-        "formName": "Lemon Cream Star Sweet",
-        "types": [17],
-        "imgPath": "869",
-        "id": 32
-      },
-      {
-        "formName": "Lemon Cream Clover Sweet",
-        "types": [17],
-        "imgPath": "869",
-        "id": 33
-      },
-      {
-        "formName": "Lemon Cream Flower Sweet",
-        "types": [17],
-        "imgPath": "869",
-        "id": 34
-      },
-      {
-        "formName": "Lemon Cream Ribbon Sweet",
-        "types": [17],
-        "imgPath": "869",
-        "id": 35
-      },
-      {
-        "formName": "Salted Cream Strawberry Sweet",
-        "types": [17],
-        "imgPath": "869",
-        "id": 36
-      },
-      {
-        "formName": "Salted Cream Berry Sweet",
-        "types": [17],
-        "imgPath": "869",
-        "id": 37
-      },
-      {
-        "formName": "Salted Cream Love Sweet",
-        "types": [17],
-        "imgPath": "869",
-        "id": 38
-      },
-      {
-        "formName": "Salted Cream Star Sweet",
-        "types": [17],
-        "imgPath": "869",
-        "id": 39
-      },
-      {
-        "formName": "Salted Cream Clover Sweet",
-        "types": [17],
-        "imgPath": "869",
-        "id": 40
-      },
-      {
-        "formName": "Salted Cream Flower Sweet",
-        "types": [17],
-        "imgPath": "869",
-        "id": 41
-      },
-      {
-        "formName": "Salted Cream Ribbon Sweet",
-        "types": [17],
-        "imgPath": "869",
-        "id": 42
-      },
-      {
-        "formName": "Ruby Swirl Strawberry Sweet",
-        "types": [17],
-        "imgPath": "869",
-        "id": 43
-      },
-      {
-        "formName": "Ruby Swirl Berry Sweet",
-        "types": [17],
-        "imgPath": "869",
-        "id": 44
-      },
-      {
-        "formName": "Ruby Swirl Love Sweet",
-        "types": [17],
-        "imgPath": "869",
-        "id": 45
-      },
-      {
-        "formName": "Ruby Swirl Star Sweet",
-        "types": [17],
-        "imgPath": "869",
-        "id": 46
-      },
-      {
-        "formName": "Ruby Swirl Clover Sweet",
-        "types": [17],
-        "imgPath": "869",
-        "id": 47
-      },
-      {
-        "formName": "Ruby Swirl Flower Sweet",
-        "types": [17],
-        "imgPath": "869",
-        "id": 48
-      },
-      {
-        "formName": "Ruby Swirl Ribbon Sweet",
-        "types": [17],
-        "imgPath": "869",
-        "id": 49
-      },
-      {
-        "formName": "Caramel Swirl Strawberry Sweet",
-        "types": [17],
-        "imgPath": "869",
-        "id": 50
-      },
-      {
-        "formName": "Caramel Swirl Berry Sweet",
-        "types": [17],
-        "imgPath": "869",
-        "id": 51
-      },
-      {
-        "formName": "Caramel Swirl Love Sweet",
-        "types": [17],
-        "imgPath": "869",
-        "id": 52
-      },
-      {
-        "formName": "Caramel Swirl Star Sweet",
-        "types": [17],
-        "imgPath": "869",
-        "id": 53
-      },
-      {
-        "formName": "Caramel Swirl Clover Sweet",
-        "types": [17],
-        "imgPath": "869",
-        "id": 54
-      },
-      {
-        "formName": "Caramel Swirl Flower Sweet",
-        "types": [17],
-        "imgPath": "869",
-        "id": 55
-      },
-      {
-        "formName": "Caramel Swirl Ribbon Sweet",
-        "types": [17],
-        "imgPath": "869",
-        "id": 56
-      },
-      {
-        "formName": "Rainbow Swirl Strawberry Sweet",
-        "types": [17],
-        "imgPath": "869",
-        "id": 57
-      },
-      {
-        "formName": "Rainbow Swirl Berry Sweet",
-        "types": [17],
-        "imgPath": "869",
-        "id": 58
-      },
-      {
-        "formName": "Rainbow Swirl Love Sweet",
-        "types": [17],
-        "imgPath": "869",
-        "id": 59
-      },
-      {
-        "formName": "Rainbow Swirl Star Sweet",
-        "types": [17],
-        "imgPath": "869",
-        "id": 60
-      },
-      {
-        "formName": "Rainbow Swirl Clover Sweet",
-        "types": [17],
-        "imgPath": "869",
-        "id": 61
-      },
-      {
-        "formName": "Rainbow Swirl Flower Sweet",
-        "types": [17],
-        "imgPath": "869",
-        "id": 62
-      },
-      {
-        "formName": "Rainbow Swirl Ribbon Sweet",
-        "types": [17],
-        "imgPath": "869",
-        "id": 63
-      }
-    ],
-    "rarity": 0
+    "rarity": 0,
+    "formsData": {
+      "forms": [
+        {
+          "formName": "Vanilla Cream Strawberry Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 1
+        },
+        {
+          "formName": "Vanilla Cream Berry Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 2
+        },
+        {
+          "formName": "Vanilla Cream Love Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 3
+        },
+        {
+          "formName": "Vanilla Cream Star Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 4
+        },
+        {
+          "formName": "Vanilla Cream Clover Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 5
+        },
+        {
+          "formName": "Vanilla Cream Flower Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 6
+        },
+        {
+          "formName": "Vanilla Cream Ribbon Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 7
+        },
+        {
+          "formName": "Ruby Cream Strawberry Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 8
+        },
+        {
+          "formName": "Ruby Cream Berry Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 9
+        },
+        {
+          "formName": "Ruby Cream Love Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 10
+        },
+        {
+          "formName": "Ruby Cream Star Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 11
+        },
+        {
+          "formName": "Ruby Cream Clover Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 12
+        },
+        {
+          "formName": "Ruby Cream Flower Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 13
+        },
+        {
+          "formName": "Ruby Cream Ribbon Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 14
+        },
+        {
+          "formName": "Matcha Cream Strawberry Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 15
+        },
+        {
+          "formName": "Matcha Cream Berry Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 16
+        },
+        {
+          "formName": "Matcha Cream Love Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 17
+        },
+        {
+          "formName": "Matcha Cream Star Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 18
+        },
+        {
+          "formName": "Matcha Cream Clover Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 19
+        },
+        {
+          "formName": "Matcha Cream Flower Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 20
+        },
+        {
+          "formName": "Matcha Cream Ribbon Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 21
+        },
+        {
+          "formName": "Mint Cream Strawberry Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 22
+        },
+        {
+          "formName": "Mint Cream Berry Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 23
+        },
+        {
+          "formName": "Mint Cream Love Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 24
+        },
+        {
+          "formName": "Mint Cream Star Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 25
+        },
+        {
+          "formName": "Mint Cream Clover Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 26
+        },
+        {
+          "formName": "Mint Cream Flower Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 27
+        },
+        {
+          "formName": "Mint Cream Ribbon Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 28
+        },
+        {
+          "formName": "Lemon Cream Strawberry Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 29
+        },
+        {
+          "formName": "Lemon Cream Berry Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 30
+        },
+        {
+          "formName": "Lemon Cream Love Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 31
+        },
+        {
+          "formName": "Lemon Cream Star Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 32
+        },
+        {
+          "formName": "Lemon Cream Clover Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 33
+        },
+        {
+          "formName": "Lemon Cream Flower Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 34
+        },
+        {
+          "formName": "Lemon Cream Ribbon Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 35
+        },
+        {
+          "formName": "Salted Cream Strawberry Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 36
+        },
+        {
+          "formName": "Salted Cream Berry Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 37
+        },
+        {
+          "formName": "Salted Cream Love Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 38
+        },
+        {
+          "formName": "Salted Cream Star Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 39
+        },
+        {
+          "formName": "Salted Cream Clover Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 40
+        },
+        {
+          "formName": "Salted Cream Flower Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 41
+        },
+        {
+          "formName": "Salted Cream Ribbon Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 42
+        },
+        {
+          "formName": "Ruby Swirl Strawberry Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 43
+        },
+        {
+          "formName": "Ruby Swirl Berry Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 44
+        },
+        {
+          "formName": "Ruby Swirl Love Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 45
+        },
+        {
+          "formName": "Ruby Swirl Star Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 46
+        },
+        {
+          "formName": "Ruby Swirl Clover Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 47
+        },
+        {
+          "formName": "Ruby Swirl Flower Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 48
+        },
+        {
+          "formName": "Ruby Swirl Ribbon Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 49
+        },
+        {
+          "formName": "Caramel Swirl Strawberry Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 50
+        },
+        {
+          "formName": "Caramel Swirl Berry Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 51
+        },
+        {
+          "formName": "Caramel Swirl Love Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 52
+        },
+        {
+          "formName": "Caramel Swirl Star Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 53
+        },
+        {
+          "formName": "Caramel Swirl Clover Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 54
+        },
+        {
+          "formName": "Caramel Swirl Flower Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 55
+        },
+        {
+          "formName": "Caramel Swirl Ribbon Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 56
+        },
+        {
+          "formName": "Rainbow Swirl Strawberry Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 57
+        },
+        {
+          "formName": "Rainbow Swirl Berry Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 58
+        },
+        {
+          "formName": "Rainbow Swirl Love Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 59
+        },
+        {
+          "formName": "Rainbow Swirl Star Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 60
+        },
+        {
+          "formName": "Rainbow Swirl Clover Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 61
+        },
+        {
+          "formName": "Rainbow Swirl Flower Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 62
+        },
+        {
+          "formName": "Rainbow Swirl Ribbon Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 63
+        }
+      ],
+      "onlyVisual": true,
+      "interchandable": false
+    }
   },
   {
     "number": 870,
@@ -8698,22 +8852,25 @@
     "types": [1, 16],
     "origin": 7,
     "genders": [0, 1],
-    "formDiffsOnlyVisual": false,
-    "forms": [
-      {
-        "formName": "Single Strike Style",
-        "types": [1, 16],
-        "imgPath": "892",
-        "id": 1
-      },
-      {
-        "formName": "Rapid Strike Style",
-        "types": [1, 10],
-        "imgPath": "10183",
-        "id": 2
-      }
-    ],
-    "rarity": 1
+    "rarity": 1,
+    "formsData": {
+      "forms": [
+        {
+          "formName": "Single Strike Style",
+          "types": [1, 16],
+          "imgPath": "892",
+          "id": 1
+        },
+        {
+          "formName": "Rapid Strike Style",
+          "types": [1, 10],
+          "imgPath": "10183",
+          "id": 2
+        }
+      ],
+      "onlyVisual": false,
+      "interchandable": false
+    }
   },
   {
     "number": 893,
@@ -8721,17 +8878,20 @@
     "types": [16, 11],
     "origin": 7,
     "genders": [2],
-    "formDiffsOnlyVisual": true,
-    "forms": [
-      { "formName": "Zarude", "types": [16, 11], "imgPath": "893", "id": 1 },
-      {
-        "formName": "Dada Zarude",
-        "types": [16, 11],
-        "imgPath": "893",
-        "id": 2
-      }
-    ],
-    "rarity": 2
+    "rarity": 2,
+    "formsData": {
+      "forms": [
+        { "formName": "Zarude", "types": [16, 11], "imgPath": "893", "id": 1 },
+        {
+          "formName": "Dada Zarude",
+          "types": [16, 11],
+          "imgPath": "893",
+          "id": 2
+        }
+      ],
+      "onlyVisual": true,
+      "interchandable": false
+    }
   },
   {
     "number": 894,
@@ -8831,22 +8991,26 @@
     "name": "Enamorus",
     "origin": 9,
     "genders": [1],
-    "formDiffsOnlyVisual": false,
     "rarity": 1,
     "types": [17, 2],
-    "forms": [
-      {
-        "formName": "Incarnate Forme",
-        "imgPath": "642",
-        "id": 1,
-        "types": [17, 2]
-      },
-      {
-        "formName": "Therian Forme",
-        "imgPath": "10020",
-        "id": 2,
-        "types": [17, 2]
-      }
-    ]
+    "formsData": {
+      "forms": [
+        {
+          "formName": "Incarnate Forme",
+          "imgPath": "642",
+          "id": 1,
+          "types": [17, 2]
+        },
+        {
+          "formName": "Therian Forme",
+          "imgPath": "10020",
+          "id": 2,
+          "types": [17, 2]
+        }
+      ],
+      "onlyVisual": false,
+      "interchandable": true,
+      "baseFormId": 1
+    }
   }
 ]

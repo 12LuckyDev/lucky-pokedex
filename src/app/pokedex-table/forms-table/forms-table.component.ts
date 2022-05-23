@@ -37,7 +37,7 @@ export class FormsTableComponent
   }
 
   get forms() {
-    return this.entry.forms ?? [];
+    return this.entry.formsData?.forms ?? [];
   }
 
   public get isGenderSelectable(): boolean {

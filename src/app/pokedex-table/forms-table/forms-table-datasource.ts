@@ -36,16 +36,15 @@ export class FormsTableDataSource extends PokedexBaseDatasource<PokedexTableForm
     const { countFormsPolicy, countRegionalFormsPolicy } =
       this._pokedexOptionsService.options;
 
-    const { forms, formDiffsOnlyVisual, regionalForms, name } = this._entry;
+    const { formsData, regionalForms, name } = this._entry;
 
     if (
-      forms &&
-      forms.length > 0 &&
+      formsData &&
       countFormsPolicy !== CountFormsPolicy.NO_COUNT &&
       (countFormsPolicy !== CountFormsPolicy.NO_COUNT_VISUAL_ONLY ||
-        !formDiffsOnlyVisual)
+        !formsData.onlyVisual)
     ) {
-      forms.forEach((form) =>
+      formsData.forms.forEach((form) =>
         data.push({ ...form, formType: PokeFormType.form })
       );
     }

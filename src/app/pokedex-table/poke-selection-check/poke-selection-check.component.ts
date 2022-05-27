@@ -5,7 +5,7 @@ import {
   PokedexOptionsService,
   PokedexSelectionService,
 } from 'src/app/services';
-import { formatGender } from 'src/app/utils';
+import { formatGender, getImagePath } from 'src/app/utils';
 import { PokedexBaseComponent } from '../pokedex-base-component/pokedex-base.component';
 
 @Component({
@@ -39,22 +39,8 @@ export class PokeSelectionCheckComponent extends PokedexBaseComponent {
     return this.form ? this.form.formType : null;
   }
 
-  public getImgPath(gender?: PokeGender): string | number {
-    const genderDiffs = this.form
-      ? this.form?.genderDiffs
-      : this.entry?.genderDiffs;
-
-    switch (this.selectionType) {
-      case PokeFormType.form:
-      case PokeFormType.regional_form:
-        return gender === PokeGender.female && genderDiffs
-          ? genderDiffs.femaleImgPath
-          : this.form?.imgPath ?? '';
-      default:
-        return gender === PokeGender.female && genderDiffs
-          ? genderDiffs.femaleImgPath
-          : this.number ?? '';
-    }
+  public getImagePath(gender?: PokeGender): string {
+    return getImagePath(this.entry, { gender, form: this.form });
   }
 
   public showCheckbox(): boolean {

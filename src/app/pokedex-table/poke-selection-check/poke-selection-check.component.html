@@ -23,7 +23,7 @@
       </mat-icon>
     </div>
 
-    <poke-img [imgPath]="getImgPath(gender)"></poke-img>
+    <poke-img [imgPath]="getImagePath(gender)"></poke-img>
     <mat-checkbox
       *ngIf="showCheckbox()"
       color="primary"
@@ -35,7 +35,7 @@
 
 <ng-template #noGenderBlock>
   <mat-card class="poke-card" fxLayout="column" fxLayoutAlign="center center">
-    <poke-img [imgPath]="getImgPath()"></poke-img>
+    <poke-img [imgPath]="getImagePath()"></poke-img>
     <mat-checkbox
       *ngIf="showCheckbox()"
       color="primary"

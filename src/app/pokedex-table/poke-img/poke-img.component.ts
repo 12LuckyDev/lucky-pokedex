@@ -1,8 +1,7 @@
 import { Component, Input } from '@angular/core';
 
 const IMG_URL_BASE =
-  'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/';
-const IMG_URL_EXTENSION = '.png';
+  'https://raw.githubusercontent.com/12pokelucky/poke-data/main/img_96/';
 
 @Component({
   selector: 'poke-img',
@@ -15,7 +14,7 @@ export class PokeImgComponent {
   @Input() imgPath: string | number = '';
 
   get url() {
-    return `${IMG_URL_BASE}${this.imgPath}${IMG_URL_EXTENSION}`;
+    return `${IMG_URL_BASE}${this.imgPath}`;
   }
 
   get alt() {

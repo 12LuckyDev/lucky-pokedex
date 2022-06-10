@@ -2,83 +2,64 @@ import { add, editPropAt, isArray, removeAt, toggle } from '@12luckydev/utils';
 import { PokeGender } from 'src/app/enums';
 import {
   FormGenderSelection,
+  PokedexEntry,
   PokedexFormEntry,
   PokedexRegionalFormEntry,
+  SpecyficSelection,
 } from 'src/app/models';
 
-export const compareGenders = (
-  genders: PokeGender[],
-  selectedGenders?: PokeGender[] | null
-): boolean => {
-  return selectedGenders ? selectedGenders.length === genders.length : false;
-};
+export const getAllSelections = (
+  entry: PokedexEntry,
+  showTypes: {
+    showGenders: boolean;
+    showForms: boolean;
+    showRegionalForms: boolean;
+  }
+): SpecyficSelection[] => {
+  const specyficSelection: SpecyficSelection[] = [];
+  const { showGenders, showForms, showRegionalForms } = showTypes;
 
-export const handleFormGenderChange = (
-  formsGenders: FormGenderSelection[] | null,
-  formId: number,
-  gender: number
-): FormGenderSelection[] => {
-  const newFormsGenders = formsGenders ?? [];
-  const index = newFormsGenders.findIndex(({ id }) => id === formId);
-  const genders: PokeGender[] =
-    index > -1 ? toggle(newFormsGenders[index].genders, gender) : [gender];
+  const { formsData, regionalForms, genders } = entry;
 
-  return genders.length > 0
-    ? index > -1
-      ? editPropAt(newFormsGenders, 'genders', genders, index)
-      : add(newFormsGenders, { id: formId, genders })
-    : removeAt(newFormsGenders, index);
-};
-
-export const checkIsFormGenderSelected = (
-  formsGenders: FormGenderSelection[] | null,
-  formId: number,
-  gender: number
-): boolean => {
-  const formGenders = formsGenders?.find(({ id }) => id === formId) ?? null;
-  return !!formGenders?.genders?.includes(gender);
-};
-
-export const checkIsAllFormsSelected = (
-  showGenders: boolean,
-  genders: PokeGender[],
-  selectedForms: number[] | null,
-  formsGenders: FormGenderSelection[] | null,
-  forms: PokedexFormEntry[] | PokedexRegionalFormEntry[] | undefined
-) => {
   if (showGenders) {
-    if (forms?.length === formsGenders?.length) {
-      if (
-        formsGenders?.some(
-          ({ genders: formGenders }) => !compareGenders(genders, formGenders)
-        )
-      ) {
-        return false;
+    specyficSelection.push(
+      ...genders.map((g) => ({ baseForm: true, gender: g }))
+    );
+  } else {
+    specyficSelection.push({ baseForm: true });
+  }
+
+  if (showForms) {
+    formsData?.forms.forEach(({ id }) => {
+      if (showGenders) {
+        specyficSelection.push(
+          ...genders.map((g) => ({
+            baseForm: false,
+            gender: g,
+            formId: id,
+          }))
+        );
+      } else {
+        specyficSelection.push({ baseForm: false, formId: id });
       }
-    } else {
-      return false;
-    }
-  } else if (!!forms && forms.length !== selectedForms?.length) {
-    return false;
+    });
   }
-  return true;
-};
 
-export const checkIsSomeFormsSelected = (
-  showGenders: boolean,
-  forms: number[] | null,
-  formsGenders: FormGenderSelection[] | null
-) => {
-  if (showGenders) {
-    if (
-      formsGenders?.some(({ genders: formGenders }) =>
-        isArray(formGenders, false)
-      )
-    ) {
-      return true;
-    }
-  } else if (isArray(forms, false)) {
-    return true;
+  if (showRegionalForms) {
+    regionalForms?.forEach(({ region }) => {
+      if (showGenders) {
+        specyficSelection.push(
+          ...genders.map((g) => ({
+            baseForm: false,
+            gender: g,
+            regionalForm: region,
+          }))
+        );
+      } else {
+        specyficSelection.push({ baseForm: false, regionalForm: region });
+      }
+    });
   }
-  return false;
+
+  return specyficSelection;
 };

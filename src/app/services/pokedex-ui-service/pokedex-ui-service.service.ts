@@ -4,8 +4,6 @@ import { PokedexBaseService } from 'src/app/base';
 import { PokedexUiSettings } from 'src/app/models';
 import { PokedexStorageService } from '../pokedex-storage/pokedex-storage.service';
 
-// TODO continue from here
-
 const DEFAULT_OPTIONS: PokedexUiSettings = {
   optionsAreOpen: true,
 };

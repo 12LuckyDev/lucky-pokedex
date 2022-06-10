@@ -57,8 +57,6 @@ const COUNT_GENDERS_POLICY = [
   },
 ];
 
-// TODO close expansion panel when sth is set
-
 @Component({
   selector: 'app-pokedex-options',
   templateUrl: './pokedex-options.component.html',

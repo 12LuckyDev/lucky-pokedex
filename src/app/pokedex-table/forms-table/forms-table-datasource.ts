@@ -1,14 +1,9 @@
 import { MatPaginator } from '@angular/material/paginator';
-import { Observable, BehaviorSubject, Subscription } from 'rxjs';
+import { Observable } from 'rxjs';
 import { PokedexEntry } from 'src/app/models';
 import { PokedexOptionsService } from 'src/app/services';
 import { PokedexTableForm } from 'src/app/models/pokedex-table-form.model';
-import {
-  CountFormsPolicy,
-  CountRegionalFormsPolicy,
-  PokeFormType,
-  PokeRegionalForm,
-} from 'src/app/enums';
+import { PokeFormType, PokeRegionalForm } from 'src/app/enums';
 import { getPagedData } from 'src/app/utils';
 import { PokedexBaseDatasource } from 'src/app/base';
 
@@ -33,17 +28,9 @@ export class FormsTableDataSource extends PokedexBaseDatasource<PokedexTableForm
 
   query = (): void => {
     const data: PokedexTableForm[] = [];
-    const { countFormsPolicy, countRegionalFormsPolicy } =
-      this._pokedexOptionsService.options;
-
     const { formsData, regionalForms, name } = this._entry;
 
-    if (
-      formsData &&
-      countFormsPolicy !== CountFormsPolicy.NO_COUNT &&
-      (countFormsPolicy !== CountFormsPolicy.NO_COUNT_VISUAL_ONLY ||
-        !formsData.onlyVisual)
-    ) {
+    if (formsData && this._pokedexOptionsService.getShowForms(this._entry)) {
       formsData.forms.forEach((form) =>
         data.push({ ...form, formType: PokeFormType.form })
       );
@@ -51,8 +38,7 @@ export class FormsTableDataSource extends PokedexBaseDatasource<PokedexTableForm
 
     if (
       regionalForms &&
-      regionalForms.length > 0 &&
-      countRegionalFormsPolicy !== CountRegionalFormsPolicy.NO_COUNT
+      this._pokedexOptionsService.getShowRegionalForms(this._entry)
     ) {
       regionalForms.forEach(({ region, types, imgPath, genderDiffs }) =>
         data.push({

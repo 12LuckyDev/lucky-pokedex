@@ -1,12 +1,4 @@
-import { add, editPropAt, isArray, removeAt, toggle } from '@12luckydev/utils';
-import { PokeGender } from 'src/app/enums';
-import {
-  FormGenderSelection,
-  PokedexEntry,
-  PokedexFormEntry,
-  PokedexRegionalFormEntry,
-  SpecyficSelection,
-} from 'src/app/models';
+import { PokedexEntry, SpecyficSelection } from 'src/app/models';
 
 export const getAllSelections = (
   entry: PokedexEntry,

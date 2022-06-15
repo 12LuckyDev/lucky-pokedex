@@ -1,10 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { filter } from 'rxjs';
-import {
-  PokedexOptionsService,
-  PokedexSelectionService,
-  PokedexUiServiceService,
-} from './services';
+import { PokedexService } from './services';
 
 @Component({
   selector: 'app-root',
@@ -13,34 +9,19 @@ import {
 })
 export class AppComponent implements OnInit {
   title = 'lucky-pokedex';
-  private _ready = {
-    options: false,
-    selection: false,
-    uiSettings: false,
-  };
+  private _ready = false;
 
-  constructor(
-    private pokedexOptionsService: PokedexOptionsService,
-    private pokedexSelectionService: PokedexSelectionService,
-    private pokedexUiServiceService: PokedexUiServiceService
-  ) {}
+  constructor(private pokedexService: PokedexService) {}
 
   ngOnInit(): void {
-    this.pokedexOptionsService.readyObservable
-      .pipe(filter((ready) => ready))
-      .subscribe((ready) => (this._ready.options = ready));
-
-    this.pokedexSelectionService.readyObservable
-      .pipe(filter((ready) => ready))
-      .subscribe((ready) => (this._ready.selection = ready));
-
-    this.pokedexUiServiceService.readyObservable
-      .pipe(filter((ready) => ready))
-      .subscribe((ready) => (this._ready.uiSettings = ready));
+    this.pokedexService.readyObservable
+      .pipe(filter(({ ready }) => !!ready))
+      .subscribe(() => {
+        this._ready = true;
+      });
   }
 
   get ready(): boolean {
-    const { options, selection, uiSettings } = this._ready;
-    return options && selection && uiSettings;
+    return this._ready;
   }
 }

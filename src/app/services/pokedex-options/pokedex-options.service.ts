@@ -29,14 +29,16 @@ export class PokedexOptionsService extends PokedexBaseService {
     super();
     this.pokedexStorageService.getOptions().subscribe({
       next: (options) => {
-        console.log(options);
-
         if (options) {
           this.nextOptions(options);
         }
       },
       complete: this.setAsReady,
     });
+  }
+
+  get serviceName(): string {
+    return 'options';
   }
 
   public get options(): PokedexOptions {

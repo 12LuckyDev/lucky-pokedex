@@ -18,6 +18,7 @@ import { getAllSelections } from './pokedex-selection-utils';
   providedIn: 'root',
 })
 export class PokedexSelectionService extends PokedexBaseService {
+  // On init and change options calculate all posible selection to show progres
   private _selectionMap = new Map<number, PokedexSelection>();
   private _selectionChangeSubject = new Subject<number>();
 
@@ -31,6 +32,10 @@ export class PokedexSelectionService extends PokedexBaseService {
         this._selectionMap.set(number, selection),
       complete: this.setAsReady,
     });
+  }
+
+  get serviceName(): string {
+    return 'selection';
   }
 
   get selectionChangeObservable(): Observable<number> {
@@ -75,42 +80,36 @@ export class PokedexSelectionService extends PokedexBaseService {
   ): void {
     if (number) {
       const { specyficSelection } = this.getSelection(number);
+      let newSpecyficSelection = null;
 
       if (form) {
         const { formType, id } = form;
+
         switch (formType) {
           case PokeFormType.form:
-            this.changeSpecyficSelection(
-              number,
-              toggle(
-                specyficSelection,
-                { baseForm: false, gender, formId: id },
-                (el) => !el.baseForm && el.gender === gender && el.formId === id
-              )
+            newSpecyficSelection = toggle(
+              specyficSelection,
+              { baseForm: false, gender, formId: id },
+              (el) => !el.baseForm && el.gender === gender && el.formId === id
             );
             break;
           case PokeFormType.regional_form:
-            this.changeSpecyficSelection(
-              number,
-              toggle(
-                specyficSelection,
-                { baseForm: false, gender, regionalForm: id },
-                (el) =>
-                  !el.baseForm && el.gender === gender && el.regionalForm === id
-              )
+            newSpecyficSelection = toggle(
+              specyficSelection,
+              { baseForm: false, gender, regionalForm: id },
+              (el) =>
+                !el.baseForm && el.gender === gender && el.regionalForm === id
             );
             break;
         }
       } else {
-        this.changeSpecyficSelection(
-          number,
-          toggle(
-            specyficSelection,
-            { baseForm: true, gender },
-            (el) => el.baseForm && el.gender === gender
-          )
+        newSpecyficSelection = toggle(
+          specyficSelection,
+          { baseForm: true, gender },
+          (el) => el.baseForm && el.gender === gender
         );
       }
+      this.changeSpecyficSelection(number, newSpecyficSelection);
     }
   }
 

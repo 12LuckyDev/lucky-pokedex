@@ -1,7 +1,14 @@
 import { Injectable } from '@angular/core';
-import { filter, merge } from 'rxjs';
+import { BehaviorSubject, filter, merge } from 'rxjs';
 import { PokedexBaseService } from 'src/app/base';
+import {
+  PokedexEntry,
+  SelectionStatistics,
+  SpecyficSelection,
+} from 'src/app/models';
+import { PokedexDataService } from '../pokedex-data/pokedex-data.service';
 import { PokedexOptionsService } from '../pokedex-options/pokedex-options.service';
+import { getAllSelections } from '../pokedex-selection/pokedex-selection-utils';
 import { PokedexSelectionService } from '../pokedex-selection/pokedex-selection.service';
 import { PokedexUiServiceService } from '../pokedex-ui-service/pokedex-ui-service.service';
 
@@ -15,12 +22,22 @@ export class PokedexService extends PokedexBaseService {
     uiSettings: false,
   };
 
+  private _selectionStatisticsSubject =
+    new BehaviorSubject<SelectionStatistics>({
+      allPokemon: 0,
+      allForms: 0,
+      selectedPokemon: 0,
+      selectedForms: 0,
+    });
+
   constructor(
     private pokedexOptionsService: PokedexOptionsService,
     private pokedexSelectionService: PokedexSelectionService,
-    private pokedexUiServiceService: PokedexUiServiceService
+    private pokedexUiServiceService: PokedexUiServiceService,
+    private pokedexDataService: PokedexDataService
   ) {
     super();
+
     merge(
       this.pokedexOptionsService.readyObservable,
       this.pokedexSelectionService.readyObservable,
@@ -30,8 +47,18 @@ export class PokedexService extends PokedexBaseService {
       .subscribe(({ ready, name }) => {
         this._subservicesReady[name as 'options' | 'selection' | 'uiSettings'] =
           ready;
-        this.checkIfReady();
+        if (this.allReady) {
+          this.refreshStatistics();
+          console.log(this._selectionStatisticsSubject.value);
+          this.setAsReady();
+        }
       });
+
+    this.pokedexSelectionService.selectionChangeObservable.subscribe(
+      ({ number, newSelection, oldSelection }) => {
+        console.log(number, oldSelection, newSelection);
+      }
+    );
   }
 
   protected get serviceName(): string {
@@ -43,9 +70,65 @@ export class PokedexService extends PokedexBaseService {
     return options && selection && uiSettings;
   }
 
-  private checkIfReady(): void {
-    if (this.allReady) {
-      this.setAsReady();
+  private getAllFormSelections(entry: PokedexEntry): SpecyficSelection[] {
+    return getAllSelections(
+      entry,
+      this.pokedexOptionsService.getShowTypes(entry)
+    );
+  }
+
+  public isAllSelected(entry?: PokedexEntry): boolean {
+    return entry
+      ? this.pokedexSelectionService.getSelection(entry.number).length ===
+          this.getAllFormSelections(entry).length
+      : false;
+  }
+
+  public isSomeSelected(entry?: PokedexEntry): boolean {
+    return entry
+      ? this.pokedexSelectionService.getSelection(entry.number).length > 0
+      : false;
+  }
+
+  public selectAll(entry?: PokedexEntry): void {
+    if (entry) {
+      this.pokedexSelectionService.updateSelection(
+        entry.number,
+        this.getAllFormSelections(entry)
+      );
     }
+  }
+
+  public deselectAll(entry?: PokedexEntry): void {
+    if (entry) {
+      this.pokedexSelectionService.updateSelection(entry.number, []);
+    }
+  }
+
+  private refreshStatistics(): void {
+    this.pokedexDataService.getPokedexList().subscribe(({ data, count }) => {
+      let selectedPokemon = 0;
+      let allForms = 0;
+      let selectedForms = 0;
+
+      data.forEach((entry: PokedexEntry) => {
+        const selection = this.pokedexSelectionService.getSelection(
+          entry.number
+        );
+        selectedForms += selection.length;
+        if (selection.length === this.getAllFormSelections(entry).length) {
+          selectedPokemon++;
+        }
+
+        allForms += this.getAllFormSelections(entry).length;
+      });
+
+      this._selectionStatisticsSubject.next({
+        allPokemon: count,
+        allForms,
+        selectedForms,
+        selectedPokemon,
+      });
+    });
   }
 }

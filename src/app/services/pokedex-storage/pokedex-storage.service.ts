@@ -3,7 +3,7 @@ import localforage from 'localforage';
 import { from, Observable } from 'rxjs';
 import {
   PokedexOptions,
-  PokedexSelection,
+  SpecyficSelection,
   PokedexUiSettings,
 } from 'src/app/models';
 
@@ -59,22 +59,22 @@ export class PokedexStorageService {
 
   public setSelection(
     number: number,
-    selection: PokedexSelection
-  ): Observable<PokedexSelection> {
+    selection: SpecyficSelection[]
+  ): Observable<SpecyficSelection[]> {
     return this.setItem(this.selectionStorage, number.toString(), selection);
   }
 
   public getAllSelections(): Observable<{
     number: number;
-    selection: PokedexSelection;
+    selection: SpecyficSelection[];
   }> {
     return new Observable<{
       number: number;
-      selection: PokedexSelection;
+      selection: SpecyficSelection[];
     }>((subscriber) => {
       this.selectionStorage
-        .iterate<PokedexSelection, void>(
-          (selection: PokedexSelection, key: string) =>
+        .iterate<SpecyficSelection[], void>(
+          (selection: SpecyficSelection[], key: string) =>
             subscriber.next({ number: +key, selection })
         )
         .then(() => subscriber.complete());

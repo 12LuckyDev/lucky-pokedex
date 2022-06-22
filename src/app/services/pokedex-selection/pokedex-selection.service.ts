@@ -1,76 +1,70 @@
 import { toggle } from '@12luckydev/utils';
 import { Injectable } from '@angular/core';
-import { Observable, Subject } from 'rxjs';
+import { filter, Observable, Subject } from 'rxjs';
 import { PokedexBaseService } from 'src/app/base';
 import { PokeFormType, PokeGender } from 'src/app/enums';
-import {
-  PokedexEntry,
-  PokedexSelection,
-  PokedexSelectionModel,
-  PokedexTableForm,
-  SpecyficSelection,
-} from 'src/app/models';
-import { PokedexOptionsService } from '../pokedex-options/pokedex-options.service';
+import { PokedexTableForm, SpecyficSelection } from 'src/app/models';
 import { PokedexStorageService } from '../pokedex-storage/pokedex-storage.service';
-import { getAllSelections } from './pokedex-selection-utils';
 
 @Injectable({
   providedIn: 'root',
 })
 export class PokedexSelectionService extends PokedexBaseService {
-  // On init and change options calculate all posible selection to show progres
-  private _selectionMap = new Map<number, PokedexSelection>();
-  private _selectionChangeSubject = new Subject<number>();
+  private _selectionMap = new Map<number, SpecyficSelection[]>();
+  private _selectionChangeSubject = new Subject<{
+    number: number;
+    newSelection: SpecyficSelection[];
+    oldSelection: SpecyficSelection[];
+  }>();
 
-  constructor(
-    private pokedexStorageService: PokedexStorageService,
-    private pokedexOptionsService: PokedexOptionsService
-  ) {
+  constructor(private pokedexStorageService: PokedexStorageService) {
     super();
-    this.pokedexStorageService.getAllSelections().subscribe({
-      next: ({ number, selection }) =>
-        this._selectionMap.set(number, selection),
-      complete: this.setAsReady,
-    });
+    this.pokedexStorageService
+      .getAllSelections()
+      .pipe(filter(({ selection }) => selection.length > 0))
+      .subscribe({
+        next: ({ number, selection }) =>
+          this._selectionMap.set(number, selection),
+        complete: this.setAsReady,
+      });
   }
 
-  get serviceName(): string {
+  protected get serviceName(): string {
     return 'selection';
   }
 
-  get selectionChangeObservable(): Observable<number> {
+  public get selectionChangeObservable(): Observable<{
+    number: number;
+    newSelection: SpecyficSelection[];
+    oldSelection: SpecyficSelection[];
+  }> {
     return this._selectionChangeSubject.asObservable();
   }
 
-  private getSelection(number: number): PokedexSelection {
-    const model = this._selectionMap.get(number);
-    if (model) {
-      return model;
-    } else {
-      const newModel: PokedexSelection = new PokedexSelectionModel();
-      this._selectionMap.set(number, newModel);
-      return newModel;
-    }
+  public get selectionList(): SpecyficSelection[][] {
+    return [...this._selectionMap.values()];
   }
 
-  private updateSelection(
+  public getSelection(number: number): SpecyficSelection[] {
+    return this._selectionMap.get(number) ?? [];
+  }
+
+  public updateSelection(
     number: number | null,
-    model: (model: PokedexSelection) => PokedexSelection
+    newSelection: SpecyficSelection[]
   ): void {
     if (number !== null) {
-      const newModel = model(this.getSelection(number));
-      console.log(number, newModel);
-      this._selectionMap.set(number, newModel);
-      this.pokedexStorageService.setSelection(number, newModel);
-      this._selectionChangeSubject.next(number);
-    }
-  }
+      const oldSelection = this.getSelection(number);
 
-  private changeSpecyficSelection(
-    number: number | null,
-    specyficSelection: SpecyficSelection[]
-  ): void {
-    this.updateSelection(number, (model) => ({ ...model, specyficSelection }));
+      console.log(number, newSelection);
+      this._selectionMap.set(number, newSelection);
+      this.pokedexStorageService.setSelection(number, newSelection);
+      this._selectionChangeSubject.next({
+        number,
+        newSelection,
+        oldSelection,
+      });
+    }
   }
 
   public changeSelection(
@@ -79,23 +73,23 @@ export class PokedexSelectionService extends PokedexBaseService {
     gender?: PokeGender
   ): void {
     if (number) {
-      const { specyficSelection } = this.getSelection(number);
-      let newSpecyficSelection = null;
+      const selection = this.getSelection(number);
+      let newSelection = null;
 
       if (form) {
         const { formType, id } = form;
 
         switch (formType) {
           case PokeFormType.form:
-            newSpecyficSelection = toggle(
-              specyficSelection,
+            newSelection = toggle(
+              selection,
               { baseForm: false, gender, formId: id },
               (el) => !el.baseForm && el.gender === gender && el.formId === id
             );
             break;
           case PokeFormType.regional_form:
-            newSpecyficSelection = toggle(
-              specyficSelection,
+            newSelection = toggle(
+              selection,
               { baseForm: false, gender, regionalForm: id },
               (el) =>
                 !el.baseForm && el.gender === gender && el.regionalForm === id
@@ -103,13 +97,13 @@ export class PokedexSelectionService extends PokedexBaseService {
             break;
         }
       } else {
-        newSpecyficSelection = toggle(
-          specyficSelection,
+        newSelection = toggle(
+          selection,
           { baseForm: true, gender },
           (el) => el.baseForm && el.gender === gender
         );
       }
-      this.changeSpecyficSelection(number, newSpecyficSelection);
+      this.updateSelection(number, newSelection);
     }
   }
 
@@ -119,63 +113,25 @@ export class PokedexSelectionService extends PokedexBaseService {
     gender?: PokeGender
   ): boolean {
     if (number) {
-      const { specyficSelection } = this.getSelection(number);
+      const selection = this.getSelection(number);
 
       if (form) {
         const { formType, id } = form;
         switch (formType) {
           case PokeFormType.form:
-            return !!specyficSelection.find(
+            return !!selection.find(
               (el) => !el.baseForm && el.gender === gender && el.formId === id
             );
           case PokeFormType.regional_form:
-            return !!specyficSelection.find(
+            return !!selection.find(
               (el) =>
                 !el.baseForm && el.gender === gender && el.regionalForm === id
             );
         }
       } else {
-        return !!specyficSelection.find(
-          (el) => el.baseForm && el.gender === gender
-        );
+        return !!selection.find((el) => el.baseForm && el.gender === gender);
       }
     }
     return false;
-  }
-
-  public isAllSelected(entry?: PokedexEntry): boolean {
-    if (entry) {
-      const { specyficSelection } = this.getSelection(entry.number);
-      const allSelection = getAllSelections(
-        entry,
-        this.pokedexOptionsService.getShowTypes(entry)
-      );
-
-      return allSelection.length === specyficSelection.length;
-    }
-    return false;
-  }
-
-  public isSomeSelected(entry?: PokedexEntry): boolean {
-    if (entry) {
-      const { specyficSelection } = this.getSelection(entry.number);
-      return specyficSelection.length > 0;
-    }
-    return false;
-  }
-
-  public selectAll(entry?: PokedexEntry): void {
-    if (entry) {
-      this.changeSpecyficSelection(
-        entry.number,
-        getAllSelections(entry, this.pokedexOptionsService.getShowTypes(entry))
-      );
-    }
-  }
-
-  public deselectAll(entry?: PokedexEntry): void {
-    if (entry) {
-      this.updateSelection(entry.number, () => new PokedexSelectionModel());
-    }
   }
 }

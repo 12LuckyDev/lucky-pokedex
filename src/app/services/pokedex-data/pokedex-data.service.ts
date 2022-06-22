@@ -22,7 +22,7 @@ export class PokedexDataService {
   getPokedexList(
     {
       pageIndex = 0,
-      pageSize = 10,
+      pageSize,
       sortBy,
       sortDirection,
       search,
@@ -31,13 +31,15 @@ export class PokedexDataService {
     data: PokedexEntry[];
     count: number;
   }> {
-    const sortedData = getSearchData(POKEDEX_LIST, search);
+    const sortedData = getSortedPokedexList(
+      getSearchData(POKEDEX_LIST, search),
+      sortBy,
+      sortDirection
+    );
     return of({
-      data: getPagedData(
-        getSortedPokedexList(sortedData, sortBy, sortDirection),
-        pageIndex,
-        pageSize
-      ),
+      data: pageSize
+        ? getPagedData(sortedData, pageIndex, pageSize)
+        : sortedData,
       count: sortedData.length,
     });
   }

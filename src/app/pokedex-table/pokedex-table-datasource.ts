@@ -1,6 +1,6 @@
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
-import { Observable, BehaviorSubject, Subscription } from 'rxjs';
+import { Observable } from 'rxjs';
 import { PokedexEntry } from '../models';
 import {
   GetPokedexListParamsType,

@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { takeUntil, filter } from 'rxjs';
+import { PokedexBaseComponent } from '../pokedex-base-component/pokedex-base.component';
 import {
   PokedexOptionsService,
   PokedexSelectionService,
+  PokedexService,
 } from 'src/app/services';
-import { PokedexBaseComponent } from '../pokedex-base-component/pokedex-base.component';
 
 @Component({
   selector: 'app-poke-selection-all',
@@ -19,6 +20,7 @@ export class PokeSelectionAllComponent
   private _isSomeSelected: boolean = false;
 
   constructor(
+    private pokedexService: PokedexService,
     private pokedexSelectionService: PokedexSelectionService,
     private pokedexOptionsService: PokedexOptionsService
   ) {
@@ -30,18 +32,16 @@ export class PokeSelectionAllComponent
     this.pokedexSelectionService.selectionChangeObservable
       .pipe(
         takeUntil(this.destroyed),
-        filter((number: number) => number === this.number)
+        filter(({ number }) => number === this.number)
       )
       .subscribe(this.refreshSelectedFields);
   }
 
   private refreshSelectedFields = () => {
-    this._isAllSelected = this.pokedexSelectionService.isAllSelected(
-      this.entry
-    );
+    this._isAllSelected = this.pokedexService.isAllSelected(this.entry);
     this._isSomeSelected = this._isAllSelected
       ? false
-      : this.pokedexSelectionService.isSomeSelected(this.entry);
+      : this.pokedexService.isSomeSelected(this.entry);
   };
 
   public get isAllSelected(): boolean {
@@ -58,7 +58,7 @@ export class PokeSelectionAllComponent
 
   public changeAllSelection() {
     this._isAllSelected
-      ? this.pokedexSelectionService.deselectAll(this.entry)
-      : this.pokedexSelectionService.selectAll(this.entry);
+      ? this.pokedexService.deselectAll(this.entry)
+      : this.pokedexService.selectAll(this.entry);
   }
 }

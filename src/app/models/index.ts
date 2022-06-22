@@ -6,6 +6,5 @@ export * from './pokedex-gender-diffs.model';
 export * from './pokedex-search.model';
 export * from './pokedex-table-form.model';
 export * from './pokedex-ui-settings.model';
-export * from './selection/form-gender-selection.model';
-export * from './selection/pokedex-selection.model';
-export * from './selection/region-gender-selection.model';
+export * from './selection/specyfic-selection.model';
+export * from './selection/selection-statistics.model';

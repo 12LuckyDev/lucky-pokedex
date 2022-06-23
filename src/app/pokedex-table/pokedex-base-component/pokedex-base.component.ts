@@ -1,22 +1,13 @@
-import { Directive, Input, OnDestroy } from '@angular/core';
-import { Subject } from 'rxjs';
+import { Directive, Input } from '@angular/core';
 import { PokedexEntry } from 'src/app/models';
+import { DestroyedAwareComponent } from './destroyed-aware.component';
 
 @Directive()
-export class PokedexBaseComponent implements OnDestroy {
-  private readonly _destroyed = new Subject<void>();
-
+export class PokedexBaseComponent extends DestroyedAwareComponent {
   @Input() entry!: PokedexEntry;
 
-  constructor() {}
-
-  ngOnDestroy(): void {
-    this._destroyed.next();
-    this._destroyed.complete();
-  }
-
-  public get destroyed(): Subject<void> {
-    return this._destroyed;
+  constructor() {
+    super();
   }
 
   public get number(): number | null {

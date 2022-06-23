@@ -26,6 +26,8 @@ import { PokedexSearchComponent } from './pokedex-table/pokedex-search/pokedex-s
 import { PokeSelectionAllComponent } from './pokedex-table/poke-selection-all/poke-selection-all.component';
 import { PokedexTypesComponent } from './pokedex-table/pokedex-types/pokedex-types.component';
 import { PokedexTypeComponent } from './pokedex-table/pokedex-types/pokedex-type/pokedex-type.component';
+import { PokeStatisticsComponent } from './pokedex-table/poke-statistics/poke-statistics.component';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 @NgModule({
   declarations: [
@@ -39,6 +41,7 @@ import { PokedexTypeComponent } from './pokedex-table/pokedex-types/pokedex-type
     PokeSelectionAllComponent,
     PokedexTypesComponent,
     PokedexTypeComponent,
+    PokeStatisticsComponent,
   ],
   imports: [
     BrowserModule,
@@ -57,6 +60,7 @@ import { PokedexTypeComponent } from './pokedex-table/pokedex-types/pokedex-type
     MatCardModule,
     MatDividerModule,
     MatIconModule,
+    MatProgressBarModule,
     FlexLayoutModule,
   ],
   providers: [PokedexBaseComponent],

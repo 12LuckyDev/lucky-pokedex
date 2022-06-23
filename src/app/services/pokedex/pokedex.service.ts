@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, filter, merge } from 'rxjs';
+import { BehaviorSubject, filter, merge, Observable } from 'rxjs';
 import { PokedexBaseService } from 'src/app/base';
 import {
   PokedexEntry,
@@ -49,14 +49,31 @@ export class PokedexService extends PokedexBaseService {
           ready;
         if (this.allReady) {
           this.refreshStatistics();
-          console.log(this._selectionStatisticsSubject.value);
           this.setAsReady();
         }
       });
 
     this.pokedexSelectionService.selectionChangeObservable.subscribe(
-      ({ number, newSelection, oldSelection }) => {
-        console.log(number, oldSelection, newSelection);
+      ({ entry, newSelection, oldSelection }) => {
+        const { selectedForms, selectedPokemon, ...rest } =
+          this.selectionStatistics;
+        let newSelectedPokemon = selectedPokemon;
+
+        const allFormSelectionCount = this.getAllFormSelections(entry).length;
+        if (allFormSelectionCount === oldSelection.length) {
+          --newSelectedPokemon;
+        }
+        if (allFormSelectionCount === newSelection.length) {
+          ++newSelectedPokemon;
+        }
+
+        this._selectionStatisticsSubject.next({
+          ...rest,
+          selectedForms:
+            selectedForms - oldSelection.length + newSelection.length,
+          selectedPokemon: newSelectedPokemon,
+        });
+        console.log(this.selectionStatistics);
       }
     );
   }
@@ -68,6 +85,14 @@ export class PokedexService extends PokedexBaseService {
   private get allReady(): boolean {
     const { options, selection, uiSettings } = this._subservicesReady;
     return options && selection && uiSettings;
+  }
+
+  private get selectionStatistics(): SelectionStatistics {
+    return this._selectionStatisticsSubject.value;
+  }
+
+  public get selectionStatisticsObservable(): Observable<SelectionStatistics> {
+    return this._selectionStatisticsSubject.asObservable();
   }
 
   private getAllFormSelections(entry: PokedexEntry): SpecyficSelection[] {
@@ -93,7 +118,7 @@ export class PokedexService extends PokedexBaseService {
   public selectAll(entry?: PokedexEntry): void {
     if (entry) {
       this.pokedexSelectionService.updateSelection(
-        entry.number,
+        entry,
         this.getAllFormSelections(entry)
       );
     }
@@ -101,7 +126,7 @@ export class PokedexService extends PokedexBaseService {
 
   public deselectAll(entry?: PokedexEntry): void {
     if (entry) {
-      this.pokedexSelectionService.updateSelection(entry.number, []);
+      this.pokedexSelectionService.updateSelection(entry, []);
     }
   }
 

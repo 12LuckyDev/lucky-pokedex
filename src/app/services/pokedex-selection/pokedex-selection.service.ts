@@ -3,7 +3,11 @@ import { Injectable } from '@angular/core';
 import { filter, Observable, Subject } from 'rxjs';
 import { PokedexBaseService } from 'src/app/base';
 import { PokeFormType, PokeGender } from 'src/app/enums';
-import { PokedexTableForm, SpecyficSelection } from 'src/app/models';
+import {
+  PokedexEntry,
+  PokedexTableForm,
+  SpecyficSelection,
+} from 'src/app/models';
 import { PokedexStorageService } from '../pokedex-storage/pokedex-storage.service';
 
 @Injectable({
@@ -12,7 +16,7 @@ import { PokedexStorageService } from '../pokedex-storage/pokedex-storage.servic
 export class PokedexSelectionService extends PokedexBaseService {
   private _selectionMap = new Map<number, SpecyficSelection[]>();
   private _selectionChangeSubject = new Subject<{
-    number: number;
+    entry: PokedexEntry;
     newSelection: SpecyficSelection[];
     oldSelection: SpecyficSelection[];
   }>();
@@ -34,15 +38,11 @@ export class PokedexSelectionService extends PokedexBaseService {
   }
 
   public get selectionChangeObservable(): Observable<{
-    number: number;
+    entry: PokedexEntry;
     newSelection: SpecyficSelection[];
     oldSelection: SpecyficSelection[];
   }> {
     return this._selectionChangeSubject.asObservable();
-  }
-
-  public get selectionList(): SpecyficSelection[][] {
-    return [...this._selectionMap.values()];
   }
 
   public getSelection(number: number): SpecyficSelection[] {
@@ -50,30 +50,29 @@ export class PokedexSelectionService extends PokedexBaseService {
   }
 
   public updateSelection(
-    number: number | null,
+    entry: PokedexEntry,
     newSelection: SpecyficSelection[]
   ): void {
-    if (number !== null) {
-      const oldSelection = this.getSelection(number);
+    const { number } = entry;
+    const oldSelection = this.getSelection(number);
 
-      console.log(number, newSelection);
-      this._selectionMap.set(number, newSelection);
-      this.pokedexStorageService.setSelection(number, newSelection);
-      this._selectionChangeSubject.next({
-        number,
-        newSelection,
-        oldSelection,
-      });
-    }
+    console.log(number, newSelection);
+    this._selectionMap.set(number, newSelection);
+    this.pokedexStorageService.setSelection(number, newSelection);
+    this._selectionChangeSubject.next({
+      entry,
+      newSelection,
+      oldSelection,
+    });
   }
 
   public changeSelection(
-    number: number | null,
+    entry?: PokedexEntry,
     form?: PokedexTableForm,
     gender?: PokeGender
   ): void {
-    if (number) {
-      const selection = this.getSelection(number);
+    if (entry) {
+      const selection = this.getSelection(entry.number);
       let newSelection = null;
 
       if (form) {
@@ -103,7 +102,7 @@ export class PokedexSelectionService extends PokedexBaseService {
           (el) => el.baseForm && el.gender === gender
         );
       }
-      this.updateSelection(number, newSelection);
+      this.updateSelection(entry, newSelection);
     }
   }
 

@@ -1,11 +1,10 @@
-import { Directive, OnDestroy } from '@angular/core';
+import { Directive } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup } from '@angular/forms';
-import { Observable, Subject, takeUntil } from 'rxjs';
+import { Observable, takeUntil } from 'rxjs';
+import { DestroyedAwareComponent } from '../pokedex-table/pokedex-base-component/destroyed-aware.component';
 
 @Directive()
-export class FormComponent implements OnDestroy {
-  private readonly _destroyed = new Subject<void>();
-
+export class FormComponent extends DestroyedAwareComponent {
   private _form: FormGroup;
 
   constructor(
@@ -14,16 +13,8 @@ export class FormComponent implements OnDestroy {
       [key: string]: any;
     }
   ) {
+    super();
     this._form = this.fb.group(controlsConfig);
-  }
-
-  ngOnDestroy(): void {
-    this._destroyed.next();
-    this._destroyed.complete();
-  }
-
-  public get destroyed(): Subject<void> {
-    return this._destroyed;
   }
 
   public get form(): FormGroup {
@@ -31,7 +22,7 @@ export class FormComponent implements OnDestroy {
   }
 
   public get formChanges(): Observable<void> {
-    return this._form.valueChanges.pipe(takeUntil(this._destroyed));
+    return this._form.valueChanges.pipe(takeUntil(this.destroyed));
   }
 
   public getControl(alias: string): AbstractControl | null {
@@ -59,7 +50,7 @@ export class FormComponent implements OnDestroy {
 
   public getChangeObservable<T>(alias: string): Observable<T> | null {
     return this.getControl(alias)?.valueChanges.pipe(
-      takeUntil(this._destroyed)
+      takeUntil(this.destroyed)
     ) as Observable<T> | null;
   }
 }

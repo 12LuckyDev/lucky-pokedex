@@ -45,6 +45,16 @@ export class PokedexOptionsService extends PokedexBaseService {
     return this._optionsSubject.value;
   }
 
+  public get showFormsStatistics(): boolean {
+    const { countGendersPolicy, countFormsPolicy, countRegionalFormsPolicy } =
+      this.options;
+    return (
+      countGendersPolicy !== CountGendersPolicy.NO_COUNT ||
+      countFormsPolicy !== CountFormsPolicy.NO_COUNT ||
+      countRegionalFormsPolicy !== CountRegionalFormsPolicy.NO_COUNT
+    );
+  }
+
   public get tablesColumns(): string[] {
     const { countGendersPolicy, countFormsPolicy, countRegionalFormsPolicy } =
       this.options;

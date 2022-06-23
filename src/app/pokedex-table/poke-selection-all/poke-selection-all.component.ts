@@ -32,7 +32,7 @@ export class PokeSelectionAllComponent
     this.pokedexSelectionService.selectionChangeObservable
       .pipe(
         takeUntil(this.destroyed),
-        filter(({ number }) => number === this.number)
+        filter(({ entry }) => entry.number === this.number)
       )
       .subscribe(this.refreshSelectedFields);
   }

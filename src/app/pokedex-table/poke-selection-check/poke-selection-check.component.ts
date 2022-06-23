@@ -66,10 +66,6 @@ export class PokeSelectionCheckComponent extends PokedexBaseComponent {
   }
 
   public changeSelection(gender?: PokeGender): void {
-    this.pokedexSelectionService.changeSelection(
-      this.number,
-      this.form,
-      gender
-    );
+    this.pokedexSelectionService.changeSelection(this.entry, this.form, gender);
   }
 }

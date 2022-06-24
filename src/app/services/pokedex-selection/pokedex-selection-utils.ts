@@ -1,3 +1,4 @@
+import { PokeFormType } from 'src/app/enums';
 import { PokedexEntry, SpecyficSelection } from 'src/app/models';
 
 export const getAllSelections = (
@@ -15,24 +16,27 @@ export const getAllSelections = (
 
   if (showGenders) {
     specyficSelection.push(
-      ...genders.map((g) => ({ baseForm: true, gender: g }))
+      ...genders.map((g) => ({ formType: null, gender: g }))
     );
   } else {
-    specyficSelection.push({ baseForm: true });
+    specyficSelection.push({ formType: null });
   }
 
   if (showForms) {
     formsData?.forms.forEach(({ id }) => {
       if (showGenders) {
         specyficSelection.push(
-          ...genders.map((g) => ({
-            baseForm: false,
-            gender: g,
-            formId: id,
-          }))
+          ...genders.map(
+            (g) =>
+              ({
+                formType: PokeFormType.form,
+                gender: g,
+                formId: id,
+              } as SpecyficSelection)
+          )
         );
       } else {
-        specyficSelection.push({ baseForm: false, formId: id });
+        specyficSelection.push({ formType: PokeFormType.form, formId: id });
       }
     });
   }
@@ -41,14 +45,17 @@ export const getAllSelections = (
     regionalForms?.forEach(({ region }) => {
       if (showGenders) {
         specyficSelection.push(
-          ...genders.map((g) => ({
-            baseForm: false,
-            gender: g,
-            regionalForm: region,
-          }))
+          ...genders.map(
+            (g) =>
+              ({
+                formType: PokeFormType.regional_form,
+                gender: g,
+                formId: region,
+              } as SpecyficSelection)
+          )
         );
       } else {
-        specyficSelection.push({ baseForm: false, regionalForm: region });
+        specyficSelection.push({ formType: PokeFormType.form, formId: region });
       }
     });
   }

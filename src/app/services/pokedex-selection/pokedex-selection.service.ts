@@ -19,6 +19,7 @@ export class PokedexSelectionService extends PokedexBaseService {
     entry: PokedexEntry;
     newSelection: SpecyficSelection[];
     oldSelection: SpecyficSelection[];
+    userInput: boolean;
   }>();
 
   constructor(private pokedexStorageService: PokedexStorageService) {
@@ -41,6 +42,7 @@ export class PokedexSelectionService extends PokedexBaseService {
     entry: PokedexEntry;
     newSelection: SpecyficSelection[];
     oldSelection: SpecyficSelection[];
+    userInput: boolean;
   }> {
     return this._selectionChangeSubject.asObservable();
   }
@@ -51,7 +53,8 @@ export class PokedexSelectionService extends PokedexBaseService {
 
   public updateSelection(
     entry: PokedexEntry,
-    newSelection: SpecyficSelection[]
+    newSelection: SpecyficSelection[],
+    userInput: boolean = true
   ): void {
     const { number } = entry;
     const oldSelection = this.getSelection(number);
@@ -63,6 +66,7 @@ export class PokedexSelectionService extends PokedexBaseService {
       entry,
       newSelection,
       oldSelection,
+      userInput,
     });
   }
 
@@ -78,28 +82,39 @@ export class PokedexSelectionService extends PokedexBaseService {
       if (form) {
         const { formType, id } = form;
 
-        switch (formType) {
-          case PokeFormType.form:
-            newSelection = toggle(
-              selection,
-              { baseForm: false, gender, formId: id },
-              (el) => !el.baseForm && el.gender === gender && el.formId === id
-            );
-            break;
-          case PokeFormType.regional_form:
-            newSelection = toggle(
-              selection,
-              { baseForm: false, gender, regionalForm: id },
-              (el) =>
-                !el.baseForm && el.gender === gender && el.regionalForm === id
-            );
-            break;
-        }
+        // switch (formType) {
+        //   case PokeFormType.form:
+        //     newSelection = toggle(
+        //       selection,
+        //       { formType, gender, formId: id },
+        //       (el) =>
+        //         el.formType === formType &&
+        //         el.gender === gender &&
+        //         el.formId === id
+        //     );
+        //     break;
+        //   case PokeFormType.regional_form:
+        //     newSelection = toggle(
+        //       selection,
+        //       { formType, gender, formId: id },
+        //       (el) =>
+        //         el.formType === formType &&
+        //         el.gender === gender &&
+        //         el.formId === id
+        //     );
+        //     break;
+        // }
+        newSelection = toggle(
+          selection,
+          { formType, gender, formId: id },
+          (el) =>
+            el.formType === formType && el.gender === gender && el.formId === id
+        );
       } else {
         newSelection = toggle(
           selection,
-          { baseForm: true, gender },
-          (el) => el.baseForm && el.gender === gender
+          { formType: null, gender },
+          (el) => el.formType === null && el.gender === gender
         );
       }
       this.updateSelection(entry, newSelection);
@@ -116,19 +131,25 @@ export class PokedexSelectionService extends PokedexBaseService {
 
       if (form) {
         const { formType, id } = form;
-        switch (formType) {
-          case PokeFormType.form:
-            return !!selection.find(
-              (el) => !el.baseForm && el.gender === gender && el.formId === id
-            );
-          case PokeFormType.regional_form:
-            return !!selection.find(
-              (el) =>
-                !el.baseForm && el.gender === gender && el.regionalForm === id
-            );
-        }
+        // switch (formType) {
+        //   case PokeFormType.form:
+        //     return !!selection.find(
+        //       (el) => !el.baseForm && el.gender === gender && el.formId === id
+        //     );
+        //   case PokeFormType.regional_form:
+        //     return !!selection.find(
+        //       (el) =>
+        //         !el.baseForm && el.gender === gender && el.regionalForm === id
+        //     );
+        // }
+        return !!selection.find(
+          (el) =>
+            el.formType === formType && el.gender === gender && el.formId === id
+        );
       } else {
-        return !!selection.find((el) => el.baseForm && el.gender === gender);
+        return !!selection.find(
+          (el) => el.formType === null && el.gender === gender
+        );
       }
     }
     return false;

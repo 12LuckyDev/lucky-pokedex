@@ -81,29 +81,6 @@ export class PokedexSelectionService extends PokedexBaseService {
 
       if (form) {
         const { formType, id } = form;
-
-        // switch (formType) {
-        //   case PokeFormType.form:
-        //     newSelection = toggle(
-        //       selection,
-        //       { formType, gender, formId: id },
-        //       (el) =>
-        //         el.formType === formType &&
-        //         el.gender === gender &&
-        //         el.formId === id
-        //     );
-        //     break;
-        //   case PokeFormType.regional_form:
-        //     newSelection = toggle(
-        //       selection,
-        //       { formType, gender, formId: id },
-        //       (el) =>
-        //         el.formType === formType &&
-        //         el.gender === gender &&
-        //         el.formId === id
-        //     );
-        //     break;
-        // }
         newSelection = toggle(
           selection,
           { formType, gender, formId: id },
@@ -131,17 +108,6 @@ export class PokedexSelectionService extends PokedexBaseService {
 
       if (form) {
         const { formType, id } = form;
-        // switch (formType) {
-        //   case PokeFormType.form:
-        //     return !!selection.find(
-        //       (el) => !el.baseForm && el.gender === gender && el.formId === id
-        //     );
-        //   case PokeFormType.regional_form:
-        //     return !!selection.find(
-        //       (el) =>
-        //         !el.baseForm && el.gender === gender && el.regionalForm === id
-        //     );
-        // }
         return !!selection.find(
           (el) =>
             el.formType === formType && el.gender === gender && el.formId === id

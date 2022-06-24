@@ -49,12 +49,33 @@ export class PokedexService extends PokedexBaseService {
           ready;
         if (this.allReady) {
           this.refreshStatistics();
+          this.initialize();
           this.setAsReady();
         }
       });
+  }
 
-    this.pokedexSelectionService.selectionChangeObservable.subscribe(
-      ({ entry, newSelection, oldSelection }) => {
+  protected get serviceName(): string {
+    return 'pokedex';
+  }
+
+  private get allReady(): boolean {
+    const { options, selection, uiSettings } = this._subservicesReady;
+    return options && selection && uiSettings;
+  }
+
+  private get selectionStatistics(): SelectionStatistics {
+    return this._selectionStatisticsSubject.value;
+  }
+
+  public get selectionStatisticsObservable(): Observable<SelectionStatistics> {
+    return this._selectionStatisticsSubject.asObservable();
+  }
+
+  private initialize(): void {
+    this.pokedexSelectionService.selectionChangeObservable
+      .pipe(filter(({ userInput }) => userInput))
+      .subscribe(({ entry, newSelection, oldSelection }) => {
         const { selectedForms, selectedPokemon, ...rest } =
           this.selectionStatistics;
         let newSelectedPokemon = selectedPokemon;
@@ -74,25 +95,32 @@ export class PokedexService extends PokedexBaseService {
           selectedPokemon: newSelectedPokemon,
         });
         console.log(this.selectionStatistics);
-      }
-    );
-  }
+      });
 
-  protected get serviceName(): string {
-    return 'pokedex';
-  }
+    this.pokedexOptionsService.getOptionsObservable().subscribe((options) => {
+      console.log('POKEDEX SERVICE', options);
+      //TODO clear unneeded selection entries
+      this.pokedexDataService.getPokedexList().subscribe(({ data }) => {
+        data.forEach((entry) => {
+          const selection = this.pokedexSelectionService.getSelection(
+            entry.number
+          );
+          if (selection.length > 0) {
+            const allSelected = this.getAllFormSelections(entry);
+            const newSelection: SpecyficSelection[] = [];
 
-  private get allReady(): boolean {
-    const { options, selection, uiSettings } = this._subservicesReady;
-    return options && selection && uiSettings;
-  }
-
-  private get selectionStatistics(): SelectionStatistics {
-    return this._selectionStatisticsSubject.value;
-  }
-
-  public get selectionStatisticsObservable(): Observable<SelectionStatistics> {
-    return this._selectionStatisticsSubject.asObservable();
+            //TODO continue here
+            console.log('OPTION CHANGE', selection, allSelected, newSelection);
+            this.pokedexSelectionService.updateSelection(
+              entry,
+              newSelection,
+              false
+            );
+          }
+        });
+      });
+      this.refreshStatistics();
+    });
   }
 
   private getAllFormSelections(entry: PokedexEntry): SpecyficSelection[] {

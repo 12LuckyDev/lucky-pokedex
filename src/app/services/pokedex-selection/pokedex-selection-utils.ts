@@ -14,14 +14,6 @@ export const getAllSelections = (
 
   const { formsData, regionalForms, genders } = entry;
 
-  if (showGenders) {
-    specyficSelection.push(
-      ...genders.map((g) => ({ formType: null, gender: g }))
-    );
-  } else {
-    specyficSelection.push({ formType: null });
-  }
-
   if (showForms) {
     formsData?.forms.forEach(({ id }) => {
       if (showGenders) {
@@ -39,6 +31,12 @@ export const getAllSelections = (
         specyficSelection.push({ formType: PokeFormType.form, formId: id });
       }
     });
+  } else if (showGenders) {
+    specyficSelection.push(
+      ...genders.map((g) => ({ formType: null, gender: g }))
+    );
+  } else {
+    specyficSelection.push({ formType: null });
   }
 
   if (showRegionalForms) {

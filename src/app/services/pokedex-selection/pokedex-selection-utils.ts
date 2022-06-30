@@ -53,7 +53,10 @@ export const getAllSelections = (
           )
         );
       } else {
-        specyficSelection.push({ formType: PokeFormType.form, formId: region });
+        specyficSelection.push({
+          formType: PokeFormType.regional_form,
+          formId: region,
+        });
       }
     });
   }

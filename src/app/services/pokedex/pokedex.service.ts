@@ -94,23 +94,55 @@ export class PokedexService extends PokedexBaseService {
             selectedForms - oldSelection.length + newSelection.length,
           selectedPokemon: newSelectedPokemon,
         });
-        console.log(this.selectionStatistics);
       });
 
-    this.pokedexOptionsService.getOptionsObservable().subscribe((options) => {
-      console.log('POKEDEX SERVICE', options);
-      //TODO clear unneeded selection entries
+    this.pokedexOptionsService.getOptionsObservable().subscribe(() => {
       this.pokedexDataService.getPokedexList().subscribe(({ data }) => {
         data.forEach((entry) => {
-          const selection = this.pokedexSelectionService.getSelection(
+          const oldSelection = this.pokedexSelectionService.getSelection(
             entry.number
           );
-          if (selection.length > 0) {
-            const allSelected = this.getAllFormSelections(entry);
+          if (oldSelection.length > 0) {
+            const showGenders = this.pokedexOptionsService.getShowGender(entry);
             const newSelection: SpecyficSelection[] = [];
 
-            //TODO continue here
-            console.log('OPTION CHANGE', selection, allSelected, newSelection);
+            this.getAllFormSelections(entry).forEach((selection) => {
+              const { formType, gender, formId } = selection;
+
+              if (formType === null) {
+                if (this.pokedexOptionsService.getShowForms(entry)) {
+                  if (
+                    showGenders
+                      ? oldSelection.find(
+                          (el) => el.formType === null && el.gender === gender
+                        )
+                      : oldSelection.find((el) => el.formType === null)
+                  ) {
+                    newSelection.push(selection);
+                  }
+                } else if (
+                  showGenders
+                    ? oldSelection.find((el) => el.gender === gender)
+                    : oldSelection.length > 0
+                ) {
+                  newSelection.push(selection);
+                }
+              } else if (
+                showGenders
+                  ? oldSelection.find(
+                      (el) =>
+                        el.formType === formType &&
+                        el.formId === formId &&
+                        el.gender === gender
+                    )
+                  : oldSelection.find(
+                      (el) => el.formType === formType && el.formId === formId
+                    )
+              ) {
+                newSelection.push(selection);
+              }
+            });
+
             this.pokedexSelectionService.updateSelection(
               entry,
               newSelection,
@@ -118,8 +150,8 @@ export class PokedexService extends PokedexBaseService {
             );
           }
         });
+        this.refreshStatistics();
       });
-      this.refreshStatistics();
     });
   }
 

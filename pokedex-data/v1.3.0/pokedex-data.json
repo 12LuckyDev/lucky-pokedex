@@ -26,8 +26,7 @@
       "onlyVisual": true,
       "femaleImgPath": "female/3"
     },
-    "rarity": 0,
-    "gigantamax": { "factor": true }
+    "rarity": 0
   },
   {
     "number": 4,
@@ -51,8 +50,7 @@
     "types": [9, 2],
     "origin": 0,
     "genders": [0, 1],
-    "rarity": 0,
-    "gigantamax": { "factor": true }
+    "rarity": 0
   },
   {
     "number": 7,
@@ -76,8 +74,7 @@
     "types": [10],
     "origin": 0,
     "genders": [0, 1],
-    "rarity": 0,
-    "gigantamax": { "factor": true }
+    "rarity": 0
   },
   {
     "number": 10,
@@ -106,8 +103,7 @@
       "onlyVisual": true,
       "femaleImgPath": "female/12"
     },
-    "rarity": 0,
-    "gigantamax": { "factor": true }
+    "rarity": 0
   },
   {
     "number": 13,
@@ -228,8 +224,7 @@
       "onlyVisual": true,
       "femaleImgPath": "female/25"
     },
-    "rarity": 0,
-    "gigantamax": { "factor": true }
+    "rarity": 0
   },
   {
     "number": 26,
@@ -481,8 +476,7 @@
       { "types": [16], "region": 6, "imgPath": "10107" },
       { "types": [8], "region": 7, "imgPath": "10158" }
     ],
-    "rarity": 0,
-    "gigantamax": { "factor": true }
+    "rarity": 0
   },
   {
     "number": 53,
@@ -623,8 +617,7 @@
     "types": [1],
     "origin": 0,
     "genders": [0, 1],
-    "rarity": 0,
-    "gigantamax": { "factor": true }
+    "rarity": 0
   },
   {
     "number": 69,
@@ -852,8 +845,7 @@
     "types": [7, 3],
     "origin": 0,
     "genders": [0, 1],
-    "rarity": 0,
-    "gigantamax": { "factor": true }
+    "rarity": 0
   },
   {
     "number": 95,
@@ -898,8 +890,7 @@
     "types": [10],
     "origin": 0,
     "genders": [0, 1],
-    "rarity": 0,
-    "gigantamax": { "factor": true }
+    "rarity": 0
   },
   {
     "number": 100,
@@ -1196,8 +1187,7 @@
     "types": [10, 14],
     "origin": 0,
     "genders": [0, 1],
-    "rarity": 0,
-    "gigantamax": { "factor": true }
+    "rarity": 0
   },
   {
     "number": 132,
@@ -1218,8 +1208,7 @@
       "onlyVisual": true,
       "femaleImgPath": "133"
     },
-    "rarity": 0,
-    "gigantamax": { "factor": true }
+    "rarity": 0
   },
   {
     "number": 134,
@@ -1299,8 +1288,7 @@
     "types": [0],
     "origin": 0,
     "genders": [0, 1],
-    "rarity": 0,
-    "gigantamax": { "factor": true }
+    "rarity": 0
   },
   {
     "number": 144,
@@ -5295,8 +5283,7 @@
     "types": [3],
     "origin": 4,
     "genders": [0, 1],
-    "rarity": 0,
-    "gigantamax": { "factor": true }
+    "rarity": 0
   },
   {
     "number": 570,
@@ -7779,8 +7766,7 @@
     "types": [8],
     "origin": 6,
     "genders": [2],
-    "rarity": 2,
-    "gigantamax": { "factor": true }
+    "rarity": 2
   },
   {
     "number": 810,
@@ -7804,8 +7790,7 @@
     "types": [11],
     "origin": 7,
     "genders": [0, 1],
-    "rarity": 0,
-    "gigantamax": { "factor": true }
+    "rarity": 0
   },
   {
     "number": 813,
@@ -7829,8 +7814,7 @@
     "types": [9],
     "origin": 7,
     "genders": [0, 1],
-    "rarity": 0,
-    "gigantamax": { "factor": true }
+    "rarity": 0
   },
   {
     "number": 816,
@@ -7854,8 +7838,7 @@
     "types": [10],
     "origin": 7,
     "genders": [0, 1],
-    "rarity": 0,
-    "gigantamax": { "factor": true }
+    "rarity": 0
   },
   {
     "number": 819,
@@ -7895,8 +7878,7 @@
     "types": [2, 8],
     "origin": 7,
     "genders": [0, 1],
-    "rarity": 0,
-    "gigantamax": { "factor": true }
+    "rarity": 0
   },
   {
     "number": 824,
@@ -7920,8 +7902,7 @@
     "types": [6, 13],
     "origin": 7,
     "genders": [0, 1],
-    "rarity": 0,
-    "gigantamax": { "factor": true }
+    "rarity": 0
   },
   {
     "number": 827,
@@ -7985,8 +7966,7 @@
     "types": [10, 5],
     "origin": 7,
     "genders": [0, 1],
-    "rarity": 0,
-    "gigantamax": { "factor": true }
+    "rarity": 0
   },
   {
     "number": 835,
@@ -8026,8 +8006,7 @@
     "types": [5, 9],
     "origin": 7,
     "genders": [0, 1],
-    "rarity": 0,
-    "gigantamax": { "factor": true }
+    "rarity": 0
   },
   {
     "number": 840,
@@ -8043,8 +8022,7 @@
     "types": [11, 15],
     "origin": 7,
     "genders": [0, 1],
-    "rarity": 0,
-    "gigantamax": { "factor": true }
+    "rarity": 0
   },
   {
     "number": 842,
@@ -8052,8 +8030,7 @@
     "types": [11, 15],
     "origin": 7,
     "genders": [0, 1],
-    "rarity": 0,
-    "gigantamax": { "factor": true }
+    "rarity": 0
   },
   {
     "number": 843,
@@ -8069,8 +8046,7 @@
     "types": [4],
     "origin": 7,
     "genders": [0, 1],
-    "rarity": 0,
-    "gigantamax": { "factor": true }
+    "rarity": 0
   },
   {
     "number": 845,
@@ -8128,8 +8104,7 @@
       ],
       "onlyVisual": false,
       "interchandable": false
-    },
-    "gigantamax": { "factor": true }
+    }
   },
   {
     "number": 850,
@@ -8145,8 +8120,7 @@
     "types": [9, 6],
     "origin": 7,
     "genders": [0, 1],
-    "rarity": 0,
-    "gigantamax": { "factor": true }
+    "rarity": 0
   },
   {
     "number": 852,
@@ -8218,8 +8192,7 @@
     "types": [13, 17],
     "origin": 7,
     "genders": [1],
-    "rarity": 0,
-    "gigantamax": { "factor": true }
+    "rarity": 0
   },
   {
     "number": 859,
@@ -8243,8 +8216,7 @@
     "types": [16, 17],
     "origin": 7,
     "genders": [0],
-    "rarity": 0,
-    "gigantamax": { "factor": true }
+    "rarity": 0
   },
   {
     "number": 862,
@@ -8692,8 +8664,7 @@
       ],
       "onlyVisual": true,
       "interchandable": false
-    },
-    "gigantamax": { "factor": true }
+    }
   },
   {
     "number": 870,
@@ -8778,8 +8749,7 @@
     "types": [8],
     "origin": 7,
     "genders": [0, 1],
-    "rarity": 0,
-    "gigantamax": { "factor": true }
+    "rarity": 0
   },
   {
     "number": 880,
@@ -8819,8 +8789,7 @@
     "types": [8, 15],
     "origin": 7,
     "genders": [0, 1],
-    "rarity": 0,
-    "gigantamax": { "factor": true }
+    "rarity": 0
   },
   {
     "number": 885,
@@ -8902,8 +8871,7 @@
       ],
       "onlyVisual": false,
       "interchandable": false
-    },
-    "gigantamax": { "factor": true, "formDiffs": true }
+    }
   },
   {
     "number": 893,

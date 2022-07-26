@@ -5,6 +5,7 @@ import { PokedexBaseService } from 'src/app/base';
 import {
   CountFormsPolicy,
   CountGendersPolicy,
+  CountGigantamaxPolicy,
   CountRegionalFormsPolicy,
   PokeFormType,
 } from 'src/app/enums';
@@ -15,6 +16,7 @@ const DEFAULT_OPTIONS: PokedexOptions = {
   countFormsPolicy: CountFormsPolicy.COUNT_ALL,
   countRegionalFormsPolicy: CountRegionalFormsPolicy.COUNT_ALL,
   countGendersPolicy: CountGendersPolicy.NO_COUNT,
+  countGigantamaxPolicy: CountGigantamaxPolicy.NO_COUNT,
 };
 
 @Injectable({
@@ -149,20 +151,61 @@ export class PokedexOptionsService extends PokedexBaseService {
     return false;
   }
 
+  public getShowGigantamax(entry?: PokedexEntry): boolean {
+    if (entry) {
+      switch (this.options.countGigantamaxPolicy) {
+        case CountGigantamaxPolicy.COUNT_ALL:
+        case CountGigantamaxPolicy.COUNT_FOR_FORMS_WITH_DIFFS:
+        case CountGigantamaxPolicy.NO_COUNT_FOR_FORMS:
+          return !!entry.gigantamax?.factor;
+        case CountGigantamaxPolicy.NO_COUNT:
+          return false;
+      }
+    }
+    return false;
+  }
+
+  public getShowGigantamaxPerForm(entry?: PokedexEntry): boolean {
+    if (entry) {
+      const { formsData, gigantamax } = entry;
+      if (formsData) {
+        const hasForms = isArray(formsData.forms, false);
+        switch (this.options.countGigantamaxPolicy) {
+          case CountGigantamaxPolicy.COUNT_ALL:
+            return hasForms && !!gigantamax?.factor;
+          case CountGigantamaxPolicy.COUNT_FOR_FORMS_WITH_DIFFS:
+            return hasForms && !!gigantamax?.factor && !!gigantamax?.formDiffs;
+          case CountGigantamaxPolicy.NO_COUNT_FOR_FORMS:
+          case CountGigantamaxPolicy.NO_COUNT:
+            return false;
+        }
+      }
+    }
+    return false;
+  }
+
   public getShowTypes(entry?: PokedexEntry): {
     showGenders: boolean;
     showForms: boolean;
     showRegionalForms: boolean;
+    showGigantamax: boolean;
+    showGigantamaxPerForm: boolean;
   } {
     return {
       showGenders: this.getShowGender(entry),
       showForms: this.getShowForms(entry),
       showRegionalForms: this.getShowRegionalForms(entry),
+      showGigantamax: this.getShowGigantamax(entry),
+      showGigantamaxPerForm: this.getShowGigantamaxPerForm(entry),
     };
   }
 
   public getIsExpandable(entry?: PokedexEntry): boolean {
-    return this.getShowForms(entry) || this.getShowRegionalForms(entry);
+    return (
+      this.getShowForms(entry) ||
+      this.getShowRegionalForms(entry) ||
+      this.getShowGigantamax(entry)
+    );
   }
 
   public getShowSelectAllCheckbox(entry?: PokedexEntry): boolean {

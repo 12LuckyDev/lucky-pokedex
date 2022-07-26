@@ -7,10 +7,18 @@ export const getAllSelections = (
     showGenders: boolean;
     showForms: boolean;
     showRegionalForms: boolean;
+    showGigantamax: boolean;
+    showGigantamaxPerForm: boolean;
   }
 ): SpecyficSelection[] => {
   const specyficSelection: SpecyficSelection[] = [];
-  const { showGenders, showForms, showRegionalForms } = showTypes;
+  const {
+    showGenders,
+    showForms,
+    showRegionalForms,
+    showGigantamax,
+    showGigantamaxPerForm,
+  } = showTypes;
 
   const { formsData, regionalForms, genders } = entry;
 
@@ -27,16 +35,47 @@ export const getAllSelections = (
               } as SpecyficSelection)
           )
         );
+
+        if (showGigantamaxPerForm) {
+          specyficSelection.push(
+            ...genders.map(
+              (g) =>
+                ({
+                  formType: PokeFormType.gigantamax,
+                  gender: g,
+                  formId: id,
+                } as SpecyficSelection)
+            )
+          );
+        }
       } else {
         specyficSelection.push({ formType: PokeFormType.form, formId: id });
+        if (showGigantamaxPerForm) {
+          specyficSelection.push({
+            formType: PokeFormType.gigantamax,
+            formId: id,
+          });
+        }
       }
     });
   } else if (showGenders) {
     specyficSelection.push(
       ...genders.map((g) => ({ formType: null, gender: g }))
     );
+    if (showGigantamax) {
+      specyficSelection.push(
+        ...genders.map((g) => ({
+          formType: PokeFormType.gigantamax,
+          formId: 0,
+          gender: g,
+        }))
+      );
+    }
   } else {
     specyficSelection.push({ formType: null });
+    if (showGigantamax) {
+      specyficSelection.push({ formType: PokeFormType.gigantamax, formId: 0 });
+    }
   }
 
   if (showRegionalForms) {

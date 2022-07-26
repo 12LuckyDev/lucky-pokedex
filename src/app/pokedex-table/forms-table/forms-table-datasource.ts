@@ -30,21 +30,43 @@ export class FormsTableDataSource extends PokedexBaseDatasource<PokedexTableForm
     const data: PokedexTableForm[] = [];
     const { formsData, regionalForms, name } = this._entry;
 
+    const showGigantamaxPerForm =
+      this._pokedexOptionsService.getShowGigantamaxPerForm(this._entry);
+
+    if (
+      this._pokedexOptionsService.getShowGigantamax(this._entry) &&
+      !showGigantamaxPerForm
+    ) {
+      data.push({
+        id: 0,
+        types: this._entry.types,
+        formType: PokeFormType.gigantamax,
+        formName: `Gigantamax ${this._entry.name}`,
+      });
+    }
+
     if (formsData && this._pokedexOptionsService.getShowForms(this._entry)) {
-      formsData.forms.forEach((form) =>
-        data.push({ ...form, formType: PokeFormType.form })
-      );
+      formsData.forms.forEach((form) => {
+        data.push({ ...form, formType: PokeFormType.form });
+        if (showGigantamaxPerForm) {
+          data.push({
+            id: form.id,
+            types: form.types,
+            formType: PokeFormType.gigantamax,
+            formName: `Gigantamax ${form.formName}`,
+          });
+        }
+      });
     }
 
     if (
       regionalForms &&
       this._pokedexOptionsService.getShowRegionalForms(this._entry)
     ) {
-      regionalForms.forEach(({ region, types, imgPath, genderDiffs }) =>
+      regionalForms.forEach(({ region, types, genderDiffs }) =>
         data.push({
           id: region,
           types,
-          imgPath,
           genderDiffs,
           formType: PokeFormType.regional_form,
           formName: `${PokeRegionalForm[region]} ${name}`,

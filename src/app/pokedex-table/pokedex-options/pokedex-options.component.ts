@@ -5,6 +5,7 @@ import {
   CountFormsPolicy,
   CountGendersPolicy,
   CountRegionalFormsPolicy,
+  CountGigantamaxPolicy,
 } from 'src/app/enums';
 import { PokedexOptions } from 'src/app/models';
 import {
@@ -27,7 +28,7 @@ const COUNT_FORMS_POLICY_OPTIONS = [
   },
 ];
 
-const COUNT_REGIONAL_FORMS_POLICY = [
+const COUNT_REGIONAL_FORMS_POLICY_OPTIONS = [
   {
     id: CountRegionalFormsPolicy.COUNT_ALL,
     name: CountRegionalFormsPolicy[CountRegionalFormsPolicy.COUNT_ALL],
@@ -38,7 +39,7 @@ const COUNT_REGIONAL_FORMS_POLICY = [
   },
 ];
 
-const COUNT_GENDERS_POLICY = [
+const COUNT_GENDERS_POLICY_OPTIONS = [
   {
     id: CountGendersPolicy.COUNT_ALL,
     name: CountGendersPolicy[CountGendersPolicy.COUNT_ALL],
@@ -54,6 +55,27 @@ const COUNT_GENDERS_POLICY = [
   {
     id: CountGendersPolicy.NO_COUNT,
     name: CountGendersPolicy[CountGendersPolicy.NO_COUNT],
+  },
+];
+
+const COUNT_GIGANTAMAX_POLICY_OPTIONS = [
+  {
+    id: CountGigantamaxPolicy.COUNT_ALL,
+    name: CountGigantamaxPolicy[CountGigantamaxPolicy.COUNT_ALL],
+  },
+  {
+    id: CountGigantamaxPolicy.COUNT_FOR_FORMS_WITH_DIFFS,
+    name: CountGigantamaxPolicy[
+      CountGigantamaxPolicy.COUNT_FOR_FORMS_WITH_DIFFS
+    ],
+  },
+  {
+    id: CountGigantamaxPolicy.NO_COUNT_FOR_FORMS,
+    name: CountGigantamaxPolicy[CountGigantamaxPolicy.NO_COUNT_FOR_FORMS],
+  },
+  {
+    id: CountGigantamaxPolicy.NO_COUNT,
+    name: CountGigantamaxPolicy[CountGigantamaxPolicy.NO_COUNT],
   },
 ];
 
@@ -74,6 +96,7 @@ export class PokedexOptionsComponent extends FormComponent implements OnInit {
       countFormsPolicy: [],
       countRegionalFormsPolicy: [],
       countGendersPolicy: [],
+      countGigantamaxPolicy: [],
     });
     this._expanded = this.pokedexUiServiceService.settings.optionsAreOpen;
   }
@@ -94,11 +117,15 @@ export class PokedexOptionsComponent extends FormComponent implements OnInit {
   }
 
   get countRegionalFormsPolicyOptions() {
-    return COUNT_REGIONAL_FORMS_POLICY;
+    return COUNT_REGIONAL_FORMS_POLICY_OPTIONS;
   }
 
   get countGendersPolicyOptions() {
-    return COUNT_GENDERS_POLICY;
+    return COUNT_GENDERS_POLICY_OPTIONS;
+  }
+
+  get countGigantamaxPolicyOptions() {
+    return COUNT_GIGANTAMAX_POLICY_OPTIONS;
   }
 
   public onPanelClick(state: boolean) {
@@ -117,6 +144,11 @@ export class PokedexOptionsComponent extends FormComponent implements OnInit {
         true
       );
       this.setValue('countGendersPolicy', options.countGendersPolicy, true);
+      this.setValue(
+        'countGigantamaxPolicy',
+        options.countGigantamaxPolicy,
+        true
+      );
     }
   }
 
@@ -125,6 +157,7 @@ export class PokedexOptionsComponent extends FormComponent implements OnInit {
       countFormsPolicy: this.getValue('countFormsPolicy'),
       countRegionalFormsPolicy: this.getValue('countRegionalFormsPolicy'),
       countGendersPolicy: this.getValue('countGendersPolicy'),
+      countGigantamaxPolicy: this.getValue('countGigantamaxPolicy'),
     };
   }
 }

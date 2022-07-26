@@ -10,7 +10,7 @@ export const getImagePath = (
   }
 
   const { gender, form } = opt;
-  const { number, formsData } = entry;
+  const { number, formsData, gigantamax } = entry;
 
   let path = number.toString();
 
@@ -22,6 +22,9 @@ export const getImagePath = (
         break;
       case PokeFormType.regional_form:
         path += `_rf${id}`;
+        break;
+      case PokeFormType.gigantamax:
+        path += !!gigantamax?.formDiffs ? `_${id}_g` : '_g';
         break;
     }
   } else if (formsData) {

@@ -1,24 +1,21 @@
 import { PokeFormType } from 'src/app/enums';
-import { PokedexEntry, SpecyficSelection } from 'src/app/models';
+import {
+  PokedexEntry,
+  PokedexShowTypes,
+  SpecyficSelection,
+} from 'src/app/models';
 
 export const getAllSelections = (
   entry: PokedexEntry,
-  showTypes: {
-    showGenders: boolean;
-    showForms: boolean;
-    showRegionalForms: boolean;
-    showGigantamax: boolean;
-    showGigantamaxPerForm: boolean;
-  }
-): SpecyficSelection[] => {
-  const specyficSelection: SpecyficSelection[] = [];
-  const {
+  {
     showGenders,
     showForms,
     showRegionalForms,
     showGigantamax,
     showGigantamaxPerForm,
-  } = showTypes;
+  }: PokedexShowTypes
+): SpecyficSelection[] => {
+  const specyficSelection: SpecyficSelection[] = [];
 
   const { formsData, regionalForms, genders } = entry;
 

@@ -9,3 +9,4 @@ export * from './pokedex-ui-settings.model';
 export * from './selection/specyfic-selection.model';
 export * from './selection/selection-statistics.model';
 export * from './pokedex-gigantamax.model';
+export * from './pokedex-show-types.model';

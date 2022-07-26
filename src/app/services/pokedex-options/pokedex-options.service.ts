@@ -9,7 +9,12 @@ import {
   CountRegionalFormsPolicy,
   PokeFormType,
 } from 'src/app/enums';
-import { PokedexEntry, PokedexOptions, PokedexTableForm } from 'src/app/models';
+import {
+  PokedexEntry,
+  PokedexOptions,
+  PokedexShowTypes,
+  PokedexTableForm,
+} from 'src/app/models';
 import { PokedexStorageService } from '../pokedex-storage/pokedex-storage.service';
 
 const DEFAULT_OPTIONS: PokedexOptions = {
@@ -184,13 +189,7 @@ export class PokedexOptionsService extends PokedexBaseService {
     return false;
   }
 
-  public getShowTypes(entry?: PokedexEntry): {
-    showGenders: boolean;
-    showForms: boolean;
-    showRegionalForms: boolean;
-    showGigantamax: boolean;
-    showGigantamaxPerForm: boolean;
-  } {
+  public getShowTypes(entry?: PokedexEntry): PokedexShowTypes {
     return {
       showGenders: this.getShowGender(entry),
       showForms: this.getShowForms(entry),

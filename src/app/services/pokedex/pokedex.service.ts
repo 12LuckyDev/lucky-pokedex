@@ -3,12 +3,13 @@ import { BehaviorSubject, filter, merge, Observable } from 'rxjs';
 import { PokedexBaseService } from 'src/app/base';
 import {
   PokedexEntry,
+  PokedexTableForm,
   SelectionStatistics,
   SpecyficSelection,
 } from 'src/app/models';
+import { getAllSelections, getTableFormsList } from 'src/app/utils';
 import { PokedexDataService } from '../pokedex-data/pokedex-data.service';
 import { PokedexOptionsService } from '../pokedex-options/pokedex-options.service';
-import { getAllSelections } from '../pokedex-selection/pokedex-selection-utils';
 import { PokedexSelectionService } from '../pokedex-selection/pokedex-selection.service';
 import { PokedexUiServiceService } from '../pokedex-ui-service/pokedex-ui-service.service';
 
@@ -153,6 +154,13 @@ export class PokedexService extends PokedexBaseService {
         this.refreshStatistics();
       });
     });
+  }
+
+  public getTableFormsList(entry: PokedexEntry): PokedexTableForm[] {
+    return getTableFormsList(
+      entry,
+      this.pokedexOptionsService.getShowTypes(entry)
+    );
   }
 
   private getAllFormSelections(entry: PokedexEntry): SpecyficSelection[] {

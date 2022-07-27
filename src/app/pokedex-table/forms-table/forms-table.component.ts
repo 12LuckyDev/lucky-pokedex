@@ -7,7 +7,7 @@ import {
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTable } from '@angular/material/table';
 import { PokedexTableForm } from 'src/app/models/pokedex-table-form.model';
-import { PokedexOptionsService } from 'src/app/services';
+import { PokedexOptionsService, PokedexService } from 'src/app/services';
 import { PokedexBaseComponent } from '../pokedex-base-component/pokedex-base.component';
 import { FormsTableDataSource } from './forms-table-datasource';
 
@@ -27,7 +27,8 @@ export class FormsTableComponent
 
   constructor(
     private cdref: ChangeDetectorRef,
-    private pokedexOptionsService: PokedexOptionsService
+    private pokedexOptionsService: PokedexOptionsService,
+    private pokedexService: PokedexService
   ) {
     super();
   }
@@ -46,6 +47,7 @@ export class FormsTableComponent
 
   ngAfterViewInit(): void {
     this.dataSource = new FormsTableDataSource(
+      this.pokedexService,
       this.pokedexOptionsService,
       this.paginator,
       this.entry

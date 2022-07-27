@@ -18,9 +18,11 @@ export const getImagePath = (
     const { formType, id } = form;
     switch (formType) {
       case PokeFormType.form:
+      case PokeFormType.form_alpha:
         path += `_${id}`;
         break;
       case PokeFormType.regional_form:
+      case PokeFormType.regional_form_alpha:
         path += `_rf${id}`;
         break;
       case PokeFormType.gigantamax:

@@ -6,6 +6,7 @@ import {
   CountGendersPolicy,
   CountRegionalFormsPolicy,
   CountGigantamaxPolicy,
+  CountAlphaPolicy,
 } from 'src/app/enums';
 import { PokedexOptions } from 'src/app/models';
 import {
@@ -79,6 +80,17 @@ const COUNT_GIGANTAMAX_POLICY_OPTIONS = [
   },
 ];
 
+const COUNT_ALPHA_POLICY_OPTIONS = [
+  {
+    id: CountAlphaPolicy.COUNT,
+    name: CountAlphaPolicy[CountAlphaPolicy.COUNT],
+  },
+  {
+    id: CountAlphaPolicy.NO_COUNT,
+    name: CountAlphaPolicy[CountAlphaPolicy.NO_COUNT],
+  },
+];
+
 @Component({
   selector: 'app-pokedex-options',
   templateUrl: './pokedex-options.component.html',
@@ -97,6 +109,7 @@ export class PokedexOptionsComponent extends FormComponent implements OnInit {
       countRegionalFormsPolicy: [],
       countGendersPolicy: [],
       countGigantamaxPolicy: [],
+      countAlphaPolicy: [],
     });
     this._expanded = this.pokedexUiServiceService.settings.optionsAreOpen;
   }
@@ -128,6 +141,10 @@ export class PokedexOptionsComponent extends FormComponent implements OnInit {
     return COUNT_GIGANTAMAX_POLICY_OPTIONS;
   }
 
+  get countAlphaPolicyOptions() {
+    return COUNT_ALPHA_POLICY_OPTIONS;
+  }
+
   public onPanelClick(state: boolean) {
     if (this._expanded !== state) {
       this.pokedexUiServiceService.optionsAreOpen = state;
@@ -135,7 +152,6 @@ export class PokedexOptionsComponent extends FormComponent implements OnInit {
   }
 
   private setOptions(options: PokedexOptions | null): void {
-    console.log('SET');
     if (options) {
       this.setValue('countFormsPolicy', options.countFormsPolicy, true);
       this.setValue(
@@ -149,6 +165,7 @@ export class PokedexOptionsComponent extends FormComponent implements OnInit {
         options.countGigantamaxPolicy,
         true
       );
+      this.setValue('countAlphaPolicy', options.countAlphaPolicy, true);
     }
   }
 
@@ -158,6 +175,7 @@ export class PokedexOptionsComponent extends FormComponent implements OnInit {
       countRegionalFormsPolicy: this.getValue('countRegionalFormsPolicy'),
       countGendersPolicy: this.getValue('countGendersPolicy'),
       countGigantamaxPolicy: this.getValue('countGigantamaxPolicy'),
+      countAlphaPolicy: this.getValue('countAlphaPolicy'),
     };
   }
 }

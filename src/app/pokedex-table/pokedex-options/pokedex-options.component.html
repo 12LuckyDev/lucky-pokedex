@@ -66,6 +66,18 @@
               </mat-option>
             </mat-select>
           </mat-form-field>
+
+          <mat-form-field fxFlex="1 1" appearance="fill">
+            <mat-label>Alpha counting policy</mat-label>
+            <mat-select color="primary" formControlName="countAlphaPolicy">
+              <mat-option
+                *ngFor="let option of countAlphaPolicyOptions"
+                [value]="option.id"
+              >
+                {{ option.name }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
         </div>
       </mat-card-content>
     </mat-card>

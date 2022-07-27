@@ -1,24 +1,30 @@
 import { MatPaginator } from '@angular/material/paginator';
 import { Observable } from 'rxjs';
 import { PokedexEntry } from 'src/app/models';
-import { PokedexOptionsService } from 'src/app/services';
+import { PokedexOptionsService, PokedexService } from 'src/app/services';
 import { PokedexTableForm } from 'src/app/models/pokedex-table-form.model';
-import { PokeFormType, PokeRegionalForm } from 'src/app/enums';
 import { getPagedData } from 'src/app/utils';
 import { PokedexBaseDatasource } from 'src/app/base';
 
 export class FormsTableDataSource extends PokedexBaseDatasource<PokedexTableForm> {
+  private _data: PokedexTableForm[];
+
   constructor(
+    private _pokedexService: PokedexService,
     private _pokedexOptionsService: PokedexOptionsService,
     private _paginator: MatPaginator,
     private _entry: PokedexEntry
   ) {
     super();
+    this._data = this._pokedexService.getTableFormsList(this._entry);
   }
 
   connect(): Observable<PokedexTableForm[]> {
     this._subscriptions.add(
-      this._pokedexOptionsService.getOptionsObservable().subscribe(this.query)
+      this._pokedexOptionsService.getOptionsObservable().subscribe(() => {
+        this._data = this._pokedexService.getTableFormsList(this._entry);
+        this.query();
+      })
     );
 
     this._subscriptions.add(this._paginator.page.subscribe(this.query));
@@ -27,56 +33,13 @@ export class FormsTableDataSource extends PokedexBaseDatasource<PokedexTableForm
   }
 
   query = (): void => {
-    const data: PokedexTableForm[] = [];
-    const { formsData, regionalForms, name } = this._entry;
-
-    const showGigantamaxPerForm =
-      this._pokedexOptionsService.getShowGigantamaxPerForm(this._entry);
-
-    if (
-      this._pokedexOptionsService.getShowGigantamax(this._entry) &&
-      !showGigantamaxPerForm
-    ) {
-      data.push({
-        id: 0,
-        types: this._entry.types,
-        formType: PokeFormType.gigantamax,
-        formName: `Gigantamax ${this._entry.name}`,
-      });
-    }
-
-    if (formsData && this._pokedexOptionsService.getShowForms(this._entry)) {
-      formsData.forms.forEach((form) => {
-        data.push({ ...form, formType: PokeFormType.form });
-        if (showGigantamaxPerForm) {
-          data.push({
-            id: form.id,
-            types: form.types,
-            formType: PokeFormType.gigantamax,
-            formName: `Gigantamax ${form.formName}`,
-          });
-        }
-      });
-    }
-
-    if (
-      regionalForms &&
-      this._pokedexOptionsService.getShowRegionalForms(this._entry)
-    ) {
-      regionalForms.forEach(({ region, types, genderDiffs }) =>
-        data.push({
-          id: region,
-          types,
-          genderDiffs,
-          formType: PokeFormType.regional_form,
-          formName: `${PokeRegionalForm[region]} ${name}`,
-        })
-      );
-    }
-
     this._dataSubject.next(
-      getPagedData(data, this._paginator.pageIndex, this._paginator.pageSize)
+      getPagedData(
+        this._data,
+        this._paginator.pageIndex,
+        this._paginator.pageSize
+      )
     );
-    this._countSubject.next(data.length);
+    this._countSubject.next(this._data.length);
   };
 }

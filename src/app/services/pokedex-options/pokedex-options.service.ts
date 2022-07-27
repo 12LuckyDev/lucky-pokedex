@@ -3,11 +3,13 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, skip } from 'rxjs';
 import { PokedexBaseService } from 'src/app/base';
 import {
+  CountAlphaPolicy,
   CountFormsPolicy,
   CountGendersPolicy,
   CountGigantamaxPolicy,
   CountRegionalFormsPolicy,
   PokeFormType,
+  PokeRegion,
 } from 'src/app/enums';
 import {
   PokedexEntry,
@@ -22,6 +24,7 @@ const DEFAULT_OPTIONS: PokedexOptions = {
   countRegionalFormsPolicy: CountRegionalFormsPolicy.COUNT_ALL,
   countGendersPolicy: CountGendersPolicy.NO_COUNT,
   countGigantamaxPolicy: CountGigantamaxPolicy.NO_COUNT,
+  countAlphaPolicy: CountAlphaPolicy.NO_COUNT,
 };
 
 @Injectable({
@@ -63,12 +66,19 @@ export class PokedexOptionsService extends PokedexBaseService {
   }
 
   public get tablesColumns(): string[] {
-    const { countGendersPolicy, countFormsPolicy, countRegionalFormsPolicy } =
-      this.options;
+    const {
+      countGendersPolicy,
+      countFormsPolicy,
+      countRegionalFormsPolicy,
+      countGigantamaxPolicy,
+      countAlphaPolicy,
+    } = this.options;
 
     const showExpand =
       countFormsPolicy !== CountFormsPolicy.NO_COUNT ||
-      countRegionalFormsPolicy !== CountRegionalFormsPolicy.NO_COUNT;
+      countRegionalFormsPolicy !== CountRegionalFormsPolicy.NO_COUNT ||
+      countGigantamaxPolicy !== CountGigantamaxPolicy.NO_COUNT ||
+      countAlphaPolicy !== CountAlphaPolicy.NO_COUNT;
 
     const colums =
       countGendersPolicy !== CountGendersPolicy.NO_COUNT || showExpand
@@ -144,7 +154,7 @@ export class PokedexOptionsService extends PokedexBaseService {
     return false;
   }
 
-  public getShowRegionalForms(entry?: PokedexEntry): boolean {
+  private getShowRegionalForms(entry?: PokedexEntry): boolean {
     if (entry) {
       switch (this.options.countRegionalFormsPolicy) {
         case CountRegionalFormsPolicy.COUNT_ALL:
@@ -156,7 +166,7 @@ export class PokedexOptionsService extends PokedexBaseService {
     return false;
   }
 
-  public getShowGigantamax(entry?: PokedexEntry): boolean {
+  private getShowGigantamax(entry?: PokedexEntry): boolean {
     if (entry) {
       switch (this.options.countGigantamaxPolicy) {
         case CountGigantamaxPolicy.COUNT_ALL:
@@ -170,7 +180,7 @@ export class PokedexOptionsService extends PokedexBaseService {
     return false;
   }
 
-  public getShowGigantamaxPerForm(entry?: PokedexEntry): boolean {
+  private getShowGigantamaxPerForm(entry?: PokedexEntry): boolean {
     if (entry) {
       const { formsData, gigantamax } = entry;
       if (formsData) {
@@ -189,6 +199,47 @@ export class PokedexOptionsService extends PokedexBaseService {
     return false;
   }
 
+  private getShowAlpha(entry?: PokedexEntry): boolean {
+    if (entry) {
+      switch (this.options.countAlphaPolicy) {
+        case CountAlphaPolicy.COUNT:
+          return !!entry.alpha;
+        case CountAlphaPolicy.NO_COUNT:
+          return false;
+      }
+    }
+    return false;
+  }
+
+  private getShowAlphaForms(entry?: PokedexEntry): number[] {
+    const forms: number[] = [];
+    if (entry && this.options.countAlphaPolicy === CountAlphaPolicy.COUNT) {
+      const { formsData } = entry;
+      if (isArray(formsData?.forms, false)) {
+        formsData?.forms.forEach(({ alpha, id }) => {
+          if (alpha) {
+            forms.push(id);
+          }
+        });
+      }
+    }
+    return forms;
+  }
+
+  private getShowAlphaRegionalForms(entry?: PokedexEntry): PokeRegion[] {
+    const forms: number[] = [];
+    if (entry && this.options.countAlphaPolicy === CountAlphaPolicy.COUNT) {
+      if (isArray(entry.regionalForms, false)) {
+        entry.regionalForms?.forEach(({ alpha, region }) => {
+          if (alpha) {
+            forms.push(region);
+          }
+        });
+      }
+    }
+    return forms;
+  }
+
   public getShowTypes(entry?: PokedexEntry): PokedexShowTypes {
     return {
       showGenders: this.getShowGender(entry),
@@ -196,6 +247,9 @@ export class PokedexOptionsService extends PokedexBaseService {
       showRegionalForms: this.getShowRegionalForms(entry),
       showGigantamax: this.getShowGigantamax(entry),
       showGigantamaxPerForm: this.getShowGigantamaxPerForm(entry),
+      showAlpha: this.getShowAlpha(entry),
+      showAlphaForms: this.getShowAlphaForms(entry),
+      showAlphaRegionalForms: this.getShowAlphaRegionalForms(entry),
     };
   }
 
@@ -203,7 +257,8 @@ export class PokedexOptionsService extends PokedexBaseService {
     return (
       this.getShowForms(entry) ||
       this.getShowRegionalForms(entry) ||
-      this.getShowGigantamax(entry)
+      this.getShowGigantamax(entry) ||
+      this.getShowAlpha(entry)
     );
   }
 

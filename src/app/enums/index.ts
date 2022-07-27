@@ -8,3 +8,4 @@ export * from './poke-rarity';
 export * from './poke-form-type.enum';
 export * from './poke-regional-form.enum';
 export * from './count-gigantamax-policy.enum';
+export * from './count-alpha-policy.enum';

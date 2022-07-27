@@ -1,4 +1,5 @@
 import {
+  CountAlphaPolicy,
   CountFormsPolicy,
   CountGendersPolicy,
   CountGigantamaxPolicy,
@@ -10,4 +11,5 @@ export interface PokedexOptions {
   countRegionalFormsPolicy: CountRegionalFormsPolicy | null;
   countGendersPolicy: CountGendersPolicy | null;
   countGigantamaxPolicy: CountGigantamaxPolicy | null;
+  countAlphaPolicy: CountAlphaPolicy | null;
 }

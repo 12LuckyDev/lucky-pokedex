@@ -5,4 +5,5 @@ export interface PokedexFormEntry {
   formName: string;
   types: PokeType[];
   imgPath: string;
+  alpha?: boolean;
 }

@@ -229,8 +229,7 @@
       "femaleImgPath": "female/25"
     },
     "rarity": 0,
-    "gigantamax": { "factor": true },
-    "alpha": true
+    "gigantamax": { "factor": true }
   },
   {
     "number": 26,
@@ -244,8 +243,7 @@
       "femaleImgPath": "female/26"
     },
     "regionalForms": [{ "types": [12, 13], "region": 6, "imgPath": "10100" }],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 27,
@@ -319,8 +317,7 @@
     "types": [17],
     "origin": 0,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 36,
@@ -328,8 +325,7 @@
     "types": [17],
     "origin": 0,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 37,
@@ -338,8 +334,7 @@
     "origin": 0,
     "genders": [0, 1],
     "regionalForms": [{ "types": [14], "region": 6, "imgPath": "10103" }],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 38,
@@ -348,8 +343,7 @@
     "origin": 0,
     "genders": [0, 1],
     "regionalForms": [{ "types": [14, 17], "region": 6, "imgPath": "10104" }],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 39,
@@ -378,8 +372,7 @@
       "onlyVisual": true,
       "femaleImgPath": "female/41"
     },
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 42,
@@ -392,8 +385,7 @@
       "onlyVisual": true,
       "femaleImgPath": "female/42"
     },
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 43,
@@ -435,8 +427,7 @@
     "types": [6, 11],
     "origin": 0,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 47,
@@ -444,8 +435,7 @@
     "types": [6, 11],
     "origin": 0,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 48,
@@ -509,8 +499,7 @@
     "types": [10],
     "origin": 0,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 55,
@@ -518,8 +507,7 @@
     "types": [10],
     "origin": 0,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 56,
@@ -544,9 +532,7 @@
     "origin": 0,
     "genders": [0, 1],
     "rarity": 0,
-    "regionalForms": [
-      { "region": 9, "imgPath": "58", "types": [9, 5], "alpha": true }
-    ]
+    "regionalForms": [{ "region": 9, "imgPath": "58", "types": [9, 5] }]
   },
   {
     "number": 59,
@@ -555,9 +541,7 @@
     "origin": 0,
     "genders": [0, 1],
     "rarity": 0,
-    "regionalForms": [
-      { "region": 9, "imgPath": "59", "types": [9, 5], "alpha": true }
-    ]
+    "regionalForms": [{ "region": 9, "imgPath": "59", "types": [9, 5] }]
   },
   {
     "number": 60,
@@ -589,8 +573,7 @@
     "types": [13],
     "origin": 0,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 64,
@@ -603,8 +586,7 @@
       "onlyVisual": true,
       "femaleImgPath": "female/64"
     },
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 65,
@@ -617,8 +599,7 @@
       "onlyVisual": true,
       "femaleImgPath": "female/65"
     },
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 66,
@@ -626,8 +607,7 @@
     "types": [1],
     "origin": 0,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 67,
@@ -635,8 +615,7 @@
     "types": [1],
     "origin": 0,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 68,
@@ -645,8 +624,7 @@
     "origin": 0,
     "genders": [0, 1],
     "rarity": 0,
-    "gigantamax": { "factor": true },
-    "alpha": true
+    "gigantamax": { "factor": true }
   },
   {
     "number": 69,
@@ -678,8 +656,7 @@
     "types": [10, 3],
     "origin": 0,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 73,
@@ -687,8 +664,7 @@
     "types": [10, 3],
     "origin": 0,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 74,
@@ -697,8 +673,7 @@
     "origin": 0,
     "genders": [0, 1],
     "regionalForms": [{ "types": [5, 12], "region": 6, "imgPath": "10109" }],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 75,
@@ -707,8 +682,7 @@
     "origin": 0,
     "genders": [0, 1],
     "regionalForms": [{ "types": [5, 12], "region": 6, "imgPath": "10110" }],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 76,
@@ -717,8 +691,7 @@
     "origin": 0,
     "genders": [0, 1],
     "regionalForms": [{ "types": [5, 12], "region": 6, "imgPath": "10111" }],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 77,
@@ -727,8 +700,7 @@
     "origin": 0,
     "genders": [0, 1],
     "regionalForms": [{ "types": [13], "region": 7, "imgPath": "10159" }],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 78,
@@ -737,8 +709,7 @@
     "origin": 0,
     "genders": [0, 1],
     "regionalForms": [{ "types": [13, 17], "region": 7, "imgPath": "10160" }],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 79,
@@ -764,8 +735,7 @@
     "types": [12, 8],
     "origin": 0,
     "genders": [2],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 82,
@@ -773,8 +743,7 @@
     "types": [12, 8],
     "origin": 0,
     "genders": [2],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 83,
@@ -867,8 +836,7 @@
     "types": [7, 3],
     "origin": 0,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 93,
@@ -876,8 +844,7 @@
     "types": [7, 3],
     "origin": 0,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 94,
@@ -886,8 +853,7 @@
     "origin": 0,
     "genders": [0, 1],
     "rarity": 0,
-    "gigantamax": { "factor": true },
-    "alpha": true
+    "gigantamax": { "factor": true }
   },
   {
     "number": 95,
@@ -895,8 +861,7 @@
     "types": [5, 4],
     "origin": 0,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 96,
@@ -943,9 +908,7 @@
     "origin": 0,
     "genders": [2],
     "rarity": 0,
-    "regionalForms": [
-      { "region": 9, "imgPath": "100", "types": [12, 11], "alpha": true }
-    ]
+    "regionalForms": [{ "region": 9, "imgPath": "100", "types": [12, 11] }]
   },
   {
     "number": 101,
@@ -954,9 +917,7 @@
     "origin": 0,
     "genders": [2],
     "rarity": 0,
-    "regionalForms": [
-      { "region": 9, "imgPath": "101", "types": [12, 11], "alpha": true }
-    ]
+    "regionalForms": [{ "region": 9, "imgPath": "101", "types": [12, 11] }]
   },
   {
     "number": 102,
@@ -1014,8 +975,7 @@
     "types": [0],
     "origin": 0,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 109,
@@ -1045,8 +1005,7 @@
       "onlyVisual": true,
       "femaleImgPath": "female/111"
     },
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 112,
@@ -1059,8 +1018,7 @@
       "onlyVisual": true,
       "femaleImgPath": "female/112"
     },
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 113,
@@ -1068,8 +1026,7 @@
     "types": [0],
     "origin": 0,
     "genders": [1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 114,
@@ -1077,8 +1034,7 @@
     "types": [11],
     "origin": 0,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 115,
@@ -1153,8 +1109,7 @@
     "origin": 0,
     "genders": [0, 1],
     "regionalForms": [{ "types": [14, 13], "region": 7, "imgPath": "10165" }],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 123,
@@ -1167,8 +1122,7 @@
       "onlyVisual": true,
       "femaleImgPath": "female/123"
     },
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 124,
@@ -1184,8 +1138,7 @@
     "types": [12],
     "origin": 0,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 126,
@@ -1193,8 +1146,7 @@
     "types": [9],
     "origin": 0,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 127,
@@ -1223,8 +1175,7 @@
       "onlyVisual": true,
       "femaleImgPath": "female/129"
     },
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 130,
@@ -1237,8 +1188,7 @@
       "onlyVisual": true,
       "femaleImgPath": "female/130"
     },
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 131,
@@ -1269,8 +1219,7 @@
       "femaleImgPath": "133"
     },
     "rarity": 0,
-    "gigantamax": { "factor": true },
-    "alpha": true
+    "gigantamax": { "factor": true }
   },
   {
     "number": 134,
@@ -1278,8 +1227,7 @@
     "types": [10],
     "origin": 0,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 135,
@@ -1287,8 +1235,7 @@
     "types": [12],
     "origin": 0,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 136,
@@ -1296,8 +1243,7 @@
     "types": [9],
     "origin": 0,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 137,
@@ -1305,8 +1251,7 @@
     "types": [0],
     "origin": 0,
     "genders": [2],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 138,
@@ -1355,8 +1300,7 @@
     "origin": 0,
     "genders": [0, 1],
     "rarity": 0,
-    "gigantamax": { "factor": true },
-    "alpha": true
+    "gigantamax": { "factor": true }
   },
   {
     "number": 144,
@@ -1460,8 +1404,7 @@
     "types": [9],
     "origin": 1,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 156,
@@ -1469,8 +1412,7 @@
     "types": [9],
     "origin": 1,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 157,
@@ -1479,9 +1421,7 @@
     "origin": 1,
     "genders": [0, 1],
     "rarity": 0,
-    "regionalForms": [
-      { "region": 9, "imgPath": "157", "types": [9, 7], "alpha": true }
-    ]
+    "regionalForms": [{ "region": 9, "imgPath": "157", "types": [9, 7] }]
   },
   {
     "number": 158,
@@ -1587,8 +1527,7 @@
     "types": [3, 2],
     "origin": 1,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 170,
@@ -1612,8 +1551,7 @@
     "types": [12],
     "origin": 1,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 173,
@@ -1621,8 +1559,7 @@
     "types": [17],
     "origin": 1,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 174,
@@ -1638,8 +1575,7 @@
     "types": [17],
     "origin": 1,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 176,
@@ -1647,8 +1583,7 @@
     "types": [17, 2],
     "origin": 1,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 177,
@@ -1730,8 +1665,7 @@
       "onlyVisual": true,
       "femaleImgPath": "female/185"
     },
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 186,
@@ -1781,8 +1715,7 @@
       "onlyVisual": true,
       "femaleImgPath": "female/190"
     },
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 191,
@@ -1806,8 +1739,7 @@
     "types": [6, 2],
     "origin": 1,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 194,
@@ -1841,8 +1773,7 @@
     "types": [13],
     "origin": 1,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 197,
@@ -1850,8 +1781,7 @@
     "types": [16],
     "origin": 1,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 198,
@@ -1864,8 +1794,7 @@
       "onlyVisual": true,
       "femaleImgPath": "female/198"
     },
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 199,
@@ -1882,8 +1811,7 @@
     "types": [7],
     "origin": 1,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 201,
@@ -1894,202 +1822,39 @@
     "rarity": 0,
     "formsData": {
       "forms": [
-        {
-          "formName": "A",
-          "types": [13],
-          "imgPath": "201",
-          "id": 1,
-          "alpha": true
-        },
-        {
-          "formName": "B",
-          "types": [13],
-          "imgPath": "201-b",
-          "id": 2,
-          "alpha": true
-        },
-        {
-          "formName": "C",
-          "types": [13],
-          "imgPath": "201-c",
-          "id": 3,
-          "alpha": true
-        },
-        {
-          "formName": "D",
-          "types": [13],
-          "imgPath": "201-d",
-          "id": 4,
-          "alpha": true
-        },
-        {
-          "formName": "E",
-          "types": [13],
-          "imgPath": "201-e",
-          "id": 5,
-          "alpha": true
-        },
-        {
-          "formName": "F",
-          "types": [13],
-          "imgPath": "201-f",
-          "id": 6,
-          "alpha": true
-        },
-        {
-          "formName": "G",
-          "types": [13],
-          "imgPath": "201-g",
-          "id": 7,
-          "alpha": true
-        },
-        {
-          "formName": "H",
-          "types": [13],
-          "imgPath": "201-h",
-          "id": 8,
-          "alpha": true
-        },
-        {
-          "formName": "I",
-          "types": [13],
-          "imgPath": "201-i",
-          "id": 9,
-          "alpha": true
-        },
-        {
-          "formName": "J",
-          "types": [13],
-          "imgPath": "201-j",
-          "id": 10,
-          "alpha": true
-        },
-        {
-          "formName": "K",
-          "types": [13],
-          "imgPath": "201-k",
-          "id": 11,
-          "alpha": true
-        },
-        {
-          "formName": "L",
-          "types": [13],
-          "imgPath": "201-l",
-          "id": 12,
-          "alpha": true
-        },
-        {
-          "formName": "M",
-          "types": [13],
-          "imgPath": "201-m",
-          "id": 13,
-          "alpha": true
-        },
-        {
-          "formName": "N",
-          "types": [13],
-          "imgPath": "201-n",
-          "id": 14,
-          "alpha": true
-        },
-        {
-          "formName": "O",
-          "types": [13],
-          "imgPath": "201-o",
-          "id": 15,
-          "alpha": true
-        },
-        {
-          "formName": "P",
-          "types": [13],
-          "imgPath": "201-p",
-          "id": 16,
-          "alpha": true
-        },
-        {
-          "formName": "Q",
-          "types": [13],
-          "imgPath": "201-q",
-          "id": 17,
-          "alpha": true
-        },
-        {
-          "formName": "R",
-          "types": [13],
-          "imgPath": "201-r",
-          "id": 18,
-          "alpha": true
-        },
-        {
-          "formName": "S",
-          "types": [13],
-          "imgPath": "201-s",
-          "id": 19,
-          "alpha": true
-        },
-        {
-          "formName": "T",
-          "types": [13],
-          "imgPath": "201-t",
-          "id": 20,
-          "alpha": true
-        },
-        {
-          "formName": "U",
-          "types": [13],
-          "imgPath": "201-u",
-          "id": 21,
-          "alpha": true
-        },
-        {
-          "formName": "V",
-          "types": [13],
-          "imgPath": "201-v",
-          "id": 22,
-          "alpha": true
-        },
-        {
-          "formName": "W",
-          "types": [13],
-          "imgPath": "201-w",
-          "id": 23,
-          "alpha": true
-        },
-        {
-          "formName": "X",
-          "types": [13],
-          "imgPath": "201-x",
-          "id": 24,
-          "alpha": true
-        },
-        {
-          "formName": "Y",
-          "types": [13],
-          "imgPath": "201-y",
-          "id": 25,
-          "alpha": true
-        },
-        {
-          "formName": "Z",
-          "types": [13],
-          "imgPath": "201-z",
-          "id": 26,
-          "alpha": true
-        },
+        { "formName": "A", "types": [13], "imgPath": "201", "id": 1 },
+        { "formName": "B", "types": [13], "imgPath": "201-b", "id": 2 },
+        { "formName": "C", "types": [13], "imgPath": "201-c", "id": 3 },
+        { "formName": "D", "types": [13], "imgPath": "201-d", "id": 4 },
+        { "formName": "E", "types": [13], "imgPath": "201-e", "id": 5 },
+        { "formName": "F", "types": [13], "imgPath": "201-f", "id": 6 },
+        { "formName": "G", "types": [13], "imgPath": "201-g", "id": 7 },
+        { "formName": "H", "types": [13], "imgPath": "201-h", "id": 8 },
+        { "formName": "I", "types": [13], "imgPath": "201-i", "id": 9 },
+        { "formName": "J", "types": [13], "imgPath": "201-j", "id": 10 },
+        { "formName": "K", "types": [13], "imgPath": "201-k", "id": 11 },
+        { "formName": "L", "types": [13], "imgPath": "201-l", "id": 12 },
+        { "formName": "M", "types": [13], "imgPath": "201-m", "id": 13 },
+        { "formName": "N", "types": [13], "imgPath": "201-n", "id": 14 },
+        { "formName": "O", "types": [13], "imgPath": "201-o", "id": 15 },
+        { "formName": "P", "types": [13], "imgPath": "201-p", "id": 16 },
+        { "formName": "Q", "types": [13], "imgPath": "201-q", "id": 17 },
+        { "formName": "R", "types": [13], "imgPath": "201-r", "id": 18 },
+        { "formName": "S", "types": [13], "imgPath": "201-s", "id": 19 },
+        { "formName": "T", "types": [13], "imgPath": "201-t", "id": 20 },
+        { "formName": "U", "types": [13], "imgPath": "201-u", "id": 21 },
+        { "formName": "V", "types": [13], "imgPath": "201-v", "id": 22 },
+        { "formName": "W", "types": [13], "imgPath": "201-w", "id": 23 },
+        { "formName": "X", "types": [13], "imgPath": "201-x", "id": 24 },
+        { "formName": "Y", "types": [13], "imgPath": "201-y", "id": 25 },
+        { "formName": "Z", "types": [13], "imgPath": "201-z", "id": 26 },
         {
           "formName": "!",
           "types": [13],
           "imgPath": "201-exclamation",
-          "id": 27,
-          "alpha": true
+          "id": 27
         },
-        {
-          "formName": "?",
-          "types": [13],
-          "imgPath": "201-question",
-          "id": 28,
-          "alpha": true
-        }
+        { "formName": "?", "types": [13], "imgPath": "201-question", "id": 28 }
       ],
       "onlyVisual": true,
       "interchandable": false
@@ -2156,8 +1921,7 @@
       "onlyVisual": true,
       "femaleImgPath": "female/207"
     },
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 208,
@@ -2170,8 +1934,7 @@
       "onlyVisual": true,
       "femaleImgPath": "female/208"
     },
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 209,
@@ -2196,9 +1959,7 @@
     "origin": 1,
     "genders": [0, 1],
     "rarity": 0,
-    "regionalForms": [
-      { "region": 9, "imgPath": "211", "types": [1, 3], "alpha": true }
-    ]
+    "regionalForms": [{ "region": 9, "imgPath": "211", "types": [1, 3] }]
   },
   {
     "number": 212,
@@ -2211,8 +1972,7 @@
       "onlyVisual": true,
       "femaleImgPath": "female/212"
     },
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 213,
@@ -2233,8 +1993,7 @@
       "onlyVisual": true,
       "femaleImgPath": "female/214"
     },
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 215,
@@ -2257,8 +2016,7 @@
           "onlyVisual": true,
           "femaleImgPath": "female/215"
         },
-        "types": [1, 3],
-        "alpha": true
+        "types": [1, 3]
       }
     ]
   },
@@ -2268,8 +2026,7 @@
     "types": [0],
     "origin": 1,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 217,
@@ -2282,8 +2039,7 @@
       "onlyVisual": true,
       "femaleImgPath": "female/217"
     },
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 218,
@@ -2307,8 +2063,7 @@
     "types": [14, 4],
     "origin": 1,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 221,
@@ -2321,8 +2076,7 @@
       "onlyVisual": true,
       "femaleImgPath": "female/221"
     },
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 222,
@@ -2339,8 +2093,7 @@
     "types": [10],
     "origin": 1,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 224,
@@ -2353,8 +2106,7 @@
       "onlyVisual": true,
       "femaleImgPath": "female/224"
     },
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 225,
@@ -2370,8 +2122,7 @@
     "types": [10, 2],
     "origin": 1,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 227,
@@ -2437,8 +2188,7 @@
     "types": [0],
     "origin": 1,
     "genders": [2],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 234,
@@ -2446,8 +2196,7 @@
     "types": [0],
     "origin": 1,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 235,
@@ -2487,8 +2236,7 @@
     "types": [12],
     "origin": 1,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 240,
@@ -2496,8 +2244,7 @@
     "types": [9],
     "origin": 1,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 241,
@@ -2513,8 +2260,7 @@
     "types": [0],
     "origin": 1,
     "genders": [1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 243,
@@ -2715,8 +2461,7 @@
     "types": [6],
     "origin": 2,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 266,
@@ -2724,8 +2469,7 @@
     "types": [6],
     "origin": 2,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 267,
@@ -2738,8 +2482,7 @@
       "onlyVisual": true,
       "femaleImgPath": "female/267"
     },
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 268,
@@ -2747,8 +2490,7 @@
     "types": [6],
     "origin": 2,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 269,
@@ -2761,8 +2503,7 @@
       "onlyVisual": true,
       "femaleImgPath": "female/269"
     },
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 270,
@@ -2865,8 +2606,7 @@
     "types": [13, 17],
     "origin": 2,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 281,
@@ -2874,8 +2614,7 @@
     "types": [13, 17],
     "origin": 2,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 282,
@@ -2883,8 +2622,7 @@
     "types": [13, 17],
     "origin": 2,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 283,
@@ -3020,8 +2758,7 @@
     "types": [5],
     "origin": 2,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 300,
@@ -3164,8 +2901,7 @@
       "onlyVisual": true,
       "femaleImgPath": "female/315"
     },
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 316,
@@ -3382,8 +3118,7 @@
     "types": [10, 4],
     "origin": 2,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 340,
@@ -3391,8 +3126,7 @@
     "types": [10, 4],
     "origin": 2,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 341,
@@ -3517,8 +3251,7 @@
     "types": [7],
     "origin": 2,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 356,
@@ -3526,8 +3259,7 @@
     "types": [7],
     "origin": 2,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 357,
@@ -3543,8 +3275,7 @@
     "types": [13],
     "origin": 2,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 359,
@@ -3568,8 +3299,7 @@
     "types": [14],
     "origin": 2,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 362,
@@ -3577,8 +3307,7 @@
     "types": [14],
     "origin": 2,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 363,
@@ -3586,8 +3315,7 @@
     "types": [14, 10],
     "origin": 2,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 364,
@@ -3595,8 +3323,7 @@
     "types": [14, 10],
     "origin": 2,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 365,
@@ -3604,8 +3331,7 @@
     "types": [14, 10],
     "origin": 2,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 366,
@@ -3817,8 +3543,7 @@
     "types": [11],
     "origin": 3,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 388,
@@ -3826,8 +3551,7 @@
     "types": [11],
     "origin": 3,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 389,
@@ -3835,8 +3559,7 @@
     "types": [11, 4],
     "origin": 3,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 390,
@@ -3844,8 +3567,7 @@
     "types": [9],
     "origin": 3,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 391,
@@ -3853,8 +3575,7 @@
     "types": [9, 1],
     "origin": 3,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 392,
@@ -3862,8 +3583,7 @@
     "types": [9, 1],
     "origin": 3,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 393,
@@ -3871,8 +3591,7 @@
     "types": [10],
     "origin": 3,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 394,
@@ -3880,8 +3599,7 @@
     "types": [10],
     "origin": 3,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 395,
@@ -3889,8 +3607,7 @@
     "types": [10, 8],
     "origin": 3,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 396,
@@ -3903,8 +3620,7 @@
       "onlyVisual": true,
       "femaleImgPath": "female/396"
     },
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 397,
@@ -3917,8 +3633,7 @@
       "onlyVisual": true,
       "femaleImgPath": "female/397"
     },
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 398,
@@ -3931,8 +3646,7 @@
       "onlyVisual": true,
       "femaleImgPath": "female/398"
     },
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 399,
@@ -3945,8 +3659,7 @@
       "onlyVisual": true,
       "femaleImgPath": "female/399"
     },
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 400,
@@ -3959,8 +3672,7 @@
       "onlyVisual": true,
       "femaleImgPath": "female/400"
     },
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 401,
@@ -3973,8 +3685,7 @@
       "onlyVisual": true,
       "femaleImgPath": "female/401"
     },
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 402,
@@ -3987,8 +3698,7 @@
       "onlyVisual": true,
       "femaleImgPath": "female/402"
     },
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 403,
@@ -4001,8 +3711,7 @@
       "onlyVisual": true,
       "femaleImgPath": "female/403"
     },
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 404,
@@ -4015,8 +3724,7 @@
       "onlyVisual": true,
       "femaleImgPath": "female/404"
     },
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 405,
@@ -4029,8 +3737,7 @@
       "onlyVisual": true,
       "femaleImgPath": "female/405"
     },
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 406,
@@ -4038,8 +3745,7 @@
     "types": [11, 3],
     "origin": 3,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 407,
@@ -4052,8 +3758,7 @@
       "onlyVisual": true,
       "femaleImgPath": "female/407"
     },
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 408,
@@ -4061,8 +3766,7 @@
     "types": [5],
     "origin": 3,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 409,
@@ -4070,8 +3774,7 @@
     "types": [5],
     "origin": 3,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 410,
@@ -4079,8 +3782,7 @@
     "types": [5, 8],
     "origin": 3,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 411,
@@ -4088,8 +3790,7 @@
     "types": [5, 8],
     "origin": 3,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 412,
@@ -4100,26 +3801,18 @@
     "rarity": 0,
     "formsData": {
       "forms": [
-        {
-          "formName": "Plant Cloak",
-          "types": [6],
-          "imgPath": "412",
-          "id": 1,
-          "alpha": true
-        },
+        { "formName": "Plant Cloak", "types": [6], "imgPath": "412", "id": 1 },
         {
           "formName": "Sandy Cloak",
           "types": [6],
           "imgPath": "412-sandy",
-          "id": 2,
-          "alpha": true
+          "id": 2
         },
         {
           "formName": "Trash Cloak",
           "types": [6],
           "imgPath": "412-trash",
-          "id": 3,
-          "alpha": true
+          "id": 3
         }
       ],
       "onlyVisual": true,
@@ -4139,22 +3832,19 @@
           "formName": "Plant Cloak",
           "types": [6, 11],
           "imgPath": "412",
-          "id": 1,
-          "alpha": true
+          "id": 1
         },
         {
           "formName": "Sandy Cloak",
           "types": [6, 4],
           "imgPath": "10004",
-          "id": 2,
-          "alpha": true
+          "id": 2
         },
         {
           "formName": "Trash Cloak",
           "types": [6, 8],
           "imgPath": "10005",
-          "id": 3,
-          "alpha": true
+          "id": 3
         }
       ],
       "onlyVisual": false,
@@ -4167,8 +3857,7 @@
     "types": [6, 2],
     "origin": 3,
     "genders": [0],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 415,
@@ -4181,8 +3870,7 @@
       "onlyVisual": true,
       "femaleImgPath": "female/415"
     },
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 416,
@@ -4190,8 +3878,7 @@
     "types": [6, 2],
     "origin": 3,
     "genders": [1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 417,
@@ -4204,8 +3891,7 @@
       "onlyVisual": true,
       "femaleImgPath": "female/417"
     },
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 418,
@@ -4218,8 +3904,7 @@
       "onlyVisual": true,
       "femaleImgPath": "female/418"
     },
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 419,
@@ -4232,8 +3917,7 @@
       "onlyVisual": true,
       "femaleImgPath": "female/419"
     },
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 420,
@@ -4241,8 +3925,7 @@
     "types": [11],
     "origin": 3,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 421,
@@ -4250,8 +3933,7 @@
     "types": [11],
     "origin": 3,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 422,
@@ -4262,19 +3944,12 @@
     "rarity": 0,
     "formsData": {
       "forms": [
-        {
-          "formName": "West Sea",
-          "types": [10],
-          "imgPath": "422",
-          "id": 1,
-          "alpha": true
-        },
+        { "formName": "West Sea", "types": [10], "imgPath": "422", "id": 1 },
         {
           "formName": "East Sea",
           "types": [10],
           "imgPath": "422-east",
-          "id": 2,
-          "alpha": true
+          "id": 2
         }
       ],
       "onlyVisual": true,
@@ -4290,19 +3965,12 @@
     "rarity": 0,
     "formsData": {
       "forms": [
-        {
-          "formName": "West Sea",
-          "types": [10, 4],
-          "imgPath": "423",
-          "id": 1,
-          "alpha": true
-        },
+        { "formName": "West Sea", "types": [10, 4], "imgPath": "423", "id": 1 },
         {
           "formName": "East Sea",
           "types": [10, 4],
           "imgPath": "423-east",
-          "id": 2,
-          "alpha": true
+          "id": 2
         }
       ],
       "onlyVisual": true,
@@ -4320,8 +3988,7 @@
       "onlyVisual": true,
       "femaleImgPath": "female/424"
     },
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 425,
@@ -4329,8 +3996,7 @@
     "types": [7, 2],
     "origin": 3,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 426,
@@ -4338,8 +4004,7 @@
     "types": [7, 2],
     "origin": 3,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 427,
@@ -4347,8 +4012,7 @@
     "types": [0],
     "origin": 3,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 428,
@@ -4356,8 +4020,7 @@
     "types": [0],
     "origin": 3,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 429,
@@ -4365,8 +4028,7 @@
     "types": [7],
     "origin": 3,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 430,
@@ -4374,8 +4036,7 @@
     "types": [16, 2],
     "origin": 3,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 431,
@@ -4383,8 +4044,7 @@
     "types": [0],
     "origin": 3,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 432,
@@ -4392,8 +4052,7 @@
     "types": [0],
     "origin": 3,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 433,
@@ -4401,8 +4060,7 @@
     "types": [13],
     "origin": 3,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 434,
@@ -4410,8 +4068,7 @@
     "types": [3, 16],
     "origin": 3,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 435,
@@ -4419,8 +4076,7 @@
     "types": [3, 16],
     "origin": 3,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 436,
@@ -4428,8 +4084,7 @@
     "types": [8, 13],
     "origin": 3,
     "genders": [2],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 437,
@@ -4437,8 +4092,7 @@
     "types": [8, 13],
     "origin": 3,
     "genders": [2],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 438,
@@ -4446,8 +4100,7 @@
     "types": [5],
     "origin": 3,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 439,
@@ -4455,8 +4108,7 @@
     "types": [13, 17],
     "origin": 3,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 440,
@@ -4464,8 +4116,7 @@
     "types": [0],
     "origin": 3,
     "genders": [1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 441,
@@ -4473,8 +4124,7 @@
     "types": [0, 2],
     "origin": 3,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 442,
@@ -4482,8 +4132,7 @@
     "types": [7, 16],
     "origin": 3,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 443,
@@ -4496,8 +4145,7 @@
       "onlyVisual": true,
       "femaleImgPath": "female/443"
     },
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 444,
@@ -4510,8 +4158,7 @@
       "onlyVisual": true,
       "femaleImgPath": "female/444"
     },
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 445,
@@ -4524,8 +4171,7 @@
       "onlyVisual": true,
       "femaleImgPath": "female/445"
     },
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 446,
@@ -4533,8 +4179,7 @@
     "types": [0],
     "origin": 3,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 447,
@@ -4542,8 +4187,7 @@
     "types": [1],
     "origin": 3,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 448,
@@ -4551,8 +4195,7 @@
     "types": [1, 8],
     "origin": 3,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 449,
@@ -4565,8 +4208,7 @@
       "onlyVisual": true,
       "femaleImgPath": "female/449"
     },
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 450,
@@ -4579,8 +4221,7 @@
       "onlyVisual": true,
       "femaleImgPath": "female/450"
     },
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 451,
@@ -4588,8 +4229,7 @@
     "types": [3, 6],
     "origin": 3,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 452,
@@ -4597,8 +4237,7 @@
     "types": [3, 16],
     "origin": 3,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 453,
@@ -4611,8 +4250,7 @@
       "onlyVisual": true,
       "femaleImgPath": "female/453"
     },
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 454,
@@ -4625,8 +4263,7 @@
       "onlyVisual": true,
       "femaleImgPath": "female/454"
     },
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 455,
@@ -4634,8 +4271,7 @@
     "types": [11],
     "origin": 3,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 456,
@@ -4648,8 +4284,7 @@
       "onlyVisual": true,
       "femaleImgPath": "female/456"
     },
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 457,
@@ -4662,8 +4297,7 @@
       "onlyVisual": true,
       "femaleImgPath": "female/457"
     },
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 458,
@@ -4671,8 +4305,7 @@
     "types": [10, 2],
     "origin": 3,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 459,
@@ -4685,8 +4318,7 @@
       "onlyVisual": true,
       "femaleImgPath": "female/459"
     },
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 460,
@@ -4699,8 +4331,7 @@
       "onlyVisual": true,
       "femaleImgPath": "female/460"
     },
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 461,
@@ -4713,8 +4344,7 @@
       "onlyVisual": true,
       "femaleImgPath": "female/461"
     },
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 462,
@@ -4722,8 +4352,7 @@
     "types": [12, 8],
     "origin": 3,
     "genders": [2],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 463,
@@ -4731,8 +4360,7 @@
     "types": [0],
     "origin": 3,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 464,
@@ -4745,8 +4373,7 @@
       "onlyVisual": true,
       "femaleImgPath": "female/464"
     },
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 465,
@@ -4759,8 +4386,7 @@
       "onlyVisual": true,
       "femaleImgPath": "female/465"
     },
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 466,
@@ -4768,8 +4394,7 @@
     "types": [12],
     "origin": 3,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 467,
@@ -4777,8 +4402,7 @@
     "types": [9],
     "origin": 3,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 468,
@@ -4786,8 +4410,7 @@
     "types": [17, 2],
     "origin": 3,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 469,
@@ -4795,8 +4418,7 @@
     "types": [6, 2],
     "origin": 3,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 470,
@@ -4804,8 +4426,7 @@
     "types": [11],
     "origin": 3,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 471,
@@ -4813,8 +4434,7 @@
     "types": [14],
     "origin": 3,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 472,
@@ -4822,8 +4442,7 @@
     "types": [4, 2],
     "origin": 3,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 473,
@@ -4836,8 +4455,7 @@
       "onlyVisual": true,
       "femaleImgPath": "female/473"
     },
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 474,
@@ -4845,8 +4463,7 @@
     "types": [0],
     "origin": 3,
     "genders": [2],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 475,
@@ -4854,8 +4471,7 @@
     "types": [13, 1],
     "origin": 3,
     "genders": [0],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 476,
@@ -4863,8 +4479,7 @@
     "types": [5, 8],
     "origin": 3,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 477,
@@ -4872,8 +4487,7 @@
     "types": [7],
     "origin": 3,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 478,
@@ -4881,8 +4495,7 @@
     "types": [14, 7],
     "origin": 3,
     "genders": [1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 479,
@@ -4893,47 +4506,36 @@
     "rarity": 0,
     "formsData": {
       "forms": [
-        {
-          "formName": "Rotom",
-          "types": [12, 7],
-          "imgPath": "479",
-          "id": 1,
-          "alpha": true
-        },
+        { "formName": "Rotom", "types": [12, 7], "imgPath": "479", "id": 1 },
         {
           "formName": "Heat Rotom",
           "types": [12, 9],
           "imgPath": "10008",
-          "id": 2,
-          "alpha": true
+          "id": 2
         },
         {
           "formName": "Wash Rotom",
           "types": [12, 10],
           "imgPath": "10009",
-          "id": 3,
-          "alpha": true
+          "id": 3
         },
         {
           "formName": "Frost Rotom",
           "types": [12, 14],
           "imgPath": "10010",
-          "id": 4,
-          "alpha": true
+          "id": 4
         },
         {
           "formName": "Fan Rotom",
           "types": [12, 2],
           "imgPath": "10011",
-          "id": 5,
-          "alpha": true
+          "id": 5
         },
         {
           "formName": "Mow Rotom",
           "types": [12, 11],
           "imgPath": "10012",
-          "id": 6,
-          "alpha": true
+          "id": 6
         }
       ],
       "onlyVisual": false,
@@ -5115,8 +4717,7 @@
     "types": [10],
     "origin": 4,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 502,
@@ -5124,8 +4725,7 @@
     "types": [10],
     "origin": 4,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 503,
@@ -5134,9 +4734,7 @@
     "origin": 4,
     "genders": [0, 1],
     "rarity": 0,
-    "regionalForms": [
-      { "region": 9, "imgPath": "503", "types": [10, 16], "alpha": true }
-    ]
+    "regionalForms": [{ "region": 9, "imgPath": "503", "types": [10, 16] }]
   },
   {
     "number": 504,
@@ -5501,8 +5099,7 @@
     "types": [11],
     "origin": 4,
     "genders": [1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 549,
@@ -5511,9 +5108,7 @@
     "origin": 4,
     "genders": [1],
     "rarity": 0,
-    "regionalForms": [
-      { "region": 9, "imgPath": "549", "types": [11, 1], "alpha": true }
-    ]
+    "regionalForms": [{ "region": 9, "imgPath": "549", "types": [11, 1] }]
   },
   {
     "number": 550,
@@ -5540,8 +5135,7 @@
           "formName": "White-Striped Form",
           "imgPath": "550",
           "id": 3,
-          "types": [10],
-          "alpha": true
+          "types": [10]
         }
       ],
       "onlyVisual": false,
@@ -5711,9 +5305,7 @@
     "origin": 4,
     "genders": [0, 1],
     "rarity": 0,
-    "regionalForms": [
-      { "region": 9, "imgPath": "570", "types": [0, 7], "alpha": true }
-    ]
+    "regionalForms": [{ "region": 9, "imgPath": "570", "types": [0, 7] }]
   },
   {
     "number": 571,
@@ -5722,9 +5314,7 @@
     "origin": 4,
     "genders": [0, 1],
     "rarity": 0,
-    "regionalForms": [
-      { "region": 9, "imgPath": "571", "types": [0, 7], "alpha": true }
-    ]
+    "regionalForms": [{ "region": 9, "imgPath": "571", "types": [0, 7] }]
   },
   {
     "number": 572,
@@ -6243,8 +5833,7 @@
     "types": [0, 2],
     "origin": 4,
     "genders": [0],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 628,
@@ -6253,9 +5842,7 @@
     "origin": 4,
     "genders": [0],
     "rarity": 0,
-    "regionalForms": [
-      { "region": 9, "imgPath": "571", "types": [13, 2], "alpha": true }
-    ]
+    "regionalForms": [{ "region": 9, "imgPath": "571", "types": [13, 2] }]
   },
   {
     "number": 629,
@@ -7131,8 +6718,7 @@
     "types": [17],
     "origin": 5,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 701,
@@ -7164,8 +6750,7 @@
     "types": [15],
     "origin": 5,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 705,
@@ -7174,9 +6759,7 @@
     "origin": 5,
     "genders": [0, 1],
     "rarity": 0,
-    "regionalForms": [
-      { "region": 9, "imgPath": "705", "types": [8, 15], "alpha": true }
-    ]
+    "regionalForms": [{ "region": 9, "imgPath": "705", "types": [8, 15] }]
   },
   {
     "number": 706,
@@ -7185,9 +6768,7 @@
     "origin": 5,
     "genders": [0, 1],
     "rarity": 0,
-    "regionalForms": [
-      { "region": 9, "imgPath": "706", "types": [8, 15], "alpha": true }
-    ]
+    "regionalForms": [{ "region": 9, "imgPath": "706", "types": [8, 15] }]
   },
   {
     "number": 707,
@@ -7295,8 +6876,7 @@
     "types": [14],
     "origin": 5,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 713,
@@ -7305,9 +6885,7 @@
     "origin": 5,
     "genders": [0, 1],
     "rarity": 0,
-    "regionalForms": [
-      { "region": 9, "imgPath": "713", "types": [14, 5], "alpha": true }
-    ]
+    "regionalForms": [{ "region": 9, "imgPath": "713", "types": [14, 5] }]
   },
   {
     "number": 714,
@@ -7398,8 +6976,7 @@
     "types": [11, 2],
     "origin": 6,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 723,
@@ -7407,8 +6984,7 @@
     "types": [11, 2],
     "origin": 6,
     "genders": [0, 1],
-    "rarity": 0,
-    "alpha": true
+    "rarity": 0
   },
   {
     "number": 724,
@@ -7417,9 +6993,7 @@
     "origin": 6,
     "genders": [0, 1],
     "rarity": 0,
-    "regionalForms": [
-      { "region": 9, "imgPath": "724", "types": [11, 1], "alpha": true }
-    ]
+    "regionalForms": [{ "region": 9, "imgPath": "724", "types": [11, 1] }]
   },
   {
     "number": 725,
@@ -9398,8 +8972,7 @@
     "origin": 9,
     "genders": [0, 1],
     "rarity": 0,
-    "types": [0, 13],
-    "alpha": true
+    "types": [0, 13]
   },
   {
     "number": 900,
@@ -9407,8 +8980,7 @@
     "origin": 9,
     "genders": [0, 1],
     "rarity": 0,
-    "types": [6, 5],
-    "alpha": true
+    "types": [6, 5]
   },
   {
     "number": 901,
@@ -9416,8 +8988,7 @@
     "origin": 9,
     "genders": [0, 1],
     "rarity": 0,
-    "types": [4, 0],
-    "alpha": true
+    "types": [4, 0]
   },
   {
     "number": 902,
@@ -9430,8 +9001,7 @@
       "femaleImgPath": "female/902"
     },
     "rarity": 0,
-    "types": [10, 7],
-    "alpha": true
+    "types": [10, 7]
   },
   {
     "number": 903,
@@ -9439,8 +9009,7 @@
     "origin": 9,
     "genders": [0, 1],
     "rarity": 0,
-    "types": [1, 3],
-    "alpha": true
+    "types": [1, 3]
   },
   {
     "number": 904,
@@ -9448,8 +9017,7 @@
     "origin": 9,
     "genders": [0, 1],
     "rarity": 0,
-    "types": [16, 3],
-    "alpha": true
+    "types": [16, 3]
   },
   {
     "number": 905,

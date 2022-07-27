@@ -15,4 +15,5 @@ export interface PokedexEntry {
   formsData?: FormsData;
   gigantamax?: PokedexGigantamax;
   rarity: PokeRarity;
+  alpha?: boolean;
 }

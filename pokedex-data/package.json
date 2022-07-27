@@ -5,7 +5,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node --experimental-json-modules v1.3.0/update.js"
+    "start": "node --experimental-json-modules v1.4.0/update.js"
   },
   "author": "",
   "license": "ISC"

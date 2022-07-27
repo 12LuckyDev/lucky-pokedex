@@ -7,4 +7,5 @@ export interface PokedexRegionalFormEntry {
   region: PokeRegion;
   imgPath: string;
   genderDiffs?: PokedexGenderDiffs;
+  alpha?: boolean;
 }

@@ -23,7 +23,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Female Venusaur's Flower has a Seed in it",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/3"
     },
     "rarity": 0,
     "gigantamax": { "factor": true }
@@ -102,7 +103,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Butterfree's Wing Pattern is different",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/12"
     },
     "rarity": 0,
     "gigantamax": { "factor": true }
@@ -163,9 +165,10 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Female Rattata's Whiskers are Smaller",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/19"
     },
-    "regionalForms": [{ "types": [16, 0], "region": 6 }],
+    "regionalForms": [{ "types": [16, 0], "region": 6, "imgPath": "10091" }],
     "rarity": 0
   },
   {
@@ -176,9 +179,10 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Female Raticate's Whiskers are Smaller",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/20"
     },
-    "regionalForms": [{ "types": [16, 0], "region": 6 }],
+    "regionalForms": [{ "types": [16, 0], "region": 6, "imgPath": "10092" }],
     "rarity": 0
   },
   {
@@ -221,7 +225,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Female Pikachu's Tail has a groove in it",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/25"
     },
     "rarity": 0,
     "gigantamax": { "factor": true },
@@ -235,9 +240,10 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Female Raichu's Tail lacks the point at the end",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/26"
     },
-    "regionalForms": [{ "types": [12, 13], "region": 6 }],
+    "regionalForms": [{ "types": [12, 13], "region": 6, "imgPath": "10100" }],
     "rarity": 0,
     "alpha": true
   },
@@ -247,7 +253,7 @@
     "types": [4],
     "origin": 0,
     "genders": [0, 1],
-    "regionalForms": [{ "types": [14, 8], "region": 6 }],
+    "regionalForms": [{ "types": [14, 8], "region": 6, "imgPath": "10101" }],
     "rarity": 0
   },
   {
@@ -256,7 +262,7 @@
     "types": [4],
     "origin": 0,
     "genders": [0, 1],
-    "regionalForms": [{ "types": [14, 8], "region": 6 }],
+    "regionalForms": [{ "types": [14, 8], "region": 6, "imgPath": "10102" }],
     "rarity": 0
   },
   {
@@ -331,7 +337,7 @@
     "types": [9],
     "origin": 0,
     "genders": [0, 1],
-    "regionalForms": [{ "types": [14], "region": 6 }],
+    "regionalForms": [{ "types": [14], "region": 6, "imgPath": "10103" }],
     "rarity": 0,
     "alpha": true
   },
@@ -341,7 +347,7 @@
     "types": [9],
     "origin": 0,
     "genders": [0, 1],
-    "regionalForms": [{ "types": [14, 17], "region": 6 }],
+    "regionalForms": [{ "types": [14, 17], "region": 6, "imgPath": "10104" }],
     "rarity": 0,
     "alpha": true
   },
@@ -369,7 +375,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Female Zubat's teeth are smaller",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/41"
     },
     "rarity": 0,
     "alpha": true
@@ -382,7 +389,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Female Golbat's teeth are smaller",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/42"
     },
     "rarity": 0,
     "alpha": true
@@ -403,7 +411,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Female Gloom has a different flower pattern",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/44"
     },
     "rarity": 0
   },
@@ -415,7 +424,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Female Vileplume has a different flower pattern",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/45"
     },
     "rarity": 0
   },
@@ -459,7 +469,7 @@
     "types": [4],
     "origin": 0,
     "genders": [0, 1],
-    "regionalForms": [{ "types": [4, 8], "region": 6 }],
+    "regionalForms": [{ "types": [4, 8], "region": 6, "imgPath": "10105" }],
     "rarity": 0
   },
   {
@@ -468,7 +478,7 @@
     "types": [4],
     "origin": 0,
     "genders": [0, 1],
-    "regionalForms": [{ "types": [4, 8], "region": 6 }],
+    "regionalForms": [{ "types": [4, 8], "region": 6, "imgPath": "10106" }],
     "rarity": 0
   },
   {
@@ -478,8 +488,8 @@
     "origin": 0,
     "genders": [0, 1],
     "regionalForms": [
-      { "types": [16], "region": 6 },
-      { "types": [8], "region": 7 }
+      { "types": [16], "region": 6, "imgPath": "10107" },
+      { "types": [8], "region": 7, "imgPath": "10158" }
     ],
     "rarity": 0,
     "gigantamax": { "factor": true }
@@ -490,7 +500,7 @@
     "types": [0],
     "origin": 0,
     "genders": [0, 1],
-    "regionalForms": [{ "types": [16], "region": 6 }],
+    "regionalForms": [{ "types": [16], "region": 6, "imgPath": "10108" }],
     "rarity": 0
   },
   {
@@ -534,7 +544,9 @@
     "origin": 0,
     "genders": [0, 1],
     "rarity": 0,
-    "regionalForms": [{ "region": 9, "types": [9, 5], "alpha": true }]
+    "regionalForms": [
+      { "region": 9, "imgPath": "58", "types": [9, 5], "alpha": true }
+    ]
   },
   {
     "number": 59,
@@ -543,7 +555,9 @@
     "origin": 0,
     "genders": [0, 1],
     "rarity": 0,
-    "regionalForms": [{ "region": 9, "types": [9, 5], "alpha": true }]
+    "regionalForms": [
+      { "region": 9, "imgPath": "59", "types": [9, 5], "alpha": true }
+    ]
   },
   {
     "number": 60,
@@ -586,7 +600,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Female Kadabra has a smaller moustache",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/64"
     },
     "rarity": 0,
     "alpha": true
@@ -599,7 +614,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Female Alakazam has a smaller moustache",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/65"
     },
     "rarity": 0,
     "alpha": true
@@ -680,7 +696,7 @@
     "types": [5, 4],
     "origin": 0,
     "genders": [0, 1],
-    "regionalForms": [{ "types": [5, 12], "region": 6 }],
+    "regionalForms": [{ "types": [5, 12], "region": 6, "imgPath": "10109" }],
     "rarity": 0,
     "alpha": true
   },
@@ -690,7 +706,7 @@
     "types": [5, 4],
     "origin": 0,
     "genders": [0, 1],
-    "regionalForms": [{ "types": [5, 12], "region": 6 }],
+    "regionalForms": [{ "types": [5, 12], "region": 6, "imgPath": "10110" }],
     "rarity": 0,
     "alpha": true
   },
@@ -700,7 +716,7 @@
     "types": [5, 4],
     "origin": 0,
     "genders": [0, 1],
-    "regionalForms": [{ "types": [5, 12], "region": 6 }],
+    "regionalForms": [{ "types": [5, 12], "region": 6, "imgPath": "10111" }],
     "rarity": 0,
     "alpha": true
   },
@@ -710,7 +726,7 @@
     "types": [9],
     "origin": 0,
     "genders": [0, 1],
-    "regionalForms": [{ "types": [13], "region": 7 }],
+    "regionalForms": [{ "types": [13], "region": 7, "imgPath": "10159" }],
     "rarity": 0,
     "alpha": true
   },
@@ -720,7 +736,7 @@
     "types": [9],
     "origin": 0,
     "genders": [0, 1],
-    "regionalForms": [{ "types": [13, 17], "region": 7 }],
+    "regionalForms": [{ "types": [13, 17], "region": 7, "imgPath": "10160" }],
     "rarity": 0,
     "alpha": true
   },
@@ -730,7 +746,7 @@
     "types": [10, 13],
     "origin": 0,
     "genders": [0, 1],
-    "regionalForms": [{ "types": [13], "region": 7 }],
+    "regionalForms": [{ "types": [13], "region": 7, "imgPath": "10161" }],
     "rarity": 0
   },
   {
@@ -739,7 +755,7 @@
     "types": [10, 13],
     "origin": 0,
     "genders": [0, 1],
-    "regionalForms": [{ "types": [3, 13], "region": 7 }],
+    "regionalForms": [{ "types": [3, 13], "region": 7, "imgPath": "10162" }],
     "rarity": 0
   },
   {
@@ -766,7 +782,7 @@
     "types": [0, 2],
     "origin": 0,
     "genders": [0, 1],
-    "regionalForms": [{ "types": [1], "region": 7 }],
+    "regionalForms": [{ "types": [1], "region": 7, "imgPath": "10163" }],
     "rarity": 0
   },
   {
@@ -777,7 +793,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Female Doduo have beige necks. Male Doduo have black necks",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/84"
     },
     "rarity": 0
   },
@@ -789,7 +806,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Female Dodrio have beige necks. Male Dodrio have black necks",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/85"
     },
     "rarity": 0
   },
@@ -815,7 +833,7 @@
     "types": [3],
     "origin": 0,
     "genders": [0, 1],
-    "regionalForms": [{ "types": [3, 16], "region": 6 }],
+    "regionalForms": [{ "types": [3, 16], "region": 6, "imgPath": "10112" }],
     "rarity": 0
   },
   {
@@ -824,7 +842,7 @@
     "types": [3],
     "origin": 0,
     "genders": [0, 1],
-    "regionalForms": [{ "types": [3, 16], "region": 6 }],
+    "regionalForms": [{ "types": [3, 16], "region": 6, "imgPath": "10113" }],
     "rarity": 0
   },
   {
@@ -896,7 +914,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Male Hypno has a smaller collar",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/97"
     },
     "rarity": 0
   },
@@ -924,7 +943,9 @@
     "origin": 0,
     "genders": [2],
     "rarity": 0,
-    "regionalForms": [{ "region": 9, "types": [12, 11], "alpha": true }]
+    "regionalForms": [
+      { "region": 9, "imgPath": "100", "types": [12, 11], "alpha": true }
+    ]
   },
   {
     "number": 101,
@@ -933,7 +954,9 @@
     "origin": 0,
     "genders": [2],
     "rarity": 0,
-    "regionalForms": [{ "region": 9, "types": [12, 11], "alpha": true }]
+    "regionalForms": [
+      { "region": 9, "imgPath": "101", "types": [12, 11], "alpha": true }
+    ]
   },
   {
     "number": 102,
@@ -949,7 +972,7 @@
     "types": [11, 13],
     "origin": 0,
     "genders": [0, 1],
-    "regionalForms": [{ "types": [11, 15], "region": 6 }],
+    "regionalForms": [{ "types": [11, 15], "region": 6, "imgPath": "10114" }],
     "rarity": 0
   },
   {
@@ -966,7 +989,7 @@
     "types": [4],
     "origin": 0,
     "genders": [0, 1],
-    "regionalForms": [{ "types": [9, 7], "region": 6 }],
+    "regionalForms": [{ "types": [9, 7], "region": 6, "imgPath": "10115" }],
     "rarity": 0
   },
   {
@@ -1008,7 +1031,7 @@
     "types": [3],
     "origin": 0,
     "genders": [0, 1],
-    "regionalForms": [{ "types": [3, 17], "region": 7 }],
+    "regionalForms": [{ "types": [3, 17], "region": 7, "imgPath": "10164" }],
     "rarity": 0
   },
   {
@@ -1019,7 +1042,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Female Rhyhorn has a smaller horn",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/111"
     },
     "rarity": 0,
     "alpha": true
@@ -1032,7 +1056,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Female Rhydon has a smaller horn",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/112"
     },
     "rarity": 0,
     "alpha": true
@@ -1087,7 +1112,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Female Goldeen has a smaller horn",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/118"
     },
     "rarity": 0
   },
@@ -1099,7 +1125,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Female Seaking has a smaller horn",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/119"
     },
     "rarity": 0
   },
@@ -1125,7 +1152,7 @@
     "types": [13, 17],
     "origin": 0,
     "genders": [0, 1],
-    "regionalForms": [{ "types": [14, 13], "region": 7 }],
+    "regionalForms": [{ "types": [14, 13], "region": 7, "imgPath": "10165" }],
     "rarity": 0,
     "alpha": true
   },
@@ -1137,7 +1164,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Female Scyther has a bigger abdomen",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/123"
     },
     "rarity": 0,
     "alpha": true
@@ -1192,7 +1220,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Female Magikarp has white whiskers",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/129"
     },
     "rarity": 0,
     "alpha": true
@@ -1205,7 +1234,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Female Gyarados has white whiskers",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/130"
     },
     "rarity": 0,
     "alpha": true
@@ -1235,7 +1265,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Female Eevee's tail pattern is more rounded",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "133"
     },
     "rarity": 0,
     "gigantamax": { "factor": true },
@@ -1333,7 +1364,7 @@
     "types": [14, 2],
     "origin": 0,
     "genders": [2],
-    "regionalForms": [{ "types": [13, 2], "region": 7 }],
+    "regionalForms": [{ "types": [13, 2], "region": 7, "imgPath": "10166" }],
     "rarity": 1
   },
   {
@@ -1342,7 +1373,7 @@
     "types": [12, 2],
     "origin": 0,
     "genders": [2],
-    "regionalForms": [{ "types": [1, 2], "region": 7 }],
+    "regionalForms": [{ "types": [1, 2], "region": 7, "imgPath": "10167" }],
     "rarity": 1
   },
   {
@@ -1351,7 +1382,7 @@
     "types": [9, 2],
     "origin": 0,
     "genders": [2],
-    "regionalForms": [{ "types": [16, 2], "region": 7 }],
+    "regionalForms": [{ "types": [16, 2], "region": 7, "imgPath": "10168" }],
     "rarity": 1
   },
   {
@@ -1418,7 +1449,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Female Meganium has smaller antennae",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/154"
     },
     "rarity": 0
   },
@@ -1447,7 +1479,9 @@
     "origin": 1,
     "genders": [0, 1],
     "rarity": 0,
-    "regionalForms": [{ "region": 9, "types": [9, 7], "alpha": true }]
+    "regionalForms": [
+      { "region": 9, "imgPath": "157", "types": [9, 7], "alpha": true }
+    ]
   },
   {
     "number": 158,
@@ -1513,7 +1547,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Female Ledyba has smaller antennae",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/165"
     },
     "rarity": 0
   },
@@ -1525,7 +1560,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Female Ledian has smaller antennae",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/166"
     },
     "rarity": 0
   },
@@ -1630,7 +1666,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Female Xatu has less stripes on her body",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/178"
     },
     "rarity": 0
   },
@@ -1690,7 +1727,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Female Sudowoodo has smaller antennae",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/185"
     },
     "rarity": 0,
     "alpha": true
@@ -1703,7 +1741,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Female Politoed has smaller spots on their cheek",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/186"
     },
     "rarity": 0
   },
@@ -1739,7 +1778,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Female Aipom has longer hair",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/190"
     },
     "rarity": 0,
     "alpha": true
@@ -1777,7 +1817,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Female Wooper have less bars on their antennae",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/194"
     },
     "rarity": 0
   },
@@ -1789,7 +1830,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Female Quagsire have smaller back-fins",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/195"
     },
     "rarity": 0
   },
@@ -1819,7 +1861,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Female Murkrow has a smaller 'hat'",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/198"
     },
     "rarity": 0,
     "alpha": true
@@ -1830,7 +1873,7 @@
     "types": [10, 13],
     "origin": 1,
     "genders": [0, 1],
-    "regionalForms": [{ "types": [3, 13], "region": 7 }],
+    "regionalForms": [{ "types": [3, 13], "region": 7, "imgPath": "10169" }],
     "rarity": 0
   },
   {
@@ -1851,34 +1894,202 @@
     "rarity": 0,
     "formsData": {
       "forms": [
-        { "formName": "A", "types": [13], "id": 1, "alpha": true },
-        { "formName": "B", "types": [13], "id": 2, "alpha": true },
-        { "formName": "C", "types": [13], "id": 3, "alpha": true },
-        { "formName": "D", "types": [13], "id": 4, "alpha": true },
-        { "formName": "E", "types": [13], "id": 5, "alpha": true },
-        { "formName": "F", "types": [13], "id": 6, "alpha": true },
-        { "formName": "G", "types": [13], "id": 7, "alpha": true },
-        { "formName": "H", "types": [13], "id": 8, "alpha": true },
-        { "formName": "I", "types": [13], "id": 9, "alpha": true },
-        { "formName": "J", "types": [13], "id": 10, "alpha": true },
-        { "formName": "K", "types": [13], "id": 11, "alpha": true },
-        { "formName": "L", "types": [13], "id": 12, "alpha": true },
-        { "formName": "M", "types": [13], "id": 13, "alpha": true },
-        { "formName": "N", "types": [13], "id": 14, "alpha": true },
-        { "formName": "O", "types": [13], "id": 15, "alpha": true },
-        { "formName": "P", "types": [13], "id": 16, "alpha": true },
-        { "formName": "Q", "types": [13], "id": 17, "alpha": true },
-        { "formName": "R", "types": [13], "id": 18, "alpha": true },
-        { "formName": "S", "types": [13], "id": 19, "alpha": true },
-        { "formName": "T", "types": [13], "id": 20, "alpha": true },
-        { "formName": "U", "types": [13], "id": 21, "alpha": true },
-        { "formName": "V", "types": [13], "id": 22, "alpha": true },
-        { "formName": "W", "types": [13], "id": 23, "alpha": true },
-        { "formName": "X", "types": [13], "id": 24, "alpha": true },
-        { "formName": "Y", "types": [13], "id": 25, "alpha": true },
-        { "formName": "Z", "types": [13], "id": 26, "alpha": true },
-        { "formName": "!", "types": [13], "id": 27, "alpha": true },
-        { "formName": "?", "types": [13], "id": 28, "alpha": true }
+        {
+          "formName": "A",
+          "types": [13],
+          "imgPath": "201",
+          "id": 1,
+          "alpha": true
+        },
+        {
+          "formName": "B",
+          "types": [13],
+          "imgPath": "201-b",
+          "id": 2,
+          "alpha": true
+        },
+        {
+          "formName": "C",
+          "types": [13],
+          "imgPath": "201-c",
+          "id": 3,
+          "alpha": true
+        },
+        {
+          "formName": "D",
+          "types": [13],
+          "imgPath": "201-d",
+          "id": 4,
+          "alpha": true
+        },
+        {
+          "formName": "E",
+          "types": [13],
+          "imgPath": "201-e",
+          "id": 5,
+          "alpha": true
+        },
+        {
+          "formName": "F",
+          "types": [13],
+          "imgPath": "201-f",
+          "id": 6,
+          "alpha": true
+        },
+        {
+          "formName": "G",
+          "types": [13],
+          "imgPath": "201-g",
+          "id": 7,
+          "alpha": true
+        },
+        {
+          "formName": "H",
+          "types": [13],
+          "imgPath": "201-h",
+          "id": 8,
+          "alpha": true
+        },
+        {
+          "formName": "I",
+          "types": [13],
+          "imgPath": "201-i",
+          "id": 9,
+          "alpha": true
+        },
+        {
+          "formName": "J",
+          "types": [13],
+          "imgPath": "201-j",
+          "id": 10,
+          "alpha": true
+        },
+        {
+          "formName": "K",
+          "types": [13],
+          "imgPath": "201-k",
+          "id": 11,
+          "alpha": true
+        },
+        {
+          "formName": "L",
+          "types": [13],
+          "imgPath": "201-l",
+          "id": 12,
+          "alpha": true
+        },
+        {
+          "formName": "M",
+          "types": [13],
+          "imgPath": "201-m",
+          "id": 13,
+          "alpha": true
+        },
+        {
+          "formName": "N",
+          "types": [13],
+          "imgPath": "201-n",
+          "id": 14,
+          "alpha": true
+        },
+        {
+          "formName": "O",
+          "types": [13],
+          "imgPath": "201-o",
+          "id": 15,
+          "alpha": true
+        },
+        {
+          "formName": "P",
+          "types": [13],
+          "imgPath": "201-p",
+          "id": 16,
+          "alpha": true
+        },
+        {
+          "formName": "Q",
+          "types": [13],
+          "imgPath": "201-q",
+          "id": 17,
+          "alpha": true
+        },
+        {
+          "formName": "R",
+          "types": [13],
+          "imgPath": "201-r",
+          "id": 18,
+          "alpha": true
+        },
+        {
+          "formName": "S",
+          "types": [13],
+          "imgPath": "201-s",
+          "id": 19,
+          "alpha": true
+        },
+        {
+          "formName": "T",
+          "types": [13],
+          "imgPath": "201-t",
+          "id": 20,
+          "alpha": true
+        },
+        {
+          "formName": "U",
+          "types": [13],
+          "imgPath": "201-u",
+          "id": 21,
+          "alpha": true
+        },
+        {
+          "formName": "V",
+          "types": [13],
+          "imgPath": "201-v",
+          "id": 22,
+          "alpha": true
+        },
+        {
+          "formName": "W",
+          "types": [13],
+          "imgPath": "201-w",
+          "id": 23,
+          "alpha": true
+        },
+        {
+          "formName": "X",
+          "types": [13],
+          "imgPath": "201-x",
+          "id": 24,
+          "alpha": true
+        },
+        {
+          "formName": "Y",
+          "types": [13],
+          "imgPath": "201-y",
+          "id": 25,
+          "alpha": true
+        },
+        {
+          "formName": "Z",
+          "types": [13],
+          "imgPath": "201-z",
+          "id": 26,
+          "alpha": true
+        },
+        {
+          "formName": "!",
+          "types": [13],
+          "imgPath": "201-exclamation",
+          "id": 27,
+          "alpha": true
+        },
+        {
+          "formName": "?",
+          "types": [13],
+          "imgPath": "201-question",
+          "id": 28,
+          "alpha": true
+        }
       ],
       "onlyVisual": true,
       "interchandable": false
@@ -1892,7 +2103,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Female Wobbufet appear to wear lipstick",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/202"
     },
     "rarity": 0
   },
@@ -1904,7 +2116,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Female Girafarig have a bigger yellow pattern on their body",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/203"
     },
     "rarity": 0
   },
@@ -1940,7 +2153,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Male Gligar have a bigger stinger",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/207"
     },
     "rarity": 0,
     "alpha": true
@@ -1953,7 +2167,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Male Steelix have extra teeth",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/208"
     },
     "rarity": 0,
     "alpha": true
@@ -1981,7 +2196,9 @@
     "origin": 1,
     "genders": [0, 1],
     "rarity": 0,
-    "regionalForms": [{ "region": 9, "types": [1, 3], "alpha": true }]
+    "regionalForms": [
+      { "region": 9, "imgPath": "211", "types": [1, 3], "alpha": true }
+    ]
   },
   {
     "number": 212,
@@ -1991,7 +2208,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Female Scizor have a bigger abdomen",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/212"
     },
     "rarity": 0,
     "alpha": true
@@ -2012,7 +2230,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Female Heracross' horns are shaped similar to hearts",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/214"
     },
     "rarity": 0,
     "alpha": true
@@ -2025,12 +2244,14 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Female Sneasel have smaller head feathers",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/215"
     },
     "rarity": 0,
     "regionalForms": [
       {
         "region": 9,
+        "imgPath": "215",
         "genderDiffs": {
           "desc": "Female Sneasel have smaller head feathers",
           "onlyVisual": true,
@@ -2058,7 +2279,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Male Ursaring's have longer shoulder hair",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/217"
     },
     "rarity": 0,
     "alpha": true
@@ -2096,7 +2318,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Female Piloswine have smaller tusks",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/221"
     },
     "rarity": 0,
     "alpha": true
@@ -2107,7 +2330,7 @@
     "types": [10, 5],
     "origin": 1,
     "genders": [0, 1],
-    "regionalForms": [{ "types": [7], "region": 7 }],
+    "regionalForms": [{ "types": [7], "region": 7, "imgPath": "10170" }],
     "rarity": 0
   },
   {
@@ -2127,7 +2350,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Female Octiller have smaller yellow bumps & feelers",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/224"
     },
     "rarity": 0,
     "alpha": true
@@ -2173,7 +2397,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Female Houndoom have smaller horns",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/229"
     },
     "rarity": 0
   },
@@ -2201,7 +2426,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Female Donphan have smaller tusks",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/232"
     },
     "rarity": 0
   },
@@ -2394,7 +2620,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Male Torchic have a small speck on their rear",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/255"
     },
     "rarity": 0
   },
@@ -2406,7 +2633,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Female Combusken have smaller head feathers",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/256"
     },
     "rarity": 0
   },
@@ -2418,7 +2646,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Female Blaziken have smaller head feathers",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/257"
     },
     "rarity": 0
   },
@@ -2468,7 +2697,7 @@
     "types": [0],
     "origin": 2,
     "genders": [0, 1],
-    "regionalForms": [{ "types": [16, 0], "region": 7 }],
+    "regionalForms": [{ "types": [16, 0], "region": 7, "imgPath": "10171" }],
     "rarity": 0
   },
   {
@@ -2477,7 +2706,7 @@
     "types": [0],
     "origin": 2,
     "genders": [0, 1],
-    "regionalForms": [{ "types": [16, 0], "region": 7 }],
+    "regionalForms": [{ "types": [16, 0], "region": 7, "imgPath": "10172" }],
     "rarity": 0
   },
   {
@@ -2506,7 +2735,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "The red spot on Female Beautifly is smaller",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/267"
     },
     "rarity": 0,
     "alpha": true
@@ -2528,7 +2758,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Female Dustox have smaller antennae",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/269"
     },
     "rarity": 0,
     "alpha": true
@@ -2557,7 +2788,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Female Ludicolo's Body Stripes are thinner",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/272"
     },
     "rarity": 0
   },
@@ -2577,7 +2809,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Female Nuzleaf have smaller head leaves",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/274"
     },
     "rarity": 0
   },
@@ -2589,7 +2822,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Female Shiftry have smaller hand-leaves",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/275"
     },
     "rarity": 0
   },
@@ -2853,7 +3087,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Female Meditite's ears are lower on their head",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/307"
     },
     "rarity": 0
   },
@@ -2865,7 +3100,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "The top of Female Medicham's head is smaller",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/208"
     },
     "rarity": 0
   },
@@ -2925,7 +3161,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Female Roselia have bigger body leaves",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/315"
     },
     "rarity": 0,
     "alpha": true
@@ -2938,7 +3175,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Female Gulpin have smaller head feathers",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/316"
     },
     "rarity": 0
   },
@@ -2950,7 +3188,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Female Swalot have smaller whiskers",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/317"
     },
     "rarity": 0
   },
@@ -2994,7 +3233,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Female Numel have bigger humps",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/322"
     },
     "rarity": 0
   },
@@ -3006,7 +3246,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Female Camerupt have bigger Volcanic Humps",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/323"
     },
     "rarity": 0
   },
@@ -3082,7 +3323,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Female Cacturne has a giant diamond on their body",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/332"
     },
     "rarity": 0
   },
@@ -3232,7 +3474,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Female Miltoic have larger eyebrows",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/350"
     },
     "rarity": 0
   },
@@ -3396,7 +3639,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Female Relicanth have smaller jaws",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/369"
     },
     "rarity": 0
   },
@@ -3537,10 +3781,30 @@
     "rarity": 2,
     "formsData": {
       "forms": [
-        { "formName": "Normal Forme", "types": [13], "id": 1 },
-        { "formName": "Attack Forme", "types": [13], "id": 2 },
-        { "formName": "Defense Forme", "types": [13], "id": 3 },
-        { "formName": "Speed Forme", "types": [13], "id": 4 }
+        {
+          "formName": "Normal Forme",
+          "types": [13],
+          "imgPath": "386",
+          "id": 1
+        },
+        {
+          "formName": "Attack Forme",
+          "types": [13],
+          "imgPath": "10001",
+          "id": 2
+        },
+        {
+          "formName": "Defense Forme",
+          "types": [13],
+          "imgPath": "10002",
+          "id": 3
+        },
+        {
+          "formName": "Speed Forme",
+          "types": [13],
+          "imgPath": "10003",
+          "id": 4
+        }
       ],
       "onlyVisual": false,
       "interchandable": true,
@@ -3636,7 +3900,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Male Starly have larger foreheads",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/396"
     },
     "rarity": 0,
     "alpha": true
@@ -3649,7 +3914,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Male Staravia have larger foreheads",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/397"
     },
     "rarity": 0,
     "alpha": true
@@ -3662,7 +3928,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Male Staraptor have larger foreheads",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/398"
     },
     "rarity": 0,
     "alpha": true
@@ -3675,7 +3942,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Male Bidoof have extra lumps to their tails",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/399"
     },
     "rarity": 0,
     "alpha": true
@@ -3688,7 +3956,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Male Bibarel have bigger faces",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/400"
     },
     "rarity": 0,
     "alpha": true
@@ -3701,7 +3970,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Female Kricketot have larger collars",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/401"
     },
     "rarity": 0,
     "alpha": true
@@ -3714,7 +3984,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Female Kricketune have smaller moustaches",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/402"
     },
     "rarity": 0,
     "alpha": true
@@ -3727,7 +3998,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Female Shinx have shorter head hair",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/403"
     },
     "rarity": 0,
     "alpha": true
@@ -3740,7 +4012,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Female Luxio have shorter head hair",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/404"
     },
     "rarity": 0,
     "alpha": true
@@ -3753,7 +4026,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Female Luxray have shorter head hair",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/405"
     },
     "rarity": 0,
     "alpha": true
@@ -3775,7 +4049,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Female Roserade have larger capes",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/407"
     },
     "rarity": 0,
     "alpha": true
@@ -3825,9 +4100,27 @@
     "rarity": 0,
     "formsData": {
       "forms": [
-        { "formName": "Plant Cloak", "types": [6], "id": 1, "alpha": true },
-        { "formName": "Sandy Cloak", "types": [6], "id": 2, "alpha": true },
-        { "formName": "Trash Cloak", "types": [6], "id": 3, "alpha": true }
+        {
+          "formName": "Plant Cloak",
+          "types": [6],
+          "imgPath": "412",
+          "id": 1,
+          "alpha": true
+        },
+        {
+          "formName": "Sandy Cloak",
+          "types": [6],
+          "imgPath": "412-sandy",
+          "id": 2,
+          "alpha": true
+        },
+        {
+          "formName": "Trash Cloak",
+          "types": [6],
+          "imgPath": "412-trash",
+          "id": 3,
+          "alpha": true
+        }
       ],
       "onlyVisual": true,
       "interchandable": true
@@ -3842,9 +4135,27 @@
     "rarity": 0,
     "formsData": {
       "forms": [
-        { "formName": "Plant Cloak", "types": [6, 11], "id": 1, "alpha": true },
-        { "formName": "Sandy Cloak", "types": [6, 4], "id": 2, "alpha": true },
-        { "formName": "Trash Cloak", "types": [6, 8], "id": 3, "alpha": true }
+        {
+          "formName": "Plant Cloak",
+          "types": [6, 11],
+          "imgPath": "412",
+          "id": 1,
+          "alpha": true
+        },
+        {
+          "formName": "Sandy Cloak",
+          "types": [6, 4],
+          "imgPath": "10004",
+          "id": 2,
+          "alpha": true
+        },
+        {
+          "formName": "Trash Cloak",
+          "types": [6, 8],
+          "imgPath": "10005",
+          "id": 3,
+          "alpha": true
+        }
       ],
       "onlyVisual": false,
       "interchandable": false
@@ -3867,7 +4178,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Female Combee have a Red spot on the bottom face's forehead",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/415"
     },
     "rarity": 0,
     "alpha": true
@@ -3889,7 +4201,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Male Pachirisu's forehead pattern is longer",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/417"
     },
     "rarity": 0,
     "alpha": true
@@ -3902,7 +4215,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Male Buizel have two stripes on their back. Female Buizel only have one.",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/418"
     },
     "rarity": 0,
     "alpha": true
@@ -3915,7 +4229,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Male Floatzel have two stripes on their back. Female Floatzel only have one.",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/419"
     },
     "rarity": 0,
     "alpha": true
@@ -3947,8 +4262,20 @@
     "rarity": 0,
     "formsData": {
       "forms": [
-        { "formName": "West Sea", "types": [10], "id": 1, "alpha": true },
-        { "formName": "East Sea", "types": [10], "id": 2, "alpha": true }
+        {
+          "formName": "West Sea",
+          "types": [10],
+          "imgPath": "422",
+          "id": 1,
+          "alpha": true
+        },
+        {
+          "formName": "East Sea",
+          "types": [10],
+          "imgPath": "422-east",
+          "id": 2,
+          "alpha": true
+        }
       ],
       "onlyVisual": true,
       "interchandable": false
@@ -3963,8 +4290,20 @@
     "rarity": 0,
     "formsData": {
       "forms": [
-        { "formName": "West Sea", "types": [10, 4], "id": 1, "alpha": true },
-        { "formName": "East Sea", "types": [10, 4], "id": 2, "alpha": true }
+        {
+          "formName": "West Sea",
+          "types": [10, 4],
+          "imgPath": "423",
+          "id": 1,
+          "alpha": true
+        },
+        {
+          "formName": "East Sea",
+          "types": [10, 4],
+          "imgPath": "423-east",
+          "id": 2,
+          "alpha": true
+        }
       ],
       "onlyVisual": true,
       "interchandable": false
@@ -3978,7 +4317,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Female Ambipom have longer head hair",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/424"
     },
     "rarity": 0,
     "alpha": true
@@ -4153,7 +4493,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Male Gible have a groove in their fin",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/443"
     },
     "rarity": 0,
     "alpha": true
@@ -4166,7 +4507,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Male Gabite have a groove in their fin",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/444"
     },
     "rarity": 0,
     "alpha": true
@@ -4179,7 +4521,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Male Garchomp have a groove in their fin",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/445"
     },
     "rarity": 0,
     "alpha": true
@@ -4219,7 +4562,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Male & Female Hippoptas have their colour scheme switched",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/449"
     },
     "rarity": 0,
     "alpha": true
@@ -4232,7 +4576,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Male Hippowdon are brown. Female Hippowdon are Grey",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/450"
     },
     "rarity": 0,
     "alpha": true
@@ -4263,7 +4608,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Female Croagunk's have smaller chests",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/453"
     },
     "rarity": 0,
     "alpha": true
@@ -4276,7 +4622,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Male Toxicroak have larger chins",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/454"
     },
     "rarity": 0,
     "alpha": true
@@ -4298,7 +4645,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Female Finneon have larger tails",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/456"
     },
     "rarity": 0,
     "alpha": true
@@ -4311,7 +4659,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Female Lumineon have larger fins",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/457"
     },
     "rarity": 0,
     "alpha": true
@@ -4333,7 +4682,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Female Snover's trunks are more snow covered",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/459"
     },
     "rarity": 0,
     "alpha": true
@@ -4346,7 +4696,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Female Abomasnow have larger breast hair",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/460"
     },
     "rarity": 0,
     "alpha": true
@@ -4359,7 +4710,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Male Weavile have larger ear feathers",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/461"
     },
     "rarity": 0,
     "alpha": true
@@ -4390,7 +4742,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Female Rhyperior have smaller horns",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/464"
     },
     "rarity": 0,
     "alpha": true
@@ -4403,7 +4756,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Female Tangrowth have larger hands",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/465"
     },
     "rarity": 0,
     "alpha": true
@@ -4479,7 +4833,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Male Mamoswine have larger tusks",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/473"
     },
     "rarity": 0,
     "alpha": true
@@ -4538,17 +4893,48 @@
     "rarity": 0,
     "formsData": {
       "forms": [
-        { "formName": "Rotom", "types": [12, 7], "id": 1, "alpha": true },
-        { "formName": "Heat Rotom", "types": [12, 9], "id": 2, "alpha": true },
-        { "formName": "Wash Rotom", "types": [12, 10], "id": 3, "alpha": true },
+        {
+          "formName": "Rotom",
+          "types": [12, 7],
+          "imgPath": "479",
+          "id": 1,
+          "alpha": true
+        },
+        {
+          "formName": "Heat Rotom",
+          "types": [12, 9],
+          "imgPath": "10008",
+          "id": 2,
+          "alpha": true
+        },
+        {
+          "formName": "Wash Rotom",
+          "types": [12, 10],
+          "imgPath": "10009",
+          "id": 3,
+          "alpha": true
+        },
         {
           "formName": "Frost Rotom",
           "types": [12, 14],
+          "imgPath": "10010",
           "id": 4,
           "alpha": true
         },
-        { "formName": "Fan Rotom", "types": [12, 2], "id": 5, "alpha": true },
-        { "formName": "Mow Rotom", "types": [12, 11], "id": 6, "alpha": true }
+        {
+          "formName": "Fan Rotom",
+          "types": [12, 2],
+          "imgPath": "10011",
+          "id": 5,
+          "alpha": true
+        },
+        {
+          "formName": "Mow Rotom",
+          "types": [12, 11],
+          "imgPath": "10012",
+          "id": 6,
+          "alpha": true
+        }
       ],
       "onlyVisual": false,
       "interchandable": true,
@@ -4748,7 +5134,9 @@
     "origin": 4,
     "genders": [0, 1],
     "rarity": 0,
-    "regionalForms": [{ "region": 9, "types": [10, 16], "alpha": true }]
+    "regionalForms": [
+      { "region": 9, "imgPath": "503", "types": [10, 16], "alpha": true }
+    ]
   },
   {
     "number": 504,
@@ -4894,7 +5282,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Male Unfezant have a mask on and have a greenish tinge to their feathers while female Unfezant lack the mask and are more brown.",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/521"
     },
     "rarity": 0
   },
@@ -5122,7 +5511,9 @@
     "origin": 4,
     "genders": [1],
     "rarity": 0,
-    "regionalForms": [{ "region": 9, "types": [11, 1], "alpha": true }]
+    "regionalForms": [
+      { "region": 9, "imgPath": "549", "types": [11, 1], "alpha": true }
+    ]
   },
   {
     "number": 550,
@@ -5133,10 +5524,21 @@
     "rarity": 0,
     "formsData": {
       "forms": [
-        { "formName": "Red-Striped Form", "types": [10], "id": 1 },
-        { "formName": "Blue-Striped Form", "types": [10], "id": 2 },
+        {
+          "formName": "Red-Striped Form",
+          "types": [10],
+          "imgPath": "550",
+          "id": 1
+        },
+        {
+          "formName": "Blue-Striped Form",
+          "types": [10],
+          "imgPath": "10016",
+          "id": 2
+        },
         {
           "formName": "White-Striped Form",
+          "imgPath": "550",
           "id": 3,
           "types": [10],
           "alpha": true
@@ -5176,7 +5578,7 @@
     "types": [9],
     "origin": 4,
     "genders": [0, 1],
-    "regionalForms": [{ "types": [14], "region": 7 }],
+    "regionalForms": [{ "types": [14], "region": 7, "imgPath": "10173" }],
     "rarity": 0
   },
   {
@@ -5185,7 +5587,7 @@
     "types": [9],
     "origin": 4,
     "genders": [0, 1],
-    "regionalForms": [{ "types": [14], "region": 7 }],
+    "regionalForms": [{ "types": [14], "region": 7, "imgPath": "10175" }],
     "rarity": 0
   },
   {
@@ -5242,7 +5644,7 @@
     "types": [7],
     "origin": 4,
     "genders": [0, 1],
-    "regionalForms": [{ "types": [4, 7], "region": 7 }],
+    "regionalForms": [{ "types": [4, 7], "region": 7, "imgPath": "10176" }],
     "rarity": 0
   },
   {
@@ -5309,7 +5711,9 @@
     "origin": 4,
     "genders": [0, 1],
     "rarity": 0,
-    "regionalForms": [{ "region": 9, "types": [0, 7], "alpha": true }]
+    "regionalForms": [
+      { "region": 9, "imgPath": "570", "types": [0, 7], "alpha": true }
+    ]
   },
   {
     "number": 571,
@@ -5318,7 +5722,9 @@
     "origin": 4,
     "genders": [0, 1],
     "rarity": 0,
-    "regionalForms": [{ "region": 9, "types": [0, 7], "alpha": true }]
+    "regionalForms": [
+      { "region": 9, "imgPath": "571", "types": [0, 7], "alpha": true }
+    ]
   },
   {
     "number": 572,
@@ -5433,10 +5839,30 @@
     "rarity": 0,
     "formsData": {
       "forms": [
-        { "formName": "Spring Form", "types": [0, 11], "id": 1 },
-        { "formName": "Summer Form", "types": [0, 11], "id": 2 },
-        { "formName": "Autumn Form", "types": [0, 11], "id": 3 },
-        { "formName": "Winter Form", "types": [0, 11], "id": 4 }
+        {
+          "formName": "Spring Form",
+          "types": [0, 11],
+          "imgPath": "585",
+          "id": 1
+        },
+        {
+          "formName": "Summer Form",
+          "types": [0, 11],
+          "imgPath": "585-summer",
+          "id": 2
+        },
+        {
+          "formName": "Autumn Form",
+          "types": [0, 11],
+          "imgPath": "585-autumn",
+          "id": 3
+        },
+        {
+          "formName": "Winter Form",
+          "types": [0, 11],
+          "imgPath": "585-winter",
+          "id": 4
+        }
       ],
       "onlyVisual": true,
       "interchandable": false
@@ -5451,10 +5877,30 @@
     "rarity": 0,
     "formsData": {
       "forms": [
-        { "formName": "Spring Form", "types": [0, 11], "id": 1 },
-        { "formName": "Summer Form", "types": [0, 11], "id": 2 },
-        { "formName": "Autumn Form", "types": [0, 11], "id": 3 },
-        { "formName": "Winter Form", "types": [0, 11], "id": 4 }
+        {
+          "formName": "Spring Form",
+          "types": [0, 11],
+          "imgPath": "586",
+          "id": 1
+        },
+        {
+          "formName": "Summer Form",
+          "types": [0, 11],
+          "imgPath": "586-summer",
+          "id": 2
+        },
+        {
+          "formName": "Autumn Form",
+          "types": [0, 11],
+          "imgPath": "586-autumn",
+          "id": 3
+        },
+        {
+          "formName": "Winter Form",
+          "types": [0, 11],
+          "imgPath": "586-winter",
+          "id": 4
+        }
       ],
       "onlyVisual": true,
       "interchandable": false
@@ -5508,7 +5954,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Male Frillish are blue while female are pink. Female's tips on tentacles are more curved.",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/592"
     },
     "rarity": 0
   },
@@ -5520,7 +5967,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Male Jellicent are blue while female are pink. Male's collar lare thicker, covering the mouth while female's are smaller",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/593"
     },
     "rarity": 0
   },
@@ -5722,7 +6170,7 @@
     "types": [4, 12],
     "origin": 4,
     "genders": [0, 1],
-    "regionalForms": [{ "types": [4, 8], "region": 7 }],
+    "regionalForms": [{ "types": [4, 8], "region": 7, "imgPath": "10177" }],
     "rarity": 0
   },
   {
@@ -5805,7 +6253,9 @@
     "origin": 4,
     "genders": [0],
     "rarity": 0,
-    "regionalForms": [{ "region": 9, "types": [13, 2], "alpha": true }]
+    "regionalForms": [
+      { "region": 9, "imgPath": "571", "types": [13, 2], "alpha": true }
+    ]
   },
   {
     "number": 629,
@@ -5912,8 +6362,18 @@
     "rarity": 1,
     "formsData": {
       "forms": [
-        { "formName": "Incarnate Forme", "types": [2], "id": 1 },
-        { "formName": "Therian Forme", "types": [2], "id": 2 }
+        {
+          "formName": "Incarnate Forme",
+          "types": [2],
+          "imgPath": "641",
+          "id": 1
+        },
+        {
+          "formName": "Therian Forme",
+          "types": [2],
+          "imgPath": "10019",
+          "id": 2
+        }
       ],
       "onlyVisual": false,
       "interchandable": true,
@@ -5929,8 +6389,18 @@
     "rarity": 1,
     "formsData": {
       "forms": [
-        { "formName": "Incarnate Forme", "types": [12, 2], "id": 1 },
-        { "formName": "Therian Forme", "types": [12, 2], "id": 2 }
+        {
+          "formName": "Incarnate Forme",
+          "types": [12, 2],
+          "imgPath": "642",
+          "id": 1
+        },
+        {
+          "formName": "Therian Forme",
+          "types": [12, 2],
+          "imgPath": "10020",
+          "id": 2
+        }
       ],
       "onlyVisual": false,
       "interchandable": true,
@@ -5962,8 +6432,18 @@
     "rarity": 1,
     "formsData": {
       "forms": [
-        { "formName": "Incarnate Forme", "types": [4, 2], "id": 1 },
-        { "formName": "Therian Forme", "types": [4, 2], "id": 2 }
+        {
+          "formName": "Incarnate Forme",
+          "types": [4, 2],
+          "imgPath": "645",
+          "id": 1
+        },
+        {
+          "formName": "Therian Forme",
+          "types": [4, 2],
+          "imgPath": "10021",
+          "id": 2
+        }
       ],
       "onlyVisual": false,
       "interchandable": true,
@@ -5987,8 +6467,18 @@
     "rarity": 2,
     "formsData": {
       "forms": [
-        { "formName": "Ordinary Form", "types": [10, 1], "id": 1 },
-        { "formName": "Resoute Form", "types": [10, 1], "id": 2 }
+        {
+          "formName": "Ordinary Form",
+          "types": [10, 1],
+          "imgPath": "647",
+          "id": 1
+        },
+        {
+          "formName": "Resoute Form",
+          "types": [10, 1],
+          "imgPath": "10024",
+          "id": 2
+        }
       ],
       "onlyVisual": true,
       "interchandable": true,
@@ -6148,26 +6638,121 @@
     "rarity": 0,
     "formsData": {
       "forms": [
-        { "formName": "Archipelago", "types": [6, 2], "id": 1 },
-        { "formName": "Continental", "types": [6, 2], "id": 2 },
-        { "formName": "Elegant", "types": [6, 2], "id": 3 },
-        { "formName": "Garden", "types": [6, 2], "id": 4 },
-        { "formName": "High Plains", "types": [6, 2], "id": 5 },
-        { "formName": "Icy Snow", "types": [6, 2], "id": 6 },
-        { "formName": "Jungle", "types": [6, 2], "id": 7 },
-        { "formName": "Marine", "types": [6, 2], "id": 8 },
-        { "formName": "Meadow", "types": [6, 2], "id": 9 },
-        { "formName": "Modern", "types": [6, 2], "id": 10 },
-        { "formName": "Monsoon", "types": [6, 2], "id": 11 },
-        { "formName": "Ocean", "types": [6, 2], "id": 12 },
-        { "formName": "Polar", "types": [6, 2], "id": 13 },
-        { "formName": "River", "types": [6, 2], "id": 14 },
-        { "formName": "Sandstorm", "types": [6, 2], "id": 15 },
-        { "formName": "Savanna", "types": [6, 2], "id": 16 },
-        { "formName": "Sun", "types": [6, 2], "id": 17 },
-        { "formName": "Tundra", "types": [6, 2], "id": 18 },
-        { "formName": "Poké Ball", "types": [6, 2], "id": 19 },
-        { "formName": "Fancy", "types": [6, 2], "id": 20 }
+        {
+          "formName": "Archipelago",
+          "types": [6, 2],
+          "imgPath": "666-archipelago",
+          "id": 1
+        },
+        {
+          "formName": "Continental",
+          "types": [6, 2],
+          "imgPath": "666-continental",
+          "id": 2
+        },
+        {
+          "formName": "Elegant",
+          "types": [6, 2],
+          "imgPath": "666-elegant",
+          "id": 3
+        },
+        {
+          "formName": "Garden",
+          "types": [6, 2],
+          "imgPath": "666-garden",
+          "id": 4
+        },
+        {
+          "formName": "High Plains",
+          "types": [6, 2],
+          "imgPath": "666-high-plains",
+          "id": 5
+        },
+        {
+          "formName": "Icy Snow",
+          "types": [6, 2],
+          "imgPath": "666-icy-snow",
+          "id": 6
+        },
+        {
+          "formName": "Jungle",
+          "types": [6, 2],
+          "imgPath": "666-jungle",
+          "id": 7
+        },
+        {
+          "formName": "Marine",
+          "types": [6, 2],
+          "imgPath": "666-marine",
+          "id": 8
+        },
+        {
+          "formName": "Meadow",
+          "types": [6, 2],
+          "imgPath": "666-meadow",
+          "id": 9
+        },
+        {
+          "formName": "Modern",
+          "types": [6, 2],
+          "imgPath": "666-modern",
+          "id": 10
+        },
+        {
+          "formName": "Monsoon",
+          "types": [6, 2],
+          "imgPath": "666-monsoon",
+          "id": 11
+        },
+        {
+          "formName": "Ocean",
+          "types": [6, 2],
+          "imgPath": "666-ocean",
+          "id": 12
+        },
+        {
+          "formName": "Polar",
+          "types": [6, 2],
+          "imgPath": "666-polar",
+          "id": 13
+        },
+        {
+          "formName": "River",
+          "types": [6, 2],
+          "imgPath": "666-river",
+          "id": 14
+        },
+        {
+          "formName": "Sandstorm",
+          "types": [6, 2],
+          "imgPath": "666-sandstorm",
+          "id": 15
+        },
+        {
+          "formName": "Savanna",
+          "types": [6, 2],
+          "imgPath": "666-savanna",
+          "id": 16
+        },
+        { "formName": "Sun", "types": [6, 2], "imgPath": "666-sun", "id": 17 },
+        {
+          "formName": "Tundra",
+          "types": [6, 2],
+          "imgPath": "666-tundra",
+          "id": 18
+        },
+        {
+          "formName": "Poké Ball",
+          "types": [6, 2],
+          "imgPath": "666-poke-ball",
+          "id": 19
+        },
+        {
+          "formName": "Fancy",
+          "types": [6, 2],
+          "imgPath": "666-fancy",
+          "id": 20
+        }
       ],
       "onlyVisual": true,
       "interchandable": false
@@ -6189,7 +6774,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Male Pyroar have a full mane that looks like the kanji symbol for fire (大) while female Pyroar have a smaller mane",
-      "onlyVisual": true
+      "onlyVisual": true,
+      "femaleImgPath": "female/668"
     },
     "rarity": 0
   },
@@ -6202,11 +6788,31 @@
     "rarity": 0,
     "formsData": {
       "forms": [
-        { "formName": "Red Flower", "types": [17], "id": 1 },
-        { "formName": "Yellow Flower", "types": [17], "id": 2 },
-        { "formName": "Orange Flower", "types": [17], "id": 3 },
-        { "formName": "Blue Flower", "types": [17], "id": 4 },
-        { "formName": "White Flower", "types": [17], "id": 5 }
+        { "formName": "Red Flower", "types": [17], "imgPath": "669", "id": 1 },
+        {
+          "formName": "Yellow Flower",
+          "types": [17],
+          "imgPath": "669-yellow",
+          "id": 2
+        },
+        {
+          "formName": "Orange Flower",
+          "types": [17],
+          "imgPath": "669-orange",
+          "id": 3
+        },
+        {
+          "formName": "Blue Flower",
+          "types": [17],
+          "imgPath": "669-blue",
+          "id": 4
+        },
+        {
+          "formName": "White Flower",
+          "types": [17],
+          "imgPath": "669-white",
+          "id": 5
+        }
       ],
       "onlyVisual": true,
       "interchandable": false
@@ -6221,11 +6827,31 @@
     "rarity": 0,
     "formsData": {
       "forms": [
-        { "formName": "Red Flower", "types": [17], "id": 1 },
-        { "formName": "Yellow Flower", "types": [17], "id": 2 },
-        { "formName": "Orange Flower", "types": [17], "id": 3 },
-        { "formName": "Blue Flower", "types": [17], "id": 4 },
-        { "formName": "White Flower", "types": [17], "id": 5 }
+        { "formName": "Red Flower", "types": [17], "imgPath": "670", "id": 1 },
+        {
+          "formName": "Yellow Flower",
+          "types": [17],
+          "imgPath": "670-yellow",
+          "id": 2
+        },
+        {
+          "formName": "Orange Flower",
+          "types": [17],
+          "imgPath": "670-orange",
+          "id": 3
+        },
+        {
+          "formName": "Blue Flower",
+          "types": [17],
+          "imgPath": "670-blue",
+          "id": 4
+        },
+        {
+          "formName": "White Flower",
+          "types": [17],
+          "imgPath": "670-white",
+          "id": 5
+        }
       ],
       "onlyVisual": true,
       "interchandable": false
@@ -6240,11 +6866,31 @@
     "rarity": 0,
     "formsData": {
       "forms": [
-        { "formName": "Red Flower", "types": [17], "id": 1 },
-        { "formName": "Yellow Flower", "types": [17], "id": 2 },
-        { "formName": "Orange Flower", "types": [17], "id": 3 },
-        { "formName": "Blue Flower", "types": [17], "id": 4 },
-        { "formName": "White Flower", "types": [17], "id": 5 }
+        { "formName": "Red Flower", "types": [17], "imgPath": "671", "id": 1 },
+        {
+          "formName": "Yellow Flower",
+          "types": [17],
+          "imgPath": "671-yellow",
+          "id": 2
+        },
+        {
+          "formName": "Orange Flower",
+          "types": [17],
+          "imgPath": "671-orange",
+          "id": 3
+        },
+        {
+          "formName": "Blue Flower",
+          "types": [17],
+          "imgPath": "671-blue",
+          "id": 4
+        },
+        {
+          "formName": "White Flower",
+          "types": [17],
+          "imgPath": "671-white",
+          "id": 5
+        }
       ],
       "onlyVisual": true,
       "interchandable": false
@@ -6306,7 +6952,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Male Meowstic is blue while female is white. Male Meowstic get more Status moves while Female Meowstic are more focused on attacking. They have different Hidden Abilities",
-      "onlyVisual": false
+      "onlyVisual": false,
+      "femaleImgPath": "female/678"
     },
     "rarity": 0
   },
@@ -6527,7 +7174,9 @@
     "origin": 5,
     "genders": [0, 1],
     "rarity": 0,
-    "regionalForms": [{ "region": 9, "types": [8, 15], "alpha": true }]
+    "regionalForms": [
+      { "region": 9, "imgPath": "705", "types": [8, 15], "alpha": true }
+    ]
   },
   {
     "number": 706,
@@ -6536,7 +7185,9 @@
     "origin": 5,
     "genders": [0, 1],
     "rarity": 0,
-    "regionalForms": [{ "region": 9, "types": [8, 15], "alpha": true }]
+    "regionalForms": [
+      { "region": 9, "imgPath": "706", "types": [8, 15], "alpha": true }
+    ]
   },
   {
     "number": 707,
@@ -6571,10 +7222,30 @@
     "rarity": 0,
     "formsData": {
       "forms": [
-        { "formName": "Small Size", "types": [7, 11], "id": 1 },
-        { "formName": "Average Size", "types": [7, 11], "id": 2 },
-        { "formName": "Large Size", "types": [7, 11], "id": 3 },
-        { "formName": "Super Size", "types": [7, 11], "id": 4 }
+        {
+          "formName": "Small Size",
+          "types": [7, 11],
+          "imgPath": "710",
+          "id": 1
+        },
+        {
+          "formName": "Average Size",
+          "types": [7, 11],
+          "imgPath": "10027",
+          "id": 2
+        },
+        {
+          "formName": "Large Size",
+          "types": [7, 11],
+          "imgPath": "10028",
+          "id": 3
+        },
+        {
+          "formName": "Super Size",
+          "types": [7, 11],
+          "imgPath": "10029",
+          "id": 4
+        }
       ],
       "onlyVisual": false,
       "interchandable": false
@@ -6589,10 +7260,30 @@
     "rarity": 0,
     "formsData": {
       "forms": [
-        { "formName": "Small Size", "types": [7, 11], "id": 1 },
-        { "formName": "Average Size", "types": [7, 11], "id": 2 },
-        { "formName": "Large Size", "types": [7, 11], "id": 3 },
-        { "formName": "Super Size", "types": [7, 11], "id": 4 }
+        {
+          "formName": "Small Size",
+          "types": [7, 11],
+          "imgPath": "711",
+          "id": 1
+        },
+        {
+          "formName": "Average Size",
+          "types": [7, 11],
+          "imgPath": "10030",
+          "id": 2
+        },
+        {
+          "formName": "Large Size",
+          "types": [7, 11],
+          "imgPath": "10031",
+          "id": 3
+        },
+        {
+          "formName": "Super Size",
+          "types": [7, 11],
+          "imgPath": "10032",
+          "id": 4
+        }
       ],
       "onlyVisual": false,
       "interchandable": false
@@ -6614,7 +7305,9 @@
     "origin": 5,
     "genders": [0, 1],
     "rarity": 0,
-    "regionalForms": [{ "region": 9, "types": [14, 5], "alpha": true }]
+    "regionalForms": [
+      { "region": 9, "imgPath": "713", "types": [14, 5], "alpha": true }
+    ]
   },
   {
     "number": 714,
@@ -6657,8 +7350,18 @@
     "rarity": 1,
     "formsData": {
       "forms": [
-        { "formName": "10% Forme", "types": [15, 4], "id": 1 },
-        { "formName": "50% Forme", "types": [15, 4], "id": 2 }
+        {
+          "formName": "10% Forme",
+          "types": [15, 4],
+          "imgPath": "10118",
+          "id": 1
+        },
+        {
+          "formName": "50% Forme",
+          "types": [15, 4],
+          "imgPath": "10119",
+          "id": 2
+        }
       ],
       "onlyVisual": false,
       "interchandable": true,
@@ -6714,7 +7417,9 @@
     "origin": 6,
     "genders": [0, 1],
     "rarity": 0,
-    "regionalForms": [{ "region": 9, "types": [11, 1], "alpha": true }]
+    "regionalForms": [
+      { "region": 9, "imgPath": "724", "types": [11, 1], "alpha": true }
+    ]
   },
   {
     "number": 725,
@@ -6853,10 +7558,30 @@
     "rarity": 0,
     "formsData": {
       "forms": [
-        { "formName": "Baile Style", "types": [9, 2], "id": 1 },
-        { "formName": "Pom-Pom Style", "types": [12, 2], "id": 2 },
-        { "formName": "Pa'u Style", "types": [13, 2], "id": 3 },
-        { "formName": "Sensu Style", "types": [7, 2], "id": 4 }
+        {
+          "formName": "Baile Style",
+          "types": [9, 2],
+          "imgPath": "741",
+          "id": 1
+        },
+        {
+          "formName": "Pom-Pom Style",
+          "types": [12, 2],
+          "imgPath": "10123",
+          "id": 2
+        },
+        {
+          "formName": "Pa'u Style",
+          "types": [13, 2],
+          "imgPath": "10124",
+          "id": 3
+        },
+        {
+          "formName": "Sensu Style",
+          "types": [7, 2],
+          "imgPath": "10125",
+          "id": 4
+        }
       ],
       "onlyVisual": false,
       "interchandable": false
@@ -6895,9 +7620,14 @@
     "rarity": 0,
     "formsData": {
       "forms": [
-        { "formName": "Midday Form", "types": [5], "id": 1 },
-        { "formName": "Midnight Form", "types": [5], "id": 2 },
-        { "formName": "Dusk Form", "types": [5], "id": 3 }
+        { "formName": "Midday Form", "types": [5], "imgPath": "745", "id": 1 },
+        {
+          "formName": "Midnight Form",
+          "types": [5],
+          "imgPath": "10126",
+          "id": 2
+        },
+        { "formName": "Dusk Form", "types": [5], "imgPath": "10152", "id": 3 }
       ],
       "onlyVisual": false,
       "interchandable": false
@@ -7136,13 +7866,48 @@
     "rarity": 0,
     "formsData": {
       "forms": [
-        { "formName": "Red Core", "types": [5, 2], "id": 1 },
-        { "formName": "Orange Core", "types": [5, 2], "id": 2 },
-        { "formName": "Yellow Core", "types": [5, 2], "id": 3 },
-        { "formName": "Green Core", "types": [5, 2], "id": 4 },
-        { "formName": "Blue Core", "types": [5, 2], "id": 5 },
-        { "formName": "Indigo Core", "types": [5, 2], "id": 6 },
-        { "formName": "Violet Core", "types": [5, 2], "id": 7 }
+        {
+          "formName": "Red Core",
+          "types": [5, 2],
+          "imgPath": "10136",
+          "id": 1
+        },
+        {
+          "formName": "Orange Core",
+          "types": [5, 2],
+          "imgPath": "10137",
+          "id": 2
+        },
+        {
+          "formName": "Yellow Core",
+          "types": [5, 2],
+          "imgPath": "10138",
+          "id": 3
+        },
+        {
+          "formName": "Green Core",
+          "types": [5, 2],
+          "imgPath": "10139",
+          "id": 4
+        },
+        {
+          "formName": "Blue Core",
+          "types": [5, 2],
+          "imgPath": "10140",
+          "id": 5
+        },
+        {
+          "formName": "Indigo Core",
+          "types": [5, 2],
+          "imgPath": "10141",
+          "id": 6
+        },
+        {
+          "formName": "Violet Core",
+          "types": [5, 2],
+          "imgPath": "10142",
+          "id": 7
+        }
       ],
       "onlyVisual": true,
       "interchandable": false,
@@ -7366,8 +8131,13 @@
     "rarity": 2,
     "formsData": {
       "forms": [
-        { "formName": "Magearna", "types": [8, 17], "id": 1 },
-        { "formName": "Original Color Magearna", "types": [8, 17], "id": 2 }
+        { "formName": "Magearna", "types": [8, 17], "imgPath": "801", "id": 1 },
+        {
+          "formName": "Original Color Magearna",
+          "types": [8, 17],
+          "imgPath": "10147",
+          "id": 2
+        }
       ],
       "onlyVisual": true,
       "interchandable": false
@@ -7769,8 +8539,18 @@
     "rarity": 0,
     "formsData": {
       "forms": [
-        { "formName": "Amped Form", "types": [12, 3], "id": 1 },
-        { "formName": "Low Key Form", "types": [12, 3], "id": 2 }
+        {
+          "formName": "Amped Form",
+          "types": [12, 3],
+          "imgPath": "849",
+          "id": 1
+        },
+        {
+          "formName": "Low Key Form",
+          "types": [12, 3],
+          "imgPath": "10178",
+          "id": 2
+        }
       ],
       "onlyVisual": false,
       "interchandable": false
@@ -7819,8 +8599,8 @@
     "rarity": 0,
     "formsData": {
       "forms": [
-        { "formName": "Phony Form", "types": [7], "id": 1 },
-        { "formName": "Antique Form", "types": [7], "id": 2 }
+        { "formName": "Phony Form", "types": [7], "imgPath": "854", "id": 1 },
+        { "formName": "Antique Form", "types": [7], "imgPath": "854", "id": 2 }
       ],
       "onlyVisual": true,
       "interchandable": false
@@ -7835,8 +8615,8 @@
     "rarity": 0,
     "formsData": {
       "forms": [
-        { "formName": "Phony Form", "types": [7], "id": 1 },
-        { "formName": "Antique Form", "types": [7], "id": 2 }
+        { "formName": "Phony Form", "types": [7], "imgPath": "855", "id": 1 },
+        { "formName": "Antique Form", "types": [7], "imgPath": "855", "id": 2 }
       ],
       "onlyVisual": true,
       "interchandable": false
@@ -7960,86 +8740,381 @@
         {
           "formName": "Vanilla Cream Strawberry Sweet",
           "types": [17],
+          "imgPath": "869",
           "id": 1
         },
-        { "formName": "Vanilla Cream Berry Sweet", "types": [17], "id": 2 },
-        { "formName": "Vanilla Cream Love Sweet", "types": [17], "id": 3 },
-        { "formName": "Vanilla Cream Star Sweet", "types": [17], "id": 4 },
-        { "formName": "Vanilla Cream Clover Sweet", "types": [17], "id": 5 },
-        { "formName": "Vanilla Cream Flower Sweet", "types": [17], "id": 6 },
-        { "formName": "Vanilla Cream Ribbon Sweet", "types": [17], "id": 7 },
-        { "formName": "Ruby Cream Strawberry Sweet", "types": [17], "id": 8 },
-        { "formName": "Ruby Cream Berry Sweet", "types": [17], "id": 9 },
-        { "formName": "Ruby Cream Love Sweet", "types": [17], "id": 10 },
-        { "formName": "Ruby Cream Star Sweet", "types": [17], "id": 11 },
-        { "formName": "Ruby Cream Clover Sweet", "types": [17], "id": 12 },
-        { "formName": "Ruby Cream Flower Sweet", "types": [17], "id": 13 },
-        { "formName": "Ruby Cream Ribbon Sweet", "types": [17], "id": 14 },
+        {
+          "formName": "Vanilla Cream Berry Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 2
+        },
+        {
+          "formName": "Vanilla Cream Love Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 3
+        },
+        {
+          "formName": "Vanilla Cream Star Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 4
+        },
+        {
+          "formName": "Vanilla Cream Clover Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 5
+        },
+        {
+          "formName": "Vanilla Cream Flower Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 6
+        },
+        {
+          "formName": "Vanilla Cream Ribbon Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 7
+        },
+        {
+          "formName": "Ruby Cream Strawberry Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 8
+        },
+        {
+          "formName": "Ruby Cream Berry Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 9
+        },
+        {
+          "formName": "Ruby Cream Love Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 10
+        },
+        {
+          "formName": "Ruby Cream Star Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 11
+        },
+        {
+          "formName": "Ruby Cream Clover Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 12
+        },
+        {
+          "formName": "Ruby Cream Flower Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 13
+        },
+        {
+          "formName": "Ruby Cream Ribbon Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 14
+        },
         {
           "formName": "Matcha Cream Strawberry Sweet",
           "types": [17],
+          "imgPath": "869",
           "id": 15
         },
-        { "formName": "Matcha Cream Berry Sweet", "types": [17], "id": 16 },
-        { "formName": "Matcha Cream Love Sweet", "types": [17], "id": 17 },
-        { "formName": "Matcha Cream Star Sweet", "types": [17], "id": 18 },
-        { "formName": "Matcha Cream Clover Sweet", "types": [17], "id": 19 },
-        { "formName": "Matcha Cream Flower Sweet", "types": [17], "id": 20 },
-        { "formName": "Matcha Cream Ribbon Sweet", "types": [17], "id": 21 },
-        { "formName": "Mint Cream Strawberry Sweet", "types": [17], "id": 22 },
-        { "formName": "Mint Cream Berry Sweet", "types": [17], "id": 23 },
-        { "formName": "Mint Cream Love Sweet", "types": [17], "id": 24 },
-        { "formName": "Mint Cream Star Sweet", "types": [17], "id": 25 },
-        { "formName": "Mint Cream Clover Sweet", "types": [17], "id": 26 },
-        { "formName": "Mint Cream Flower Sweet", "types": [17], "id": 27 },
-        { "formName": "Mint Cream Ribbon Sweet", "types": [17], "id": 28 },
-        { "formName": "Lemon Cream Strawberry Sweet", "types": [17], "id": 29 },
-        { "formName": "Lemon Cream Berry Sweet", "types": [17], "id": 30 },
-        { "formName": "Lemon Cream Love Sweet", "types": [17], "id": 31 },
-        { "formName": "Lemon Cream Star Sweet", "types": [17], "id": 32 },
-        { "formName": "Lemon Cream Clover Sweet", "types": [17], "id": 33 },
-        { "formName": "Lemon Cream Flower Sweet", "types": [17], "id": 34 },
-        { "formName": "Lemon Cream Ribbon Sweet", "types": [17], "id": 35 },
+        {
+          "formName": "Matcha Cream Berry Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 16
+        },
+        {
+          "formName": "Matcha Cream Love Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 17
+        },
+        {
+          "formName": "Matcha Cream Star Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 18
+        },
+        {
+          "formName": "Matcha Cream Clover Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 19
+        },
+        {
+          "formName": "Matcha Cream Flower Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 20
+        },
+        {
+          "formName": "Matcha Cream Ribbon Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 21
+        },
+        {
+          "formName": "Mint Cream Strawberry Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 22
+        },
+        {
+          "formName": "Mint Cream Berry Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 23
+        },
+        {
+          "formName": "Mint Cream Love Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 24
+        },
+        {
+          "formName": "Mint Cream Star Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 25
+        },
+        {
+          "formName": "Mint Cream Clover Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 26
+        },
+        {
+          "formName": "Mint Cream Flower Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 27
+        },
+        {
+          "formName": "Mint Cream Ribbon Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 28
+        },
+        {
+          "formName": "Lemon Cream Strawberry Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 29
+        },
+        {
+          "formName": "Lemon Cream Berry Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 30
+        },
+        {
+          "formName": "Lemon Cream Love Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 31
+        },
+        {
+          "formName": "Lemon Cream Star Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 32
+        },
+        {
+          "formName": "Lemon Cream Clover Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 33
+        },
+        {
+          "formName": "Lemon Cream Flower Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 34
+        },
+        {
+          "formName": "Lemon Cream Ribbon Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 35
+        },
         {
           "formName": "Salted Cream Strawberry Sweet",
           "types": [17],
+          "imgPath": "869",
           "id": 36
         },
-        { "formName": "Salted Cream Berry Sweet", "types": [17], "id": 37 },
-        { "formName": "Salted Cream Love Sweet", "types": [17], "id": 38 },
-        { "formName": "Salted Cream Star Sweet", "types": [17], "id": 39 },
-        { "formName": "Salted Cream Clover Sweet", "types": [17], "id": 40 },
-        { "formName": "Salted Cream Flower Sweet", "types": [17], "id": 41 },
-        { "formName": "Salted Cream Ribbon Sweet", "types": [17], "id": 42 },
-        { "formName": "Ruby Swirl Strawberry Sweet", "types": [17], "id": 43 },
-        { "formName": "Ruby Swirl Berry Sweet", "types": [17], "id": 44 },
-        { "formName": "Ruby Swirl Love Sweet", "types": [17], "id": 45 },
-        { "formName": "Ruby Swirl Star Sweet", "types": [17], "id": 46 },
-        { "formName": "Ruby Swirl Clover Sweet", "types": [17], "id": 47 },
-        { "formName": "Ruby Swirl Flower Sweet", "types": [17], "id": 48 },
-        { "formName": "Ruby Swirl Ribbon Sweet", "types": [17], "id": 49 },
+        {
+          "formName": "Salted Cream Berry Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 37
+        },
+        {
+          "formName": "Salted Cream Love Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 38
+        },
+        {
+          "formName": "Salted Cream Star Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 39
+        },
+        {
+          "formName": "Salted Cream Clover Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 40
+        },
+        {
+          "formName": "Salted Cream Flower Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 41
+        },
+        {
+          "formName": "Salted Cream Ribbon Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 42
+        },
+        {
+          "formName": "Ruby Swirl Strawberry Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 43
+        },
+        {
+          "formName": "Ruby Swirl Berry Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 44
+        },
+        {
+          "formName": "Ruby Swirl Love Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 45
+        },
+        {
+          "formName": "Ruby Swirl Star Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 46
+        },
+        {
+          "formName": "Ruby Swirl Clover Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 47
+        },
+        {
+          "formName": "Ruby Swirl Flower Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 48
+        },
+        {
+          "formName": "Ruby Swirl Ribbon Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 49
+        },
         {
           "formName": "Caramel Swirl Strawberry Sweet",
           "types": [17],
+          "imgPath": "869",
           "id": 50
         },
-        { "formName": "Caramel Swirl Berry Sweet", "types": [17], "id": 51 },
-        { "formName": "Caramel Swirl Love Sweet", "types": [17], "id": 52 },
-        { "formName": "Caramel Swirl Star Sweet", "types": [17], "id": 53 },
-        { "formName": "Caramel Swirl Clover Sweet", "types": [17], "id": 54 },
-        { "formName": "Caramel Swirl Flower Sweet", "types": [17], "id": 55 },
-        { "formName": "Caramel Swirl Ribbon Sweet", "types": [17], "id": 56 },
+        {
+          "formName": "Caramel Swirl Berry Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 51
+        },
+        {
+          "formName": "Caramel Swirl Love Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 52
+        },
+        {
+          "formName": "Caramel Swirl Star Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 53
+        },
+        {
+          "formName": "Caramel Swirl Clover Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 54
+        },
+        {
+          "formName": "Caramel Swirl Flower Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 55
+        },
+        {
+          "formName": "Caramel Swirl Ribbon Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 56
+        },
         {
           "formName": "Rainbow Swirl Strawberry Sweet",
           "types": [17],
+          "imgPath": "869",
           "id": 57
         },
-        { "formName": "Rainbow Swirl Berry Sweet", "types": [17], "id": 58 },
-        { "formName": "Rainbow Swirl Love Sweet", "types": [17], "id": 59 },
-        { "formName": "Rainbow Swirl Star Sweet", "types": [17], "id": 60 },
-        { "formName": "Rainbow Swirl Clover Sweet", "types": [17], "id": 61 },
-        { "formName": "Rainbow Swirl Flower Sweet", "types": [17], "id": 62 },
-        { "formName": "Rainbow Swirl Ribbon Sweet", "types": [17], "id": 63 }
+        {
+          "formName": "Rainbow Swirl Berry Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 58
+        },
+        {
+          "formName": "Rainbow Swirl Love Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 59
+        },
+        {
+          "formName": "Rainbow Swirl Star Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 60
+        },
+        {
+          "formName": "Rainbow Swirl Clover Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 61
+        },
+        {
+          "formName": "Rainbow Swirl Flower Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 62
+        },
+        {
+          "formName": "Rainbow Swirl Ribbon Sweet",
+          "types": [17],
+          "imgPath": "869",
+          "id": 63
+        }
       ],
       "onlyVisual": true,
       "interchandable": false
@@ -8102,7 +9177,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Male Indeedee has prominent horns while female's are perched down. Male has blue specks around the eye while female has pink. They have different stats, moves and abilities",
-      "onlyVisual": false
+      "onlyVisual": false,
+      "femaleImgPath": "female/876"
     },
     "rarity": 0
   },
@@ -8237,8 +9313,18 @@
     "rarity": 1,
     "formsData": {
       "forms": [
-        { "formName": "Single Strike Style", "types": [1, 16], "id": 1 },
-        { "formName": "Rapid Strike Style", "types": [1, 10], "id": 2 }
+        {
+          "formName": "Single Strike Style",
+          "types": [1, 16],
+          "imgPath": "892",
+          "id": 1
+        },
+        {
+          "formName": "Rapid Strike Style",
+          "types": [1, 10],
+          "imgPath": "10183",
+          "id": 2
+        }
       ],
       "onlyVisual": false,
       "interchandable": false
@@ -8254,8 +9340,13 @@
     "rarity": 2,
     "formsData": {
       "forms": [
-        { "formName": "Zarude", "types": [16, 11], "id": 1 },
-        { "formName": "Dada Zarude", "types": [16, 11], "id": 2 }
+        { "formName": "Zarude", "types": [16, 11], "imgPath": "893", "id": 1 },
+        {
+          "formName": "Dada Zarude",
+          "types": [16, 11],
+          "imgPath": "893",
+          "id": 2
+        }
       ],
       "onlyVisual": true,
       "interchandable": false
@@ -8335,7 +9426,8 @@
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Males have red accents, while females has pale blue accents. Male Basculegion have higher Attack, while female Basculegion have higher Special Attack.",
-      "onlyVisual": false
+      "onlyVisual": false,
+      "femaleImgPath": "female/902"
     },
     "rarity": 0,
     "types": [10, 7],
@@ -8368,8 +9460,18 @@
     "types": [17, 2],
     "formsData": {
       "forms": [
-        { "formName": "Incarnate Forme", "id": 1, "types": [17, 2] },
-        { "formName": "Therian Forme", "id": 2, "types": [17, 2] }
+        {
+          "formName": "Incarnate Forme",
+          "imgPath": "642",
+          "id": 1,
+          "types": [17, 2]
+        },
+        {
+          "formName": "Therian Forme",
+          "imgPath": "10020",
+          "id": 2,
+          "types": [17, 2]
+        }
       ],
       "onlyVisual": false,
       "interchandable": true,

@@ -61,7 +61,7 @@ export class PokedexSelectionService extends PokedexBaseService {
 
     console.log(number, newSelection);
     this._selectionMap.set(number, newSelection);
-    this.pokedexStorageService.setSelection(number, newSelection);
+    this.pokedexStorageService.setSelection(number, newSelection).subscribe();
     this._selectionChangeSubject.next({
       entry,
       newSelection,

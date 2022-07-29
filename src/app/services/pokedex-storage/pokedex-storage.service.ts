@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
+import { isArray } from '@12luckydev/utils';
 import localforage from 'localforage';
-import { from, Observable } from 'rxjs';
+import { from, iif, map, Observable } from 'rxjs';
 import {
   PokedexOptions,
   SpecyficSelection,
@@ -36,6 +37,10 @@ export class PokedexStorageService {
     return from(storage.getItem<T>(key));
   }
 
+  private removeItem(storage: LocalForage, key: string): Observable<void> {
+    return from(storage.removeItem(key));
+  }
+
   public setOptions(options: PokedexOptions): Observable<PokedexOptions> {
     return this.setItem(this.generalStorage, 'OPTIONS_DATA', options);
   }
@@ -61,7 +66,11 @@ export class PokedexStorageService {
     number: number,
     selection: SpecyficSelection[]
   ): Observable<SpecyficSelection[]> {
-    return this.setItem(this.selectionStorage, number.toString(), selection);
+    return isArray(selection, false)
+      ? this.setItem(this.selectionStorage, number.toString(), selection)
+      : this.removeItem(this.selectionStorage, number.toString()).pipe(
+          map(() => [])
+        );
   }
 
   public getAllSelections(): Observable<{

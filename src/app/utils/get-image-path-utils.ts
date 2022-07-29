@@ -14,6 +14,8 @@ export const getImagePath = (
 
   let path = number.toString();
 
+  let addFemaleTag = true;
+
   if (form) {
     const { formType, id } = form;
     switch (formType) {
@@ -27,6 +29,7 @@ export const getImagePath = (
         break;
       case PokeFormType.gigantamax:
         path += !!gigantamax?.formDiffs ? `_${id}_g` : '_g';
+        addFemaleTag = false;
         break;
     }
   } else if (formsData) {
@@ -35,6 +38,7 @@ export const getImagePath = (
   }
 
   if (
+    addFemaleTag &&
     gender === PokeGender.female &&
     !!(form ? form?.genderDiffs : entry?.genderDiffs)
   ) {

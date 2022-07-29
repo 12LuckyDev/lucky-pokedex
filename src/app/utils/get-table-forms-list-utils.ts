@@ -1,7 +1,65 @@
 import { PokeFormType, PokeRegionalForm } from '../enums';
-import { PokedexEntry, PokedexShowTypes, PokedexTableForm } from '../models';
+import {
+  PokedexEntry,
+  PokedexFormEntry,
+  PokedexRegionalFormEntry,
+  PokedexShowTypes,
+  PokedexTableForm,
+} from '../models';
 
-// TODO Try to compress code (maybe move some code to functions)
+const buildTableEntry = (
+  { types, name, genderDiffs }: PokedexEntry,
+  formType: PokeFormType
+): PokedexTableForm => {
+  return {
+    id: 0,
+    types,
+    genderDiffs,
+    formType,
+    formName: `${PokeFormType[formType]} ${name}`,
+  };
+};
+
+const buildTableForm = (
+  { id, types, formName }: PokedexFormEntry,
+  formType: PokeFormType
+): PokedexTableForm => {
+  return {
+    id,
+    types,
+    formType,
+    formName:
+      formType === PokeFormType.form
+        ? formName
+        : `${
+            formType === PokeFormType.form_alpha
+              ? PokeFormType[PokeFormType.alpha]
+              : PokeFormType[formType]
+          } ${formName}`,
+  };
+};
+
+const buildTableRegionalForm = (
+  { region, types, genderDiffs }: PokedexRegionalFormEntry,
+  name: string,
+  formType: PokeFormType
+): PokedexTableForm => {
+  const regionalName = `${PokeRegionalForm[region]} ${name}`;
+  return {
+    id: region,
+    types,
+    genderDiffs,
+    formType: PokeFormType.regional_form,
+    formName:
+      formType === PokeFormType.regional_form
+        ? regionalName
+        : `${
+            formType === PokeFormType.regional_form_alpha
+              ? PokeFormType[PokeFormType.alpha]
+              : PokeFormType[formType]
+          } ${regionalName}`,
+  };
+};
 
 export const getTableFormsList = (
   entry: PokedexEntry,
@@ -19,61 +77,41 @@ export const getTableFormsList = (
   const { formsData, regionalForms, name } = entry;
 
   if (showGigantamax && !showGigantamaxPerForm) {
-    data.push({
-      id: 0,
-      types: entry.types,
-      formType: PokeFormType.gigantamax,
-      formName: `Gigantamax ${entry.name}`,
-    });
+    data.push(buildTableEntry(entry, PokeFormType.gigantamax));
   }
 
   if (showAlpha) {
-    data.push({
-      id: 0,
-      types: entry.types,
-      formType: PokeFormType.alpha,
-      formName: `Alpha ${entry.name}`,
-    });
+    data.push(buildTableEntry(entry, PokeFormType.alpha));
   }
 
   if (formsData && showForms) {
     formsData.forms.forEach((form) => {
-      data.push({ ...form, formType: PokeFormType.form });
+      data.push(buildTableForm(form, PokeFormType.form));
+
       if (showGigantamaxPerForm) {
-        data.push({
-          id: form.id,
-          types: form.types,
-          formType: PokeFormType.gigantamax,
-          formName: `Gigantamax ${form.formName}`,
-        });
+        data.push(buildTableForm(form, PokeFormType.gigantamax));
       }
+
       if (showAlphaForms.includes(form.id)) {
-        data.push({
-          id: form.id,
-          types: form.types,
-          formType: PokeFormType.form_alpha,
-          formName: `Alpha ${form.formName}`,
-        });
+        data.push(buildTableForm(form, PokeFormType.form_alpha));
       }
     });
   }
 
   if (regionalForms && showRegionalForms) {
-    regionalForms.forEach(({ region, types, genderDiffs }) => {
-      data.push({
-        id: region,
-        types,
-        genderDiffs,
-        formType: PokeFormType.regional_form,
-        formName: `${PokeRegionalForm[region]} ${name}`,
-      });
-      if (showAlphaRegionalForms.includes(region)) {
-        data.push({
-          id: region,
-          types,
-          formType: PokeFormType.regional_form_alpha,
-          formName: `Alpha ${PokeRegionalForm[region]} ${name}`,
-        });
+    regionalForms.forEach((regionalForm) => {
+      data.push(
+        buildTableRegionalForm(regionalForm, name, PokeFormType.regional_form)
+      );
+
+      if (showAlphaRegionalForms.includes(regionalForm.region)) {
+        data.push(
+          buildTableRegionalForm(
+            regionalForm,
+            name,
+            PokeFormType.regional_form_alpha
+          )
+        );
       }
     });
   }

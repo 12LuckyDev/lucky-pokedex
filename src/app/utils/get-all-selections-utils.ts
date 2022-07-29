@@ -1,12 +1,23 @@
-import { PokeFormType } from 'src/app/enums';
+import { PokeFormType, PokeGender } from 'src/app/enums';
 import {
   PokedexEntry,
   PokedexShowTypes,
   SpecyficSelection,
 } from 'src/app/models';
 
-// TODO Try to compress code (maybe move some code to functions)
-// I can't read this now :P
+const buildSelection = (
+  formType: PokeFormType | null,
+  opt: { gender?: PokeGender; formId?: number } = {}
+): SpecyficSelection => {
+  return { formType, ...opt };
+};
+
+const buildGendersSelections = (
+  formType: PokeFormType | null,
+  genders: PokeGender[],
+  formId?: number
+): SpecyficSelection[] =>
+  genders.map((gender) => buildSelection(formType, { gender, formId }));
 
 export const getAllSelections = (
   entry: PokedexEntry,
@@ -21,141 +32,102 @@ export const getAllSelections = (
     showAlphaRegionalForms,
   }: PokedexShowTypes
 ): SpecyficSelection[] => {
-  const specyficSelection: SpecyficSelection[] = [];
+  const allSelection: SpecyficSelection[] = [];
 
   const { formsData, regionalForms, genders } = entry;
 
   if (showForms) {
-    formsData?.forms.forEach(({ id }) => {
+    // Adding all forms selections
+    formsData?.forms?.forEach(({ id: formId }) => {
       if (showGenders) {
-        specyficSelection.push(
-          ...genders.map(
-            (g) =>
-              ({
-                formType: PokeFormType.form,
-                gender: g,
-                formId: id,
-              } as SpecyficSelection)
-          )
+        allSelection.push(
+          ...buildGendersSelections(PokeFormType.form, genders, formId)
         );
 
         if (showGigantamaxPerForm) {
-          specyficSelection.push(
-            ...genders.map(
-              (g) =>
-                ({
-                  formType: PokeFormType.gigantamax,
-                  gender: g,
-                  formId: id,
-                } as SpecyficSelection)
-            )
+          allSelection.push(
+            ...buildGendersSelections(PokeFormType.gigantamax, genders, formId)
           );
         }
 
-        if (showAlphaForms.includes(id)) {
-          specyficSelection.push(
-            ...genders.map(
-              (g) =>
-                ({
-                  formType: PokeFormType.form_alpha,
-                  gender: g,
-                  formId: id,
-                } as SpecyficSelection)
-            )
+        if (showAlphaForms.includes(formId)) {
+          allSelection.push(
+            ...buildGendersSelections(PokeFormType.form_alpha, genders, formId)
           );
         }
       } else {
-        specyficSelection.push({ formType: PokeFormType.form, formId: id });
+        allSelection.push(buildSelection(PokeFormType.form, { formId }));
+
         if (showGigantamaxPerForm) {
-          specyficSelection.push({
-            formType: PokeFormType.gigantamax,
-            formId: id,
-          });
+          allSelection.push(
+            buildSelection(PokeFormType.gigantamax, { formId })
+          );
         }
 
-        if (showAlphaForms.includes(id)) {
-          specyficSelection.push({
-            formType: PokeFormType.form_alpha,
-            formId: id,
-          });
+        if (showAlphaForms.includes(formId)) {
+          buildSelection(PokeFormType.form_alpha, { formId });
         }
       }
     });
-  } else if (showGenders) {
-    specyficSelection.push(
-      ...genders.map((g) => ({ formType: null, gender: g }))
-    );
-    if (showGigantamax) {
-      specyficSelection.push(
-        ...genders.map((g) => ({
-          formType: PokeFormType.gigantamax,
-          formId: 0,
-          gender: g,
-        }))
-      );
-    }
-
-    if (showAlpha) {
-      specyficSelection.push(
-        ...genders.map((g) => ({
-          formType: PokeFormType.alpha,
-          formId: 0,
-          gender: g,
-        }))
-      );
-    }
   } else {
-    specyficSelection.push({ formType: null });
-    if (showGigantamax) {
-      specyficSelection.push({ formType: PokeFormType.gigantamax, formId: 0 });
-    }
+    // Adding all selections (without form info)
+    if (showGenders) {
+      allSelection.push(...buildGendersSelections(null, genders));
 
-    if (showAlpha) {
-      specyficSelection.push({ formType: PokeFormType.alpha, formId: 0 });
+      if (showGigantamax) {
+        allSelection.push(
+          ...buildGendersSelections(PokeFormType.gigantamax, genders, 0)
+        );
+      }
+
+      if (showAlpha) {
+        allSelection.push(
+          ...buildGendersSelections(PokeFormType.alpha, genders, 0)
+        );
+      }
+    } else {
+      allSelection.push(buildSelection(null));
+
+      if (showGigantamax) {
+        allSelection.push({ formType: PokeFormType.gigantamax, formId: 0 });
+      }
+
+      if (showAlpha) {
+        allSelection.push({ formType: PokeFormType.alpha, formId: 0 });
+      }
     }
   }
 
   if (showRegionalForms) {
-    regionalForms?.forEach(({ region }) => {
+    // Adding all regional forms selections
+    regionalForms?.forEach(({ region: formId }) => {
       if (showGenders) {
-        specyficSelection.push(
-          ...genders.map(
-            (g) =>
-              ({
-                formType: PokeFormType.regional_form,
-                gender: g,
-                formId: region,
-              } as SpecyficSelection)
-          )
+        allSelection.push(
+          ...buildGendersSelections(PokeFormType.regional_form, genders, formId)
         );
 
-        if (showAlphaRegionalForms.includes(region)) {
-          specyficSelection.push(
-            ...genders.map(
-              (g) =>
-                ({
-                  formType: PokeFormType.regional_form_alpha,
-                  gender: g,
-                  formId: region,
-                } as SpecyficSelection)
+        if (showAlphaRegionalForms.includes(formId)) {
+          allSelection.push(
+            ...buildGendersSelections(
+              PokeFormType.regional_form_alpha,
+              genders,
+              formId
             )
           );
         }
       } else {
-        specyficSelection.push({
-          formType: PokeFormType.regional_form,
-          formId: region,
-        });
+        allSelection.push(
+          buildSelection(PokeFormType.regional_form, { formId })
+        );
 
-        if (showAlphaRegionalForms.includes(region)) {
-          specyficSelection.push({
-            formType: PokeFormType.regional_form_alpha,
-            formId: region,
-          });
+        if (showAlphaRegionalForms.includes(formId)) {
+          allSelection.push(
+            buildSelection(PokeFormType.regional_form_alpha, { formId })
+          );
         }
       }
     });
   }
 
-  return specyficSelection;
+  return allSelection;
 };

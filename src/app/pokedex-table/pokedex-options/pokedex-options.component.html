@@ -5,79 +5,168 @@
   (closed)="onPanelClick(false)"
 >
   <mat-expansion-panel-header>
-    <mat-panel-title> Pokedex settings </mat-panel-title>
+    <mat-panel-title translate> OPTIONS.TITLE</mat-panel-title>
     <mat-icon>settings</mat-icon>
   </mat-expansion-panel-header>
 
   <form [formGroup]="form" novalidate>
     <mat-card>
       <mat-card-header>
-        <mat-card-title>Counting Policies</mat-card-title>
+        <mat-card-title translate
+          >OPTIONS.COUNT_POLICIES_SUBTITLE</mat-card-title
+        >
       </mat-card-header>
+
       <mat-card-content>
-        <div fxLayout="row" fxLayout.sm="column" xLayoutWrap fxLayoutGap="2.5%">
-          <mat-form-field fxFlex="1 1" appearance="fill">
-            <mat-label>Forms counting policy</mat-label>
-            <mat-select color="primary" formControlName="countFormsPolicy">
-              <mat-option
-                *ngFor="let option of countFormsPolicyOptions"
-                [value]="option.id"
-              >
-                {{ option.name }}
-              </mat-option>
-            </mat-select>
-          </mat-form-field>
+        <div fxLayout="column">
+          <div fxLayout="row">
+            <mat-form-field fxFlex="1 1" appearance="fill">
+              <mat-label translate>OPTIONS.COUNT_POLICIES.GENDERS</mat-label>
+              <mat-select color="primary" formControlName="countGendersPolicy">
+                <mat-option
+                  *ngFor="let option of countGendersPolicyOptions"
+                  [value]="option"
+                >
+                  {{
+                    "OPTIONS.COUNT_POLICIES_OPTIONS.GENDERS." + option
+                      | translate
+                  }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
 
-          <mat-form-field fxFlex="1 1" appearance="fill">
-            <mat-label>Regional forms counting policy</mat-label>
-            <mat-select
-              color="primary"
-              formControlName="countRegionalFormsPolicy"
+          <div
+            fxLayout="row"
+            fxLayout.lt-md="column"
+            xLayoutWrap
+            fxLayoutGap.gt-sm="2.5%"
+          >
+            <div
+              fxLayout="row"
+              fxFlex="1 1"
+              fxLayoutGap="2.5%"
+              fxLayoutAlign="start baseline"
             >
-              <mat-option
-                *ngFor="let option of countRegionalFormsPolicyOptions"
-                [value]="option.id"
+              <mat-form-field fxFlex="1 1" appearance="fill">
+                <mat-label translate>OPTIONS.COUNT_POLICIES.FORMS</mat-label>
+                <mat-select color="primary" formControlName="countFormsPolicy">
+                  <mat-option
+                    *ngFor="let option of countFormsPolicyOptions"
+                    [value]="option"
+                  >
+                    {{
+                      "OPTIONS.COUNT_POLICIES_OPTIONS.FORMS." + option
+                        | translate
+                    }}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+              <mat-checkbox
+                formControlName="applyGenderPolicyToForms"
+                color="primary"
+                >{{ "OPTIONS.APPLY_GENDERS_POLICY" | translate }}</mat-checkbox
               >
-                {{ option.name }}
-              </mat-option>
-            </mat-select>
-          </mat-form-field>
+            </div>
 
-          <mat-form-field fxFlex="1 1" appearance="fill">
-            <mat-label>Genders counting policy</mat-label>
-            <mat-select color="primary" formControlName="countGendersPolicy">
-              <mat-option
-                *ngFor="let option of countGendersPolicyOptions"
-                [value]="option.id"
+            <div
+              fxLayout="row"
+              fxFlex="1 1"
+              fxLayoutGap="2.5%"
+              fxLayoutAlign="start baseline"
+            >
+              <mat-form-field fxFlex="1 1" appearance="fill">
+                <mat-label translate
+                  >OPTIONS.COUNT_POLICIES.REGIONAL_FORMS</mat-label
+                >
+                <mat-select
+                  color="primary"
+                  formControlName="countRegionalFormsPolicy"
+                >
+                  <mat-option
+                    *ngFor="let option of countRegionalFormsPolicyOptions"
+                    [value]="option"
+                  >
+                    {{
+                      "OPTIONS.COUNT_POLICIES_OPTIONS.REGIONAL_FORMS." + option
+                        | translate
+                    }}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+              <mat-checkbox
+                formControlName="applyGenderPolicyToRegionalForms"
+                color="primary"
+                >{{ "OPTIONS.APPLY_GENDERS_POLICY" | translate }}</mat-checkbox
               >
-                {{ option.name }}
-              </mat-option>
-            </mat-select>
-          </mat-form-field>
+            </div>
+          </div>
 
-          <mat-form-field fxFlex="1 1" appearance="fill">
-            <mat-label>Gigantamax counting policy</mat-label>
-            <mat-select color="primary" formControlName="countGigantamaxPolicy">
-              <mat-option
-                *ngFor="let option of countGigantamaxPolicyOptions"
-                [value]="option.id"
+          <div
+            fxLayout="row"
+            fxLayout.lt-md="column"
+            xLayoutWrap
+            fxLayoutGap.gt-sm="2.5%"
+          >
+            <div
+              fxLayout="row"
+              fxFlex="1 1"
+              fxLayoutGap="2.5%"
+              fxLayoutAlign="start baseline"
+            >
+              <mat-form-field fxFlex="1 1" appearance="fill">
+                <mat-label translate
+                  >OPTIONS.COUNT_POLICIES.GIGANTAMAX</mat-label
+                >
+                <mat-select
+                  color="primary"
+                  formControlName="countGigantamaxPolicy"
+                >
+                  <mat-option
+                    *ngFor="let option of countGigantamaxPolicyOptions"
+                    [value]="option"
+                  >
+                    {{
+                      "OPTIONS.COUNT_POLICIES_OPTIONS.GIGANTAMAX." + option
+                        | translate
+                    }}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+              <mat-checkbox
+                formControlName="applyGenderPolicyToGigantamax"
+                color="primary"
+                >{{ "OPTIONS.APPLY_GENDERS_POLICY" | translate }}</mat-checkbox
               >
-                {{ option.name }}
-              </mat-option>
-            </mat-select>
-          </mat-form-field>
+            </div>
 
-          <mat-form-field fxFlex="1 1" appearance="fill">
-            <mat-label>Alpha counting policy</mat-label>
-            <mat-select color="primary" formControlName="countAlphaPolicy">
-              <mat-option
-                *ngFor="let option of countAlphaPolicyOptions"
-                [value]="option.id"
+            <div
+              fxLayout="row"
+              fxFlex="1 1"
+              fxLayoutGap="2.5%"
+              fxLayoutAlign="start baseline"
+            >
+              <mat-form-field fxFlex="1 1" appearance="fill">
+                <mat-label translate>OPTIONS.COUNT_POLICIES.ALPHA</mat-label>
+                <mat-select color="primary" formControlName="countAlphaPolicy">
+                  <mat-option
+                    *ngFor="let option of countAlphaPolicyOptions"
+                    [value]="option"
+                  >
+                    {{
+                      "OPTIONS.COUNT_POLICIES_OPTIONS.ALPHA." + option
+                        | translate
+                    }}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+              <mat-checkbox
+                formControlName="applyGenderPolicyToAlpha"
+                color="primary"
+                >{{ "OPTIONS.APPLY_GENDERS_POLICY" | translate }}</mat-checkbox
               >
-                {{ option.name }}
-              </mat-option>
-            </mat-select>
-          </mat-form-field>
+            </div>
+          </div>
         </div>
       </mat-card-content>
     </mat-card>

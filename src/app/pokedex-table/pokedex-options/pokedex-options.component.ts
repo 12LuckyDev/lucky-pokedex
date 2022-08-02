@@ -14,82 +14,16 @@ import {
   PokedexUiServiceService,
 } from 'src/app/services';
 
-const COUNT_FORMS_POLICY_OPTIONS = [
-  {
-    id: CountFormsPolicy.COUNT_ALL,
-    name: CountFormsPolicy[CountFormsPolicy.COUNT_ALL],
-  },
-  {
-    id: CountFormsPolicy.NO_COUNT_VISUAL_ONLY,
-    name: CountFormsPolicy[CountFormsPolicy.NO_COUNT_VISUAL_ONLY],
-  },
-  {
-    id: CountFormsPolicy.NO_COUNT,
-    name: CountFormsPolicy[CountFormsPolicy.NO_COUNT],
-  },
-];
+const getPolicyList = <T extends { [key: string]: string }>(policyEnum: T) =>
+  Object.keys(policyEnum).map((el) => policyEnum[el]);
 
-const COUNT_REGIONAL_FORMS_POLICY_OPTIONS = [
-  {
-    id: CountRegionalFormsPolicy.COUNT_ALL,
-    name: CountRegionalFormsPolicy[CountRegionalFormsPolicy.COUNT_ALL],
-  },
-  {
-    id: CountRegionalFormsPolicy.NO_COUNT,
-    name: CountRegionalFormsPolicy[CountRegionalFormsPolicy.NO_COUNT],
-  },
-];
-
-const COUNT_GENDERS_POLICY_OPTIONS = [
-  {
-    id: CountGendersPolicy.COUNT_ALL,
-    name: CountGendersPolicy[CountGendersPolicy.COUNT_ALL],
-  },
-  {
-    id: CountGendersPolicy.COUNT_ALL_WITH_DIFFS,
-    name: CountGendersPolicy[CountGendersPolicy.COUNT_ALL_WITH_DIFFS],
-  },
-  {
-    id: CountGendersPolicy.NO_COUNT_VISUAL_ONLY,
-    name: CountGendersPolicy[CountGendersPolicy.NO_COUNT_VISUAL_ONLY],
-  },
-  {
-    id: CountGendersPolicy.NO_COUNT,
-    name: CountGendersPolicy[CountGendersPolicy.NO_COUNT],
-  },
-];
-
-const COUNT_GIGANTAMAX_POLICY_OPTIONS = [
-  {
-    id: CountGigantamaxPolicy.COUNT_ALL,
-    name: CountGigantamaxPolicy[CountGigantamaxPolicy.COUNT_ALL],
-  },
-  {
-    id: CountGigantamaxPolicy.COUNT_FOR_FORMS_WITH_DIFFS,
-    name: CountGigantamaxPolicy[
-      CountGigantamaxPolicy.COUNT_FOR_FORMS_WITH_DIFFS
-    ],
-  },
-  {
-    id: CountGigantamaxPolicy.NO_COUNT_FOR_FORMS,
-    name: CountGigantamaxPolicy[CountGigantamaxPolicy.NO_COUNT_FOR_FORMS],
-  },
-  {
-    id: CountGigantamaxPolicy.NO_COUNT,
-    name: CountGigantamaxPolicy[CountGigantamaxPolicy.NO_COUNT],
-  },
-];
-
-const COUNT_ALPHA_POLICY_OPTIONS = [
-  {
-    id: CountAlphaPolicy.COUNT,
-    name: CountAlphaPolicy[CountAlphaPolicy.COUNT],
-  },
-  {
-    id: CountAlphaPolicy.NO_COUNT,
-    name: CountAlphaPolicy[CountAlphaPolicy.NO_COUNT],
-  },
-];
+const COUNT_FORMS_POLICY_OPTIONS = getPolicyList(CountFormsPolicy);
+const COUNT_REGIONAL_FORMS_POLICY_OPTIONS = getPolicyList(
+  CountRegionalFormsPolicy
+);
+const COUNT_GENDERS_POLICY_OPTIONS = getPolicyList(CountGendersPolicy);
+const COUNT_GIGANTAMAX_POLICY_OPTIONS = getPolicyList(CountGigantamaxPolicy);
+const COUNT_ALPHA_POLICY_OPTIONS = getPolicyList(CountAlphaPolicy);
 
 @Component({
   selector: 'app-pokedex-options',
@@ -105,11 +39,15 @@ export class PokedexOptionsComponent extends FormComponent implements OnInit {
     private pokedexUiServiceService: PokedexUiServiceService
   ) {
     super(fb, {
-      countFormsPolicy: [],
-      countRegionalFormsPolicy: [],
       countGendersPolicy: [],
+      countFormsPolicy: [],
+      applyGenderPolicyToForms: [],
+      countRegionalFormsPolicy: [],
+      applyGenderPolicyToRegionalForms: [],
       countGigantamaxPolicy: [],
+      applyGenderPolicyToGigantamax: [],
       countAlphaPolicy: [],
+      applyGenderPolicyToAlpha: [],
     });
     this._expanded = this.pokedexUiServiceService.settings.optionsAreOpen;
   }

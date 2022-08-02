@@ -1,4 +1,4 @@
 export enum CountRegionalFormsPolicy {
-  COUNT_ALL = 'COUNT_ALL',
+  COUNT = 'COUNT',
   NO_COUNT = 'NO_COUNT',
 }

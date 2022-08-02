@@ -21,7 +21,7 @@ import { PokedexStorageService } from '../pokedex-storage/pokedex-storage.servic
 
 const DEFAULT_OPTIONS: PokedexOptions = {
   countFormsPolicy: CountFormsPolicy.COUNT_ALL,
-  countRegionalFormsPolicy: CountRegionalFormsPolicy.COUNT_ALL,
+  countRegionalFormsPolicy: CountRegionalFormsPolicy.COUNT,
   countGendersPolicy: CountGendersPolicy.NO_COUNT,
   countGigantamaxPolicy: CountGigantamaxPolicy.NO_COUNT,
   countAlphaPolicy: CountAlphaPolicy.NO_COUNT,
@@ -157,7 +157,7 @@ export class PokedexOptionsService extends PokedexBaseService {
   private getShowRegionalForms(entry?: PokedexEntry): boolean {
     if (entry) {
       switch (this.options.countRegionalFormsPolicy) {
-        case CountRegionalFormsPolicy.COUNT_ALL:
+        case CountRegionalFormsPolicy.COUNT:
           return isArray(entry.regionalForms, false);
         case CountRegionalFormsPolicy.NO_COUNT:
           return false;

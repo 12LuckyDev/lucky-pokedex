@@ -1,1 +1,41 @@
-{}
+{
+  "OPTIONS": {
+    "TITLE": "Pokedex settings",
+    "COUNT_POLICIES_SUBTITLE": "Counting Policies",
+    "APPLY_GENDERS_POLICY": "Apply genders policy",
+    "COUNT_POLICIES": {
+      "FORMS": "Forms counting policy",
+      "REGIONAL_FORMS": "Regional forms counting policy",
+      "GENDERS": "Genders counting policy",
+      "GIGANTAMAX": "Gigantamax counting policy",
+      "ALPHA": "Alpha counting policy"
+    },
+    "COUNT_POLICIES_OPTIONS": {
+      "FORMS": {
+        "COUNT_ALL": "Count all forms",
+        "NO_COUNT_VISUAL_ONLY": "Count forms that differs not only visually",
+        "NO_COUNT": "No count at all"
+      },
+      "REGIONAL_FORMS": {
+        "COUNT": "Count",
+        "NO_COUNT": "No count"
+      },
+      "GENDERS": {
+        "COUNT_ALL": "Count genders for all",
+        "COUNT_ALL_WITH_DIFFS": "Only count the genders when they have differences",
+        "NO_COUNT_VISUAL_ONLY": "Count genders that differs not only visually",
+        "NO_COUNT": "No count"
+      },
+      "GIGANTAMAX": {
+        "COUNT_ALL": "Count gigantamax forms for all",
+        "COUNT_FOR_FORMS_WITH_DIFFS": "Only count fot forms when they have differences",
+        "NO_COUNT_FOR_FORMS": "No count for forms",
+        "NO_COUNT": "No count at all"
+      },
+      "ALPHA": {
+        "COUNT": "Count",
+        "NO_COUNT": "No count"
+      }
+    }
+  }
+}

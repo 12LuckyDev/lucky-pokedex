@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { filter } from 'rxjs';
 import { PokedexService } from './services';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,13 @@ export class AppComponent implements OnInit {
   title = 'lucky-pokedex';
   private _ready = false;
 
-  constructor(private pokedexService: PokedexService) {}
+  constructor(
+    private translate: TranslateService,
+    private pokedexService: PokedexService
+  ) {
+    this.translate.setDefaultLang('en');
+    this.translate.use('en');
+  }
 
   ngOnInit(): void {
     this.pokedexService.readyObservable

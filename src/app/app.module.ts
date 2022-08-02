@@ -28,6 +28,13 @@ import { PokedexTypesComponent } from './pokedex-table/pokedex-types/pokedex-typ
 import { PokedexTypeComponent } from './pokedex-table/pokedex-types/pokedex-type/pokedex-type.component';
 import { PokeStatisticsComponent } from './pokedex-table/poke-statistics/poke-statistics.component';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+
+export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
+  return new TranslateHttpLoader(http);
+}
 
 @NgModule({
   declarations: [
@@ -62,6 +69,14 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     MatIconModule,
     MatProgressBarModule,
     FlexLayoutModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient],
+      },
+    }),
   ],
   providers: [PokedexBaseComponent],
   bootstrap: [AppComponent],

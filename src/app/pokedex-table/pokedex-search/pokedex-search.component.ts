@@ -9,7 +9,10 @@ import { PokedexSearchService } from 'src/app/services';
   templateUrl: './pokedex-search.component.html',
   styleUrls: ['./pokedex-search.component.scss'],
 })
-export class PokedexSearchComponent extends FormComponent implements OnInit {
+export class PokedexSearchComponent
+  extends FormComponent<PokedexSearch>
+  implements OnInit
+{
   constructor(
     override fb: FormBuilder,
     private pokedexSearchService: PokedexSearchService
@@ -21,7 +24,7 @@ export class PokedexSearchComponent extends FormComponent implements OnInit {
 
   ngOnInit(): void {
     this.formChanges.subscribe(() => {
-      this.pokedexSearchService.nextSearch(this.buildSearchModel());
+      this.pokedexSearchService.nextSearch(this.buildModel());
     });
   }
 
@@ -31,11 +34,5 @@ export class PokedexSearchComponent extends FormComponent implements OnInit {
 
   public get showCleanSearch() {
     return this.hasValue('textSearch');
-  }
-
-  private buildSearchModel(): PokedexSearch {
-    return {
-      textSearch: this.getValue('textSearch'),
-    };
   }
 }

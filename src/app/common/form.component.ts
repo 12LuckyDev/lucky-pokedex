@@ -1,10 +1,13 @@
+import { forEachProp } from '@12luckydev/utils';
 import { Directive } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup } from '@angular/forms';
 import { Observable, takeUntil } from 'rxjs';
 import { DestroyedAwareComponent } from '../pokedex-table/pokedex-base-component/destroyed-aware.component';
 
 @Directive()
-export class FormComponent extends DestroyedAwareComponent {
+export class FormComponent<
+  T extends Record<keyof T, unknown> = Record<string, unknown>
+> extends DestroyedAwareComponent {
   private _form: FormGroup;
 
   constructor(
@@ -52,5 +55,27 @@ export class FormComponent extends DestroyedAwareComponent {
     return this.getControl(alias)?.valueChanges.pipe(
       takeUntil(this.destroyed)
     ) as Observable<T> | null;
+  }
+
+  protected setForm(model: T) {
+    forEachProp(model, (prop, key) => {
+      if (key) {
+        this.setValue(key, prop, true);
+      }
+    });
+  }
+
+  protected buildModel(): T {
+    const model: { [key: string]: unknown } = {};
+
+    Object.keys(this._form.controls).forEach((key) => {
+      const value = this.getValue(key);
+      if (value !== null) {
+        model[key] = value;
+      }
+    });
+
+    console.log(model);
+    return model as unknown as T;
   }
 }

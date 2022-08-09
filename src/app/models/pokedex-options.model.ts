@@ -7,9 +7,25 @@ import {
 } from '../enums';
 
 export interface PokedexOptions {
-  countFormsPolicy: CountFormsPolicy | null;
-  countRegionalFormsPolicy: CountRegionalFormsPolicy | null;
-  countGendersPolicy: CountGendersPolicy | null;
-  countGigantamaxPolicy: CountGigantamaxPolicy | null;
-  countAlphaPolicy: CountAlphaPolicy | null;
+  countFormsPolicy: CountFormsPolicy;
+  countRegionalFormsPolicy: CountRegionalFormsPolicy;
+  countGendersPolicy: CountGendersPolicy;
+  countGigantamaxPolicy: CountGigantamaxPolicy;
+  countAlphaPolicy: CountAlphaPolicy;
+}
+
+export class PokedexOptionsModel implements PokedexOptions {
+  countFormsPolicy: CountFormsPolicy;
+  countRegionalFormsPolicy: CountRegionalFormsPolicy;
+  countGendersPolicy: CountGendersPolicy;
+  countGigantamaxPolicy: CountGigantamaxPolicy;
+  countAlphaPolicy: CountAlphaPolicy;
+
+  constructor() {
+    this.countFormsPolicy = CountFormsPolicy.COUNT_ALL;
+    this.countRegionalFormsPolicy = CountRegionalFormsPolicy.COUNT;
+    this.countGendersPolicy = CountGendersPolicy.NO_COUNT;
+    this.countGigantamaxPolicy = CountGigantamaxPolicy.NO_COUNT;
+    this.countAlphaPolicy = CountAlphaPolicy.NO_COUNT;
+  }
 }

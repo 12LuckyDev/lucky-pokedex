@@ -14,25 +14,18 @@ import {
 import {
   PokedexEntry,
   PokedexOptions,
+  PokedexOptionsModel,
   PokedexShowTypes,
   PokedexTableForm,
 } from 'src/app/models';
 import { PokedexStorageService } from '../pokedex-storage/pokedex-storage.service';
-
-const DEFAULT_OPTIONS: PokedexOptions = {
-  countFormsPolicy: CountFormsPolicy.COUNT_ALL,
-  countRegionalFormsPolicy: CountRegionalFormsPolicy.COUNT,
-  countGendersPolicy: CountGendersPolicy.NO_COUNT,
-  countGigantamaxPolicy: CountGigantamaxPolicy.NO_COUNT,
-  countAlphaPolicy: CountAlphaPolicy.NO_COUNT,
-};
 
 @Injectable({
   providedIn: 'root',
 })
 export class PokedexOptionsService extends PokedexBaseService {
   private _optionsSubject = new BehaviorSubject<PokedexOptions>(
-    DEFAULT_OPTIONS
+    new PokedexOptionsModel()
   );
 
   constructor(private pokedexStorageService: PokedexStorageService) {

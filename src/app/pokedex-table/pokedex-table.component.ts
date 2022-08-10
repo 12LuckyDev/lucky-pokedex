@@ -7,13 +7,13 @@ import {
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTable } from '@angular/material/table';
-import { PokedexEntry } from '../models';
+import { PokedexEntryTable } from '../models';
 import { PokedexTableDataSource } from './pokedex-table-datasource';
 import { POKEDEX_TABLE_ANIMATIONS } from './pokedex-table-animations';
 import {
-  PokedexDataService,
   PokedexOptionsService,
   PokedexSearchService,
+  PokedexService,
 } from '../services';
 
 @Component({
@@ -25,13 +25,13 @@ import {
 export class PokedexTableComponent implements AfterViewInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
-  @ViewChild(MatTable) table!: MatTable<PokedexEntry>;
+  @ViewChild(MatTable) table!: MatTable<PokedexEntryTable>;
   dataSource!: PokedexTableDataSource;
-  expanded: PokedexEntry | null;
+  expanded: PokedexEntryTable | null;
 
   constructor(
     private cdref: ChangeDetectorRef,
-    private pokedexDataService: PokedexDataService,
+    private pokedexService: PokedexService,
     private pokedexOptionsService: PokedexOptionsService,
     private pokedexSearchService: PokedexSearchService
   ) {
@@ -48,8 +48,9 @@ export class PokedexTableComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     this.dataSource = new PokedexTableDataSource(
-      this.pokedexDataService,
+      this.pokedexService,
       this.pokedexSearchService,
+      this.pokedexOptionsService,
       this.paginator,
       this.sort
     );
@@ -58,11 +59,11 @@ export class PokedexTableComponent implements AfterViewInit {
     this.cdref.detectChanges();
   }
 
-  public expand(entry: PokedexEntry) {
+  public expand(entry: PokedexEntryTable) {
     this.expanded = this.expanded === entry ? null : entry;
   }
 
-  public isExpandable(entry: PokedexEntry) {
+  public isExpandable(entry: PokedexEntryTable) {
     return this.pokedexOptionsService.getIsExpandable(entry);
   }
 }

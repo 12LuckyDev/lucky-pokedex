@@ -1,14 +1,18 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, filter, merge, Observable } from 'rxjs';
+import { BehaviorSubject, filter, map, merge, Observable } from 'rxjs';
 import { PokedexBaseService } from 'src/app/base';
 import {
   PokedexEntry,
+  PokedexEntryTable,
   PokedexTableForm,
   SelectionStatistics,
   SpecyficSelection,
 } from 'src/app/models';
 import { getAllSelections, getTableFormsList } from 'src/app/utils';
-import { PokedexDataService } from '../pokedex-data/pokedex-data.service';
+import {
+  GetPokedexListParamsType,
+  PokedexDataService,
+} from '../pokedex-data/pokedex-data.service';
 import { PokedexOptionsService } from '../pokedex-options/pokedex-options.service';
 import { PokedexSelectionService } from '../pokedex-selection/pokedex-selection.service';
 import { PokedexUiServiceService } from '../pokedex-ui-service/pokedex-ui-service.service';
@@ -154,6 +158,25 @@ export class PokedexService extends PokedexBaseService {
         this.refreshStatistics();
       });
     });
+  }
+
+  public getTableEntries(
+    requestData: GetPokedexListParamsType = {}
+  ): Observable<{
+    data: PokedexEntryTable[];
+    count: number;
+  }> {
+    return this.pokedexDataService.getPokedexList(requestData).pipe(
+      map(({ data, count }) => {
+        return {
+          count,
+          data: data.map((el) => ({
+            ...el,
+            showGender: this.pokedexOptionsService.getShowGender(el),
+          })),
+        };
+      })
+    );
   }
 
   public getTableFormsList(entry: PokedexEntry): PokedexTableForm[] {

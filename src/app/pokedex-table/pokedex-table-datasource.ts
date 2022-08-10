@@ -1,25 +1,27 @@
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { Observable } from 'rxjs';
-import { PokedexEntry } from '../models';
+import { PokedexEntryTable } from '../models';
 import {
   GetPokedexListParamsType,
-  PokedexDataService,
+  PokedexOptionsService,
   PokedexSearchService,
+  PokedexService,
 } from '../services';
 import { PokedexBaseDatasource } from 'src/app/base';
 
-export class PokedexTableDataSource extends PokedexBaseDatasource<PokedexEntry> {
+export class PokedexTableDataSource extends PokedexBaseDatasource<PokedexEntryTable> {
   constructor(
-    private _pokedexDataService: PokedexDataService,
+    private _pokedexService: PokedexService,
     private _pokedexSearchService: PokedexSearchService,
+    private _pokedexOptionsService: PokedexOptionsService,
     private _paginator: MatPaginator,
     private _sort: MatSort
   ) {
     super();
   }
 
-  connect(): Observable<PokedexEntry[]> {
+  connect(): Observable<PokedexEntryTable[]> {
     this._subscriptions.add(
       this._pokedexSearchService.searchObservable.subscribe(() => {
         if (this._paginator.pageIndex !== 0) {
@@ -31,13 +33,15 @@ export class PokedexTableDataSource extends PokedexBaseDatasource<PokedexEntry> 
 
     this._subscriptions.add(this._paginator.page.subscribe(this.query));
     this._subscriptions.add(this._sort.sortChange.subscribe(this.query));
-
+    this._subscriptions.add(
+      this._pokedexOptionsService.getOptionsObservable().subscribe(this.query)
+    );
     return this._dataSubject.asObservable();
   }
 
   query = (): void => {
-    this._pokedexDataService
-      .getPokedexList(this.queryParam)
+    this._pokedexService
+      .getTableEntries(this.queryParam)
       .subscribe(({ data, count }) => {
         this._dataSubject.next(data);
         this._countSubject.next(count);

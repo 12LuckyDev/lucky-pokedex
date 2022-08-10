@@ -1,9 +1,6 @@
 import { PokedexEntry, PokedexSearch } from 'src/app/models';
 
-export const getSearchData = (
-  data: PokedexEntry[],
-  search: PokedexSearch | null
-) => {
+export const getSearchData = (data: PokedexEntry[], search?: PokedexSearch) => {
   return search
     ? data.filter(({ name }) => {
         return name

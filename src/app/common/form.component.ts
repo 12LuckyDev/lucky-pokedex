@@ -67,15 +67,12 @@ export class FormComponent<
 
   protected buildModel(): T {
     const model: { [key: string]: unknown } = {};
-
     Object.keys(this._form.controls).forEach((key) => {
       const value = this.getValue(key);
       if (value !== null) {
         model[key] = value;
       }
     });
-
-    console.log(model);
     return model as unknown as T;
   }
 }

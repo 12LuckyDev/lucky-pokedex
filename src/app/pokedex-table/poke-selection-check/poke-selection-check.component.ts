@@ -24,11 +24,7 @@ export class PokeSelectionCheckComponent extends PokedexBaseComponent {
   }
 
   public get showGender(): boolean {
-    return this.pokedexOptionsService.getShowGender(
-      this.entry,
-      this.selectionType,
-      this.form
-    );
+    return this.form ? this.form.showGender : this.entry.showGender;
   }
 
   public get genders(): PokeGender[] {

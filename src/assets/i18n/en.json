@@ -28,7 +28,7 @@
       },
       "GIGANTAMAX": {
         "COUNT_ALL": "Count gigantamax forms for all",
-        "COUNT_FOR_FORMS_WITH_DIFFS": "Only count fot forms when they have differences",
+        "COUNT_FOR_FORMS_WITH_DIFFS": "Only count for forms when they have differences",
         "NO_COUNT_FOR_FORMS": "No count for forms",
         "NO_COUNT": "No count at all"
       },

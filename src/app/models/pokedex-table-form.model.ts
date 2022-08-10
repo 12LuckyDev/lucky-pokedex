@@ -7,4 +7,5 @@ export interface PokedexTableForm {
   types: PokeType[];
   formType: PokeFormType;
   genderDiffs?: PokedexGenderDiffs;
+  showGender: boolean;
 }

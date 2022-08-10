@@ -13,6 +13,7 @@ import {
 } from 'src/app/enums';
 import {
   PokedexEntry,
+  PokedexGenderDiffs,
   PokedexOptions,
   PokedexOptionsModel,
   PokedexShowTypes,
@@ -106,26 +107,23 @@ export class PokedexOptionsService extends PokedexBaseService {
     return this.options.countGendersPolicy !== CountGendersPolicy.NO_COUNT;
   }
 
-  public getShowGender(
-    entry?: PokedexEntry,
-    selectMode: PokeFormType | null = null,
-    form?: PokedexTableForm
-  ): boolean {
+  private getShowGendersByGenderDiffs(genderDiffs?: PokedexGenderDiffs) {
+    switch (this.options.countGendersPolicy) {
+      case CountGendersPolicy.COUNT_ALL:
+        return true;
+      case CountGendersPolicy.COUNT_ALL_WITH_DIFFS:
+        return !!genderDiffs;
+      case CountGendersPolicy.NO_COUNT_VISUAL_ONLY:
+        return !!genderDiffs?.onlyVisual;
+      case CountGendersPolicy.NO_COUNT:
+        return false;
+    }
+  }
+
+  public getShowGender(entry?: PokedexEntry, form?: PokedexTableForm): boolean {
     if (entry) {
-      switch (this.options.countGendersPolicy) {
-        case CountGendersPolicy.COUNT_ALL:
-          return true;
-        case CountGendersPolicy.COUNT_ALL_WITH_DIFFS:
-          return selectMode === null
-            ? !!entry.genderDiffs
-            : !!form?.genderDiffs;
-        case CountGendersPolicy.NO_COUNT_VISUAL_ONLY:
-          return selectMode === null
-            ? !!entry.genderDiffs && !entry.genderDiffs.onlyVisual
-            : !!form?.genderDiffs && !entry?.genderDiffs?.onlyVisual;
-        case CountGendersPolicy.NO_COUNT:
-          return false;
-      }
+      const genderDiffs = form ? form.genderDiffs : entry.genderDiffs;
+      return this.getShowGendersByGenderDiffs(genderDiffs);
     }
     return false;
   }
@@ -147,6 +145,21 @@ export class PokedexOptionsService extends PokedexBaseService {
     return false;
   }
 
+  private getShowFormGenders(entry?: PokedexEntry): number[] {
+    const formsWithGenders: number[] = [];
+    if (
+      this.options.applyGenderPolicyToForms &&
+      !!isArray(entry?.formsData?.forms, false)
+    ) {
+      entry?.formsData?.forms.forEach(({ id }) => {
+        if (this.getShowGendersByGenderDiffs()) {
+          formsWithGenders.push(id);
+        }
+      });
+    }
+    return formsWithGenders;
+  }
+
   private getShowRegionalForms(entry?: PokedexEntry): boolean {
     if (entry) {
       switch (this.options.countRegionalFormsPolicy) {
@@ -157,6 +170,21 @@ export class PokedexOptionsService extends PokedexBaseService {
       }
     }
     return false;
+  }
+
+  private getShowRegionalFormsGenders(entry?: PokedexEntry): PokeRegion[] {
+    const formsWithGenders: PokeRegion[] = [];
+    if (
+      this.options.applyGenderPolicyToRegionalForms &&
+      !!entry?.regionalForms
+    ) {
+      entry.regionalForms.forEach(({ genderDiffs, region }) => {
+        if (this.getShowGendersByGenderDiffs(genderDiffs)) {
+          formsWithGenders.push(region);
+        }
+      });
+    }
+    return formsWithGenders;
   }
 
   private getShowGigantamax(entry?: PokedexEntry): boolean {
@@ -171,6 +199,12 @@ export class PokedexOptionsService extends PokedexBaseService {
       }
     }
     return false;
+  }
+
+  private getShowGigantamaxGenders(entry?: PokedexEntry): boolean {
+    return this.options.applyGenderPolicyToGigantamax
+      ? this.getShowGender(entry)
+      : false;
   }
 
   private getShowGigantamaxPerForm(entry?: PokedexEntry): boolean {
@@ -202,6 +236,12 @@ export class PokedexOptionsService extends PokedexBaseService {
       }
     }
     return false;
+  }
+
+  private getShowAlphaGenders(entry?: PokedexEntry): boolean {
+    return this.options.applyGenderPolicyToAlpha
+      ? this.getShowGender(entry)
+      : false;
   }
 
   private getShowAlphaForms(entry?: PokedexEntry): number[] {
@@ -237,10 +277,14 @@ export class PokedexOptionsService extends PokedexBaseService {
     return {
       showGenders: this.getShowGender(entry),
       showForms: this.getShowForms(entry),
+      showFormGenders: this.getShowFormGenders(entry),
       showRegionalForms: this.getShowRegionalForms(entry),
+      showRegionalFormsGenders: this.getShowRegionalFormsGenders(entry),
       showGigantamax: this.getShowGigantamax(entry),
+      showGigantamaxGenders: this.getShowGigantamaxGenders(entry),
       showGigantamaxPerForm: this.getShowGigantamaxPerForm(entry),
       showAlpha: this.getShowAlpha(entry),
+      showAlphaGenders: this.getShowAlphaGenders(entry),
       showAlphaForms: this.getShowAlphaForms(entry),
       showAlphaRegionalForms: this.getShowAlphaRegionalForms(entry),
     };

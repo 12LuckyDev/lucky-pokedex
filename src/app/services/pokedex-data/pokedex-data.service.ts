@@ -10,7 +10,7 @@ export type GetPokedexListParamsType = {
   pageSize?: number;
   sortBy?: string;
   sortDirection?: string;
-  search: PokedexSearch | null;
+  search?: PokedexSearch;
 };
 
 @Injectable({
@@ -19,15 +19,13 @@ export type GetPokedexListParamsType = {
 export class PokedexDataService {
   constructor() {}
 
-  getPokedexList(
-    {
-      pageIndex = 0,
-      pageSize,
-      sortBy,
-      sortDirection,
-      search,
-    }: GetPokedexListParamsType = { search: null }
-  ): Observable<{
+  getPokedexList({
+    pageIndex = 0,
+    pageSize,
+    sortBy,
+    sortDirection,
+    search,
+  }: GetPokedexListParamsType = {}): Observable<{
     data: PokedexEntry[];
     count: number;
   }> {

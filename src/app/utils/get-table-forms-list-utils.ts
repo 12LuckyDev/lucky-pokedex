@@ -9,7 +9,8 @@ import {
 
 const buildTableEntry = (
   { types, name, genderDiffs }: PokedexEntry,
-  formType: PokeFormType
+  formType: PokeFormType,
+  showGender: boolean
 ): PokedexTableForm => {
   return {
     id: 0,
@@ -17,12 +18,14 @@ const buildTableEntry = (
     genderDiffs,
     formType,
     formName: `${PokeFormType[formType]} ${name}`,
+    showGender,
   };
 };
 
 const buildTableForm = (
   { id, types, formName }: PokedexFormEntry,
-  formType: PokeFormType
+  formType: PokeFormType,
+  showGender: boolean
 ): PokedexTableForm => {
   return {
     id,
@@ -36,13 +39,15 @@ const buildTableForm = (
               ? PokeFormType[PokeFormType.alpha]
               : PokeFormType[formType]
           } ${formName}`,
+    showGender,
   };
 };
 
 const buildTableRegionalForm = (
   { region, types, genderDiffs }: PokedexRegionalFormEntry,
   name: string,
-  formType: PokeFormType
+  formType: PokeFormType,
+  showGender: boolean
 ): PokedexTableForm => {
   const regionalName = `${PokeRegionalForm[region]} ${name}`;
   return {
@@ -58,6 +63,7 @@ const buildTableRegionalForm = (
               ? PokeFormType[PokeFormType.alpha]
               : PokeFormType[formType]
           } ${regionalName}`,
+    showGender,
   };
 };
 
@@ -65,10 +71,14 @@ export const getTableFormsList = (
   entry: PokedexEntry,
   {
     showForms,
+    showFormGenders,
     showRegionalForms,
+    showRegionalFormsGenders,
     showGigantamax,
+    showGigantamaxGenders,
     showGigantamaxPerForm,
     showAlpha,
+    showAlphaGenders,
     showAlphaForms,
     showAlphaRegionalForms,
   }: PokedexShowTypes
@@ -77,31 +87,54 @@ export const getTableFormsList = (
   const { formsData, regionalForms, name } = entry;
 
   if (showGigantamax && !showGigantamaxPerForm) {
-    data.push(buildTableEntry(entry, PokeFormType.gigantamax));
+    data.push(
+      buildTableEntry(entry, PokeFormType.gigantamax, showGigantamaxGenders)
+    );
   }
 
   if (showAlpha) {
-    data.push(buildTableEntry(entry, PokeFormType.alpha));
+    data.push(buildTableEntry(entry, PokeFormType.alpha, showAlphaGenders));
   }
 
   if (formsData && showForms) {
     formsData.forms.forEach((form) => {
-      data.push(buildTableForm(form, PokeFormType.form));
+      const showFormGender = showFormGenders.includes(form.id);
+      data.push(buildTableForm(form, PokeFormType.form, showFormGender));
 
       if (showGigantamaxPerForm) {
-        data.push(buildTableForm(form, PokeFormType.gigantamax));
+        data.push(
+          buildTableForm(
+            form,
+            PokeFormType.gigantamax,
+            showFormGender && showGigantamaxGenders
+          )
+        );
       }
 
       if (showAlphaForms.includes(form.id)) {
-        data.push(buildTableForm(form, PokeFormType.form_alpha));
+        data.push(
+          buildTableForm(
+            form,
+            PokeFormType.form_alpha,
+            showFormGender && showAlphaGenders
+          )
+        );
       }
     });
   }
 
   if (regionalForms && showRegionalForms) {
     regionalForms.forEach((regionalForm) => {
+      const showRFGender = showRegionalFormsGenders.includes(
+        regionalForm.region
+      );
       data.push(
-        buildTableRegionalForm(regionalForm, name, PokeFormType.regional_form)
+        buildTableRegionalForm(
+          regionalForm,
+          name,
+          PokeFormType.regional_form,
+          showRFGender
+        )
       );
 
       if (showAlphaRegionalForms.includes(regionalForm.region)) {
@@ -109,7 +142,8 @@ export const getTableFormsList = (
           buildTableRegionalForm(
             regionalForm,
             name,
-            PokeFormType.regional_form_alpha
+            PokeFormType.regional_form_alpha,
+            showRFGender && showAlphaGenders
           )
         );
       }

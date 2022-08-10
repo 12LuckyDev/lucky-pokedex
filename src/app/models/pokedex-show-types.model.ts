@@ -1,7 +1,6 @@
 import { PokeRegion } from '../enums';
 
 export interface PokedexShowTypes {
-  showGenders: boolean;
   showForms: boolean;
   showFormGenders: number[];
   showRegionalForms: boolean;

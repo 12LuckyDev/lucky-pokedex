@@ -53,7 +53,9 @@ export class PokedexService extends PokedexBaseService {
         this._subservicesReady[name as 'options' | 'selection' | 'uiSettings'] =
           ready;
         if (this.allReady) {
-          this.refreshStatistics();
+          this.getTableEntries().subscribe(({ data, count }) =>
+            this.refreshStatistics(data, count)
+          );
           this.initialize();
           this.setAsReady();
         }
@@ -102,38 +104,19 @@ export class PokedexService extends PokedexBaseService {
       });
 
     this.pokedexOptionsService.getOptionsObservable().subscribe(() => {
-      this.pokedexDataService.getPokedexList().subscribe(({ data }) => {
+      this.getTableEntries().subscribe(({ data, count }) => {
         data.forEach((entry) => {
           const oldSelection = this.pokedexSelectionService.getSelection(
             entry.number
           );
           if (oldSelection.length > 0) {
-            const showGenders = this.pokedexOptionsService.getShowGender(entry);
             const newSelection: SpecyficSelection[] = [];
 
             this.getAllFormSelections(entry).forEach((selection) => {
               const { formType, gender, formId } = selection;
 
-              if (formType === null) {
-                if (this.pokedexOptionsService.getShowForms(entry)) {
-                  if (
-                    showGenders
-                      ? oldSelection.find(
-                          (el) => el.formType === null && el.gender === gender
-                        )
-                      : oldSelection.find((el) => el.formType === null)
-                  ) {
-                    newSelection.push(selection);
-                  }
-                } else if (
-                  showGenders
-                    ? oldSelection.find((el) => el.gender === gender)
-                    : oldSelection.length > 0
-                ) {
-                  newSelection.push(selection);
-                }
-              } else if (
-                showGenders
+              if (
+                typeof selection.gender === 'number'
                   ? oldSelection.find(
                       (el) =>
                         el.formType === formType &&
@@ -155,7 +138,7 @@ export class PokedexService extends PokedexBaseService {
             );
           }
         });
-        this.refreshStatistics();
+        this.refreshStatistics(data, count);
       });
     });
   }
@@ -186,27 +169,27 @@ export class PokedexService extends PokedexBaseService {
     );
   }
 
-  private getAllFormSelections(entry: PokedexEntry): SpecyficSelection[] {
+  private getAllFormSelections(entry: PokedexEntryTable): SpecyficSelection[] {
     return getAllSelections(
       entry,
       this.pokedexOptionsService.getShowTypes(entry)
     );
   }
 
-  public isAllSelected(entry?: PokedexEntry): boolean {
+  public isAllSelected(entry?: PokedexEntryTable): boolean {
     return entry
       ? this.pokedexSelectionService.getSelection(entry.number).length ===
           this.getAllFormSelections(entry).length
       : false;
   }
 
-  public isSomeSelected(entry?: PokedexEntry): boolean {
+  public isSomeSelected(entry?: PokedexEntryTable): boolean {
     return entry
       ? this.pokedexSelectionService.getSelection(entry.number).length > 0
       : false;
   }
 
-  public selectAll(entry?: PokedexEntry): void {
+  public selectAll(entry?: PokedexEntryTable): void {
     if (entry) {
       this.pokedexSelectionService.updateSelection(
         entry,
@@ -215,36 +198,30 @@ export class PokedexService extends PokedexBaseService {
     }
   }
 
-  public deselectAll(entry?: PokedexEntry): void {
+  public deselectAll(entry?: PokedexEntryTable): void {
     if (entry) {
       this.pokedexSelectionService.updateSelection(entry, []);
     }
   }
 
-  private refreshStatistics(): void {
-    this.pokedexDataService.getPokedexList().subscribe(({ data, count }) => {
-      let selectedPokemon = 0;
-      let allForms = 0;
-      let selectedForms = 0;
+  private refreshStatistics(data: PokedexEntryTable[], count: number): void {
+    const result = {
+      allPokemon: count,
+      allForms: 0,
+      selectedForms: 0,
+      selectedPokemon: 0,
+    };
 
-      data.forEach((entry: PokedexEntry) => {
-        const selection = this.pokedexSelectionService.getSelection(
-          entry.number
-        );
-        selectedForms += selection.length;
-        if (selection.length === this.getAllFormSelections(entry).length) {
-          selectedPokemon++;
-        }
+    data.forEach((entry: PokedexEntryTable) => {
+      const selection = this.pokedexSelectionService.getSelection(entry.number);
+      result.selectedForms += selection.length;
+      if (selection.length === this.getAllFormSelections(entry).length) {
+        result.selectedPokemon++;
+      }
 
-        allForms += this.getAllFormSelections(entry).length;
-      });
-
-      this._selectionStatisticsSubject.next({
-        allPokemon: count,
-        allForms,
-        selectedForms,
-        selectedPokemon,
-      });
+      result.allForms += this.getAllFormSelections(entry).length;
     });
+
+    this._selectionStatisticsSubject.next(result);
   }
 }

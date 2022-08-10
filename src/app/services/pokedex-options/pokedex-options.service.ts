@@ -8,7 +8,6 @@ import {
   CountGendersPolicy,
   CountGigantamaxPolicy,
   CountRegionalFormsPolicy,
-  PokeFormType,
   PokeRegion,
 } from 'src/app/enums';
 import {
@@ -17,7 +16,6 @@ import {
   PokedexOptions,
   PokedexOptionsModel,
   PokedexShowTypes,
-  PokedexTableForm,
 } from 'src/app/models';
 import { PokedexStorageService } from '../pokedex-storage/pokedex-storage.service';
 
@@ -120,14 +118,11 @@ export class PokedexOptionsService extends PokedexBaseService {
     }
   }
 
-  public getShowGender(entry?: PokedexEntry, form?: PokedexTableForm): boolean {
-    if (entry) {
-      const genderDiffs = form ? form.genderDiffs : entry.genderDiffs;
-      return this.getShowGendersByGenderDiffs(genderDiffs);
-    }
-    return false;
+  public getShowGender(entry?: PokedexEntry): boolean {
+    return this.getShowGendersByGenderDiffs(entry?.genderDiffs);
   }
 
+  // TODO Add this to table entry model
   public getShowForms(entry?: PokedexEntry): boolean {
     if (entry) {
       const { formsData } = entry;
@@ -275,7 +270,6 @@ export class PokedexOptionsService extends PokedexBaseService {
 
   public getShowTypes(entry?: PokedexEntry): PokedexShowTypes {
     return {
-      showGenders: this.getShowGender(entry),
       showForms: this.getShowForms(entry),
       showFormGenders: this.getShowFormGenders(entry),
       showRegionalForms: this.getShowRegionalForms(entry),
@@ -290,6 +284,7 @@ export class PokedexOptionsService extends PokedexBaseService {
     };
   }
 
+  // TODO Add this to table entry model
   public getIsExpandable(entry?: PokedexEntry): boolean {
     return (
       this.getShowForms(entry) ||
@@ -299,6 +294,8 @@ export class PokedexOptionsService extends PokedexBaseService {
     );
   }
 
+  // TODO Add this to table entry model
+  // TODO change in all models word form to variants
   public getShowSelectAllCheckbox(entry?: PokedexEntry): boolean {
     return this.getShowGender(entry) || this.getIsExpandable(entry);
   }

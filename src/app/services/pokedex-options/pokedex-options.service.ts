@@ -124,13 +124,18 @@ export class PokedexOptionsService extends PokedexBaseService {
 
   public getShowForms(entry?: PokedexEntry): boolean {
     if (entry) {
-      const { formsData } = entry;
-      if (formsData) {
+      if (entry.formsData) {
+        const { forms, interchandable, onlyVisual } = entry.formsData;
+        const hasForms = isArray(forms, false);
         switch (this.options.countFormsPolicy) {
           case CountFormsPolicy.COUNT_ALL:
-            return isArray(formsData.forms, false);
+            return hasForms;
+          case CountFormsPolicy.NO_COUNT_INTERCHANDABLE:
+            return hasForms && !interchandable;
           case CountFormsPolicy.NO_COUNT_VISUAL_ONLY:
-            return !formsData.onlyVisual && isArray(formsData.forms, false);
+            return hasForms && !onlyVisual;
+          case CountFormsPolicy.NO_COUNT_VISUAL_ONLY_AND_INTERCHANDABLE:
+            return hasForms && !onlyVisual && !interchandable;
           case CountFormsPolicy.NO_COUNT:
             return false;
         }

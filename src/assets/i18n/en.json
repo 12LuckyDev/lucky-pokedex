@@ -13,7 +13,9 @@
     "COUNT_POLICIES_OPTIONS": {
       "FORMS": {
         "COUNT_ALL": "Count all forms",
+        "NO_COUNT_INTERCHANDABLE": "Skip interchandable forms",
         "NO_COUNT_VISUAL_ONLY": "Count forms that differs not only visually",
+        "NO_COUNT_VISUAL_ONLY_AND_INTERCHANDABLE": "Count forms that differs not only visually and can not be changed",
         "NO_COUNT": "No count at all"
       },
       "REGIONAL_FORMS": {

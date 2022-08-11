@@ -1,10 +1,10 @@
 import { Directive, Input } from '@angular/core';
-import { PokedexEntryTable } from 'src/app/models';
+import { PokedexTableEntry } from 'src/app/models';
 import { DestroyedAwareComponent } from './destroyed-aware.component';
 
 @Directive()
 export class PokedexBaseComponent extends DestroyedAwareComponent {
-  @Input() entry!: PokedexEntryTable;
+  @Input() entry!: PokedexTableEntry;
 
   constructor() {
     super();

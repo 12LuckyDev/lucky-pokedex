@@ -3,7 +3,7 @@ import { BehaviorSubject, filter, map, merge, Observable } from 'rxjs';
 import { PokedexBaseService } from 'src/app/base';
 import {
   PokedexEntry,
-  PokedexEntryTable,
+  PokedexTableEntry,
   PokedexTableForm,
   SelectionStatistics,
   SpecyficSelection,
@@ -146,16 +146,16 @@ export class PokedexService extends PokedexBaseService {
   public getTableEntries(
     requestData: GetPokedexListParamsType = {}
   ): Observable<{
-    data: PokedexEntryTable[];
+    data: PokedexTableEntry[];
     count: number;
   }> {
     return this.pokedexDataService.getPokedexList(requestData).pipe(
       map(({ data, count }) => {
         return {
           count,
-          data: data.map((el) => ({
-            ...el,
-            showGender: this.pokedexOptionsService.getShowGender(el),
+          data: data.map((entry) => ({
+            ...entry,
+            showGender: this.pokedexOptionsService.getShowGender(entry),
           })),
         };
       })
@@ -169,27 +169,27 @@ export class PokedexService extends PokedexBaseService {
     );
   }
 
-  private getAllFormSelections(entry: PokedexEntryTable): SpecyficSelection[] {
+  private getAllFormSelections(entry: PokedexTableEntry): SpecyficSelection[] {
     return getAllSelections(
       entry,
       this.pokedexOptionsService.getShowTypes(entry)
     );
   }
 
-  public isAllSelected(entry?: PokedexEntryTable): boolean {
+  public isAllSelected(entry?: PokedexTableEntry): boolean {
     return entry
       ? this.pokedexSelectionService.getSelection(entry.number).length ===
           this.getAllFormSelections(entry).length
       : false;
   }
 
-  public isSomeSelected(entry?: PokedexEntryTable): boolean {
+  public isSomeSelected(entry?: PokedexTableEntry): boolean {
     return entry
       ? this.pokedexSelectionService.getSelection(entry.number).length > 0
       : false;
   }
 
-  public selectAll(entry?: PokedexEntryTable): void {
+  public selectAll(entry?: PokedexTableEntry): void {
     if (entry) {
       this.pokedexSelectionService.updateSelection(
         entry,
@@ -198,13 +198,13 @@ export class PokedexService extends PokedexBaseService {
     }
   }
 
-  public deselectAll(entry?: PokedexEntryTable): void {
+  public deselectAll(entry?: PokedexTableEntry): void {
     if (entry) {
       this.pokedexSelectionService.updateSelection(entry, []);
     }
   }
 
-  private refreshStatistics(data: PokedexEntryTable[], count: number): void {
+  private refreshStatistics(data: PokedexTableEntry[], count: number): void {
     const result = {
       allPokemon: count,
       allForms: 0,
@@ -212,7 +212,7 @@ export class PokedexService extends PokedexBaseService {
       selectedPokemon: 0,
     };
 
-    data.forEach((entry: PokedexEntryTable) => {
+    data.forEach((entry: PokedexTableEntry) => {
       const selection = this.pokedexSelectionService.getSelection(entry.number);
       result.selectedForms += selection.length;
       if (selection.length === this.getAllFormSelections(entry).length) {

@@ -1,7 +1,7 @@
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { Observable } from 'rxjs';
-import { PokedexEntryTable } from '../models';
+import { PokedexTableEntry } from '../models';
 import {
   GetPokedexListParamsType,
   PokedexOptionsService,
@@ -10,7 +10,7 @@ import {
 } from '../services';
 import { PokedexBaseDatasource } from 'src/app/base';
 
-export class PokedexTableDataSource extends PokedexBaseDatasource<PokedexEntryTable> {
+export class PokedexTableDataSource extends PokedexBaseDatasource<PokedexTableEntry> {
   constructor(
     private _pokedexService: PokedexService,
     private _pokedexSearchService: PokedexSearchService,
@@ -21,7 +21,7 @@ export class PokedexTableDataSource extends PokedexBaseDatasource<PokedexEntryTa
     super();
   }
 
-  connect(): Observable<PokedexEntryTable[]> {
+  connect(): Observable<PokedexTableEntry[]> {
     this._subscriptions.add(
       this._pokedexSearchService.searchObservable.subscribe(() => {
         if (this._paginator.pageIndex !== 0) {

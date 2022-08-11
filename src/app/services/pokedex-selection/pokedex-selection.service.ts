@@ -4,7 +4,7 @@ import { filter, Observable, Subject } from 'rxjs';
 import { PokedexBaseService } from 'src/app/base';
 import { PokeGender } from 'src/app/enums';
 import {
-  PokedexEntryTable,
+  PokedexTableEntry,
   PokedexTableForm,
   SpecyficSelection,
 } from 'src/app/models';
@@ -16,7 +16,7 @@ import { PokedexStorageService } from '../pokedex-storage/pokedex-storage.servic
 export class PokedexSelectionService extends PokedexBaseService {
   private _selectionMap = new Map<number, SpecyficSelection[]>();
   private _selectionChangeSubject = new Subject<{
-    entry: PokedexEntryTable;
+    entry: PokedexTableEntry;
     newSelection: SpecyficSelection[];
     oldSelection: SpecyficSelection[];
     userInput: boolean;
@@ -39,7 +39,7 @@ export class PokedexSelectionService extends PokedexBaseService {
   }
 
   public get selectionChangeObservable(): Observable<{
-    entry: PokedexEntryTable;
+    entry: PokedexTableEntry;
     newSelection: SpecyficSelection[];
     oldSelection: SpecyficSelection[];
     userInput: boolean;
@@ -52,7 +52,7 @@ export class PokedexSelectionService extends PokedexBaseService {
   }
 
   public updateSelection(
-    entry: PokedexEntryTable,
+    entry: PokedexTableEntry,
     newSelection: SpecyficSelection[],
     userInput: boolean = true
   ): void {
@@ -71,7 +71,7 @@ export class PokedexSelectionService extends PokedexBaseService {
   }
 
   public changeSelection(
-    entry?: PokedexEntryTable,
+    entry?: PokedexTableEntry,
     form?: PokedexTableForm,
     gender?: PokeGender
   ): void {

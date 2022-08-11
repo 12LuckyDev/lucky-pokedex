@@ -1,6 +1,6 @@
 import { PokeFormType, PokeGender } from 'src/app/enums';
 import {
-  PokedexEntryTable,
+  PokedexTableEntry,
   PokedexShowTypes,
   SpecyficSelection,
 } from 'src/app/models';
@@ -21,7 +21,7 @@ const buildGendersSelections = (
   genders.map((gender) => buildSelection(formType, { gender, formId }));
 
 export const getAllSelections = (
-  entry: PokedexEntryTable,
+  entry: PokedexTableEntry,
   showTypes: PokedexShowTypes
 ): SpecyficSelection[] => {
   const allSelection: SpecyficSelection[] = [];

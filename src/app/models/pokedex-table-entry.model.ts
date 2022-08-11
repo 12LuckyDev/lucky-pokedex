@@ -1,5 +1,5 @@
 import { PokedexEntry } from './pokedex-entry.model';
 
-export interface PokedexEntryTable extends PokedexEntry {
+export interface PokedexTableEntry extends PokedexEntry {
   showGender: boolean;
 }

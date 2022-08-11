@@ -1,20 +1,20 @@
-import { PokeFormType, PokeGender } from 'src/app/enums';
+import { PokeVariantType, PokeGender } from 'src/app/enums';
 import {
   PokedexTableEntry,
   PokedexShowTypes,
   SpecyficSelection,
 } from 'src/app/models';
-import { getTableFormsList } from './get-table-forms-list-utils';
+import { getTableVariantsList } from './get-table-variants-list-utils';
 
 const buildSelection = (
-  formType: PokeFormType | null,
+  formType: PokeVariantType | null,
   opt: { gender?: PokeGender; formId?: number } = {}
 ): SpecyficSelection => {
   return { formType, ...opt };
 };
 
 const buildGendersSelections = (
-  formType: PokeFormType | null,
+  formType: PokeVariantType | null,
   genders: PokeGender[],
   formId?: number
 ): SpecyficSelection[] =>
@@ -25,7 +25,7 @@ export const getAllSelections = (
   showTypes: PokedexShowTypes
 ): SpecyficSelection[] => {
   const allSelection: SpecyficSelection[] = [];
-  const allForms = getTableFormsList(entry, showTypes);
+  const allForms = getTableVariantsList(entry, showTypes);
   const { showForms } = showTypes;
   const { genders } = entry;
 

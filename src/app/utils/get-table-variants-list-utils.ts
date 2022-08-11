@@ -1,73 +1,73 @@
-import { PokeFormType, PokeRegionalForm } from '../enums';
+import { PokeVariantType, PokeRegionalForm } from '../enums';
 import {
   PokedexEntry,
   PokedexFormEntry,
   PokedexRegionalFormEntry,
   PokedexShowTypes,
-  PokedexTableForm,
+  PokedexTableVariant,
 } from '../models';
 
-const buildTableEntry = (
+const buildVariant = (
   { types, name, genderDiffs }: PokedexEntry,
-  formType: PokeFormType,
+  formType: PokeVariantType,
   showGender: boolean
-): PokedexTableForm => {
+): PokedexTableVariant => {
   return {
     id: 0,
     types,
     genderDiffs,
     formType,
-    formName: `${PokeFormType[formType]} ${name}`,
+    formName: `${PokeVariantType[formType]} ${name}`,
     showGender,
   };
 };
 
-const buildTableForm = (
+const buildFormVariant = (
   { id, types, formName }: PokedexFormEntry,
-  formType: PokeFormType,
+  formType: PokeVariantType,
   showGender: boolean
-): PokedexTableForm => {
+): PokedexTableVariant => {
   return {
     id,
     types,
     formType,
     formName:
-      formType === PokeFormType.form
+      formType === PokeVariantType.form
         ? formName
         : `${
-            formType === PokeFormType.form_alpha
-              ? PokeFormType[PokeFormType.alpha]
-              : PokeFormType[formType]
+            formType === PokeVariantType.form_alpha
+              ? PokeVariantType[PokeVariantType.alpha]
+              : PokeVariantType[formType]
           } ${formName}`,
     showGender,
   };
 };
 
-const buildTableRegionalForm = (
+const buildRegionalFormVariant = (
   { region, types, genderDiffs }: PokedexRegionalFormEntry,
   name: string,
-  formType: PokeFormType,
+  formType: PokeVariantType,
   showGender: boolean
-): PokedexTableForm => {
+): PokedexTableVariant => {
   const regionalName = `${PokeRegionalForm[region]} ${name}`;
   return {
     id: region,
     types,
     genderDiffs,
-    formType: PokeFormType.regional_form,
+    formType: PokeVariantType.regional_form,
     formName:
-      formType === PokeFormType.regional_form
+      formType === PokeVariantType.regional_form
         ? regionalName
         : `${
-            formType === PokeFormType.regional_form_alpha
-              ? PokeFormType[PokeFormType.alpha]
-              : PokeFormType[formType]
+            formType === PokeVariantType.regional_form_alpha
+              ? PokeVariantType[PokeVariantType.alpha]
+              : PokeVariantType[formType]
           } ${regionalName}`,
     showGender,
   };
 };
 
-export const getTableFormsList = (
+export const getTableVariantsList = (
   entry: PokedexEntry,
   {
     showForms,
@@ -83,29 +83,29 @@ export const getTableFormsList = (
     showAlphaRegionalForms,
   }: PokedexShowTypes
 ) => {
-  const data: PokedexTableForm[] = [];
+  const data: PokedexTableVariant[] = [];
   const { formsData, regionalForms, name } = entry;
 
   if (showGigantamax && !showGigantamaxPerForm) {
     data.push(
-      buildTableEntry(entry, PokeFormType.gigantamax, showGigantamaxGenders)
+      buildVariant(entry, PokeVariantType.gigantamax, showGigantamaxGenders)
     );
   }
 
   if (showAlpha) {
-    data.push(buildTableEntry(entry, PokeFormType.alpha, showAlphaGenders));
+    data.push(buildVariant(entry, PokeVariantType.alpha, showAlphaGenders));
   }
 
   if (formsData && showForms) {
     formsData.forms.forEach((form) => {
       const showFormGender = showFormGenders.includes(form.id);
-      data.push(buildTableForm(form, PokeFormType.form, showFormGender));
+      data.push(buildFormVariant(form, PokeVariantType.form, showFormGender));
 
       if (showGigantamaxPerForm) {
         data.push(
-          buildTableForm(
+          buildFormVariant(
             form,
-            PokeFormType.gigantamax,
+            PokeVariantType.gigantamax,
             showFormGender && showGigantamaxGenders
           )
         );
@@ -113,9 +113,9 @@ export const getTableFormsList = (
 
       if (showAlphaForms.includes(form.id)) {
         data.push(
-          buildTableForm(
+          buildFormVariant(
             form,
-            PokeFormType.form_alpha,
+            PokeVariantType.form_alpha,
             showFormGender && showAlphaGenders
           )
         );
@@ -129,20 +129,20 @@ export const getTableFormsList = (
         regionalForm.region
       );
       data.push(
-        buildTableRegionalForm(
+        buildRegionalFormVariant(
           regionalForm,
           name,
-          PokeFormType.regional_form,
+          PokeVariantType.regional_form,
           showRFGender
         )
       );
 
       if (showAlphaRegionalForms.includes(regionalForm.region)) {
         data.push(
-          buildTableRegionalForm(
+          buildRegionalFormVariant(
             regionalForm,
             name,
-            PokeFormType.regional_form_alpha,
+            PokeVariantType.regional_form_alpha,
             showRFGender && showAlphaGenders
           )
         );

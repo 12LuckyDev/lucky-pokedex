@@ -4,11 +4,11 @@ import { PokedexBaseService } from 'src/app/base';
 import {
   PokedexEntry,
   PokedexTableEntry,
-  PokedexTableForm,
+  PokedexTableVariant,
   SelectionStatistics,
   SpecyficSelection,
 } from 'src/app/models';
-import { getAllSelections, getTableFormsList } from 'src/app/utils';
+import { getAllSelections, getTableVariantsList } from 'src/app/utils';
 import {
   GetPokedexListParamsType,
   PokedexDataService,
@@ -162,8 +162,8 @@ export class PokedexService extends PokedexBaseService {
     );
   }
 
-  public getTableFormsList(entry: PokedexEntry): PokedexTableForm[] {
-    return getTableFormsList(
+  public getTableVariantsList(entry: PokedexEntry): PokedexTableVariant[] {
+    return getTableVariantsList(
       entry,
       this.pokedexOptionsService.getShowTypes(entry)
     );

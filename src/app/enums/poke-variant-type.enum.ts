@@ -1,4 +1,4 @@
-export enum PokeFormType {
+export enum PokeVariantType {
   form,
   regional_form,
   gigantamax,

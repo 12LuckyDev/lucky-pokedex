@@ -295,7 +295,6 @@ export class PokedexOptionsService extends PokedexBaseService {
   }
 
   // TODO Add this to table entry model
-  // TODO change in all models word form to variants
   public getShowSelectAllCheckbox(entry?: PokedexEntry): boolean {
     return this.getShowGender(entry) || this.getIsExpandable(entry);
   }

@@ -5,7 +5,7 @@ import { PokedexBaseService } from 'src/app/base';
 import { PokeGender } from 'src/app/enums';
 import {
   PokedexTableEntry,
-  PokedexTableForm,
+  PokedexTableVariant,
   SpecyficSelection,
 } from 'src/app/models';
 import { PokedexStorageService } from '../pokedex-storage/pokedex-storage.service';
@@ -72,7 +72,7 @@ export class PokedexSelectionService extends PokedexBaseService {
 
   public changeSelection(
     entry?: PokedexTableEntry,
-    form?: PokedexTableForm,
+    form?: PokedexTableVariant,
     gender?: PokeGender
   ): void {
     if (entry) {
@@ -100,7 +100,7 @@ export class PokedexSelectionService extends PokedexBaseService {
 
   public isSelected(
     number: number | null,
-    form?: PokedexTableForm,
+    form?: PokedexTableVariant,
     gender?: PokeGender
   ): boolean {
     if (number) {

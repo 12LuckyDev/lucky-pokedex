@@ -1,11 +1,11 @@
-import { PokeFormType, PokeType } from '../enums';
+import { PokeVariantType, PokeType } from '../enums';
 import { PokedexGenderDiffs } from './pokedex-gender-diffs.model';
 
-export interface PokedexTableForm {
+export interface PokedexTableVariant {
   id: number;
   formName: string;
   types: PokeType[];
-  formType: PokeFormType;
+  formType: PokeVariantType;
   genderDiffs?: PokedexGenderDiffs;
   showGender: boolean;
 }

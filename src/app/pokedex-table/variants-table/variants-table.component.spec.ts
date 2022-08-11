@@ -4,26 +4,26 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 
-import { FormsTableComponent } from './forms-table.component';
+import { VariantsTableComponent } from './variants-table.component';
 
 describe('FormsTableComponent', () => {
-  let component: FormsTableComponent;
-  let fixture: ComponentFixture<FormsTableComponent>;
+  let component: VariantsTableComponent;
+  let fixture: ComponentFixture<VariantsTableComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ FormsTableComponent ],
+      declarations: [VariantsTableComponent],
       imports: [
         NoopAnimationsModule,
         MatPaginatorModule,
         MatSortModule,
         MatTableModule,
-      ]
+      ],
     }).compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FormsTableComponent);
+    fixture = TestBed.createComponent(VariantsTableComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

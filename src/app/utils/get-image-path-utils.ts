@@ -1,9 +1,9 @@
-import { PokeFormType, PokeGender } from '../enums';
-import { PokedexEntry, PokedexTableForm } from '../models';
+import { PokeVariantType, PokeGender } from '../enums';
+import { PokedexEntry, PokedexTableVariant } from '../models';
 
 export const getImagePath = (
   entry?: PokedexEntry,
-  opt: { gender?: PokeGender; form?: PokedexTableForm } = {}
+  opt: { gender?: PokeGender; form?: PokedexTableVariant } = {}
 ): string => {
   if (!entry) {
     return '';
@@ -19,15 +19,15 @@ export const getImagePath = (
   if (form) {
     const { formType, id } = form;
     switch (formType) {
-      case PokeFormType.form:
-      case PokeFormType.form_alpha:
+      case PokeVariantType.form:
+      case PokeVariantType.form_alpha:
         path += `_${id}`;
         break;
-      case PokeFormType.regional_form:
-      case PokeFormType.regional_form_alpha:
+      case PokeVariantType.regional_form:
+      case PokeVariantType.regional_form_alpha:
         path += `_rf${id}`;
         break;
-      case PokeFormType.gigantamax:
+      case PokeVariantType.gigantamax:
         path += !!gigantamax?.formDiffs ? `_${id}_g` : '_g';
         addFemaleTag = false;
         break;

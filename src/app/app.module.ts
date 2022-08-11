@@ -9,7 +9,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatExpansionModule } from '@angular/material/expansion';
-import { FormsTableComponent } from './pokedex-table/forms-table/forms-table.component';
+import { VariantsTableComponent } from './pokedex-table/variants-table/variants-table.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PokedexOptionsComponent } from './pokedex-table/pokedex-options/pokedex-options.component';
 import { MatInputModule } from '@angular/material/input';
@@ -40,7 +40,7 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
   declarations: [
     AppComponent,
     PokedexTableComponent,
-    FormsTableComponent,
+    VariantsTableComponent,
     PokedexOptionsComponent,
     PokeImgComponent,
     PokeSelectionCheckComponent,

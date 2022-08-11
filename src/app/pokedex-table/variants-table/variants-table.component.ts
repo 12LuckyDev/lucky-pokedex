@@ -6,24 +6,27 @@ import {
 } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTable } from '@angular/material/table';
-import { PokedexTableForm } from 'src/app/models/pokedex-table-form.model';
+import { PokedexTableVariant } from 'src/app/models';
 import { PokedexOptionsService, PokedexService } from 'src/app/services';
 import { PokedexBaseComponent } from '../pokedex-base-component/pokedex-base.component';
-import { FormsTableDataSource } from './forms-table-datasource';
+import { VariantsTableDataSource } from './variants-table-datasource';
 
 @Component({
   selector: 'app-forms-table',
-  templateUrl: './forms-table.component.html',
-  styleUrls: ['./forms-table.component.scss', '../../styles/poke-table.scss'],
+  templateUrl: './variants-table.component.html',
+  styleUrls: [
+    './variants-table.component.scss',
+    '../../styles/poke-table.scss',
+  ],
 })
-export class FormsTableComponent
+export class VariantsTableComponent
   extends PokedexBaseComponent
   implements AfterViewInit
 {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
-  @ViewChild(MatTable) table!: MatTable<PokedexTableForm>;
+  @ViewChild(MatTable) table!: MatTable<PokedexTableVariant>;
 
-  dataSource!: FormsTableDataSource;
+  dataSource!: VariantsTableDataSource;
 
   constructor(
     private cdref: ChangeDetectorRef,
@@ -46,7 +49,7 @@ export class FormsTableComponent
   }
 
   ngAfterViewInit(): void {
-    this.dataSource = new FormsTableDataSource(
+    this.dataSource = new VariantsTableDataSource(
       this.pokedexService,
       this.pokedexOptionsService,
       this.paginator,

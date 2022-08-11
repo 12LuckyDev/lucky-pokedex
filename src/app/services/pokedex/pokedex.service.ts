@@ -156,6 +156,8 @@ export class PokedexService extends PokedexBaseService {
           data: data.map((entry) => ({
             ...entry,
             showGender: this.pokedexOptionsService.getShowGender(entry),
+            showForms: this.pokedexOptionsService.getShowForms(entry),
+            hasVariants: this.pokedexOptionsService.getHasVariants(entry),
           })),
         };
       })

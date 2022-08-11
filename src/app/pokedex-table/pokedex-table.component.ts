@@ -62,8 +62,4 @@ export class PokedexTableComponent implements AfterViewInit {
   public expand(entry: PokedexTableEntry) {
     this.expanded = this.expanded === entry ? null : entry;
   }
-
-  public isExpandable(entry: PokedexTableEntry) {
-    return this.pokedexOptionsService.getIsExpandable(entry);
-  }
 }

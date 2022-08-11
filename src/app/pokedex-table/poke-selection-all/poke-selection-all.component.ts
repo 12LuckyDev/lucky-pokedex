@@ -53,7 +53,7 @@ export class PokeSelectionAllComponent
   }
 
   public get showCheckbox(): boolean {
-    return this.pokedexOptionsService.getShowSelectAllCheckbox(this.entry);
+    return this.entry.showGender || this.entry.hasVariants;
   }
 
   public changeAllSelection() {

@@ -2,6 +2,7 @@ import { isArray } from '@12luckydev/utils';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, skip } from 'rxjs';
 import { PokedexBaseService } from 'src/app/base';
+import { PokedexStorageService } from '../pokedex-storage/pokedex-storage.service';
 import {
   CountAlphaPolicy,
   CountFormsPolicy,
@@ -17,7 +18,6 @@ import {
   PokedexOptionsModel,
   PokedexShowTypes,
 } from 'src/app/models';
-import { PokedexStorageService } from '../pokedex-storage/pokedex-storage.service';
 
 @Injectable({
   providedIn: 'root',
@@ -122,7 +122,6 @@ export class PokedexOptionsService extends PokedexBaseService {
     return this.getShowGendersByGenderDiffs(entry?.genderDiffs);
   }
 
-  // TODO Add this to table entry model
   public getShowForms(entry?: PokedexEntry): boolean {
     if (entry) {
       const { formsData } = entry;
@@ -284,18 +283,12 @@ export class PokedexOptionsService extends PokedexBaseService {
     };
   }
 
-  // TODO Add this to table entry model
-  public getIsExpandable(entry?: PokedexEntry): boolean {
+  public getHasVariants(entry?: PokedexEntry): boolean {
     return (
       this.getShowForms(entry) ||
       this.getShowRegionalForms(entry) ||
       this.getShowGigantamax(entry) ||
       this.getShowAlpha(entry)
     );
-  }
-
-  // TODO Add this to table entry model
-  public getShowSelectAllCheckbox(entry?: PokedexEntry): boolean {
-    return this.getShowGender(entry) || this.getIsExpandable(entry);
   }
 }

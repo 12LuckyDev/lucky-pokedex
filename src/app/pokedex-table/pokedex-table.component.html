@@ -59,7 +59,7 @@
       <th mat-header-cell *matHeaderCellDef></th>
       <td mat-cell *matCellDef="let row">
         <div fxLayout="row" fxLayoutAlign="center center">
-          <mat-icon *ngIf="isExpandable(row)">{{
+          <mat-icon *ngIf="row.hasVariants">{{
             row == expanded ? "expand_less" : "expand_more"
           }}</mat-icon>
         </div>
@@ -79,7 +79,7 @@
           [@detail-expand]="row == expanded ? 'expanded' : 'collapsed'"
         >
           <app-forms-table
-            *ngIf="isExpandable(row)"
+            *ngIf="row.hasVariants"
             [entry]="row"
           ></app-forms-table>
         </div>
@@ -91,8 +91,8 @@
       mat-row
       *matRowDef="let row; columns: displayedColumns"
       class="pokemon-element-row"
-      [class.expandable]="isExpandable(row)"
-      (click)="isExpandable(row) ? expand(row) : null"
+      [class.expandable]="row.hasVariants"
+      (click)="row.hasVariants ? expand(row) : null"
     ></tr>
     <tr
       mat-row

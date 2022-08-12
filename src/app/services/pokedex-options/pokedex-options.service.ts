@@ -112,7 +112,7 @@ export class PokedexOptionsService extends PokedexBaseService {
       case CountGendersPolicy.COUNT_ALL_WITH_DIFFS:
         return !!genderDiffs;
       case CountGendersPolicy.NO_COUNT_VISUAL_ONLY:
-        return !!genderDiffs?.onlyVisual;
+        return !genderDiffs?.onlyVisual;
       case CountGendersPolicy.NO_COUNT:
         return false;
     }

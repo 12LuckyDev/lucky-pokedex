@@ -14,7 +14,7 @@
       "FORMS": {
         "COUNT_ALL": "Count all forms",
         "NO_COUNT_INTERCHANDABLE": "Skip interchandable forms",
-        "NO_COUNT_VISUAL_ONLY": "Count forms that differs not only visually",
+        "NO_COUNT_VISUAL_ONLY": "Count forms that differs more that only visually",
         "NO_COUNT_VISUAL_ONLY_AND_INTERCHANDABLE": "Count forms that differs not only visually and can not be changed",
         "NO_COUNT": "No count at all"
       },
@@ -25,7 +25,7 @@
       "GENDERS": {
         "COUNT_ALL": "Count genders for all",
         "COUNT_ALL_WITH_DIFFS": "Only count the genders when they have differences",
-        "NO_COUNT_VISUAL_ONLY": "Count genders that differs not only visually",
+        "NO_COUNT_VISUAL_ONLY": "Count genders that differs more that only visually",
         "NO_COUNT": "No count"
       },
       "GIGANTAMAX": {

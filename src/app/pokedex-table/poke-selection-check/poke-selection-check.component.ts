@@ -39,10 +39,8 @@ export class PokeSelectionCheckComponent extends PokedexBaseComponent {
     return getImagePath(this.entry, { gender, form: this.form });
   }
 
-  public showCheckbox(): boolean {
-    return this.selectionType === null
-      ? !this.pokedexOptionsService.getShowForms(this.entry)
-      : true;
+  public get showCheckbox(): boolean {
+    return this.selectionType === null ? !this.entry.showForms : true;
   }
 
   public getGenderName(gender: PokeGender): string {
@@ -67,6 +65,8 @@ export class PokeSelectionCheckComponent extends PokedexBaseComponent {
 
   public onCardClick(event: MouseEvent, gender?: PokeGender) {
     event.stopPropagation();
-    this.changeSelection(gender);
+    if (this.showCheckbox) {
+      this.changeSelection(gender);
+    }
   }
 }

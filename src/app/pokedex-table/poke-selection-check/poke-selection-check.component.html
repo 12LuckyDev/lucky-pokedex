@@ -26,7 +26,7 @@
 
     <poke-img [imgPath]="getImagePath(gender)"></poke-img>
     <mat-checkbox
-      *ngIf="showCheckbox()"
+      *ngIf="showCheckbox"
       color="primary"
       (click)="$event.stopPropagation()"
       (change)="$event ? changeSelection(gender) : null"
@@ -43,7 +43,7 @@
   >
     <poke-img [imgPath]="getImagePath()"></poke-img>
     <mat-checkbox
-      *ngIf="showCheckbox()"
+      *ngIf="showCheckbox"
       color="primary"
       (click)="$event.stopPropagation()"
       (change)="$event ? changeSelection() : null"

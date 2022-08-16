@@ -59,7 +59,7 @@ export class PokedexSelectionService extends PokedexBaseService {
     const { number } = entry;
     const oldSelection = this.getSelection(number);
 
-    console.log(number, newSelection);
+    // console.log(number, newSelection);
     this._selectionMap.set(number, newSelection);
     this.pokedexStorageService.setSelection(number, newSelection).subscribe();
     this._selectionChangeSubject.next({

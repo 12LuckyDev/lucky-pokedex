@@ -10,6 +10,7 @@
     *ngFor="let gender of genders"
     fxLayout="column"
     fxLayoutAlign="center center"
+    (click)="onCardClick($event, gender)"
   >
     <div fxLayout="row" fxLayoutAlign="center center">
       <span class="gender-name">
@@ -34,7 +35,12 @@
 ></ng-template>
 
 <ng-template #noGenderBlock>
-  <mat-card class="poke-card" fxLayout="column" fxLayoutAlign="center center">
+  <mat-card
+    class="poke-card"
+    fxLayout="column"
+    fxLayoutAlign="center center"
+    (click)="onCardClick($event)"
+  >
     <poke-img [imgPath]="getImagePath()"></poke-img>
     <mat-checkbox
       *ngIf="showCheckbox()"

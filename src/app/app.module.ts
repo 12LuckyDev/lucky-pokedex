@@ -18,7 +18,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
-import { PokeImgComponent } from './pokedex-table/poke-img/poke-img.component';
+import { PokeImgComponent } from './pokedex-table/poke-selection-check/poke-img/poke-img.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { PokedexBaseComponent } from './pokedex-table/pokedex-base-component/pokedex-base.component';
 import { PokeSelectionCheckComponent } from './pokedex-table/poke-selection-check/poke-selection-check.component';

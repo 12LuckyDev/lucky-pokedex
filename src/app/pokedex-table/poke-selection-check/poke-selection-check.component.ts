@@ -64,4 +64,9 @@ export class PokeSelectionCheckComponent extends PokedexBaseComponent {
   public changeSelection(gender?: PokeGender): void {
     this.pokedexSelectionService.changeSelection(this.entry, this.form, gender);
   }
+
+  public onCardClick(event: MouseEvent, gender?: PokeGender) {
+    event.stopPropagation();
+    this.changeSelection(gender);
+  }
 }

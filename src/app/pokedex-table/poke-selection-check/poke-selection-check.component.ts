@@ -1,10 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { PokeVariantType, PokeGender } from 'src/app/enums';
 import { PokedexTableVariant } from 'src/app/models';
-import {
-  PokedexOptionsService,
-  PokedexSelectionService,
-} from 'src/app/services';
+import { PokedexSelectionService } from 'src/app/services';
 import { formatGender, getImagePath } from 'src/app/utils';
 import { PokedexBaseComponent } from '../pokedex-base-component/pokedex-base.component';
 
@@ -16,10 +13,7 @@ import { PokedexBaseComponent } from '../pokedex-base-component/pokedex-base.com
 export class PokeSelectionCheckComponent extends PokedexBaseComponent {
   @Input() form!: PokedexTableVariant;
 
-  constructor(
-    private pokedexSelectionService: PokedexSelectionService,
-    private pokedexOptionsService: PokedexOptionsService
-  ) {
+  constructor(private pokedexSelectionService: PokedexSelectionService) {
     super();
   }
 

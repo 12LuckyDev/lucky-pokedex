@@ -31,6 +31,9 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { PokeStatisticsBarsComponent } from './pokedex-table/poke-statistics/poke-statistics-bars/poke-statistics-bars.component';
+import { PokeDetailedStatisticsComponent } from './pokedex-table/poke-statistics/poke-detailed-statistics/poke-detailed-statistics.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(http);
@@ -49,6 +52,8 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
     PokedexTypesComponent,
     PokedexTypeComponent,
     PokeStatisticsComponent,
+    PokeStatisticsBarsComponent,
+    PokeDetailedStatisticsComponent,
   ],
   imports: [
     BrowserModule,
@@ -77,6 +82,7 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
         deps: [HttpClient],
       },
     }),
+    MatDialogModule,
   ],
   providers: [PokedexBaseComponent],
   bootstrap: [AppComponent],

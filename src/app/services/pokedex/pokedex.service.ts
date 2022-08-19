@@ -1,45 +1,37 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, filter, map, merge, Observable } from 'rxjs';
+import { filter, map, merge, Observable } from 'rxjs';
 import { PokedexBaseService } from 'src/app/base';
+import { PokedexOptionsService } from '../pokedex-options/pokedex-options.service';
+import { PokedexSelectionService } from '../pokedex-selection/pokedex-selection.service';
+import { PokedexStatisticsService } from '../pokedex-statistics/pokedex-statistics.service';
+import { PokedexUiServiceService } from '../pokedex-ui-service/pokedex-ui-service.service';
 import {
+  EntryForStatistics,
   PokedexEntry,
   PokedexTableEntry,
   PokedexTableVariant,
-  SelectionStatistics,
   SpecyficSelection,
 } from 'src/app/models';
-import { getAllSelections, getTableVariantsList } from 'src/app/utils';
+import {
+  calcNewSelection,
+  getAllSelections,
+  getTableVariantsList,
+} from 'src/app/utils';
 import {
   GetPokedexListParamsType,
   PokedexDataService,
 } from '../pokedex-data/pokedex-data.service';
-import { PokedexOptionsService } from '../pokedex-options/pokedex-options.service';
-import { PokedexSelectionService } from '../pokedex-selection/pokedex-selection.service';
-import { PokedexUiServiceService } from '../pokedex-ui-service/pokedex-ui-service.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class PokedexService extends PokedexBaseService {
-  private _subservicesReady = {
-    options: false,
-    selection: false,
-    uiSettings: false,
-  };
-
-  private _selectionStatisticsSubject =
-    new BehaviorSubject<SelectionStatistics>({
-      allPokemon: 0,
-      allForms: 0,
-      selectedPokemon: 0,
-      selectedForms: 0,
-    });
-
   constructor(
     private pokedexOptionsService: PokedexOptionsService,
     private pokedexSelectionService: PokedexSelectionService,
     private pokedexUiServiceService: PokedexUiServiceService,
-    private pokedexDataService: PokedexDataService
+    private pokedexDataService: PokedexDataService,
+    private pokedexStatisticsService: PokedexStatisticsService
   ) {
     super();
 
@@ -47,101 +39,55 @@ export class PokedexService extends PokedexBaseService {
       this.pokedexOptionsService.readyObservable,
       this.pokedexSelectionService.readyObservable,
       this.pokedexUiServiceService.readyObservable
-    )
-      .pipe(filter(({ ready }) => !!ready))
-      .subscribe(({ ready, name }) => {
-        this._subservicesReady[name as 'options' | 'selection' | 'uiSettings'] =
-          ready;
-        if (this.allReady) {
-          this.getTableEntries().subscribe(({ data, count }) =>
-            this.refreshStatistics(data, count)
-          );
-          this.initialize();
-          this.setAsReady();
-        }
-      });
-  }
-
-  protected get serviceName(): string {
-    return 'pokedex';
-  }
-
-  private get allReady(): boolean {
-    const { options, selection, uiSettings } = this._subservicesReady;
-    return options && selection && uiSettings;
-  }
-
-  private get selectionStatistics(): SelectionStatistics {
-    return this._selectionStatisticsSubject.value;
-  }
-
-  public get selectionStatisticsObservable(): Observable<SelectionStatistics> {
-    return this._selectionStatisticsSubject.asObservable();
+    ).subscribe({
+      complete: () => {
+        this.getTableEntriesForStatistics().subscribe(({ data, count }) =>
+          this.pokedexStatisticsService.refreshStatistics(data, count)
+        );
+        this.initialize();
+        this.setAsReady();
+      },
+    });
   }
 
   private initialize(): void {
     this.pokedexSelectionService.selectionChangeObservable
       .pipe(filter(({ userInput }) => userInput))
       .subscribe(({ entry, newSelection, oldSelection }) => {
-        const { selectedForms, selectedPokemon, ...rest } =
-          this.selectionStatistics;
-        let newSelectedPokemon = selectedPokemon;
-
-        const allFormSelectionCount = this.getAllFormSelections(entry).length;
-        if (allFormSelectionCount === oldSelection.length) {
-          --newSelectedPokemon;
-        }
-        if (allFormSelectionCount === newSelection.length) {
-          ++newSelectedPokemon;
-        }
-
-        this._selectionStatisticsSubject.next({
-          ...rest,
-          selectedForms:
-            selectedForms - oldSelection.length + newSelection.length,
-          selectedPokemon: newSelectedPokemon,
-        });
+        this.pokedexStatisticsService.refreshPerEntry(
+          entry,
+          newSelection,
+          oldSelection,
+          this.getAllSelections(entry)
+        );
       });
 
     this.pokedexOptionsService.getOptionsObservable().subscribe(() => {
-      this.getTableEntries().subscribe(({ data, count }) => {
-        data.forEach((entry) => {
-          const oldSelection = this.pokedexSelectionService.getSelection(
-            entry.number
-          );
-          if (oldSelection.length > 0) {
-            const newSelection: SpecyficSelection[] = [];
-
-            this.getAllFormSelections(entry).forEach((selection) => {
-              const { formType, gender, formId } = selection;
-
-              if (
-                typeof selection.gender === 'number'
-                  ? oldSelection.find(
-                      (el) =>
-                        el.formType === formType &&
-                        el.formId === formId &&
-                        el.gender === gender
-                    )
-                  : oldSelection.find(
-                      (el) => el.formType === formType && el.formId === formId
-                    )
-              ) {
-                newSelection.push(selection);
-              }
-            });
+      this.getTableEntriesForStatistics().subscribe(({ data, count }) => {
+        data.forEach((el) => {
+          if (el.selection.length > 0) {
+            el.selection = calcNewSelection(el);
 
             this.pokedexSelectionService.updateSelection(
-              entry,
-              newSelection,
+              el.entry,
+              el.selection,
               false
             );
           }
         });
-        this.refreshStatistics(data, count);
+        this.pokedexStatisticsService.refreshStatistics(data, count);
       });
     });
   }
+
+  private getPokedexTableEntry = (entry: PokedexEntry): PokedexTableEntry => {
+    return {
+      ...entry,
+      showGender: this.pokedexOptionsService.getShowGender(entry),
+      showForms: this.pokedexOptionsService.getShowForms(entry),
+      hasVariants: this.pokedexOptionsService.getHasVariants(entry),
+    };
+  };
 
   public getTableEntries(
     requestData: GetPokedexListParamsType = {}
@@ -153,12 +99,32 @@ export class PokedexService extends PokedexBaseService {
       map(({ data, count }) => {
         return {
           count,
-          data: data.map((entry) => ({
-            ...entry,
-            showGender: this.pokedexOptionsService.getShowGender(entry),
-            showForms: this.pokedexOptionsService.getShowForms(entry),
-            hasVariants: this.pokedexOptionsService.getHasVariants(entry),
-          })),
+          data: data.map(this.getPokedexTableEntry),
+        };
+      })
+    );
+  }
+
+  private getTableEntriesForStatistics(
+    requestData: GetPokedexListParamsType = {}
+  ): Observable<{
+    data: EntryForStatistics[];
+    count: number;
+  }> {
+    return this.pokedexDataService.getPokedexList(requestData).pipe(
+      map(({ data, count }) => {
+        return {
+          count,
+          data: data.map((entry) => {
+            const tableEntry = this.getPokedexTableEntry(entry);
+            return {
+              entry: tableEntry,
+              selection: this.pokedexSelectionService.getSelection(
+                entry.number
+              ),
+              allSelection: this.getAllSelections(tableEntry),
+            };
+          }),
         };
       })
     );
@@ -171,7 +137,7 @@ export class PokedexService extends PokedexBaseService {
     );
   }
 
-  private getAllFormSelections(entry: PokedexTableEntry): SpecyficSelection[] {
+  private getAllSelections(entry: PokedexTableEntry): SpecyficSelection[] {
     return getAllSelections(
       entry,
       this.pokedexOptionsService.getShowTypes(entry)
@@ -181,7 +147,7 @@ export class PokedexService extends PokedexBaseService {
   public isAllSelected(entry?: PokedexTableEntry): boolean {
     return entry
       ? this.pokedexSelectionService.getSelection(entry.number).length ===
-          this.getAllFormSelections(entry).length
+          this.getAllSelections(entry).length
       : false;
   }
 
@@ -195,7 +161,7 @@ export class PokedexService extends PokedexBaseService {
     if (entry) {
       this.pokedexSelectionService.updateSelection(
         entry,
-        this.getAllFormSelections(entry)
+        this.getAllSelections(entry)
       );
     }
   }
@@ -204,26 +170,5 @@ export class PokedexService extends PokedexBaseService {
     if (entry) {
       this.pokedexSelectionService.updateSelection(entry, []);
     }
-  }
-
-  private refreshStatistics(data: PokedexTableEntry[], count: number): void {
-    const result = {
-      allPokemon: count,
-      allForms: 0,
-      selectedForms: 0,
-      selectedPokemon: 0,
-    };
-
-    data.forEach((entry: PokedexTableEntry) => {
-      const selection = this.pokedexSelectionService.getSelection(entry.number);
-      result.selectedForms += selection.length;
-      if (selection.length === this.getAllFormSelections(entry).length) {
-        result.selectedPokemon++;
-      }
-
-      result.allForms += this.getAllFormSelections(entry).length;
-    });
-
-    this._selectionStatisticsSubject.next(result);
   }
 }

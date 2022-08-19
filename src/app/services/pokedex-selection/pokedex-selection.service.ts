@@ -34,10 +34,6 @@ export class PokedexSelectionService extends PokedexBaseService {
       });
   }
 
-  protected get serviceName(): string {
-    return 'selection';
-  }
-
   public get selectionChangeObservable(): Observable<{
     entry: PokedexTableEntry;
     newSelection: SpecyficSelection[];

@@ -1,23 +1,23 @@
 import { BehaviorSubject, Observable } from 'rxjs';
 
 export abstract class PokedexBaseService {
-  private _readySubject = new BehaviorSubject<{ ready: boolean; name: string }>(
-    { ready: false, name: '' }
-  );
+  private _isReady = false;
 
-  protected abstract get serviceName(): string;
+  private _readySubject = new BehaviorSubject<string | null>(null);
 
-  public get readyObservable(): Observable<{ ready: boolean; name: string }> {
+  protected get serviceName(): string | null {
+    return null;
+  }
+
+  public get readyObservable(): Observable<string | null> {
     return this._readySubject.asObservable();
   }
 
-  public get isReady(): boolean {
-    return this._readySubject.value.ready;
-  }
-
   protected setAsReady = () => {
-    if (!this.isReady) {
-      this._readySubject.next({ ready: true, name: this.serviceName });
+    if (!this._isReady) {
+      this._readySubject.next(this.serviceName);
+      this._readySubject.complete();
+      this._isReady = true;
     }
   };
 }

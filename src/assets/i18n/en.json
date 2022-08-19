@@ -1,4 +1,7 @@
 {
+  "COMMON": {
+    "CLOSE": "Close"
+  },
   "OPTIONS": {
     "TITLE": "Pokedex settings",
     "COUNT_POLICIES_SUBTITLE": "Counting Policies",
@@ -39,5 +42,10 @@
         "NO_COUNT": "No count"
       }
     }
+  },
+  "STATISTICS": {
+    "TITLE": "Detailed statistics",
+    "POKEMON_SELECTION": "{{selected}} of {{all}} Pokemon",
+    "FORMS_SELECTION": "{{selected}} of {{all}} Forms"
   }
 }

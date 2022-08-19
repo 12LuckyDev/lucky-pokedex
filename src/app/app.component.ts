@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { filter } from 'rxjs';
 import { PokedexService } from './services';
 import { TranslateService } from '@ngx-translate/core';
 
@@ -21,11 +20,9 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.pokedexService.readyObservable
-      .pipe(filter(({ ready }) => !!ready))
-      .subscribe(() => {
-        this._ready = true;
-      });
+    this.pokedexService.readyObservable.subscribe({
+      complete: () => (this._ready = true),
+    });
   }
 
   get ready(): boolean {

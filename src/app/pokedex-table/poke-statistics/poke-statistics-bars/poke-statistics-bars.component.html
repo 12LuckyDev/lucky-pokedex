@@ -1,0 +1,39 @@
+<div fxLayout="row" fxLayout.lt-sm="column" xLayoutWrap fxLayoutGap="2.5%">
+  <div
+    class="poke-stats"
+    fxLayout="column"
+    fxFlex="1 1"
+    fxLayoutGap="1%"
+    fxLayoutAlign="center center"
+  >
+    <mat-progress-bar
+      mode="determinate"
+      [value]="selectedPokemonValue"
+    ></mat-progress-bar>
+
+    <span
+      translate
+      [translateParams]="{ selected: selectedPokemon, all: allPokemon }"
+      >STATISTICS.POKEMON_SELECTION</span
+    >
+  </div>
+
+  <div
+    *ngIf="showFormsStatistics"
+    class="poke-stats"
+    fxLayout="column"
+    fxFlex="1 1"
+    fxLayoutGap="1%"
+    fxLayoutAlign="center center"
+  >
+    <mat-progress-bar
+      mode="determinate"
+      [value]="selectedFormsValue"
+    ></mat-progress-bar>
+    <span
+      translate
+      [translateParams]="{ selected: selectedForms, all: allPokemon }"
+      >STATISTICS.FORMS_SELECTION</span
+    >
+  </div>
+</div>

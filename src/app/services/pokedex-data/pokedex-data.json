@@ -7425,7 +7425,7 @@
     "number": 808,
     "name": "Meltan",
     "types": [8],
-    "origin": 6,
+    "origin": 7,
     "genders": [2],
     "rarity": 2
   },
@@ -7433,7 +7433,7 @@
     "number": 809,
     "name": "Melmetal",
     "types": [8],
-    "origin": 6,
+    "origin": 7,
     "genders": [2],
     "rarity": 2,
     "gigantamax": { "factor": true }
@@ -7442,7 +7442,7 @@
     "number": 810,
     "name": "Grookey",
     "types": [11],
-    "origin": 7,
+    "origin": 8,
     "genders": [0, 1],
     "rarity": 0
   },
@@ -7450,7 +7450,7 @@
     "number": 811,
     "name": "Thwackey",
     "types": [11],
-    "origin": 7,
+    "origin": 8,
     "genders": [0, 1],
     "rarity": 0
   },
@@ -7458,7 +7458,7 @@
     "number": 812,
     "name": "Rillaboom",
     "types": [11],
-    "origin": 7,
+    "origin": 8,
     "genders": [0, 1],
     "rarity": 0,
     "gigantamax": { "factor": true }
@@ -7467,7 +7467,7 @@
     "number": 813,
     "name": "Scorbunny",
     "types": [9],
-    "origin": 7,
+    "origin": 8,
     "genders": [0, 1],
     "rarity": 0
   },
@@ -7475,7 +7475,7 @@
     "number": 814,
     "name": "Raboot",
     "types": [9],
-    "origin": 7,
+    "origin": 8,
     "genders": [0, 1],
     "rarity": 0
   },
@@ -7483,7 +7483,7 @@
     "number": 815,
     "name": "Cinderace",
     "types": [9],
-    "origin": 7,
+    "origin": 8,
     "genders": [0, 1],
     "rarity": 0,
     "gigantamax": { "factor": true }
@@ -7492,7 +7492,7 @@
     "number": 816,
     "name": "Sobble",
     "types": [10],
-    "origin": 7,
+    "origin": 8,
     "genders": [0, 1],
     "rarity": 0
   },
@@ -7500,7 +7500,7 @@
     "number": 817,
     "name": "Drizzile",
     "types": [10],
-    "origin": 7,
+    "origin": 8,
     "genders": [0, 1],
     "rarity": 0
   },
@@ -7508,7 +7508,7 @@
     "number": 818,
     "name": "Inteleon",
     "types": [10],
-    "origin": 7,
+    "origin": 8,
     "genders": [0, 1],
     "rarity": 0,
     "gigantamax": { "factor": true }
@@ -7517,7 +7517,7 @@
     "number": 819,
     "name": "Skwovet",
     "types": [0],
-    "origin": 7,
+    "origin": 8,
     "genders": [0, 1],
     "rarity": 0
   },
@@ -7525,7 +7525,7 @@
     "number": 820,
     "name": "Greedent",
     "types": [0],
-    "origin": 7,
+    "origin": 8,
     "genders": [0, 1],
     "rarity": 0
   },
@@ -7533,7 +7533,7 @@
     "number": 821,
     "name": "Rookidee",
     "types": [2],
-    "origin": 7,
+    "origin": 8,
     "genders": [0, 1],
     "rarity": 0
   },
@@ -7541,7 +7541,7 @@
     "number": 822,
     "name": "Corvisquire",
     "types": [2],
-    "origin": 7,
+    "origin": 8,
     "genders": [0, 1],
     "rarity": 0
   },
@@ -7549,7 +7549,7 @@
     "number": 823,
     "name": "Corviknight",
     "types": [2, 8],
-    "origin": 7,
+    "origin": 8,
     "genders": [0, 1],
     "rarity": 0,
     "gigantamax": { "factor": true }
@@ -7558,7 +7558,7 @@
     "number": 824,
     "name": "Blipbug",
     "types": [6],
-    "origin": 7,
+    "origin": 8,
     "genders": [0, 1],
     "rarity": 0
   },
@@ -7566,7 +7566,7 @@
     "number": 825,
     "name": "Dottler",
     "types": [6, 13],
-    "origin": 7,
+    "origin": 8,
     "genders": [0, 1],
     "rarity": 0
   },
@@ -7574,7 +7574,7 @@
     "number": 826,
     "name": "Orbeetle",
     "types": [6, 13],
-    "origin": 7,
+    "origin": 8,
     "genders": [0, 1],
     "rarity": 0,
     "gigantamax": { "factor": true }
@@ -7583,7 +7583,7 @@
     "number": 827,
     "name": "Nickit",
     "types": [16],
-    "origin": 7,
+    "origin": 8,
     "genders": [0, 1],
     "rarity": 0
   },
@@ -7591,7 +7591,7 @@
     "number": 828,
     "name": "Thievul",
     "types": [16],
-    "origin": 7,
+    "origin": 8,
     "genders": [0, 1],
     "rarity": 0
   },
@@ -7599,7 +7599,7 @@
     "number": 829,
     "name": "Gossifleur",
     "types": [11],
-    "origin": 7,
+    "origin": 8,
     "genders": [0, 1],
     "rarity": 0
   },
@@ -7607,7 +7607,7 @@
     "number": 830,
     "name": "Eldegoss",
     "types": [11],
-    "origin": 7,
+    "origin": 8,
     "genders": [0, 1],
     "rarity": 0
   },
@@ -7615,7 +7615,7 @@
     "number": 831,
     "name": "Wooloo",
     "types": [0],
-    "origin": 7,
+    "origin": 8,
     "genders": [0, 1],
     "rarity": 0
   },
@@ -7623,7 +7623,7 @@
     "number": 832,
     "name": "Dubwool",
     "types": [0],
-    "origin": 7,
+    "origin": 8,
     "genders": [0, 1],
     "rarity": 0
   },
@@ -7631,7 +7631,7 @@
     "number": 833,
     "name": "Chewtle",
     "types": [10],
-    "origin": 7,
+    "origin": 8,
     "genders": [0, 1],
     "rarity": 0
   },
@@ -7639,7 +7639,7 @@
     "number": 834,
     "name": "Drednaw",
     "types": [10, 5],
-    "origin": 7,
+    "origin": 8,
     "genders": [0, 1],
     "rarity": 0,
     "gigantamax": { "factor": true }
@@ -7648,7 +7648,7 @@
     "number": 835,
     "name": "Yamper",
     "types": [12],
-    "origin": 7,
+    "origin": 8,
     "genders": [0, 1],
     "rarity": 0
   },
@@ -7656,7 +7656,7 @@
     "number": 836,
     "name": "Boltund",
     "types": [12],
-    "origin": 7,
+    "origin": 8,
     "genders": [0, 1],
     "rarity": 0
   },
@@ -7664,7 +7664,7 @@
     "number": 837,
     "name": "Rolycoly",
     "types": [5],
-    "origin": 7,
+    "origin": 8,
     "genders": [0, 1],
     "rarity": 0
   },
@@ -7672,7 +7672,7 @@
     "number": 838,
     "name": "Carkol",
     "types": [5, 9],
-    "origin": 7,
+    "origin": 8,
     "genders": [0, 1],
     "rarity": 0
   },
@@ -7680,7 +7680,7 @@
     "number": 839,
     "name": "Coalossal",
     "types": [5, 9],
-    "origin": 7,
+    "origin": 8,
     "genders": [0, 1],
     "rarity": 0,
     "gigantamax": { "factor": true }
@@ -7689,7 +7689,7 @@
     "number": 840,
     "name": "Applin",
     "types": [11, 15],
-    "origin": 7,
+    "origin": 8,
     "genders": [0, 1],
     "rarity": 0
   },
@@ -7697,7 +7697,7 @@
     "number": 841,
     "name": "Flapple",
     "types": [11, 15],
-    "origin": 7,
+    "origin": 8,
     "genders": [0, 1],
     "rarity": 0,
     "gigantamax": { "factor": true }
@@ -7706,7 +7706,7 @@
     "number": 842,
     "name": "Appletun",
     "types": [11, 15],
-    "origin": 7,
+    "origin": 8,
     "genders": [0, 1],
     "rarity": 0,
     "gigantamax": { "factor": true }
@@ -7715,7 +7715,7 @@
     "number": 843,
     "name": "Silicobra",
     "types": [4],
-    "origin": 7,
+    "origin": 8,
     "genders": [0, 1],
     "rarity": 0
   },
@@ -7723,7 +7723,7 @@
     "number": 844,
     "name": "Sandaconda",
     "types": [4],
-    "origin": 7,
+    "origin": 8,
     "genders": [0, 1],
     "rarity": 0,
     "gigantamax": { "factor": true }
@@ -7732,7 +7732,7 @@
     "number": 845,
     "name": "Cramorant",
     "types": [2, 10],
-    "origin": 7,
+    "origin": 8,
     "genders": [0, 1],
     "rarity": 0
   },
@@ -7740,7 +7740,7 @@
     "number": 846,
     "name": "Arrokuda",
     "types": [10],
-    "origin": 7,
+    "origin": 8,
     "genders": [0, 1],
     "rarity": 0
   },
@@ -7748,7 +7748,7 @@
     "number": 847,
     "name": "Barraskewda",
     "types": [10],
-    "origin": 7,
+    "origin": 8,
     "genders": [0, 1],
     "rarity": 0
   },
@@ -7756,7 +7756,7 @@
     "number": 848,
     "name": "Toxel",
     "types": [12, 3],
-    "origin": 7,
+    "origin": 8,
     "genders": [0, 1],
     "rarity": 0
   },
@@ -7764,7 +7764,7 @@
     "number": 849,
     "name": "Toxtricity",
     "types": [12, 3],
-    "origin": 7,
+    "origin": 8,
     "genders": [0, 1],
     "rarity": 0,
     "formsData": {
@@ -7781,7 +7781,7 @@
     "number": 850,
     "name": "Sizzlipede",
     "types": [9, 6],
-    "origin": 7,
+    "origin": 8,
     "genders": [0, 1],
     "rarity": 0
   },
@@ -7789,7 +7789,7 @@
     "number": 851,
     "name": "Centiskorch",
     "types": [9, 6],
-    "origin": 7,
+    "origin": 8,
     "genders": [0, 1],
     "rarity": 0,
     "gigantamax": { "factor": true }
@@ -7798,7 +7798,7 @@
     "number": 852,
     "name": "Clobbopus",
     "types": [1],
-    "origin": 7,
+    "origin": 8,
     "genders": [0, 1],
     "rarity": 0
   },
@@ -7806,7 +7806,7 @@
     "number": 853,
     "name": "Grapploct",
     "types": [1],
-    "origin": 7,
+    "origin": 8,
     "genders": [0, 1],
     "rarity": 0
   },
@@ -7814,7 +7814,7 @@
     "number": 854,
     "name": "Sinistea",
     "types": [7],
-    "origin": 7,
+    "origin": 8,
     "genders": [2],
     "rarity": 0,
     "formsData": {
@@ -7830,7 +7830,7 @@
     "number": 855,
     "name": "Polteageist",
     "types": [7],
-    "origin": 7,
+    "origin": 8,
     "genders": [2],
     "rarity": 0,
     "formsData": {
@@ -7846,7 +7846,7 @@
     "number": 856,
     "name": "Hatenna",
     "types": [13],
-    "origin": 7,
+    "origin": 8,
     "genders": [1],
     "rarity": 0
   },
@@ -7854,7 +7854,7 @@
     "number": 857,
     "name": "Hattrem",
     "types": [13],
-    "origin": 7,
+    "origin": 8,
     "genders": [1],
     "rarity": 0
   },
@@ -7862,7 +7862,7 @@
     "number": 858,
     "name": "Hatterene",
     "types": [13, 17],
-    "origin": 7,
+    "origin": 8,
     "genders": [1],
     "rarity": 0,
     "gigantamax": { "factor": true }
@@ -7871,7 +7871,7 @@
     "number": 859,
     "name": "Impidimp",
     "types": [16, 17],
-    "origin": 7,
+    "origin": 8,
     "genders": [0],
     "rarity": 0
   },
@@ -7879,7 +7879,7 @@
     "number": 860,
     "name": "Morgrem",
     "types": [16, 17],
-    "origin": 7,
+    "origin": 8,
     "genders": [0],
     "rarity": 0
   },
@@ -7887,7 +7887,7 @@
     "number": 861,
     "name": "Grimmsnarl",
     "types": [16, 17],
-    "origin": 7,
+    "origin": 8,
     "genders": [0],
     "rarity": 0,
     "gigantamax": { "factor": true }
@@ -7896,7 +7896,7 @@
     "number": 862,
     "name": "Obstagoon",
     "types": [16, 0],
-    "origin": 7,
+    "origin": 8,
     "genders": [0, 1],
     "rarity": 0
   },
@@ -7904,7 +7904,7 @@
     "number": 863,
     "name": "Perrserker",
     "types": [8],
-    "origin": 7,
+    "origin": 8,
     "genders": [0, 1],
     "rarity": 0
   },
@@ -7912,7 +7912,7 @@
     "number": 864,
     "name": "Cursola",
     "types": [7],
-    "origin": 7,
+    "origin": 8,
     "genders": [0, 1],
     "rarity": 0
   },
@@ -7920,7 +7920,7 @@
     "number": 865,
     "name": "Sirfetch'd",
     "types": [1],
-    "origin": 7,
+    "origin": 8,
     "genders": [0, 1],
     "rarity": 0
   },
@@ -7928,7 +7928,7 @@
     "number": 866,
     "name": "Mr. Rime",
     "types": [14, 13],
-    "origin": 7,
+    "origin": 8,
     "genders": [0, 1],
     "rarity": 0
   },
@@ -7936,7 +7936,7 @@
     "number": 867,
     "name": "Runerigus",
     "types": [4, 7],
-    "origin": 7,
+    "origin": 8,
     "genders": [0, 1],
     "rarity": 0
   },
@@ -7944,7 +7944,7 @@
     "number": 868,
     "name": "Milcery",
     "types": [17],
-    "origin": 7,
+    "origin": 8,
     "genders": [1],
     "rarity": 0
   },
@@ -7952,7 +7952,7 @@
     "number": 869,
     "name": "Alcremie",
     "types": [17],
-    "origin": 7,
+    "origin": 8,
     "genders": [1],
     "rarity": 0,
     "formsData": {
@@ -8050,7 +8050,7 @@
     "number": 870,
     "name": "Falinks",
     "types": [1],
-    "origin": 7,
+    "origin": 8,
     "genders": [2],
     "rarity": 0
   },
@@ -8058,7 +8058,7 @@
     "number": 871,
     "name": "Pincurchin",
     "types": [12],
-    "origin": 7,
+    "origin": 8,
     "genders": [0, 1],
     "rarity": 0
   },
@@ -8066,7 +8066,7 @@
     "number": 872,
     "name": "Snom",
     "types": [14, 6],
-    "origin": 7,
+    "origin": 8,
     "genders": [0, 1],
     "rarity": 0
   },
@@ -8074,7 +8074,7 @@
     "number": 873,
     "name": "Frosmoth",
     "types": [14, 6],
-    "origin": 7,
+    "origin": 8,
     "genders": [0, 1],
     "rarity": 0
   },
@@ -8082,7 +8082,7 @@
     "number": 874,
     "name": "Stonjourner",
     "types": [5],
-    "origin": 7,
+    "origin": 8,
     "genders": [0, 1],
     "rarity": 0
   },
@@ -8090,7 +8090,7 @@
     "number": 875,
     "name": "Eiscue",
     "types": [14],
-    "origin": 7,
+    "origin": 8,
     "genders": [0, 1],
     "rarity": 0
   },
@@ -8098,7 +8098,7 @@
     "number": 876,
     "name": "Indeedee",
     "types": [13, 0],
-    "origin": 7,
+    "origin": 8,
     "genders": [0, 1],
     "genderDiffs": {
       "desc": "Male Indeedee has prominent horns while female's are perched down. Male has blue specks around the eye while female has pink. They have different stats, moves and abilities",
@@ -8110,7 +8110,7 @@
     "number": 877,
     "name": "Morpeko",
     "types": [12, 16],
-    "origin": 7,
+    "origin": 8,
     "genders": [0, 1],
     "rarity": 0
   },
@@ -8118,7 +8118,7 @@
     "number": 878,
     "name": "Cufant",
     "types": [8],
-    "origin": 7,
+    "origin": 8,
     "genders": [0, 1],
     "rarity": 0
   },
@@ -8126,7 +8126,7 @@
     "number": 879,
     "name": "Copperajah",
     "types": [8],
-    "origin": 7,
+    "origin": 8,
     "genders": [0, 1],
     "rarity": 0,
     "gigantamax": { "factor": true }
@@ -8135,7 +8135,7 @@
     "number": 880,
     "name": "Dracozolt",
     "types": [12, 15],
-    "origin": 7,
+    "origin": 8,
     "genders": [2],
     "rarity": 0
   },
@@ -8143,7 +8143,7 @@
     "number": 881,
     "name": "Arctozolt",
     "types": [12, 14],
-    "origin": 7,
+    "origin": 8,
     "genders": [2],
     "rarity": 0
   },
@@ -8151,7 +8151,7 @@
     "number": 882,
     "name": "Dracovish",
     "types": [10, 15],
-    "origin": 7,
+    "origin": 8,
     "genders": [2],
     "rarity": 0
   },
@@ -8159,7 +8159,7 @@
     "number": 883,
     "name": "Arctovish",
     "types": [10, 14],
-    "origin": 7,
+    "origin": 8,
     "genders": [2],
     "rarity": 0
   },
@@ -8167,7 +8167,7 @@
     "number": 884,
     "name": "Duraludon",
     "types": [8, 15],
-    "origin": 7,
+    "origin": 8,
     "genders": [0, 1],
     "rarity": 0,
     "gigantamax": { "factor": true }
@@ -8176,7 +8176,7 @@
     "number": 885,
     "name": "Dreepy",
     "types": [15, 7],
-    "origin": 7,
+    "origin": 8,
     "genders": [0, 1],
     "rarity": 0
   },
@@ -8184,7 +8184,7 @@
     "number": 886,
     "name": "Drakloak",
     "types": [15, 7],
-    "origin": 7,
+    "origin": 8,
     "genders": [0, 1],
     "rarity": 0
   },
@@ -8192,7 +8192,7 @@
     "number": 887,
     "name": "Dragapult",
     "types": [15, 7],
-    "origin": 7,
+    "origin": 8,
     "genders": [0, 1],
     "rarity": 0
   },
@@ -8200,7 +8200,7 @@
     "number": 888,
     "name": "Zacian",
     "types": [17],
-    "origin": 7,
+    "origin": 8,
     "genders": [2],
     "rarity": 1
   },
@@ -8208,7 +8208,7 @@
     "number": 889,
     "name": "Zamazenta",
     "types": [1],
-    "origin": 7,
+    "origin": 8,
     "genders": [2],
     "rarity": 1
   },
@@ -8216,7 +8216,7 @@
     "number": 890,
     "name": "Eternatus",
     "types": [3, 15],
-    "origin": 7,
+    "origin": 8,
     "genders": [2],
     "rarity": 1
   },
@@ -8224,7 +8224,7 @@
     "number": 891,
     "name": "Kubfu",
     "types": [1],
-    "origin": 7,
+    "origin": 8,
     "genders": [0, 1],
     "rarity": 1
   },
@@ -8232,7 +8232,7 @@
     "number": 892,
     "name": "Urshifu",
     "types": [1, 16],
-    "origin": 7,
+    "origin": 8,
     "genders": [0, 1],
     "rarity": 1,
     "formsData": {
@@ -8249,7 +8249,7 @@
     "number": 893,
     "name": "Zarude",
     "types": [16, 11],
-    "origin": 7,
+    "origin": 8,
     "genders": [2],
     "rarity": 2,
     "formsData": {
@@ -8265,7 +8265,7 @@
     "number": 894,
     "name": "Regieleki",
     "types": [12],
-    "origin": 7,
+    "origin": 8,
     "genders": [2],
     "rarity": 1
   },
@@ -8273,7 +8273,7 @@
     "number": 895,
     "name": "Regidrago",
     "types": [15],
-    "origin": 7,
+    "origin": 8,
     "genders": [2],
     "rarity": 1
   },
@@ -8281,7 +8281,7 @@
     "number": 896,
     "name": "Glastrier",
     "types": [14],
-    "origin": 7,
+    "origin": 8,
     "genders": [2],
     "rarity": 1
   },
@@ -8289,7 +8289,7 @@
     "number": 897,
     "name": "Spectrier",
     "types": [7],
-    "origin": 7,
+    "origin": 8,
     "genders": [2],
     "rarity": 1
   },
@@ -8297,7 +8297,7 @@
     "number": 898,
     "name": "Calyrex",
     "types": [13, 11],
-    "origin": 7,
+    "origin": 8,
     "genders": [2],
     "rarity": 1
   },

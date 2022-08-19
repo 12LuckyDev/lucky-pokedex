@@ -39,10 +39,6 @@ export class PokedexOptionsService extends PokedexBaseService {
     });
   }
 
-  get serviceName(): string {
-    return 'options';
-  }
-
   public get options(): PokedexOptions {
     return this._optionsSubject.value;
   }

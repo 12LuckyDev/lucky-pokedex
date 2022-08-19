@@ -27,10 +27,6 @@ export class PokedexUiServiceService extends PokedexBaseService {
     });
   }
 
-  get serviceName(): string {
-    return 'uiSettings';
-  }
-
   public get settings(): PokedexUiSettings {
     return this._uiSettings;
   }

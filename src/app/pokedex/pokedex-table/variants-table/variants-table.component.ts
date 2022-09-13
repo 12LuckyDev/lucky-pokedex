@@ -8,7 +8,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatTable } from '@angular/material/table';
 import { PokedexTableVariant } from 'src/app/models';
 import { PokedexOptionsService, PokedexService } from 'src/app/services';
-import { PokedexBaseComponent } from '../pokedex-base-component/pokedex-base.component';
+import { PokedexBaseComponent } from '../../../common/components/pokedex-base.component';
 import { VariantsTableDataSource } from './variants-table-datasource';
 
 @Component({

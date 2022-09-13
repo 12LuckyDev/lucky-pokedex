@@ -3,7 +3,7 @@ import { PokeVariantType, PokeGender } from 'src/app/enums';
 import { PokedexTableVariant } from 'src/app/models';
 import { PokedexSelectionService } from 'src/app/services';
 import { formatGender, getImagePath } from 'src/app/utils';
-import { PokedexBaseComponent } from '../pokedex-base-component/pokedex-base.component';
+import { PokedexBaseComponent } from '../../../common/components/pokedex-base.component';
 
 @Component({
   selector: 'app-poke-selection-check',

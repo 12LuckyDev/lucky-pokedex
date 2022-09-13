@@ -1,13 +1,13 @@
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { Observable } from 'rxjs';
-import { PokedexTableEntry } from '../models';
+import { PokedexTableEntry } from '../../models';
 import {
   GetPokedexListParamsType,
   PokedexOptionsService,
   PokedexSearchService,
   PokedexService,
-} from '../services';
+} from '../../services';
 import { PokedexBaseDatasource } from 'src/app/base';
 
 export class PokedexTableDataSource extends PokedexBaseDatasource<PokedexTableEntry> {

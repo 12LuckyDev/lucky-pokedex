@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { takeUntil, filter } from 'rxjs';
-import { PokedexBaseComponent } from '../pokedex-base-component/pokedex-base.component';
+import { PokedexBaseComponent } from '../../../common/components/pokedex-base.component';
 import {
   PokedexOptionsService,
   PokedexSelectionService,

@@ -2,7 +2,7 @@ import { forEachProp } from '@12luckydev/utils';
 import { Directive } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup } from '@angular/forms';
 import { Observable, takeUntil } from 'rxjs';
-import { DestroyedAwareComponent } from '../pokedex-table/pokedex-base-component/destroyed-aware.component';
+import { DestroyedAwareComponent } from './destroyed-aware.component';
 
 @Directive()
 export class FormComponent<

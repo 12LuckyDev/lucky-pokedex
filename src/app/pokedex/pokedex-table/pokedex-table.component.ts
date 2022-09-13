@@ -7,14 +7,14 @@ import {
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTable } from '@angular/material/table';
-import { PokedexTableEntry } from '../models';
+import { PokedexTableEntry } from '../../models';
 import { PokedexTableDataSource } from './pokedex-table-datasource';
 import { POKEDEX_TABLE_ANIMATIONS } from './pokedex-table-animations';
 import {
   PokedexOptionsService,
   PokedexSearchService,
   PokedexService,
-} from '../services';
+} from '../../services';
 
 @Component({
   selector: 'app-pokedex-table',

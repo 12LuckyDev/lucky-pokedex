@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
-import { FormComponent } from 'src/app/common/form.component';
+import { FormComponent } from 'src/app/common/components/form.component';
 import { PokedexSearch } from 'src/app/models';
 import { PokedexSearchService } from 'src/app/services';
 

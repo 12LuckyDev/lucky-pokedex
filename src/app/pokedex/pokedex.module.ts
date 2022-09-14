@@ -19,6 +19,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 import { PokedexComponent } from './pokedex.component';
 import { PokedexSelectionAllComponent } from './pokedex-table/pokedex-selection-all/pokedex-selection-all.component';
@@ -53,6 +54,7 @@ const MATERIAL_MODULES = [
   MatIconModule,
   MatProgressBarModule,
   MatDialogModule,
+  MatTooltipModule,
 ];
 
 const POKEDEX_COMPONENTS = [

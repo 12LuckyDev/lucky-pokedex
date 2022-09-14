@@ -6,9 +6,11 @@
 
   <button
     mat-icon-button
+    mat-stroked-button
     color="primary"
     class="details-button"
     (click)="openDetailed()"
+    matTooltip="{{ 'STATISTICS.TOOLTIP_TEXT' | translate }}"
   >
     <mat-icon>leaderboard</mat-icon>
   </button>

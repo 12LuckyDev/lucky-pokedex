@@ -47,6 +47,7 @@
   "STATISTICS": {
     "TITLE": "Detailed statistics",
     "POKEMON_SELECTION": "{{selected}} of {{all}} Pokemon",
-    "FORMS_SELECTION": "{{selected}} of {{all}} Forms"
+    "FORMS_SELECTION": "{{selected}} of {{all}} Forms",
+    "TOOLTIP_TEXT": "Show detailed statistics"
   }
 }

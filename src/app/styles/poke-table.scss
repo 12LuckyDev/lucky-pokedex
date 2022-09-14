@@ -14,29 +14,50 @@
   }
 
   .mat-column-selectAll {
-    width: 2rem;
+    max-width: 3rem;
+    min-width: 3rem;
+    padding: 0;
+    justify-content: center;
   }
 
   .mat-column-select {
     overflow: initial;
-    width: 128px;
+    min-width: 128px;
+    max-width: 128px;
     padding: 0 0.5rem;
 
     &.select-gender {
-      width: 262px;
+      min-width: 262px;
+      max-width: 262px;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .mat-column-select.select-gender {
+      min-width: 128px;
+      max-width: 128px;
     }
   }
 
   .mat-column-number {
-    width: 4rem;
+    max-width: 4rem;
+    min-width: 4rem;
   }
 
   .mat-column-name {
-    width: 7rem;
+    max-width: 7rem;
+    min-width: 7rem;
   }
 
   .mat-column-expand {
-    width: 2rem;
+    max-width: 3rem;
+    min-width: 3rem;
+    padding: 0;
+    justify-content: center;
+  }
+
+  .mat-column-expandedDetail {
+    border-right: 0;
   }
 }
 
@@ -49,4 +70,8 @@
   .bg-accent {
     background-color: mat-color($accent);
   }
+}
+
+.pokemon-element-row {
+  align-items: stretch;
 }

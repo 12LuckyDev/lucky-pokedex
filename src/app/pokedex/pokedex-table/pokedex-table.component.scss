@@ -1,7 +1,3 @@
-.pokemon-detail-row {
-  height: 0;
-}
-
 .pokemon-element-row {
   &.expandable {
     &:not(.expanded) {
@@ -16,7 +12,16 @@
 }
 
 .pokemon-element-detail {
-  overflow: hidden;
   display: flex;
   flex-direction: column;
+  width: 100%;
+}
+
+.details-row {
+  overflow: hidden;
+}
+
+.main-paginator {
+  position: sticky;
+  bottom: 0;
 }

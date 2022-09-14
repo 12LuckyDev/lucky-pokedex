@@ -62,4 +62,7 @@ export class PokedexTableComponent implements AfterViewInit {
   public expand(entry: PokedexTableEntry) {
     this.expanded = this.expanded === entry ? null : entry;
   }
+
+  public isExpansionDetailRow = (i: number, row: PokedexTableEntry) =>
+    row.hasVariants;
 }

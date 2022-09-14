@@ -3,8 +3,7 @@
 <pokedex-search></pokedex-search>
 
 <div class="mat-elevation-z8">
-  <table
-    mat-table
+  <mat-table
     class="full-width-table"
     matSort
     aria-label="Elements"
@@ -12,98 +11,94 @@
   >
     <!-- Select All Column-->
     <ng-container matColumnDef="selectAll">
-      <th mat-header-cell *matHeaderCellDef></th>
-      <td mat-cell *matCellDef="let row" [class.bg-accent]="expanded === row">
+      <mat-header-cell *matHeaderCellDef></mat-header-cell>
+      <mat-cell *matCellDef="let row" [class.bg-accent]="expanded === row">
         <pokedex-selection-all [entry]="row"></pokedex-selection-all>
-      </td>
+      </mat-cell>
     </ng-container>
 
     <!-- Select Column-->
     <ng-container matColumnDef="select">
-      <th
-        mat-header-cell
+      <mat-header-cell
         *matHeaderCellDef
         [class.select-gender]="isGenderSelectable"
-      ></th>
-      <td
-        mat-cell
+      ></mat-header-cell>
+      <mat-cell
         *matCellDef="let row"
         [class.select-gender]="isGenderSelectable"
       >
         <pokedex-selection-check [entry]="row"></pokedex-selection-check>
-      </td>
+      </mat-cell>
     </ng-container>
 
     <!-- Number Column -->
     <ng-container matColumnDef="number">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Number</th>
-      <td mat-cell *matCellDef="let row">#{{ row.number }}</td>
+      <mat-header-cell *matHeaderCellDef mat-sort-header
+        >Number</mat-header-cell
+      >
+      <mat-cell *matCellDef="let row">#{{ row.number }}</mat-cell>
     </ng-container>
 
     <!-- Name Column -->
     <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Name</th>
-      <td mat-cell *matCellDef="let row">{{ row.name }}</td>
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Name</mat-header-cell>
+      <mat-cell *matCellDef="let row">{{ row.name }}</mat-cell>
     </ng-container>
 
     <!-- Types Column -->
     <ng-container matColumnDef="types">
-      <th mat-header-cell *matHeaderCellDef>Types</th>
-      <td mat-cell *matCellDef="let row">
+      <mat-header-cell *matHeaderCellDef>Types</mat-header-cell>
+      <mat-cell *matCellDef="let row">
         <pokedex-types [types]="row.types"></pokedex-types>
-      </td>
+      </mat-cell>
     </ng-container>
 
     <!-- Expand Column -->
     <ng-container matColumnDef="expand">
-      <th mat-header-cell *matHeaderCellDef></th>
-      <td mat-cell *matCellDef="let row">
+      <mat-header-cell *matHeaderCellDef></mat-header-cell>
+      <mat-cell *matCellDef="let row">
         <div fxLayout="row" fxLayoutAlign="center center">
           <mat-icon *ngIf="row.hasVariants">{{
             row == expanded ? "expand_less" : "expand_more"
           }}</mat-icon>
         </div>
-      </td>
+      </mat-cell>
     </ng-container>
 
     <!-- Expanded Content Column -->
     <ng-container matColumnDef="expandedDetail">
-      <td
-        class="details-cells"
-        mat-cell
-        *matCellDef="let row"
-        [attr.colspan]="displayedColumns.length"
-      >
-        <div
-          class="pokemon-element-detail"
-          [@detail-expand]="row == expanded ? 'expanded' : 'collapsed'"
-        >
+      <mat-cell class="details-cells" *matCellDef="let row">
+        <div class="pokemon-element-detail">
           <pokedex-variants-table
             *ngIf="row.hasVariants"
             [entry]="row"
           ></pokedex-variants-table>
         </div>
-      </td>
+      </mat-cell>
     </ng-container>
 
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr
-      mat-row
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row
       *matRowDef="let row; columns: displayedColumns"
       class="pokemon-element-row"
       [class.expandable]="row.hasVariants"
       (click)="row.hasVariants ? expand(row) : null"
-    ></tr>
-    <tr
-      mat-row
-      *matRowDef="let row; columns: ['expandedDetail']"
-      class="pokemon-detail-row"
+    ></mat-row>
+    <mat-row
+      *matRowDef="
+        let row;
+        columns: ['expandedDetail'];
+        when: isExpansionDetailRow
+      "
+      class="details-row"
       [class.expanded]="expanded === row"
-    ></tr>
-  </table>
+      [@detail-expand]="row == expanded ? 'expanded' : 'collapsed'"
+    ></mat-row>
+  </mat-table>
 
   <mat-paginator
     #paginator
+    class="main-paginator"
     [length]="dataSource?.count"
     [pageIndex]="0"
     [pageSize]="10"

@@ -5,11 +5,11 @@ import { PokedexStatisticsService } from 'src/app/services';
 import { formatRegion } from 'src/app/utils';
 
 @Component({
-  selector: 'app-poke-detailed-statistics',
-  templateUrl: './poke-detailed-statistics.component.html',
-  styleUrls: ['./poke-detailed-statistics.component.scss'],
+  selector: 'pokedex-detailed-statistics',
+  templateUrl: './pokedex-detailed-statistics.component.html',
+  styleUrls: ['./pokedex-detailed-statistics.component.scss'],
 })
-export class PokeDetailedStatisticsComponent {
+export class PokedexDetailedStatisticsComponent {
   private _regionalObservables: {
     region: PokeRegion;
     observables: StatisticsObservables;

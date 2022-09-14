@@ -1,7 +1,7 @@
 import { toggle } from '@12luckydev/utils';
 import { Injectable } from '@angular/core';
 import { filter, Observable, Subject } from 'rxjs';
-import { PokedexBaseService } from 'src/app/base';
+import { PokedexBaseService } from 'src/app/common';
 import { PokeGender } from 'src/app/enums';
 import {
   PokedexTableEntry,

@@ -4,10 +4,9 @@
     <ng-container *ngFor="let element of regionalObservables">
       <mat-divider></mat-divider>
       <h3 class="region-name">{{ formatRegion(element.region) }}</h3>
-      <app-poke-statistics-bars
-        app-poke-statistics-bars
+      <pokedex-statistics-bars
         [observables]="element.observables"
-      ></app-poke-statistics-bars>
+      ></pokedex-statistics-bars>
     </ng-container>
     <mat-divider></mat-divider>
   </div>

@@ -1,18 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { takeUntil, filter } from 'rxjs';
-import { PokedexBaseComponent } from '../../../common/components/pokedex-base.component';
-import {
-  PokedexOptionsService,
-  PokedexSelectionService,
-  PokedexService,
-} from 'src/app/services';
+import { PokedexBaseComponent } from 'src/app/common';
+import { PokedexSelectionService, PokedexService } from 'src/app/services';
 
 @Component({
-  selector: 'app-poke-selection-all',
-  templateUrl: './poke-selection-all.component.html',
-  styleUrls: ['./poke-selection-all.component.scss'],
+  selector: 'pokedex-selection-all',
+  templateUrl: './pokedex-selection-all.component.html',
 })
-export class PokeSelectionAllComponent
+export class PokedexSelectionAllComponent
   extends PokedexBaseComponent
   implements OnInit
 {
@@ -21,8 +16,7 @@ export class PokeSelectionAllComponent
 
   constructor(
     private pokedexService: PokedexService,
-    private pokedexSelectionService: PokedexSelectionService,
-    private pokedexOptionsService: PokedexOptionsService
+    private pokedexSelectionService: PokedexSelectionService
   ) {
     super();
   }

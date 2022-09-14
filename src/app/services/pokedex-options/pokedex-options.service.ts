@@ -1,7 +1,7 @@
 import { isArray } from '@12luckydev/utils';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, skip } from 'rxjs';
-import { PokedexBaseService } from 'src/app/base';
+import { PokedexBaseService } from 'src/app/common';
 import { PokedexStorageService } from '../pokedex-storage/pokedex-storage.service';
 import {
   CountAlphaPolicy,

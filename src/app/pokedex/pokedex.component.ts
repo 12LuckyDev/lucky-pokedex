@@ -2,9 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { PokedexService } from '../services';
 
 @Component({
-  selector: 'app-pokedex',
+  selector: 'pokedex',
   templateUrl: './pokedex.component.html',
-  styleUrls: ['./pokedex.component.scss'],
 })
 export class PokedexComponent implements OnInit {
   private _ready = false;

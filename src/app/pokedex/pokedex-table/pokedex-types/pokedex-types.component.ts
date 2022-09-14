@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { PokeType } from 'src/app/enums';
 
 @Component({
-  selector: 'app-pokedex-types',
+  selector: 'pokedex-types',
   templateUrl: './pokedex-types.component.html',
   styleUrls: ['./pokedex-types.component.scss'],
 })

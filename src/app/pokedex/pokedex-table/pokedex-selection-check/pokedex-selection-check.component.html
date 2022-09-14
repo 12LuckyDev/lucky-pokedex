@@ -24,7 +24,7 @@
       </mat-icon>
     </div>
 
-    <poke-img [imgPath]="getImagePath(gender)"></poke-img>
+    <pokedex-img [imgPath]="getImagePath(gender)"></pokedex-img>
     <mat-checkbox
       *ngIf="showCheckbox"
       color="primary"
@@ -41,7 +41,7 @@
     fxLayoutAlign="center center"
     (click)="onCardClick($event)"
   >
-    <poke-img [imgPath]="getImagePath()"></poke-img>
+    <pokedex-img [imgPath]="getImagePath()"></pokedex-img>
     <mat-checkbox
       *ngIf="showCheckbox"
       color="primary"

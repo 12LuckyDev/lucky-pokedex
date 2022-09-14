@@ -4,15 +4,15 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 
-import { VariantsTableComponent } from './variants-table.component';
+import { PokedexVariantsTableComponent } from './pokedex-variants-table.component';
 
 describe('FormsTableComponent', () => {
-  let component: VariantsTableComponent;
-  let fixture: ComponentFixture<VariantsTableComponent>;
+  let component: PokedexVariantsTableComponent;
+  let fixture: ComponentFixture<PokedexVariantsTableComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [VariantsTableComponent],
+      declarations: [PokedexVariantsTableComponent],
       imports: [
         NoopAnimationsModule,
         MatPaginatorModule,
@@ -23,7 +23,7 @@ describe('FormsTableComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(VariantsTableComponent);
+    fixture = TestBed.createComponent(PokedexVariantsTableComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

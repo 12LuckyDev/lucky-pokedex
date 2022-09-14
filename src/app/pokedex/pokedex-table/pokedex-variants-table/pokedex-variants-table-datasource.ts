@@ -3,9 +3,9 @@ import { Observable } from 'rxjs';
 import { PokedexEntry, PokedexTableVariant } from 'src/app/models';
 import { PokedexOptionsService, PokedexService } from 'src/app/services';
 import { getPagedData } from 'src/app/utils';
-import { PokedexBaseDatasource } from 'src/app/base';
+import { PokedexBaseDatasource } from 'src/app/common';
 
-export class VariantsTableDataSource extends PokedexBaseDatasource<PokedexTableVariant> {
+export class PokedexVariantsTableDataSource extends PokedexBaseDatasource<PokedexTableVariant> {
   private _data: PokedexTableVariant[];
 
   constructor(

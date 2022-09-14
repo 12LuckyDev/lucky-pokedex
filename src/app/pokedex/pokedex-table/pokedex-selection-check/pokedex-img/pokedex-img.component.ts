@@ -4,11 +4,11 @@ const IMG_URL_BASE =
   'https://raw.githubusercontent.com/12pokelucky/poke-data/main/img_96/';
 
 @Component({
-  selector: 'poke-img',
-  templateUrl: './poke-img.component.html',
-  styleUrls: ['./poke-img.component.scss'],
+  selector: 'pokedex-img',
+  templateUrl: './pokedex-img.component.html',
+  styleUrls: ['./pokedex-img.component.scss'],
 })
-export class PokeImgComponent {
+export class PokedexImgComponent {
   constructor() {}
 
   @Input() imgPath: string | number = '';

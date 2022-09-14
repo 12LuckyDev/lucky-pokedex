@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
-import { FormComponent } from 'src/app/common/components/form.component';
+import { FormComponent } from 'src/app/common';
 import { PokedexOptions } from 'src/app/models';
 import {
   PokedexOptionsService,
@@ -9,9 +9,8 @@ import {
 import * as POLICIES from './pokedex-options-policies';
 
 @Component({
-  selector: 'app-pokedex-options',
+  selector: 'pokedex-options',
   templateUrl: './pokedex-options.component.html',
-  styleUrls: ['./pokedex-options.component.scss'],
 })
 export class PokedexOptionsComponent
   extends FormComponent<PokedexOptions>

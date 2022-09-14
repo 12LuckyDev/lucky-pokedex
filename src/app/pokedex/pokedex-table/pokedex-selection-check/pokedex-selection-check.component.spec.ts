@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PokeSelectionCheckComponent } from './poke-selection-check.component';
+import { PokeSelectionCheckComponent } from './pokedex-selection-check.component';
 
 describe('PokeSelectionCheckComponent', () => {
   let component: PokeSelectionCheckComponent;
@@ -8,9 +8,8 @@ describe('PokeSelectionCheckComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PokeSelectionCheckComponent ]
-    })
-    .compileComponents();
+      declarations: [PokeSelectionCheckComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

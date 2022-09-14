@@ -8,7 +8,7 @@ import {
   PokedexSearchService,
   PokedexService,
 } from '../../services';
-import { PokedexBaseDatasource } from 'src/app/base';
+import { PokedexBaseDatasource } from 'src/app/common';
 
 export class PokedexTableDataSource extends PokedexBaseDatasource<PokedexTableEntry> {
   constructor(

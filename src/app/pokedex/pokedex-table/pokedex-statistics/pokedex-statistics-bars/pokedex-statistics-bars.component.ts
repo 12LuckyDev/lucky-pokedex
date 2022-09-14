@@ -4,11 +4,11 @@ import { StatisticsObservables } from 'src/app/models';
 import { PokedexOptionsService } from 'src/app/services';
 
 @Component({
-  selector: 'app-poke-statistics-bars',
-  templateUrl: './poke-statistics-bars.component.html',
-  styleUrls: ['./poke-statistics-bars.component.scss'],
+  selector: 'pokedex-statistics-bars',
+  templateUrl: './pokedex-statistics-bars.component.html',
+  styleUrls: ['./pokedex-statistics-bars.component.scss'],
 })
-export class PokeStatisticsBarsComponent implements OnInit, OnDestroy {
+export class PokedexStatisticsBarsComponent implements OnInit, OnDestroy {
   private _allPokemon: number = 0;
   private _allForms: number = 0;
   private _selectedPokemon: number = 0;

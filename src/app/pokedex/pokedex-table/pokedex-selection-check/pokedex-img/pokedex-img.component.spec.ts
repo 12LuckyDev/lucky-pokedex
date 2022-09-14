@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PokeImgComponent } from './poke-img.component';
+import { PokeImgComponent } from './pokedex-img.component';
 
 describe('PokeImgComponent', () => {
   let component: PokeImgComponent;
@@ -8,9 +8,8 @@ describe('PokeImgComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PokeImgComponent ]
-    })
-    .compileComponents();
+      declarations: [PokeImgComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

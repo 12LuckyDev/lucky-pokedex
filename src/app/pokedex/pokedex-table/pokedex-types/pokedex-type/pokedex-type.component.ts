@@ -3,7 +3,7 @@ import { PokeType } from 'src/app/enums';
 import { formatType } from 'src/app/utils';
 
 @Component({
-  selector: 'app-pokedex-type',
+  selector: 'pokedex-type',
   templateUrl: './pokedex-type.component.html',
   styleUrls: ['./pokedex-type.component.scss'],
 })

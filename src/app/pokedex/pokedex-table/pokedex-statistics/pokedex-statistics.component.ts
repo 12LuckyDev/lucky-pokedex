@@ -2,14 +2,14 @@ import { Component } from '@angular/core';
 import { StatisticsObservables } from 'src/app/models';
 import { PokedexStatisticsService } from 'src/app/services';
 import { MatDialog } from '@angular/material/dialog';
-import { PokeDetailedStatisticsComponent } from './poke-detailed-statistics/poke-detailed-statistics.component';
+import { PokedexDetailedStatisticsComponent } from './pokedex-detailed-statistics/pokedex-detailed-statistics.component';
 
 @Component({
-  selector: 'app-poke-statistics',
-  templateUrl: './poke-statistics.component.html',
-  styleUrls: ['./poke-statistics.component.scss'],
+  selector: 'pokedex-statistics',
+  templateUrl: './pokedex-statistics.component.html',
+  styleUrls: ['./pokedex-statistics.component.scss'],
 })
-export class PokeStatisticsComponent {
+export class PokedexStatisticsComponent {
   private _allSelectionObservables: StatisticsObservables;
 
   constructor(
@@ -25,7 +25,7 @@ export class PokeStatisticsComponent {
   }
 
   public openDetailed() {
-    this.dialog.open(PokeDetailedStatisticsComponent, {
+    this.dialog.open(PokedexDetailedStatisticsComponent, {
       width: '90vw',
     });
   }

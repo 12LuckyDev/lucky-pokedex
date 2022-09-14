@@ -1,20 +1,19 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PokeStatisticsBarsComponent } from './poke-statistics-bars.component';
+import { PokedexStatisticsBarsComponent } from './pokedex-statistics-bars.component';
 
 describe('PokeStatisticsBarsComponent', () => {
-  let component: PokeStatisticsBarsComponent;
-  let fixture: ComponentFixture<PokeStatisticsBarsComponent>;
+  let component: PokedexStatisticsBarsComponent;
+  let fixture: ComponentFixture<PokedexStatisticsBarsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PokeStatisticsBarsComponent ]
-    })
-    .compileComponents();
+      declarations: [PokedexStatisticsBarsComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PokeStatisticsBarsComponent);
+    fixture = TestBed.createComponent(PokedexStatisticsBarsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

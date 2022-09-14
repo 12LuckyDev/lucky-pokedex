@@ -20,19 +20,19 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
-import { PokeSelectionAllComponent } from './pokedex-table/poke-selection-all/poke-selection-all.component';
-import { PokeImgComponent } from './pokedex-table/poke-selection-check/poke-img/poke-img.component';
-import { PokeSelectionCheckComponent } from './pokedex-table/poke-selection-check/poke-selection-check.component';
-import { PokeDetailedStatisticsComponent } from './pokedex-table/poke-statistics/poke-detailed-statistics/poke-detailed-statistics.component';
-import { PokeStatisticsBarsComponent } from './pokedex-table/poke-statistics/poke-statistics-bars/poke-statistics-bars.component';
-import { PokeStatisticsComponent } from './pokedex-table/poke-statistics/poke-statistics.component';
+import { PokedexComponent } from './pokedex.component';
+import { PokedexSelectionAllComponent } from './pokedex-table/pokedex-selection-all/pokedex-selection-all.component';
+import { PokedexImgComponent } from './pokedex-table/pokedex-selection-check/pokedex-img/pokedex-img.component';
+import { PokedexSelectionCheckComponent } from './pokedex-table/pokedex-selection-check/pokedex-selection-check.component';
+import { PokedexDetailedStatisticsComponent } from './pokedex-table/pokedex-statistics/pokedex-detailed-statistics/pokedex-detailed-statistics.component';
+import { PokedexStatisticsBarsComponent } from './pokedex-table/pokedex-statistics/pokedex-statistics-bars/pokedex-statistics-bars.component';
+import { PokedexStatisticsComponent } from './pokedex-table/pokedex-statistics/pokedex-statistics.component';
 import { PokedexOptionsComponent } from './pokedex-table/pokedex-options/pokedex-options.component';
 import { PokedexSearchComponent } from './pokedex-table/pokedex-search/pokedex-search.component';
 import { PokedexTableComponent } from './pokedex-table/pokedex-table.component';
 import { PokedexTypeComponent } from './pokedex-table/pokedex-types/pokedex-type/pokedex-type.component';
 import { PokedexTypesComponent } from './pokedex-table/pokedex-types/pokedex-types.component';
-import { VariantsTableComponent } from './pokedex-table/variants-table/variants-table.component';
-import { PokedexComponent } from './pokedex.component';
+import { PokedexVariantsTableComponent } from './pokedex-table/pokedex-variants-table/pokedex-variants-table.component';
 
 const ANGULAR_MODULES = [CommonModule, ReactiveFormsModule];
 
@@ -58,17 +58,17 @@ const MATERIAL_MODULES = [
 const POKEDEX_COMPONENTS = [
   PokedexComponent,
   PokedexTableComponent,
-  VariantsTableComponent,
+  PokedexVariantsTableComponent,
   PokedexOptionsComponent,
-  PokeImgComponent,
-  PokeSelectionCheckComponent,
+  PokedexImgComponent,
+  PokedexSelectionCheckComponent,
   PokedexSearchComponent,
-  PokeSelectionAllComponent,
+  PokedexSelectionAllComponent,
   PokedexTypesComponent,
   PokedexTypeComponent,
-  PokeStatisticsComponent,
-  PokeStatisticsBarsComponent,
-  PokeDetailedStatisticsComponent,
+  PokedexStatisticsComponent,
+  PokedexStatisticsBarsComponent,
+  PokedexDetailedStatisticsComponent,
 ];
 
 @NgModule({

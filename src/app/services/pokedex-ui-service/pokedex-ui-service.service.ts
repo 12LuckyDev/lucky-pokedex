@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, skip, Subject } from 'rxjs';
-import { PokedexBaseService } from 'src/app/base';
+import { PokedexBaseService } from 'src/app/common';
 import { PokedexUiSettings } from 'src/app/models';
 import { PokedexStorageService } from '../pokedex-storage/pokedex-storage.service';
 

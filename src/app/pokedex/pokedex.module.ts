@@ -23,7 +23,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 
 import { PokedexComponent } from './pokedex.component';
 import { PokedexSelectionAllComponent } from './pokedex-table/pokedex-selection-all/pokedex-selection-all.component';
-import { PokedexImgComponent } from './pokedex-table/pokedex-selection-check/pokedex-img/pokedex-img.component';
+import { PokedexImgComponent } from './pokedex-table/pokedex-img/pokedex-img.component';
 import { PokedexSelectionCheckComponent } from './pokedex-table/pokedex-selection-check/pokedex-selection-check.component';
 import { PokedexDetailedStatisticsComponent } from './pokedex-table/pokedex-statistics/pokedex-detailed-statistics/pokedex-detailed-statistics.component';
 import { PokedexStatisticsBarsComponent } from './pokedex-table/pokedex-statistics/pokedex-statistics-bars/pokedex-statistics-bars.component';
@@ -31,9 +31,11 @@ import { PokedexStatisticsComponent } from './pokedex-table/pokedex-statistics/p
 import { PokedexOptionsComponent } from './pokedex-table/pokedex-options/pokedex-options.component';
 import { PokedexSearchComponent } from './pokedex-table/pokedex-search/pokedex-search.component';
 import { PokedexTableComponent } from './pokedex-table/pokedex-table.component';
-import { PokedexTypeComponent } from './pokedex-table/pokedex-types/pokedex-type/pokedex-type.component';
-import { PokedexTypesComponent } from './pokedex-table/pokedex-types/pokedex-types.component';
+import { PokedexTypeComponent } from './pokedex-table/pokedex-details-cell/pokedex-types/pokedex-type/pokedex-type.component';
+import { PokedexTypesComponent } from './pokedex-table/pokedex-details-cell/pokedex-types/pokedex-types.component';
 import { PokedexVariantsTableComponent } from './pokedex-table/pokedex-variants-table/pokedex-variants-table.component';
+import { PokedexDetailsComponent } from './pokedex-table/pokedex-details-cell/pokedex-details/pokedex-details.component';
+import { PokedexDetailsCellComponent } from './pokedex-table/pokedex-details-cell/pokedex-details-cell.component';
 
 const ANGULAR_MODULES = [CommonModule, ReactiveFormsModule];
 
@@ -71,6 +73,8 @@ const POKEDEX_COMPONENTS = [
   PokedexStatisticsComponent,
   PokedexStatisticsBarsComponent,
   PokedexDetailedStatisticsComponent,
+  PokedexDetailsComponent,
+  PokedexDetailsCellComponent,
 ];
 
 @NgModule({

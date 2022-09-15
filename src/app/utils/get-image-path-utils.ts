@@ -3,21 +3,21 @@ import { PokedexEntry, PokedexTableVariant } from '../models';
 
 export const getImagePath = (
   entry?: PokedexEntry,
-  opt: { gender?: PokeGender; form?: PokedexTableVariant } = {}
+  opt: { gender?: PokeGender; variant?: PokedexTableVariant } = {}
 ): string => {
   if (!entry) {
     return '';
   }
 
-  const { gender, form } = opt;
+  const { gender, variant } = opt;
   const { number, formsData, gigantamax } = entry;
 
   let path = number.toString();
 
   let addFemaleTag = true;
 
-  if (form) {
-    const { formType, id } = form;
+  if (variant) {
+    const { formType, id } = variant;
     switch (formType) {
       case PokeVariantType.form:
       case PokeVariantType.form_alpha:
@@ -40,7 +40,7 @@ export const getImagePath = (
   if (
     addFemaleTag &&
     gender === PokeGender.female &&
-    !!(form ? form?.genderDiffs : entry?.genderDiffs)
+    !!(variant ? variant?.genderDiffs : entry?.genderDiffs)
   ) {
     path += '_f';
   }

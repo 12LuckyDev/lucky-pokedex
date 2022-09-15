@@ -8,7 +8,7 @@ import { formatGender, getImagePath } from 'src/app/utils';
 @Component({
   selector: 'pokedex-selection-check',
   templateUrl: './pokedex-selection-check.component.html',
-  styleUrls: ['./pokedex-selection-check.component.scss'],
+  styleUrls: ['../../../styles/poke-card.scss'],
 })
 export class PokedexSelectionCheckComponent extends PokedexBaseComponent {
   @Input() form!: PokedexTableVariant;
@@ -30,7 +30,7 @@ export class PokedexSelectionCheckComponent extends PokedexBaseComponent {
   }
 
   public getImagePath(gender?: PokeGender): string {
-    return getImagePath(this.entry, { gender, form: this.form });
+    return getImagePath(this.entry, { gender, variant: this.form });
   }
 
   public get showCheckbox(): boolean {
@@ -38,7 +38,7 @@ export class PokedexSelectionCheckComponent extends PokedexBaseComponent {
   }
 
   public getGenderName(gender: PokeGender): string {
-    return gender !== null || gender !== undefined ? formatGender(gender) : '';
+    return formatGender(gender);
   }
 
   public showIcon(gender: PokeGender) {

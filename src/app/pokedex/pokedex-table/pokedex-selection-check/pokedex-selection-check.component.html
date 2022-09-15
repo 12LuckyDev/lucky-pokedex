@@ -4,8 +4,8 @@
   ></ng-container>
 </div>
 
-<ng-template #genderBlock
-  ><mat-card
+<ng-template #genderBlock>
+  <mat-card
     class="poke-card"
     *ngFor="let gender of genders"
     fxLayout="column"
@@ -31,8 +31,9 @@
       (click)="$event.stopPropagation()"
       (change)="$event ? changeSelection(gender) : null"
       [checked]="isSelected(gender)"
-    ></mat-checkbox> </mat-card
-></ng-template>
+    ></mat-checkbox>
+  </mat-card>
+</ng-template>
 
 <ng-template #noGenderBlock>
   <mat-card

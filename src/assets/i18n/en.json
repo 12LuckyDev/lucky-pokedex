@@ -49,5 +49,10 @@
     "POKEMON_SELECTION": "{{selected}} of {{all}} Pokemon",
     "FORMS_SELECTION": "{{selected}} of {{all}} Forms",
     "TOOLTIP_TEXT": "Show detailed statistics"
+  },
+  "DETAILS": {
+    "TITLE": "{{name}} details",
+    "TOOLTIP_TEXT": "Show pokemon details",
+    "TYPES": "Types:"
   }
 }

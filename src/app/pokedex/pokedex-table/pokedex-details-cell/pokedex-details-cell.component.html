@@ -1,0 +1,17 @@
+<div
+  class="details-row"
+  fxLayout="row"
+  fxLayoutAlign="center center"
+  fxLayoutAlign.gt-sm="space-between center"
+>
+  <pokedex-types fxHide fxShow.gt-sm [types]="types"></pokedex-types>
+  <button
+    mat-icon-button
+    mat-stroked-button
+    color="primary"
+    (click)="openDetails()"
+    matTooltip="{{ 'DETAILS.TOOLTIP_TEXT' | translate }}"
+  >
+    <mat-icon>more_horiz</mat-icon>
+  </button>
+</div>

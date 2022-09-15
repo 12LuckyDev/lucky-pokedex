@@ -70,8 +70,8 @@ export class PokedexOptionsService extends PokedexBaseService {
 
     const colums =
       countGendersPolicy !== CountGendersPolicy.NO_COUNT || showExpand
-        ? ['selectAll', 'select', 'number', 'name', 'types']
-        : ['select', 'number', 'name', 'types'];
+        ? ['selectAll', 'select', 'number', 'name', 'details']
+        : ['select', 'number', 'name', 'details'];
 
     if (showExpand) {
       colums.push('expand');

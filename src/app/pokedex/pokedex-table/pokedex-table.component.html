@@ -33,9 +33,7 @@
 
     <!-- Number Column -->
     <ng-container matColumnDef="number">
-      <mat-header-cell *matHeaderCellDef mat-sort-header
-        >Number</mat-header-cell
-      >
+      <mat-header-cell *matHeaderCellDef mat-sort-header>#</mat-header-cell>
       <mat-cell *matCellDef="let row">#{{ row.number }}</mat-cell>
     </ng-container>
 
@@ -45,11 +43,11 @@
       <mat-cell *matCellDef="let row">{{ row.name }}</mat-cell>
     </ng-container>
 
-    <!-- Types Column -->
-    <ng-container matColumnDef="types">
-      <mat-header-cell *matHeaderCellDef>Types</mat-header-cell>
+    <!-- Details Column -->
+    <ng-container matColumnDef="details">
+      <mat-header-cell *matHeaderCellDef>Details</mat-header-cell>
       <mat-cell *matCellDef="let row">
-        <pokedex-types [types]="row.types"></pokedex-types>
+        <pokedex-details-cell [entry]="row"></pokedex-details-cell>
       </mat-cell>
     </ng-container>
 

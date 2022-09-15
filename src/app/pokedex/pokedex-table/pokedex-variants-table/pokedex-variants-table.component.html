@@ -31,11 +31,14 @@
     <mat-cell *matCellDef="let row">{{ row.formName }}</mat-cell>
   </ng-container>
 
-  <!-- Types Column -->
-  <ng-container matColumnDef="types">
-    <mat-header-cell *matHeaderCellDef>Types</mat-header-cell>
+  <!-- Details Column -->
+  <ng-container matColumnDef="details">
+    <mat-header-cell *matHeaderCellDef>Details</mat-header-cell>
     <mat-cell *matCellDef="let row">
-      <pokedex-types [types]="row.types"></pokedex-types>
+      <pokedex-details-cell
+        [entry]="entry"
+        [variant]="row"
+      ></pokedex-details-cell>
     </mat-cell>
   </ng-container>
 

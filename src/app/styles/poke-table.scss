@@ -32,7 +32,7 @@
     }
   }
 
-  @media (max-width: 500px) {
+  @media (max-width: 720px) {
     .mat-column-select.select-gender {
       min-width: 128px;
       max-width: 128px;
@@ -40,13 +40,25 @@
   }
 
   .mat-column-number {
-    max-width: 4rem;
-    min-width: 4rem;
+    max-width: 2.5rem;
+    min-width: 2.5rem;
   }
 
   .mat-column-name {
     max-width: 7rem;
-    min-width: 7rem;
+    min-width: 6rem;
+  }
+
+  .mat-column-details {
+    min-width: 40px;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    justify-content: center;
+
+    pokedex-details-cell {
+      width: 100%;
+      display: flex;
+    }
   }
 
   .mat-column-expand {

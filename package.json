@@ -6,7 +6,10 @@
     "start": "ng serve",
     "build": "ng build --prod --aot",
     "deploy": "firebase deploy",
-    "deploy-version": "npm run build && npm run deploy ",
+    "git-version": "node git-version.js",
+    "deploy-version": "npm run build && npm run deploy",
+    "deploy-minor": "npm version minor && npm run deploy-version && npm run git-version",
+    "deploy-major": "npm version major && npm run deploy-version && npm run git-version",
     "test": "ng test"
   },
   "private": true,

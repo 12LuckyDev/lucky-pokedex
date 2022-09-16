@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod --aot",
+    "build": "ng build --aot",
     "deploy": "firebase deploy",
     "git-version": "node git-version.js",
     "deploy-version": "npm run build && npm run deploy",

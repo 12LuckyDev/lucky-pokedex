@@ -3,7 +3,7 @@
 </h2>
 <mat-dialog-content>
   <div fxLayout="column" fxLayoutGap="2.5%">
-    <div fxLayout="row" fxLayoutGap="6px">
+    <div fxLayout="row wrap" fxLayoutGap="6px">
       <mat-card
         class="poke-card"
         *ngFor="let gender of genders"
@@ -25,9 +25,23 @@
         <pokedex-img [imgPath]="getImagePath(gender)"></pokedex-img>
       </mat-card>
 
-      <div fxLayout="column">
-        <h3 translate>DETAILS.TYPES</h3>
+      <div fxLayout="column" fxLayoutAlign="start strech" fxFlex>
+        <mat-divider></mat-divider>
+
+        <h3 class="info-header" translate>DETAILS.REGION_ORIGIN</h3>
+        <p class="info-data">{{ originRegion }}</p>
+
+        <mat-divider></mat-divider>
+
+        <h3 class="info-header" translate>DETAILS.RARITY</h3>
+        <p class="info-data" translate>{{ rarity }}</p>
+
+        <mat-divider></mat-divider>
+
+        <h3 class="info-header" translate>DETAILS.TYPES</h3>
         <pokedex-types [types]="types"></pokedex-types>
+
+        <mat-divider></mat-divider>
       </div>
     </div>
   </div>

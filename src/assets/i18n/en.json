@@ -53,6 +53,14 @@
   "DETAILS": {
     "TITLE": "{{name}} details",
     "TOOLTIP_TEXT": "Show pokemon details",
-    "TYPES": "Types:"
+    "TYPES": "Types:",
+    "REGION_ORIGIN": "Origin region:",
+    "RARITY": "Rarity",
+    "RARITIES": {
+      "STANDARD": "Standard",
+      "LEGENDARY": "Legendary",
+      "MYTHICAL": "Mythical",
+      "ULTRA_BEAST": "Ultra beast"
+    }
   }
 }

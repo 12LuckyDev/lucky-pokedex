@@ -1,8 +1,13 @@
 import { Component, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { PokeGender, PokeType } from 'src/app/enums';
-import { PokedexTableEntry, PokedexTableVariant } from 'src/app/models';
-import { formatGender, getImagePath } from 'src/app/utils';
+import { PokedexEntry, PokedexTableVariant } from 'src/app/models';
+import {
+  formatGender,
+  formatRarity,
+  formatRegion,
+  getImagePath,
+} from 'src/app/utils';
 
 @Component({
   selector: 'pokedex-details',
@@ -13,13 +18,13 @@ import { formatGender, getImagePath } from 'src/app/utils';
   ],
 })
 export class PokedexDetailsComponent {
-  private entry!: PokedexTableEntry;
+  private entry!: PokedexEntry;
   private variant?: PokedexTableVariant;
 
   constructor(
     @Inject(MAT_DIALOG_DATA)
     data: {
-      entry: PokedexTableEntry;
+      entry: PokedexEntry;
       variant?: PokedexTableVariant;
     }
   ) {
@@ -37,6 +42,14 @@ export class PokedexDetailsComponent {
 
   get types(): PokeType[] {
     return this.variant ? this.variant.types : this.entry.types;
+  }
+
+  get originRegion(): string {
+    return formatRegion(this.entry.origin);
+  }
+
+  get rarity(): string {
+    return `DETAILS.RARITIES.${formatRarity(this.entry.rarity).toUpperCase()}`;
   }
 
   public getImagePath(gender?: PokeGender): string {

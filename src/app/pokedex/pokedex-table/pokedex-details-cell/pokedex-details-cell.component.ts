@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { PokeType } from 'src/app/enums';
-import { PokedexTableEntry, PokedexTableVariant } from 'src/app/models';
+import { PokedexEntry, PokedexTableVariant } from 'src/app/models';
 import { PokedexDetailsComponent } from './pokedex-details/pokedex-details.component';
 
 @Component({
@@ -10,7 +10,7 @@ import { PokedexDetailsComponent } from './pokedex-details/pokedex-details.compo
   styleUrls: ['./pokedex-details-cell.component.scss'],
 })
 export class PokedexDetailsCellComponent {
-  @Input() entry!: PokedexTableEntry;
+  @Input() entry!: PokedexEntry;
   @Input() variant?: PokedexTableVariant;
 
   constructor(private dialog: MatDialog) {}

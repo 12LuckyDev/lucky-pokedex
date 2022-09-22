@@ -20,7 +20,7 @@ export class PokedexVariantsTableDataSource extends PokedexBaseDatasource<Pokede
 
   connect(): Observable<PokedexTableVariant[]> {
     this._subscriptions.add(
-      this._pokedexOptionsService.getOptionsObservable().subscribe(() => {
+      this._pokedexOptionsService.optionsObservable.subscribe(() => {
         this._data = this._pokedexService.getTableVariantsList(this._entry);
         this.query();
       })

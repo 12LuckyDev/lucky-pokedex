@@ -34,7 +34,7 @@ export class PokedexTableDataSource extends PokedexBaseDatasource<PokedexTableEn
     this._subscriptions.add(this._paginator.page.subscribe(this.query));
     this._subscriptions.add(this._sort.sortChange.subscribe(this.query));
     this._subscriptions.add(
-      this._pokedexOptionsService.getOptionsObservable().subscribe(this.query)
+      this._pokedexOptionsService.optionsObservable.subscribe(this.query)
     );
     return this._dataSubject.asObservable();
   }

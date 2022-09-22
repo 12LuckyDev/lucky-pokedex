@@ -1,7 +1,8 @@
-import { Injectable } from '@angular/core';
-import { Observable, skip, Subject } from 'rxjs';
+import { Injectable, RendererFactory2 } from '@angular/core';
+import { BehaviorSubject, Observable, skip } from 'rxjs';
 import { PokedexBaseService } from 'src/app/common';
 import { PokedexUiSettings } from 'src/app/models';
+import { calcWindowSize } from 'src/app/utils';
 import { PokedexStorageService } from '../pokedex-storage/pokedex-storage.service';
 
 const DEFAULT_OPTIONS: PokedexUiSettings = {
@@ -12,11 +13,25 @@ const DEFAULT_OPTIONS: PokedexUiSettings = {
   providedIn: 'root',
 })
 export class PokedexUiServiceService extends PokedexBaseService {
-  private _uiSettingsSubject = new Subject<PokedexUiSettings>();
+  private _windowSizeSubject: BehaviorSubject<'big' | 'mobile'> =
+    new BehaviorSubject<'big' | 'mobile'>(calcWindowSize());
+
   private _uiSettings: PokedexUiSettings = DEFAULT_OPTIONS;
 
-  constructor(private pokedexStorageService: PokedexStorageService) {
+  constructor(
+    private pokedexStorageService: PokedexStorageService,
+    private rendererFactory2: RendererFactory2
+  ) {
     super();
+    this.rendererFactory2
+      .createRenderer(null, null)
+      .listen('window', 'resize', () => {
+        const windowsSize = calcWindowSize();
+        if (windowsSize !== this._windowSizeSubject.value) {
+          this._windowSizeSubject.next(calcWindowSize());
+        }
+      });
+
     this.pokedexStorageService.getUiSettings().subscribe({
       next: (settings) => {
         if (settings) {
@@ -39,21 +54,12 @@ export class PokedexUiServiceService extends PokedexBaseService {
     this.setUiSeetings({ ...this._uiSettings, optionsAreOpen: value });
   }
 
-  public getUiSettingsObservable(
-    shipInitialValue: boolean = true
-  ): Observable<PokedexUiSettings> {
-    return this._uiSettingsSubject
-      .asObservable()
-      .pipe(skip(shipInitialValue ? 1 : 0));
-  }
-
   private setUiSeetings(settings: PokedexUiSettings) {
     this._uiSettings = settings;
     this.pokedexStorageService.setUiSettings(settings).subscribe();
-    this.nextUiSettings(settings);
   }
 
-  private nextUiSettings(settings: PokedexUiSettings) {
-    this._uiSettingsSubject.next(settings);
+  public get windowSizeObservable(): Observable<'big' | 'mobile'> {
+    return this._windowSizeSubject.asObservable().pipe(skip(1));
   }
 }

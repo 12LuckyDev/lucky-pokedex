@@ -44,6 +44,10 @@ export class PokedexService extends PokedexBaseService {
         this.getTableEntriesForStatistics().subscribe(({ data, count }) =>
           this.pokedexStatisticsService.refreshStatistics(data, count)
         );
+        this.pokedexUiServiceService.windowSizeObservable.subscribe(() =>
+          this.pokedexOptionsService.changeTableColumns()
+        );
+
         this.initialize();
         this.setAsReady();
       },
@@ -62,7 +66,7 @@ export class PokedexService extends PokedexBaseService {
         );
       });
 
-    this.pokedexOptionsService.getOptionsObservable().subscribe(() => {
+    this.pokedexOptionsService.optionsObservable.subscribe(async () => {
       this.getTableEntriesForStatistics().subscribe(({ data, count }) => {
         data.forEach((el) => {
           if (el.selection.length > 0) {

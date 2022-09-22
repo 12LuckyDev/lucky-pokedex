@@ -1,8 +1,9 @@
-import { isArray } from '@12luckydev/utils';
+import { isArray, remove } from '@12luckydev/utils';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, skip } from 'rxjs';
 import { PokedexBaseService } from 'src/app/common';
 import { PokedexStorageService } from '../pokedex-storage/pokedex-storage.service';
+import { calcWindowSize } from 'src/app/utils';
 import {
   CountAlphaPolicy,
   CountFormsPolicy,
@@ -27,12 +28,15 @@ export class PokedexOptionsService extends PokedexBaseService {
     new PokedexOptionsModel()
   );
 
+  private _tablesColumnsSubject = new BehaviorSubject<string[]>([]);
+
   constructor(private pokedexStorageService: PokedexStorageService) {
     super();
     this.pokedexStorageService.getOptions().subscribe({
       next: (options) => {
         if (options) {
           this.nextOptions(options);
+          this._tablesColumnsSubject.next(this.getTablesColumnsByOptions());
         }
       },
       complete: this.setAsReady,
@@ -53,7 +57,15 @@ export class PokedexOptionsService extends PokedexBaseService {
     );
   }
 
+  public get tablesColumnsObservable(): Observable<string[]> {
+    return this._tablesColumnsSubject.asObservable().pipe(skip(1));
+  }
+
   public get tablesColumns(): string[] {
+    return this._tablesColumnsSubject.value;
+  }
+
+  private getTablesColumnsByOptions(): string[] {
     const {
       countGendersPolicy,
       countFormsPolicy,
@@ -77,24 +89,37 @@ export class PokedexOptionsService extends PokedexBaseService {
       colums.push('expand');
     }
 
+    if (calcWindowSize() === 'mobile') {
+      return remove(colums, 'name');
+    }
+
     return colums;
   }
 
-  public getOptionsObservable(
-    shipInitialValue: boolean = true
-  ): Observable<PokedexOptions> {
-    return this._optionsSubject
-      .asObservable()
-      .pipe(skip(shipInitialValue ? 1 : 0));
+  public changeTableColumns() {
+    const newColumns = this.getTablesColumnsByOptions();
+
+    // TODO move compare to @12lucky/utils
+    if (
+      newColumns.length !== this._tablesColumnsSubject.value.length ||
+      !newColumns.every((v, i) => v === this._tablesColumnsSubject.value[i])
+    ) {
+      this._tablesColumnsSubject.next(newColumns);
+    }
+  }
+
+  public get optionsObservable(): Observable<PokedexOptions> {
+    return this._optionsSubject.asObservable().pipe(skip(1));
   }
 
   public setOptions(options: PokedexOptions) {
     this.pokedexStorageService.setOptions(options).subscribe();
-    this._optionsSubject.next(options);
+    this.nextOptions(options);
   }
 
   private nextOptions(options: PokedexOptions) {
     this._optionsSubject.next(options);
+    this.changeTableColumns();
   }
 
   public get isGenderSelectable(): boolean {

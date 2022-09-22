@@ -2,6 +2,7 @@ import {
   AfterViewInit,
   ChangeDetectorRef,
   Component,
+  OnInit,
   ViewChild,
 } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
@@ -18,12 +19,13 @@ import { PokedexVariantsTableDataSource } from './pokedex-variants-table-datasou
 })
 export class PokedexVariantsTableComponent
   extends PokedexBaseComponent
-  implements AfterViewInit
+  implements OnInit, AfterViewInit
 {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatTable) table!: MatTable<PokedexTableVariant>;
 
   dataSource!: PokedexVariantsTableDataSource;
+  displayedColumns: string[];
 
   constructor(
     private cdref: ChangeDetectorRef,
@@ -31,10 +33,7 @@ export class PokedexVariantsTableComponent
     private pokedexService: PokedexService
   ) {
     super();
-  }
-
-  public get displayedColumns(): string[] {
-    return this.pokedexOptionsService.tablesColumns;
+    this.displayedColumns = this.pokedexOptionsService.tablesColumns;
   }
 
   get forms() {
@@ -43,6 +42,12 @@ export class PokedexVariantsTableComponent
 
   public get isGenderSelectable(): boolean {
     return this.pokedexOptionsService.isGenderSelectable;
+  }
+
+  ngOnInit(): void {
+    this.pokedexOptionsService.tablesColumnsObservable.subscribe(
+      (columns) => (this.displayedColumns = columns)
+    );
   }
 
   ngAfterViewInit(): void {

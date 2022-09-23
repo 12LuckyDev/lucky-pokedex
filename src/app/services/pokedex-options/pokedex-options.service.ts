@@ -1,4 +1,4 @@
-import { isArray, remove } from '@12luckydev/utils';
+import { isArray, remove, compare } from '@12luckydev/utils';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, skip } from 'rxjs';
 import { PokedexBaseService } from 'src/app/common';
@@ -99,11 +99,7 @@ export class PokedexOptionsService extends PokedexBaseService {
   public changeTableColumns() {
     const newColumns = this.getTablesColumnsByOptions();
 
-    // TODO move compare to @12lucky/utils
-    if (
-      newColumns.length !== this._tablesColumnsSubject.value.length ||
-      !newColumns.every((v, i) => v === this._tablesColumnsSubject.value[i])
-    ) {
+    if (!compare(newColumns, this._tablesColumnsSubject.value)) {
       this._tablesColumnsSubject.next(newColumns);
     }
   }

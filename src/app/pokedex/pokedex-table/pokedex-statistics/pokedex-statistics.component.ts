@@ -1,21 +1,25 @@
 import { Component } from '@angular/core';
 import { StatisticsObservables } from 'src/app/models';
-import { PokedexStatisticsService } from 'src/app/services';
-import { MatDialog } from '@angular/material/dialog';
+import {
+  PokedexDialogService,
+  PokedexStatisticsService,
+} from 'src/app/services';
 import { PokedexDetailedStatisticsComponent } from './pokedex-detailed-statistics/pokedex-detailed-statistics.component';
+import { DestroyedAwareComponent } from 'src/app/common';
 
 @Component({
   selector: 'pokedex-statistics',
   templateUrl: './pokedex-statistics.component.html',
   styleUrls: ['./pokedex-statistics.component.scss'],
 })
-export class PokedexStatisticsComponent {
+export class PokedexStatisticsComponent extends DestroyedAwareComponent {
   private _allSelectionObservables: StatisticsObservables;
 
   constructor(
     private pokedexStatisticsService: PokedexStatisticsService,
-    private dialog: MatDialog
+    private pokedexDialogService: PokedexDialogService
   ) {
+    super();
     this._allSelectionObservables =
       this.pokedexStatisticsService.allSelectionObservables;
   }
@@ -25,8 +29,10 @@ export class PokedexStatisticsComponent {
   }
 
   public openDetailed() {
-    this.dialog.open(PokedexDetailedStatisticsComponent, {
-      width: '90vw',
-    });
+    this.pokedexDialogService.open(
+      PokedexDetailedStatisticsComponent,
+      null,
+      this.destroyed
+    );
   }
 }

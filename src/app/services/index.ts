@@ -6,3 +6,4 @@ export * from './pokedex-storage/pokedex-storage.service';
 export * from './pokedex-ui-service/pokedex-ui-service.service';
 export * from './pokedex-statistics/pokedex-statistics.service';
 export * from './pokedex/pokedex.service';
+export * from './pokedex-dialog/pokedex-dialog.service';

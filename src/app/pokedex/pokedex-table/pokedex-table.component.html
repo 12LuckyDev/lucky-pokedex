@@ -27,7 +27,10 @@
         *matCellDef="let row"
         [class.select-gender]="isGenderSelectable"
       >
-        <pokedex-selection-check [entry]="row"></pokedex-selection-check>
+        <pokedex-selection-check
+          [entry]="row"
+          [variant]="row.variants[0]"
+        ></pokedex-selection-check>
       </mat-cell>
     </ng-container>
 
@@ -47,7 +50,10 @@
     <ng-container matColumnDef="details">
       <mat-header-cell *matHeaderCellDef>Details</mat-header-cell>
       <mat-cell *matCellDef="let row">
-        <pokedex-details-cell [entry]="row"></pokedex-details-cell>
+        <pokedex-details-cell
+          [entry]="row"
+          [variant]="row.variants[0]"
+        ></pokedex-details-cell>
       </mat-cell>
     </ng-container>
 
@@ -56,7 +62,7 @@
       <mat-header-cell *matHeaderCellDef></mat-header-cell>
       <mat-cell *matCellDef="let row">
         <div fxLayout="row" fxLayoutAlign="center center">
-          <mat-icon *ngIf="row.hasVariants">{{
+          <mat-icon *ngIf="row.variants.length > 1">{{
             row == expanded ? "expand_less" : "expand_more"
           }}</mat-icon>
         </div>
@@ -68,7 +74,7 @@
       <mat-cell class="details-cells" *matCellDef="let row">
         <div class="pokemon-element-detail">
           <pokedex-variants-table
-            *ngIf="row.hasVariants"
+            *ngIf="row.variants.length > 1"
             [entry]="row"
           ></pokedex-variants-table>
         </div>
@@ -79,8 +85,8 @@
     <mat-row
       *matRowDef="let row; columns: displayedColumns"
       class="pokemon-element-row"
-      [class.expandable]="row.hasVariants"
-      (click)="row.hasVariants ? expand(row) : null"
+      [class.expandable]="row.variants.length > 1"
+      (click)="row.variants.length > 1 ? expand(row) : null"
     ></mat-row>
     <mat-row
       *matRowDef="

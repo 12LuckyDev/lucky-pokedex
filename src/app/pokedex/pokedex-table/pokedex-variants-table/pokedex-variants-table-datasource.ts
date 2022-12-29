@@ -1,7 +1,7 @@
 import { MatPaginator } from '@angular/material/paginator';
 import { Observable } from 'rxjs';
-import { PokedexEntry, PokedexTableVariant } from 'src/app/models';
-import { PokedexOptionsService, PokedexService } from 'src/app/services';
+import { PokedexTableEntry, PokedexTableVariant } from 'src/app/models';
+import { PokedexOptionsService } from 'src/app/services';
 import { getPagedData } from 'src/app/utils';
 import { PokedexBaseDatasource } from 'src/app/common';
 
@@ -9,20 +9,27 @@ export class PokedexVariantsTableDataSource extends PokedexBaseDatasource<Pokede
   private _data: PokedexTableVariant[];
 
   constructor(
-    private _pokedexService: PokedexService,
     private _pokedexOptionsService: PokedexOptionsService,
     private _paginator: MatPaginator,
-    private _entry: PokedexEntry
+    private _entry: PokedexTableEntry
   ) {
     super();
-    this._data = this._pokedexService.getTableVariantsList(this._entry);
+    this._data = this.getDataByRef();
+  }
+
+  private getDataByRef() {
+    return this._entry.showForms
+      ? this._entry.variants
+      : this._entry.variants.filter(({ id, variety }) => {
+          const baseFormId = this._entry.formsData?.baseFormId ?? 1;
+          return id !== baseFormId || typeof variety === 'number';
+        });
   }
 
   connect(): Observable<PokedexTableVariant[]> {
     this._subscriptions.add(
       this._pokedexOptionsService.optionsObservable.subscribe(() => {
-        this._data = this._pokedexService.getTableVariantsList(this._entry);
-        this.query();
+        this._data = this.getDataByRef();
       })
     );
 

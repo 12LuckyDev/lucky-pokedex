@@ -19,13 +19,13 @@ import {
 })
 export class PokedexDetailsComponent {
   private entry!: PokedexEntry;
-  private variant?: PokedexTableVariant;
+  private variant!: PokedexTableVariant;
 
   constructor(
     @Inject(MAT_DIALOG_DATA)
     data: {
       entry: PokedexEntry;
-      variant?: PokedexTableVariant;
+      variant: PokedexTableVariant;
     }
   ) {
     this.entry = data.entry;
@@ -41,7 +41,8 @@ export class PokedexDetailsComponent {
   }
 
   get types(): PokeType[] {
-    return this.variant ? this.variant.types : this.entry.types;
+    // TODO
+    return this.variant ? this.variant.types : this.entry.forms[0].types;
   }
 
   get originRegion(): string {
@@ -53,7 +54,7 @@ export class PokedexDetailsComponent {
   }
 
   public getImagePath(gender?: PokeGender): string {
-    return getImagePath(this.entry, { gender, variant: this.variant });
+    return getImagePath(this.entry, this.variant, gender);
   }
 
   public getGenderName(gender: PokeGender): string {

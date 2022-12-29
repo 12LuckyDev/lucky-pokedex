@@ -1,7 +1,7 @@
 import { PokedexEntry } from './pokedex-entry.model';
+import { PokedexTableVariant } from './pokedex-table-variant.model';
 
 export interface PokedexTableEntry extends PokedexEntry {
-  showGender: boolean;
+  variants: PokedexTableVariant[];
   showForms: boolean;
-  hasVariants: boolean;
 }

@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { PokedexBaseComponent } from 'src/app/common';
-import { PokeVariantType, PokeGender } from 'src/app/enums';
+import { PokeGender } from 'src/app/enums';
 import { PokedexTableVariant } from 'src/app/models';
 import { PokedexSelectionService } from 'src/app/services';
 import { formatGender, getImagePath } from 'src/app/utils';
@@ -11,30 +11,27 @@ import { formatGender, getImagePath } from 'src/app/utils';
   styleUrls: ['../../../styles/poke-card.scss'],
 })
 export class PokedexSelectionCheckComponent extends PokedexBaseComponent {
-  @Input() form!: PokedexTableVariant;
+  @Input() variant!: PokedexTableVariant;
+  @Input() subList: boolean = false;
 
   constructor(private pokedexSelectionService: PokedexSelectionService) {
     super();
   }
 
   public get showGender(): boolean {
-    return this.form ? this.form.showGender : this.entry.showGender;
+    return this.variant.showGender;
   }
 
   public get genders(): PokeGender[] {
-    return this.entry ? this.entry.genders : [];
-  }
-
-  public get selectionType(): PokeVariantType | null {
-    return this.form ? this.form.formType : null;
+    return this.entry.genders;
   }
 
   public getImagePath(gender?: PokeGender): string {
-    return getImagePath(this.entry, { gender, variant: this.form });
+    return getImagePath(this.entry, this.variant, gender);
   }
 
   public get showCheckbox(): boolean {
-    return this.selectionType === null ? !this.entry.showForms : true;
+    return !this.subList ? !this.entry.showForms : true;
   }
 
   public getGenderName(gender: PokeGender): string {
@@ -48,13 +45,17 @@ export class PokedexSelectionCheckComponent extends PokedexBaseComponent {
   public isSelected(gender?: PokeGender): boolean {
     return this.pokedexSelectionService.isSelected(
       this.number,
-      this.form,
+      this.variant,
       gender
     );
   }
 
   public changeSelection(gender?: PokeGender): void {
-    this.pokedexSelectionService.changeSelection(this.entry, this.form, gender);
+    this.pokedexSelectionService.changeSelection(
+      this.entry,
+      this.variant,
+      gender
+    );
   }
 
   public onCardClick(event: MouseEvent, gender?: PokeGender) {

@@ -5,7 +5,7 @@ import { Observable, takeUntil } from 'rxjs';
 import { DestroyedAwareComponent } from './destroyed-aware.component';
 
 @Directive()
-export class FormComponent<
+export abstract class FormComponent<
   T extends Record<keyof T, unknown> = Record<string, unknown>
 > extends DestroyedAwareComponent {
   private _form: FormGroup;

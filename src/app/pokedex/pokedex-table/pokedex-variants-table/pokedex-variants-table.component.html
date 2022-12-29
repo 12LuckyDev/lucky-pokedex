@@ -14,7 +14,8 @@
     <mat-cell *matCellDef="let row" [class.select-gender]="isGenderSelectable">
       <pokedex-selection-check
         [entry]="entry"
-        [form]="row"
+        [variant]="row"
+        [subList]="true"
       ></pokedex-selection-check>
     </mat-cell>
   </ng-container>

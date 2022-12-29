@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { takeUntil, filter } from 'rxjs';
 import { PokedexBaseComponent } from 'src/app/common';
-import { PokedexSelectionService, PokedexService } from 'src/app/services';
+import { PokedexSelectionService } from 'src/app/services';
 
 @Component({
   selector: 'pokedex-selection-all',
@@ -14,16 +14,13 @@ export class PokedexSelectionAllComponent
   private _isAllSelected: boolean = false;
   private _isSomeSelected: boolean = false;
 
-  constructor(
-    private pokedexService: PokedexService,
-    private pokedexSelectionService: PokedexSelectionService
-  ) {
+  constructor(private pokedexSelectionService: PokedexSelectionService) {
     super();
   }
 
   ngOnInit(): void {
     this.refreshSelectedFields();
-    this.pokedexSelectionService.selectionChangeObservable
+    this.pokedexSelectionService.selectionChange$
       .pipe(
         takeUntil(this.destroyed),
         filter(({ entry }) => entry.number === this.number)
@@ -32,10 +29,12 @@ export class PokedexSelectionAllComponent
   }
 
   private refreshSelectedFields = () => {
-    this._isAllSelected = this.pokedexService.isAllSelected(this.entry);
+    this._isAllSelected = this.pokedexSelectionService.isAllSelected(
+      this.entry
+    );
     this._isSomeSelected = this._isAllSelected
       ? false
-      : this.pokedexService.isSomeSelected(this.entry);
+      : this.pokedexSelectionService.isSomeSelected(this.entry);
   };
 
   public get isAllSelected(): boolean {
@@ -47,12 +46,15 @@ export class PokedexSelectionAllComponent
   }
 
   public get showCheckbox(): boolean {
-    return this.entry.showGender || this.entry.hasVariants;
+    return (
+      this.entry.variants.map(({ showGender }) => showGender).includes(true) ||
+      this.entry.variants.length > 1
+    );
   }
 
   public changeAllSelection() {
     this._isAllSelected
-      ? this.pokedexService.deselectAll(this.entry)
-      : this.pokedexService.selectAll(this.entry);
+      ? this.pokedexSelectionService.deselectAll(this.entry)
+      : this.pokedexSelectionService.selectAll(this.entry);
   }
 }

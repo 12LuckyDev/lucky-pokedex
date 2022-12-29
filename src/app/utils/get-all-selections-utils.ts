@@ -1,47 +1,28 @@
-import { PokeVariantType, PokeGender } from 'src/app/enums';
+import { PokeGender } from 'src/app/enums';
+import { buildSelection } from './build-selection-utils';
 import {
   PokedexTableEntry,
-  PokedexShowTypes,
   SpecyficSelection,
+  PokedexTableVariant,
 } from 'src/app/models';
-import { getTableVariantsList } from './get-table-variants-list-utils';
-
-const buildSelection = (
-  formType: PokeVariantType | null,
-  opt: { gender?: PokeGender; formId?: number } = {}
-): SpecyficSelection => {
-  return { formType, ...opt };
-};
 
 const buildGendersSelections = (
-  formType: PokeVariantType | null,
-  genders: PokeGender[],
-  formId?: number
+  variant: PokedexTableVariant,
+  genders: PokeGender[]
 ): SpecyficSelection[] =>
-  genders.map((gender) => buildSelection(formType, { gender, formId }));
+  genders.map((gender) => buildSelection(variant, gender));
 
 export const getAllSelections = (
-  entry: PokedexTableEntry,
-  showTypes: PokedexShowTypes
+  entry: PokedexTableEntry
 ): SpecyficSelection[] => {
   const allSelection: SpecyficSelection[] = [];
-  const allForms = getTableVariantsList(entry, showTypes);
-  const { showForms } = showTypes;
-  const { genders } = entry;
+  const { genders, variants } = entry;
 
-  if (!showForms) {
-    if (entry.showGender) {
-      allSelection.push(...buildGendersSelections(null, genders));
+  variants.forEach((variant) => {
+    if (variant.showGender) {
+      allSelection.push(...buildGendersSelections(variant, genders));
     } else {
-      allSelection.push(buildSelection(null));
-    }
-  }
-
-  allForms.forEach(({ showGender, id, formType }) => {
-    if (showGender) {
-      allSelection.push(...buildGendersSelections(formType, genders, id));
-    } else {
-      allSelection.push(buildSelection(formType, { formId: id }));
+      allSelection.push(buildSelection(variant));
     }
   });
 

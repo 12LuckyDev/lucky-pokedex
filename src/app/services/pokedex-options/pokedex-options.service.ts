@@ -1,4 +1,4 @@
-import { isArray, remove, compare } from '@12luckydev/utils';
+import { remove, compare } from '@12luckydev/utils';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, skip } from 'rxjs';
 import { PokedexBaseService } from 'src/app/common';
@@ -10,15 +10,18 @@ import {
   CountGendersPolicy,
   CountGigantamaxPolicy,
   CountRegionalFormsPolicy,
-  PokeRegion,
+  PokeFormType,
+  PokeVariety,
+  RefersToType,
 } from 'src/app/enums';
 import {
   PokedexEntry,
+  PokedexFormEntry,
   PokedexGenderDiffs,
   PokedexOptions,
   PokedexOptionsModel,
-  PokedexShowTypes,
 } from 'src/app/models';
+import { FormsData } from 'src/app/models/pokedex-forms-data.model';
 
 @Injectable({
   providedIn: 'root',
@@ -135,182 +138,141 @@ export class PokedexOptionsService extends PokedexBaseService {
     }
   }
 
-  public getShowGender(entry?: PokedexEntry): boolean {
-    return this.getShowGendersByGenderDiffs(entry?.genderDiffs);
-  }
+  public filterVarieties(
+    varieties: PokeVariety[],
+    formsData?: FormsData
+  ): { variety: PokeVariety; refersTo: RefersToType }[] {
+    const { countAlphaPolicy, countGigantamaxPolicy } = this.options;
 
-  public getShowForms(entry?: PokedexEntry): boolean {
-    if (entry) {
-      if (entry.formsData) {
-        const { forms, interchandable, onlyVisual } = entry.formsData;
-        const hasForms = isArray(forms, false);
-        switch (this.options.countFormsPolicy) {
-          case CountFormsPolicy.COUNT_ALL:
-            return hasForms;
-          case CountFormsPolicy.NO_COUNT_INTERCHANDABLE:
-            return hasForms && !interchandable;
-          case CountFormsPolicy.NO_COUNT_VISUAL_ONLY:
-            return hasForms && !onlyVisual;
-          case CountFormsPolicy.NO_COUNT_VISUAL_ONLY_AND_INTERCHANDABLE:
-            return hasForms && !onlyVisual && !interchandable;
-          case CountFormsPolicy.NO_COUNT:
-            return false;
-        }
-      }
-    }
-    return false;
-  }
-
-  private getShowFormGenders(entry?: PokedexEntry): number[] {
-    const formsWithGenders: number[] = [];
-    if (
-      this.options.applyGenderPolicyToForms &&
-      !!isArray(entry?.formsData?.forms, false)
-    ) {
-      entry?.formsData?.forms.forEach(({ id }) => {
-        if (this.getShowGendersByGenderDiffs()) {
-          formsWithGenders.push(id);
-        }
-      });
-    }
-    return formsWithGenders;
-  }
-
-  private getShowRegionalForms(entry?: PokedexEntry): boolean {
-    if (entry) {
-      switch (this.options.countRegionalFormsPolicy) {
-        case CountRegionalFormsPolicy.COUNT:
-          return isArray(entry.regionalForms, false);
-        case CountRegionalFormsPolicy.NO_COUNT:
-          return false;
-      }
-    }
-    return false;
-  }
-
-  private getShowRegionalFormsGenders(entry?: PokedexEntry): PokeRegion[] {
-    const formsWithGenders: PokeRegion[] = [];
-    if (
-      this.options.applyGenderPolicyToRegionalForms &&
-      !!entry?.regionalForms
-    ) {
-      entry.regionalForms.forEach(({ genderDiffs, region }) => {
-        if (this.getShowGendersByGenderDiffs(genderDiffs)) {
-          formsWithGenders.push(region);
-        }
-      });
-    }
-    return formsWithGenders;
-  }
-
-  private getShowGigantamax(entry?: PokedexEntry): boolean {
-    if (entry) {
-      switch (this.options.countGigantamaxPolicy) {
-        case CountGigantamaxPolicy.COUNT_ALL:
-        case CountGigantamaxPolicy.COUNT_FOR_FORMS_WITH_DIFFS:
-        case CountGigantamaxPolicy.NO_COUNT_FOR_FORMS:
-          return !!entry.gigantamax?.factor;
-        case CountGigantamaxPolicy.NO_COUNT:
-          return false;
-      }
-    }
-    return false;
-  }
-
-  private getShowGigantamaxGenders(entry?: PokedexEntry): boolean {
-    return this.options.applyGenderPolicyToGigantamax
-      ? this.getShowGender(entry)
-      : false;
-  }
-
-  private getShowGigantamaxPerForm(entry?: PokedexEntry): boolean {
-    if (entry) {
-      const { formsData, gigantamax } = entry;
-      if (formsData) {
-        const hasForms = isArray(formsData.forms, false);
-        switch (this.options.countGigantamaxPolicy) {
-          case CountGigantamaxPolicy.COUNT_ALL:
-            return hasForms && !!gigantamax?.factor;
-          case CountGigantamaxPolicy.COUNT_FOR_FORMS_WITH_DIFFS:
-            return hasForms && !!gigantamax?.factor && !!gigantamax?.formDiffs;
-          case CountGigantamaxPolicy.NO_COUNT_FOR_FORMS:
-          case CountGigantamaxPolicy.NO_COUNT:
-            return false;
-        }
-      }
-    }
-    return false;
-  }
-
-  private getShowAlpha(entry?: PokedexEntry): boolean {
-    if (entry) {
-      switch (this.options.countAlphaPolicy) {
-        case CountAlphaPolicy.COUNT:
-          return !!entry.alpha;
-        case CountAlphaPolicy.NO_COUNT:
-          return false;
-      }
-    }
-    return false;
-  }
-
-  private getShowAlphaGenders(entry?: PokedexEntry): boolean {
-    return this.options.applyGenderPolicyToAlpha
-      ? this.getShowGender(entry)
-      : false;
-  }
-
-  private getShowAlphaForms(entry?: PokedexEntry): number[] {
-    const forms: number[] = [];
-    if (entry && this.options.countAlphaPolicy === CountAlphaPolicy.COUNT) {
-      const { formsData } = entry;
-      if (isArray(formsData?.forms, false)) {
-        formsData?.forms.forEach(({ alpha, id }) => {
-          if (alpha) {
-            forms.push(id);
+    return varieties.map((variety) => {
+      switch (variety) {
+        case PokeVariety.alpha:
+          return {
+            variety,
+            refersTo:
+              countAlphaPolicy === CountAlphaPolicy.COUNT
+                ? RefersToType.TO_ALL
+                : RefersToType.TO_NONE,
+          };
+        case PokeVariety.gigantamax: {
+          let refersTo = null;
+          switch (countGigantamaxPolicy) {
+            case CountGigantamaxPolicy.COUNT_ALL:
+              refersTo = RefersToType.TO_ALL;
+              break;
+            case CountGigantamaxPolicy.COUNT_FOR_FORMS_WITH_DIFFS:
+              refersTo = formsData?.gigantamaxFormDiffs
+                ? RefersToType.TO_ALL
+                : RefersToType.TO_BASE;
+              break;
+            case CountGigantamaxPolicy.NO_COUNT_FOR_FORMS:
+              refersTo = RefersToType.TO_BASE;
+              break;
+            case CountGigantamaxPolicy.NO_COUNT:
+              refersTo = RefersToType.TO_NONE;
+              break;
           }
-        });
+          return {
+            variety,
+            refersTo,
+          };
+        }
+        case PokeVariety.terastal:
+          return {
+            variety,
+            refersTo: RefersToType.TO_NONE,
+          };
+      }
+    });
+  }
+
+  private getFormsAreOk(formsData?: FormsData): boolean {
+    const { countFormsPolicy } = this.options;
+
+    if (formsData) {
+      const { interchandable, onlyVisual } = formsData;
+      switch (countFormsPolicy) {
+        case CountFormsPolicy.NO_COUNT_INTERCHANDABLE:
+          return !interchandable;
+        case CountFormsPolicy.NO_COUNT_VISUAL_ONLY:
+          return !onlyVisual;
+        case CountFormsPolicy.NO_COUNT_VISUAL_ONLY_AND_INTERCHANDABLE:
+          return !onlyVisual && !interchandable;
       }
     }
-    return forms;
+
+    return countFormsPolicy === CountFormsPolicy.COUNT_ALL;
   }
 
-  private getShowAlphaRegionalForms(entry?: PokedexEntry): PokeRegion[] {
-    const forms: number[] = [];
-    if (entry && this.options.countAlphaPolicy === CountAlphaPolicy.COUNT) {
-      if (isArray(entry.regionalForms, false)) {
-        entry.regionalForms?.forEach(({ alpha, region }) => {
-          if (alpha) {
-            forms.push(region);
-          }
-        });
-      }
-    }
-    return forms;
-  }
-
-  public getShowTypes(entry?: PokedexEntry): PokedexShowTypes {
-    return {
-      showForms: this.getShowForms(entry),
-      showFormGenders: this.getShowFormGenders(entry),
-      showRegionalForms: this.getShowRegionalForms(entry),
-      showRegionalFormsGenders: this.getShowRegionalFormsGenders(entry),
-      showGigantamax: this.getShowGigantamax(entry),
-      showGigantamaxGenders: this.getShowGigantamaxGenders(entry),
-      showGigantamaxPerForm: this.getShowGigantamaxPerForm(entry),
-      showAlpha: this.getShowAlpha(entry),
-      showAlphaGenders: this.getShowAlphaGenders(entry),
-      showAlphaForms: this.getShowAlphaForms(entry),
-      showAlphaRegionalForms: this.getShowAlphaRegionalForms(entry),
-    };
-  }
-
-  public getHasVariants(entry?: PokedexEntry): boolean {
+  public getShowForms(entry: PokedexEntry): boolean {
+    const { forms, formsData } = entry;
     return (
-      this.getShowForms(entry) ||
-      this.getShowRegionalForms(entry) ||
-      this.getShowGigantamax(entry) ||
-      this.getShowAlpha(entry)
+      forms.filter(({ formType }) => formType === PokeFormType.form).length >
+        0 && this.getFormsAreOk(formsData)
     );
+  }
+
+  public filterForms(
+    forms: PokedexFormEntry[],
+    formsData?: FormsData
+  ): PokedexFormEntry[] {
+    const { countRegionalFormsPolicy } = this.options;
+
+    return forms.filter(({ formType }) => {
+      switch (formType) {
+        case PokeFormType.base:
+          return true;
+        case PokeFormType.form:
+          return this.getFormsAreOk(formsData);
+        case PokeFormType.regional_form:
+          return countRegionalFormsPolicy === CountRegionalFormsPolicy.COUNT;
+      }
+    });
+  }
+
+  public getVariantShowGenders(
+    form: PokedexFormEntry,
+    variety?: PokeVariety
+  ): boolean {
+    const {
+      applyGenderPolicyToForms,
+      applyGenderPolicyToRegionalForms,
+      applyGenderPolicyToAlpha,
+      applyGenderPolicyToGigantamax,
+    } = this.options;
+
+    let showVarietyGender = true;
+    switch (variety) {
+      case PokeVariety.alpha:
+        showVarietyGender = applyGenderPolicyToAlpha;
+        break;
+      case PokeVariety.gigantamax:
+        showVarietyGender = applyGenderPolicyToGigantamax;
+        break;
+      case PokeVariety.terastal:
+        showVarietyGender = false;
+        break;
+    }
+
+    const { formType, genderDiffs } = form;
+
+    switch (formType) {
+      case PokeFormType.base:
+        return (
+          showVarietyGender && this.getShowGendersByGenderDiffs(genderDiffs)
+        );
+      case PokeFormType.form:
+        return (
+          showVarietyGender &&
+          applyGenderPolicyToForms &&
+          this.getShowGendersByGenderDiffs(genderDiffs)
+        );
+      case PokeFormType.regional_form:
+        return (
+          showVarietyGender &&
+          applyGenderPolicyToRegionalForms &&
+          this.getShowGendersByGenderDiffs(genderDiffs)
+        );
+    }
   }
 }

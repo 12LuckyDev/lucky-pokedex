@@ -9,3 +9,6 @@ export * from './poke-variant-type.enum';
 export * from './poke-regional-form.enum';
 export * from './count-gigantamax-policy.enum';
 export * from './count-alpha-policy.enum';
+export * from './poke-form-type';
+export * from './poke-varieties.enum';
+export * from './refers-to-type.enum';

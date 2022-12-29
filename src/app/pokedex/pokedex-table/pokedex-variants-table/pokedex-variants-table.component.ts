@@ -29,15 +29,14 @@ export class PokedexVariantsTableComponent
 
   constructor(
     private cdref: ChangeDetectorRef,
-    private pokedexOptionsService: PokedexOptionsService,
-    private pokedexService: PokedexService
+    private pokedexOptionsService: PokedexOptionsService
   ) {
     super();
     this.displayedColumns = this.pokedexOptionsService.tablesColumns;
   }
 
   get forms() {
-    return this.entry.formsData?.forms ?? [];
+    return this.entry.forms ?? [];
   }
 
   public get isGenderSelectable(): boolean {
@@ -52,7 +51,6 @@ export class PokedexVariantsTableComponent
 
   ngAfterViewInit(): void {
     this.dataSource = new PokedexVariantsTableDataSource(
-      this.pokedexService,
       this.pokedexOptionsService,
       this.paginator,
       this.entry

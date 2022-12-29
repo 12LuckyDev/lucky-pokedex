@@ -1,7 +1,8 @@
-import { PokeVariantType, PokeGender } from 'src/app/enums';
+import { PokeGender, PokeFormType, PokeVariety } from 'src/app/enums';
 
 export interface SpecyficSelection {
-  formType: PokeVariantType | null;
+  formType: PokeFormType;
+  id: number;
   gender?: PokeGender;
-  formId?: number;
+  variety?: PokeVariety;
 }

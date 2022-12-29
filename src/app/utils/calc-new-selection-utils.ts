@@ -1,4 +1,5 @@
 import { EntryForStatistics, SpecyficSelection } from '../models';
+import { compareSelections } from './compare-selections-utils';
 
 export const calcNewSelection = ({
   allSelection,
@@ -7,21 +8,21 @@ export const calcNewSelection = ({
   const newSelection: SpecyficSelection[] = [];
 
   allSelection.forEach((selection) => {
-    const { formType, gender, formId } = selection;
+    const { gender, variety } = selection;
+
     if (
-      typeof selection.gender === 'number'
-        ? oldSelection.find(
-            (el) =>
-              el.formType === formType &&
-              el.formId === formId &&
-              el.gender === gender
-          )
-        : oldSelection.find(
-            (el) => el.formType === formType && el.formId === formId
-          )
+      oldSelection.find((el) =>
+        compareSelections(
+          el,
+          selection,
+          typeof gender !== 'number',
+          typeof variety !== 'number'
+        )
+      )
     ) {
       newSelection.push(selection);
     }
   });
+
   return newSelection;
 };

@@ -1,19 +1,13 @@
-import { PokeGender, PokeRarity, PokeRegion, PokeType } from '../enums';
+import { PokeGender, PokeRarity, PokeRegion } from '../enums';
+import { PokedexFormEntry } from './pokedex-form-entry.model';
 import { FormsData } from './pokedex-forms-data.model';
-import { PokedexGenderDiffs } from './pokedex-gender-diffs.model';
-import { PokedexGigantamax } from './pokedex-gigantamax.model';
-import { PokedexRegionalFormEntry } from './pokedex-regional-form-entry.model';
 
 export interface PokedexEntry {
   number: number;
   name: string;
-  types: PokeType[];
   origin: PokeRegion;
   genders: PokeGender[];
-  genderDiffs?: PokedexGenderDiffs;
-  regionalForms?: PokedexRegionalFormEntry[];
-  formsData?: FormsData;
-  gigantamax?: PokedexGigantamax;
   rarity: PokeRarity;
-  alpha?: boolean;
+  formsData?: FormsData;
+  forms: PokedexFormEntry[];
 }

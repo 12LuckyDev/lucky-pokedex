@@ -6,13 +6,13 @@ import {
   GetPokedexListParamsType,
   PokedexOptionsService,
   PokedexSearchService,
-  PokedexService,
+  PokedexDataService,
 } from '../../services';
 import { PokedexBaseDatasource } from 'src/app/common';
 
 export class PokedexTableDataSource extends PokedexBaseDatasource<PokedexTableEntry> {
   constructor(
-    private _pokedexService: PokedexService,
+    private _pokedexDataService: PokedexDataService,
     private _pokedexSearchService: PokedexSearchService,
     private _pokedexOptionsService: PokedexOptionsService,
     private _paginator: MatPaginator,
@@ -40,7 +40,7 @@ export class PokedexTableDataSource extends PokedexBaseDatasource<PokedexTableEn
   }
 
   query = (): void => {
-    this._pokedexService
+    this._pokedexDataService
       .getTableEntries(this.queryParam)
       .subscribe(({ data, count }) => {
         this._dataSubject.next(data);

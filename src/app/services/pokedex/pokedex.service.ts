@@ -5,22 +5,9 @@ import { PokedexOptionsService } from '../pokedex-options/pokedex-options.servic
 import { PokedexSelectionService } from '../pokedex-selection/pokedex-selection.service';
 import { PokedexStatisticsService } from '../pokedex-statistics/pokedex-statistics.service';
 import { PokedexUiServiceService } from '../pokedex-ui-service/pokedex-ui-service.service';
-import {
-  EntryForStatistics,
-  PokedexEntry,
-  PokedexTableEntry,
-  PokedexTableVariant,
-  SpecyficSelection,
-} from 'src/app/models';
-import {
-  calcNewSelection,
-  getAllSelections,
-  getTableVariantsList,
-} from 'src/app/utils';
-import {
-  GetPokedexListParamsType,
-  PokedexDataService,
-} from '../pokedex-data/pokedex-data.service';
+import { EntryForStatistics } from 'src/app/models';
+import { calcNewSelection, getAllSelections } from 'src/app/utils';
+import { PokedexDataService } from '../pokedex-data/pokedex-data.service';
 
 @Injectable({
   providedIn: 'root',
@@ -55,14 +42,14 @@ export class PokedexService extends PokedexBaseService {
   }
 
   private initialize(): void {
-    this.pokedexSelectionService.selectionChangeObservable
+    this.pokedexSelectionService.selectionChange$
       .pipe(filter(({ userInput }) => userInput))
       .subscribe(({ entry, newSelection, oldSelection }) => {
         this.pokedexStatisticsService.refreshPerEntry(
           entry,
           newSelection,
           oldSelection,
-          this.getAllSelections(entry)
+          getAllSelections(entry)
         );
       });
 
@@ -84,95 +71,25 @@ export class PokedexService extends PokedexBaseService {
     });
   }
 
-  private getPokedexTableEntry = (entry: PokedexEntry): PokedexTableEntry => {
-    return {
-      ...entry,
-      showGender: this.pokedexOptionsService.getShowGender(entry),
-      showForms: this.pokedexOptionsService.getShowForms(entry),
-      hasVariants: this.pokedexOptionsService.getHasVariants(entry),
-    };
-  };
-
-  public getTableEntries(
-    requestData: GetPokedexListParamsType = {}
-  ): Observable<{
-    data: PokedexTableEntry[];
-    count: number;
-  }> {
-    return this.pokedexDataService.getPokedexList(requestData).pipe(
-      map(({ data, count }) => {
-        return {
-          count,
-          data: data.map(this.getPokedexTableEntry),
-        };
-      })
-    );
-  }
-
-  private getTableEntriesForStatistics(
-    requestData: GetPokedexListParamsType = {}
-  ): Observable<{
+  private getTableEntriesForStatistics(): Observable<{
     data: EntryForStatistics[];
     count: number;
   }> {
-    return this.pokedexDataService.getPokedexList(requestData).pipe(
+    return this.pokedexDataService.getTableEntries().pipe(
       map(({ data, count }) => {
         return {
           count,
           data: data.map((entry) => {
-            const tableEntry = this.getPokedexTableEntry(entry);
             return {
-              entry: tableEntry,
+              entry,
               selection: this.pokedexSelectionService.getSelection(
                 entry.number
               ),
-              allSelection: this.getAllSelections(tableEntry),
+              allSelection: getAllSelections(entry),
             };
           }),
         };
       })
     );
-  }
-
-  public getTableVariantsList(entry: PokedexEntry): PokedexTableVariant[] {
-    return getTableVariantsList(
-      entry,
-      this.pokedexOptionsService.getShowTypes(entry)
-    );
-  }
-
-  private getAllSelections(entry: PokedexTableEntry): SpecyficSelection[] {
-    return getAllSelections(
-      entry,
-      this.pokedexOptionsService.getShowTypes(entry)
-    );
-  }
-
-  public isAllSelected(entry?: PokedexTableEntry): boolean {
-    return entry
-      ? this.pokedexSelectionService.getSelection(entry.number).length ===
-          this.getAllSelections(entry).length
-      : false;
-  }
-
-  public isSomeSelected(entry?: PokedexTableEntry): boolean {
-    return entry
-      ? this.pokedexSelectionService.getSelection(entry.number).length > 0
-      : false;
-  }
-
-  public selectAll(entry?: PokedexTableEntry): void {
-    if (entry) {
-      this.pokedexSelectionService.updateSelection(
-        entry,
-        this.getAllSelections(entry)
-      );
-    }
-  }
-
-  public deselectAll(entry?: PokedexTableEntry): void {
-    if (entry) {
-      this.pokedexSelectionService.updateSelection(entry, []);
-    }
   }
 }

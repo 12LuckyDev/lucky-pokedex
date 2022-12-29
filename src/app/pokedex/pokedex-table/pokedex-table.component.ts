@@ -12,9 +12,9 @@ import { PokedexTableEntry } from '../../models';
 import { PokedexTableDataSource } from './pokedex-table-datasource';
 import { POKEDEX_TABLE_ANIMATIONS } from './pokedex-table-animations';
 import {
+  PokedexDataService,
   PokedexOptionsService,
   PokedexSearchService,
-  PokedexService,
 } from '../../services';
 
 @Component({
@@ -33,7 +33,7 @@ export class PokedexTableComponent implements OnInit, AfterViewInit {
 
   constructor(
     private cdref: ChangeDetectorRef,
-    private pokedexService: PokedexService,
+    private pokedexDataService: PokedexDataService,
     private pokedexOptionsService: PokedexOptionsService,
     private pokedexSearchService: PokedexSearchService
   ) {
@@ -53,7 +53,7 @@ export class PokedexTableComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     this.dataSource = new PokedexTableDataSource(
-      this.pokedexService,
+      this.pokedexDataService,
       this.pokedexSearchService,
       this.pokedexOptionsService,
       this.paginator,
@@ -69,5 +69,5 @@ export class PokedexTableComponent implements OnInit, AfterViewInit {
   }
 
   public isExpansionDetailRow = (i: number, row: PokedexTableEntry) =>
-    row.hasVariants;
+    row.variants.length > 1;
 }

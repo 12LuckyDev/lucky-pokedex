@@ -13,3 +13,4 @@ export * from './pokedex-table-entry.model';
 export * from './statisticts/selection-statistics.model';
 export * from './statisticts/entry-for-statistics.model';
 export * from './statisticts/statistics-observables.model';
+export * from './app-logic/selection-change-info.model';

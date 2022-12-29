@@ -12,14 +12,14 @@ import { DestroyedAwareComponent } from 'src/app/common';
 })
 export class PokedexDetailsCellComponent extends DestroyedAwareComponent {
   @Input() entry!: PokedexEntry;
-  @Input() variant?: PokedexTableVariant;
+  @Input() variant!: PokedexTableVariant;
 
   constructor(private pokedexDialogService: PokedexDialogService) {
     super();
   }
 
   get types(): PokeType[] {
-    return this.entry.types;
+    return this.variant.types;
   }
 
   public openDetails() {

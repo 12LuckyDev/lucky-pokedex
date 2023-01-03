@@ -41,8 +41,7 @@ export class PokedexDetailsComponent {
   }
 
   get types(): PokeType[] {
-    // TODO
-    return this.variant ? this.variant.types : this.entry.forms[0].types;
+    return this.variant.types;
   }
 
   get originRegion(): string {

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { map, Observable, of, tap } from 'rxjs';
+import { map, Observable, of } from 'rxjs';
 import { PokeFormType, PokeVariety, RefersToType } from 'src/app/enums';
 import { formatRegionalName, formatVariety, getPagedData } from 'src/app/utils';
 import {
@@ -37,6 +37,7 @@ export class PokedexDataService {
     data: PokedexEntry[];
     count: number;
   }> {
+    // TODO store sorted data
     const sortedData = getSortedPokedexList(
       getSearchData(POKEDEX_LIST, search),
       sortBy,
@@ -50,14 +51,6 @@ export class PokedexDataService {
     });
   }
 
-  private getPokedexTableEntry = (entry: PokedexEntry): PokedexTableEntry => {
-    return {
-      ...entry,
-      variants: this.getTableVariantsList(entry),
-      showForms: this.pokedexOptionsService.getShowForms(entry),
-    };
-  };
-
   public getTableEntries(
     requestData: GetPokedexListParamsType = {}
   ): Observable<{
@@ -68,10 +61,15 @@ export class PokedexDataService {
       map(({ data, count }) => {
         return {
           count,
-          data: data.map(this.getPokedexTableEntry),
+          data: data.map((entry: PokedexEntry): PokedexTableEntry => {
+            return {
+              ...entry,
+              variants: this.getTableVariantsList(entry),
+              showForms: this.pokedexOptionsService.getShowForms(entry),
+            };
+          }),
         };
-      }),
-      tap(({ data }) => console.log(data))
+      })
     );
   }
 

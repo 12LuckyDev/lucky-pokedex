@@ -1,4 +1,10 @@
-import { PokeType, PokeVariety, PokeFormType, PokeRegion } from '../enums';
+import {
+  PokeType,
+  PokeVariety,
+  PokeFormType,
+  PokeRegion,
+  PokeGame,
+} from '../enums';
 import { PokedexGenderDiffs } from './pokedex-gender-diffs.model';
 
 export interface PokedexFormEntry {
@@ -9,4 +15,5 @@ export interface PokedexFormEntry {
   types: PokeType[];
   genderDiffs?: PokedexGenderDiffs;
   varieties?: PokeVariety[];
+  movableTo: PokeGame[];
 }

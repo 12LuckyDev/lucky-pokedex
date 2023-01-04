@@ -4,7 +4,7 @@ import {
   PokeFormType,
   PokeRegion,
   PokeGame,
-} from '../enums';
+} from '../../enums';
 import { PokedexGenderDiffs } from './pokedex-gender-diffs.model';
 
 export interface PokedexFormEntry {

@@ -1,5 +1,5 @@
-import { PokedexTableEntry } from '../pokedex-table-entry.model';
-import { SpecyficSelection } from '../selection/specyfic-selection.model';
+import { PokedexTableEntry } from '../pokedex-table/pokedex-table-entry.model';
+import { SpecyficSelection } from './specyfic-selection.model';
 
 export interface SelectionChangeInfo {
   entry: PokedexTableEntry;

@@ -20,8 +20,8 @@ import {
   PokedexGenderDiffs,
   PokedexOptions,
   PokedexOptionsModel,
+  FormsData,
 } from 'src/app/models';
-import { FormsData } from 'src/app/models/pokedex-forms-data.model';
 
 @Injectable({
   providedIn: 'root',

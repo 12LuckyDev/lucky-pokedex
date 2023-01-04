@@ -1,4 +1,4 @@
-import { PokeGender, PokeRarity, PokeRegion } from '../enums';
+import { PokeGender, PokeRarity, PokeRegion } from '../../enums';
 import { PokedexFormEntry } from './pokedex-form-entry.model';
 import { FormsData } from './pokedex-forms-data.model';
 

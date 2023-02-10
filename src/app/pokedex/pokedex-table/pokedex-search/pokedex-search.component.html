@@ -16,6 +16,16 @@
             <mat-icon>close</mat-icon>
           </button>
         </mat-form-field>
+
+        <button
+          mat-icon-button
+          mat-stroked-button
+          color="primary"
+          (click)="openFilters()"
+          matTooltip="{{ 'FILTERS.TOOLTIP_TEXT' | translate }}"
+        >
+          <mat-icon>more_horiz</mat-icon>
+        </button>
       </div>
     </mat-card-content>
   </mat-card>

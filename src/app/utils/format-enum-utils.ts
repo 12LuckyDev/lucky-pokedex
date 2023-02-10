@@ -1,4 +1,5 @@
 import {
+  PokeGame,
   PokeGender,
   PokeRarity,
   PokeRegion,
@@ -24,3 +25,6 @@ export const formatRarity = (rarity: PokeRarity) => PokeRarity[rarity];
 
 export const formatVariety = (variety: PokeVariety) =>
   upperCaseFirst(PokeVariety[variety]);
+
+export const formatGame = (game: PokeGame) =>
+  upperCaseFirst(PokeGame[game].replaceAll('_', ' '));

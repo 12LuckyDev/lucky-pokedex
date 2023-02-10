@@ -1,3 +1,4 @@
+export * from './app-logic/form-changes.model';
 export * from './app-logic/pokedex-options.model';
 export * from './app-logic/pokedex-search.model';
 export * from './app-logic/selection-change-info.model';
@@ -12,6 +13,7 @@ export * from './pokedex-data/pokedex-entry.model';
 export * from './pokedex-data/pokedex-form-entry.model';
 export * from './pokedex-data/pokedex-gender-diffs.model';
 export * from './pokedex-data/pokedex-forms-data.model';
+export * from './pokedex-data/pokedex-obtainable-in.model';
 
 export * from './pokedex-table/pokedex-table-variant.model';
 export * from './pokedex-table/pokedex-table-entry.model';

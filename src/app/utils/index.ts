@@ -6,3 +6,4 @@ export * from './calc-new-selection-utils';
 export * from './calc-window-size-utils';
 export * from './compare-selections-utils';
 export * from './build-selection-utils';
+export * from './get-enum-list-utils';

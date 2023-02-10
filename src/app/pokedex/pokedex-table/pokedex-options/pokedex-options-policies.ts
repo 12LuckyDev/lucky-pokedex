@@ -5,16 +5,14 @@ import {
   CountGigantamaxPolicy,
   CountRegionalFormsPolicy,
 } from 'src/app/enums';
+import { getEnumList } from 'src/app/utils';
 
-const getPolicyList = <T extends { [key: string]: string }>(policyEnum: T) =>
-  Object.keys(policyEnum).map((el) => policyEnum[el]);
-
-export const COUNT_FORMS_POLICY_OPTIONS = getPolicyList(CountFormsPolicy);
-export const COUNT_REGIONAL_FORMS_POLICY_OPTIONS = getPolicyList(
+export const COUNT_FORMS_POLICY_OPTIONS = getEnumList(CountFormsPolicy);
+export const COUNT_REGIONAL_FORMS_POLICY_OPTIONS = getEnumList(
   CountRegionalFormsPolicy
 );
-export const COUNT_GENDERS_POLICY_OPTIONS = getPolicyList(CountGendersPolicy);
-export const COUNT_GIGANTAMAX_POLICY_OPTIONS = getPolicyList(
+export const COUNT_GENDERS_POLICY_OPTIONS = getEnumList(CountGendersPolicy);
+export const COUNT_GIGANTAMAX_POLICY_OPTIONS = getEnumList(
   CountGigantamaxPolicy
 );
-export const COUNT_ALPHA_POLICY_OPTIONS = getPolicyList(CountAlphaPolicy);
+export const COUNT_ALPHA_POLICY_OPTIONS = getEnumList(CountAlphaPolicy);

@@ -1,16 +1,15 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { PokedexSearch } from 'src/app/models';
-
-const DEFAULT_MODEL: PokedexSearch = {
-  textSearch: '',
-};
+import { PokedexSearch, PokemonSearchModel } from 'src/app/models';
+import { PokedexFilters } from 'src/app/models/app-logic/pokedex-filters.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class PokedexSearchService {
-  private _searchSubject = new BehaviorSubject<PokedexSearch>(DEFAULT_MODEL);
+  private _searchSubject = new BehaviorSubject<PokedexSearch>(
+    new PokemonSearchModel()
+  );
 
   constructor() {}
 
@@ -22,7 +21,11 @@ export class PokedexSearchService {
     return this._searchSubject.value;
   }
 
-  public nextSearch(search: PokedexSearch) {
-    this._searchSubject.next(search);
+  public changeTextSearch(textSearch: string) {
+    this._searchSubject.next({ ...this.search, textSearch });
+  }
+
+  public changeFilters(filters: PokedexFilters) {
+    this._searchSubject.next({ ...this.search, filters });
   }
 }

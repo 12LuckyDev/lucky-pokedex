@@ -14,3 +14,4 @@ export * from './pokedex-data/poke-rarity-enum';
 export * from './pokedex-data/poke-form-type.enum';
 export * from './pokedex-data/poke-varieties.enum';
 export * from './pokedex-data/poke-game.enum';
+export * from './pokedex-data/poke-obtain-method.enum';

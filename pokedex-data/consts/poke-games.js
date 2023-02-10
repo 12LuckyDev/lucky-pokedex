@@ -9,5 +9,9 @@ export const POKE_GAMES = {
   scarlet: 8,
   violet: 9,
   go: 10,
-  home: 11,
+  isle_of_armor_sword: 11,
+  isle_of_armor_shield: 12,
+  crown_tundra_sword: 13,
+  crown_tundra_shield: 14,
+  home: 15,
 };

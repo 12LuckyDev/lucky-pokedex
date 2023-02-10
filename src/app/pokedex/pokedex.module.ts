@@ -36,6 +36,7 @@ import { PokedexTypesComponent } from './pokedex-table/pokedex-details-cell/poke
 import { PokedexVariantsTableComponent } from './pokedex-table/pokedex-variants-table/pokedex-variants-table.component';
 import { PokedexDetailsComponent } from './pokedex-table/pokedex-details-cell/pokedex-details/pokedex-details.component';
 import { PokedexDetailsCellComponent } from './pokedex-table/pokedex-details-cell/pokedex-details-cell.component';
+import { PokedexFiltersComponent } from './pokedex-table/pokedex-search/pokedex-filters/pokedex-filters.component';
 
 const ANGULAR_MODULES = [CommonModule, ReactiveFormsModule];
 
@@ -78,7 +79,7 @@ const POKEDEX_COMPONENTS = [
 ];
 
 @NgModule({
-  declarations: [POKEDEX_COMPONENTS],
+  declarations: [POKEDEX_COMPONENTS, PokedexFiltersComponent],
   exports: [PokedexComponent],
   imports: [ANGULAR_MODULES, MATERIAL_MODULES, CUSTOM_MODULES],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

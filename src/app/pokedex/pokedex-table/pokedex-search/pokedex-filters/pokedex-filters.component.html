@@ -1,0 +1,33 @@
+<h2 mat-dialog-title translate>FILTERS.TITLE</h2>
+<mat-dialog-content>
+  <form [formGroup]="form" novalidate autocomplete="off">
+    <div fxLayout="row" fxLayout.lt-md="column" xLayoutWrap fxLayoutGap="2.5%">
+      <mat-form-field appearance="fill" fxFlex="1 1">
+        <mat-label translate>FILTERS.ORIGIN_REGION</mat-label>
+        <mat-select color="primary" formControlName="origins" multiple>
+          <mat-option *ngFor="let region of regions" [value]="region.id">
+            {{ region.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" fxFlex="1 1">
+        <mat-label translate>FILTERS.ORIGIN_REGION</mat-label>
+        <mat-select color="primary" formControlName="obtainableIn" multiple>
+          <mat-option *ngFor="let game of games" [value]="game.id">
+            {{ game.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>
+    <span translate>COMMON.CLOSE</span>
+  </button>
+  <button mat-button color="primary" (click)="save()">
+    <span translate>COMMON.SAVE</span>
+  </button>
+</mat-dialog-actions>

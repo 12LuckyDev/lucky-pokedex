@@ -1,7 +1,8 @@
 import { forEachProp } from '@12luckydev/utils';
 import { Directive } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup } from '@angular/forms';
-import { Observable, takeUntil } from 'rxjs';
+import { map, merge, Observable, of, takeUntil } from 'rxjs';
+import { FormChanges } from 'src/app/models';
 import { DestroyedAwareComponent } from './destroyed-aware.component';
 
 @Directive()
@@ -32,9 +33,42 @@ export abstract class FormComponent<
     return this._form.get(alias);
   }
 
-  public getValue<T>(alias: string): T | null {
+  private getFormChangesObservable(
+    aliases: string[]
+  ): Observable<FormChanges>[] {
+    return aliases
+      .map((alias) => ({
+        alias,
+        observable: this.getControlChanges(alias),
+      }))
+      .map(({ alias, observable }) =>
+        observable?.pipe(map((value) => ({ value, alias })))
+      );
+  }
+
+  public getFilteredChanges(aliases: string[]): Observable<FormChanges> {
+    return merge(
+      ...this.getFormChangesObservable(
+        Object.keys(this._form.controls).filter(
+          (alias) => !aliases.includes(alias)
+        )
+      )
+    );
+  }
+
+  public getSelectedChanges(aliases: string[]): Observable<FormChanges> {
+    return merge(...this.getFormChangesObservable(aliases));
+  }
+
+  public getControlChanges<V>(alias: string): Observable<V> {
+    return (this.getControl(alias)?.valueChanges ?? of(null)).pipe(
+      takeUntil(this.destroyed)
+    );
+  }
+
+  public getValue<V>(alias: string): V | null {
     const control = this.getControl(alias);
-    return control ? (control.value as T) : null;
+    return control ? (control.value as V) : null;
   }
 
   public hasValue(alias: string): boolean {
@@ -49,12 +83,6 @@ export abstract class FormComponent<
 
   public clearValue(alias: string): void {
     this.setValue(alias, null);
-  }
-
-  public getChangeObservable<T>(alias: string): Observable<T> | null {
-    return this.getControl(alias)?.valueChanges.pipe(
-      takeUntil(this.destroyed)
-    ) as Observable<T> | null;
   }
 
   protected setForm(model: T) {

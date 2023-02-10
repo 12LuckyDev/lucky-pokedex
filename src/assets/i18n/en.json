@@ -1,7 +1,14 @@
 {
   "COMMON": {
     "APP_TITLE": "Lucky Pokedex",
-    "CLOSE": "Close"
+    "CLOSE": "Close",
+    "SAVE": "Save"
+  },
+  "FILTERS": {
+    "TITLE": "Detailed filters",
+    "TOOLTIP_TEXT": "Open detailed filters",
+    "ORIGIN_REGION": "Region of origin",
+    "OBTAINABLE_IN": "Obtainable in"
   },
   "OPTIONS": {
     "TITLE": "Pokedex settings",

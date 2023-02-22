@@ -10,7 +10,7 @@ const filterObtainableIn = (
       .map(({ forms, ...entry }) => ({
         ...entry,
         forms: forms.filter(({ obtainableIn }) =>
-          obtainableIn.some(({ game }) => gameFilter.includes(game))
+          (obtainableIn ?? []).some(({ game }) => gameFilter.includes(game))
         ),
       }))
       .filter(({ forms }) => forms.length);

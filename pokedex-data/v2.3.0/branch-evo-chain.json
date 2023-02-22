@@ -1,0 +1,365 @@
+[
+  "PICHU",
+  {
+    "number": 172,
+    "formId": 1,
+    "evos": [{ "number": 25, "formId": 1 }]
+  },
+  {
+    "number": 25,
+    "formId": 1,
+    "evos": [
+      { "number": 26, "formId": 1 },
+      { "number": 26, "formId": 6 }
+    ]
+  },
+  "ODDISH",
+  {
+    "number": 43,
+    "formId": 1,
+    "evos": [{ "number": 44, "formId": 1 }]
+  },
+  {
+    "number": 44,
+    "formId": 1,
+    "evos": [
+      { "number": 45, "formId": 1 },
+      { "number": 182, "formId": 1 }
+    ]
+  },
+  "POLIWAG",
+  {
+    "number": 60,
+    "formId": 1,
+    "evos": [{ "number": 61, "formId": 1 }]
+  },
+  {
+    "number": 61,
+    "formId": 1,
+    "evos": [
+      { "number": 62, "formId": 1 },
+      { "number": 186, "formId": 1 }
+    ]
+  },
+  "SLOWPOKE",
+  {
+    "number": 79,
+    "formId": 1,
+    "evos": [
+      { "number": 80, "formId": 1 },
+      { "number": 199, "formId": 1 }
+    ]
+  },
+  "SLOWPOKE GALAR",
+  {
+    "number": 79,
+    "formId": 7,
+    "evos": [
+      { "number": 80, "formId": 7 },
+      { "number": 199, "formId": 7 }
+    ]
+  },
+  "EXEGGCUTE",
+  {
+    "number": 102,
+    "formId": 1,
+    "evos": [
+      { "number": 103, "formId": 1 },
+      { "number": 103, "formId": 6 }
+    ]
+  },
+  "CUBONE",
+  {
+    "number": 104,
+    "formId": 1,
+    "evos": [
+      { "number": 105, "formId": 1 },
+      { "number": 105, "formId": 6 }
+    ]
+  },
+  "TYROGUE",
+  {
+    "number": 236,
+    "formId": 1,
+    "evos": [
+      { "number": 106, "formId": 1 },
+      { "number": 107, "formId": 1 },
+      { "number": 237, "formId": 1 }
+    ]
+  },
+  "KOFFING",
+  {
+    "number": 109,
+    "formId": 1,
+    "evos": [
+      { "number": 110, "formId": 1 },
+      { "number": 110, "formId": 7 }
+    ]
+  },
+  "MIME JR.",
+  {
+    "number": 439,
+    "formId": 1,
+    "evos": [
+      { "number": 122, "formId": 1 },
+      { "number": 122, "formId": 7 }
+    ]
+  },
+  "MR. MIME GALAR",
+  {
+    "number": 122,
+    "formId": 7,
+    "evos": [{ "number": 866, "formId": 1 }]
+  },
+  "SCYTHER",
+  {
+    "number": 123,
+    "formId": 1,
+    "evos": [
+      { "number": 212, "formId": 1 },
+      { "number": 900, "formId": 1 }
+    ]
+  },
+  "EEVEE",
+  {
+    "number": 133,
+    "formId": 1,
+    "evos": [
+      { "number": 134, "formId": 1 },
+      { "number": 135, "formId": 1 },
+      { "number": 136, "formId": 1 },
+      { "number": 196, "formId": 1 },
+      { "number": 197, "formId": 1 },
+      { "number": 470, "formId": 1 },
+      { "number": 471, "formId": 1 },
+      { "number": 700, "formId": 1 }
+    ]
+  },
+  "CYNDAQUIL",
+  {
+    "number": 155,
+    "formId": 1,
+    "evos": [{ "number": 156, "formId": 1 }]
+  },
+  {
+    "number": 156,
+    "formId": 1,
+    "evos": [
+      { "number": 157, "formId": 1 },
+      { "number": 157, "formId": 9 }
+    ]
+  },
+  "DUNSPARCE",
+  {
+    "number": 206,
+    "formId": 1,
+    "evos": [
+      { "number": 982, "formId": 1 },
+      { "number": 982, "formId": 2 }
+    ]
+  },
+  "WURMPLE",
+  {
+    "number": 265,
+    "formId": 1,
+    "evos": [
+      { "number": 266, "formId": 1 },
+      { "number": 268, "formId": 1 }
+    ]
+  },
+  {
+    "number": 266,
+    "formId": 1,
+    "evos": [{ "number": 267, "formId": 1 }]
+  },
+  {
+    "number": 268,
+    "formId": 1,
+    "evos": [{ "number": 269, "formId": 1 }]
+  },
+  "RALTS",
+  {
+    "number": 280,
+    "formId": 1,
+    "evos": [{ "number": 281, "formId": 1 }]
+  },
+  {
+    "number": 281,
+    "formId": 1,
+    "evos": [
+      { "number": 282, "formId": 1 },
+      { "number": 475, "formId": 1 }
+    ]
+  },
+  "NINCADA",
+  {
+    "number": 290,
+    "formId": 1,
+    "evos": [
+      { "number": 291, "formId": 1 },
+      { "number": 292, "formId": 1 }
+    ]
+  },
+  "SNORUNT",
+  {
+    "number": 361,
+    "formId": 1,
+    "evos": [
+      { "number": 362, "formId": 1 },
+      { "number": 478, "formId": 1 }
+    ]
+  },
+  "CLAMPERL",
+  {
+    "number": 366,
+    "formId": 1,
+    "evos": [
+      { "number": 367, "formId": 1 },
+      { "number": 368, "formId": 1 }
+    ]
+  },
+  "OSHAWOTT",
+  {
+    "number": 501,
+    "formId": 1,
+    "evos": [{ "number": 502, "formId": 1 }]
+  },
+  {
+    "number": 502,
+    "formId": 1,
+    "evos": [
+      { "number": 503, "formId": 1 },
+      { "number": 503, "formId": 9 }
+    ]
+  },
+  "PETILIT",
+  {
+    "number": 548,
+    "formId": 1,
+    "evos": [
+      { "number": 549, "formId": 1 },
+      { "number": 549, "formId": 9 }
+    ]
+  },
+  "RUFFLET",
+  {
+    "number": 627,
+    "formId": 1,
+    "evos": [
+      { "number": 628, "formId": 1 },
+      { "number": 628, "formId": 9 }
+    ]
+  },
+  "GOOMY",
+  {
+    "number": 704,
+    "formId": 1,
+    "evos": [
+      { "number": 705, "formId": 1 },
+      { "number": 705, "formId": 9 }
+    ]
+  },
+  "SLIGGOO KALOS",
+  {
+    "number": 705,
+    "formId": 1,
+    "evos": [{ "number": 706, "formId": 1 }]
+  },
+  "SLIGGOO HISHUI",
+  {
+    "number": 705,
+    "formId": 9,
+    "evos": [{ "number": 706, "formId": 9 }]
+  },
+  "BERGMITE",
+  {
+    "number": 712,
+    "formId": 1,
+    "evos": [
+      { "number": 713, "formId": 1 },
+      { "number": 713, "formId": 9 }
+    ]
+  },
+  "ROWLET",
+  {
+    "number": 722,
+    "formId": 1,
+    "evos": [{ "number": 723, "formId": 1 }]
+  },
+  {
+    "number": 723,
+    "formId": 1,
+    "evos": [
+      { "number": 724, "formId": 1 },
+      { "number": 724, "formId": 9 }
+    ]
+  },
+  "ROCKRUFF",
+  {
+    "number": 744,
+    "formId": 1,
+    "evos": [
+      { "number": 745, "formId": 1 },
+      { "number": 745, "formId": 2 }
+    ]
+  },
+  "COSMOG",
+  {
+    "number": 789,
+    "formId": 1,
+    "evos": [{ "number": 790, "formId": 1 }]
+  },
+  {
+    "number": 790,
+    "formId": 1,
+    "evos": [
+      { "number": 791, "formId": 1 },
+      { "number": 792, "formId": 1 }
+    ]
+  },
+  "APPLIN",
+  {
+    "number": 840,
+    "formId": 1,
+    "evos": [
+      { "number": 841, "formId": 1 },
+      { "number": 842, "formId": 1 }
+    ]
+  },
+  "TOXEL",
+  {
+    "number": 848,
+    "formId": 1,
+    "evos": [
+      { "number": 849, "formId": 1 },
+      { "number": 849, "formId": 2 }
+    ]
+  },
+  "KUBFU",
+  {
+    "number": 891,
+    "formId": 1,
+    "evos": [
+      { "number": 892, "formId": 1 },
+      { "number": 892, "formId": 2 }
+    ]
+  },
+  "TANDEMAUS",
+  {
+    "number": 924,
+    "formId": 1,
+    "evos": [
+      { "number": 925, "formId": 1 },
+      { "number": 925, "formId": 2 }
+    ]
+  },
+  "CHARCADET",
+  {
+    "number": 935,
+    "formId": 1,
+    "evos": [
+      { "number": 936, "formId": 1 },
+      { "number": 937, "formId": 1 }
+    ]
+  }
+]

@@ -9,5 +9,4 @@ export enum PokeObtainMethod {
   massive_mass_outbreak = 8,
   stace_time_distorsions = 9,
   teraraid = 10,
-  change_form_with_item = 11,
 }

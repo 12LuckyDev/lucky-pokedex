@@ -18,7 +18,8 @@
           { "game": 12, "methods": [3] },
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 2, "formId": 1 }]
       }
     ]
   },
@@ -37,7 +38,8 @@
         "obtainableIn": [
           { "game": 13, "methods": [7] },
           { "game": 14, "methods": [7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 3, "formId": 1 }]
       }
     ]
   },
@@ -86,7 +88,8 @@
           { "game": 4, "methods": [3, 7] },
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 5, "formId": 1 }]
       }
     ]
   },
@@ -107,7 +110,8 @@
           { "game": 13, "methods": [7] },
           { "game": 4, "methods": [7] },
           { "game": 14, "methods": [7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 6, "formId": 1 }]
       }
     ]
   },
@@ -154,7 +158,8 @@
           { "game": 12, "methods": [3] },
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 8, "formId": 1 }]
       }
     ]
   },
@@ -173,7 +178,8 @@
         "obtainableIn": [
           { "game": 13, "methods": [7] },
           { "game": 14, "methods": [7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 9, "formId": 1 }]
       }
     ]
   },
@@ -217,7 +223,8 @@
           { "game": 3, "methods": [1, 7] },
           { "game": 4, "methods": [1, 7] },
           { "game": 5, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 11, "formId": 1 }]
       }
     ]
   },
@@ -238,7 +245,8 @@
           { "game": 2, "methods": [1] },
           { "game": 3, "methods": [1, 7] },
           { "game": 4, "methods": [1, 7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 12, "formId": 1 }]
       }
     ]
   },
@@ -285,7 +293,8 @@
           { "game": 1, "methods": [1] },
           { "game": 2, "methods": [1] },
           { "game": 6, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 14, "formId": 1 }]
       }
     ]
   },
@@ -304,7 +313,8 @@
         "obtainableIn": [
           { "game": 1, "methods": [1] },
           { "game": 2, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 15, "formId": 1 }]
       }
     ]
   },
@@ -341,7 +351,8 @@
           { "game": 2, "methods": [1] },
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 17, "formId": 1 }]
       }
     ]
   },
@@ -360,7 +371,8 @@
         "obtainableIn": [
           { "game": 1, "methods": [1] },
           { "game": 2, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 18, "formId": 1 }]
       }
     ]
   },
@@ -404,7 +416,8 @@
           { "game": 2, "methods": [1] },
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 20, "formId": 1 }]
       },
       {
         "id": 2,
@@ -415,7 +428,8 @@
         "obtainableIn": [
           { "game": 1, "methods": [4] },
           { "game": 2, "methods": [4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 20, "formId": 2 }]
       }
     ]
   },
@@ -469,7 +483,8 @@
           { "game": 2, "methods": [1] },
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 22, "formId": 1 }]
       }
     ]
   },
@@ -509,7 +524,8 @@
         "obtainableIn": [
           { "game": 2, "methods": [1] },
           { "game": 5, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 24, "formId": 1 }]
       }
     ]
   },
@@ -558,6 +574,10 @@
           { "game": 7, "methods": [1] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
+        ],
+        "evolvesIn": [
+          { "number": 26, "formId": 1 },
+          { "number": 26, "formId": 2 }
         ]
       }
     ]
@@ -623,7 +643,8 @@
           { "game": 11, "methods": [1, 7] },
           { "game": 12, "methods": [1, 7] },
           { "game": 6, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 28, "formId": 1 }]
       },
       {
         "id": 2,
@@ -635,7 +656,8 @@
           { "game": 1, "methods": [4] },
           { "game": 11, "methods": [3] },
           { "game": 12, "methods": [3] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 28, "formId": 2 }]
       }
     ]
   },
@@ -688,7 +710,8 @@
           { "game": 14, "methods": [1, 7] },
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 30, "formId": 1 }]
       }
     ]
   },
@@ -711,7 +734,8 @@
           { "game": 14, "methods": [1, 7] },
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 31, "formId": 1 }]
       }
     ]
   },
@@ -755,7 +779,8 @@
           { "game": 14, "methods": [1, 7] },
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 33, "formId": 1 }]
       }
     ]
   },
@@ -778,7 +803,8 @@
           { "game": 14, "methods": [1, 7] },
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 34, "formId": 1 }]
       }
     ]
   },
@@ -828,7 +854,8 @@
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] },
           { "game": 7, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 36, "formId": 1 }]
       }
     ]
   },
@@ -878,7 +905,8 @@
           { "game": 4, "methods": [1] },
           { "game": 6, "methods": [1] },
           { "game": 7, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 38, "formId": 1 }]
       },
       {
         "id": 2,
@@ -891,7 +919,8 @@
           { "game": 11, "methods": [3] },
           { "game": 12, "methods": [3] },
           { "game": 7, "methods": [3] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 38, "formId": 2 }]
       }
     ]
   },
@@ -949,7 +978,8 @@
           { "game": 6, "methods": [1] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 40, "formId": 1 }]
       }
     ]
   },
@@ -1001,7 +1031,8 @@
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] },
           { "game": 7, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 42, "formId": 1 }]
       }
     ]
   },
@@ -1030,7 +1061,8 @@
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] },
           { "game": 7, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 169, "formId": 1 }]
       }
     ]
   },
@@ -1052,7 +1084,8 @@
           { "game": 4, "methods": [1, 7] },
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 44, "formId": 1 }]
       }
     ]
   },
@@ -1080,6 +1113,10 @@
           { "game": 14, "methods": [7] },
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] }
+        ],
+        "evolvesIn": [
+          { "number": 45, "formId": 1 },
+          { "number": 182, "formId": 1 }
         ]
       }
     ]
@@ -1129,7 +1166,8 @@
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] },
           { "game": 7, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 47, "formId": 1 }]
       }
     ]
   },
@@ -1169,7 +1207,8 @@
           { "game": 6, "methods": [1] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 49, "formId": 1 }]
       }
     ]
   },
@@ -1217,7 +1256,8 @@
           { "game": 6, "methods": [1] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 51, "formId": 1 }]
       },
       {
         "id": 2,
@@ -1230,7 +1270,8 @@
           { "game": 2, "methods": [4] },
           { "game": 11, "methods": [3] },
           { "game": 12, "methods": [3] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 51, "formId": 2 }]
       }
     ]
   },
@@ -1290,7 +1331,8 @@
           { "game": 6, "methods": [1] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 53, "formId": 1 }]
       },
       {
         "id": 2,
@@ -1302,7 +1344,8 @@
           { "game": 2, "methods": [4] },
           { "game": 11, "methods": [3] },
           { "game": 12, "methods": [3] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 53, "formId": 2 }]
       },
       {
         "id": 3,
@@ -1319,7 +1362,8 @@
           { "game": 14, "methods": [7] },
           { "game": 8, "methods": [3] },
           { "game": 9, "methods": [3] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 863, "formId": 1 }]
       }
     ]
   },
@@ -1376,7 +1420,8 @@
           { "game": 7, "methods": [1] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 55, "formId": 1 }]
       }
     ]
   },
@@ -1427,7 +1472,8 @@
           { "game": 6, "methods": [1] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 57, "formId": 1 }]
       }
     ]
   },
@@ -1448,7 +1494,8 @@
           { "game": 6, "methods": [1] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": []
       }
     ]
   },
@@ -1471,7 +1518,8 @@
           { "game": 5, "methods": [1] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 59, "formId": 1 }]
       },
       {
         "id": 2,
@@ -1480,7 +1528,8 @@
         "region": 9,
         "varieties": [1],
         "movableTo": [11, 3, 4, 7],
-        "obtainableIn": [{ "game": 7, "methods": [1] }]
+        "obtainableIn": [{ "game": 7, "methods": [1] }],
+        "evolvesIn": [{ "number": 59, "formId": 2 }]
       }
     ]
   },
@@ -1537,7 +1586,8 @@
           { "game": 12, "methods": [1, 7] },
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 61, "formId": 1 }]
       }
     ]
   },
@@ -1560,6 +1610,10 @@
           { "game": 12, "methods": [1, 7] },
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] }
+        ],
+        "evolvesIn": [
+          { "number": 62, "formId": 1 },
+          { "number": 186, "formId": 1 }
         ]
       }
     ]
@@ -1608,7 +1662,8 @@
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] },
           { "game": 7, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 64, "formId": 1 }]
       }
     ]
   },
@@ -1639,7 +1694,8 @@
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] },
           { "game": 7, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 65, "formId": 1 }]
       }
     ]
   },
@@ -1689,7 +1745,8 @@
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] },
           { "game": 7, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 67, "formId": 1 }]
       }
     ]
   },
@@ -1716,7 +1773,8 @@
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] },
           { "game": 7, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 68, "formId": 1 }]
       }
     ]
   },
@@ -1759,7 +1817,8 @@
           { "game": 2, "methods": [1] },
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 70, "formId": 1 }]
       }
     ]
   },
@@ -1779,7 +1838,8 @@
           { "game": 2, "methods": [1] },
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 71, "formId": 1 }]
       }
     ]
   },
@@ -1820,7 +1880,8 @@
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] },
           { "game": 7, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 73, "formId": 1 }]
       }
     ]
   },
@@ -1870,7 +1931,8 @@
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] },
           { "game": 7, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 75, "formId": 1 }]
       },
       {
         "id": 2,
@@ -1881,7 +1943,8 @@
         "obtainableIn": [
           { "game": 1, "methods": [4] },
           { "game": 2, "methods": [4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 75, "formId": 2 }]
       }
     ]
   },
@@ -1904,7 +1967,8 @@
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] },
           { "game": 7, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 76, "formId": 1 }]
       },
       {
         "id": 2,
@@ -1912,7 +1976,8 @@
         "types": [5, 12],
         "region": 6,
         "movableTo": [1, 11, 2],
-        "obtainableIn": []
+        "obtainableIn": [],
+        "evolvesIn": [{ "number": 76, "formId": 2 }]
       }
     ]
   },
@@ -1961,7 +2026,8 @@
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] },
           { "game": 7, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 78, "formId": 1 }]
       },
       {
         "id": 2,
@@ -1972,7 +2038,8 @@
         "obtainableIn": [
           { "game": 4, "methods": [1, 7] },
           { "game": 14, "methods": [1, 7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 78, "formId": 2 }]
       }
     ]
   },
@@ -2028,6 +2095,10 @@
           { "game": 6, "methods": [1] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
+        ],
+        "evolvesIn": [
+          { "number": 80, "formId": 1 },
+          { "number": 199, "formId": 1 }
         ]
       },
       {
@@ -2043,6 +2114,10 @@
           { "game": 4, "methods": [1] },
           { "game": 12, "methods": [1, 7] },
           { "game": 14, "methods": [7] }
+        ],
+        "evolvesIn": [
+          { "number": 80, "formId": 2 },
+          { "number": 199, "formId": 2 }
         ]
       }
     ]
@@ -2101,7 +2176,8 @@
           { "game": 7, "methods": [9] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 82, "formId": 1 }]
       }
     ]
   },
@@ -2128,7 +2204,8 @@
           { "game": 7, "methods": [9] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 462, "formId": 1 }]
       }
     ]
   },
@@ -2161,7 +2238,8 @@
         "obtainableIn": [
           { "game": 3, "methods": [1, 7] },
           { "game": 13, "methods": [7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 865, "formId": 1 }]
       }
     ]
   },
@@ -2186,7 +2264,8 @@
           { "game": 2, "methods": [1] },
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 85, "formId": 1 }]
       }
     ]
   },
@@ -2229,7 +2308,8 @@
           { "game": 1, "methods": [1] },
           { "game": 2, "methods": [1] },
           { "game": 5, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 87, "formId": 1 }]
       }
     ]
   },
@@ -2271,7 +2351,8 @@
           { "game": 6, "methods": [1] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 89, "formId": 1 }]
       },
       {
         "id": 2,
@@ -2279,7 +2360,8 @@
         "types": [3, 16],
         "region": 6,
         "movableTo": [1, 11, 2],
-        "obtainableIn": [{ "game": 1, "methods": [4] }]
+        "obtainableIn": [{ "game": 1, "methods": [4] }],
+        "evolvesIn": [{ "number": 89, "formId": 2 }]
       }
     ]
   },
@@ -2334,7 +2416,8 @@
           { "game": 6, "methods": [1] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 91, "formId": 1 }]
       }
     ]
   },
@@ -2386,7 +2469,8 @@
           { "game": 7, "methods": [1] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 93, "formId": 1 }]
       }
     ]
   },
@@ -2415,7 +2499,8 @@
           { "game": 7, "methods": [1] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 94, "formId": 1 }]
       }
     ]
   },
@@ -2465,7 +2550,8 @@
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] },
           { "game": 7, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 208, "formId": 1 }]
       }
     ]
   },
@@ -2488,7 +2574,8 @@
           { "game": 6, "methods": [1] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 97, "formId": 1 }]
       }
     ]
   },
@@ -2536,7 +2623,8 @@
           { "game": 12, "methods": [1, 7] },
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 99, "formId": 1 }]
       }
     ]
   },
@@ -2585,7 +2673,8 @@
           { "game": 6, "methods": [1] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 101, "formId": 1 }]
       },
       {
         "id": 2,
@@ -2594,7 +2683,8 @@
         "region": 9,
         "varieties": [1],
         "movableTo": [11, 7],
-        "obtainableIn": [{ "game": 7, "methods": [1] }]
+        "obtainableIn": [{ "game": 7, "methods": [1] }],
+        "evolvesIn": [{ "number": 101, "formId": 2 }]
       }
     ]
   },
@@ -2647,6 +2737,10 @@
           { "game": 12, "methods": [1, 7] },
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] }
+        ],
+        "evolvesIn": [
+          { "number": 103, "formId": 1 },
+          { "number": 103, "formId": 2 }
         ]
       }
     ]
@@ -2708,6 +2802,10 @@
           { "game": 12, "methods": [1, 7] },
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] }
+        ],
+        "evolvesIn": [
+          { "number": 105, "formId": 1 },
+          { "number": 105, "formId": 2 }
         ]
       }
     ]
@@ -2815,7 +2913,8 @@
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] },
           { "game": 7, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 463, "formId": 1 }]
       }
     ]
   },
@@ -2837,6 +2936,10 @@
           { "game": 4, "methods": [1, 7] },
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] }
+        ],
+        "evolvesIn": [
+          { "number": 110, "formId": 1 },
+          { "number": 110, "formId": 2 }
         ]
       }
     ]
@@ -2907,7 +3010,8 @@
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] },
           { "game": 7, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 112, "formId": 1 }]
       }
     ]
   },
@@ -2940,7 +3044,8 @@
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] },
           { "game": 7, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 464, "formId": 1 }]
       }
     ]
   },
@@ -2969,7 +3074,8 @@
           { "game": 7, "methods": [1] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 242, "formId": 1 }]
       }
     ]
   },
@@ -2996,7 +3102,8 @@
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] },
           { "game": 7, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 465, "formId": 1 }]
       }
     ]
   },
@@ -3044,7 +3151,8 @@
           { "game": 12, "methods": [1, 7] },
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 117, "formId": 1 }]
       }
     ]
   },
@@ -3069,7 +3177,8 @@
           { "game": 14, "methods": [7] },
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 230, "formId": 1 }]
       }
     ]
   },
@@ -3098,7 +3207,8 @@
           { "game": 12, "methods": [1, 7] },
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 119, "formId": 1 }]
       }
     ]
   },
@@ -3152,7 +3262,8 @@
           { "game": 12, "methods": [1, 7] },
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 121, "formId": 1 }]
       }
     ]
   },
@@ -3213,7 +3324,8 @@
           { "game": 13, "methods": [7, 7] },
           { "game": 4, "methods": [1, 7] },
           { "game": 14, "methods": [7, 7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 866, "formId": 1 }]
       }
     ]
   },
@@ -3244,6 +3356,10 @@
           { "game": 7, "methods": [1] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
+        ],
+        "evolvesIn": [
+          { "number": 212, "formId": 1 },
+          { "number": 900, "formId": 1 }
         ]
       }
     ]
@@ -3288,7 +3404,8 @@
           { "game": 13, "methods": [1, 7, 7] },
           { "game": 14, "methods": [1, 7, 7] },
           { "game": 7, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 466, "formId": 1 }]
       }
     ]
   },
@@ -3311,7 +3428,8 @@
           { "game": 13, "methods": [1, 7, 7] },
           { "game": 14, "methods": [1, 7, 7] },
           { "game": 7, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 467, "formId": 1 }]
       }
     ]
   },
@@ -3391,7 +3509,8 @@
           { "game": 7, "methods": [1] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 130, "formId": 1 }]
       }
     ]
   },
@@ -3514,6 +3633,17 @@
           { "game": 7, "methods": [1] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
+        ],
+        "evolvesIn": [
+          { "number": 700, "formId": 1 },
+          { "number": 134, "formId": 1 },
+          { "number": 135, "formId": 1 },
+          { "number": 136, "formId": 1 },
+          { "number": 196, "formId": 1 },
+          { "number": 197, "formId": 1 },
+          { "number": 470, "formId": 1 },
+          { "number": 471, "formId": 1 },
+          { "number": 700, "formId": 1 }
         ]
       }
     ]
@@ -3616,7 +3746,8 @@
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] },
           { "game": 7, "methods": [9] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 233, "formId": 1 }]
       }
     ]
   },
@@ -3638,7 +3769,8 @@
           { "game": 13, "methods": [1, 7] },
           { "game": 5, "methods": [3] },
           { "game": 6, "methods": [3] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 139, "formId": 1 }]
       }
     ]
   },
@@ -3676,7 +3808,8 @@
           { "game": 14, "methods": [1, 7] },
           { "game": 5, "methods": [3] },
           { "game": 6, "methods": [3] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 141, "formId": 1 }]
       }
     ]
   },
@@ -3864,7 +3997,8 @@
           { "game": 6, "methods": [1] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 148, "formId": 1 }]
       }
     ]
   },
@@ -3889,7 +4023,8 @@
           { "game": 6, "methods": [1] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 149, "formId": 1 }]
       }
     ]
   },
@@ -3973,7 +4108,8 @@
         "obtainableIn": [
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 153, "formId": 1 }]
       }
     ]
   },
@@ -3989,7 +4125,8 @@
         "formType": 0,
         "types": [11],
         "movableTo": [11, 5, 6],
-        "obtainableIn": []
+        "obtainableIn": [],
+        "evolvesIn": [{ "number": 154, "formId": 1 }]
       }
     ]
   },
@@ -4030,7 +4167,8 @@
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] },
           { "game": 7, "methods": [8, 9, 2] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 156, "formId": 1 }]
       }
     ]
   },
@@ -4047,7 +4185,11 @@
         "types": [9],
         "varieties": [1],
         "movableTo": [11, 5, 6, 7],
-        "obtainableIn": [{ "game": 7, "methods": [8, 9] }]
+        "obtainableIn": [{ "game": 7, "methods": [8, 9] }],
+        "evolvesIn": [
+          { "number": 157, "formId": 1 },
+          { "number": 157, "formId": 2 }
+        ]
       }
     ]
   },
@@ -4091,7 +4233,8 @@
         "obtainableIn": [
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 159, "formId": 1 }]
       }
     ]
   },
@@ -4107,7 +4250,8 @@
         "formType": 0,
         "types": [10],
         "movableTo": [11, 5, 6],
-        "obtainableIn": []
+        "obtainableIn": [],
+        "evolvesIn": [{ "number": 160, "formId": 1 }]
       }
     ]
   },
@@ -4142,7 +4286,8 @@
         "obtainableIn": [
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 162, "formId": 1 }]
       }
     ]
   },
@@ -4184,7 +4329,8 @@
           { "game": 12, "methods": [7] },
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 164, "formId": 1 }]
       }
     ]
   },
@@ -4232,7 +4378,8 @@
         "obtainableIn": [
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 166, "formId": 1 }]
       }
     ]
   },
@@ -4271,7 +4418,8 @@
         "formType": 0,
         "types": [6, 3],
         "movableTo": [11, 5, 6],
-        "obtainableIn": []
+        "obtainableIn": [],
+        "evolvesIn": [{ "number": 168, "formId": 1 }]
       }
     ]
   },
@@ -4334,7 +4482,8 @@
           { "game": 12, "methods": [1, 7] },
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 171, "formId": 1 }]
       }
     ]
   },
@@ -4386,7 +4535,8 @@
           { "game": 7, "methods": [1] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 25, "formId": 1 }]
       }
     ]
   },
@@ -4413,7 +4563,8 @@
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] },
           { "game": 7, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 35, "formId": 1 }]
       }
     ]
   },
@@ -4436,7 +4587,8 @@
           { "game": 6, "methods": [1] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 39, "formId": 1 }]
       }
     ]
   },
@@ -4459,7 +4611,8 @@
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] },
           { "game": 7, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 176, "formId": 1 }]
       }
     ]
   },
@@ -4482,7 +4635,8 @@
           { "game": 4, "methods": [1, 7] },
           { "game": 14, "methods": [7] },
           { "game": 7, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 468, "formId": 1 }]
       }
     ]
   },
@@ -4503,7 +4657,8 @@
           { "game": 4, "methods": [1, 7] },
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 178, "formId": 1 }]
       }
     ]
   },
@@ -4549,7 +4704,8 @@
           { "game": 6, "methods": [1] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 180, "formId": 1 }]
       }
     ]
   },
@@ -4570,7 +4726,8 @@
           { "game": 6, "methods": [1] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 181, "formId": 1 }]
       }
     ]
   },
@@ -4633,7 +4790,8 @@
           { "game": 6, "methods": [1] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 184, "formId": 1 }]
       }
     ]
   },
@@ -4734,7 +4892,8 @@
           { "game": 6, "methods": [1] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 188, "formId": 1 }]
       }
     ]
   },
@@ -4755,7 +4914,8 @@
           { "game": 6, "methods": [1] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 189, "formId": 1 }]
       }
     ]
   },
@@ -4799,7 +4959,8 @@
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] },
           { "game": 7, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 424, "formId": 1 }]
       }
     ]
   },
@@ -4820,7 +4981,8 @@
           { "game": 6, "methods": [1] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 192, "formId": 1 }]
       }
     ]
   },
@@ -4860,7 +5022,8 @@
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] },
           { "game": 7, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 469, "formId": 1 }]
       }
     ]
   },
@@ -4889,7 +5052,8 @@
           { "game": 6, "methods": [1] },
           { "game": 8, "methods": [4] },
           { "game": 9, "methods": [4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 195, "formId": 1 }]
       }
     ]
   },
@@ -4994,7 +5158,8 @@
           { "game": 7, "methods": [1] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 430, "formId": 1 }]
       }
     ]
   },
@@ -5044,7 +5209,8 @@
           { "game": 6, "methods": [1] },
           { "game": 7, "methods": [1] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 429, "formId": 1 }]
       }
     ]
   },
@@ -5468,7 +5634,8 @@
           { "game": 6, "methods": [1] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": []
       }
     ]
   },
@@ -5489,7 +5656,8 @@
           { "game": 6, "methods": [1] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 205, "formId": 1 }]
       }
     ]
   },
@@ -5533,7 +5701,8 @@
           { "game": 6, "methods": [1] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": []
       }
     ]
   },
@@ -5557,7 +5726,8 @@
         "obtainableIn": [
           { "game": 5, "methods": [1] },
           { "game": 7, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 472, "formId": 1 }]
       }
     ]
   },
@@ -5603,7 +5773,8 @@
         "obtainableIn": [
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 210, "formId": 1 }]
       }
     ]
   },
@@ -5655,7 +5826,8 @@
         "region": 9,
         "varieties": [1],
         "movableTo": [11, 3, 4, 7],
-        "obtainableIn": [{ "game": 7, "methods": [1] }]
+        "obtainableIn": [{ "game": 7, "methods": [1] }],
+        "evolvesIn": [{ "number": 904, "formId": 1 }]
       }
     ]
   },
@@ -5765,7 +5937,8 @@
           { "game": 7, "methods": [9] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 461, "formId": 1 }]
       },
       {
         "id": 2,
@@ -5779,7 +5952,8 @@
         },
         "varieties": [1],
         "movableTo": [11, 3, 4, 7],
-        "obtainableIn": [{ "game": 7, "methods": [1] }]
+        "obtainableIn": [{ "game": 7, "methods": [1] }],
+        "evolvesIn": [{ "number": 903, "formId": 1 }]
       }
     ]
   },
@@ -5801,7 +5975,8 @@
           { "game": 7, "methods": [1] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 217, "formId": 1 }]
       }
     ]
   },
@@ -5826,7 +6001,8 @@
           { "game": 7, "methods": [1] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 901, "formId": 1 }]
       }
     ]
   },
@@ -5845,7 +6021,8 @@
         "obtainableIn": [
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 219, "formId": 1 }]
       }
     ]
   },
@@ -5889,7 +6066,8 @@
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] },
           { "game": 7, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 221, "formId": 1 }]
       }
     ]
   },
@@ -5916,7 +6094,8 @@
           { "game": 4, "methods": [1, 7] },
           { "game": 14, "methods": [1, 7, 7] },
           { "game": 7, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 473, "formId": 1 }]
       }
     ]
   },
@@ -5948,7 +6127,8 @@
         "obtainableIn": [
           { "game": 4, "methods": [1] },
           { "game": 14, "methods": [7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 864, "formId": 1 }]
       }
     ]
   },
@@ -5973,7 +6153,8 @@
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] },
           { "game": 7, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 224, "formId": 1 }]
       }
     ]
   },
@@ -6098,7 +6279,8 @@
           { "game": 6, "methods": [1] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 229, "formId": 1 }]
       }
     ]
   },
@@ -6163,7 +6345,8 @@
           { "game": 6, "methods": [1] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 232, "formId": 1 }]
       }
     ]
   },
@@ -6203,7 +6386,8 @@
         "types": [0],
         "varieties": [1],
         "movableTo": [11, 3, 4, 5, 6, 7],
-        "obtainableIn": [{ "game": 7, "methods": [9] }]
+        "obtainableIn": [{ "game": 7, "methods": [9] }],
+        "evolvesIn": [{ "number": 474, "formId": 1 }]
       }
     ]
   },
@@ -6225,7 +6409,8 @@
           { "game": 7, "methods": [1] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 899, "formId": 1 }]
       }
     ]
   },
@@ -6267,6 +6452,11 @@
           { "game": 14, "methods": [7] },
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] }
+        ],
+        "evolvesIn": [
+          { "number": 106, "formId": 1 },
+          { "number": 107, "formId": 1 },
+          { "number": 237, "formId": 1 }
         ]
       }
     ]
@@ -6309,7 +6499,8 @@
           { "game": 14, "methods": [1, 7] },
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 124, "formId": 1 }]
       }
     ]
   },
@@ -6331,7 +6522,8 @@
           { "game": 14, "methods": [1, 7] },
           { "game": 5, "methods": [1] },
           { "game": 7, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 125, "formId": 1 }]
       }
     ]
   },
@@ -6353,7 +6545,8 @@
           { "game": 14, "methods": [1, 7] },
           { "game": 6, "methods": [1] },
           { "game": 7, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 126, "formId": 1 }]
       }
     ]
   },
@@ -6480,7 +6673,8 @@
           { "game": 14, "methods": [1] },
           { "game": 5, "methods": [1] },
           { "game": 8, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 247, "formId": 1 }]
       }
     ]
   },
@@ -6500,7 +6694,8 @@
           { "game": 4, "methods": [1, 7] },
           { "game": 5, "methods": [1] },
           { "game": 8, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 248, "formId": 1 }]
       }
     ]
   },
@@ -6593,7 +6788,8 @@
         "obtainableIn": [
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 253, "formId": 1 }]
       }
     ]
   },
@@ -6612,7 +6808,8 @@
         "obtainableIn": [
           { "game": 13, "methods": [7] },
           { "game": 14, "methods": [7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 254, "formId": 1 }]
       }
     ]
   },
@@ -6654,7 +6851,8 @@
         "obtainableIn": [
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 256, "formId": 1 }]
       }
     ]
   },
@@ -6677,7 +6875,8 @@
         "obtainableIn": [
           { "game": 13, "methods": [7] },
           { "game": 14, "methods": [7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 257, "formId": 1 }]
       }
     ]
   },
@@ -6719,7 +6918,8 @@
         "obtainableIn": [
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 259, "formId": 1 }]
       }
     ]
   },
@@ -6738,7 +6938,8 @@
         "obtainableIn": [
           { "game": 13, "methods": [7] },
           { "game": 14, "methods": [7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 260, "formId": 1 }]
       }
     ]
   },
@@ -6776,7 +6977,8 @@
         "obtainableIn": [
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 262, "formId": 1 }]
       }
     ]
   },
@@ -6816,7 +7018,8 @@
           { "game": 12, "methods": [4] },
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 264, "formId": 1 }]
       },
       {
         "id": 2,
@@ -6827,7 +7030,8 @@
         "obtainableIn": [
           { "game": 3, "methods": [1, 7] },
           { "game": 4, "methods": [1, 7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 264, "formId": 2 }]
       }
     ]
   },
@@ -6859,7 +7063,8 @@
           { "game": 13, "methods": [1, 7, 7] },
           { "game": 4, "methods": [1, 7] },
           { "game": 14, "methods": [1, 7, 7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 862, "formId": 1 }]
       }
     ]
   },
@@ -6880,6 +7085,10 @@
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] },
           { "game": 7, "methods": [1] }
+        ],
+        "evolvesIn": [
+          { "number": 266, "formId": 1 },
+          { "number": 268, "formId": 1 }
         ]
       }
     ]
@@ -6900,7 +7109,8 @@
         "obtainableIn": [
           { "game": 5, "methods": [1] },
           { "game": 7, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 267, "formId": 1 }]
       }
     ]
   },
@@ -6945,7 +7155,8 @@
         "obtainableIn": [
           { "game": 6, "methods": [1] },
           { "game": 7, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 269, "formId": 1 }]
       }
     ]
   },
@@ -6988,7 +7199,8 @@
         "obtainableIn": [
           { "game": 4, "methods": [1, 7] },
           { "game": 6, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 271, "formId": 1 }]
       }
     ]
   },
@@ -7007,7 +7219,8 @@
         "obtainableIn": [
           { "game": 4, "methods": [1, 7] },
           { "game": 6, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 272, "formId": 1 }]
       }
     ]
   },
@@ -7046,7 +7259,8 @@
         "obtainableIn": [
           { "game": 3, "methods": [1, 7] },
           { "game": 5, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 274, "formId": 1 }]
       }
     ]
   },
@@ -7069,7 +7283,8 @@
         "obtainableIn": [
           { "game": 3, "methods": [1, 7] },
           { "game": 5, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 275, "formId": 1 }]
       }
     ]
   },
@@ -7105,7 +7320,8 @@
         "formType": 0,
         "types": [0, 2],
         "movableTo": [11, 5, 6],
-        "obtainableIn": []
+        "obtainableIn": [],
+        "evolvesIn": [{ "number": 277, "formId": 1 }]
       }
     ]
   },
@@ -7149,7 +7365,8 @@
           { "game": 6, "methods": [1] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 279, "formId": 1 }]
       }
     ]
   },
@@ -7203,7 +7420,8 @@
           { "game": 7, "methods": [1] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 281, "formId": 1 }]
       }
     ]
   },
@@ -7230,6 +7448,10 @@
           { "game": 7, "methods": [1] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
+        ],
+        "evolvesIn": [
+          { "number": 282, "formId": 1 },
+          { "number": 475, "formId": 1 }
         ]
       }
     ]
@@ -7276,7 +7498,8 @@
           { "game": 6, "methods": [1] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 284, "formId": 1 }]
       }
     ]
   },
@@ -7316,7 +7539,8 @@
           { "game": 6, "methods": [1] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 286, "formId": 1 }]
       }
     ]
   },
@@ -7356,7 +7580,8 @@
           { "game": 6, "methods": [1] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 288, "formId": 1 }]
       }
     ]
   },
@@ -7375,7 +7600,8 @@
         "obtainableIn": [
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 289, "formId": 1 }]
       }
     ]
   },
@@ -7415,6 +7641,10 @@
           { "game": 4, "methods": [1, 7] },
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] }
+        ],
+        "evolvesIn": [
+          { "number": 291, "formId": 1 },
+          { "number": 292, "formId": 1 }
         ]
       }
     ]
@@ -7478,7 +7708,8 @@
           { "game": 12, "methods": [1, 7] },
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 294, "formId": 1 }]
       }
     ]
   },
@@ -7499,7 +7730,8 @@
           { "game": 12, "methods": [1, 7] },
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 295, "formId": 1 }]
       }
     ]
   },
@@ -7541,7 +7773,8 @@
           { "game": 6, "methods": [1] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 297, "formId": 1 }]
       }
     ]
   },
@@ -7583,7 +7816,8 @@
           { "game": 6, "methods": [1] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 183, "formId": 1 }]
       }
     ]
   },
@@ -7604,7 +7838,8 @@
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] },
           { "game": 7, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 476, "formId": 1 }]
       }
     ]
   },
@@ -7623,7 +7858,8 @@
         "obtainableIn": [
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 301, "formId": 1 }]
       }
     ]
   },
@@ -7702,7 +7938,8 @@
           { "game": 14, "methods": [1, 7] },
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 305, "formId": 1 }]
       }
     ]
   },
@@ -7723,7 +7960,8 @@
           { "game": 14, "methods": [1, 7, 7] },
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 306, "formId": 1 }]
       }
     ]
   },
@@ -7767,7 +8005,8 @@
           { "game": 6, "methods": [1] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 308, "formId": 1 }]
       }
     ]
   },
@@ -7813,7 +8052,8 @@
           { "game": 6, "methods": [1] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 310, "formId": 1 }]
       }
     ]
   },
@@ -7943,7 +8183,8 @@
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] },
           { "game": 7, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 407, "formId": 1 }]
       }
     ]
   },
@@ -7967,7 +8208,8 @@
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 317, "formId": 1 }]
       }
     ]
   },
@@ -8008,7 +8250,8 @@
           { "game": 12, "methods": [1, 7] },
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 319, "formId": 1 }]
       }
     ]
   },
@@ -8056,7 +8299,8 @@
           { "game": 14, "methods": [1, 7] },
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 321, "formId": 1 }]
       }
     ]
   },
@@ -8104,7 +8348,8 @@
           { "game": 6, "methods": [1] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 323, "formId": 1 }]
       }
     ]
   },
@@ -8177,7 +8422,8 @@
           { "game": 6, "methods": [1] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 326, "formId": 1 }]
       }
     ]
   },
@@ -8238,7 +8484,8 @@
           { "game": 12, "methods": [7] },
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 329, "formId": 1 }]
       }
     ]
   },
@@ -8259,7 +8506,8 @@
           { "game": 4, "methods": [7] },
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 330, "formId": 1 }]
       }
     ]
   },
@@ -8303,7 +8551,8 @@
           { "game": 6, "methods": [1] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 332, "formId": 1 }]
       }
     ]
   },
@@ -8351,7 +8600,8 @@
           { "game": 6, "methods": [1] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 334, "formId": 1 }]
       }
     ]
   },
@@ -8479,7 +8729,8 @@
           { "game": 7, "methods": [1] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 340, "formId": 1 }]
       }
     ]
   },
@@ -8531,7 +8782,8 @@
           { "game": 12, "methods": [1, 7] },
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 342, "formId": 1 }]
       }
     ]
   },
@@ -8578,7 +8830,8 @@
           { "game": 4, "methods": [1, 7] },
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 344, "formId": 1 }]
       }
     ]
   },
@@ -8620,7 +8873,8 @@
           { "game": 14, "methods": [1, 7] },
           { "game": 5, "methods": [3] },
           { "game": 6, "methods": [3] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 346, "formId": 1 }]
       }
     ]
   },
@@ -8660,7 +8914,8 @@
           { "game": 14, "methods": [1, 7] },
           { "game": 5, "methods": [3] },
           { "game": 6, "methods": [3] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 348, "formId": 1 }]
       }
     ]
   },
@@ -8702,7 +8957,8 @@
           { "game": 14, "methods": [1, 7] },
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 350, "formId": 1 }]
       }
     ]
   },
@@ -8781,7 +9037,8 @@
         "obtainableIn": [
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 354, "formId": 1 }]
       }
     ]
   },
@@ -8825,7 +9082,8 @@
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] },
           { "game": 7, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 356, "formId": 1 }]
       }
     ]
   },
@@ -8850,7 +9108,8 @@
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] },
           { "game": 7, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 477, "formId": 1 }]
       }
     ]
   },
@@ -8932,7 +9191,8 @@
         "obtainableIn": [
           { "game": 3, "methods": [7] },
           { "game": 4, "methods": [7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 202, "formId": 1 }]
       }
     ]
   },
@@ -8959,6 +9219,10 @@
           { "game": 7, "methods": [1, 8] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
+        ],
+        "evolvesIn": [
+          { "number": 362, "formId": 1 },
+          { "number": 478, "formId": 1 }
         ]
       }
     ]
@@ -9008,7 +9272,8 @@
           { "game": 14, "methods": [1, 7] },
           { "game": 6, "methods": [1] },
           { "game": 7, "methods": [1, 8] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 364, "formId": 1 }]
       }
     ]
   },
@@ -9030,7 +9295,8 @@
           { "game": 14, "methods": [1, 7, 7] },
           { "game": 6, "methods": [1] },
           { "game": 7, "methods": [1, 8] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 365, "formId": 1 }]
       }
     ]
   },
@@ -9072,6 +9338,10 @@
         "obtainableIn": [
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] }
+        ],
+        "evolvesIn": [
+          { "number": 367, "formId": 1 },
+          { "number": 368, "formId": 1 }
         ]
       }
     ]
@@ -9170,7 +9440,8 @@
           { "game": 13, "methods": [1, 7] },
           { "game": 6, "methods": [1] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 372, "formId": 1 }]
       }
     ]
   },
@@ -9190,7 +9461,8 @@
           { "game": 13, "methods": [1, 7] },
           { "game": 6, "methods": [1] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 373, "formId": 1 }]
       }
     ]
   },
@@ -9230,7 +9502,8 @@
           { "game": 14, "methods": [1, 7] },
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 375, "formId": 1 }]
       }
     ]
   },
@@ -9249,7 +9522,8 @@
         "obtainableIn": [
           { "game": 13, "methods": [1, 7, 7] },
           { "game": 14, "methods": [1, 7, 7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 376, "formId": 1 }]
       }
     ]
   },
@@ -9518,7 +9792,8 @@
           { "game": 5, "methods": [1, 2] },
           { "game": 6, "methods": [1, 2] },
           { "game": 7, "methods": [1, 8] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 388, "formId": 1 }]
       }
     ]
   },
@@ -9535,7 +9810,8 @@
         "types": [11],
         "varieties": [1],
         "movableTo": [11, 5, 6, 7],
-        "obtainableIn": [{ "game": 7, "methods": [1, 8] }]
+        "obtainableIn": [{ "game": 7, "methods": [1, 8] }],
+        "evolvesIn": [{ "number": 389, "formId": 1 }]
       }
     ]
   },
@@ -9573,7 +9849,8 @@
           { "game": 5, "methods": [1, 2] },
           { "game": 6, "methods": [1, 2] },
           { "game": 7, "methods": [1, 8] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 391, "formId": 1 }]
       }
     ]
   },
@@ -9590,7 +9867,8 @@
         "types": [9, 1],
         "varieties": [1],
         "movableTo": [11, 5, 6, 7],
-        "obtainableIn": [{ "game": 7, "methods": [1, 8] }]
+        "obtainableIn": [{ "game": 7, "methods": [1, 8] }],
+        "evolvesIn": [{ "number": 392, "formId": 1 }]
       }
     ]
   },
@@ -9628,7 +9906,8 @@
           { "game": 5, "methods": [1, 2] },
           { "game": 6, "methods": [1, 3] },
           { "game": 7, "methods": [1, 8] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 394, "formId": 1 }]
       }
     ]
   },
@@ -9645,7 +9924,8 @@
         "types": [10],
         "varieties": [1],
         "movableTo": [11, 5, 6, 7],
-        "obtainableIn": [{ "game": 7, "methods": [1, 8] }]
+        "obtainableIn": [{ "game": 7, "methods": [1, 8] }],
+        "evolvesIn": [{ "number": 395, "formId": 1 }]
       }
     ]
   },
@@ -9689,7 +9969,8 @@
           { "game": 7, "methods": [1, 8] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 397, "formId": 1 }]
       }
     ]
   },
@@ -9716,7 +9997,8 @@
           { "game": 7, "methods": [1, 8] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 398, "formId": 1 }]
       }
     ]
   },
@@ -9766,7 +10048,8 @@
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] },
           { "game": 7, "methods": [1, 8] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 400, "formId": 1 }]
       }
     ]
   },
@@ -9818,7 +10101,8 @@
           { "game": 7, "methods": [1, 8] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 402, "formId": 1 }]
       }
     ]
   },
@@ -9874,7 +10158,8 @@
           { "game": 7, "methods": [1, 8] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 404, "formId": 1 }]
       }
     ]
   },
@@ -9903,7 +10188,8 @@
           { "game": 7, "methods": [1, 8] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 405, "formId": 1 }]
       }
     ]
   },
@@ -9955,7 +10241,8 @@
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] },
           { "game": 7, "methods": [1, 8] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 315, "formId": 1 }]
       }
     ]
   },
@@ -10003,7 +10290,8 @@
           { "game": 5, "methods": [3] },
           { "game": 6, "methods": [3] },
           { "game": 7, "methods": [9] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 409, "formId": 1 }]
       }
     ]
   },
@@ -10041,7 +10329,8 @@
           { "game": 5, "methods": [3] },
           { "game": 6, "methods": [3] },
           { "game": 7, "methods": [9] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 411, "formId": 1 }]
       }
     ]
   },
@@ -10080,6 +10369,10 @@
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] },
           { "game": 7, "methods": [1] }
+        ],
+        "evolvesIn": [
+          { "number": 414, "formId": 1 },
+          { "number": 413, "formId": 1 }
         ]
       },
       {
@@ -10093,7 +10386,8 @@
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] },
           { "game": 7, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 413, "formId": 2 }]
       },
       {
         "id": 3,
@@ -10106,7 +10400,8 @@
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] },
           { "game": 7, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 413, "formId": 3 }]
       }
     ],
     "formsData": { "onlyVisual": true, "interchandable": true }
@@ -10192,7 +10487,8 @@
           { "game": 7, "methods": [1] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 416, "formId": 1 }]
       }
     ]
   },
@@ -10273,7 +10569,8 @@
           { "game": 7, "methods": [1, 8] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 419, "formId": 1 }]
       }
     ]
   },
@@ -10325,7 +10622,8 @@
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] },
           { "game": 7, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 421, "formId": 1 }]
       }
     ]
   },
@@ -10372,7 +10670,8 @@
           { "game": 7, "methods": [1, 8] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 423, "formId": 1 }]
       },
       {
         "id": 2,
@@ -10389,7 +10688,8 @@
           { "game": 7, "methods": [1, 8] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 423, "formId": 2 }]
       }
     ],
     "formsData": { "onlyVisual": true, "interchandable": false }
@@ -10481,7 +10781,8 @@
           { "game": 6, "methods": [1] },
           { "game": 7, "methods": [1, 8] },
           { "game": 8, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 426, "formId": 1 }]
       }
     ]
   },
@@ -10530,7 +10831,8 @@
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] },
           { "game": 7, "methods": [1, 8] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 428, "formId": 1 }]
       }
     ]
   },
@@ -10614,7 +10916,8 @@
         "obtainableIn": [
           { "game": 6, "methods": [1] },
           { "game": 7, "methods": [1, 8] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 432, "formId": 1 }]
       }
     ]
   },
@@ -10655,7 +10958,8 @@
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] },
           { "game": 7, "methods": [1, 8] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 358, "formId": 1 }]
       }
     ]
   },
@@ -10678,7 +10982,8 @@
           { "game": 5, "methods": [1] },
           { "game": 7, "methods": [1, 8] },
           { "game": 8, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 435, "formId": 1 }]
       }
     ]
   },
@@ -10732,7 +11037,8 @@
           { "game": 7, "methods": [1, 8] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 437, "formId": 1 }]
       }
     ]
   },
@@ -10788,7 +11094,8 @@
           { "game": 7, "methods": [1, 8] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 185, "formId": 1 }]
       }
     ]
   },
@@ -10813,6 +11120,10 @@
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] },
           { "game": 7, "methods": [1, 8] }
+        ],
+        "evolvesIn": [
+          { "number": 122, "formId": 1 },
+          { "number": 122, "formId": 2 }
         ]
       }
     ]
@@ -10838,7 +11149,8 @@
           { "game": 7, "methods": [1, 8] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 113, "formId": 1 }]
       }
     ]
   },
@@ -10912,7 +11224,8 @@
           { "game": 7, "methods": [1, 8] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 444, "formId": 1 }]
       }
     ]
   },
@@ -10940,7 +11253,8 @@
           { "game": 7, "methods": [1, 8] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 445, "formId": 1 }]
       }
     ]
   },
@@ -10991,7 +11305,8 @@
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] },
           { "game": 7, "methods": [1, 8] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 143, "formId": 1 }]
       }
     ]
   },
@@ -11018,7 +11333,8 @@
           { "game": 7, "methods": [1, 8] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 448, "formId": 1 }]
       }
     ]
   },
@@ -11074,7 +11390,8 @@
           { "game": 7, "methods": [1, 8] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 450, "formId": 1 }]
       }
     ]
   },
@@ -11128,7 +11445,8 @@
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] },
           { "game": 7, "methods": [1, 8] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 452, "formId": 1 }]
       }
     ]
   },
@@ -11184,7 +11502,8 @@
           { "game": 7, "methods": [1, 8] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 454, "formId": 1 }]
       }
     ]
   },
@@ -11261,7 +11580,8 @@
           { "game": 7, "methods": [1, 8] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 457, "formId": 1 }]
       }
     ]
   },
@@ -11313,7 +11633,8 @@
           { "game": 5, "methods": [1] },
           { "game": 6, "methods": [1] },
           { "game": 7, "methods": [1, 8] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 226, "formId": 1 }]
       }
     ]
   },
@@ -11344,7 +11665,8 @@
           { "game": 7, "methods": [1, 8] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 460, "formId": 1 }]
       }
     ]
   },
@@ -12226,7 +12548,8 @@
         "formType": 0,
         "types": [11],
         "movableTo": [11],
-        "obtainableIn": []
+        "obtainableIn": [],
+        "evolvesIn": [{ "number": 496, "formId": 1 }]
       }
     ]
   },
@@ -12242,7 +12565,8 @@
         "formType": 0,
         "types": [11],
         "movableTo": [11],
-        "obtainableIn": []
+        "obtainableIn": [],
+        "evolvesIn": [{ "number": 497, "formId": 1 }]
       }
     ]
   },
@@ -12274,7 +12598,8 @@
         "formType": 0,
         "types": [9],
         "movableTo": [11],
-        "obtainableIn": []
+        "obtainableIn": [],
+        "evolvesIn": [{ "number": 499, "formId": 1 }]
       }
     ]
   },
@@ -12290,7 +12615,8 @@
         "formType": 0,
         "types": [9, 1],
         "movableTo": [11],
-        "obtainableIn": []
+        "obtainableIn": [],
+        "evolvesIn": [{ "number": 500, "formId": 1 }]
       }
     ]
   },
@@ -12323,7 +12649,8 @@
         "types": [10],
         "varieties": [1],
         "movableTo": [11, 7],
-        "obtainableIn": [{ "game": 7, "methods": [8, 9, 2] }]
+        "obtainableIn": [{ "game": 7, "methods": [8, 9, 2] }],
+        "evolvesIn": [{ "number": 502, "formId": 1 }]
       }
     ]
   },
@@ -12340,7 +12667,11 @@
         "types": [10],
         "varieties": [1],
         "movableTo": [11, 7],
-        "obtainableIn": [{ "game": 7, "methods": [8, 9] }]
+        "obtainableIn": [{ "game": 7, "methods": [8, 9] }],
+        "evolvesIn": [
+          { "number": 503, "formId": 1 },
+          { "number": 503, "formId": 2 }
+        ]
       }
     ]
   },
@@ -12381,7 +12712,8 @@
         "formType": 0,
         "types": [0],
         "movableTo": [11],
-        "obtainableIn": []
+        "obtainableIn": [],
+        "evolvesIn": [{ "number": 505, "formId": 1 }]
       }
     ]
   },
@@ -12416,7 +12748,8 @@
         "obtainableIn": [
           { "game": 11, "methods": [1, 7] },
           { "game": 12, "methods": [1, 7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 507, "formId": 1 }]
       }
     ]
   },
@@ -12435,7 +12768,8 @@
         "obtainableIn": [
           { "game": 11, "methods": [1, 7] },
           { "game": 12, "methods": [1, 7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 508, "formId": 1 }]
       }
     ]
   },
@@ -12475,7 +12809,8 @@
         "obtainableIn": [
           { "game": 3, "methods": [1, 7] },
           { "game": 4, "methods": [1, 7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 510, "formId": 1 }]
       }
     ]
   },
@@ -12514,7 +12849,8 @@
         "formType": 0,
         "types": [11],
         "movableTo": [11],
-        "obtainableIn": []
+        "obtainableIn": [],
+        "evolvesIn": [{ "number": 512, "formId": 1 }]
       }
     ]
   },
@@ -12546,7 +12882,8 @@
         "formType": 0,
         "types": [9],
         "movableTo": [11],
-        "obtainableIn": []
+        "obtainableIn": [],
+        "evolvesIn": [{ "number": 514, "formId": 1 }]
       }
     ]
   },
@@ -12578,7 +12915,8 @@
         "formType": 0,
         "types": [10],
         "movableTo": [11],
-        "obtainableIn": []
+        "obtainableIn": [],
+        "evolvesIn": [{ "number": 516, "formId": 1 }]
       }
     ]
   },
@@ -12613,7 +12951,8 @@
         "obtainableIn": [
           { "game": 3, "methods": [1, 7] },
           { "game": 4, "methods": [1, 7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 518, "formId": 1 }]
       }
     ]
   },
@@ -12657,7 +12996,8 @@
           { "game": 11, "methods": [7] },
           { "game": 4, "methods": [1, 7] },
           { "game": 12, "methods": [7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 520, "formId": 1 }]
       }
     ]
   },
@@ -12678,7 +13018,8 @@
           { "game": 11, "methods": [7] },
           { "game": 4, "methods": [1, 7] },
           { "game": 12, "methods": [7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 521, "formId": 1 }]
       }
     ]
   },
@@ -12721,7 +13062,8 @@
         "formType": 0,
         "types": [12],
         "movableTo": [11],
-        "obtainableIn": []
+        "obtainableIn": [],
+        "evolvesIn": [{ "number": 523, "formId": 1 }]
       }
     ]
   },
@@ -12758,7 +13100,8 @@
           { "game": 11, "methods": [1, 7] },
           { "game": 4, "methods": [1, 7] },
           { "game": 12, "methods": [1, 7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 525, "formId": 1 }]
       }
     ]
   },
@@ -12781,7 +13124,8 @@
           { "game": 4, "methods": [1, 7] },
           { "game": 12, "methods": [7] },
           { "game": 14, "methods": [7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 526, "formId": 1 }]
       }
     ]
   },
@@ -12825,7 +13169,8 @@
           { "game": 4, "methods": [1, 7] },
           { "game": 12, "methods": [1, 7] },
           { "game": 14, "methods": [7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 528, "formId": 1 }]
       }
     ]
   },
@@ -12869,7 +13214,8 @@
           { "game": 11, "methods": [7] },
           { "game": 4, "methods": [1, 7] },
           { "game": 12, "methods": [7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 530, "formId": 1 }]
       }
     ]
   },
@@ -12930,7 +13276,8 @@
           { "game": 13, "methods": [7] },
           { "game": 4, "methods": [1, 7] },
           { "game": 14, "methods": [7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 533, "formId": 1 }]
       }
     ]
   },
@@ -12951,7 +13298,8 @@
           { "game": 13, "methods": [1, 7, 7] },
           { "game": 4, "methods": [1, 7] },
           { "game": 14, "methods": [1, 7, 7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 534, "formId": 1 }]
       }
     ]
   },
@@ -12993,7 +13341,8 @@
           { "game": 11, "methods": [7] },
           { "game": 4, "methods": [1, 7] },
           { "game": 12, "methods": [7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 536, "formId": 1 }]
       }
     ]
   },
@@ -13016,7 +13365,8 @@
           { "game": 4, "methods": [1, 7] },
           { "game": 12, "methods": [7] },
           { "game": 14, "methods": [7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 537, "formId": 1 }]
       }
     ]
   },
@@ -13095,7 +13445,8 @@
         "formType": 0,
         "types": [6, 11],
         "movableTo": [11],
-        "obtainableIn": []
+        "obtainableIn": [],
+        "evolvesIn": [{ "number": 541, "formId": 1 }]
       }
     ]
   },
@@ -13111,7 +13462,8 @@
         "formType": 0,
         "types": [6, 11],
         "movableTo": [11],
-        "obtainableIn": []
+        "obtainableIn": [],
+        "evolvesIn": [{ "number": 542, "formId": 1 }]
       }
     ]
   },
@@ -13148,7 +13500,8 @@
           { "game": 11, "methods": [1, 7] },
           { "game": 4, "methods": [1, 7] },
           { "game": 12, "methods": [1, 7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 544, "formId": 1 }]
       }
     ]
   },
@@ -13169,7 +13522,8 @@
           { "game": 11, "methods": [7] },
           { "game": 4, "methods": [1, 7] },
           { "game": 12, "methods": [7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 545, "formId": 1 }]
       }
     ]
   },
@@ -13213,7 +13567,8 @@
           { "game": 13, "methods": [1, 7] },
           { "game": 4, "methods": [1, 7] },
           { "game": 14, "methods": [1, 7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 547, "formId": 1 }]
       }
     ]
   },
@@ -13257,6 +13612,10 @@
           { "game": 7, "methods": [1, 8] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
+        ],
+        "evolvesIn": [
+          { "number": 549, "formId": 1 },
+          { "number": 549, "formId": 2 }
         ]
       }
     ]
@@ -13335,7 +13694,8 @@
         "types": [10],
         "varieties": [1],
         "movableTo": [11, 3, 4, 7],
-        "obtainableIn": [{ "game": 7, "methods": [1, 8] }]
+        "obtainableIn": [{ "game": 7, "methods": [1, 8] }],
+        "evolvesIn": [{ "number": 902, "formId": 1 }]
       }
     ],
     "formsData": { "onlyVisual": false, "interchandable": false }
@@ -13357,7 +13717,8 @@
           { "game": 12, "methods": [1, 7] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 552, "formId": 1 }]
       }
     ]
   },
@@ -13378,7 +13739,8 @@
           { "game": 12, "methods": [1, 7] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 553, "formId": 1 }]
       }
     ]
   },
@@ -13417,7 +13779,8 @@
         "formType": 0,
         "types": [9],
         "movableTo": [11, 3, 4],
-        "obtainableIn": [{ "game": 11, "methods": [4] }]
+        "obtainableIn": [{ "game": 11, "methods": [4] }],
+        "evolvesIn": [{ "number": 555, "formId": 1 }]
       },
       {
         "id": 2,
@@ -13425,7 +13788,8 @@
         "types": [14],
         "region": 7,
         "movableTo": [11, 3, 4],
-        "obtainableIn": [{ "game": 3, "methods": [1, 7] }]
+        "obtainableIn": [{ "game": 3, "methods": [1, 7] }],
+        "evolvesIn": [{ "number": 555, "formId": 2 }]
       }
     ]
   },
@@ -13496,7 +13860,8 @@
           { "game": 11, "methods": [1, 7] },
           { "game": 4, "methods": [1, 7] },
           { "game": 12, "methods": [1, 7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 558, "formId": 1 }]
       }
     ]
   },
@@ -13538,7 +13903,8 @@
         "obtainableIn": [
           { "game": 3, "methods": [1, 7] },
           { "game": 11, "methods": [1, 7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 560, "formId": 1 }]
       }
     ]
   },
@@ -13597,7 +13963,8 @@
         "obtainableIn": [
           { "game": 3, "methods": [4] },
           { "game": 4, "methods": [4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 563, "formId": 1 }]
       },
       {
         "id": 2,
@@ -13608,7 +13975,8 @@
         "obtainableIn": [
           { "game": 3, "methods": [1, 7] },
           { "game": 4, "methods": [1, 7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 867, "formId": 1 }]
       }
     ]
   },
@@ -13646,7 +14014,8 @@
         "obtainableIn": [
           { "game": 13, "methods": [1] },
           { "game": 14, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 565, "formId": 1 }]
       }
     ]
   },
@@ -13684,7 +14053,8 @@
         "obtainableIn": [
           { "game": 13, "methods": [1] },
           { "game": 14, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 567, "formId": 1 }]
       }
     ]
   },
@@ -13721,7 +14091,8 @@
           { "game": 13, "methods": [7] },
           { "game": 4, "methods": [1, 7] },
           { "game": 14, "methods": [7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 569, "formId": 1 }]
       }
     ]
   },
@@ -13764,7 +14135,8 @@
           { "game": 12, "methods": [1, 7] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 571, "formId": 1 }]
       },
       {
         "id": 2,
@@ -13773,7 +14145,8 @@
         "region": 9,
         "varieties": [1],
         "movableTo": [11, 3, 4, 7],
-        "obtainableIn": [{ "game": 7, "methods": [1, 8] }]
+        "obtainableIn": [{ "game": 7, "methods": [1, 8] }],
+        "evolvesIn": [{ "number": 571, "formId": 2 }]
       }
     ]
   },
@@ -13822,7 +14195,8 @@
         "obtainableIn": [
           { "game": 3, "methods": [1, 7] },
           { "game": 4, "methods": [1, 7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 573, "formId": 1 }]
       }
     ]
   },
@@ -13866,7 +14240,8 @@
           { "game": 13, "methods": [1, 7] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 575, "formId": 1 }]
       }
     ]
   },
@@ -13887,7 +14262,8 @@
           { "game": 13, "methods": [1, 7] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 576, "formId": 1 }]
       }
     ]
   },
@@ -13927,7 +14303,8 @@
         "obtainableIn": [
           { "game": 4, "methods": [1, 7] },
           { "game": 14, "methods": [1, 7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 578, "formId": 1 }]
       }
     ]
   },
@@ -13946,7 +14323,8 @@
         "obtainableIn": [
           { "game": 4, "methods": [1, 7] },
           { "game": 14, "methods": [1, 7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 579, "formId": 1 }]
       }
     ]
   },
@@ -13981,7 +14359,8 @@
         "formType": 0,
         "types": [10, 2],
         "movableTo": [11],
-        "obtainableIn": []
+        "obtainableIn": [],
+        "evolvesIn": [{ "number": 581, "formId": 1 }]
       }
     ]
   },
@@ -14018,7 +14397,8 @@
           { "game": 13, "methods": [1] },
           { "game": 4, "methods": [1, 7] },
           { "game": 14, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 583, "formId": 1 }]
       }
     ]
   },
@@ -14039,7 +14419,8 @@
           { "game": 13, "methods": [1, 7] },
           { "game": 4, "methods": [1, 7] },
           { "game": 14, "methods": [1, 7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 584, "formId": 1 }]
       }
     ]
   },
@@ -14080,7 +14461,8 @@
         "obtainableIn": [
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 586, "formId": 1 }]
       },
       {
         "id": 2,
@@ -14091,7 +14473,8 @@
         "obtainableIn": [
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 586, "formId": 2 }]
       },
       {
         "id": 3,
@@ -14102,7 +14485,8 @@
         "obtainableIn": [
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 586, "formId": 3 }]
       },
       {
         "id": 4,
@@ -14113,7 +14497,8 @@
         "obtainableIn": [
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 586, "formId": 4 }]
       }
     ],
     "formsData": { "onlyVisual": true, "interchandable": false }
@@ -14212,7 +14597,8 @@
           { "game": 4, "methods": [1, 7] },
           { "game": 12, "methods": [1] },
           { "game": 14, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 589, "formId": 1 }]
       }
     ]
   },
@@ -14255,7 +14641,8 @@
           { "game": 12, "methods": [1, 7] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 591, "formId": 1 }]
       }
     ]
   },
@@ -14303,7 +14690,8 @@
           { "game": 11, "methods": [1, 7] },
           { "game": 4, "methods": [1, 7] },
           { "game": 12, "methods": [1, 7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 593, "formId": 1 }]
       }
     ]
   },
@@ -14372,7 +14760,8 @@
           { "game": 4, "methods": [1, 7] },
           { "game": 12, "methods": [7] },
           { "game": 14, "methods": [7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 596, "formId": 1 }]
       }
     ]
   },
@@ -14416,7 +14805,8 @@
           { "game": 13, "methods": [1] },
           { "game": 4, "methods": [1, 7] },
           { "game": 14, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 598, "formId": 1 }]
       }
     ]
   },
@@ -14456,7 +14846,8 @@
         "obtainableIn": [
           { "game": 3, "methods": [1, 7] },
           { "game": 4, "methods": [1, 7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 600, "formId": 1 }]
       }
     ]
   },
@@ -14477,7 +14868,8 @@
           { "game": 13, "methods": [7] },
           { "game": 4, "methods": [1, 7] },
           { "game": 14, "methods": [7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 601, "formId": 1 }]
       }
     ]
   },
@@ -14519,7 +14911,8 @@
         "obtainableIn": [
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 603, "formId": 1 }]
       }
     ]
   },
@@ -14538,7 +14931,8 @@
         "obtainableIn": [
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 604, "formId": 1 }]
       }
     ]
   },
@@ -14578,7 +14972,8 @@
           { "game": 11, "methods": [7] },
           { "game": 4, "methods": [1, 7] },
           { "game": 12, "methods": [7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 606, "formId": 1 }]
       }
     ]
   },
@@ -14622,7 +15017,8 @@
           { "game": 11, "methods": [7] },
           { "game": 4, "methods": [1, 7] },
           { "game": 12, "methods": [7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 608, "formId": 1 }]
       }
     ]
   },
@@ -14643,7 +15039,8 @@
           { "game": 13, "methods": [1, 7, 7] },
           { "game": 4, "methods": [1, 7] },
           { "game": 14, "methods": [1, 7, 7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 609, "formId": 1 }]
       }
     ]
   },
@@ -14687,7 +15084,8 @@
           { "game": 4, "methods": [1, 7] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 611, "formId": 1 }]
       }
     ]
   },
@@ -14710,7 +15108,8 @@
           { "game": 14, "methods": [7] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 612, "formId": 1 }]
       }
     ]
   },
@@ -14753,7 +15152,8 @@
           { "game": 4, "methods": [1, 7] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 614, "formId": 1 }]
       }
     ]
   },
@@ -14822,7 +15222,8 @@
           { "game": 4, "methods": [1, 7] },
           { "game": 12, "methods": [1] },
           { "game": 14, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 617, "formId": 1 }]
       }
     ]
   },
@@ -14897,7 +15298,8 @@
         "obtainableIn": [
           { "game": 11, "methods": [1, 7] },
           { "game": 12, "methods": [1, 7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 620, "formId": 1 }]
       }
     ]
   },
@@ -14960,7 +15362,8 @@
           { "game": 13, "methods": [7] },
           { "game": 4, "methods": [1, 7] },
           { "game": 14, "methods": [7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 623, "formId": 1 }]
       }
     ]
   },
@@ -15006,7 +15409,8 @@
           { "game": 12, "methods": [1, 7] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 625, "formId": 1 }]
       }
     ]
   },
@@ -15031,7 +15435,8 @@
           { "game": 14, "methods": [7] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": []
       }
     ]
   },
@@ -15075,6 +15480,10 @@
           { "game": 7, "methods": [1, 8] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
+        ],
+        "evolvesIn": [
+          { "number": 628, "formId": 1 },
+          { "number": 628, "formId": 2 }
         ]
       }
     ]
@@ -15124,7 +15533,8 @@
         "obtainableIn": [
           { "game": 4, "methods": [1, 7] },
           { "game": 12, "methods": [1, 7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 630, "formId": 1 }]
       }
     ]
   },
@@ -15205,7 +15615,8 @@
           { "game": 3, "methods": [1, 7] },
           { "game": 13, "methods": [1] },
           { "game": 8, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 634, "formId": 1 }]
       }
     ]
   },
@@ -15224,7 +15635,8 @@
         "obtainableIn": [
           { "game": 3, "methods": [1, 7] },
           { "game": 8, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 635, "formId": 1 }]
       }
     ]
   },
@@ -15265,7 +15677,8 @@
           { "game": 12, "methods": [1, 7] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 637, "formId": 1 }]
       }
     ]
   },
@@ -15564,7 +15977,8 @@
         "formType": 0,
         "types": [11],
         "movableTo": [11],
-        "obtainableIn": []
+        "obtainableIn": [],
+        "evolvesIn": [{ "number": 651, "formId": 1 }]
       }
     ]
   },
@@ -15580,7 +15994,8 @@
         "formType": 0,
         "types": [11],
         "movableTo": [11],
-        "obtainableIn": []
+        "obtainableIn": [],
+        "evolvesIn": [{ "number": 652, "formId": 1 }]
       }
     ]
   },
@@ -15612,7 +16027,8 @@
         "formType": 0,
         "types": [9],
         "movableTo": [11],
-        "obtainableIn": []
+        "obtainableIn": [],
+        "evolvesIn": [{ "number": 654, "formId": 1 }]
       }
     ]
   },
@@ -15628,7 +16044,8 @@
         "formType": 0,
         "types": [9],
         "movableTo": [11],
-        "obtainableIn": []
+        "obtainableIn": [],
+        "evolvesIn": [{ "number": 655, "formId": 1 }]
       }
     ]
   },
@@ -15660,7 +16077,8 @@
         "formType": 0,
         "types": [10],
         "movableTo": [11],
-        "obtainableIn": []
+        "obtainableIn": [],
+        "evolvesIn": [{ "number": 657, "formId": 1 }]
       }
     ]
   },
@@ -15676,7 +16094,8 @@
         "formType": 0,
         "types": [10],
         "movableTo": [11],
-        "obtainableIn": []
+        "obtainableIn": [],
+        "evolvesIn": [{ "number": 658, "formId": 1 }]
       }
     ]
   },
@@ -15711,7 +16130,8 @@
         "obtainableIn": [
           { "game": 3, "methods": [1, 7] },
           { "game": 4, "methods": [1, 7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 660, "formId": 1 }]
       }
     ]
   },
@@ -15753,7 +16173,8 @@
           { "game": 12, "methods": [1, 7] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 662, "formId": 1 }]
       }
     ]
   },
@@ -15774,7 +16195,8 @@
           { "game": 12, "methods": [1, 7] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 663, "formId": 1 }]
       }
     ]
   },
@@ -15816,7 +16238,8 @@
         "obtainableIn": [
           { "game": 8, "methods": [1] },
           { "game": 9, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 665, "formId": 1 }]
       }
     ]
   },
@@ -15835,6 +16258,28 @@
         "obtainableIn": [
           { "game": 8, "methods": [1] },
           { "game": 9, "methods": [1] }
+        ],
+        "evolvesIn": [
+          { "number": 666, "formId": 1 },
+          { "number": 666, "formId": 2 },
+          { "number": 666, "formId": 3 },
+          { "number": 666, "formId": 4 },
+          { "number": 666, "formId": 5 },
+          { "number": 666, "formId": 6 },
+          { "number": 666, "formId": 7 },
+          { "number": 666, "formId": 8 },
+          { "number": 666, "formId": 9 },
+          { "number": 666, "formId": 10 },
+          { "number": 666, "formId": 11 },
+          { "number": 666, "formId": 12 },
+          { "number": 666, "formId": 13 },
+          { "number": 666, "formId": 14 },
+          { "number": 666, "formId": 15 },
+          { "number": 666, "formId": 16 },
+          { "number": 666, "formId": 17 },
+          { "number": 666, "formId": 18 },
+          { "number": 666, "formId": 19 },
+          { "number": 666, "formId": 20 }
         ]
       }
     ]
@@ -16027,7 +16472,8 @@
         "obtainableIn": [
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 668, "formId": 1 }]
       }
     ]
   },
@@ -16070,7 +16516,8 @@
         "obtainableIn": [
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 670, "formId": 1 }]
       },
       {
         "id": 2,
@@ -16081,7 +16528,8 @@
         "obtainableIn": [
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 670, "formId": 2 }]
       },
       {
         "id": 3,
@@ -16092,7 +16540,8 @@
         "obtainableIn": [
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 670, "formId": 3 }]
       },
       {
         "id": 4,
@@ -16103,7 +16552,8 @@
         "obtainableIn": [
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 670, "formId": 4 }]
       },
       {
         "id": 5,
@@ -16114,7 +16564,8 @@
         "obtainableIn": [
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 670, "formId": 5 }]
       }
     ],
     "formsData": { "onlyVisual": true, "interchandable": false }
@@ -16135,7 +16586,8 @@
         "obtainableIn": [
           { "game": 8, "methods": [1] },
           { "game": 9, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 671, "formId": 1 }]
       },
       {
         "id": 2,
@@ -16146,7 +16598,8 @@
         "obtainableIn": [
           { "game": 8, "methods": [1] },
           { "game": 9, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 671, "formId": 2 }]
       },
       {
         "id": 3,
@@ -16157,7 +16610,8 @@
         "obtainableIn": [
           { "game": 8, "methods": [1] },
           { "game": 9, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 671, "formId": 3 }]
       },
       {
         "id": 4,
@@ -16168,7 +16622,8 @@
         "obtainableIn": [
           { "game": 8, "methods": [1] },
           { "game": 9, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 671, "formId": 4 }]
       },
       {
         "id": 5,
@@ -16179,7 +16634,8 @@
         "obtainableIn": [
           { "game": 8, "methods": [1] },
           { "game": 9, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 671, "formId": 5 }]
       }
     ],
     "formsData": { "onlyVisual": true, "interchandable": false }
@@ -16264,7 +16720,8 @@
         "obtainableIn": [
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 673, "formId": 1 }]
       }
     ]
   },
@@ -16302,7 +16759,8 @@
         "obtainableIn": [
           { "game": 3, "methods": [1, 7] },
           { "game": 4, "methods": [1, 7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 675, "formId": 1 }]
       }
     ]
   },
@@ -16358,7 +16816,8 @@
         "obtainableIn": [
           { "game": 3, "methods": [1, 7] },
           { "game": 4, "methods": [1, 7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 678, "formId": 1 }]
       }
     ]
   },
@@ -16402,7 +16861,8 @@
         "obtainableIn": [
           { "game": 3, "methods": [1, 7] },
           { "game": 4, "methods": [1, 7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 680, "formId": 1 }]
       }
     ]
   },
@@ -16423,7 +16883,8 @@
           { "game": 13, "methods": [7] },
           { "game": 4, "methods": [1, 7] },
           { "game": 14, "methods": [7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 681, "formId": 1 }]
       }
     ]
   },
@@ -16458,7 +16919,8 @@
         "formType": 0,
         "types": [17],
         "movableTo": [11, 3, 4],
-        "obtainableIn": [{ "game": 4, "methods": [1, 7] }]
+        "obtainableIn": [{ "game": 4, "methods": [1, 7] }],
+        "evolvesIn": [{ "number": 683, "formId": 1 }]
       }
     ]
   },
@@ -16490,7 +16952,8 @@
         "formType": 0,
         "types": [17],
         "movableTo": [11, 3, 4],
-        "obtainableIn": [{ "game": 3, "methods": [1, 7] }]
+        "obtainableIn": [{ "game": 3, "methods": [1, 7] }],
+        "evolvesIn": [{ "number": 685, "formId": 1 }]
       }
     ]
   },
@@ -16527,7 +16990,8 @@
           { "game": 11, "methods": [1, 7] },
           { "game": 4, "methods": [1, 7] },
           { "game": 12, "methods": [1, 7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 687, "formId": 1 }]
       }
     ]
   },
@@ -16571,7 +17035,8 @@
           { "game": 11, "methods": [7] },
           { "game": 4, "methods": [1, 7] },
           { "game": 12, "methods": [7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 689, "formId": 1 }]
       }
     ]
   },
@@ -16613,7 +17078,8 @@
         "obtainableIn": [
           { "game": 12, "methods": [1, 7] },
           { "game": 8, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 691, "formId": 1 }]
       }
     ]
   },
@@ -16651,7 +17117,8 @@
         "obtainableIn": [
           { "game": 11, "methods": [1, 7] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 693, "formId": 1 }]
       }
     ]
   },
@@ -16689,7 +17156,8 @@
         "obtainableIn": [
           { "game": 3, "methods": [1, 7] },
           { "game": 4, "methods": [1, 7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 695, "formId": 1 }]
       }
     ]
   },
@@ -16729,7 +17197,8 @@
         "obtainableIn": [
           { "game": 13, "methods": [1, 7] },
           { "game": 14, "methods": [1, 7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 697, "formId": 1 }]
       }
     ]
   },
@@ -16767,7 +17236,8 @@
         "obtainableIn": [
           { "game": 13, "methods": [1, 7] },
           { "game": 14, "methods": [1, 7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 699, "formId": 1 }]
       }
     ]
   },
@@ -16901,6 +17371,10 @@
           { "game": 7, "methods": [1, 8] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
+        ],
+        "evolvesIn": [
+          { "number": 705, "formId": 1 },
+          { "number": 705, "formId": 2 }
         ]
       }
     ]
@@ -16922,7 +17396,8 @@
           { "game": 12, "methods": [7] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 706, "formId": 1 }]
       },
       {
         "id": 2,
@@ -16931,7 +17406,8 @@
         "region": 9,
         "varieties": [1],
         "movableTo": [11, 3, 4, 7],
-        "obtainableIn": [{ "game": 7, "methods": [1, 8] }]
+        "obtainableIn": [{ "game": 7, "methods": [1, 8] }],
+        "evolvesIn": [{ "number": 706, "formId": 2 }]
       }
     ]
   },
@@ -17005,7 +17481,8 @@
           { "game": 13, "methods": [1, 7] },
           { "game": 4, "methods": [1, 7] },
           { "game": 14, "methods": [1, 7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 709, "formId": 1 }]
       }
     ]
   },
@@ -17046,7 +17523,8 @@
         "obtainableIn": [
           { "game": 3, "methods": [1, 7] },
           { "game": 4, "methods": [1, 7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 711, "formId": 1 }]
       },
       {
         "id": 2,
@@ -17057,7 +17535,8 @@
         "obtainableIn": [
           { "game": 3, "methods": [1, 7] },
           { "game": 4, "methods": [1, 7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 711, "formId": 2 }]
       },
       {
         "id": 3,
@@ -17068,7 +17547,8 @@
         "obtainableIn": [
           { "game": 3, "methods": [1, 7] },
           { "game": 4, "methods": [1, 7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 711, "formId": 3 }]
       },
       {
         "id": 4,
@@ -17079,7 +17559,8 @@
         "obtainableIn": [
           { "game": 3, "methods": [1, 7] },
           { "game": 4, "methods": [1, 7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 711, "formId": 4 }]
       }
     ],
     "formsData": { "onlyVisual": false, "interchandable": false }
@@ -17175,6 +17656,10 @@
           { "game": 7, "methods": [1, 8] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
+        ],
+        "evolvesIn": [
+          { "number": 713, "formId": 1 },
+          { "number": 713, "formId": 2 }
         ]
       }
     ]
@@ -17232,7 +17717,8 @@
           { "game": 14, "methods": [7] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 715, "formId": 1 }]
       }
     ]
   },
@@ -17391,7 +17877,8 @@
           { "game": 11, "methods": [3] },
           { "game": 12, "methods": [3] },
           { "game": 7, "methods": [8, 9, 2] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 723, "formId": 1 }]
       }
     ]
   },
@@ -17408,7 +17895,11 @@
         "types": [11, 2],
         "varieties": [1],
         "movableTo": [11, 3, 4, 7],
-        "obtainableIn": [{ "game": 7, "methods": [8, 9] }]
+        "obtainableIn": [{ "game": 7, "methods": [8, 9] }],
+        "evolvesIn": [
+          { "number": 724, "formId": 1 },
+          { "number": 724, "formId": 2 }
+        ]
       }
     ]
   },
@@ -17452,7 +17943,8 @@
         "obtainableIn": [
           { "game": 11, "methods": [3] },
           { "game": 12, "methods": [3] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 726, "formId": 1 }]
       }
     ]
   },
@@ -17468,7 +17960,8 @@
         "formType": 0,
         "types": [9],
         "movableTo": [11, 3, 4],
-        "obtainableIn": []
+        "obtainableIn": [],
+        "evolvesIn": [{ "number": 727, "formId": 1 }]
       }
     ]
   },
@@ -17503,7 +17996,8 @@
         "obtainableIn": [
           { "game": 11, "methods": [3] },
           { "game": 12, "methods": [3] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 729, "formId": 1 }]
       }
     ]
   },
@@ -17519,7 +18013,8 @@
         "formType": 0,
         "types": [10],
         "movableTo": [11, 3, 4],
-        "obtainableIn": []
+        "obtainableIn": [],
+        "evolvesIn": [{ "number": 730, "formId": 1 }]
       }
     ]
   },
@@ -17551,7 +18046,8 @@
         "formType": 0,
         "types": [0, 2],
         "movableTo": [11],
-        "obtainableIn": []
+        "obtainableIn": [],
+        "evolvesIn": [{ "number": 732, "formId": 1 }]
       }
     ]
   },
@@ -17567,7 +18063,8 @@
         "formType": 0,
         "types": [0, 2],
         "movableTo": [11],
-        "obtainableIn": []
+        "obtainableIn": [],
+        "evolvesIn": [{ "number": 733, "formId": 1 }]
       }
     ]
   },
@@ -17602,7 +18099,8 @@
         "obtainableIn": [
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 735, "formId": 1 }]
       }
     ]
   },
@@ -17640,7 +18138,8 @@
         "obtainableIn": [
           { "game": 3, "methods": [1, 7] },
           { "game": 4, "methods": [1, 7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 737, "formId": 1 }]
       }
     ]
   },
@@ -17661,7 +18160,8 @@
           { "game": 13, "methods": [7] },
           { "game": 4, "methods": [1, 7] },
           { "game": 14, "methods": [7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 738, "formId": 1 }]
       }
     ]
   },
@@ -17701,7 +18201,8 @@
         "obtainableIn": [
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 740, "formId": 1 }]
       }
     ]
   },
@@ -17795,7 +18296,8 @@
           { "game": 11, "methods": [7] },
           { "game": 4, "methods": [1, 7] },
           { "game": 12, "methods": [7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 743, "formId": 1 }]
       }
     ]
   },
@@ -17839,6 +18341,11 @@
           { "game": 12, "methods": [1, 7] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
+        ],
+        "evolvesIn": [
+          { "number": 745, "formId": 3 },
+          { "number": 745, "formId": 1 },
+          { "number": 745, "formId": 2 }
         ]
       }
     ]
@@ -17931,7 +18438,8 @@
           { "game": 12, "methods": [1, 7] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 748, "formId": 1 }]
       }
     ]
   },
@@ -17975,7 +18483,8 @@
           { "game": 4, "methods": [1, 7] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 750, "formId": 1 }]
       }
     ]
   },
@@ -18021,7 +18530,8 @@
           { "game": 4, "methods": [1, 7] },
           { "game": 12, "methods": [7] },
           { "game": 14, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 752, "formId": 1 }]
       }
     ]
   },
@@ -18065,7 +18575,8 @@
           { "game": 12, "methods": [1, 7] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 754, "formId": 1 }]
       }
     ]
   },
@@ -18109,7 +18620,8 @@
           { "game": 11, "methods": [7] },
           { "game": 4, "methods": [1, 7] },
           { "game": 12, "methods": [7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 756, "formId": 1 }]
       }
     ]
   },
@@ -18155,7 +18667,8 @@
           { "game": 12, "methods": [1, 7] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 758, "formId": 1 }]
       }
     ]
   },
@@ -18201,7 +18714,8 @@
           { "game": 11, "methods": [7] },
           { "game": 4, "methods": [1, 7] },
           { "game": 12, "methods": [7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 760, "formId": 1 }]
       }
     ]
   },
@@ -18245,7 +18759,8 @@
           { "game": 4, "methods": [1, 7] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 762, "formId": 1 }]
       }
     ]
   },
@@ -18268,7 +18783,8 @@
           { "game": 12, "methods": [7] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 763, "formId": 1 }]
       }
     ]
   },
@@ -18379,7 +18895,8 @@
           { "game": 11, "methods": [1] },
           { "game": 4, "methods": [1, 7] },
           { "game": 12, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 768, "formId": 1 }]
       }
     ]
   },
@@ -18421,7 +18938,8 @@
           { "game": 12, "methods": [1, 7] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 770, "formId": 1 }]
       }
     ]
   },
@@ -18486,7 +19004,8 @@
         "obtainableIn": [
           { "game": 3, "methods": [3] },
           { "game": 4, "methods": [3] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 773, "formId": 1 }]
       }
     ]
   },
@@ -18736,7 +19255,8 @@
         "obtainableIn": [
           { "game": 3, "methods": [1, 7] },
           { "game": 11, "methods": [1, 7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 783, "formId": 1 }]
       }
     ]
   },
@@ -18755,7 +19275,8 @@
         "obtainableIn": [
           { "game": 3, "methods": [1, 7] },
           { "game": 11, "methods": [7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 784, "formId": 1 }]
       }
     ]
   },
@@ -18869,7 +19390,8 @@
         "obtainableIn": [
           { "game": 13, "methods": [3] },
           { "game": 14, "methods": [3] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 790, "formId": 1 }]
       }
     ]
   },
@@ -18885,7 +19407,11 @@
         "formType": 0,
         "types": [13],
         "movableTo": [11, 3, 4],
-        "obtainableIn": []
+        "obtainableIn": [],
+        "evolvesIn": [
+          { "number": 791, "formId": 1 },
+          { "number": 792, "formId": 1 }
+        ]
       }
     ]
   },
@@ -19130,7 +19656,8 @@
         "obtainableIn": [
           { "game": 13, "methods": [3] },
           { "game": 14, "methods": [3] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 804, "formId": 1 }]
       }
     ]
   },
@@ -19216,7 +19743,8 @@
         "formType": 0,
         "types": [8],
         "movableTo": [1, 11, 2, 3, 4],
-        "obtainableIn": []
+        "obtainableIn": [],
+        "evolvesIn": [{ "number": 809, "formId": 1 }]
       }
     ]
   },
@@ -19252,7 +19780,8 @@
         "obtainableIn": [
           { "game": 3, "methods": [2] },
           { "game": 4, "methods": [2] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 811, "formId": 1 }]
       }
     ]
   },
@@ -19268,7 +19797,8 @@
         "formType": 0,
         "types": [11],
         "movableTo": [11, 3, 4],
-        "obtainableIn": []
+        "obtainableIn": [],
+        "evolvesIn": [{ "number": 812, "formId": 1 }]
       }
     ]
   },
@@ -19304,7 +19834,8 @@
         "obtainableIn": [
           { "game": 3, "methods": [2] },
           { "game": 4, "methods": [2] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 814, "formId": 1 }]
       }
     ]
   },
@@ -19320,7 +19851,8 @@
         "formType": 0,
         "types": [9],
         "movableTo": [11, 3, 4],
-        "obtainableIn": []
+        "obtainableIn": [],
+        "evolvesIn": [{ "number": 815, "formId": 1 }]
       }
     ]
   },
@@ -19356,7 +19888,8 @@
         "obtainableIn": [
           { "game": 3, "methods": [2] },
           { "game": 4, "methods": [2] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 817, "formId": 1 }]
       }
     ]
   },
@@ -19372,7 +19905,8 @@
         "formType": 0,
         "types": [10],
         "movableTo": [11, 3, 4],
-        "obtainableIn": []
+        "obtainableIn": [],
+        "evolvesIn": [{ "number": 818, "formId": 1 }]
       }
     ]
   },
@@ -19414,7 +19948,8 @@
           { "game": 14, "methods": [1, 7] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 820, "formId": 1 }]
       }
     ]
   },
@@ -19460,7 +19995,8 @@
           { "game": 4, "methods": [1, 7] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 822, "formId": 1 }]
       }
     ]
   },
@@ -19483,7 +20019,8 @@
           { "game": 14, "methods": [1, 7] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 823, "formId": 1 }]
       }
     ]
   },
@@ -19528,7 +20065,8 @@
           { "game": 11, "methods": [1, 7] },
           { "game": 4, "methods": [1, 7] },
           { "game": 12, "methods": [1, 7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 825, "formId": 1 }]
       }
     ]
   },
@@ -19549,7 +20087,8 @@
           { "game": 11, "methods": [7] },
           { "game": 4, "methods": [1, 7] },
           { "game": 12, "methods": [7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 826, "formId": 1 }]
       }
     ]
   },
@@ -19592,7 +20131,8 @@
         "obtainableIn": [
           { "game": 3, "methods": [1, 7] },
           { "game": 4, "methods": [1, 7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 828, "formId": 1 }]
       }
     ]
   },
@@ -19636,7 +20176,8 @@
           { "game": 13, "methods": [1, 7] },
           { "game": 4, "methods": [1, 7] },
           { "game": 14, "methods": [1, 7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 830, "formId": 1 }]
       }
     ]
   },
@@ -19678,7 +20219,8 @@
           { "game": 13, "methods": [1, 7] },
           { "game": 4, "methods": [1, 7] },
           { "game": 14, "methods": [1, 7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 832, "formId": 1 }]
       }
     ]
   },
@@ -19724,7 +20266,8 @@
           { "game": 12, "methods": [1, 7] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 834, "formId": 1 }]
       }
     ]
   },
@@ -19771,7 +20314,8 @@
           { "game": 13, "methods": [1] },
           { "game": 4, "methods": [1, 7] },
           { "game": 14, "methods": [1] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 836, "formId": 1 }]
       }
     ]
   },
@@ -19816,7 +20360,8 @@
           { "game": 14, "methods": [7] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 838, "formId": 1 }]
       }
     ]
   },
@@ -19839,7 +20384,8 @@
           { "game": 14, "methods": [1, 7, 7] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 839, "formId": 1 }]
       }
     ]
   },
@@ -19886,6 +20432,10 @@
           { "game": 12, "methods": [1, 7] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
+        ],
+        "evolvesIn": [
+          { "number": 841, "formId": 1 },
+          { "number": 842, "formId": 1 }
         ]
       }
     ]
@@ -19953,7 +20503,8 @@
           { "game": 12, "methods": [1, 6, 7] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 844, "formId": 1 }]
       }
     ]
   },
@@ -20025,7 +20576,8 @@
           { "game": 12, "methods": [1, 7] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 847, "formId": 1 }]
       }
     ]
   },
@@ -20071,6 +20623,10 @@
           { "game": 4, "methods": [1, 7] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
+        ],
+        "evolvesIn": [
+          { "number": 849, "formId": 1 },
+          { "number": 849, "formId": 2 }
         ]
       }
     ]
@@ -20134,7 +20690,8 @@
           { "game": 13, "methods": [1, 7] },
           { "game": 4, "methods": [1, 7] },
           { "game": 14, "methods": [1, 7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 851, "formId": 1 }]
       }
     ]
   },
@@ -20177,7 +20734,8 @@
           { "game": 11, "methods": [1, 7] },
           { "game": 4, "methods": [1, 7] },
           { "game": 12, "methods": [1, 7] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 853, "formId": 1 }]
       }
     ]
   },
@@ -20224,7 +20782,8 @@
           { "game": 14, "methods": [1, 7] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 855, "formId": 1 }]
       },
       {
         "id": 2,
@@ -20239,7 +20798,8 @@
           { "game": 14, "methods": [1, 7] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 855, "formId": 2 }]
       }
     ],
     "formsData": { "onlyVisual": true, "interchandable": false }
@@ -20296,7 +20856,8 @@
           { "game": 14, "methods": [1, 7] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 857, "formId": 1 }]
       }
     ]
   },
@@ -20319,7 +20880,8 @@
           { "game": 14, "methods": [1, 7] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 858, "formId": 1 }]
       }
     ]
   },
@@ -20366,7 +20928,8 @@
           { "game": 14, "methods": [1, 7] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 860, "formId": 1 }]
       }
     ]
   },
@@ -20389,7 +20952,8 @@
           { "game": 14, "methods": [1, 7] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 861, "formId": 1 }]
       }
     ]
   },
@@ -20556,6 +21120,71 @@
         "obtainableIn": [
           { "game": 3, "methods": [1, 7] },
           { "game": 4, "methods": [1, 7] }
+        ],
+        "evolvesIn": [
+          { "number": 869, "formId": 1 },
+          { "number": 869, "formId": 2 },
+          { "number": 869, "formId": 3 },
+          { "number": 869, "formId": 4 },
+          { "number": 869, "formId": 5 },
+          { "number": 869, "formId": 6 },
+          { "number": 869, "formId": 7 },
+          { "number": 869, "formId": 8 },
+          { "number": 869, "formId": 9 },
+          { "number": 869, "formId": 10 },
+          { "number": 869, "formId": 11 },
+          { "number": 869, "formId": 12 },
+          { "number": 869, "formId": 13 },
+          { "number": 869, "formId": 14 },
+          { "number": 869, "formId": 15 },
+          { "number": 869, "formId": 16 },
+          { "number": 869, "formId": 17 },
+          { "number": 869, "formId": 18 },
+          { "number": 869, "formId": 19 },
+          { "number": 869, "formId": 20 },
+          { "number": 869, "formId": 21 },
+          { "number": 869, "formId": 22 },
+          { "number": 869, "formId": 23 },
+          { "number": 869, "formId": 24 },
+          { "number": 869, "formId": 25 },
+          { "number": 869, "formId": 26 },
+          { "number": 869, "formId": 27 },
+          { "number": 869, "formId": 28 },
+          { "number": 869, "formId": 29 },
+          { "number": 869, "formId": 30 },
+          { "number": 869, "formId": 31 },
+          { "number": 869, "formId": 32 },
+          { "number": 869, "formId": 33 },
+          { "number": 869, "formId": 34 },
+          { "number": 869, "formId": 35 },
+          { "number": 869, "formId": 36 },
+          { "number": 869, "formId": 37 },
+          { "number": 869, "formId": 38 },
+          { "number": 869, "formId": 39 },
+          { "number": 869, "formId": 40 },
+          { "number": 869, "formId": 41 },
+          { "number": 869, "formId": 42 },
+          { "number": 869, "formId": 43 },
+          { "number": 869, "formId": 44 },
+          { "number": 869, "formId": 45 },
+          { "number": 869, "formId": 46 },
+          { "number": 869, "formId": 47 },
+          { "number": 869, "formId": 48 },
+          { "number": 869, "formId": 49 },
+          { "number": 869, "formId": 50 },
+          { "number": 869, "formId": 51 },
+          { "number": 869, "formId": 52 },
+          { "number": 869, "formId": 53 },
+          { "number": 869, "formId": 54 },
+          { "number": 869, "formId": 55 },
+          { "number": 869, "formId": 56 },
+          { "number": 869, "formId": 57 },
+          { "number": 869, "formId": 58 },
+          { "number": 869, "formId": 59 },
+          { "number": 869, "formId": 60 },
+          { "number": 869, "formId": 61 },
+          { "number": 869, "formId": 62 },
+          { "number": 869, "formId": 63 }
         ]
       }
     ]
@@ -21521,7 +22150,8 @@
           { "game": 14, "methods": [1] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 873, "formId": 1 }]
       }
     ]
   },
@@ -21659,7 +22289,8 @@
           { "game": 14, "methods": [1] },
           { "game": 8, "methods": [1, 4] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 879, "formId": 1 }]
       }
     ]
   },
@@ -21811,7 +22442,8 @@
           { "game": 4, "methods": [1, 7] },
           { "game": 14, "methods": [7] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 886, "formId": 1 }]
       }
     ]
   },
@@ -21833,7 +22465,8 @@
           { "game": 4, "methods": [1, 7] },
           { "game": 14, "methods": [1, 7, 7] },
           { "game": 9, "methods": [1, 4] }
-        ]
+        ],
+        "evolvesIn": [{ "number": 887, "formId": 1 }]
       }
     ]
   },
@@ -21925,6 +22558,10 @@
         "obtainableIn": [
           { "game": 11, "methods": [3] },
           { "game": 12, "methods": [3] }
+        ],
+        "evolvesIn": [
+          { "number": 892, "formId": 1 },
+          { "number": 892, "formId": 2 }
         ]
       }
     ]

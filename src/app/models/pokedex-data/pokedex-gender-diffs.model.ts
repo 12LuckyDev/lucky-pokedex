@@ -1,4 +1,4 @@
 export interface PokedexGenderDiffs {
-  desc: string;
+  desc?: string;
   onlyVisual: boolean;
 }

@@ -9,4 +9,5 @@ export const REGIONAL_FORM = {
   galar: 7,
   unknown: 8,
   hisui: 9,
+  paldea: 10,
 };

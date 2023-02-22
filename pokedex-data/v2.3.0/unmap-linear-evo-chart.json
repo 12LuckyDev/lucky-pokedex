@@ -1,0 +1,1411 @@
+[
+  [
+    { "number": "#001", "form": null },
+    { "number": "#002", "form": null },
+    { "number": "#003", "form": null }
+  ],
+  [
+    { "number": "#004", "form": null },
+    { "number": "#005", "form": null },
+    { "number": "#006", "form": null }
+  ],
+  [
+    { "number": "#007", "form": null },
+    { "number": "#008", "form": null },
+    { "number": "#009", "form": null }
+  ],
+  [
+    { "number": "#010", "form": null },
+    { "number": "#011", "form": null },
+    { "number": "#012", "form": null }
+  ],
+  [
+    { "number": "#013", "form": null },
+    { "number": "#014", "form": null },
+    { "number": "#015", "form": null }
+  ],
+  [
+    { "number": "#016", "form": null },
+    { "number": "#017", "form": null },
+    { "number": "#018", "form": null }
+  ],
+  [
+    { "number": "#019", "form": null },
+    { "number": "#020", "form": null }
+  ],
+  [
+    { "number": "#019", "form": "Alolan Rattata" },
+    { "number": "#020", "form": "Alolan Raticate" }
+  ],
+  [
+    { "number": "#021", "form": null },
+    { "number": "#022", "form": null }
+  ],
+  [
+    { "number": "#023", "form": null },
+    { "number": "#024", "form": null }
+  ],
+  [
+    { "number": "#027", "form": null },
+    { "number": "#028", "form": null }
+  ],
+  [
+    { "number": "#027", "form": "Alolan Sandshrew" },
+    { "number": "#028", "form": "Alolan Sandslash" }
+  ],
+  [
+    { "number": "#029", "form": null },
+    { "number": "#030", "form": null },
+    { "number": "#031", "form": null }
+  ],
+  [
+    { "number": "#032", "form": null },
+    { "number": "#033", "form": null },
+    { "number": "#034", "form": null }
+  ],
+  [
+    { "number": "#173", "form": null },
+    { "number": "#035", "form": null },
+    { "number": "#036", "form": null }
+  ],
+  [
+    { "number": "#037", "form": null },
+    { "number": "#038", "form": null }
+  ],
+  [
+    { "number": "#037", "form": "Alolan Vulpix" },
+    { "number": "#038", "form": "Alolan Ninetales" }
+  ],
+  [
+    { "number": "#174", "form": null },
+    { "number": "#039", "form": null },
+    { "number": "#040", "form": null }
+  ],
+  [
+    { "number": "#041", "form": null },
+    { "number": "#042", "form": null },
+    { "number": "#169", "form": null }
+  ],
+  [
+    { "number": "#046", "form": null },
+    { "number": "#047", "form": null }
+  ],
+  [
+    { "number": "#048", "form": null },
+    { "number": "#049", "form": null }
+  ],
+  [
+    { "number": "#050", "form": null },
+    { "number": "#051", "form": null }
+  ],
+  [
+    { "number": "#050", "form": "Alolan Diglett" },
+    { "number": "#051", "form": "Alolan Dugtrio" }
+  ],
+  [
+    { "number": "#052", "form": null },
+    { "number": "#053", "form": null }
+  ],
+  [
+    { "number": "#052", "form": "Alolan Meowth" },
+    { "number": "#053", "form": "Alolan Persian" }
+  ],
+  [
+    { "number": "#052", "form": "Galarian Meowth" },
+    { "number": "#863", "form": null }
+  ],
+  [
+    { "number": "#054", "form": null },
+    { "number": "#055", "form": null }
+  ],
+  [
+    { "number": "#056", "form": null },
+    { "number": "#057", "form": null },
+    { "number": "#979", "form": null }
+  ],
+  [
+    { "number": "#058", "form": null },
+    { "number": "#059", "form": null }
+  ],
+  [
+    { "number": "#058", "form": "Hisuian Growlithe" },
+    { "number": "#059", "form": "Hisuian Arcanine" }
+  ],
+  [
+    { "number": "#063", "form": null },
+    { "number": "#064", "form": null },
+    { "number": "#065", "form": null }
+  ],
+  [
+    { "number": "#066", "form": null },
+    { "number": "#067", "form": null },
+    { "number": "#068", "form": null }
+  ],
+  [
+    { "number": "#069", "form": null },
+    { "number": "#070", "form": null },
+    { "number": "#071", "form": null }
+  ],
+  [
+    { "number": "#072", "form": null },
+    { "number": "#073", "form": null }
+  ],
+  [
+    { "number": "#074", "form": null },
+    { "number": "#075", "form": null },
+    { "number": "#076", "form": null }
+  ],
+  [
+    { "number": "#074", "form": "Alolan Geodude" },
+    { "number": "#075", "form": "Alolan Graveler" },
+    { "number": "#076", "form": "Alolan Golem" }
+  ],
+  [
+    { "number": "#077", "form": null },
+    { "number": "#078", "form": null }
+  ],
+  [
+    { "number": "#077", "form": "Galarian Ponyta" },
+    { "number": "#078", "form": "Galarian Rapidash" }
+  ],
+  [
+    { "number": "#081", "form": null },
+    { "number": "#082", "form": null },
+    { "number": "#462", "form": null }
+  ],
+  [
+    { "number": "#084", "form": null },
+    { "number": "#085", "form": null }
+  ],
+  [
+    { "number": "#086", "form": null },
+    { "number": "#087", "form": null }
+  ],
+  [
+    { "number": "#088", "form": null },
+    { "number": "#089", "form": null }
+  ],
+  [
+    { "number": "#088", "form": "Alolan Grimer" },
+    { "number": "#089", "form": "Alolan Muk" }
+  ],
+  [
+    { "number": "#090", "form": null },
+    { "number": "#091", "form": null }
+  ],
+  [
+    { "number": "#092", "form": null },
+    { "number": "#093", "form": null },
+    { "number": "#094", "form": null }
+  ],
+  [
+    { "number": "#095", "form": null },
+    { "number": "#208", "form": null }
+  ],
+  [
+    { "number": "#096", "form": null },
+    { "number": "#097", "form": null }
+  ],
+  [
+    { "number": "#098", "form": null },
+    { "number": "#099", "form": null }
+  ],
+  [
+    { "number": "#100", "form": null },
+    { "number": "#101", "form": null }
+  ],
+  [
+    { "number": "#100", "form": "Hisuian Voltorb" },
+    { "number": "#101", "form": "Hisuian Electrode" }
+  ],
+  [
+    { "number": "#108", "form": null },
+    { "number": "#463", "form": null }
+  ],
+  [
+    { "number": "#111", "form": null },
+    { "number": "#112", "form": null },
+    { "number": "#464", "form": null }
+  ],
+  [
+    { "number": "#440", "form": null },
+    { "number": "#113", "form": null },
+    { "number": "#242", "form": null }
+  ],
+  [
+    { "number": "#114", "form": null },
+    { "number": "#465", "form": null }
+  ],
+  [
+    { "number": "#116", "form": null },
+    { "number": "#117", "form": null },
+    { "number": "#230", "form": null }
+  ],
+  [
+    { "number": "#118", "form": null },
+    { "number": "#119", "form": null }
+  ],
+  [
+    { "number": "#120", "form": null },
+    { "number": "#121", "form": null }
+  ],
+  [
+    { "number": "#238", "form": null },
+    { "number": "#124", "form": null }
+  ],
+  [
+    { "number": "#239", "form": null },
+    { "number": "#125", "form": null },
+    { "number": "#466", "form": null }
+  ],
+  [
+    { "number": "#240", "form": null },
+    { "number": "#126", "form": null },
+    { "number": "#467", "form": null }
+  ],
+  [
+    { "number": "#129", "form": null },
+    { "number": "#130", "form": null }
+  ],
+  [
+    { "number": "#133", "form": null },
+    { "number": "#700", "form": null }
+  ],
+  [
+    { "number": "#137", "form": null },
+    { "number": "#233", "form": null },
+    { "number": "#474", "form": null }
+  ],
+  [
+    { "number": "#138", "form": null },
+    { "number": "#139", "form": null }
+  ],
+  [
+    { "number": "#140", "form": null },
+    { "number": "#141", "form": null }
+  ],
+  [
+    { "number": "#446", "form": null },
+    { "number": "#143", "form": null }
+  ],
+  [
+    { "number": "#147", "form": null },
+    { "number": "#148", "form": null },
+    { "number": "#149", "form": null }
+  ],
+  [
+    { "number": "#152", "form": null },
+    { "number": "#153", "form": null },
+    { "number": "#154", "form": null }
+  ],
+  [
+    { "number": "#158", "form": null },
+    { "number": "#159", "form": null },
+    { "number": "#160", "form": null }
+  ],
+  [
+    { "number": "#161", "form": null },
+    { "number": "#162", "form": null }
+  ],
+  [
+    { "number": "#163", "form": null },
+    { "number": "#164", "form": null }
+  ],
+  [
+    { "number": "#165", "form": null },
+    { "number": "#166", "form": null }
+  ],
+  [
+    { "number": "#167", "form": null },
+    { "number": "#168", "form": null }
+  ],
+  [
+    { "number": "#170", "form": null },
+    { "number": "#171", "form": null }
+  ],
+  [
+    { "number": "#175", "form": null },
+    { "number": "#176", "form": null },
+    { "number": "#468", "form": null }
+  ],
+  [
+    { "number": "#177", "form": null },
+    { "number": "#178", "form": null }
+  ],
+  [
+    { "number": "#179", "form": null },
+    { "number": "#180", "form": null },
+    { "number": "#181", "form": null }
+  ],
+  [
+    { "number": "#298", "form": null },
+    { "number": "#183", "form": null },
+    { "number": "#184", "form": null }
+  ],
+  [
+    { "number": "#438", "form": null },
+    { "number": "#185", "form": null }
+  ],
+  [
+    { "number": "#187", "form": null },
+    { "number": "#188", "form": null },
+    { "number": "#189", "form": null }
+  ],
+  [
+    { "number": "#190", "form": null },
+    { "number": "#424", "form": null }
+  ],
+  [
+    { "number": "#191", "form": null },
+    { "number": "#192", "form": null }
+  ],
+  [
+    { "number": "#193", "form": null },
+    { "number": "#469", "form": null }
+  ],
+  [
+    { "number": "#194", "form": null },
+    { "number": "#195", "form": null }
+  ],
+  [
+    { "number": "#194", "form": "Paldean Wooper" },
+    { "number": "#980", "form": null }
+  ],
+  [
+    { "number": "#198", "form": null },
+    { "number": "#430", "form": null }
+  ],
+  [
+    { "number": "#200", "form": null },
+    { "number": "#429", "form": null }
+  ],
+  [
+    { "number": "#360", "form": null },
+    { "number": "#202", "form": null }
+  ],
+  [
+    { "number": "#204", "form": null },
+    { "number": "#205", "form": null }
+  ],
+  [
+    { "number": "#207", "form": null },
+    { "number": "#472", "form": null }
+  ],
+  [
+    { "number": "#209", "form": null },
+    { "number": "#210", "form": null }
+  ],
+  [
+    { "number": "#215", "form": null },
+    { "number": "#461", "form": null }
+  ],
+  [
+    { "number": "#215", "form": "Hisuian Sneasel" },
+    { "number": "#903", "form": null }
+  ],
+  [
+    { "number": "#216", "form": null },
+    { "number": "#217", "form": null },
+    { "number": "#901", "form": null }
+  ],
+  [
+    { "number": "#218", "form": null },
+    { "number": "#219", "form": null }
+  ],
+  [
+    { "number": "#220", "form": null },
+    { "number": "#221", "form": null },
+    { "number": "#473", "form": null }
+  ],
+  [
+    { "number": "#223", "form": null },
+    { "number": "#224", "form": null }
+  ],
+  [
+    { "number": "#458", "form": null },
+    { "number": "#226", "form": null }
+  ],
+  [
+    { "number": "#228", "form": null },
+    { "number": "#229", "form": null }
+  ],
+  [
+    { "number": "#231", "form": null },
+    { "number": "#232", "form": null }
+  ],
+  [
+    { "number": "#246", "form": null },
+    { "number": "#247", "form": null },
+    { "number": "#248", "form": null }
+  ],
+  [
+    { "number": "#234", "form": null },
+    { "number": "#899", "form": null }
+  ],
+  [
+    { "number": "#203", "form": null },
+    { "number": "#981", "form": null }
+  ],
+  [
+    { "number": "#252", "form": null },
+    { "number": "#253", "form": null },
+    { "number": "#254", "form": null }
+  ],
+  [
+    { "number": "#255", "form": null },
+    { "number": "#256", "form": null },
+    { "number": "#257", "form": null }
+  ],
+  [
+    { "number": "#258", "form": null },
+    { "number": "#259", "form": null },
+    { "number": "#260", "form": null }
+  ],
+  [
+    { "number": "#261", "form": null },
+    { "number": "#262", "form": null }
+  ],
+  [
+    { "number": "#263", "form": null },
+    { "number": "#264", "form": null }
+  ],
+  [
+    { "number": "#263", "form": "Galarian Zigzagoon" },
+    { "number": "#264", "form": "Galarian Linoone" },
+    { "number": "#862", "form": null }
+  ],
+  [
+    { "number": "#270", "form": null },
+    { "number": "#271", "form": null },
+    { "number": "#272", "form": null }
+  ],
+  [
+    { "number": "#273", "form": null },
+    { "number": "#274", "form": null },
+    { "number": "#275", "form": null }
+  ],
+  [
+    { "number": "#276", "form": null },
+    { "number": "#277", "form": null }
+  ],
+  [
+    { "number": "#278", "form": null },
+    { "number": "#279", "form": null }
+  ],
+  [
+    { "number": "#283", "form": null },
+    { "number": "#284", "form": null }
+  ],
+  [
+    { "number": "#285", "form": null },
+    { "number": "#286", "form": null }
+  ],
+  [
+    { "number": "#287", "form": null },
+    { "number": "#288", "form": null },
+    { "number": "#289", "form": null }
+  ],
+  [
+    { "number": "#293", "form": null },
+    { "number": "#294", "form": null },
+    { "number": "#295", "form": null }
+  ],
+  [
+    { "number": "#296", "form": null },
+    { "number": "#297", "form": null }
+  ],
+  [
+    { "number": "#299", "form": null },
+    { "number": "#476", "form": null }
+  ],
+  [
+    { "number": "#300", "form": null },
+    { "number": "#301", "form": null }
+  ],
+  [
+    { "number": "#304", "form": null },
+    { "number": "#305", "form": null },
+    { "number": "#306", "form": null }
+  ],
+  [
+    { "number": "#307", "form": null },
+    { "number": "#308", "form": null }
+  ],
+  [
+    { "number": "#309", "form": null },
+    { "number": "#310", "form": null }
+  ],
+  [
+    { "number": "#406", "form": null },
+    { "number": "#315", "form": null },
+    { "number": "#407", "form": null }
+  ],
+  [
+    { "number": "#316", "form": null },
+    { "number": "#317", "form": null }
+  ],
+  [
+    { "number": "#318", "form": null },
+    { "number": "#319", "form": null }
+  ],
+  [
+    { "number": "#320", "form": null },
+    { "number": "#321", "form": null }
+  ],
+  [
+    { "number": "#322", "form": null },
+    { "number": "#323", "form": null }
+  ],
+  [
+    { "number": "#325", "form": null },
+    { "number": "#326", "form": null }
+  ],
+  [
+    { "number": "#328", "form": null },
+    { "number": "#329", "form": null },
+    { "number": "#330", "form": null }
+  ],
+  [
+    { "number": "#331", "form": null },
+    { "number": "#332", "form": null }
+  ],
+  [
+    { "number": "#333", "form": null },
+    { "number": "#334", "form": null }
+  ],
+  [
+    { "number": "#339", "form": null },
+    { "number": "#340", "form": null }
+  ],
+  [
+    { "number": "#341", "form": null },
+    { "number": "#342", "form": null }
+  ],
+  [
+    { "number": "#343", "form": null },
+    { "number": "#344", "form": null }
+  ],
+  [
+    { "number": "#345", "form": null },
+    { "number": "#346", "form": null }
+  ],
+  [
+    { "number": "#347", "form": null },
+    { "number": "#348", "form": null }
+  ],
+  [
+    { "number": "#349", "form": null },
+    { "number": "#350", "form": null }
+  ],
+  [
+    { "number": "#353", "form": null },
+    { "number": "#354", "form": null }
+  ],
+  [
+    { "number": "#355", "form": null },
+    { "number": "#356", "form": null },
+    { "number": "#477", "form": null }
+  ],
+  [
+    { "number": "#433", "form": null },
+    { "number": "#358", "form": null }
+  ],
+  [
+    { "number": "#363", "form": null },
+    { "number": "#364", "form": null },
+    { "number": "#365", "form": null }
+  ],
+  [
+    { "number": "#371", "form": null },
+    { "number": "#372", "form": null },
+    { "number": "#373", "form": null }
+  ],
+  [
+    { "number": "#374", "form": null },
+    { "number": "#375", "form": null },
+    { "number": "#376", "form": null }
+  ],
+  [
+    { "number": "#387", "form": null },
+    { "number": "#388", "form": null },
+    { "number": "#389", "form": null }
+  ],
+  [
+    { "number": "#390", "form": null },
+    { "number": "#391", "form": null },
+    { "number": "#392", "form": null }
+  ],
+  [
+    { "number": "#393", "form": null },
+    { "number": "#394", "form": null },
+    { "number": "#395", "form": null }
+  ],
+  [
+    { "number": "#396", "form": null },
+    { "number": "#397", "form": null },
+    { "number": "#398", "form": null }
+  ],
+  [
+    { "number": "#399", "form": null },
+    { "number": "#400", "form": null }
+  ],
+  [
+    { "number": "#401", "form": null },
+    { "number": "#402", "form": null }
+  ],
+  [
+    { "number": "#403", "form": null },
+    { "number": "#404", "form": null },
+    { "number": "#405", "form": null }
+  ],
+  [
+    { "number": "#408", "form": null },
+    { "number": "#409", "form": null }
+  ],
+  [
+    { "number": "#410", "form": null },
+    { "number": "#411", "form": null }
+  ],
+  [
+    { "number": "#412", "form": "All forms" },
+    { "number": "#414", "form": null }
+  ],
+  [
+    { "number": "#412", "form": "Plant Cloak" },
+    { "number": "#413", "form": "Plant Cloak" }
+  ],
+  [
+    { "number": "#412", "form": "Sandy Cloak" },
+    { "number": "#413", "form": "Sandy Cloak" }
+  ],
+  [
+    { "number": "#412", "form": "Trash Cloak" },
+    { "number": "#413", "form": "Trash Cloak" }
+  ],
+  [
+    { "number": "#415", "form": null },
+    { "number": "#416", "form": null }
+  ],
+  [
+    { "number": "#418", "form": null },
+    { "number": "#419", "form": null }
+  ],
+  [
+    { "number": "#420", "form": null },
+    { "number": "#421", "form": null }
+  ],
+  [
+    { "number": "#422", "form": null },
+    { "number": "#423", "form": null }
+  ],
+  [
+    { "number": "#425", "form": null },
+    { "number": "#426", "form": null }
+  ],
+  [
+    { "number": "#427", "form": null },
+    { "number": "#428", "form": null }
+  ],
+  [
+    { "number": "#431", "form": null },
+    { "number": "#432", "form": null }
+  ],
+  [
+    { "number": "#434", "form": null },
+    { "number": "#435", "form": null }
+  ],
+  [
+    { "number": "#436", "form": null },
+    { "number": "#437", "form": null }
+  ],
+  [
+    { "number": "#443", "form": null },
+    { "number": "#444", "form": null },
+    { "number": "#445", "form": null }
+  ],
+  [
+    { "number": "#447", "form": null },
+    { "number": "#448", "form": null }
+  ],
+  [
+    { "number": "#449", "form": null },
+    { "number": "#450", "form": null }
+  ],
+  [
+    { "number": "#451", "form": null },
+    { "number": "#452", "form": null }
+  ],
+  [
+    { "number": "#453", "form": null },
+    { "number": "#454", "form": null }
+  ],
+  [
+    { "number": "#456", "form": null },
+    { "number": "#457", "form": null }
+  ],
+  [
+    { "number": "#459", "form": null },
+    { "number": "#460", "form": null }
+  ],
+  [
+    { "number": "#495", "form": null },
+    { "number": "#496", "form": null },
+    { "number": "#497", "form": null }
+  ],
+  [
+    { "number": "#498", "form": null },
+    { "number": "#499", "form": null },
+    { "number": "#500", "form": null }
+  ],
+  [
+    { "number": "#504", "form": null },
+    { "number": "#505", "form": null }
+  ],
+  [
+    { "number": "#506", "form": null },
+    { "number": "#507", "form": null },
+    { "number": "#508", "form": null }
+  ],
+  [
+    { "number": "#509", "form": null },
+    { "number": "#510", "form": null }
+  ],
+  [
+    { "number": "#511", "form": null },
+    { "number": "#512", "form": null }
+  ],
+  [
+    { "number": "#513", "form": null },
+    { "number": "#514", "form": null }
+  ],
+  [
+    { "number": "#515", "form": null },
+    { "number": "#516", "form": null }
+  ],
+  [
+    { "number": "#517", "form": null },
+    { "number": "#518", "form": null }
+  ],
+  [
+    { "number": "#519", "form": null },
+    { "number": "#520", "form": null },
+    { "number": "#521", "form": null }
+  ],
+  [
+    { "number": "#522", "form": null },
+    { "number": "#523", "form": null }
+  ],
+  [
+    { "number": "#524", "form": null },
+    { "number": "#525", "form": null },
+    { "number": "#526", "form": null }
+  ],
+  [
+    { "number": "#527", "form": null },
+    { "number": "#528", "form": null }
+  ],
+  [
+    { "number": "#529", "form": null },
+    { "number": "#530", "form": null }
+  ],
+  [
+    { "number": "#532", "form": null },
+    { "number": "#533", "form": null },
+    { "number": "#534", "form": null }
+  ],
+  [
+    { "number": "#535", "form": null },
+    { "number": "#536", "form": null },
+    { "number": "#537", "form": null }
+  ],
+  [
+    { "number": "#540", "form": null },
+    { "number": "#541", "form": null },
+    { "number": "#542", "form": null }
+  ],
+  [
+    { "number": "#543", "form": null },
+    { "number": "#544", "form": null },
+    { "number": "#545", "form": null }
+  ],
+  [
+    { "number": "#546", "form": null },
+    { "number": "#547", "form": null }
+  ],
+  [
+    { "number": "#551", "form": null },
+    { "number": "#552", "form": null },
+    { "number": "#553", "form": null }
+  ],
+  [
+    { "number": "#554", "form": null },
+    { "number": "#555", "form": "Standard Mode" }
+  ],
+  [
+    { "number": "#554", "form": "Galarian Darumaka" },
+    { "number": "#555", "form": "Galarian Standard Mode" }
+  ],
+  [
+    { "number": "#557", "form": null },
+    { "number": "#558", "form": null }
+  ],
+  [
+    { "number": "#559", "form": null },
+    { "number": "#560", "form": null }
+  ],
+  [
+    { "number": "#562", "form": null },
+    { "number": "#563", "form": null }
+  ],
+  [
+    { "number": "#562", "form": "Galarian Yamask" },
+    { "number": "#867", "form": null }
+  ],
+  [
+    { "number": "#564", "form": null },
+    { "number": "#565", "form": null }
+  ],
+  [
+    { "number": "#566", "form": null },
+    { "number": "#567", "form": null }
+  ],
+  [
+    { "number": "#568", "form": null },
+    { "number": "#569", "form": null }
+  ],
+  [
+    { "number": "#570", "form": null },
+    { "number": "#571", "form": null }
+  ],
+  [
+    { "number": "#570", "form": "Hisuian Zorua" },
+    { "number": "#571", "form": "Hisuian Zoroark" }
+  ],
+  [
+    { "number": "#572", "form": null },
+    { "number": "#573", "form": null }
+  ],
+  [
+    { "number": "#574", "form": null },
+    { "number": "#575", "form": null },
+    { "number": "#576", "form": null }
+  ],
+  [
+    { "number": "#577", "form": null },
+    { "number": "#578", "form": null },
+    { "number": "#579", "form": null }
+  ],
+  [
+    { "number": "#580", "form": null },
+    { "number": "#581", "form": null }
+  ],
+  [
+    { "number": "#582", "form": null },
+    { "number": "#583", "form": null },
+    { "number": "#584", "form": null }
+  ],
+  [
+    { "number": "#585", "form": null },
+    { "number": "#586", "form": null }
+  ],
+  [
+    { "number": "#588", "form": null },
+    { "number": "#589", "form": null }
+  ],
+  [
+    { "number": "#590", "form": null },
+    { "number": "#591", "form": null }
+  ],
+  [
+    { "number": "#592", "form": null },
+    { "number": "#593", "form": null }
+  ],
+  [
+    { "number": "#595", "form": null },
+    { "number": "#596", "form": null }
+  ],
+  [
+    { "number": "#597", "form": null },
+    { "number": "#598", "form": null }
+  ],
+  [
+    { "number": "#599", "form": null },
+    { "number": "#600", "form": null },
+    { "number": "#601", "form": null }
+  ],
+  [
+    { "number": "#602", "form": null },
+    { "number": "#603", "form": null },
+    { "number": "#604", "form": null }
+  ],
+  [
+    { "number": "#605", "form": null },
+    { "number": "#606", "form": null }
+  ],
+  [
+    { "number": "#607", "form": null },
+    { "number": "#608", "form": null },
+    { "number": "#609", "form": null }
+  ],
+  [
+    { "number": "#610", "form": null },
+    { "number": "#611", "form": null },
+    { "number": "#612", "form": null }
+  ],
+  [
+    { "number": "#613", "form": null },
+    { "number": "#614", "form": null }
+  ],
+  [
+    { "number": "#616", "form": null },
+    { "number": "#617", "form": null }
+  ],
+  [
+    { "number": "#619", "form": null },
+    { "number": "#620", "form": null }
+  ],
+  [
+    { "number": "#622", "form": null },
+    { "number": "#623", "form": null }
+  ],
+  [
+    { "number": "#624", "form": null },
+    { "number": "#625", "form": null },
+    { "number": "#983", "form": null }
+  ],
+  [
+    { "number": "#629", "form": null },
+    { "number": "#630", "form": null }
+  ],
+  [
+    { "number": "#633", "form": null },
+    { "number": "#634", "form": null },
+    { "number": "#635", "form": null }
+  ],
+  [
+    { "number": "#636", "form": null },
+    { "number": "#637", "form": null }
+  ],
+  [
+    { "number": "#650", "form": null },
+    { "number": "#651", "form": null },
+    { "number": "#652", "form": null }
+  ],
+  [
+    { "number": "#653", "form": null },
+    { "number": "#654", "form": null },
+    { "number": "#655", "form": null }
+  ],
+  [
+    { "number": "#656", "form": null },
+    { "number": "#657", "form": null },
+    { "number": "#658", "form": null }
+  ],
+  [
+    { "number": "#659", "form": null },
+    { "number": "#660", "form": null }
+  ],
+  [
+    { "number": "#661", "form": null },
+    { "number": "#662", "form": null },
+    { "number": "#663", "form": null }
+  ],
+  [
+    { "number": "#664", "form": null },
+    { "number": "#665", "form": null },
+    { "number": "#666", "form": null }
+  ],
+  [
+    { "number": "#667", "form": null },
+    { "number": "#668", "form": null }
+  ],
+  [
+    { "number": "#669", "form": null },
+    { "number": "#670", "form": null },
+    { "number": "#671", "form": null }
+  ],
+  [
+    { "number": "#672", "form": null },
+    { "number": "#673", "form": null }
+  ],
+  [
+    { "number": "#674", "form": null },
+    { "number": "#675", "form": null }
+  ],
+  [
+    { "number": "#679", "form": null },
+    { "number": "#680", "form": null },
+    { "number": "#681", "form": null }
+  ],
+  [
+    { "number": "#682", "form": null },
+    { "number": "#683", "form": null }
+  ],
+  [
+    { "number": "#684", "form": null },
+    { "number": "#685", "form": null }
+  ],
+  [
+    { "number": "#686", "form": null },
+    { "number": "#687", "form": null }
+  ],
+  [
+    { "number": "#688", "form": null },
+    { "number": "#689", "form": null }
+  ],
+  [
+    { "number": "#690", "form": null },
+    { "number": "#691", "form": null }
+  ],
+  [
+    { "number": "#692", "form": null },
+    { "number": "#693", "form": null }
+  ],
+  [
+    { "number": "#694", "form": null },
+    { "number": "#695", "form": null }
+  ],
+  [
+    { "number": "#696", "form": null },
+    { "number": "#697", "form": null }
+  ],
+  [
+    { "number": "#698", "form": null },
+    { "number": "#699", "form": null }
+  ],
+  [
+    { "number": "#708", "form": null },
+    { "number": "#709", "form": null }
+  ],
+  [
+    { "number": "#710", "form": null },
+    { "number": "#711", "form": null }
+  ],
+  [
+    { "number": "#714", "form": null },
+    { "number": "#715", "form": null }
+  ],
+  [
+    { "number": "#725", "form": null },
+    { "number": "#726", "form": null },
+    { "number": "#727", "form": null }
+  ],
+  [
+    { "number": "#728", "form": null },
+    { "number": "#729", "form": null },
+    { "number": "#730", "form": null }
+  ],
+  [
+    { "number": "#731", "form": null },
+    { "number": "#732", "form": null },
+    { "number": "#733", "form": null }
+  ],
+  [
+    { "number": "#734", "form": null },
+    { "number": "#735", "form": null }
+  ],
+  [
+    { "number": "#736", "form": null },
+    { "number": "#737", "form": null },
+    { "number": "#738", "form": null }
+  ],
+  [
+    { "number": "#739", "form": null },
+    { "number": "#740", "form": null }
+  ],
+  [
+    { "number": "#742", "form": null },
+    { "number": "#743", "form": null }
+  ],
+  [
+    { "number": "#744", "form": "Own Tempo Rockruff" },
+    { "number": "#745", "form": "Dusk Form" }
+  ],
+  [
+    { "number": "#747", "form": null },
+    { "number": "#748", "form": null }
+  ],
+  [
+    { "number": "#749", "form": null },
+    { "number": "#750", "form": null }
+  ],
+  [
+    { "number": "#751", "form": null },
+    { "number": "#752", "form": null }
+  ],
+  [
+    { "number": "#753", "form": null },
+    { "number": "#754", "form": null }
+  ],
+  [
+    { "number": "#755", "form": null },
+    { "number": "#756", "form": null }
+  ],
+  [
+    { "number": "#757", "form": null },
+    { "number": "#758", "form": null }
+  ],
+  [
+    { "number": "#759", "form": null },
+    { "number": "#760", "form": null }
+  ],
+  [
+    { "number": "#761", "form": null },
+    { "number": "#762", "form": null },
+    { "number": "#763", "form": null }
+  ],
+  [
+    { "number": "#767", "form": null },
+    { "number": "#768", "form": null }
+  ],
+  [
+    { "number": "#769", "form": null },
+    { "number": "#770", "form": null }
+  ],
+  [
+    { "number": "#772", "form": null },
+    { "number": "#773", "form": null }
+  ],
+  [
+    { "number": "#782", "form": null },
+    { "number": "#783", "form": null },
+    { "number": "#784", "form": null }
+  ],
+  [
+    { "number": "#803", "form": null },
+    { "number": "#804", "form": null }
+  ],
+  [
+    { "number": "#808", "form": null },
+    { "number": "#809", "form": null }
+  ],
+  [
+    { "number": "#810", "form": null },
+    { "number": "#811", "form": null },
+    { "number": "#812", "form": null }
+  ],
+  [
+    { "number": "#813", "form": null },
+    { "number": "#814", "form": null },
+    { "number": "#815", "form": null }
+  ],
+  [
+    { "number": "#816", "form": null },
+    { "number": "#817", "form": null },
+    { "number": "#818", "form": null }
+  ],
+  [
+    { "number": "#824", "form": null },
+    { "number": "#825", "form": null },
+    { "number": "#826", "form": null }
+  ],
+  [
+    { "number": "#821", "form": null },
+    { "number": "#822", "form": null },
+    { "number": "#823", "form": null }
+  ],
+  [
+    { "number": "#819", "form": null },
+    { "number": "#820", "form": null }
+  ],
+  [
+    { "number": "#827", "form": null },
+    { "number": "#828", "form": null }
+  ],
+  [
+    { "number": "#831", "form": null },
+    { "number": "#832", "form": null }
+  ],
+  [
+    { "number": "#833", "form": null },
+    { "number": "#834", "form": null }
+  ],
+  [
+    { "number": "#835", "form": null },
+    { "number": "#836", "form": null }
+  ],
+  [
+    { "number": "#829", "form": null },
+    { "number": "#830", "form": null }
+  ],
+  [
+    { "number": "#850", "form": null },
+    { "number": "#851", "form": null }
+  ],
+  [
+    { "number": "#837", "form": null },
+    { "number": "#838", "form": null },
+    { "number": "#839", "form": null }
+  ],
+  [
+    { "number": "#846", "form": null },
+    { "number": "#847", "form": null }
+  ],
+  [
+    { "number": "#868", "form": null },
+    { "number": "#869", "form": null }
+  ],
+  [
+    { "number": "#083", "form": "Galarian Farfetch'd" },
+    { "number": "#865", "form": null }
+  ],
+  [
+    { "number": "#222", "form": "Galarian Corsola" },
+    { "number": "#864", "form": null }
+  ],
+  [
+    { "number": "#859", "form": null },
+    { "number": "#860", "form": null },
+    { "number": "#861", "form": null }
+  ],
+  [
+    { "number": "#856", "form": null },
+    { "number": "#857", "form": null },
+    { "number": "#858", "form": null }
+  ],
+  [
+    { "number": "#878", "form": null },
+    { "number": "#879", "form": null }
+  ],
+  [
+    { "number": "#843", "form": null },
+    { "number": "#844", "form": null }
+  ],
+  [
+    { "number": "#854", "form": null },
+    { "number": "#855", "form": null }
+  ],
+  [
+    { "number": "#872", "form": null },
+    { "number": "#873", "form": null }
+  ],
+  [
+    { "number": "#852", "form": null },
+    { "number": "#853", "form": null }
+  ],
+  [
+    { "number": "#885", "form": null },
+    { "number": "#886", "form": null },
+    { "number": "#887", "form": null }
+  ],
+  [
+    { "number": "#211", "form": "Hisuian Qwilfish" },
+    { "number": "#904", "form": null }
+  ],
+  [
+    { "number": "#906", "form": null },
+    { "number": "#907", "form": null },
+    { "number": "#908", "form": null }
+  ],
+  [
+    { "number": "#909", "form": null },
+    { "number": "#910", "form": null },
+    { "number": "#911", "form": null }
+  ],
+  [
+    { "number": "#912", "form": null },
+    { "number": "#913", "form": null },
+    { "number": "#914", "form": null }
+  ],
+  [
+    { "number": "#917", "form": null },
+    { "number": "#918", "form": null }
+  ],
+  [
+    { "number": "#919", "form": null },
+    { "number": "#920", "form": null }
+  ],
+  [
+    { "number": "#953", "form": null },
+    { "number": "#954", "form": null }
+  ],
+  [
+    { "number": "#971", "form": null },
+    { "number": "#972", "form": null }
+  ],
+  [
+    { "number": "#955", "form": null },
+    { "number": "#956", "form": null }
+  ],
+  [
+    { "number": "#960", "form": null },
+    { "number": "#961", "form": null }
+  ],
+  [
+    { "number": "#963", "form": null },
+    { "number": "#964", "form": "Zero Form" }
+  ],
+  [
+    { "number": "#928", "form": null },
+    { "number": "#929", "form": null },
+    { "number": "#930", "form": null }
+  ],
+  [
+    { "number": "#951", "form": null },
+    { "number": "#952", "form": null }
+  ],
+  [
+    { "number": "#938", "form": null },
+    { "number": "#939", "form": null }
+  ],
+  [
+    { "number": "#965", "form": null },
+    { "number": "#966", "form": null }
+  ],
+  [
+    { "number": "#974", "form": null },
+    { "number": "#975", "form": null }
+  ],
+  [
+    { "number": "#996", "form": null },
+    { "number": "#997", "form": null },
+    { "number": "#998", "form": null }
+  ],
+  [
+    { "number": "#921", "form": null },
+    { "number": "#922", "form": null },
+    { "number": "#923", "form": null }
+  ],
+  [
+    { "number": "#940", "form": null },
+    { "number": "#941", "form": null }
+  ],
+  [
+    { "number": "#932", "form": null },
+    { "number": "#933", "form": null },
+    { "number": "#934", "form": null }
+  ],
+  [
+    { "number": "#969", "form": null },
+    { "number": "#970", "form": null }
+  ],
+  [
+    { "number": "#944", "form": null },
+    { "number": "#945", "form": null }
+  ],
+  [
+    { "number": "#926", "form": null },
+    { "number": "#927", "form": null }
+  ],
+  [
+    { "number": "#942", "form": null },
+    { "number": "#943", "form": null }
+  ],
+  [
+    { "number": "#946", "form": null },
+    { "number": "#947", "form": null }
+  ],
+  [
+    { "number": "#999", "form": "Chest Form" },
+    { "number": "#1000", "form": null }
+  ],
+  [
+    { "number": "#957", "form": null },
+    { "number": "#958", "form": null },
+    { "number": "#959", "form": null }
+  ],
+  [
+    { "number": "#948", "form": null },
+    { "number": "#949", "form": null }
+  ]
+]

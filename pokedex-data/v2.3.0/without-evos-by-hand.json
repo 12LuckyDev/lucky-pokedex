@@ -1,0 +1,286 @@
+[
+  {
+    "number": 422,
+    "name": "Shellos",
+    "origin": 3,
+    "genders": [0, 1],
+    "rarity": 0,
+    "forms": [
+      {
+        "id": 2,
+        "formType": 1,
+        "formName": "East Sea",
+        "types": [10],
+        "varieties": [1],
+        "movableTo": [11, 3, 4, 5, 6, 7],
+        "obtainableIn": [
+          { "game": 3, "methods": [1, 7] },
+          { "game": 4, "methods": [1, 7] },
+          { "game": 5, "methods": [1] },
+          { "game": 6, "methods": [1] },
+          { "game": 7, "methods": [1, 8] },
+          { "game": 8, "methods": [1, 4] },
+          { "game": 9, "methods": [1, 4] }
+        ]
+      }
+    ],
+    "formsData": { "onlyVisual": true, "interchandable": false }
+  },
+  {
+    "number": 550,
+    "name": "Basculin",
+    "origin": 4,
+    "genders": [0, 1],
+    "rarity": 0,
+    "forms": [
+      {
+        "id": 3,
+        "formType": 1,
+        "formName": "White-Striped Form",
+        "types": [10],
+        "varieties": [1],
+        "movableTo": [11, 3, 4, 7],
+        "obtainableIn": [{ "game": 7, "methods": [1, 8] }]
+      }
+    ],
+    "formsData": { "onlyVisual": false, "interchandable": false }
+  },
+  {
+    "number": 585,
+    "name": "Deerling",
+    "origin": 4,
+    "genders": [0, 1],
+    "rarity": 0,
+    "forms": [
+      {
+        "id": 2,
+        "formType": 1,
+        "formName": "Summer Form",
+        "types": [0, 11],
+        "movableTo": [11],
+        "obtainableIn": [
+          { "game": 8, "methods": [1, 4] },
+          { "game": 9, "methods": [1, 4] }
+        ]
+      },
+      {
+        "id": 3,
+        "formType": 1,
+        "formName": "Autumn Form",
+        "types": [0, 11],
+        "movableTo": [11],
+        "obtainableIn": [
+          { "game": 8, "methods": [1, 4] },
+          { "game": 9, "methods": [1, 4] }
+        ]
+      },
+      {
+        "id": 4,
+        "formType": 1,
+        "formName": "Winter Form",
+        "types": [0, 11],
+        "movableTo": [11],
+        "obtainableIn": [
+          { "game": 8, "methods": [1, 4] },
+          { "game": 9, "methods": [1, 4] }
+        ]
+      }
+    ],
+    "formsData": { "onlyVisual": true, "interchandable": false }
+  },
+  {
+    "number": 669,
+    "name": "Flabébé",
+    "origin": 5,
+    "genders": [1],
+    "rarity": 0,
+    "forms": [
+      {
+        "id": 2,
+        "formType": 1,
+        "formName": "Yellow Flower",
+        "types": [17],
+        "movableTo": [11],
+        "obtainableIn": [
+          { "game": 8, "methods": [1, 4] },
+          { "game": 9, "methods": [1, 4] }
+        ]
+      },
+      {
+        "id": 3,
+        "formType": 1,
+        "formName": "Orange Flower",
+        "types": [17],
+        "movableTo": [11],
+        "obtainableIn": [
+          { "game": 8, "methods": [1, 4] },
+          { "game": 9, "methods": [1, 4] }
+        ]
+      },
+      {
+        "id": 4,
+        "formType": 1,
+        "formName": "Blue Flower",
+        "types": [17],
+        "movableTo": [11],
+        "obtainableIn": [
+          { "game": 8, "methods": [1, 4] },
+          { "game": 9, "methods": [1, 4] }
+        ]
+      },
+      {
+        "id": 5,
+        "formType": 1,
+        "formName": "White Flower",
+        "types": [17],
+        "movableTo": [11],
+        "obtainableIn": [
+          { "game": 8, "methods": [1, 4] },
+          { "game": 9, "methods": [1, 4] }
+        ]
+      }
+    ],
+    "formsData": { "onlyVisual": true, "interchandable": false }
+  },
+  {
+    "number": 670,
+    "name": "Floette",
+    "origin": 5,
+    "genders": [1],
+    "rarity": 0,
+    "forms": [
+      {
+        "id": 2,
+        "formType": 1,
+        "formName": "Yellow Flower",
+        "types": [17],
+        "movableTo": [11],
+        "obtainableIn": [
+          { "game": 8, "methods": [1] },
+          { "game": 9, "methods": [1] }
+        ]
+      },
+      {
+        "id": 3,
+        "formType": 1,
+        "formName": "Orange Flower",
+        "types": [17],
+        "movableTo": [11],
+        "obtainableIn": [
+          { "game": 8, "methods": [1] },
+          { "game": 9, "methods": [1] }
+        ]
+      },
+      {
+        "id": 4,
+        "formType": 1,
+        "formName": "Blue Flower",
+        "types": [17],
+        "movableTo": [11],
+        "obtainableIn": [
+          { "game": 8, "methods": [1] },
+          { "game": 9, "methods": [1] }
+        ]
+      },
+      {
+        "id": 5,
+        "formType": 1,
+        "formName": "White Flower",
+        "types": [17],
+        "movableTo": [11],
+        "obtainableIn": [
+          { "game": 8, "methods": [1] },
+          { "game": 9, "methods": [1] }
+        ]
+      }
+    ],
+    "formsData": { "onlyVisual": true, "interchandable": false }
+  },
+  {
+    "number": 677,
+    "name": "Espurr",
+    "origin": 5,
+    "genders": [0, 1],
+    "rarity": 0,
+    "forms": [
+      {
+        "id": 1,
+        "formType": 0,
+        "types": [13],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [1, 7] },
+          { "game": 4, "methods": [1, 7] }
+        ]
+      }
+    ]
+  },
+  {
+    "number": 710,
+    "name": "Pumpkaboo",
+    "origin": 5,
+    "genders": [0, 1],
+    "rarity": 0,
+    "forms": [
+      {
+        "id": 2,
+        "formType": 1,
+        "formName": "Average Size",
+        "types": [7, 11],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [1, 7] },
+          { "game": 4, "methods": [1, 7] }
+        ]
+      },
+      {
+        "id": 3,
+        "formType": 1,
+        "formName": "Large Size",
+        "types": [7, 11],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [1, 7] },
+          { "game": 4, "methods": [1, 7] }
+        ]
+      },
+      {
+        "id": 4,
+        "formType": 1,
+        "formName": "Super Size",
+        "types": [7, 11],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [1, 7] },
+          { "game": 4, "methods": [1, 7] }
+        ]
+      }
+    ],
+    "formsData": { "onlyVisual": false, "interchandable": false }
+  },
+  {
+    "number": 854,
+    "name": "Sinistea",
+    "origin": 8,
+    "genders": [2],
+    "rarity": 0,
+    "forms": [
+      {
+        "id": 2,
+        "formType": 1,
+        "formName": "Antique Form",
+        "types": [7],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [1, 7] },
+          { "game": 13, "methods": [1, 7] },
+          { "game": 4, "methods": [1, 7] },
+          { "game": 14, "methods": [1, 7] },
+          { "game": 8, "methods": [1, 4] },
+          { "game": 9, "methods": [1, 4] }
+        ]
+      }
+    ],
+    "formsData": { "onlyVisual": true, "interchandable": false }
+  }
+]

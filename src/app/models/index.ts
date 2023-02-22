@@ -14,6 +14,7 @@ export * from './pokedex-data/pokedex-form-entry.model';
 export * from './pokedex-data/pokedex-gender-diffs.model';
 export * from './pokedex-data/pokedex-forms-data.model';
 export * from './pokedex-data/pokedex-obtainable-in.model';
+export * from './pokedex-data/pokedex-evolves-data.model';
 
 export * from './pokedex-table/pokedex-table-variant.model';
 export * from './pokedex-table/pokedex-table-entry.model';

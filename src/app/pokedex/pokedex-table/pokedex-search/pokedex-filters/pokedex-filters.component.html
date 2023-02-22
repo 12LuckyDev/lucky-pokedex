@@ -12,7 +12,7 @@
       </mat-form-field>
 
       <mat-form-field appearance="fill" fxFlex="1 1">
-        <mat-label translate>FILTERS.ORIGIN_REGION</mat-label>
+        <mat-label translate>FILTERS.OBTAINABLE_IN</mat-label>
         <mat-select color="primary" formControlName="obtainableIn" multiple>
           <mat-option *ngFor="let game of games" [value]="game.id">
             {{ game.name }}

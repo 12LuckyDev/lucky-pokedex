@@ -1,0 +1,427 @@
+[
+  {
+    "number": 422,
+    "name": "Shellos",
+    "origin": 3,
+    "genders": [0, 1],
+    "rarity": 0,
+    "forms": [
+      {
+        "id": 2,
+        "formType": 1,
+        "formName": "East Sea",
+        "types": [10],
+        "varieties": [1],
+        "movableTo": [11, 3, 4, 5, 6, 7],
+        "obtainableIn": [
+          { "game": 3, "methods": [1, 7] },
+          { "game": 4, "methods": [1, 7] },
+          { "game": 5, "methods": [1] },
+          { "game": 6, "methods": [1] },
+          { "game": 7, "methods": [1, 8] },
+          { "game": 8, "methods": [1, 4] },
+          { "game": 9, "methods": [1, 4] }
+        ],
+        "evolvesIn": [{ "number": 433, "formId": 2 }]
+      }
+    ],
+    "formsData": { "onlyVisual": true, "interchandable": false }
+  },
+  {
+    "number": 550,
+    "name": "Basculin",
+    "origin": 4,
+    "genders": [0, 1],
+    "rarity": 0,
+    "forms": [
+      {
+        "id": 3,
+        "formType": 1,
+        "formName": "White-Striped Form",
+        "types": [10],
+        "varieties": [1],
+        "movableTo": [11, 3, 4, 7],
+        "obtainableIn": [{ "game": 7, "methods": [1, 8] }],
+        "evolvesIn": [{ "number": 902, "formId": 1 }]
+      }
+    ],
+    "formsData": { "onlyVisual": false, "interchandable": false }
+  },
+  {
+    "number": 585,
+    "name": "Deerling",
+    "origin": 4,
+    "genders": [0, 1],
+    "rarity": 0,
+    "forms": [
+      {
+        "id": 2,
+        "formType": 1,
+        "formName": "Summer Form",
+        "types": [0, 11],
+        "movableTo": [11],
+        "obtainableIn": [
+          { "game": 8, "methods": [1, 4] },
+          { "game": 9, "methods": [1, 4] }
+        ],
+        "evolvesIn": [{ "number": 586, "formId": 2 }]
+      },
+      {
+        "id": 3,
+        "formType": 1,
+        "formName": "Autumn Form",
+        "types": [0, 11],
+        "movableTo": [11],
+        "obtainableIn": [
+          { "game": 8, "methods": [1, 4] },
+          { "game": 9, "methods": [1, 4] }
+        ],
+        "evolvesIn": [{ "number": 586, "formId": 3 }]
+      },
+      {
+        "id": 4,
+        "formType": 1,
+        "formName": "Winter Form",
+        "types": [0, 11],
+        "movableTo": [11],
+        "obtainableIn": [
+          { "game": 8, "methods": [1, 4] },
+          { "game": 9, "methods": [1, 4] }
+        ],
+        "evolvesIn": [{ "number": 586, "formId": 4 }]
+      }
+    ],
+    "formsData": { "onlyVisual": true, "interchandable": false }
+  },
+  {
+    "number": 669,
+    "name": "Flabébé",
+    "origin": 5,
+    "genders": [1],
+    "rarity": 0,
+    "forms": [
+      {
+        "id": 2,
+        "formType": 1,
+        "formName": "Yellow Flower",
+        "types": [17],
+        "movableTo": [11],
+        "obtainableIn": [
+          { "game": 8, "methods": [1, 4] },
+          { "game": 9, "methods": [1, 4] }
+        ],
+        "evolvesIn": [{ "number": 670, "formId": 2 }]
+      },
+      {
+        "id": 3,
+        "formType": 1,
+        "formName": "Orange Flower",
+        "types": [17],
+        "movableTo": [11],
+        "obtainableIn": [
+          { "game": 8, "methods": [1, 4] },
+          { "game": 9, "methods": [1, 4] }
+        ],
+        "evolvesIn": [{ "number": 670, "formId": 3 }]
+      },
+      {
+        "id": 4,
+        "formType": 1,
+        "formName": "Blue Flower",
+        "types": [17],
+        "movableTo": [11],
+        "obtainableIn": [
+          { "game": 8, "methods": [1, 4] },
+          { "game": 9, "methods": [1, 4] }
+        ],
+        "evolvesIn": [{ "number": 670, "formId": 4 }]
+      },
+      {
+        "id": 5,
+        "formType": 1,
+        "formName": "White Flower",
+        "types": [17],
+        "movableTo": [11],
+        "obtainableIn": [
+          { "game": 8, "methods": [1, 4] },
+          { "game": 9, "methods": [1, 4] }
+        ],
+        "evolvesIn": [{ "number": 670, "formId": 5 }]
+      }
+    ],
+    "formsData": { "onlyVisual": true, "interchandable": false }
+  },
+  {
+    "number": 670,
+    "name": "Floette",
+    "origin": 5,
+    "genders": [1],
+    "rarity": 0,
+    "forms": [
+      {
+        "id": 2,
+        "formType": 1,
+        "formName": "Yellow Flower",
+        "types": [17],
+        "movableTo": [11],
+        "obtainableIn": [
+          { "game": 8, "methods": [1] },
+          { "game": 9, "methods": [1] }
+        ],
+        "evolvesIn": [{ "number": 671, "formId": 2 }]
+      },
+      {
+        "id": 3,
+        "formType": 1,
+        "formName": "Orange Flower",
+        "types": [17],
+        "movableTo": [11],
+        "obtainableIn": [
+          { "game": 8, "methods": [1] },
+          { "game": 9, "methods": [1] }
+        ],
+        "evolvesIn": [{ "number": 671, "formId": 3 }]
+      },
+      {
+        "id": 4,
+        "formType": 1,
+        "formName": "Blue Flower",
+        "types": [17],
+        "movableTo": [11],
+        "obtainableIn": [
+          { "game": 8, "methods": [1] },
+          { "game": 9, "methods": [1] }
+        ],
+        "evolvesIn": [{ "number": 671, "formId": 4 }]
+      },
+      {
+        "id": 5,
+        "formType": 1,
+        "formName": "White Flower",
+        "types": [17],
+        "movableTo": [11],
+        "obtainableIn": [
+          { "game": 8, "methods": [1] },
+          { "game": 9, "methods": [1] }
+        ],
+        "evolvesIn": [{ "number": 671, "formId": 5 }]
+      }
+    ],
+    "formsData": { "onlyVisual": true, "interchandable": false }
+  },
+  {
+    "number": 677,
+    "name": "Espurr",
+    "origin": 5,
+    "genders": [0, 1],
+    "rarity": 0,
+    "forms": [
+      {
+        "id": 1,
+        "formType": 0,
+        "types": [13],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [1, 7] },
+          { "game": 4, "methods": [1, 7] }
+        ],
+        "evolvesIn": [{ "number": 678, "formId": 1 }]
+      }
+    ]
+  },
+  {
+    "number": 710,
+    "name": "Pumpkaboo",
+    "origin": 5,
+    "genders": [0, 1],
+    "rarity": 0,
+    "forms": [
+      {
+        "id": 2,
+        "formType": 1,
+        "formName": "Average Size",
+        "types": [7, 11],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [1, 7] },
+          { "game": 4, "methods": [1, 7] }
+        ],
+        "evolvesIn": [{ "number": 711, "formId": 2 }]
+      },
+      {
+        "id": 3,
+        "formType": 1,
+        "formName": "Large Size",
+        "types": [7, 11],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [1, 7] },
+          { "game": 4, "methods": [1, 7] }
+        ],
+        "evolvesIn": [{ "number": 711, "formId": 3 }]
+      },
+      {
+        "id": 4,
+        "formType": 1,
+        "formName": "Super Size",
+        "types": [7, 11],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [1, 7] },
+          { "game": 4, "methods": [1, 7] }
+        ],
+        "evolvesIn": [{ "number": 711, "formId": 4 }]
+      }
+    ],
+    "formsData": { "onlyVisual": false, "interchandable": false }
+  },
+  {
+    "number": 854,
+    "name": "Sinistea",
+    "origin": 8,
+    "genders": [2],
+    "rarity": 0,
+    "forms": [
+      {
+        "id": 2,
+        "formType": 1,
+        "formName": "Antique Form",
+        "types": [7],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [1, 7] },
+          { "game": 13, "methods": [1, 7] },
+          { "game": 4, "methods": [1, 7] },
+          { "game": 14, "methods": [1, 7] },
+          { "game": 8, "methods": [1, 4] },
+          { "game": 9, "methods": [1, 4] }
+        ],
+        "evolvesIn": [{ "number": 855, "formId": 2 }]
+      }
+    ],
+    "formsData": { "onlyVisual": true, "interchandable": false }
+  },
+  {
+    "number": 665,
+    "name": "Spewpa",
+    "origin": 5,
+    "genders": [0, 1],
+    "rarity": 0,
+    "forms": [
+      {
+        "id": 1,
+        "formType": 0,
+        "types": [6],
+        "movableTo": [11],
+        "obtainableIn": [
+          { "game": 8, "methods": [1] },
+          { "game": 9, "methods": [1] }
+        ],
+        "evolvesIn": [
+          { "number": 666, "formId": 2 },
+          { "number": 666, "formId": 3 },
+          { "number": 666, "formId": 4 },
+          { "number": 666, "formId": 5 },
+          { "number": 666, "formId": 6 },
+          { "number": 666, "formId": 7 },
+          { "number": 666, "formId": 8 },
+          { "number": 666, "formId": 9 },
+          { "number": 666, "formId": 10 },
+          { "number": 666, "formId": 11 },
+          { "number": 666, "formId": 12 },
+          { "number": 666, "formId": 13 },
+          { "number": 666, "formId": 14 },
+          { "number": 666, "formId": 15 },
+          { "number": 666, "formId": 16 },
+          { "number": 666, "formId": 17 },
+          { "number": 666, "formId": 18 },
+          { "number": 666, "formId": 19 },
+          { "number": 666, "formId": 20 }
+        ]
+      }
+    ]
+  },
+  {
+    "number": 868,
+    "name": "Milcery",
+    "origin": 8,
+    "genders": [1],
+    "rarity": 0,
+    "forms": [
+      {
+        "id": 1,
+        "formType": 0,
+        "types": [17],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [1, 7] },
+          { "game": 4, "methods": [1, 7] }
+        ],
+        "evolvesIn": [
+          { "number": 869, "formId": 2 },
+          { "number": 869, "formId": 3 },
+          { "number": 869, "formId": 4 },
+          { "number": 869, "formId": 5 },
+          { "number": 869, "formId": 6 },
+          { "number": 869, "formId": 7 },
+          { "number": 869, "formId": 8 },
+          { "number": 869, "formId": 9 },
+          { "number": 869, "formId": 10 },
+          { "number": 869, "formId": 11 },
+          { "number": 869, "formId": 12 },
+          { "number": 869, "formId": 13 },
+          { "number": 869, "formId": 14 },
+          { "number": 869, "formId": 15 },
+          { "number": 869, "formId": 16 },
+          { "number": 869, "formId": 17 },
+          { "number": 869, "formId": 18 },
+          { "number": 869, "formId": 19 },
+          { "number": 869, "formId": 20 },
+          { "number": 869, "formId": 21 },
+          { "number": 869, "formId": 22 },
+          { "number": 869, "formId": 23 },
+          { "number": 869, "formId": 24 },
+          { "number": 869, "formId": 25 },
+          { "number": 869, "formId": 26 },
+          { "number": 869, "formId": 27 },
+          { "number": 869, "formId": 28 },
+          { "number": 869, "formId": 29 },
+          { "number": 869, "formId": 30 },
+          { "number": 869, "formId": 31 },
+          { "number": 869, "formId": 32 },
+          { "number": 869, "formId": 33 },
+          { "number": 869, "formId": 34 },
+          { "number": 869, "formId": 35 },
+          { "number": 869, "formId": 36 },
+          { "number": 869, "formId": 37 },
+          { "number": 869, "formId": 38 },
+          { "number": 869, "formId": 39 },
+          { "number": 869, "formId": 40 },
+          { "number": 869, "formId": 41 },
+          { "number": 869, "formId": 42 },
+          { "number": 869, "formId": 43 },
+          { "number": 869, "formId": 44 },
+          { "number": 869, "formId": 45 },
+          { "number": 869, "formId": 46 },
+          { "number": 869, "formId": 47 },
+          { "number": 869, "formId": 48 },
+          { "number": 869, "formId": 49 },
+          { "number": 869, "formId": 50 },
+          { "number": 869, "formId": 51 },
+          { "number": 869, "formId": 52 },
+          { "number": 869, "formId": 53 },
+          { "number": 869, "formId": 54 },
+          { "number": 869, "formId": 55 },
+          { "number": 869, "formId": 56 },
+          { "number": 869, "formId": 57 },
+          { "number": 869, "formId": 58 },
+          { "number": 869, "formId": 59 },
+          { "number": 869, "formId": 60 },
+          { "number": 869, "formId": 61 },
+          { "number": 869, "formId": 62 },
+          { "number": 869, "formId": 63 }
+        ]
+      }
+    ]
+  }
+]

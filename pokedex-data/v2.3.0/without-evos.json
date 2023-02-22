@@ -1,0 +1,1904 @@
+[
+  {
+    "number": 57,
+    "name": "Primeape",
+    "origin": 0,
+    "genders": [0, 1],
+    "rarity": 0,
+    "forms": [
+      {
+        "id": 1,
+        "formType": 0,
+        "types": [1],
+        "movableTo": [1, 11, 2, 5, 6],
+        "obtainableIn": [
+          { "game": 5, "methods": [1] },
+          { "game": 6, "methods": [1] },
+          { "game": 8, "methods": [1, 4] },
+          { "game": 9, "methods": [1, 4] }
+        ],
+        "evolvesIn": []
+      }
+    ]
+  },
+  {
+    "number": 203,
+    "name": "Girafarig",
+    "origin": 1,
+    "genders": [0, 1],
+    "rarity": 0,
+    "forms": [
+      {
+        "id": 1,
+        "formType": 0,
+        "types": [0, 13],
+        "genderDiffs": {
+          "desc": "Female Girafarig have a bigger yellow pattern on their body",
+          "onlyVisual": true
+        },
+        "movableTo": [11, 5, 6],
+        "obtainableIn": [
+          { "game": 5, "methods": [1] },
+          { "game": 6, "methods": [1] },
+          { "game": 8, "methods": [1, 4] },
+          { "game": 9, "methods": [1, 4] }
+        ],
+        "evolvesIn": []
+      }
+    ]
+  },
+  {
+    "number": 206,
+    "name": "Dunsparce",
+    "origin": 1,
+    "genders": [0, 1],
+    "rarity": 0,
+    "forms": [
+      {
+        "id": 1,
+        "formType": 0,
+        "types": [0],
+        "movableTo": [11, 3, 4, 5, 6],
+        "obtainableIn": [
+          { "game": 11, "methods": [1, 7] },
+          { "game": 13, "methods": [7] },
+          { "game": 12, "methods": [1, 7] },
+          { "game": 14, "methods": [7] },
+          { "game": 5, "methods": [1] },
+          { "game": 6, "methods": [1] },
+          { "game": 8, "methods": [1, 4] },
+          { "game": 9, "methods": [1, 4] }
+        ],
+        "evolvesIn": []
+      }
+    ]
+  },
+  {
+    "number": 413,
+    "name": "Wormadam",
+    "origin": 3,
+    "genders": [1],
+    "rarity": 0,
+    "forms": [
+      {
+        "id": 1,
+        "formType": 1,
+        "formName": "Plant Cloak",
+        "types": [6, 11],
+        "varieties": [1],
+        "movableTo": [11, 5, 6, 7],
+        "obtainableIn": [{ "game": 7, "methods": [1] }]
+      },
+      {
+        "id": 2,
+        "formType": 1,
+        "formName": "Sandy Cloak",
+        "types": [6, 4],
+        "varieties": [1],
+        "movableTo": [11, 5, 6, 7],
+        "obtainableIn": [{ "game": 7, "methods": [1] }]
+      },
+      {
+        "id": 3,
+        "formType": 1,
+        "formName": "Trash Cloak",
+        "types": [6, 8],
+        "varieties": [1],
+        "movableTo": [11, 5, 6, 7],
+        "obtainableIn": [{ "game": 7, "methods": [1] }]
+      }
+    ],
+    "formsData": { "onlyVisual": false, "interchandable": false }
+  },
+  {
+    "number": 422,
+    "name": "Shellos",
+    "origin": 3,
+    "genders": [0, 1],
+    "rarity": 0,
+    "forms": [
+      {
+        "id": 2,
+        "formType": 1,
+        "formName": "East Sea",
+        "types": [10],
+        "varieties": [1],
+        "movableTo": [11, 3, 4, 5, 6, 7],
+        "obtainableIn": [
+          { "game": 3, "methods": [1, 7] },
+          { "game": 4, "methods": [1, 7] },
+          { "game": 5, "methods": [1] },
+          { "game": 6, "methods": [1] },
+          { "game": 7, "methods": [1, 8] },
+          { "game": 8, "methods": [1, 4] },
+          { "game": 9, "methods": [1, 4] }
+        ]
+      }
+    ],
+    "formsData": { "onlyVisual": true, "interchandable": false }
+  },
+  {
+    "number": 423,
+    "name": "Gastrodon",
+    "origin": 3,
+    "genders": [0, 1],
+    "rarity": 0,
+    "forms": [
+      {
+        "id": 1,
+        "formType": 1,
+        "formName": "West Sea",
+        "types": [10, 4],
+        "varieties": [1],
+        "movableTo": [11, 3, 4, 5, 6, 7],
+        "obtainableIn": [
+          { "game": 5, "methods": [1] },
+          { "game": 6, "methods": [1] },
+          { "game": 7, "methods": [1, 8] },
+          { "game": 8, "methods": [1, 4] },
+          { "game": 9, "methods": [1, 4] }
+        ]
+      },
+      {
+        "id": 2,
+        "formType": 1,
+        "formName": "East Sea",
+        "types": [10, 4],
+        "varieties": [1],
+        "movableTo": [11, 3, 4, 5, 6, 7],
+        "obtainableIn": [
+          { "game": 3, "methods": [1, 7] },
+          { "game": 13, "methods": [7] },
+          { "game": 4, "methods": [1, 7] },
+          { "game": 14, "methods": [7] },
+          { "game": 5, "methods": [1] },
+          { "game": 6, "methods": [1] },
+          { "game": 7, "methods": [1, 8] },
+          { "game": 8, "methods": [1, 4] },
+          { "game": 9, "methods": [1, 4] }
+        ]
+      }
+    ],
+    "formsData": { "onlyVisual": true, "interchandable": false }
+  },
+  {
+    "number": 550,
+    "name": "Basculin",
+    "origin": 4,
+    "genders": [0, 1],
+    "rarity": 0,
+    "forms": [
+      {
+        "id": 1,
+        "formType": 1,
+        "formName": "Red-Striped Form",
+        "types": [10],
+        "movableTo": [11, 3, 4, 7],
+        "obtainableIn": [
+          { "game": 3, "methods": [1, 7] },
+          { "game": 11, "methods": [7] },
+          { "game": 13, "methods": [1, 7, 7] },
+          { "game": 8, "methods": [1, 4] },
+          { "game": 9, "methods": [1, 4] }
+        ]
+      },
+      {
+        "id": 2,
+        "formType": 1,
+        "formName": "Blue-Striped Form",
+        "types": [10],
+        "movableTo": [11, 3, 4, 7],
+        "obtainableIn": [
+          { "game": 4, "methods": [1, 7] },
+          { "game": 12, "methods": [7] },
+          { "game": 14, "methods": [1, 7, 7] },
+          { "game": 8, "methods": [1, 4] },
+          { "game": 9, "methods": [1, 4] }
+        ]
+      },
+      {
+        "id": 3,
+        "formType": 1,
+        "formName": "White-Striped Form",
+        "types": [10],
+        "varieties": [1],
+        "movableTo": [11, 3, 4, 7],
+        "obtainableIn": [{ "game": 7, "methods": [1, 8] }]
+      }
+    ],
+    "formsData": { "onlyVisual": false, "interchandable": false }
+  },
+  {
+    "number": 585,
+    "name": "Deerling",
+    "origin": 4,
+    "genders": [0, 1],
+    "rarity": 0,
+    "forms": [
+      {
+        "id": 2,
+        "formType": 1,
+        "formName": "Summer Form",
+        "types": [0, 11],
+        "movableTo": [11],
+        "obtainableIn": [
+          { "game": 8, "methods": [1, 4] },
+          { "game": 9, "methods": [1, 4] }
+        ]
+      },
+      {
+        "id": 3,
+        "formType": 1,
+        "formName": "Autumn Form",
+        "types": [0, 11],
+        "movableTo": [11],
+        "obtainableIn": [
+          { "game": 8, "methods": [1, 4] },
+          { "game": 9, "methods": [1, 4] }
+        ]
+      },
+      {
+        "id": 4,
+        "formType": 1,
+        "formName": "Winter Form",
+        "types": [0, 11],
+        "movableTo": [11],
+        "obtainableIn": [
+          { "game": 8, "methods": [1, 4] },
+          { "game": 9, "methods": [1, 4] }
+        ]
+      }
+    ],
+    "formsData": { "onlyVisual": true, "interchandable": false }
+  },
+  {
+    "number": 586,
+    "name": "Sawsbuck",
+    "origin": 4,
+    "genders": [0, 1],
+    "rarity": 0,
+    "forms": [
+      {
+        "id": 1,
+        "formType": 1,
+        "formName": "Spring Form",
+        "types": [0, 11],
+        "movableTo": [11],
+        "obtainableIn": [
+          { "game": 8, "methods": [1, 4] },
+          { "game": 9, "methods": [1, 4] }
+        ]
+      },
+      {
+        "id": 2,
+        "formType": 1,
+        "formName": "Summer Form",
+        "types": [0, 11],
+        "movableTo": [11],
+        "obtainableIn": [
+          { "game": 8, "methods": [1, 4] },
+          { "game": 9, "methods": [1, 4] }
+        ]
+      },
+      {
+        "id": 3,
+        "formType": 1,
+        "formName": "Autumn Form",
+        "types": [0, 11],
+        "movableTo": [11],
+        "obtainableIn": [
+          { "game": 8, "methods": [1, 4] },
+          { "game": 9, "methods": [1, 4] }
+        ]
+      },
+      {
+        "id": 4,
+        "formType": 1,
+        "formName": "Winter Form",
+        "types": [0, 11],
+        "movableTo": [11],
+        "obtainableIn": [
+          { "game": 8, "methods": [1, 4] },
+          { "game": 9, "methods": [1, 4] }
+        ]
+      }
+    ],
+    "formsData": { "onlyVisual": true, "interchandable": false }
+  },
+  {
+    "number": 625,
+    "name": "Bisharp",
+    "origin": 4,
+    "genders": [0, 1],
+    "rarity": 0,
+    "forms": [
+      {
+        "id": 1,
+        "formType": 0,
+        "types": [16, 8],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [1, 7] },
+          { "game": 11, "methods": [1, 7] },
+          { "game": 13, "methods": [7] },
+          { "game": 4, "methods": [1, 7] },
+          { "game": 12, "methods": [1, 7] },
+          { "game": 14, "methods": [7] },
+          { "game": 8, "methods": [1, 4] },
+          { "game": 9, "methods": [1, 4] }
+        ],
+        "evolvesIn": []
+      }
+    ]
+  },
+  {
+    "number": 666,
+    "name": "Vivillon",
+    "origin": 5,
+    "genders": [0, 1],
+    "rarity": 0,
+    "forms": [
+      {
+        "id": 1,
+        "formType": 1,
+        "formName": "Archipelago",
+        "types": [6, 2],
+        "movableTo": [11],
+        "obtainableIn": []
+      },
+      {
+        "id": 2,
+        "formType": 1,
+        "formName": "Continental",
+        "types": [6, 2],
+        "movableTo": [11],
+        "obtainableIn": []
+      },
+      {
+        "id": 3,
+        "formType": 1,
+        "formName": "Elegant",
+        "types": [6, 2],
+        "movableTo": [11],
+        "obtainableIn": []
+      },
+      {
+        "id": 4,
+        "formType": 1,
+        "formName": "Garden",
+        "types": [6, 2],
+        "movableTo": [11],
+        "obtainableIn": []
+      },
+      {
+        "id": 5,
+        "formType": 1,
+        "formName": "High Plains",
+        "types": [6, 2],
+        "movableTo": [11],
+        "obtainableIn": []
+      },
+      {
+        "id": 6,
+        "formType": 1,
+        "formName": "Icy Snow",
+        "types": [6, 2],
+        "movableTo": [11],
+        "obtainableIn": []
+      },
+      {
+        "id": 7,
+        "formType": 1,
+        "formName": "Jungle",
+        "types": [6, 2],
+        "movableTo": [11],
+        "obtainableIn": []
+      },
+      {
+        "id": 8,
+        "formType": 1,
+        "formName": "Marine",
+        "types": [6, 2],
+        "movableTo": [11],
+        "obtainableIn": []
+      },
+      {
+        "id": 9,
+        "formType": 1,
+        "formName": "Meadow",
+        "types": [6, 2],
+        "movableTo": [11],
+        "obtainableIn": []
+      },
+      {
+        "id": 10,
+        "formType": 1,
+        "formName": "Modern",
+        "types": [6, 2],
+        "movableTo": [11],
+        "obtainableIn": []
+      },
+      {
+        "id": 11,
+        "formType": 1,
+        "formName": "Monsoon",
+        "types": [6, 2],
+        "movableTo": [11],
+        "obtainableIn": []
+      },
+      {
+        "id": 12,
+        "formType": 1,
+        "formName": "Ocean",
+        "types": [6, 2],
+        "movableTo": [11],
+        "obtainableIn": []
+      },
+      {
+        "id": 13,
+        "formType": 1,
+        "formName": "Polar",
+        "types": [6, 2],
+        "movableTo": [11],
+        "obtainableIn": []
+      },
+      {
+        "id": 14,
+        "formType": 1,
+        "formName": "River",
+        "types": [6, 2],
+        "movableTo": [11],
+        "obtainableIn": []
+      },
+      {
+        "id": 15,
+        "formType": 1,
+        "formName": "Sandstorm",
+        "types": [6, 2],
+        "movableTo": [11],
+        "obtainableIn": []
+      },
+      {
+        "id": 16,
+        "formType": 1,
+        "formName": "Savanna",
+        "types": [6, 2],
+        "movableTo": [11],
+        "obtainableIn": []
+      },
+      {
+        "id": 17,
+        "formType": 1,
+        "formName": "Sun",
+        "types": [6, 2],
+        "movableTo": [11],
+        "obtainableIn": []
+      },
+      {
+        "id": 18,
+        "formType": 1,
+        "formName": "Tundra",
+        "types": [6, 2],
+        "movableTo": [11],
+        "obtainableIn": []
+      },
+      {
+        "id": 19,
+        "formType": 1,
+        "formName": "Poké Ball",
+        "types": [6, 2],
+        "movableTo": [11],
+        "obtainableIn": []
+      },
+      {
+        "id": 20,
+        "formType": 1,
+        "formName": "Fancy",
+        "types": [6, 2],
+        "movableTo": [11],
+        "obtainableIn": [
+          { "game": 8, "methods": [1] },
+          { "game": 9, "methods": [1] }
+        ]
+      }
+    ],
+    "formsData": { "onlyVisual": true, "interchandable": false }
+  },
+  {
+    "number": 669,
+    "name": "Flabébé",
+    "origin": 5,
+    "genders": [1],
+    "rarity": 0,
+    "forms": [
+      {
+        "id": 2,
+        "formType": 1,
+        "formName": "Yellow Flower",
+        "types": [17],
+        "movableTo": [11],
+        "obtainableIn": [
+          { "game": 8, "methods": [1, 4] },
+          { "game": 9, "methods": [1, 4] }
+        ]
+      },
+      {
+        "id": 3,
+        "formType": 1,
+        "formName": "Orange Flower",
+        "types": [17],
+        "movableTo": [11],
+        "obtainableIn": [
+          { "game": 8, "methods": [1, 4] },
+          { "game": 9, "methods": [1, 4] }
+        ]
+      },
+      {
+        "id": 4,
+        "formType": 1,
+        "formName": "Blue Flower",
+        "types": [17],
+        "movableTo": [11],
+        "obtainableIn": [
+          { "game": 8, "methods": [1, 4] },
+          { "game": 9, "methods": [1, 4] }
+        ]
+      },
+      {
+        "id": 5,
+        "formType": 1,
+        "formName": "White Flower",
+        "types": [17],
+        "movableTo": [11],
+        "obtainableIn": [
+          { "game": 8, "methods": [1, 4] },
+          { "game": 9, "methods": [1, 4] }
+        ]
+      }
+    ],
+    "formsData": { "onlyVisual": true, "interchandable": false }
+  },
+  {
+    "number": 670,
+    "name": "Floette",
+    "origin": 5,
+    "genders": [1],
+    "rarity": 0,
+    "forms": [
+      {
+        "id": 2,
+        "formType": 1,
+        "formName": "Yellow Flower",
+        "types": [17],
+        "movableTo": [11],
+        "obtainableIn": [
+          { "game": 8, "methods": [1] },
+          { "game": 9, "methods": [1] }
+        ]
+      },
+      {
+        "id": 3,
+        "formType": 1,
+        "formName": "Orange Flower",
+        "types": [17],
+        "movableTo": [11],
+        "obtainableIn": [
+          { "game": 8, "methods": [1] },
+          { "game": 9, "methods": [1] }
+        ]
+      },
+      {
+        "id": 4,
+        "formType": 1,
+        "formName": "Blue Flower",
+        "types": [17],
+        "movableTo": [11],
+        "obtainableIn": [
+          { "game": 8, "methods": [1] },
+          { "game": 9, "methods": [1] }
+        ]
+      },
+      {
+        "id": 5,
+        "formType": 1,
+        "formName": "White Flower",
+        "types": [17],
+        "movableTo": [11],
+        "obtainableIn": [
+          { "game": 8, "methods": [1] },
+          { "game": 9, "methods": [1] }
+        ]
+      }
+    ],
+    "formsData": { "onlyVisual": true, "interchandable": false }
+  },
+  {
+    "number": 671,
+    "name": "Florges",
+    "origin": 5,
+    "genders": [1],
+    "rarity": 0,
+    "forms": [
+      {
+        "id": 1,
+        "formType": 1,
+        "formName": "Red Flower",
+        "types": [17],
+        "movableTo": [11],
+        "obtainableIn": [
+          { "game": 8, "methods": [1, 4] },
+          { "game": 9, "methods": [1, 4] }
+        ]
+      },
+      {
+        "id": 2,
+        "formType": 1,
+        "formName": "Yellow Flower",
+        "types": [17],
+        "movableTo": [11],
+        "obtainableIn": [
+          { "game": 8, "methods": [1, 4] },
+          { "game": 9, "methods": [1, 4] }
+        ]
+      },
+      {
+        "id": 3,
+        "formType": 1,
+        "formName": "Orange Flower",
+        "types": [17],
+        "movableTo": [11],
+        "obtainableIn": [
+          { "game": 8, "methods": [1, 4] },
+          { "game": 9, "methods": [1, 4] }
+        ]
+      },
+      {
+        "id": 4,
+        "formType": 1,
+        "formName": "Blue Flower",
+        "types": [17],
+        "movableTo": [11],
+        "obtainableIn": [
+          { "game": 8, "methods": [1, 4] },
+          { "game": 9, "methods": [1, 4] }
+        ]
+      },
+      {
+        "id": 5,
+        "formType": 1,
+        "formName": "White Flower",
+        "types": [17],
+        "movableTo": [11],
+        "obtainableIn": [
+          { "game": 8, "methods": [1, 4] },
+          { "game": 9, "methods": [1, 4] }
+        ]
+      }
+    ],
+    "formsData": { "onlyVisual": true, "interchandable": false }
+  },
+  {
+    "number": 677,
+    "name": "Espurr",
+    "origin": 5,
+    "genders": [0, 1],
+    "rarity": 0,
+    "forms": [
+      {
+        "id": 1,
+        "formType": 0,
+        "types": [13],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [1, 7] },
+          { "game": 4, "methods": [1, 7] }
+        ]
+      }
+    ]
+  },
+  {
+    "number": 710,
+    "name": "Pumpkaboo",
+    "origin": 5,
+    "genders": [0, 1],
+    "rarity": 0,
+    "forms": [
+      {
+        "id": 2,
+        "formType": 1,
+        "formName": "Average Size",
+        "types": [7, 11],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [1, 7] },
+          { "game": 4, "methods": [1, 7] }
+        ]
+      },
+      {
+        "id": 3,
+        "formType": 1,
+        "formName": "Large Size",
+        "types": [7, 11],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [1, 7] },
+          { "game": 4, "methods": [1, 7] }
+        ]
+      },
+      {
+        "id": 4,
+        "formType": 1,
+        "formName": "Super Size",
+        "types": [7, 11],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [1, 7] },
+          { "game": 4, "methods": [1, 7] }
+        ]
+      }
+    ],
+    "formsData": { "onlyVisual": false, "interchandable": false }
+  },
+  {
+    "number": 711,
+    "name": "Gourgeist",
+    "origin": 5,
+    "genders": [0, 1],
+    "rarity": 0,
+    "forms": [
+      {
+        "id": 1,
+        "formType": 1,
+        "formName": "Small Size",
+        "types": [7, 11],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [1, 7] },
+          { "game": 11, "methods": [7] },
+          { "game": 13, "methods": [7] },
+          { "game": 4, "methods": [1, 7] },
+          { "game": 12, "methods": [7] },
+          { "game": 14, "methods": [7] }
+        ]
+      },
+      {
+        "id": 2,
+        "formType": 1,
+        "formName": "Average Size",
+        "types": [7, 11],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [1, 7] },
+          { "game": 11, "methods": [7] },
+          { "game": 13, "methods": [7] },
+          { "game": 4, "methods": [1, 7] },
+          { "game": 12, "methods": [7] },
+          { "game": 14, "methods": [7] }
+        ]
+      },
+      {
+        "id": 3,
+        "formType": 1,
+        "formName": "Large Size",
+        "types": [7, 11],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [1, 7] },
+          { "game": 11, "methods": [7] },
+          { "game": 13, "methods": [7] },
+          { "game": 4, "methods": [1, 7] },
+          { "game": 12, "methods": [7] },
+          { "game": 14, "methods": [7] }
+        ]
+      },
+      {
+        "id": 4,
+        "formType": 1,
+        "formName": "Super Size",
+        "types": [7, 11],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [1, 7] },
+          { "game": 11, "methods": [7] },
+          { "game": 13, "methods": [7] },
+          { "game": 4, "methods": [1, 7] },
+          { "game": 12, "methods": [7] },
+          { "game": 14, "methods": [7] }
+        ]
+      }
+    ],
+    "formsData": { "onlyVisual": false, "interchandable": false }
+  },
+  {
+    "number": 745,
+    "name": "Lycanroc",
+    "origin": 6,
+    "genders": [0, 1],
+    "rarity": 0,
+    "forms": [
+      {
+        "id": 1,
+        "formType": 1,
+        "formName": "Midday Form",
+        "types": [5],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 11, "methods": [1, 7] },
+          { "game": 13, "methods": [7] },
+          { "game": 12, "methods": [1, 7] },
+          { "game": 14, "methods": [7] },
+          { "game": 8, "methods": [1, 4] },
+          { "game": 9, "methods": [1, 4] }
+        ]
+      },
+      {
+        "id": 2,
+        "formType": 1,
+        "formName": "Midnight Form",
+        "types": [5],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 11, "methods": [1, 7] },
+          { "game": 13, "methods": [7] },
+          { "game": 12, "methods": [1, 7] },
+          { "game": 14, "methods": [7] },
+          { "game": 8, "methods": [1, 4] },
+          { "game": 9, "methods": [1, 4] }
+        ]
+      },
+      {
+        "id": 3,
+        "formType": 1,
+        "formName": "Dusk Form",
+        "types": [5],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": []
+      }
+    ],
+    "formsData": { "onlyVisual": false, "interchandable": false }
+  },
+  {
+    "number": 849,
+    "name": "Toxtricity",
+    "origin": 8,
+    "genders": [0, 1],
+    "rarity": 0,
+    "forms": [
+      {
+        "id": 1,
+        "formType": 1,
+        "formName": "Amped Form",
+        "types": [12, 3],
+        "varieties": [0],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [7] },
+          { "game": 13, "methods": [7, 6, 7] },
+          { "game": 4, "methods": [7] },
+          { "game": 14, "methods": [7, 6, 7] },
+          { "game": 8, "methods": [1, 4] },
+          { "game": 9, "methods": [1, 4] }
+        ]
+      },
+      {
+        "id": 2,
+        "formType": 1,
+        "formName": "Low Key Form",
+        "types": [12, 3],
+        "varieties": [0],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [7] },
+          { "game": 13, "methods": [7, 6, 7] },
+          { "game": 4, "methods": [7] },
+          { "game": 14, "methods": [7, 6, 7] },
+          { "game": 8, "methods": [1, 4] },
+          { "game": 9, "methods": [1, 4] }
+        ]
+      }
+    ],
+    "formsData": { "onlyVisual": false, "interchandable": false }
+  },
+  {
+    "number": 854,
+    "name": "Sinistea",
+    "origin": 8,
+    "genders": [2],
+    "rarity": 0,
+    "forms": [
+      {
+        "id": 2,
+        "formType": 1,
+        "formName": "Antique Form",
+        "types": [7],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [1, 7] },
+          { "game": 13, "methods": [1, 7] },
+          { "game": 4, "methods": [1, 7] },
+          { "game": 14, "methods": [1, 7] },
+          { "game": 8, "methods": [1, 4] },
+          { "game": 9, "methods": [1, 4] }
+        ]
+      }
+    ],
+    "formsData": { "onlyVisual": true, "interchandable": false }
+  },
+  {
+    "number": 855,
+    "name": "Polteageist",
+    "origin": 8,
+    "genders": [2],
+    "rarity": 0,
+    "forms": [
+      {
+        "id": 1,
+        "formType": 1,
+        "formName": "Phony Form",
+        "types": [7],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [7] },
+          { "game": 13, "methods": [1, 7, 7] },
+          { "game": 4, "methods": [7] },
+          { "game": 14, "methods": [1, 7, 7] },
+          { "game": 8, "methods": [4] },
+          { "game": 9, "methods": [4] }
+        ]
+      },
+      {
+        "id": 2,
+        "formType": 1,
+        "formName": "Antique Form",
+        "types": [7],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": []
+      }
+    ],
+    "formsData": { "onlyVisual": true, "interchandable": false }
+  },
+  {
+    "number": 869,
+    "name": "Alcremie",
+    "origin": 8,
+    "genders": [1],
+    "rarity": 0,
+    "forms": [
+      {
+        "id": 1,
+        "formType": 1,
+        "formName": "Vanilla Cream Strawberry Sweet",
+        "types": [17],
+        "varieties": [0],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [6, 7] },
+          { "game": 13, "methods": [7, 6, 7] },
+          { "game": 4, "methods": [6, 7] },
+          { "game": 14, "methods": [7, 6, 7] }
+        ]
+      },
+      {
+        "id": 2,
+        "formType": 1,
+        "formName": "Vanilla Cream Berry Sweet",
+        "types": [17],
+        "varieties": [0],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [6, 7] },
+          { "game": 13, "methods": [7, 6, 7] },
+          { "game": 4, "methods": [6, 7] },
+          { "game": 14, "methods": [7, 6, 7] }
+        ]
+      },
+      {
+        "id": 3,
+        "formType": 1,
+        "formName": "Vanilla Cream Love Sweet",
+        "types": [17],
+        "varieties": [0],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [6, 7] },
+          { "game": 13, "methods": [7, 6, 7] },
+          { "game": 4, "methods": [6, 7] },
+          { "game": 14, "methods": [7, 6, 7] }
+        ]
+      },
+      {
+        "id": 4,
+        "formType": 1,
+        "formName": "Vanilla Cream Star Sweet",
+        "types": [17],
+        "varieties": [0],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [6, 7] },
+          { "game": 13, "methods": [7, 6, 7] },
+          { "game": 4, "methods": [6, 7] },
+          { "game": 14, "methods": [7, 6, 7] }
+        ]
+      },
+      {
+        "id": 5,
+        "formType": 1,
+        "formName": "Vanilla Cream Clover Sweet",
+        "types": [17],
+        "varieties": [0],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [6, 7] },
+          { "game": 13, "methods": [7, 6, 7] },
+          { "game": 4, "methods": [6, 7] },
+          { "game": 14, "methods": [7, 6, 7] }
+        ]
+      },
+      {
+        "id": 6,
+        "formType": 1,
+        "formName": "Vanilla Cream Flower Sweet",
+        "types": [17],
+        "varieties": [0],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [6, 7] },
+          { "game": 13, "methods": [7, 6, 7] },
+          { "game": 4, "methods": [6, 7] },
+          { "game": 14, "methods": [7, 6, 7] }
+        ]
+      },
+      {
+        "id": 7,
+        "formType": 1,
+        "formName": "Vanilla Cream Ribbon Sweet",
+        "types": [17],
+        "varieties": [0],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [6, 7] },
+          { "game": 13, "methods": [7, 6, 7] },
+          { "game": 4, "methods": [6, 7] },
+          { "game": 14, "methods": [7, 6, 7] }
+        ]
+      },
+      {
+        "id": 8,
+        "formType": 1,
+        "formName": "Ruby Cream Strawberry Sweet",
+        "types": [17],
+        "varieties": [0],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [6, 7] },
+          { "game": 13, "methods": [7, 6, 7] },
+          { "game": 4, "methods": [6, 7] },
+          { "game": 14, "methods": [7, 6, 7] }
+        ]
+      },
+      {
+        "id": 9,
+        "formType": 1,
+        "formName": "Ruby Cream Berry Sweet",
+        "types": [17],
+        "varieties": [0],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [6, 7] },
+          { "game": 13, "methods": [7, 6, 7] },
+          { "game": 4, "methods": [6, 7] },
+          { "game": 14, "methods": [7, 6, 7] }
+        ]
+      },
+      {
+        "id": 10,
+        "formType": 1,
+        "formName": "Ruby Cream Love Sweet",
+        "types": [17],
+        "varieties": [0],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [6, 7] },
+          { "game": 13, "methods": [7, 6, 7] },
+          { "game": 4, "methods": [6, 7] },
+          { "game": 14, "methods": [7, 6, 7] }
+        ]
+      },
+      {
+        "id": 11,
+        "formType": 1,
+        "formName": "Ruby Cream Star Sweet",
+        "types": [17],
+        "varieties": [0],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [6, 7] },
+          { "game": 13, "methods": [7, 6, 7] },
+          { "game": 4, "methods": [6, 7] },
+          { "game": 14, "methods": [7, 6, 7] }
+        ]
+      },
+      {
+        "id": 12,
+        "formType": 1,
+        "formName": "Ruby Cream Clover Sweet",
+        "types": [17],
+        "varieties": [0],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [6, 7] },
+          { "game": 13, "methods": [7, 6, 7] },
+          { "game": 4, "methods": [6, 7] },
+          { "game": 14, "methods": [7, 6, 7] }
+        ]
+      },
+      {
+        "id": 13,
+        "formType": 1,
+        "formName": "Ruby Cream Flower Sweet",
+        "types": [17],
+        "varieties": [0],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [6, 7] },
+          { "game": 13, "methods": [7, 6, 7] },
+          { "game": 4, "methods": [6, 7] },
+          { "game": 14, "methods": [7, 6, 7] }
+        ]
+      },
+      {
+        "id": 14,
+        "formType": 1,
+        "formName": "Ruby Cream Ribbon Sweet",
+        "types": [17],
+        "varieties": [0],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [6, 7] },
+          { "game": 13, "methods": [7, 6, 7] },
+          { "game": 4, "methods": [6, 7] },
+          { "game": 14, "methods": [7, 6, 7] }
+        ]
+      },
+      {
+        "id": 15,
+        "formType": 1,
+        "formName": "Matcha Cream Strawberry Sweet",
+        "types": [17],
+        "varieties": [0],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [6, 7] },
+          { "game": 13, "methods": [7, 6, 7] },
+          { "game": 4, "methods": [6, 7] },
+          { "game": 14, "methods": [7, 6, 7] }
+        ]
+      },
+      {
+        "id": 16,
+        "formType": 1,
+        "formName": "Matcha Cream Berry Sweet",
+        "types": [17],
+        "varieties": [0],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [6, 7] },
+          { "game": 13, "methods": [7, 6, 7] },
+          { "game": 4, "methods": [6, 7] },
+          { "game": 14, "methods": [7, 6, 7] }
+        ]
+      },
+      {
+        "id": 17,
+        "formType": 1,
+        "formName": "Matcha Cream Love Sweet",
+        "types": [17],
+        "varieties": [0],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [6, 7] },
+          { "game": 13, "methods": [7, 6, 7] },
+          { "game": 4, "methods": [6, 7] },
+          { "game": 14, "methods": [7, 6, 7] }
+        ]
+      },
+      {
+        "id": 18,
+        "formType": 1,
+        "formName": "Matcha Cream Star Sweet",
+        "types": [17],
+        "varieties": [0],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [6, 7] },
+          { "game": 13, "methods": [7, 6, 7] },
+          { "game": 4, "methods": [6, 7] },
+          { "game": 14, "methods": [7, 6, 7] }
+        ]
+      },
+      {
+        "id": 19,
+        "formType": 1,
+        "formName": "Matcha Cream Clover Sweet",
+        "types": [17],
+        "varieties": [0],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [6, 7] },
+          { "game": 13, "methods": [7, 6, 7] },
+          { "game": 4, "methods": [6, 7] },
+          { "game": 14, "methods": [7, 6, 7] }
+        ]
+      },
+      {
+        "id": 20,
+        "formType": 1,
+        "formName": "Matcha Cream Flower Sweet",
+        "types": [17],
+        "varieties": [0],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [6, 7] },
+          { "game": 13, "methods": [7, 6, 7] },
+          { "game": 4, "methods": [6, 7] },
+          { "game": 14, "methods": [7, 6, 7] }
+        ]
+      },
+      {
+        "id": 21,
+        "formType": 1,
+        "formName": "Matcha Cream Ribbon Sweet",
+        "types": [17],
+        "varieties": [0],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [6, 7] },
+          { "game": 13, "methods": [7, 6, 7] },
+          { "game": 4, "methods": [6, 7] },
+          { "game": 14, "methods": [7, 6, 7] }
+        ]
+      },
+      {
+        "id": 22,
+        "formType": 1,
+        "formName": "Mint Cream Strawberry Sweet",
+        "types": [17],
+        "varieties": [0],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [6, 7] },
+          { "game": 13, "methods": [7, 6, 7] },
+          { "game": 4, "methods": [6, 7] },
+          { "game": 14, "methods": [7, 6, 7] }
+        ]
+      },
+      {
+        "id": 23,
+        "formType": 1,
+        "formName": "Mint Cream Berry Sweet",
+        "types": [17],
+        "varieties": [0],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [6, 7] },
+          { "game": 13, "methods": [7, 6, 7] },
+          { "game": 4, "methods": [6, 7] },
+          { "game": 14, "methods": [7, 6, 7] }
+        ]
+      },
+      {
+        "id": 24,
+        "formType": 1,
+        "formName": "Mint Cream Love Sweet",
+        "types": [17],
+        "varieties": [0],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [6, 7] },
+          { "game": 13, "methods": [7, 6, 7] },
+          { "game": 4, "methods": [6, 7] },
+          { "game": 14, "methods": [7, 6, 7] }
+        ]
+      },
+      {
+        "id": 25,
+        "formType": 1,
+        "formName": "Mint Cream Star Sweet",
+        "types": [17],
+        "varieties": [0],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [6, 7] },
+          { "game": 13, "methods": [7, 6, 7] },
+          { "game": 4, "methods": [6, 7] },
+          { "game": 14, "methods": [7, 6, 7] }
+        ]
+      },
+      {
+        "id": 26,
+        "formType": 1,
+        "formName": "Mint Cream Clover Sweet",
+        "types": [17],
+        "varieties": [0],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [6, 7] },
+          { "game": 13, "methods": [7, 6, 7] },
+          { "game": 4, "methods": [6, 7] },
+          { "game": 14, "methods": [7, 6, 7] }
+        ]
+      },
+      {
+        "id": 27,
+        "formType": 1,
+        "formName": "Mint Cream Flower Sweet",
+        "types": [17],
+        "varieties": [0],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [6, 7] },
+          { "game": 13, "methods": [7, 6, 7] },
+          { "game": 4, "methods": [6, 7] },
+          { "game": 14, "methods": [7, 6, 7] }
+        ]
+      },
+      {
+        "id": 28,
+        "formType": 1,
+        "formName": "Mint Cream Ribbon Sweet",
+        "types": [17],
+        "varieties": [0],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [6, 7] },
+          { "game": 13, "methods": [7, 6, 7] },
+          { "game": 4, "methods": [6, 7] },
+          { "game": 14, "methods": [7, 6, 7] }
+        ]
+      },
+      {
+        "id": 29,
+        "formType": 1,
+        "formName": "Lemon Cream Strawberry Sweet",
+        "types": [17],
+        "varieties": [0],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [6, 7] },
+          { "game": 13, "methods": [7, 6, 7] },
+          { "game": 4, "methods": [6, 7] },
+          { "game": 14, "methods": [7, 6, 7] }
+        ]
+      },
+      {
+        "id": 30,
+        "formType": 1,
+        "formName": "Lemon Cream Berry Sweet",
+        "types": [17],
+        "varieties": [0],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [6, 7] },
+          { "game": 13, "methods": [7, 6, 7] },
+          { "game": 4, "methods": [6, 7] },
+          { "game": 14, "methods": [7, 6, 7] }
+        ]
+      },
+      {
+        "id": 31,
+        "formType": 1,
+        "formName": "Lemon Cream Love Sweet",
+        "types": [17],
+        "varieties": [0],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [6, 7] },
+          { "game": 13, "methods": [7, 6, 7] },
+          { "game": 4, "methods": [6, 7] },
+          { "game": 14, "methods": [7, 6, 7] }
+        ]
+      },
+      {
+        "id": 32,
+        "formType": 1,
+        "formName": "Lemon Cream Star Sweet",
+        "types": [17],
+        "varieties": [0],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [6, 7] },
+          { "game": 13, "methods": [7, 6, 7] },
+          { "game": 4, "methods": [6, 7] },
+          { "game": 14, "methods": [7, 6, 7] }
+        ]
+      },
+      {
+        "id": 33,
+        "formType": 1,
+        "formName": "Lemon Cream Clover Sweet",
+        "types": [17],
+        "varieties": [0],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [6, 7] },
+          { "game": 13, "methods": [7, 6, 7] },
+          { "game": 4, "methods": [6, 7] },
+          { "game": 14, "methods": [7, 6, 7] }
+        ]
+      },
+      {
+        "id": 34,
+        "formType": 1,
+        "formName": "Lemon Cream Flower Sweet",
+        "types": [17],
+        "varieties": [0],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [6, 7] },
+          { "game": 13, "methods": [7, 6, 7] },
+          { "game": 4, "methods": [6, 7] },
+          { "game": 14, "methods": [7, 6, 7] }
+        ]
+      },
+      {
+        "id": 35,
+        "formType": 1,
+        "formName": "Lemon Cream Ribbon Sweet",
+        "types": [17],
+        "varieties": [0],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [6, 7] },
+          { "game": 13, "methods": [7, 6, 7] },
+          { "game": 4, "methods": [6, 7] },
+          { "game": 14, "methods": [7, 6, 7] }
+        ]
+      },
+      {
+        "id": 36,
+        "formType": 1,
+        "formName": "Salted Cream Strawberry Sweet",
+        "types": [17],
+        "varieties": [0],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [6, 7] },
+          { "game": 13, "methods": [7, 6, 7] },
+          { "game": 4, "methods": [6, 7] },
+          { "game": 14, "methods": [7, 6, 7] }
+        ]
+      },
+      {
+        "id": 37,
+        "formType": 1,
+        "formName": "Salted Cream Berry Sweet",
+        "types": [17],
+        "varieties": [0],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [6, 7] },
+          { "game": 13, "methods": [7, 6, 7] },
+          { "game": 4, "methods": [6, 7] },
+          { "game": 14, "methods": [7, 6, 7] }
+        ]
+      },
+      {
+        "id": 38,
+        "formType": 1,
+        "formName": "Salted Cream Love Sweet",
+        "types": [17],
+        "varieties": [0],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [6, 7] },
+          { "game": 13, "methods": [7, 6, 7] },
+          { "game": 4, "methods": [6, 7] },
+          { "game": 14, "methods": [7, 6, 7] }
+        ]
+      },
+      {
+        "id": 39,
+        "formType": 1,
+        "formName": "Salted Cream Star Sweet",
+        "types": [17],
+        "varieties": [0],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [6, 7] },
+          { "game": 13, "methods": [7, 6, 7] },
+          { "game": 4, "methods": [6, 7] },
+          { "game": 14, "methods": [7, 6, 7] }
+        ]
+      },
+      {
+        "id": 40,
+        "formType": 1,
+        "formName": "Salted Cream Clover Sweet",
+        "types": [17],
+        "varieties": [0],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [6, 7] },
+          { "game": 13, "methods": [7, 6, 7] },
+          { "game": 4, "methods": [6, 7] },
+          { "game": 14, "methods": [7, 6, 7] }
+        ]
+      },
+      {
+        "id": 41,
+        "formType": 1,
+        "formName": "Salted Cream Flower Sweet",
+        "types": [17],
+        "varieties": [0],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [6, 7] },
+          { "game": 13, "methods": [7, 6, 7] },
+          { "game": 4, "methods": [6, 7] },
+          { "game": 14, "methods": [7, 6, 7] }
+        ]
+      },
+      {
+        "id": 42,
+        "formType": 1,
+        "formName": "Salted Cream Ribbon Sweet",
+        "types": [17],
+        "varieties": [0],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [6, 7] },
+          { "game": 13, "methods": [7, 6, 7] },
+          { "game": 4, "methods": [6, 7] },
+          { "game": 14, "methods": [7, 6, 7] }
+        ]
+      },
+      {
+        "id": 43,
+        "formType": 1,
+        "formName": "Ruby Swirl Strawberry Sweet",
+        "types": [17],
+        "varieties": [0],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [6, 7] },
+          { "game": 13, "methods": [7, 6, 7] },
+          { "game": 4, "methods": [6, 7] },
+          { "game": 14, "methods": [7, 6, 7] }
+        ]
+      },
+      {
+        "id": 44,
+        "formType": 1,
+        "formName": "Ruby Swirl Berry Sweet",
+        "types": [17],
+        "varieties": [0],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [6, 7] },
+          { "game": 13, "methods": [7, 6, 7] },
+          { "game": 4, "methods": [6, 7] },
+          { "game": 14, "methods": [7, 6, 7] }
+        ]
+      },
+      {
+        "id": 45,
+        "formType": 1,
+        "formName": "Ruby Swirl Love Sweet",
+        "types": [17],
+        "varieties": [0],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [6, 7] },
+          { "game": 13, "methods": [7, 6, 7] },
+          { "game": 4, "methods": [6, 7] },
+          { "game": 14, "methods": [7, 6, 7] }
+        ]
+      },
+      {
+        "id": 46,
+        "formType": 1,
+        "formName": "Ruby Swirl Star Sweet",
+        "types": [17],
+        "varieties": [0],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [6, 7] },
+          { "game": 13, "methods": [7, 6, 7] },
+          { "game": 4, "methods": [6, 7] },
+          { "game": 14, "methods": [7, 6, 7] }
+        ]
+      },
+      {
+        "id": 47,
+        "formType": 1,
+        "formName": "Ruby Swirl Clover Sweet",
+        "types": [17],
+        "varieties": [0],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [6, 7] },
+          { "game": 13, "methods": [7, 6, 7] },
+          { "game": 4, "methods": [6, 7] },
+          { "game": 14, "methods": [7, 6, 7] }
+        ]
+      },
+      {
+        "id": 48,
+        "formType": 1,
+        "formName": "Ruby Swirl Flower Sweet",
+        "types": [17],
+        "varieties": [0],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [6, 7] },
+          { "game": 13, "methods": [7, 6, 7] },
+          { "game": 4, "methods": [6, 7] },
+          { "game": 14, "methods": [7, 6, 7] }
+        ]
+      },
+      {
+        "id": 49,
+        "formType": 1,
+        "formName": "Ruby Swirl Ribbon Sweet",
+        "types": [17],
+        "varieties": [0],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [6, 7] },
+          { "game": 13, "methods": [7, 6, 7] },
+          { "game": 4, "methods": [6, 7] },
+          { "game": 14, "methods": [7, 6, 7] }
+        ]
+      },
+      {
+        "id": 50,
+        "formType": 1,
+        "formName": "Caramel Swirl Strawberry Sweet",
+        "types": [17],
+        "varieties": [0],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [6, 7] },
+          { "game": 13, "methods": [7, 6, 7] },
+          { "game": 4, "methods": [6, 7] },
+          { "game": 14, "methods": [7, 6, 7] }
+        ]
+      },
+      {
+        "id": 51,
+        "formType": 1,
+        "formName": "Caramel Swirl Berry Sweet",
+        "types": [17],
+        "varieties": [0],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [6, 7] },
+          { "game": 13, "methods": [7, 6, 7] },
+          { "game": 4, "methods": [6, 7] },
+          { "game": 14, "methods": [7, 6, 7] }
+        ]
+      },
+      {
+        "id": 52,
+        "formType": 1,
+        "formName": "Caramel Swirl Love Sweet",
+        "types": [17],
+        "varieties": [0],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [6, 7] },
+          { "game": 13, "methods": [7, 6, 7] },
+          { "game": 4, "methods": [6, 7] },
+          { "game": 14, "methods": [7, 6, 7] }
+        ]
+      },
+      {
+        "id": 53,
+        "formType": 1,
+        "formName": "Caramel Swirl Star Sweet",
+        "types": [17],
+        "varieties": [0],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [6, 7] },
+          { "game": 13, "methods": [7, 6, 7] },
+          { "game": 4, "methods": [6, 7] },
+          { "game": 14, "methods": [7, 6, 7] }
+        ]
+      },
+      {
+        "id": 54,
+        "formType": 1,
+        "formName": "Caramel Swirl Clover Sweet",
+        "types": [17],
+        "varieties": [0],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [6, 7] },
+          { "game": 13, "methods": [7, 6, 7] },
+          { "game": 4, "methods": [6, 7] },
+          { "game": 14, "methods": [7, 6, 7] }
+        ]
+      },
+      {
+        "id": 55,
+        "formType": 1,
+        "formName": "Caramel Swirl Flower Sweet",
+        "types": [17],
+        "varieties": [0],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [6, 7] },
+          { "game": 13, "methods": [7, 6, 7] },
+          { "game": 4, "methods": [6, 7] },
+          { "game": 14, "methods": [7, 6, 7] }
+        ]
+      },
+      {
+        "id": 56,
+        "formType": 1,
+        "formName": "Caramel Swirl Ribbon Sweet",
+        "types": [17],
+        "varieties": [0],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [6, 7] },
+          { "game": 13, "methods": [7, 6, 7] },
+          { "game": 4, "methods": [6, 7] },
+          { "game": 14, "methods": [7, 6, 7] }
+        ]
+      },
+      {
+        "id": 57,
+        "formType": 1,
+        "formName": "Rainbow Swirl Strawberry Sweet",
+        "types": [17],
+        "varieties": [0],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [6, 7] },
+          { "game": 13, "methods": [7, 6, 7] },
+          { "game": 4, "methods": [6, 7] },
+          { "game": 14, "methods": [7, 6, 7] }
+        ]
+      },
+      {
+        "id": 58,
+        "formType": 1,
+        "formName": "Rainbow Swirl Berry Sweet",
+        "types": [17],
+        "varieties": [0],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [6, 7] },
+          { "game": 13, "methods": [7, 6, 7] },
+          { "game": 4, "methods": [6, 7] },
+          { "game": 14, "methods": [7, 6, 7] }
+        ]
+      },
+      {
+        "id": 59,
+        "formType": 1,
+        "formName": "Rainbow Swirl Love Sweet",
+        "types": [17],
+        "varieties": [0],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [6, 7] },
+          { "game": 13, "methods": [7, 6, 7] },
+          { "game": 4, "methods": [6, 7] },
+          { "game": 14, "methods": [7, 6, 7] }
+        ]
+      },
+      {
+        "id": 60,
+        "formType": 1,
+        "formName": "Rainbow Swirl Star Sweet",
+        "types": [17],
+        "varieties": [0],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [6, 7] },
+          { "game": 13, "methods": [7, 6, 7] },
+          { "game": 4, "methods": [6, 7] },
+          { "game": 14, "methods": [7, 6, 7] }
+        ]
+      },
+      {
+        "id": 61,
+        "formType": 1,
+        "formName": "Rainbow Swirl Clover Sweet",
+        "types": [17],
+        "varieties": [0],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [6, 7] },
+          { "game": 13, "methods": [7, 6, 7] },
+          { "game": 4, "methods": [6, 7] },
+          { "game": 14, "methods": [7, 6, 7] }
+        ]
+      },
+      {
+        "id": 62,
+        "formType": 1,
+        "formName": "Rainbow Swirl Flower Sweet",
+        "types": [17],
+        "varieties": [0],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [6, 7] },
+          { "game": 13, "methods": [7, 6, 7] },
+          { "game": 4, "methods": [6, 7] },
+          { "game": 14, "methods": [7, 6, 7] }
+        ]
+      },
+      {
+        "id": 63,
+        "formType": 1,
+        "formName": "Rainbow Swirl Ribbon Sweet",
+        "types": [17],
+        "varieties": [0],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": [
+          { "game": 3, "methods": [6, 7] },
+          { "game": 13, "methods": [7, 6, 7] },
+          { "game": 4, "methods": [6, 7] },
+          { "game": 14, "methods": [7, 6, 7] }
+        ]
+      }
+    ],
+    "formsData": { "onlyVisual": true, "interchandable": false }
+  },
+  {
+    "number": 892,
+    "name": "Urshifu",
+    "origin": 8,
+    "genders": [0, 1],
+    "rarity": 1,
+    "forms": [
+      {
+        "id": 1,
+        "formType": 1,
+        "formName": "Single Strike Style",
+        "types": [1, 16],
+        "varieties": [0],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": []
+      },
+      {
+        "id": 2,
+        "formType": 1,
+        "formName": "Rapid Strike Style",
+        "types": [1, 10],
+        "varieties": [0],
+        "movableTo": [11, 3, 4],
+        "obtainableIn": []
+      }
+    ],
+    "formsData": {
+      "onlyVisual": false,
+      "interchandable": false,
+      "gigantamaxFormDiffs": true
+    }
+  }
+]

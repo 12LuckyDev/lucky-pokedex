@@ -8,7 +8,9 @@
     "TITLE": "Detailed filters",
     "TOOLTIP_TEXT": "Open detailed filters",
     "ORIGIN_REGION": "Region of origin",
-    "OBTAINABLE_IN": "Obtainable in"
+    "OBTAINABLE_IN": "Obtainable in",
+    "APPLY_EVOLUTIONS_TO_OBTAINABLE_IN": "Apply evolutions",
+    "APPLY_FORMS_CHANGE_TO_OBTAINABLE_IN": "Apply forms change"
   },
   "OPTIONS": {
     "TITLE": "Pokedex settings",

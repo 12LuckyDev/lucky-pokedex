@@ -1,18 +1,88 @@
 import { PokeGame } from 'src/app/enums';
-import { PokedexEntry, PokedexSearch } from 'src/app/models';
+import {
+  EvolvesData,
+  ObtainableIn,
+  PokedexEntry,
+  PokedexSearch,
+} from 'src/app/models';
+import { PokedexFilters } from 'src/app/models/app-logic/pokedex-filters.model';
+
+const checkIfObtainable = (
+  gameFilter: PokeGame[],
+  obtainableIn?: ObtainableIn[]
+) => (obtainableIn ?? []).some(({ game }) => gameFilter.includes(game));
+
+const findForm = (data: PokedexEntry[], number: number, formId: number) => {
+  const pokemon = data.find((p) => p.number === number);
+  const form = pokemon?.forms.find((f) => f.id === formId);
+  return form;
+};
+
+const checkIfPreEvosIsObtainable = (
+  data: PokedexEntry[],
+  gameFilter: PokeGame[],
+  evolvesFrom?: EvolvesData[]
+): boolean => {
+  if (evolvesFrom) {
+    return evolvesFrom.some(({ number, formId }) => {
+      const form = findForm(data, number, formId);
+      return checkIfObtainable(gameFilter, form?.obtainableIn)
+        ? true
+        : checkIfPreEvosIsObtainable(data, gameFilter, form?.evolvesFrom);
+    });
+  }
+
+  return false;
+};
+
+const checkIfOtherFormsObtainable = (
+  gameFilter: PokeGame[],
+  entry: PokedexEntry
+) => {
+  const { formsData, forms } = entry;
+  if (formsData?.interchandable) {
+    return forms.some(({ obtainableIn }) =>
+      checkIfObtainable(gameFilter, obtainableIn)
+    );
+  }
+  return false;
+};
 
 const filterObtainableIn = (
   data: PokedexEntry[],
-  gameFilter: PokeGame[]
+  filters: PokedexFilters
 ): PokedexEntry[] => {
+  const {
+    obtainableIn: gameFilter,
+    applyEvolutionToObtainableIn,
+    applyFormsChangeToObtainableIn,
+  } = filters;
+
   if (gameFilter.length > 0) {
     return data
-      .map(({ forms, ...entry }) => ({
-        ...entry,
-        forms: forms.filter(({ obtainableIn }) =>
-          (obtainableIn ?? []).some(({ game }) => gameFilter.includes(game))
-        ),
-      }))
+      .map((entry) => {
+        const { forms } = entry;
+        return {
+          ...entry,
+          forms: forms.filter(({ obtainableIn, evolvesFrom }) => {
+            if (checkIfObtainable(gameFilter, obtainableIn)) {
+              return true;
+            }
+
+            if (
+              applyEvolutionToObtainableIn &&
+              checkIfPreEvosIsObtainable(data, gameFilter, evolvesFrom)
+            ) {
+              return true;
+            }
+
+            return (
+              applyFormsChangeToObtainableIn &&
+              checkIfOtherFormsObtainable(gameFilter, entry)
+            );
+          }),
+        };
+      })
       .filter(({ forms }) => forms.length);
   }
 
@@ -28,9 +98,9 @@ export const getSearchData = (
   }
 
   const { textSearch, filters } = search;
-  const { origins, obtainableIn } = filters;
+  const { origins } = filters;
 
-  return filterObtainableIn(data, obtainableIn).filter(({ name, origin }) => {
+  return filterObtainableIn(data, filters).filter(({ name, origin }) => {
     const nameSearchRule =
       !textSearch ||
       name.toLocaleLowerCase().includes(textSearch.toLocaleLowerCase());
@@ -39,7 +109,8 @@ export const getSearchData = (
       return false;
     }
 
-    const originsRule = origins.length === 0 || origins?.includes(origin);
+    const originsRule: boolean =
+      origins.length === 0 || origins?.includes(origin);
 
     return originsRule;
   });

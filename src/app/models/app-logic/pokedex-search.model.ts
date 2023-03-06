@@ -14,6 +14,8 @@ export class PokemonSearchModel implements PokedexSearch {
     this.filters = {
       origins: [],
       obtainableIn: [],
+      applyEvolutionToObtainableIn: true,
+      applyFormsChangeToObtainableIn: true,
     };
   }
 }

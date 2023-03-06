@@ -1,6 +1,6 @@
 <h2 mat-dialog-title translate>FILTERS.TITLE</h2>
 <mat-dialog-content>
-  <form [formGroup]="form" novalidate autocomplete="off">
+  <form [formGroup]="form" novalidate autocomplete="off" fxLayout="column">
     <div fxLayout="row" fxLayout.lt-md="column" xLayoutWrap fxLayoutGap="2.5%">
       <mat-form-field appearance="fill" fxFlex="1 1">
         <mat-label translate>FILTERS.ORIGIN_REGION</mat-label>
@@ -10,7 +10,16 @@
           </mat-option>
         </mat-select>
       </mat-form-field>
+    </div>
 
+    <div
+      fxLayout="row"
+      fxFlex="1 1"
+      fxLayoutGap.gt-sm="2.5%"
+      fxLayoutAlign="start start"
+      fxLayout.lt-md="column"
+      fxLayoutAlign.lt-md="baseline stretch"
+    >
       <mat-form-field appearance="fill" fxFlex="1 1">
         <mat-label translate>FILTERS.OBTAINABLE_IN</mat-label>
         <mat-select color="primary" formControlName="obtainableIn" multiple>
@@ -19,6 +28,23 @@
           </mat-option>
         </mat-select>
       </mat-form-field>
+
+      <div fxLayout="column">
+        <mat-checkbox
+          formControlName="applyEvolutionToObtainableIn"
+          color="primary"
+          >{{
+            "FILTERS.APPLY_EVOLUTIONS_TO_OBTAINABLE_IN" | translate
+          }}</mat-checkbox
+        >
+        <mat-checkbox
+          formControlName="applyFormsChangeToObtainableIn"
+          color="primary"
+          >{{
+            "FILTERS.APPLY_FORMS_CHANGE_TO_OBTAINABLE_IN" | translate
+          }}</mat-checkbox
+        >
+      </div>
     </div>
   </form>
 </mat-dialog-content>

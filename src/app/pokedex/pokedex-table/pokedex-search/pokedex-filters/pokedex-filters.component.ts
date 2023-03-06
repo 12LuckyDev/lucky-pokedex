@@ -5,7 +5,7 @@ import { PokeGame, PokeRegion } from 'src/app/enums';
 import { PokedexFilters } from 'src/app/models/app-logic/pokedex-filters.model';
 import { PokedexSearchService } from 'src/app/services';
 import { formatGame, formatRegion } from 'src/app/utils';
-import { retry, takeUntil } from 'rxjs';
+import { takeUntil } from 'rxjs';
 import { MatDialogRef } from '@angular/material/dialog';
 
 const REGIONS_LIST = [
@@ -69,6 +69,8 @@ export class PokedexFiltersComponent
     super(fb, {
       origins: [[]],
       obtainableIn: [[]],
+      applyEvolutionToObtainableIn: [true],
+      applyFormsChangeToObtainableIn: [true],
     });
   }
 

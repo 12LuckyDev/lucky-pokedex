@@ -12,16 +12,11 @@ export const getImagePath = (
   let addFemaleTag = true;
   const addGigantamaxTag = variant.variety === PokeVariety.gigantamax;
 
-  const { formType, id, region } = variant;
-  switch (formType) {
-    case PokeFormType.form:
-      if (!addGigantamaxTag || formsData?.gigantamaxFormDiffs) {
-        path += `_${id}`;
-      }
-      break;
-    case PokeFormType.regional_form:
-      path += `_rf${region}`;
-      break;
+  const { formType, id } = variant;
+  if (formType !== PokeFormType.base) {
+    if (!addGigantamaxTag || formsData?.gigantamaxFormDiffs) {
+      path += `_${id}`;
+    }
   }
 
   if (addGigantamaxTag) {

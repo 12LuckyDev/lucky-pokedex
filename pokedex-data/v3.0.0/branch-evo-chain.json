@@ -1,0 +1,26 @@
+[
+  {
+    "number": 206,
+    "formId": 1,
+    "evos": [
+      { "number": 982, "formId": 1 },
+      { "number": 982, "formId": 2 }
+    ]
+  },
+  {
+    "number": 924,
+    "formId": 1,
+    "evos": [
+      { "number": 925, "formId": 1 },
+      { "number": 925, "formId": 2 }
+    ]
+  },
+  {
+    "number": 935,
+    "formId": 1,
+    "evos": [
+      { "number": 936, "formId": 1 },
+      { "number": 937, "formId": 1 }
+    ]
+  }
+]

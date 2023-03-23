@@ -139,7 +139,11 @@ const buildVariantName = (
         : formName ?? name;
       break;
     case PokeFormType.regional_form:
-      pokeName = region ? `${formatRegionalName(region)} ${name}` : name;
+      pokeName = region
+        ? `${formatRegionalName(region)} ${
+            formName ? `${formName} ` : ''
+          }${name}`
+        : name;
       break;
   }
 

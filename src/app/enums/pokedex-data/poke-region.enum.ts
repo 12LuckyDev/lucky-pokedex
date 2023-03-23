@@ -9,6 +9,7 @@ export enum PokeRegion {
   unknown = 7,
   galar = 8,
   hisui = 9,
+  paldea = 10,
 }
 
 export const POKE_REGIONS = Object.keys(PokeRegion)

@@ -1,0 +1,31 @@
+[
+  {
+    "number": 128,
+    "types": [1],
+    "formName": "Combat Breed",
+    "obtainableIn": [
+      { "game": 8, "methods": [1, 10] },
+      { "game": 9, "methods": [1, 10] }
+    ]
+  },
+  {
+    "number": 128,
+    "types": [1, 9],
+    "formName": "Blaze Breed",
+    "obtainableIn": [{ "game": 8, "methods": [1, 10] }]
+  },
+  {
+    "number": 128,
+    "types": [1, 10],
+    "formName": "Aqua Breed",
+    "obtainableIn": [{ "game": 9, "methods": [1, 10] }]
+  },
+  {
+    "number": 194,
+    "types": [3, 4],
+    "obtainableIn": [
+      { "game": 8, "methods": [1, 10] },
+      { "game": 9, "methods": [1, 10] }
+    ]
+  }
+]
